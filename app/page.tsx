@@ -40,6 +40,7 @@ const networkOptions = [
   { label: "Polygon", value: "polygon-mainnet" },
   { label: "Arbitrum", value: "arb-mainnet" },
 ];
+const defaultOwner = "zeropoet.eth";
 
 function shortAddress(address: string): string {
   return `${address.slice(0, 6)}...${address.slice(-4)}`;
@@ -51,10 +52,10 @@ function isOwnerInput(value: string): boolean {
 
 export default function FoldForge() {
   const requestSequence = useRef(0);
-  const [queryDefaults, setQueryDefaults] = useState({ owner: "", network: networkOptions[0].value });
+  const [queryDefaults, setQueryDefaults] = useState({ owner: defaultOwner, network: networkOptions[0].value });
   const [queryReady, setQueryReady] = useState(false);
   const [wallet, setWallet] = useState("");
-  const [manualAddress, setManualAddress] = useState(queryDefaults.owner);
+  const [manualAddress, setManualAddress] = useState(defaultOwner);
   const [ownerIdentity, setOwnerIdentity] = useState<OwnerIdentity | null>(null);
   const [network, setNetwork] = useState(queryDefaults.network);
   const [collections, setCollections] = useState<CollectionSummary[]>([]);
@@ -114,7 +115,7 @@ export default function FoldForge() {
 
   useEffect(() => {
     const query = new URLSearchParams(window.location.search);
-    const defaults = { owner: query.get("owner") || "", network: normalizeNetwork(query.get("network")) };
+    const defaults = { owner: query.get("owner") || defaultOwner, network: normalizeNetwork(query.get("network")) };
     queueMicrotask(() => {
       setQueryDefaults(defaults);
       setManualAddress(defaults.owner);
