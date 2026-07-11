@@ -2,7 +2,7 @@
 
 import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { resolveOwner } from "./ens";
-import { AlchemyNft, fallbackGradient, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, summarizeContracts, tokenImageFor } from "./nft-data";
+import { AlchemyNft, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, summarizeContracts, tokenImageFor } from "./nft-data";
 
 type LoadState = "idle" | "connecting" | "loading" | "ready" | "error";
 
@@ -65,6 +65,8 @@ export default function FoldForge() {
   const [selectedTokenId, setSelectedTokenId] = useState("");
   const [tokens, setTokens] = useState<AlchemyNft[]>([]);
   const [detailLoading, setDetailLoading] = useState(false);
+  const [hiddenCollections, setHiddenCollections] = useState<Set<string>>(new Set());
+  const [showHidden, setShowHidden] = useState(false);
   const [state, setState] = useState<LoadState>("idle");
   const [message, setMessage] = useState("");
 
@@ -76,6 +78,11 @@ export default function FoldForge() {
     () => collections.reduce((total, collection) => total + collection.count, 0),
     [collections],
   );
+  const visibleCollections = useMemo(
+    () => collections.filter((collection) => showHidden || !hiddenCollections.has(collection.address)),
+    [collections, hiddenCollections, showHidden],
+  );
+  const hiddenCount = collections.length - collections.filter((collection) => !hiddenCollections.has(collection.address)).length;
 
   const loadCollections = useCallback(async (owner: string) => {
     const requestId = requestSequence.current + 1;
@@ -155,6 +162,23 @@ export default function FoldForge() {
       }
     });
   }, [ownerIdentity, selectedContract]);
+
+  useEffect(() => {
+    if (!ownerIdentity?.address) return;
+    const key = `foldforge:hidden:${ownerIdentity.address.toLowerCase()}`;
+    const stored = window.localStorage.getItem(key);
+    queueMicrotask(() => setHiddenCollections(new Set(stored ? JSON.parse(stored) as string[] : [])));
+  }, [ownerIdentity?.address]);
+
+  function toggleCollection(address: string) {
+    if (!ownerIdentity?.address) return;
+    setHiddenCollections((current) => {
+      const next = new Set(current);
+      if (next.has(address)) next.delete(address); else next.add(address);
+      window.localStorage.setItem(`foldforge:hidden:${ownerIdentity.address.toLowerCase()}`, JSON.stringify([...next]));
+      return next;
+    });
+  }
 
   const selectedCollection = collections.find((collection) => collection.address === selectedContract);
   const selectedToken = tokens.find((token) => token.tokenId === selectedTokenId);
@@ -364,84 +388,37 @@ export default function FoldForge() {
             </div>
           ) : null}
 
-          <section className="mt-10 overflow-hidden border border-white/25 bg-white/25 md:mt-16">
+          <section className="mt-10 md:mt-16">
+            <div className="flex items-center justify-between border-b border-white/25 pb-4">
+              <p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Collection index / {visibleCollections.length.toString().padStart(2, "0")}</p>
+              {hiddenCount ? (
+                <button className="text-[9px] uppercase tracking-[0.2em] text-white/45 hover:text-white" onClick={() => setShowHidden((value) => !value)} type="button">
+                  {showHidden ? "Hide disabled" : `Show disabled (${hiddenCount})`}
+                </button>
+              ) : null}
+            </div>
             {state === "loading" || state === "connecting" ? (
-              <div className="grid grid-cols-1 gap-px sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              <div className="grid">
                 {Array.from({ length: 8 }).map((_, index) => (
-                  <div className="min-h-[380px] animate-pulse bg-[#080808]" key={index} />
+                  <div className="h-28 animate-pulse border-b border-white/10 bg-[#030303]" key={index} />
                 ))}
               </div>
             ) : collections.length ? (
-              <div className="masonry-grid">
-                {collections.map((collection) => (
-                  <a
-                    aria-label={`Open ${collection.name}`}
-                    className="masonry-item self-start group bg-black align-top outline-none transition focus-visible:ring-1 focus-visible:ring-white"
-                    href={`?owner=${encodeURIComponent(navigableOwner)}&collection=${collection.address}`}
-                    key={collection.address}
-                  >
-                    <article>
-                      <div
-                        className="overflow-hidden bg-[#0a0a0a]"
-                        style={{ background: collection.image ? undefined : fallbackGradient(collection.address) }}
-                      >
-                        {collection.image ? (
-                          isVideoUrl(collection.image) ? (
-                            <video
-                              autoPlay
-                              className="block h-auto w-full grayscale transition duration-500 group-hover:scale-[1.015] group-hover:grayscale-0"
-                              loop
-                              muted
-                              playsInline
-                              src={collection.image}
-                            />
-                          ) : (
-                            // eslint-disable-next-line @next/next/no-img-element
-                            <img
-                              alt=""
-                              className="block h-auto w-full grayscale transition duration-500 group-hover:scale-[1.015] group-hover:grayscale-0"
-                              src={collection.image}
-                            />
-                          )
-                        ) : (
-                          <div className="grid aspect-square place-items-center text-xs uppercase tracking-[0.22em] text-white/45">
-                            {collection.symbol || shortAddress(collection.address)}
-                          </div>
-                        )}
+              <div>
+                {visibleCollections.map((collection, index) => (
+                  <article className={`group grid grid-cols-[1fr_auto] items-stretch border-b border-white/25 ${hiddenCollections.has(collection.address) ? "opacity-35" : ""}`} key={collection.address}>
+                    <a className="grid min-w-0 gap-5 py-7 pr-6 outline-none sm:grid-cols-[70px_1fr_auto] sm:items-baseline md:py-10" href={`?owner=${encodeURIComponent(navigableOwner)}&collection=${collection.address}`}>
+                      <span className="font-mono text-[9px] text-white/30">{String(index + 1).padStart(2, "0")}</span>
+                      <h2 className="truncate text-3xl font-light tracking-[-0.045em] transition group-hover:translate-x-2 sm:text-4xl md:text-6xl">{collection.name}</h2>
+                      <div className="flex items-center gap-5 text-[9px] uppercase tracking-[0.18em] text-white/35">
+                        <span>{collection.symbol || shortAddress(collection.address)}</span>
+                        <span>{collection.count.toString().padStart(2, "0")} works</span>
                       </div>
-                      <div className="grid gap-5 border-t border-white/25 p-5">
-                        <div className="min-w-0">
-                          <h2 className="truncate text-lg font-light tracking-[-0.02em]">
-                            {collection.name}
-                          </h2>
-                          <p className="mt-2 truncate font-mono text-[9px] uppercase tracking-[0.14em] text-white/40">
-                            {collection.symbol || shortAddress(collection.address)}
-                          </p>
-                          {collection.description ? (
-                            <p className="mt-4 line-clamp-2 text-xs leading-5 text-white/50">
-                              {collection.description}
-                            </p>
-                          ) : null}
-                        </div>
-                        <div className="grid grid-cols-3 gap-px bg-white/20 text-center text-[10px]">
-                          <div className="bg-black p-2.5">
-                            <span className="block uppercase tracking-[0.12em] text-white/35">Held</span>
-                            <strong>{collection.count}</strong>
-                          </div>
-                          <div className="bg-black p-2.5">
-                            <span className="block uppercase tracking-[0.12em] text-white/35">Supply</span>
-                            <strong>{collection.totalSupply || "--"}</strong>
-                          </div>
-                          <div className="bg-black p-2.5">
-                            <span className="block uppercase tracking-[0.12em] text-white/35">Floor</span>
-                            <strong>
-                              {collection.floorPrice === null ? "--" : collection.floorPrice.toFixed(2)}
-                            </strong>
-                          </div>
-                        </div>
-                      </div>
-                    </article>
-                  </a>
+                    </a>
+                    <button aria-label={`${hiddenCollections.has(collection.address) ? "Show" : "Hide"} ${collection.name}`} className="w-16 border-l border-white/15 text-[9px] uppercase tracking-[0.16em] text-white/35 transition hover:bg-white hover:text-black sm:w-24" onClick={() => toggleCollection(collection.address)} type="button">
+                      {hiddenCollections.has(collection.address) ? "On" : "Off"}
+                    </button>
+                  </article>
                 ))}
               </div>
             ) : (
