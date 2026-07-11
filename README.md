@@ -48,4 +48,4 @@ The Next.js configuration derives the repository name in GitHub Actions and appl
 
 ## Current scope
 
-The GitHub Pages build provides wallet connection, ENS/address import, network selection, shareable wallet query URLs, and the collection grid. Collection and individual NFT detail views are not included because the earlier implementation depended on server-rendered dynamic routes, which GitHub Pages cannot execute.
+The GitHub Pages build provides wallet connection, ENS/address import, shareable query URLs, collection archives, and individual minted-work records. Each work exposes its media, on-chain token data, traits, token URI, and source links while remaining compatible with static hosting.

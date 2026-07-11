@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { resolveOwner } from "./ens";
-import { fallbackGradient, fetchOwnedContracts, isVideoUrl, summarizeContracts } from "./nft-data";
+import { AlchemyNft, fallbackGradient, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, summarizeContracts, tokenImageFor } from "./nft-data";
 
 type LoadState = "idle" | "connecting" | "loading" | "ready" | "error";
 
@@ -53,6 +53,10 @@ export default function FoldForge() {
   const [manualAddress, setManualAddress] = useState(defaultOwner);
   const [ownerIdentity, setOwnerIdentity] = useState<OwnerIdentity | null>(null);
   const [collections, setCollections] = useState<CollectionSummary[]>([]);
+  const [selectedContract, setSelectedContract] = useState("");
+  const [selectedTokenId, setSelectedTokenId] = useState("");
+  const [tokens, setTokens] = useState<AlchemyNft[]>([]);
+  const [detailLoading, setDetailLoading] = useState(false);
   const [state, setState] = useState<LoadState>("idle");
   const [message, setMessage] = useState("");
 
@@ -110,9 +114,13 @@ export default function FoldForge() {
   useEffect(() => {
     const query = new URLSearchParams(window.location.search);
     const owner = query.get("owner") || defaultOwner;
+    const collection = query.get("collection") || "";
+    const token = query.get("token") || "";
     queueMicrotask(() => {
       setQueryOwner(owner);
       setManualAddress(owner);
+      setSelectedContract(collection);
+      setSelectedTokenId(token);
       setQueryReady(true);
     });
   }, []);
@@ -124,6 +132,24 @@ export default function FoldForge() {
       });
     }
   }, [loadCollections, queryOwner, queryReady]);
+
+  useEffect(() => {
+    if (!ownerIdentity?.address || !selectedContract) return;
+    queueMicrotask(async () => {
+      setDetailLoading(true);
+      setMessage("");
+      try {
+        setTokens(await fetchOwnedNfts({ owner: ownerIdentity.address, network, contractAddress: selectedContract }));
+      } catch (error) {
+        setMessage(error instanceof Error ? error.message : "Collection detail failed.");
+      } finally {
+        setDetailLoading(false);
+      }
+    });
+  }, [ownerIdentity, selectedContract]);
+
+  const selectedCollection = collections.find((collection) => collection.address === selectedContract);
+  const selectedToken = tokens.find((token) => token.tokenId === selectedTokenId);
 
   async function connectWallet() {
     if (!window.ethereum) {
@@ -190,6 +216,85 @@ export default function FoldForge() {
         </header>
 
         <div className="mx-auto grid w-full max-w-[1600px] grid-rows-[auto_auto_1fr] px-5 py-10 md:px-8 md:py-16">
+          {selectedContract ? (
+            <section>
+              <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/25 pb-6">
+                <Link className="text-[10px] uppercase tracking-[0.22em] text-white/50 hover:text-white" href={`/?owner=${encodeURIComponent(navigableOwner)}`}>
+                  ← All collections
+                </Link>
+                <a className="text-[10px] uppercase tracking-[0.22em] text-white/50 hover:text-white" href={`https://etherscan.io/address/${selectedContract}`} rel="noreferrer" target="_blank">
+                  Contract ↗
+                </a>
+              </div>
+
+              {selectedTokenId ? (
+                selectedToken ? (
+                  <article className="grid border-b border-white/25 lg:grid-cols-[minmax(0,1.2fr)_minmax(360px,0.8fr)]">
+                    <div className="grid min-h-[50vh] place-items-center border-b border-white/25 bg-[#080808] lg:border-b-0 lg:border-r lg:border-white/25">
+                      {tokenImageFor(selectedToken) ? (
+                        isVideoUrl(tokenImageFor(selectedToken)) ? (
+                          <video className="max-h-[80vh] w-full object-contain" controls playsInline src={tokenImageFor(selectedToken)} />
+                        ) : (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img alt={selectedToken.name || `Token ${selectedTokenId}`} className="max-h-[80vh] w-full object-contain" src={tokenImageFor(selectedToken)} />
+                        )
+                      ) : <div className="text-xs uppercase tracking-[0.2em] text-white/40">No media file</div>}
+                    </div>
+                    <div className="grid content-start gap-8 p-6 md:p-10">
+                      <div>
+                        <p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Minted work / #{selectedTokenId}</p>
+                        <h2 className="mt-4 text-4xl font-light tracking-[-0.04em]">{selectedToken.name || `Token ${selectedTokenId}`}</h2>
+                        <p className="mt-5 text-sm leading-6 text-white/55">{selectedToken.description || "No description recorded in the token metadata."}</p>
+                      </div>
+                      <dl className="grid gap-px bg-white/20 text-xs">
+                        <div className="grid grid-cols-[110px_1fr] bg-black p-4"><dt className="text-white/40">Token ID</dt><dd className="break-all">{selectedTokenId}</dd></div>
+                        <div className="grid grid-cols-[110px_1fr] bg-black p-4"><dt className="text-white/40">Standard</dt><dd>{selectedToken.tokenType || selectedToken.contract?.tokenType || "NFT"}</dd></div>
+                        <div className="grid grid-cols-[110px_1fr] bg-black p-4"><dt className="text-white/40">Contract</dt><dd className="break-all font-mono text-[10px]">{selectedContract}</dd></div>
+                        <div className="grid grid-cols-[110px_1fr] bg-black p-4"><dt className="text-white/40">Token URI</dt><dd className="break-all font-mono text-[10px]">{selectedToken.tokenUri || "Not returned"}</dd></div>
+                      </dl>
+                      {selectedToken.raw?.metadata?.attributes?.length ? (
+                        <div>
+                          <p className="mb-3 text-[9px] uppercase tracking-[0.25em] text-white/40">Minted traits</p>
+                          <div className="grid grid-cols-2 gap-px bg-white/20">
+                            {selectedToken.raw.metadata.attributes.map((trait, index) => (
+                              <div className="bg-black p-4" key={`${trait.trait_type}-${index}`}><p className="text-[9px] uppercase tracking-[0.16em] text-white/40">{trait.trait_type || "Trait"}</p><p className="mt-2 text-sm">{trait.value ?? "—"}</p></div>
+                            ))}
+                          </div>
+                        </div>
+                      ) : null}
+                      <div className="flex flex-wrap gap-3">
+                        <a className="border border-white px-4 py-3 text-[9px] uppercase tracking-[0.18em] hover:bg-white hover:text-black" href={`https://etherscan.io/nft/${selectedContract}/${selectedTokenId}`} rel="noreferrer" target="_blank">Mint record ↗</a>
+                        {selectedToken.tokenUri ? <a className="border border-white/40 px-4 py-3 text-[9px] uppercase tracking-[0.18em] hover:border-white" href={selectedToken.tokenUri.replace("ipfs://", "https://ipfs.io/ipfs/")} rel="noreferrer" target="_blank">Metadata file ↗</a> : null}
+                        {tokenImageFor(selectedToken) ? <a className="border border-white/40 px-4 py-3 text-[9px] uppercase tracking-[0.18em] hover:border-white" href={tokenImageFor(selectedToken).replace("ipfs://", "https://ipfs.io/ipfs/")} rel="noreferrer" target="_blank">Media file ↗</a> : null}
+                      </div>
+                    </div>
+                  </article>
+                ) : <div className="grid min-h-[50vh] place-items-center text-xs uppercase tracking-[0.2em] text-white/40">{detailLoading ? "Loading minted record" : "Minted record unavailable"}</div>
+              ) : (
+                <>
+                  <div className="grid gap-6 border-b border-white/25 py-10 md:grid-cols-[1fr_auto] md:items-end">
+                    <div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Collection archive</p><h2 className="mt-4 text-4xl font-light tracking-[-0.04em] md:text-6xl">{selectedCollection?.name || shortAddress(selectedContract)}</h2><p className="mt-5 max-w-3xl text-sm leading-6 text-white/50">{selectedCollection?.description}</p></div>
+                    <p className="font-mono text-[10px] text-white/40">{selectedContract}</p>
+                  </div>
+                  {detailLoading ? <div className="grid min-h-[50vh] place-items-center text-xs uppercase tracking-[0.2em] text-white/40">Loading minted works</div> : (
+                    <div className="token-grid border-x border-b border-white/25 bg-white/25">
+                      {tokens.map((token) => (
+                        <Link className="group bg-black" href={`/?owner=${encodeURIComponent(navigableOwner)}&collection=${selectedContract}&token=${encodeURIComponent(token.tokenId || "")}`} key={token.tokenId}>
+                          <div className="aspect-square overflow-hidden bg-[#080808]">
+                            {tokenImageFor(token) ? (
+                              // eslint-disable-next-line @next/next/no-img-element
+                              <img alt="" className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0" src={tokenImageFor(token)} />
+                            ) : null}
+                          </div>
+                          <div className="border-t border-white/25 p-4"><h3 className="truncate text-sm font-light">{token.name || `Token ${token.tokenId}`}</h3><p className="mt-2 font-mono text-[9px] text-white/35">#{token.tokenId}</p></div>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </>
+              )}
+            </section>
+          ) : (<>
           <form
             className="grid border-b border-white/25 md:grid-cols-[1fr_auto]"
             onSubmit={importAddress}
@@ -260,7 +365,7 @@ export default function FoldForge() {
                   <Link
                     aria-label={`Open ${collection.name}`}
                     className="masonry-item self-start group bg-black align-top outline-none transition focus-visible:ring-1 focus-visible:ring-white"
-                    href={`/?owner=${encodeURIComponent(navigableOwner)}`}
+                    href={`/?owner=${encodeURIComponent(navigableOwner)}&collection=${collection.address}`}
                     key={collection.address}
                   >
                     <article>
@@ -333,6 +438,7 @@ export default function FoldForge() {
               </div>
             )}
           </section>
+          </>)}
         </div>
       </section>
     </main>

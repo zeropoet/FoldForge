@@ -450,7 +450,7 @@ export async function fetchNftMetadata({
   network: string;
   tokenId: string;
 }): Promise<AlchemyNft> {
-  const key = process.env.ALCHEMY_API_KEY;
+  const key = process.env.NEXT_PUBLIC_ALCHEMY_API_KEY;
 
   if (!key) {
     throw new Error("Alchemy API key is not configured.");
@@ -464,7 +464,6 @@ export async function fetchNftMetadata({
 
   const response = await fetch(endpoint, {
     headers: { accept: "application/json" },
-    next: { revalidate: 60 },
   });
 
   if (!response.ok) {
