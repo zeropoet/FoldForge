@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0c0d0b;
-  --foreground: #f4f0e8;
+  --background: #000;
+  --foreground: #fff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
@@ -25,7 +25,8 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 button,
@@ -45,8 +46,8 @@ button:disabled {
 }
 
 ::selection {
-  background: #d7ff6a;
-  color: #11120f;
+  background: #fff;
+  color: #000;
 }
 
 .masonry-grid {

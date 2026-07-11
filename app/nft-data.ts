@@ -106,8 +106,8 @@ export function networkLabel(network: string): string {
 }
 
 export function fallbackGradient(address: string): string {
-  const hue = Number.parseInt(address.slice(2, 8), 16) % 360;
-  return `linear-gradient(135deg, hsl(${hue} 52% 28%), hsl(${(hue + 74) % 360} 44% 16%))`;
+  const tone = 8 + (Number.parseInt(address.slice(2, 8), 16) % 12);
+  return `linear-gradient(135deg, hsl(0 0% ${tone + 7}%), hsl(0 0% ${tone}%))`;
 }
 
 export function isVideoUrl(url: string): boolean {

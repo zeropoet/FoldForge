@@ -1,6 +1,6 @@
 # FoldForge
 
-FoldForge is a static, wallet-connected NFT collection gallery. It opens with `zeropoet.eth` as an editable default; enter any Ethereum address or ENS name—or connect a browser wallet—to group owned NFTs into a responsive collection grid across Ethereum, Base, Polygon, and Arbitrum.
+FoldForge is a static, wallet-connected Ethereum NFT collection gallery. It opens with `zeropoet.eth` as an editable default; enter any Ethereum address or ENS name—or connect a browser wallet—to group owned NFTs into a responsive collection grid.
 
 ## Local development
 
