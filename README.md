@@ -1,6 +1,16 @@
 # FoldForge
 
-FoldForge is a static, wallet-connected Ethereum NFT collection gallery. It opens with `zeropoet.eth` as an editable default; enter any Ethereum address or ENS name—or connect a browser wallet—to group owned NFTs into a responsive collection grid.
+FoldForge is a static, wallet-connected Ethereum NFT archive with a monochrome, typography-led interface. It opens with `zeropoet.eth` as an editable default; enter any Ethereum address or ENS name—or connect a browser wallet—to browse its collection index and minted works.
+
+## Features
+
+- Ethereum wallet connection and ENS/address lookup
+- Typography-only collection index with no cover thumbnails or descriptions
+- Per-wallet collection visibility controls remembered on the current device
+- Shareable collection and minted-work URLs
+- NFT media with image, animation, video, and IPFS support
+- Minted metadata, traits, token URI, contract, Etherscan, and source-file links
+- Fully static GitHub Pages deployment
 
 ## Local development
 
@@ -21,6 +31,23 @@ npm run preview
 ```
 
 Open [http://localhost:4173](http://localhost:4173). The build command creates a fully static export in `out/`, matching the artifact deployed to GitHub Pages.
+
+## Collection preferences
+
+Use each collection row’s **Off** control to remove it from the active index. Select **Show disabled** to review hidden collections and turn them on again.
+
+Visibility is stored in browser `localStorage`, keyed by the wallet’s resolved Ethereum address. Each wallet therefore has an independent collection index on each browser/device. These preferences are not written on-chain, uploaded, or synchronized between devices.
+
+## Archive navigation
+
+Collection and minted-work views use query-based URLs so deep links continue to work on static hosting:
+
+```text
+?owner=zeropoet.eth&collection=0x...
+?owner=zeropoet.eth&collection=0x...&token=123
+```
+
+Minted-work records link to the contract and token on Etherscan and expose original token metadata and media files when the provider returns them.
 
 ## Deploy to GitHub Pages
 
@@ -46,6 +73,6 @@ The Next.js configuration derives the repository name in GitHub Actions and appl
 | `npm run lint` | Run ESLint |
 | `npm test` | Run Vitest tests |
 
-## Current scope
+## Architecture
 
-The GitHub Pages build provides wallet connection, ENS/address import, shareable query URLs, typographic collection archives, and individual minted-work records. Collections can be hidden or restored independently for each wallet; those preferences stay on the current device. Each work exposes its media, on-chain token data, traits, token URI, and source links while remaining compatible with static hosting.
+FoldForge uses Next.js static export and performs Alchemy and ENS requests directly in the browser. It has no application server, database, account system, or cross-device preference synchronization.
