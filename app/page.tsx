@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { resolveOwner } from "./ens";
 import { AlchemyNft, fallbackGradient, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, summarizeContracts, tokenImageFor } from "./nft-data";
@@ -43,6 +42,15 @@ function shortAddress(address: string): string {
 
 function isOwnerInput(value: string): boolean {
   return /^0x[a-fA-F0-9]{40}$/.test(value) || /^[a-z0-9-]+(?:\.[a-z0-9-]+)*\.eth$/i.test(value);
+}
+
+function mintedMediaFor(token: AlchemyNft): string {
+  const media = token.animation?.cachedUrl || token.animation?.originalUrl || tokenImageFor(token);
+  return media.replace("ipfs://", "https://ipfs.io/ipfs/");
+}
+
+function hasVideoMedia(token: AlchemyNft): boolean {
+  return Boolean(token.animation?.cachedUrl || token.animation?.originalUrl) || isVideoUrl(mintedMediaFor(token));
 }
 
 export default function FoldForge() {
@@ -219,9 +227,9 @@ export default function FoldForge() {
           {selectedContract ? (
             <section>
               <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/25 pb-6">
-                <Link className="text-[10px] uppercase tracking-[0.22em] text-white/50 hover:text-white" href={`/?owner=${encodeURIComponent(navigableOwner)}`}>
+                <a className="text-[10px] uppercase tracking-[0.22em] text-white/50 hover:text-white" href={`?owner=${encodeURIComponent(navigableOwner)}`}>
                   ← All collections
-                </Link>
+                </a>
                 <a className="text-[10px] uppercase tracking-[0.22em] text-white/50 hover:text-white" href={`https://etherscan.io/address/${selectedContract}`} rel="noreferrer" target="_blank">
                   Contract ↗
                 </a>
@@ -231,12 +239,12 @@ export default function FoldForge() {
                 selectedToken ? (
                   <article className="grid border-b border-white/25 lg:grid-cols-[minmax(0,1.2fr)_minmax(360px,0.8fr)]">
                     <div className="grid min-h-[50vh] place-items-center border-b border-white/25 bg-[#080808] lg:border-b-0 lg:border-r lg:border-white/25">
-                      {tokenImageFor(selectedToken) ? (
-                        isVideoUrl(tokenImageFor(selectedToken)) ? (
-                          <video className="max-h-[80vh] w-full object-contain" controls playsInline src={tokenImageFor(selectedToken)} />
+                      {mintedMediaFor(selectedToken) ? (
+                        hasVideoMedia(selectedToken) ? (
+                          <video autoPlay className="max-h-[80vh] w-full object-contain" controls loop muted playsInline preload="metadata" src={mintedMediaFor(selectedToken)} />
                         ) : (
                           // eslint-disable-next-line @next/next/no-img-element
-                          <img alt={selectedToken.name || `Token ${selectedTokenId}`} className="max-h-[80vh] w-full object-contain" src={tokenImageFor(selectedToken)} />
+                          <img alt={selectedToken.name || `Token ${selectedTokenId}`} className="max-h-[80vh] w-full object-contain" src={mintedMediaFor(selectedToken)} />
                         )
                       ) : <div className="text-xs uppercase tracking-[0.2em] text-white/40">No media file</div>}
                     </div>
@@ -265,7 +273,7 @@ export default function FoldForge() {
                       <div className="flex flex-wrap gap-3">
                         <a className="border border-white px-4 py-3 text-[9px] uppercase tracking-[0.18em] hover:bg-white hover:text-black" href={`https://etherscan.io/nft/${selectedContract}/${selectedTokenId}`} rel="noreferrer" target="_blank">Mint record ↗</a>
                         {selectedToken.tokenUri ? <a className="border border-white/40 px-4 py-3 text-[9px] uppercase tracking-[0.18em] hover:border-white" href={selectedToken.tokenUri.replace("ipfs://", "https://ipfs.io/ipfs/")} rel="noreferrer" target="_blank">Metadata file ↗</a> : null}
-                        {tokenImageFor(selectedToken) ? <a className="border border-white/40 px-4 py-3 text-[9px] uppercase tracking-[0.18em] hover:border-white" href={tokenImageFor(selectedToken).replace("ipfs://", "https://ipfs.io/ipfs/")} rel="noreferrer" target="_blank">Media file ↗</a> : null}
+                        {mintedMediaFor(selectedToken) ? <a className="border border-white/40 px-4 py-3 text-[9px] uppercase tracking-[0.18em] hover:border-white" href={mintedMediaFor(selectedToken).replace("ipfs://", "https://ipfs.io/ipfs/")} rel="noreferrer" target="_blank">Media file ↗</a> : null}
                       </div>
                     </div>
                   </article>
@@ -279,15 +287,19 @@ export default function FoldForge() {
                   {detailLoading ? <div className="grid min-h-[50vh] place-items-center text-xs uppercase tracking-[0.2em] text-white/40">Loading minted works</div> : (
                     <div className="token-grid border-x border-b border-white/25 bg-white/25">
                       {tokens.map((token) => (
-                        <Link className="group bg-black" href={`/?owner=${encodeURIComponent(navigableOwner)}&collection=${selectedContract}&token=${encodeURIComponent(token.tokenId || "")}`} key={token.tokenId}>
+                        <a className="group bg-black" href={`?owner=${encodeURIComponent(navigableOwner)}&collection=${selectedContract}&token=${encodeURIComponent(token.tokenId || "")}`} key={token.tokenId}>
                           <div className="aspect-square overflow-hidden bg-[#080808]">
-                            {tokenImageFor(token) ? (
-                              // eslint-disable-next-line @next/next/no-img-element
-                              <img alt="" className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0" src={tokenImageFor(token)} />
+                            {mintedMediaFor(token) ? (
+                              hasVideoMedia(token) ? (
+                                <video autoPlay className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0" loop muted playsInline preload="metadata" src={mintedMediaFor(token)} />
+                              ) : (
+                                // eslint-disable-next-line @next/next/no-img-element
+                                <img alt="" className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0" src={mintedMediaFor(token)} />
+                              )
                             ) : null}
                           </div>
                           <div className="border-t border-white/25 p-4"><h3 className="truncate text-sm font-light">{token.name || `Token ${token.tokenId}`}</h3><p className="mt-2 font-mono text-[9px] text-white/35">#{token.tokenId}</p></div>
-                        </Link>
+                        </a>
                       ))}
                     </div>
                   )}
@@ -362,10 +374,10 @@ export default function FoldForge() {
             ) : collections.length ? (
               <div className="masonry-grid">
                 {collections.map((collection) => (
-                  <Link
+                  <a
                     aria-label={`Open ${collection.name}`}
                     className="masonry-item self-start group bg-black align-top outline-none transition focus-visible:ring-1 focus-visible:ring-white"
-                    href={`/?owner=${encodeURIComponent(navigableOwner)}&collection=${collection.address}`}
+                    href={`?owner=${encodeURIComponent(navigableOwner)}&collection=${collection.address}`}
                     key={collection.address}
                   >
                     <article>
@@ -429,7 +441,7 @@ export default function FoldForge() {
                         </div>
                       </div>
                     </article>
-                  </Link>
+                  </a>
                 ))}
               </div>
             ) : (
