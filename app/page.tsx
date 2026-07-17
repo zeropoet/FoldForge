@@ -289,16 +289,20 @@ export default function FoldForge() {
   return (
     <main className="min-h-screen bg-black text-white">
       <section className="grid min-h-screen grid-rows-[auto_1fr]">
-        <header className="border-b border-white/25 px-5 py-5 md:px-8">
+        <header className="border-b border-white/25 px-5 py-4 md:px-8">
           <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-6">
-            <div className="flex items-baseline gap-5">
-              <h1 className="text-lg font-medium uppercase tracking-[0.22em]">FoldForge</h1>
-              <p className="hidden text-[10px] uppercase tracking-[0.28em] text-white/45 sm:block">
-                Ethereum archive
-              </p>
-            </div>
+            <a className="flex items-center gap-4" href={`?owner=${encodeURIComponent(navigableOwner)}`}>
+              <span className="brand-mark" aria-hidden="true">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img alt="" src="/brand/foldforge-mark-black-white.png" />
+              </span>
+              <span>
+                <span className="block text-lg font-medium uppercase tracking-[0.22em]">FoldForge</span>
+                <span className="mt-1 hidden text-[8px] uppercase tracking-[0.32em] text-white/45 sm:block">Ethereum archive / est. 2026</span>
+              </span>
+            </a>
             <button
-              className="border border-white/50 px-5 py-2.5 text-[10px] font-medium uppercase tracking-[0.2em] transition hover:bg-white hover:text-black"
+              className="border border-white/50 px-5 py-3 text-[9px] font-medium uppercase tracking-[0.22em] transition hover:bg-white hover:text-black"
               disabled={isBusy}
               onClick={connectWallet}
               type="button"
