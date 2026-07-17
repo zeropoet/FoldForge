@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/brand/foldforge-mark-black-white.png" alt="Root Logos" width="240">
+</p>
+
 # FoldForge
 
 FoldForge is a static, wallet-connected Ethereum NFT archive with a monochrome, typography-led interface. It opens with `zeropoet.eth` as an editable default; enter any Ethereum address or ENS name—or connect a browser wallet—to browse its collection index and minted works.
