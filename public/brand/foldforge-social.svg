@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title">
+  <title id="title">FoldForge — Ethereum archive</title>
+  <rect width="1200" height="630" fill="#000"/>
+  <g transform="translate(88 83) scale(.45)" fill="#fff">
+    <path d="M240 330 488 206v224l-106 53 106 53v224L240 884V330Z"/>
+    <path d="m784 330-248-124v224l106 53-106 53v224l248 124V330Z"/>
+  </g>
+  <path stroke="#fff" stroke-opacity=".25" d="M452 82v466"/>
+  <text x="518" y="300" fill="#fff" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="82" font-weight="500" letter-spacing="12">FOLDFORGE</text>
+  <text x="524" y="354" fill="#fff" fill-opacity=".52" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="18" letter-spacing="7">ETHEREUM ARCHIVE</text>
+</svg>

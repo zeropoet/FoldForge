@@ -294,7 +294,7 @@ export default function FoldForge() {
             <a className="flex items-center gap-4" href={`?owner=${encodeURIComponent(navigableOwner)}`}>
               <span className="brand-mark" aria-hidden="true">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img alt="" src="/brand/foldforge-mark-black-white.png" />
+                <img alt="" src="/favicon.svg" />
               </span>
               <span>
                 <span className="block text-lg font-medium uppercase tracking-[0.22em]">FoldForge</span>
