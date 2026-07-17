@@ -22,6 +22,7 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
+          CUSTOM_DOMAIN: foldforge.xyz
           NEXT_PUBLIC_ALCHEMY_API_KEY: ${{ secrets.NEXT_PUBLIC_ALCHEMY_API_KEY }}
       - uses: actions/upload-pages-artifact@v3
         with:

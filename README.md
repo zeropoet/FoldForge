@@ -52,13 +52,14 @@ Minted-work records link to the contract and token on Etherscan and expose origi
 ## Deploy to GitHub Pages
 
 Deployment is automated by [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) whenever `main` is updated.
+The production deployment is published at [foldforge.xyz](https://foldforge.xyz).
 
 1. Create a dedicated Alchemy app for this site.
 2. Add its key at **Repository settings → Secrets and variables → Actions** as `NEXT_PUBLIC_ALCHEMY_API_KEY`.
 3. Select **Repository settings → Pages → Build and deployment → Source → GitHub Actions**.
 4. Push to `main`, or run the workflow manually from the Actions tab.
 
-The Next.js configuration derives the repository name in GitHub Actions and applies the correct `basePath` and asset prefix automatically.
+The Next.js configuration publishes from the domain root when `CUSTOM_DOMAIN` is set and otherwise derives the repository path for standard GitHub Pages hosting.
 
 > [!IMPORTANT]
 > GitHub Pages is static. Variables prefixed with `NEXT_PUBLIC_` are embedded in the browser bundle and are not secret at runtime. Use a dedicated key with domain allowlists, conservative quotas, and no privileged access.
