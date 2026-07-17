@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/brand/foldforge-mark-black-white.png" alt="Root Logos" width="240">
+  <img src="public/brand/foldforge-mark.svg" alt="Root Logos" width="240">
 </p>
 
 # FoldForge
