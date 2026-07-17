@@ -2,7 +2,7 @@
 
 import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { resolveOwner } from "./ens";
-import { AlchemyNft, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, summarizeContracts, tokenImageFor } from "./nft-data";
+import { AlchemyNft, fetchNftMetadata, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, normalizeMediaUrl, summarizeContracts, tokenImageFor, tokenThumbnailFor } from "./nft-data";
 
 type LoadState = "idle" | "connecting" | "loading" | "ready" | "error";
 
@@ -46,15 +46,38 @@ function isOwnerInput(value: string): boolean {
 
 function mintedMediaFor(token: AlchemyNft): string {
   const media = token.animation?.cachedUrl || token.animation?.originalUrl || tokenImageFor(token);
-  return media.replace("ipfs://", "https://ipfs.io/ipfs/");
+  return normalizeMediaUrl(media);
 }
 
 function hasVideoMedia(token: AlchemyNft): boolean {
   return Boolean(token.animation?.cachedUrl || token.animation?.originalUrl) || isVideoUrl(mintedMediaFor(token));
 }
 
+function MediaTile({ token }: { token: AlchemyNft }) {
+  const media = hasVideoMedia(token) ? mintedMediaFor(token) : tokenThumbnailFor(token);
+  if (!media) return null;
+  if (hasVideoMedia(token)) {
+    return (
+      <video
+        aria-label={token.name || `Token ${token.tokenId || ""}`}
+        className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0"
+        loop
+        muted
+        onMouseEnter={(event) => void event.currentTarget.play()}
+        onMouseLeave={(event) => event.currentTarget.pause()}
+        playsInline
+        preload="none"
+        src={media}
+      />
+    );
+  }
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img alt="" className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0" decoding="async" loading="lazy" src={media} />;
+}
+
 export default function FoldForge() {
   const requestSequence = useRef(0);
+  const collectionRequest = useRef<AbortController | null>(null);
   const [queryOwner, setQueryOwner] = useState(defaultOwner);
   const [queryReady, setQueryReady] = useState(false);
   const [wallet, setWallet] = useState("");
@@ -64,6 +87,7 @@ export default function FoldForge() {
   const [selectedContract, setSelectedContract] = useState("");
   const [selectedTokenId, setSelectedTokenId] = useState("");
   const [tokens, setTokens] = useState<AlchemyNft[]>([]);
+  const [tokenDetail, setTokenDetail] = useState<{ key: string; nft: AlchemyNft } | null>(null);
   const [detailLoading, setDetailLoading] = useState(false);
   const [hiddenCollections, setHiddenCollections] = useState<Set<string>>(new Set());
   const [showHidden, setShowHidden] = useState(false);
@@ -91,11 +115,21 @@ export default function FoldForge() {
     setMessage("");
     setCollections([]);
     setOwnerIdentity(null);
+    collectionRequest.current?.abort();
+    const controller = new AbortController();
+    collectionRequest.current = controller;
 
     try {
       if (!process.env.NEXT_PUBLIC_ALCHEMY_API_KEY) throw new Error("Set NEXT_PUBLIC_ALCHEMY_API_KEY to load live collections.");
       const resolvedOwner = await resolveOwner(owner);
-      const contracts = await fetchOwnedContracts({ owner: resolvedOwner.address, network });
+      const contracts = await fetchOwnedContracts({
+        owner: resolvedOwner.address,
+        network,
+        signal: controller.signal,
+        onPage: (page) => {
+          if (requestId === requestSequence.current) setCollections(summarizeContracts(page));
+        },
+      });
 
       if (requestId !== requestSequence.current) {
         return;
@@ -115,6 +149,7 @@ export default function FoldForge() {
         );
       }
     } catch (error) {
+      if (error instanceof DOMException && error.name === "AbortError") return;
       if (requestId !== requestSequence.current) {
         return;
       }
@@ -150,18 +185,42 @@ export default function FoldForge() {
 
   useEffect(() => {
     if (!ownerIdentity?.address || !selectedContract) return;
+    const controller = new AbortController();
     queueMicrotask(async () => {
       setDetailLoading(true);
+      setTokens([]);
       setMessage("");
       try {
-        setTokens(await fetchOwnedNfts({ owner: ownerIdentity.address, network, contractAddress: selectedContract }));
+        await fetchOwnedNfts({
+          owner: ownerIdentity.address,
+          network,
+          contractAddress: selectedContract,
+          signal: controller.signal,
+          onPage: setTokens,
+        });
       } catch (error) {
+        if (error instanceof DOMException && error.name === "AbortError") return;
         setMessage(error instanceof Error ? error.message : "Collection detail failed.");
       } finally {
-        setDetailLoading(false);
+        if (!controller.signal.aborted) setDetailLoading(false);
       }
     });
+    return () => controller.abort();
   }, [ownerIdentity, selectedContract]);
+
+  useEffect(() => {
+    if (!selectedContract || !selectedTokenId) return;
+    const controller = new AbortController();
+    const detailKey = `${selectedContract}:${selectedTokenId}`;
+    void fetchNftMetadata({ contractAddress: selectedContract, network, tokenId: selectedTokenId, signal: controller.signal })
+      .then((nft) => setTokenDetail({ key: detailKey, nft }))
+      .catch((error: unknown) => {
+        if (!(error instanceof DOMException && error.name === "AbortError")) {
+          setMessage(error instanceof Error ? error.message : "Minted record failed.");
+        }
+      });
+    return () => controller.abort();
+  }, [selectedContract, selectedTokenId]);
 
   useEffect(() => {
     if (!ownerIdentity?.address) return;
@@ -181,7 +240,9 @@ export default function FoldForge() {
   }
 
   const selectedCollection = collections.find((collection) => collection.address === selectedContract);
-  const selectedToken = tokens.find((token) => token.tokenId === selectedTokenId);
+  const selectedToken = tokenDetail?.key === `${selectedContract}:${selectedTokenId}`
+    ? tokenDetail.nft
+    : tokens.find((token) => token.tokenId === selectedTokenId);
 
   async function connectWallet() {
     if (!window.ethereum) {
@@ -268,7 +329,7 @@ export default function FoldForge() {
                           <video autoPlay className="max-h-[80vh] w-full object-contain" controls loop muted playsInline preload="metadata" src={mintedMediaFor(selectedToken)} />
                         ) : (
                           // eslint-disable-next-line @next/next/no-img-element
-                          <img alt={selectedToken.name || `Token ${selectedTokenId}`} className="max-h-[80vh] w-full object-contain" src={mintedMediaFor(selectedToken)} />
+                          <img alt={selectedToken.name || `Token ${selectedTokenId}`} className="max-h-[80vh] w-full object-contain" decoding="async" fetchPriority="high" src={mintedMediaFor(selectedToken)} />
                         )
                       ) : <div className="text-xs uppercase tracking-[0.2em] text-white/40">No media file</div>}
                     </div>
@@ -313,14 +374,7 @@ export default function FoldForge() {
                       {tokens.map((token) => (
                         <a className="group bg-black" href={`?owner=${encodeURIComponent(navigableOwner)}&collection=${selectedContract}&token=${encodeURIComponent(token.tokenId || "")}`} key={token.tokenId}>
                           <div className="aspect-square overflow-hidden bg-[#080808]">
-                            {mintedMediaFor(token) ? (
-                              hasVideoMedia(token) ? (
-                                <video autoPlay className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0" loop muted playsInline preload="metadata" src={mintedMediaFor(token)} />
-                              ) : (
-                                // eslint-disable-next-line @next/next/no-img-element
-                                <img alt="" className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0" src={mintedMediaFor(token)} />
-                              )
-                            ) : null}
+                            <MediaTile token={token} />
                           </div>
                           <div className="border-t border-white/25 p-4"><h3 className="truncate text-sm font-light">{token.name || `Token ${token.tokenId}`}</h3><p className="mt-2 font-mono text-[9px] text-white/35">#{token.tokenId}</p></div>
                         </a>

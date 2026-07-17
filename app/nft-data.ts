@@ -114,6 +114,15 @@ export function isVideoUrl(url: string): boolean {
   return /\.(mp4|webm|mov)(?:$|\?)/i.test(url);
 }
 
+export function normalizeMediaUrl(value: string | null | undefined): string {
+  const url = value?.trim() || "";
+  if (url.startsWith("ipfs://ipfs/")) return `https://ipfs.io/ipfs/${url.slice(12)}`;
+  if (url.startsWith("ipfs://")) return `https://ipfs.io/ipfs/${url.slice(7)}`;
+  if (url.startsWith("ipns://")) return `https://ipfs.io/ipns/${url.slice(7)}`;
+  if (url.startsWith("ar://")) return `https://arweave.net/${url.slice(5)}`;
+  return url;
+}
+
 export function normalizeNetwork(network: string | null | undefined): string {
   return network && supportedNetworks.has(network) ? network : "eth-mainnet";
 }
@@ -140,6 +149,43 @@ export function tokenImageFor(nft: AlchemyNft): string {
     nft.contract?.openSeaMetadata?.imageUrl ||
     ""
   );
+}
+
+export function tokenThumbnailFor(nft: AlchemyNft): string {
+  return normalizeMediaUrl(
+    nft.image?.thumbnailUrl ||
+    nft.image?.cachedUrl ||
+    nft.image?.pngUrl ||
+    nft.image?.originalUrl ||
+    nft.contract?.openSeaMetadata?.imageUrl ||
+    "",
+  );
+}
+
+const responseCache = new Map<string, { expires: number; value: unknown }>();
+const CACHE_TTL = 5 * 60 * 1000;
+
+function cached<T>(key: string): T | undefined {
+  const entry = responseCache.get(key);
+  if (!entry || entry.expires < Date.now()) {
+    responseCache.delete(key);
+    return undefined;
+  }
+  return entry.value as T;
+}
+
+function remember<T>(key: string, value: T): T {
+  responseCache.set(key, { expires: Date.now() + CACHE_TTL, value });
+  return value;
+}
+
+async function providerFetch<T>(endpoint: URL, signal?: AbortSignal): Promise<T> {
+  const response = await fetch(endpoint, { headers: { accept: "application/json" }, signal });
+  if (!response.ok) {
+    if (response.status === 429) throw new Error("Ethereum data provider is busy. Try again in a moment.");
+    throw new Error(`Ethereum data request failed (${response.status}).`);
+  }
+  return response.json() as Promise<T>;
 }
 
 function contractImageFor(contract: AlchemyContract): string {
@@ -301,9 +347,13 @@ export async function fetchContractMetadata({
 export async function fetchOwnedContracts({
   owner,
   network,
+  signal,
+  onPage,
 }: {
   owner: string;
   network: string;
+  signal?: AbortSignal;
+  onPage?: (contracts: AlchemyContract[]) => void;
 }): Promise<AlchemyContract[]> {
   const key = process.env.NEXT_PUBLIC_ALCHEMY_API_KEY;
 
@@ -312,6 +362,12 @@ export async function fetchOwnedContracts({
   }
 
   const safeNetwork = normalizeNetwork(network);
+  const cacheKey = `contracts:${safeNetwork}:${owner.toLowerCase()}`;
+  const hit = cached<AlchemyContract[]>(cacheKey);
+  if (hit) {
+    onPage?.(hit);
+    return hit;
+  }
   const endpoint = new URL(`https://${safeNetwork}.g.alchemy.com/nft/v3/${key}/getContractsForOwner`);
   endpoint.searchParams.set("owner", owner);
   endpoint.searchParams.set("pageSize", "100");
@@ -324,23 +380,16 @@ export async function fetchOwnedContracts({
       endpoint.searchParams.set("pageKey", pageKey);
     }
 
-    const response = await fetch(endpoint, {
-      headers: { accept: "application/json" },
-    });
-
-    if (!response.ok) {
-      throw new Error("NFT provider request failed.");
-    }
-
-    const payload = (await response.json()) as {
+    const payload = await providerFetch<{
       contracts?: AlchemyContract[];
       pageKey?: string;
-    };
+    }>(endpoint, signal);
     contracts.push(...(payload.contracts || []));
+    onPage?.([...contracts]);
     pageKey = payload.pageKey;
   } while (pageKey && contracts.length < 600);
 
-  return contracts;
+  return remember(cacheKey, contracts);
 }
 
 export async function fetchOwnedTokenListings({
@@ -396,10 +445,14 @@ export async function fetchOwnedNfts({
   owner,
   network,
   contractAddress,
+  signal,
+  onPage,
 }: {
   owner: string;
   network: string;
   contractAddress?: string;
+  signal?: AbortSignal;
+  onPage?: (nfts: AlchemyNft[]) => void;
 }): Promise<AlchemyNft[]> {
   const key = process.env.NEXT_PUBLIC_ALCHEMY_API_KEY;
 
@@ -408,6 +461,12 @@ export async function fetchOwnedNfts({
   }
 
   const safeNetwork = normalizeNetwork(network);
+  const cacheKey = `nfts:${safeNetwork}:${owner.toLowerCase()}:${contractAddress?.toLowerCase() || "all"}`;
+  const hit = cached<AlchemyNft[]>(cacheKey);
+  if (hit) {
+    onPage?.(hit);
+    return hit;
+  }
   const endpoint = new URL(`https://${safeNetwork}.g.alchemy.com/nft/v3/${key}/getNFTsForOwner`);
   endpoint.searchParams.set("owner", owner);
   endpoint.searchParams.set("withMetadata", "true");
@@ -425,30 +484,25 @@ export async function fetchOwnedNfts({
       endpoint.searchParams.set("pageKey", pageKey);
     }
 
-    const response = await fetch(endpoint, {
-      headers: { accept: "application/json" },
-    });
-
-    if (!response.ok) {
-      throw new Error("NFT provider request failed.");
-    }
-
-    const payload = (await response.json()) as { ownedNfts?: AlchemyNft[]; pageKey?: string };
+    const payload = await providerFetch<{ ownedNfts?: AlchemyNft[]; pageKey?: string }>(endpoint, signal);
     nfts.push(...(payload.ownedNfts || []));
+    onPage?.([...nfts]);
     pageKey = payload.pageKey;
   } while (pageKey && nfts.length < 600);
 
-  return nfts;
+  return remember(cacheKey, nfts);
 }
 
 export async function fetchNftMetadata({
   contractAddress,
   network,
   tokenId,
+  signal,
 }: {
   contractAddress: string;
   network: string;
   tokenId: string;
+  signal?: AbortSignal;
 }): Promise<AlchemyNft> {
   const key = process.env.NEXT_PUBLIC_ALCHEMY_API_KEY;
 
@@ -462,13 +516,8 @@ export async function fetchNftMetadata({
   endpoint.searchParams.set("tokenId", tokenId);
   endpoint.searchParams.set("refreshCache", "false");
 
-  const response = await fetch(endpoint, {
-    headers: { accept: "application/json" },
-  });
-
-  if (!response.ok) {
-    throw new Error("NFT metadata request failed.");
-  }
-
-  return (await response.json()) as AlchemyNft;
+  const cacheKey = `token:${safeNetwork}:${contractAddress.toLowerCase()}:${tokenId}`;
+  const hit = cached<AlchemyNft>(cacheKey);
+  if (hit) return hit;
+  return remember(cacheKey, await providerFetch<AlchemyNft>(endpoint, signal));
 }
