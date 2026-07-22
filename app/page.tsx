@@ -467,7 +467,7 @@ export default function FoldForge() {
                   <article className={`group grid grid-cols-[1fr_auto] items-stretch border-b border-white/25 ${hiddenCollections.has(collection.address) ? "opacity-35" : ""}`} key={collection.address}>
                     <a className="grid min-w-0 gap-5 py-7 pr-6 outline-none sm:grid-cols-[70px_1fr_auto] sm:items-baseline md:py-10" href={`?owner=${encodeURIComponent(navigableOwner)}&collection=${collection.address}`}>
                       <span className="font-mono text-[9px] text-white/30">{String(index + 1).padStart(2, "0")}</span>
-                      <h2 className="truncate text-3xl font-light tracking-[-0.045em] transition group-hover:translate-x-2 sm:text-4xl md:text-6xl">{collection.name}</h2>
+                      <h2 className="truncate text-3xl font-light uppercase tracking-[-0.045em] transition group-hover:translate-x-2 sm:text-4xl md:text-6xl">{collection.name}</h2>
                       <div className="flex items-center gap-5 text-[9px] uppercase tracking-[0.18em] text-white/35">
                         <span>{collection.symbol || shortAddress(collection.address)}</span>
                         <span>{collection.count.toString().padStart(2, "0")} works</span>
