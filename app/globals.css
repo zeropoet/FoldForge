@@ -43,6 +43,46 @@ body {
   object-fit: contain;
 }
 
+.lineage-selector {
+  position: relative;
+}
+
+.lineage-node {
+  color: var(--foreground);
+}
+
+.lineage-node::before {
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  content: "";
+  pointer-events: none;
+  transition: border-color 180ms ease;
+}
+
+.lineage-node:hover::before,
+.lineage-node.is-active::before {
+  border-color: rgb(255 255 255 / 78%);
+}
+
+.lineage-node.is-active {
+  background:
+    linear-gradient(135deg, rgb(255 255 255 / 5%), transparent 45%),
+    #000;
+}
+
+.lineage-marker {
+  width: 0.45rem;
+  height: 0.45rem;
+  border: 1px solid rgb(255 255 255 / 55%);
+  background: transparent;
+  transform: rotate(45deg);
+}
+
+.lineage-node.is-active .lineage-marker {
+  background: #fff;
+}
+
 button,
 input,
 select {

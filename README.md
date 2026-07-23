@@ -4,13 +4,13 @@
 
 # FoldForge
 
-FoldForge is a static, wallet-connected Ethereum NFT archive with a monochrome, typography-led interface. It opens with `zeropoet.eth` as an editable default; enter any Ethereum address or ENS name—or connect a browser wallet—to browse its collection index and minted works.
+FoldForge is a static, wallet-connected Ethereum NFT archive with a monochrome, typography-led interface. Its primary archive lineage presents `mancel.eth` as the foundation and `zeropoet.eth` as its living continuation.
 
 ## Features
 
 - Ethereum wallet connection and ENS/address lookup
 - Typography-only collection index with no cover thumbnails or descriptions
-- Per-wallet collection visibility controls remembered on the current device
+- Per-wallet collection visibility controls for the Mancel and Zeropoet archives
 - Shareable collection and minted-work URLs
 - NFT media with image, animation, video, and IPFS support
 - Minted metadata, traits, token URI, contract, Etherscan, and source-file links
@@ -36,11 +36,11 @@ npm run preview
 
 Open [http://localhost:4173](http://localhost:4173). The build command creates a fully static export in `out/`, matching the artifact deployed to GitHub Pages.
 
-## Collection preferences
+## Collection curation
 
-Use each collection row’s **Off** control to remove it from the active index. Select **Show disabled** to review hidden collections and turn them on again.
+Each archive begins with every collection visible. Use a collection row’s **Off** control to remove it from the active index, then select **Show disabled** to review hidden collections and turn them on again.
 
-Visibility is stored in browser `localStorage`, keyed by the wallet’s resolved Ethereum address. Each wallet therefore has an independent collection index on each browser/device. These preferences are not written on-chain, uploaded, or synchronized between devices.
+Visibility is stored independently for `mancel.eth` and `zeropoet.eth` on the current device. The refreshed curation namespace intentionally ignores selections from the earlier interface so both archives can be curated again from a clean baseline.
 
 ## Archive navigation
 

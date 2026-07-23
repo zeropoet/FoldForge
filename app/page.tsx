@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { resolveOwner } from "./ens";
 import { AlchemyNft, fetchNftMetadata, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, normalizeMediaUrl, summarizeContracts, tokenImageFor, tokenThumbnailFor } from "./nft-data";
 
@@ -35,13 +35,23 @@ declare global {
 
 const defaultOwner = "zeropoet.eth";
 const network = "eth-mainnet";
+const archiveLineage = [
+  {
+    owner: "mancel.eth",
+    order: "01",
+    role: "Foundation",
+    description: "Origin archive",
+  },
+  {
+    owner: "zeropoet.eth",
+    order: "02",
+    role: "Lineage",
+    description: "Living continuation",
+  },
+] as const;
 
 function shortAddress(address: string): string {
   return `${address.slice(0, 6)}...${address.slice(-4)}`;
-}
-
-function isOwnerInput(value: string): boolean {
-  return /^0x[a-fA-F0-9]{40}$/.test(value) || /^[a-z0-9-]+(?:\.[a-z0-9-]+)*\.eth$/i.test(value);
 }
 
 function mintedMediaFor(token: AlchemyNft): string {
@@ -98,15 +108,15 @@ export default function FoldForge() {
   const resolvedAddress = ownerIdentity?.address || (wallet ? wallet : "");
   const navigableOwner = ownerIdentity?.ensName || resolvedAddress || activeOwner;
   const isBusy = state === "loading" || state === "connecting";
-  const totalPieces = useMemo(
-    () => collections.reduce((total, collection) => total + collection.count, 0),
-    [collections],
-  );
   const visibleCollections = useMemo(
     () => collections.filter((collection) => showHidden || !hiddenCollections.has(collection.address)),
     [collections, hiddenCollections, showHidden],
   );
-  const hiddenCount = collections.length - collections.filter((collection) => !hiddenCollections.has(collection.address)).length;
+  const totalPieces = useMemo(
+    () => collections.reduce((total, collection) => total + collection.count, 0),
+    [collections],
+  );
+  const hiddenCount = collections.filter((collection) => hiddenCollections.has(collection.address)).length;
 
   const loadCollections = useCallback(async (owner: string) => {
     const requestId = requestSequence.current + 1;
@@ -224,7 +234,7 @@ export default function FoldForge() {
 
   useEffect(() => {
     if (!ownerIdentity?.address) return;
-    const key = `foldforge:hidden:${ownerIdentity.address.toLowerCase()}`;
+    const key = `foldforge:hidden:v2:${ownerIdentity.address.toLowerCase()}`;
     const stored = window.localStorage.getItem(key);
     queueMicrotask(() => setHiddenCollections(new Set(stored ? JSON.parse(stored) as string[] : [])));
   }, [ownerIdentity?.address]);
@@ -234,7 +244,7 @@ export default function FoldForge() {
     setHiddenCollections((current) => {
       const next = new Set(current);
       if (next.has(address)) next.delete(address); else next.add(address);
-      window.localStorage.setItem(`foldforge:hidden:${ownerIdentity.address.toLowerCase()}`, JSON.stringify([...next]));
+      window.localStorage.setItem(`foldforge:hidden:v2:${ownerIdentity.address.toLowerCase()}`, JSON.stringify([...next]));
       return next;
     });
   }
@@ -268,22 +278,15 @@ export default function FoldForge() {
     }
   }
 
-  function importAddress(event?: FormEvent<HTMLFormElement>) {
-    event?.preventDefault();
-
-    if (isBusy) {
-      return;
-    }
-
-    const address = manualAddress.trim();
-    if (!isOwnerInput(address)) {
-      setState("error");
-      setMessage("Enter a valid Ethereum address or .eth name.");
-      return;
-    }
-
+  function selectArchive(owner: string) {
+    if (isBusy || owner.toLowerCase() === navigableOwner.toLowerCase()) return;
     setWallet("");
-    void loadCollections(address);
+    setManualAddress(owner);
+    setHiddenCollections(new Set());
+    setShowHidden(false);
+    setSelectedContract("");
+    setSelectedTokenId("");
+    void loadCollections(owner);
   }
 
   return (
@@ -389,28 +392,39 @@ export default function FoldForge() {
               )}
             </section>
           ) : (<>
-          <form
-            className="grid border-b border-white/25 md:grid-cols-[1fr_auto]"
-            onSubmit={importAddress}
-          >
-            <label className="grid gap-4 pb-7 md:pb-9">
-              <span className="text-[10px] uppercase tracking-[0.28em] text-white/45">Collection owner</span>
-              <input
-                className="w-full bg-transparent text-4xl font-light tracking-[-0.04em] text-white outline-none placeholder:text-white/20 sm:text-6xl md:text-7xl"
-                disabled={isBusy}
-                onChange={(event) => setManualAddress(event.target.value)}
-                placeholder="ENS or 0x address"
-                value={manualAddress}
-              />
-            </label>
-            <button
-              className="mb-7 self-end border border-white px-7 py-4 text-[10px] font-medium uppercase tracking-[0.22em] transition hover:bg-white hover:text-black md:mb-9 md:ml-8"
-              disabled={isBusy}
-              type="submit"
-            >
-              {state === "loading" ? "Indexing" : "View archive"}
-            </button>
-          </form>
+          <section className="border-b border-white/25 pb-10 md:pb-14">
+            <div className="mb-7 flex items-center justify-between gap-6">
+              <p className="text-[9px] uppercase tracking-[0.3em] text-white/45">Archive lineage / Ethereum mainnet</p>
+              <p className="hidden font-mono text-[9px] text-white/25 sm:block">Foundation → Continuation</p>
+            </div>
+            <div className="lineage-selector grid gap-px bg-white/25 md:grid-cols-2">
+              {archiveLineage.map((archive) => {
+                const active = archive.owner === (ownerIdentity?.ensName || manualAddress).toLowerCase();
+                return (
+                  <button
+                    aria-current={active ? "page" : undefined}
+                    className={`lineage-node group relative grid min-h-48 content-between bg-black p-6 text-left transition md:min-h-56 md:p-8 ${active ? "is-active" : ""}`}
+                    disabled={isBusy}
+                    key={archive.owner}
+                    onClick={() => selectArchive(archive.owner)}
+                    type="button"
+                  >
+                    <span className="flex items-center justify-between gap-5">
+                      <span className="font-mono text-[9px] text-white/35">{archive.order}</span>
+                      <span className="text-[8px] uppercase tracking-[0.28em] text-white/40">{archive.role}</span>
+                    </span>
+                    <span>
+                      <span className="block text-3xl font-light uppercase tracking-[-0.035em] sm:text-4xl md:text-5xl">{archive.owner}</span>
+                      <span className="mt-4 flex items-center gap-3 text-[9px] uppercase tracking-[0.22em] text-white/35">
+                        <span className="lineage-marker" aria-hidden="true" />
+                        {active ? "Archive in view" : archive.description}
+                      </span>
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </section>
 
           <div className="grid border-b border-white/25 sm:grid-cols-3">
             <div className="border-b border-white/25 py-6 sm:border-b-0 sm:border-r sm:border-white/25 sm:px-6 sm:first:pl-0">
@@ -453,7 +467,7 @@ export default function FoldForge() {
                 <button className="text-[9px] uppercase tracking-[0.2em] text-white/45 hover:text-white" onClick={() => setShowHidden((value) => !value)} type="button">
                   {showHidden ? "Hide disabled" : `Show disabled (${hiddenCount})`}
                 </button>
-              ) : null}
+              ) : <p className="text-[8px] uppercase tracking-[0.24em] text-white/25">All holdings visible</p>}
             </div>
             {state === "loading" || state === "connecting" ? (
               <div className="grid">
