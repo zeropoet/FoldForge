@@ -33,6 +33,9 @@ export interface AlchemyNft {
   };
   raw?: {
     metadata?: {
+      image?: string | null;
+      image_url?: string | null;
+      animation_url?: string | null;
       attributes?: Array<{ trait_type?: string; value?: string | number }>;
     };
   };
@@ -209,6 +212,46 @@ async function providerFetch<T>(endpoint: URL, signal?: AbortSignal): Promise<T>
     throw new Error(`Ethereum data request failed (${response.status}).`);
   }
   return response.json() as Promise<T>;
+}
+
+async function hydrateCanonicalMedia(nft: AlchemyNft, signal?: AbortSignal): Promise<AlchemyNft> {
+  if (tokenImageFor(nft) || !nft.tokenUri) return nft;
+
+  const metadataUrl = normalizeMediaUrl(nft.tokenUri);
+  if (!/^https?:\/\//i.test(metadataUrl)) return nft;
+
+  try {
+    const response = await fetch(metadataUrl, {
+      headers: { accept: "application/json" },
+      signal,
+    });
+    if (!response.ok) return nft;
+
+    const metadata = (await response.json()) as {
+      image?: string | null;
+      image_url?: string | null;
+      animation_url?: string | null;
+      attributes?: Array<{ trait_type?: string; value?: string | number }>;
+    };
+    const image = normalizeMediaUrl(metadata.image_url || metadata.image);
+    const animation = normalizeMediaUrl(metadata.animation_url);
+
+    return {
+      ...nft,
+      image: image ? { ...nft.image, originalUrl: image } : nft.image,
+      animation: animation ? { ...nft.animation, originalUrl: animation } : nft.animation,
+      raw: {
+        ...nft.raw,
+        metadata: {
+          ...nft.raw?.metadata,
+          ...metadata,
+        },
+      },
+    };
+  } catch (error) {
+    if (error instanceof DOMException && error.name === "AbortError") throw error;
+    return nft;
+  }
 }
 
 function contractImageFor(contract: AlchemyContract): string {
@@ -508,7 +551,8 @@ export async function fetchOwnedNfts({
     }
 
     const payload = await providerFetch<{ ownedNfts?: AlchemyNft[]; pageKey?: string }>(endpoint, signal);
-    nfts.push(...(payload.ownedNfts || []));
+    const page = await Promise.all((payload.ownedNfts || []).map((nft) => hydrateCanonicalMedia(nft, signal)));
+    nfts.push(...page);
     onPage?.([...nfts]);
     pageKey = payload.pageKey;
   } while (pageKey && nfts.length < 600);
@@ -542,5 +586,6 @@ export async function fetchNftMetadata({
   const cacheKey = `token:${safeNetwork}:${contractAddress.toLowerCase()}:${tokenId}`;
   const hit = cached<AlchemyNft>(cacheKey);
   if (hit) return hit;
-  return remember(cacheKey, await providerFetch<AlchemyNft>(endpoint, signal));
+  const nft = await providerFetch<AlchemyNft>(endpoint, signal);
+  return remember(cacheKey, await hydrateCanonicalMedia(nft, signal));
 }
