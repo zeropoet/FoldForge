@@ -10,7 +10,7 @@ FoldForge is a static, wallet-connected Ethereum NFT archive with a monochrome, 
 
 - Ethereum wallet connection and ENS/address lookup
 - Typography-only collection index with no cover thumbnails or descriptions
-- Per-wallet collection visibility controls for the Mancel and Zeropoet archives
+- Repository-owned collection exclusions for the Mancel and Zeropoet archives
 - Shareable collection and minted-work URLs
 - NFT media with image, animation, video, and IPFS support
 - Minted metadata, traits, token URI, contract, Etherscan, and source-file links
@@ -38,9 +38,7 @@ Open [http://localhost:4173](http://localhost:4173). The build command creates a
 
 ## Collection curation
 
-Each archive begins with every collection visible. Use a collection row’s **Off** control to remove it from the active index, then select **Show disabled** to review hidden collections and turn them on again.
-
-Visibility is stored independently for `mancel.eth` and `zeropoet.eth` on the current device. The refreshed curation namespace intentionally ignores selections from the earlier interface so both archives can be curated again from a clean baseline.
+The public archive uses contract-address exclusions committed in `app/collection-policy.ts`. The initial snapshot excludes twenty contracts from `mancel.eth` and none from `zeropoet.eth`. Visibility is stable across browsers and devices, with no public curation controls or browser-storage dependency. Newly acquired collections appear automatically unless they are later added to the exclusion policy.
 
 ## Archive navigation
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { isCollectionAllowed } from "./collection-policy";
 import { resolveOwner } from "./ens";
 import { AlchemyNft, fetchNftMetadata, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, normalizeMediaUrl, summarizeContracts, tokenImageFor, tokenThumbnailFor } from "./nft-data";
 
@@ -99,8 +100,6 @@ export default function FoldForge() {
   const [tokens, setTokens] = useState<AlchemyNft[]>([]);
   const [tokenDetail, setTokenDetail] = useState<{ key: string; nft: AlchemyNft } | null>(null);
   const [detailLoading, setDetailLoading] = useState(false);
-  const [hiddenCollections, setHiddenCollections] = useState<Set<string>>(new Set());
-  const [showHidden, setShowHidden] = useState(false);
   const [state, setState] = useState<LoadState>("idle");
   const [message, setMessage] = useState("");
 
@@ -108,15 +107,10 @@ export default function FoldForge() {
   const resolvedAddress = ownerIdentity?.address || (wallet ? wallet : "");
   const navigableOwner = ownerIdentity?.ensName || resolvedAddress || activeOwner;
   const isBusy = state === "loading" || state === "connecting";
-  const visibleCollections = useMemo(
-    () => collections.filter((collection) => showHidden || !hiddenCollections.has(collection.address)),
-    [collections, hiddenCollections, showHidden],
-  );
   const totalPieces = useMemo(
     () => collections.reduce((total, collection) => total + collection.count, 0),
     [collections],
   );
-  const hiddenCount = collections.filter((collection) => hiddenCollections.has(collection.address)).length;
 
   const loadCollections = useCallback(async (owner: string) => {
     const requestId = requestSequence.current + 1;
@@ -132,12 +126,16 @@ export default function FoldForge() {
     try {
       if (!process.env.NEXT_PUBLIC_ALCHEMY_API_KEY) throw new Error("Set NEXT_PUBLIC_ALCHEMY_API_KEY to load live collections.");
       const resolvedOwner = await resolveOwner(owner);
+      const curate = (contracts: Parameters<typeof summarizeContracts>[0]) =>
+        summarizeContracts(contracts).filter((collection) =>
+          isCollectionAllowed(resolvedOwner.ensName, collection.address),
+        );
       const contracts = await fetchOwnedContracts({
         owner: resolvedOwner.address,
         network,
         signal: controller.signal,
         onPage: (page) => {
-          if (requestId === requestSequence.current) setCollections(summarizeContracts(page));
+          if (requestId === requestSequence.current) setCollections(curate(page));
         },
       });
 
@@ -145,7 +143,7 @@ export default function FoldForge() {
         return;
       }
 
-      setCollections(summarizeContracts(contracts));
+      setCollections(curate(contracts));
       setOwnerIdentity(resolvedOwner);
       setState("ready");
       setMessage("");
@@ -195,6 +193,18 @@ export default function FoldForge() {
 
   useEffect(() => {
     if (!ownerIdentity?.address || !selectedContract) return;
+    if (!isCollectionAllowed(ownerIdentity.ensName, selectedContract)) {
+      queueMicrotask(() => {
+        setSelectedContract("");
+        setSelectedTokenId("");
+        window.history.replaceState(
+          null,
+          "",
+          `${window.location.pathname}?owner=${encodeURIComponent(ownerIdentity.ensName || ownerIdentity.address)}`,
+        );
+      });
+      return;
+    }
     const controller = new AbortController();
     queueMicrotask(async () => {
       setDetailLoading(true);
@@ -232,23 +242,6 @@ export default function FoldForge() {
     return () => controller.abort();
   }, [selectedContract, selectedTokenId]);
 
-  useEffect(() => {
-    if (!ownerIdentity?.address) return;
-    const key = `foldforge:hidden:v2:${ownerIdentity.address.toLowerCase()}`;
-    const stored = window.localStorage.getItem(key);
-    queueMicrotask(() => setHiddenCollections(new Set(stored ? JSON.parse(stored) as string[] : [])));
-  }, [ownerIdentity?.address]);
-
-  function toggleCollection(address: string) {
-    if (!ownerIdentity?.address) return;
-    setHiddenCollections((current) => {
-      const next = new Set(current);
-      if (next.has(address)) next.delete(address); else next.add(address);
-      window.localStorage.setItem(`foldforge:hidden:v2:${ownerIdentity.address.toLowerCase()}`, JSON.stringify([...next]));
-      return next;
-    });
-  }
-
   const selectedCollection = collections.find((collection) => collection.address === selectedContract);
   const selectedToken = tokenDetail?.key === `${selectedContract}:${selectedTokenId}`
     ? tokenDetail.nft
@@ -282,8 +275,6 @@ export default function FoldForge() {
     if (isBusy || owner.toLowerCase() === navigableOwner.toLowerCase()) return;
     setWallet("");
     setManualAddress(owner);
-    setHiddenCollections(new Set());
-    setShowHidden(false);
     setSelectedContract("");
     setSelectedTokenId("");
     void loadCollections(owner);
@@ -462,12 +453,8 @@ export default function FoldForge() {
 
           <section className="mt-10 md:mt-16">
             <div className="flex items-center justify-between border-b border-white/25 pb-4">
-              <p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Collection index / {visibleCollections.length.toString().padStart(2, "0")}</p>
-              {hiddenCount ? (
-                <button className="text-[9px] uppercase tracking-[0.2em] text-white/45 hover:text-white" onClick={() => setShowHidden((value) => !value)} type="button">
-                  {showHidden ? "Hide disabled" : `Show disabled (${hiddenCount})`}
-                </button>
-              ) : <p className="text-[8px] uppercase tracking-[0.24em] text-white/25">All holdings visible</p>}
+              <p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Collection index / {collections.length.toString().padStart(2, "0")}</p>
+              <p className="text-[8px] uppercase tracking-[0.24em] text-white/25">Permanent archive</p>
             </div>
             {state === "loading" || state === "connecting" ? (
               <div className="grid">
@@ -477,8 +464,8 @@ export default function FoldForge() {
               </div>
             ) : collections.length ? (
               <div>
-                {visibleCollections.map((collection, index) => (
-                  <article className={`group grid grid-cols-[1fr_auto] items-stretch border-b border-white/25 ${hiddenCollections.has(collection.address) ? "opacity-35" : ""}`} key={collection.address}>
+                {collections.map((collection, index) => (
+                  <article className="group border-b border-white/25" key={collection.address}>
                     <a className="grid min-w-0 gap-5 py-7 pr-6 outline-none sm:grid-cols-[70px_1fr_auto] sm:items-baseline md:py-10" href={`?owner=${encodeURIComponent(navigableOwner)}&collection=${collection.address}`}>
                       <span className="font-mono text-[9px] text-white/30">{String(index + 1).padStart(2, "0")}</span>
                       <h2 className="truncate text-3xl font-light uppercase tracking-[-0.045em] transition group-hover:translate-x-2 sm:text-4xl md:text-6xl">{collection.name}</h2>
@@ -487,9 +474,6 @@ export default function FoldForge() {
                         <span>{collection.count.toString().padStart(2, "0")} works</span>
                       </div>
                     </a>
-                    <button aria-label={`${hiddenCollections.has(collection.address) ? "Show" : "Hide"} ${collection.name}`} className="w-16 border-l border-white/15 text-[9px] uppercase tracking-[0.16em] text-white/35 transition hover:bg-white hover:text-black sm:w-24" onClick={() => toggleCollection(collection.address)} type="button">
-                      {hiddenCollections.has(collection.address) ? "On" : "Off"}
-                    </button>
                   </article>
                 ))}
               </div>
