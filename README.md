@@ -4,11 +4,11 @@
 
 # FoldForge
 
-FoldForge is a static, wallet-connected Ethereum NFT archive with a monochrome, typography-led interface. Its primary archive lineage presents `mancel.eth` as the foundation and `zeropoet.eth` as its living continuation.
+FoldForge is a static Ethereum NFT archive with a monochrome, typography-led interface. Its primary archive lineage presents `mancel.eth` as the foundation and `zeropoet.eth` as its living continuation.
 
 ## Features
 
-- Ethereum wallet connection and ENS/address lookup
+- ENS/address archive lookup
 - Typography-only collection index with no cover thumbnails or descriptions
 - Repository-owned collection exclusions for the Mancel and Zeropoet archives
 - Shareable collection and minted-work URLs

@@ -5,7 +5,7 @@ import { isCollectionAllowed } from "./collection-policy";
 import { resolveOwner } from "./ens";
 import { AlchemyNft, fetchNftMetadata, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, normalizeMediaUrl, summarizeContracts, tokenImageFor, tokenThumbnailFor } from "./nft-data";
 
-type LoadState = "idle" | "connecting" | "loading" | "ready" | "error";
+type LoadState = "idle" | "loading" | "ready" | "error";
 
 interface CollectionSummary {
   address: string;
@@ -22,16 +22,6 @@ interface OwnerIdentity {
   input: string;
   address: string;
   ensName: string | null;
-}
-
-interface EthereumProvider {
-  request<T = unknown>(args: { method: string; params?: unknown[] }): Promise<T>;
-}
-
-declare global {
-  interface Window {
-    ethereum?: EthereumProvider;
-  }
 }
 
 const defaultOwner = "zeropoet.eth";
@@ -91,7 +81,6 @@ export default function FoldForge() {
   const collectionRequest = useRef<AbortController | null>(null);
   const [queryOwner, setQueryOwner] = useState(defaultOwner);
   const [queryReady, setQueryReady] = useState(false);
-  const [wallet, setWallet] = useState("");
   const [manualAddress, setManualAddress] = useState(defaultOwner);
   const [ownerIdentity, setOwnerIdentity] = useState<OwnerIdentity | null>(null);
   const [collections, setCollections] = useState<CollectionSummary[]>([]);
@@ -103,10 +92,10 @@ export default function FoldForge() {
   const [state, setState] = useState<LoadState>("idle");
   const [message, setMessage] = useState("");
 
-  const activeOwner = wallet || manualAddress.trim();
-  const resolvedAddress = ownerIdentity?.address || (wallet ? wallet : "");
+  const activeOwner = manualAddress.trim();
+  const resolvedAddress = ownerIdentity?.address || "";
   const navigableOwner = ownerIdentity?.ensName || resolvedAddress || activeOwner;
-  const isBusy = state === "loading" || state === "connecting";
+  const isBusy = state === "loading";
   const totalPieces = useMemo(
     () => collections.reduce((total, collection) => total + collection.count, 0),
     [collections],
@@ -247,33 +236,8 @@ export default function FoldForge() {
     ? tokenDetail.nft
     : tokens.find((token) => token.tokenId === selectedTokenId);
 
-  async function connectWallet() {
-    if (!window.ethereum) {
-      setState("error");
-      setMessage("No Ethereum wallet found.");
-      return;
-    }
-
-    setState("connecting");
-    setMessage("");
-
-    try {
-      const accounts = await window.ethereum.request<string[]>({
-        method: "eth_requestAccounts",
-      });
-      const account = accounts[0] || "";
-      setWallet(account);
-      setManualAddress("");
-      await loadCollections(account);
-    } catch (error) {
-      setState("error");
-      setMessage(error instanceof Error ? error.message : "Wallet connection failed.");
-    }
-  }
-
   function selectArchive(owner: string) {
     if (isBusy || owner.toLowerCase() === navigableOwner.toLowerCase()) return;
-    setWallet("");
     setManualAddress(owner);
     setSelectedContract("");
     setSelectedTokenId("");
@@ -284,7 +248,7 @@ export default function FoldForge() {
     <main className="archive-shell min-h-screen bg-black text-white">
       <section className="grid min-h-screen grid-rows-[auto_1fr]">
         <header className="site-header sticky top-0 z-20 border-b border-white/20 px-5 py-3 md:px-8">
-          <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-3 sm:gap-6">
+          <div className="mx-auto flex max-w-[1600px] items-center">
             <a className="flex min-w-0 items-center gap-3 sm:gap-4" href={`?owner=${encodeURIComponent(navigableOwner)}`}>
               <span className="brand-mark" aria-hidden="true">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -295,19 +259,6 @@ export default function FoldForge() {
                 <span className="mt-1 hidden text-[8px] uppercase tracking-[0.32em] text-white/40 sm:block">Ethereum archive / est. 2026</span>
               </span>
             </a>
-            <button
-              className="shrink-0 border border-white/50 px-3 py-3 text-[9px] font-medium uppercase tracking-[0.18em] transition hover:bg-white hover:text-black sm:px-5 sm:tracking-[0.22em]"
-              disabled={isBusy}
-              onClick={connectWallet}
-              type="button"
-            >
-              {state === "connecting" ? "Connecting" : wallet ? shortAddress(wallet) : (
-                <>
-                  <span className="sm:hidden">Connect</span>
-                  <span className="hidden sm:inline">Connect wallet</span>
-                </>
-              )}
-            </button>
           </div>
         </header>
 
@@ -471,7 +422,7 @@ export default function FoldForge() {
               <p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Collection index / {collections.length.toString().padStart(2, "0")}</p>
               <p className="max-w-48 text-right text-[8px] uppercase leading-4 tracking-[0.2em] text-white/25">Curated exclusions / new holdings surface live</p>
             </div>
-            {state === "loading" || state === "connecting" ? (
+            {state === "loading" ? (
               <div className="grid">
                 {Array.from({ length: 8 }).map((_, index) => (
                   <div className="h-28 animate-pulse border-b border-white/10 bg-[#030303]" key={index} />
