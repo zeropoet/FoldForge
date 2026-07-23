@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { isCollectionAllowed } from "./collection-policy";
 import { resolveOwner } from "./ens";
-import { AlchemyNft, fetchNftMetadata, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, normalizeMediaUrl, summarizeContracts, tokenImageFor, tokenThumbnailFor } from "./nft-data";
+import { AlchemyNft, fetchNftMetadata, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, normalizeMediaUrl, optimizedImageUrl, summarizeContracts, tokenImageFor, tokenThumbnailFor } from "./nft-data";
 
 type LoadState = "idle" | "loading" | "ready" | "error";
 
@@ -22,6 +22,11 @@ interface OwnerIdentity {
   input: string;
   address: string;
   ensName: string | null;
+}
+
+interface CachedLuminance {
+  media: string;
+  score: number | null;
 }
 
 const defaultOwner = "zeropoet.eth";
@@ -58,16 +63,28 @@ function compositionKey(token: AlchemyNft): string {
   return `${token.contract?.address?.toLowerCase() || "unknown"}:${token.tokenId || "unknown"}`;
 }
 
-function averageImageLuminance(image: HTMLImageElement): number | null {
+function compositionMediaFor(token: AlchemyNft): string {
+  const media = tokenThumbnailFor(token);
+  return media && !isVideoUrl(media) ? media : "";
+}
+
+async function averageImageLuminance(source: string, signal: AbortSignal): Promise<number | null> {
   try {
+    const response = await fetch(optimizedImageUrl(source, { width: 24, quality: 45 }), { signal });
+    if (!response.ok) return null;
+    const bitmap = await createImageBitmap(await response.blob());
     const canvas = document.createElement("canvas");
     const sampleSize = 24;
     canvas.width = sampleSize;
     canvas.height = sampleSize;
     const context = canvas.getContext("2d", { willReadFrequently: true });
-    if (!context) return null;
+    if (!context) {
+      bitmap.close();
+      return null;
+    }
 
-    context.drawImage(image, 0, 0, sampleSize, sampleSize);
+    context.drawImage(bitmap, 0, 0, sampleSize, sampleSize);
+    bitmap.close();
     const pixels = context.getImageData(0, 0, sampleSize, sampleSize).data;
     let total = 0;
 
@@ -80,7 +97,8 @@ function averageImageLuminance(image: HTMLImageElement): number | null {
     }
 
     return total / (pixels.length / 4);
-  } catch {
+  } catch (error) {
+    if (error instanceof DOMException && error.name === "AbortError") throw error;
     return null;
   }
 }
@@ -104,7 +122,7 @@ function MediaTile({ token }: { token: AlchemyNft }) {
     );
   }
   // eslint-disable-next-line @next/next/no-img-element
-  return <img alt="" className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0" decoding="async" loading="lazy" src={media} />;
+  return <img alt="" className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0" decoding="async" loading="lazy" src={optimizedImageUrl(media, { width: 720 })} />;
 }
 
 export default function FoldForge() {
@@ -118,6 +136,7 @@ export default function FoldForge() {
   const [collections, setCollections] = useState<CollectionSummary[]>([]);
   const [compositionTokens, setCompositionTokens] = useState<AlchemyNft[]>([]);
   const [compositionLoading, setCompositionLoading] = useState(false);
+  const [compositionAnalyzing, setCompositionAnalyzing] = useState(false);
   const [luminanceScores, setLuminanceScores] = useState<Record<string, number | null>>({});
   const [selectedContract, setSelectedContract] = useState("");
   const [selectedTokenId, setSelectedTokenId] = useState("");
@@ -136,7 +155,7 @@ export default function FoldForge() {
     [collections],
   );
   const orderedCompositionTokens = useMemo(() => {
-    const tokensWithMedia = compositionTokens.filter((token) => tokenThumbnailFor(token)).length;
+    const tokensWithMedia = compositionTokens.filter((token) => compositionMediaFor(token)).length;
     if (Object.keys(luminanceScores).length < tokensWithMedia) return compositionTokens;
 
     return [...compositionTokens].sort((a, b) => {
@@ -148,6 +167,10 @@ export default function FoldForge() {
       return aScore - bScore || compositionKey(a).localeCompare(compositionKey(b));
     });
   }, [compositionTokens, luminanceScores]);
+  const compositionReady = useMemo(() => {
+    const tokensWithMedia = compositionTokens.filter((token) => compositionMediaFor(token)).length;
+    return !compositionLoading && !compositionAnalyzing && Object.keys(luminanceScores).length >= tokensWithMedia;
+  }, [compositionAnalyzing, compositionLoading, compositionTokens, luminanceScores]);
 
   const loadCollections = useCallback(async (owner: string) => {
     const requestId = requestSequence.current + 1;
@@ -266,6 +289,67 @@ export default function FoldForge() {
     });
     return () => controller.abort();
   }, [ownerIdentity, selectedContract]);
+
+  useEffect(() => {
+    if (compositionLoading || !compositionTokens.length || !ownerIdentity?.address) return;
+
+    const controller = new AbortController();
+    const entries = compositionTokens
+      .map((token) => ({ key: compositionKey(token), media: compositionMediaFor(token) }))
+      .filter((entry) => entry.media);
+    const storageKey = `foldforge:luminance:v1:${ownerIdentity.address.toLowerCase()}`;
+
+    queueMicrotask(async () => {
+      setCompositionAnalyzing(true);
+      const scores: Record<string, number | null> = {};
+      let cached: Record<string, CachedLuminance> = {};
+
+      try {
+        cached = JSON.parse(localStorage.getItem(storageKey) || "{}") as Record<string, CachedLuminance>;
+      } catch {
+        cached = {};
+      }
+
+      const pending = entries.filter((entry) => {
+        const match = cached[entry.key];
+        if (!match || match.media !== entry.media) return true;
+        scores[entry.key] = match.score;
+        return false;
+      });
+
+      try {
+        const concurrency = 12;
+        for (let index = 0; index < pending.length; index += concurrency) {
+          const batch = pending.slice(index, index + concurrency);
+          const values = await Promise.all(
+            batch.map(async (entry) => ({
+              key: entry.key,
+              media: entry.media,
+              score: await averageImageLuminance(entry.media, controller.signal),
+            })),
+          );
+          for (const value of values) {
+            scores[value.key] = value.score;
+            cached[value.key] = { media: value.media, score: value.score };
+          }
+        }
+        try {
+          localStorage.setItem(storageKey, JSON.stringify(cached));
+        } catch {
+          // The composition remains functional when browser storage is unavailable.
+        }
+        setLuminanceScores(scores);
+      } catch (error) {
+        if (!(error instanceof DOMException && error.name === "AbortError")) {
+          setMessage(error instanceof Error ? error.message : "Archive luminance analysis failed.");
+        }
+      } finally {
+        if (!controller.signal.aborted) setCompositionAnalyzing(false);
+      }
+    });
+
+    return () => controller.abort();
+  }, [compositionLoading, compositionTokens, ownerIdentity]);
 
   useEffect(() => {
     if (!ownerIdentity?.address || selectedContract) {
@@ -456,11 +540,11 @@ export default function FoldForge() {
                   >
                     <span className="flex items-center justify-between gap-5">
                       <span className="font-mono text-[9px] text-white/35">{archive.order}</span>
-                      <span className="text-[8px] uppercase tracking-[0.28em] text-white/35">{archive.role}</span>
+                      <span className="text-[8px] uppercase tracking-[0.28em] text-white/50">{archive.role}</span>
                     </span>
                     <span>
                       <span className="block text-3xl font-light uppercase tracking-[-0.035em] sm:text-4xl">{archive.owner}</span>
-                      <span className="mt-3 flex items-center gap-3 text-[8px] uppercase tracking-[0.22em] text-white/35">
+                      <span className="mt-3 flex items-center gap-3 text-[8px] uppercase tracking-[0.22em] text-white/50">
                         <span className="lineage-marker" aria-hidden="true" />
                         {active ? "Archive in view" : archive.description}
                       </span>
@@ -515,10 +599,10 @@ export default function FoldForge() {
                 </p>
               </div>
               <p className="font-mono text-[8px] uppercase tracking-[0.16em] text-white/30">
-                {compositionLoading ? "Composing" : `${compositionTokens.length.toString().padStart(3, "0")} works`}
+                {compositionLoading ? "Composing" : compositionAnalyzing ? "Analyzing value" : `${compositionTokens.length.toString().padStart(3, "0")} works`}
               </p>
             </div>
-            {compositionLoading && !compositionTokens.length ? (
+            {!compositionReady ? (
               <div className="composition-grid is-loading" aria-label="Composing archive holdings">
                 {Array.from({ length: 48 }).map((_, index) => (
                   <span className="composition-tile" key={index} />
@@ -528,7 +612,8 @@ export default function FoldForge() {
               <div className="composition-grid">
                 {orderedCompositionTokens.map((token, index) => {
                   const contractAddress = token.contract?.address?.toLowerCase() || "";
-                  const media = tokenThumbnailFor(token);
+                  const media = compositionMediaFor(token);
+                  const displayMedia = media ? optimizedImageUrl(media, { width: 640 }) : "";
                   const tokenId = token.tokenId || "";
                   const key = compositionKey(token);
                   return (
@@ -539,22 +624,14 @@ export default function FoldForge() {
                       key={key}
                       style={{ "--tile-index": index } as CSSProperties}
                     >
-                      {media ? (
+                      {displayMedia ? (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
                           alt=""
-                          crossOrigin="anonymous"
                           decoding="async"
-                          fetchPriority="low"
-                          loading="eager"
-                          onError={() => {
-                            setLuminanceScores((current) => key in current ? current : { ...current, [key]: null });
-                          }}
-                          onLoad={(event) => {
-                            const score = averageImageLuminance(event.currentTarget);
-                            setLuminanceScores((current) => key in current ? current : { ...current, [key]: score });
-                          }}
-                          src={media}
+                          fetchPriority={index < 12 ? "high" : "auto"}
+                          loading={index < 24 ? "eager" : "lazy"}
+                          src={displayMedia}
                         />
                       ) : (
                         <span className="composition-void" aria-hidden="true" />

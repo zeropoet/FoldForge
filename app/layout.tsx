@@ -38,6 +38,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link crossOrigin="anonymous" href="https://images.weserv.nl" rel="preconnect" />
+        <link crossOrigin="anonymous" href="https://eth-mainnet.g.alchemy.com" rel="preconnect" />
+      </head>
       <body>{children}</body>
     </html>
   );

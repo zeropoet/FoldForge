@@ -146,7 +146,6 @@ export function tokenImageFor(nft: AlchemyNft): string {
     nft.image?.originalUrl ||
     nft.animation?.cachedUrl ||
     nft.animation?.originalUrl ||
-    nft.contract?.openSeaMetadata?.imageUrl ||
     ""
   );
 }
@@ -157,9 +156,33 @@ export function tokenThumbnailFor(nft: AlchemyNft): string {
     nft.image?.cachedUrl ||
     nft.image?.pngUrl ||
     nft.image?.originalUrl ||
-    nft.contract?.openSeaMetadata?.imageUrl ||
     "",
   );
+}
+
+export function optimizedImageUrl(
+  value: string,
+  {
+    width,
+    height = width,
+    quality = 88,
+  }: {
+    width: number;
+    height?: number;
+    quality?: number;
+  },
+): string {
+  const source = normalizeMediaUrl(value);
+  if (!/^https?:\/\//i.test(source)) return source;
+
+  const endpoint = new URL("https://images.weserv.nl/");
+  endpoint.searchParams.set("url", source);
+  endpoint.searchParams.set("w", String(width));
+  endpoint.searchParams.set("h", String(height));
+  endpoint.searchParams.set("fit", "cover");
+  endpoint.searchParams.set("output", "webp");
+  endpoint.searchParams.set("q", String(quality));
+  return endpoint.toString();
 }
 
 const responseCache = new Map<string, { expires: number; value: unknown }>();
