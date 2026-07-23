@@ -21,7 +21,9 @@ export const collectionDenylist: Readonly<Record<string, ReadonlySet<string>>> =
     "0xd901923c90928c490e5396b61dd9e681463e5311",
     "0xe7b98a3707a6b41654e98bf2285f6a30fbec1d43",
   ]),
-  "zeropoet.eth": new Set(),
+  "zeropoet.eth": new Set([
+    "0x1066d77f2b0ffe7a667e95ebc442866088ab1248",
+  ]),
 };
 
 export function isCollectionAllowed(owner: string | null, contractAddress: string): boolean {

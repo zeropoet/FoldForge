@@ -281,32 +281,37 @@ export default function FoldForge() {
   }
 
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="archive-shell min-h-screen bg-black text-white">
       <section className="grid min-h-screen grid-rows-[auto_1fr]">
-        <header className="border-b border-white/25 px-5 py-4 md:px-8">
-          <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-6">
-            <a className="flex items-center gap-4" href={`?owner=${encodeURIComponent(navigableOwner)}`}>
+        <header className="site-header sticky top-0 z-20 border-b border-white/20 px-5 py-3 md:px-8">
+          <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-3 sm:gap-6">
+            <a className="flex min-w-0 items-center gap-3 sm:gap-4" href={`?owner=${encodeURIComponent(navigableOwner)}`}>
               <span className="brand-mark" aria-hidden="true">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img alt="" src="/favicon.svg" />
               </span>
               <span>
-                <span className="block text-lg font-medium uppercase tracking-[0.22em]">FoldForge</span>
-                <span className="mt-1 hidden text-[8px] uppercase tracking-[0.32em] text-white/45 sm:block">Ethereum archive / est. 2026</span>
+                <span className="block text-base font-medium uppercase tracking-[0.2em] sm:text-lg sm:tracking-[0.22em]">FoldForge</span>
+                <span className="mt-1 hidden text-[8px] uppercase tracking-[0.32em] text-white/40 sm:block">Ethereum archive / est. 2026</span>
               </span>
             </a>
             <button
-              className="border border-white/50 px-5 py-3 text-[9px] font-medium uppercase tracking-[0.22em] transition hover:bg-white hover:text-black"
+              className="shrink-0 border border-white/50 px-3 py-3 text-[9px] font-medium uppercase tracking-[0.18em] transition hover:bg-white hover:text-black sm:px-5 sm:tracking-[0.22em]"
               disabled={isBusy}
               onClick={connectWallet}
               type="button"
             >
-              {state === "connecting" ? "Connecting" : wallet ? shortAddress(wallet) : "Connect wallet"}
+              {state === "connecting" ? "Connecting" : wallet ? shortAddress(wallet) : (
+                <>
+                  <span className="sm:hidden">Connect</span>
+                  <span className="hidden sm:inline">Connect wallet</span>
+                </>
+              )}
             </button>
           </div>
         </header>
 
-        <div className="mx-auto grid w-full max-w-[1600px] grid-rows-[auto_auto_1fr] px-5 py-10 md:px-8 md:py-16">
+        <div className="mx-auto grid w-full min-w-0 max-w-[1600px] grid-rows-[auto_auto_1fr] px-5 py-9 md:px-8 md:py-14">
           {selectedContract ? (
             <section>
               <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/25 pb-6">
@@ -383,18 +388,21 @@ export default function FoldForge() {
               )}
             </section>
           ) : (<>
-          <section className="border-b border-white/25 pb-10 md:pb-14">
-            <div className="mb-7 flex items-center justify-between gap-6">
+          <section className="min-w-0 border-b border-white/20 pb-9 md:pb-12">
+            <div className="mb-5 flex items-center justify-between gap-6">
               <p className="text-[9px] uppercase tracking-[0.3em] text-white/45">Archive lineage / Ethereum mainnet</p>
-              <p className="hidden font-mono text-[9px] text-white/25 sm:block">Foundation → Continuation</p>
+              <p className="hidden items-center gap-3 font-mono text-[8px] uppercase tracking-[0.18em] text-white/25 sm:flex">
+                <span className="h-px w-8 bg-white/20" />
+                Foundation / Continuation
+              </p>
             </div>
-            <div className="lineage-selector grid gap-px bg-white/25 md:grid-cols-2">
+            <div className="lineage-selector grid gap-px bg-white/20 md:grid-cols-2">
               {archiveLineage.map((archive) => {
                 const active = archive.owner === (ownerIdentity?.ensName || manualAddress).toLowerCase();
                 return (
                   <button
                     aria-current={active ? "page" : undefined}
-                    className={`lineage-node group relative grid min-h-48 content-between bg-black p-6 text-left transition md:min-h-56 md:p-8 ${active ? "is-active" : ""}`}
+                    className={`lineage-node group relative grid min-h-40 content-between bg-black p-5 text-left transition sm:min-h-44 md:p-7 ${active ? "is-active" : ""}`}
                     disabled={isBusy}
                     key={archive.owner}
                     onClick={() => selectArchive(archive.owner)}
@@ -402,11 +410,11 @@ export default function FoldForge() {
                   >
                     <span className="flex items-center justify-between gap-5">
                       <span className="font-mono text-[9px] text-white/35">{archive.order}</span>
-                      <span className="text-[8px] uppercase tracking-[0.28em] text-white/40">{archive.role}</span>
+                      <span className="text-[8px] uppercase tracking-[0.28em] text-white/35">{archive.role}</span>
                     </span>
                     <span>
-                      <span className="block text-3xl font-light uppercase tracking-[-0.035em] sm:text-4xl md:text-5xl">{archive.owner}</span>
-                      <span className="mt-4 flex items-center gap-3 text-[9px] uppercase tracking-[0.22em] text-white/35">
+                      <span className="block text-3xl font-light uppercase tracking-[-0.035em] sm:text-4xl">{archive.owner}</span>
+                      <span className="mt-3 flex items-center gap-3 text-[8px] uppercase tracking-[0.22em] text-white/35">
                         <span className="lineage-marker" aria-hidden="true" />
                         {active ? "Archive in view" : archive.description}
                       </span>
@@ -417,9 +425,9 @@ export default function FoldForge() {
             </div>
           </section>
 
-          <div className="grid border-b border-white/25 sm:grid-cols-3">
-            <div className="border-b border-white/25 py-6 sm:border-b-0 sm:border-r sm:border-white/25 sm:px-6 sm:first:pl-0">
-              <p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Identity</p>
+          <div className="archive-metrics grid border-b border-white/20 sm:grid-cols-4">
+            <div className="border-b border-white/20 py-5 sm:border-b-0 sm:border-r sm:border-white/20 sm:px-5 sm:first:pl-0">
+              <p className="text-[8px] uppercase tracking-[0.25em] text-white/35">Current archive</p>
               <p className="mt-3 truncate text-sm font-medium">
                 {ownerIdentity?.ensName
                   ? ownerIdentity.ensName
@@ -435,13 +443,20 @@ export default function FoldForge() {
                 </p>
               ) : null}
             </div>
-            <div className="border-b border-white/25 py-6 sm:border-b-0 sm:border-r sm:border-white/25 sm:px-6">
-              <p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Collections</p>
-              <p className="mt-3 text-2xl font-light">{collections.length.toString().padStart(2, "0")}</p>
+            <div className="border-b border-white/20 py-5 sm:border-b-0 sm:border-r sm:border-white/20 sm:px-5">
+              <p className="text-[8px] uppercase tracking-[0.25em] text-white/35">Collections</p>
+              <p className="mt-3 text-3xl font-light tracking-[-0.04em]">{collections.length.toString().padStart(2, "0")}</p>
             </div>
-            <div className="py-6 sm:px-6">
-              <p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Works held</p>
-              <p className="mt-3 text-2xl font-light">{totalPieces.toString().padStart(2, "0")}</p>
+            <div className="border-b border-white/20 py-5 sm:border-b-0 sm:border-r sm:border-white/20 sm:px-5">
+              <p className="text-[8px] uppercase tracking-[0.25em] text-white/35">Works held</p>
+              <p className="mt-3 text-3xl font-light tracking-[-0.04em]">{totalPieces.toString().padStart(2, "0")}</p>
+            </div>
+            <div className="py-5 sm:px-5">
+              <p className="text-[8px] uppercase tracking-[0.25em] text-white/35">Index state</p>
+              <p className="mt-4 flex items-center gap-3 text-[9px] uppercase tracking-[0.18em] text-white/60">
+                <span className={`h-1.5 w-1.5 ${state === "ready" ? "bg-white" : "border border-white/45"}`} />
+                {state === "ready" ? "Live holdings" : state === "loading" ? "Resolving" : "Standby"}
+              </p>
             </div>
           </div>
 
@@ -451,10 +466,10 @@ export default function FoldForge() {
             </div>
           ) : null}
 
-          <section className="mt-10 md:mt-16">
-            <div className="flex items-center justify-between border-b border-white/25 pb-4">
+          <section className="min-w-0 mt-10 md:mt-14">
+            <div className="flex items-end justify-between gap-6 border-b border-white/25 pb-4">
               <p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Collection index / {collections.length.toString().padStart(2, "0")}</p>
-              <p className="text-[8px] uppercase tracking-[0.24em] text-white/25">Permanent archive</p>
+              <p className="max-w-48 text-right text-[8px] uppercase leading-4 tracking-[0.2em] text-white/25">Curated exclusions / new holdings surface live</p>
             </div>
             {state === "loading" || state === "connecting" ? (
               <div className="grid">
@@ -463,16 +478,17 @@ export default function FoldForge() {
                 ))}
               </div>
             ) : collections.length ? (
-              <div>
+              <div className="collection-register border-x border-white/10">
                 {collections.map((collection, index) => (
                   <article className="group border-b border-white/25" key={collection.address}>
-                    <a className="grid min-w-0 gap-5 py-7 pr-6 outline-none sm:grid-cols-[70px_1fr_auto] sm:items-baseline md:py-10" href={`?owner=${encodeURIComponent(navigableOwner)}&collection=${collection.address}`}>
-                      <span className="font-mono text-[9px] text-white/30">{String(index + 1).padStart(2, "0")}</span>
-                      <h2 className="truncate text-3xl font-light uppercase tracking-[-0.045em] transition group-hover:translate-x-2 sm:text-4xl md:text-6xl">{collection.name}</h2>
-                      <div className="flex items-center gap-5 text-[9px] uppercase tracking-[0.18em] text-white/35">
+                    <a className="collection-link grid min-w-0 gap-4 px-4 py-6 outline-none sm:grid-cols-[58px_1fr_auto_18px] sm:items-center md:px-6 md:py-8" href={`?owner=${encodeURIComponent(navigableOwner)}&collection=${collection.address}`}>
+                      <span className="font-mono text-[8px] text-white/25">C/{String(index + 1).padStart(2, "0")}</span>
+                      <h2 className="truncate text-3xl font-light uppercase tracking-[-0.045em] transition sm:text-4xl md:text-5xl">{collection.name}</h2>
+                      <div className="flex items-center gap-4 text-[8px] uppercase tracking-[0.18em] text-white/35">
                         <span>{collection.symbol || shortAddress(collection.address)}</span>
                         <span>{collection.count.toString().padStart(2, "0")} works</span>
                       </div>
+                      <span className="collection-arrow hidden text-right text-sm text-white/25 transition sm:block" aria-hidden="true">→</span>
                     </a>
                   </article>
                 ))}
@@ -482,6 +498,10 @@ export default function FoldForge() {
                 {state === "ready" ? "No collections found" : "Enter an identity to begin"}
               </div>
             )}
+            <div className="mt-5 flex items-center justify-between gap-5 font-mono text-[8px] uppercase tracking-[0.14em] text-white/20">
+              <span>Ethereum mainnet</span>
+              <span>Contract-indexed / dynamically resolved</span>
+            </div>
           </section>
           </>)}
         </div>

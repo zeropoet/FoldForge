@@ -29,10 +29,21 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.archive-shell {
+  background:
+    linear-gradient(90deg, transparent calc(50% - 1px), rgb(255 255 255 / 2%) 50%, transparent calc(50% + 1px)),
+    #000;
+}
+
+.site-header {
+  background: rgb(0 0 0 / 88%);
+  backdrop-filter: blur(14px);
+}
+
 .brand-mark {
   display: block;
-  width: 4rem;
-  height: 4rem;
+  width: 3.25rem;
+  height: 3.25rem;
   flex: 0 0 auto;
 }
 
@@ -45,6 +56,20 @@ body {
 
 .lineage-selector {
   position: relative;
+}
+
+.lineage-selector::after {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 0.55rem;
+  height: 0.55rem;
+  border: 1px solid rgb(255 255 255 / 65%);
+  background: #000;
+  content: "";
+  pointer-events: none;
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .lineage-node {
@@ -65,6 +90,10 @@ body {
   border-color: rgb(255 255 255 / 78%);
 }
 
+.lineage-node:hover:not(:disabled) {
+  background: rgb(255 255 255 / 3%);
+}
+
 .lineage-node.is-active {
   background:
     linear-gradient(135deg, rgb(255 255 255 / 5%), transparent 45%),
@@ -81,6 +110,47 @@ body {
 
 .lineage-node.is-active .lineage-marker {
   background: #fff;
+}
+
+.collection-link {
+  position: relative;
+  transition: background-color 180ms ease;
+}
+
+.collection-link::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1px;
+  width: 2px;
+  background: #fff;
+  content: "";
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.collection-link:hover {
+  background: rgb(255 255 255 / 3%);
+}
+
+.collection-link:hover::before,
+.collection-link:focus-visible::before {
+  opacity: 1;
+}
+
+.collection-link:hover h2 {
+  transform: translateX(0.35rem);
+}
+
+.collection-link:hover .collection-arrow {
+  color: #fff;
+  transform: translateX(0.2rem);
+}
+
+.collection-link:focus-visible,
+.lineage-node:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: -3px;
 }
 
 button,
@@ -119,6 +189,29 @@ button:disabled {
 @media (min-width: 640px) {
   .masonry-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 639px) {
+  .archive-shell {
+    background: #000;
+  }
+
+  .lineage-selector::after {
+    top: 50%;
+  }
+
+  .brand-mark {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .archive-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .archive-metrics > :nth-child(odd) {
+    border-right: 1px solid rgb(255 255 255 / 20%);
   }
 }
 

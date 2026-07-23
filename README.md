@@ -38,7 +38,7 @@ Open [http://localhost:4173](http://localhost:4173). The build command creates a
 
 ## Collection curation
 
-The public archive uses contract-address exclusions committed in `app/collection-policy.ts`. The initial snapshot excludes twenty contracts from `mancel.eth` and none from `zeropoet.eth`. Visibility is stable across browsers and devices, with no public curation controls or browser-storage dependency. Newly acquired collections appear automatically unless they are later added to the exclusion policy.
+The public archive uses contract-address exclusions committed in `app/collection-policy.ts`. Visibility is stable across browsers and devices, with no public curation controls or browser-storage dependency. Newly acquired collections appear automatically unless they are later added to the exclusion policy.
 
 ## Archive navigation
 
