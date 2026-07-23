@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { isCollectionAllowed } from "./collection-policy";
 import { resolveOwner } from "./ens";
 import { AlchemyNft, fetchNftMetadata, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, normalizeMediaUrl, summarizeContracts, tokenImageFor, tokenThumbnailFor } from "./nft-data";
@@ -54,6 +54,37 @@ function hasVideoMedia(token: AlchemyNft): boolean {
   return Boolean(token.animation?.cachedUrl || token.animation?.originalUrl) || isVideoUrl(mintedMediaFor(token));
 }
 
+function compositionKey(token: AlchemyNft): string {
+  return `${token.contract?.address?.toLowerCase() || "unknown"}:${token.tokenId || "unknown"}`;
+}
+
+function averageImageLuminance(image: HTMLImageElement): number | null {
+  try {
+    const canvas = document.createElement("canvas");
+    const sampleSize = 24;
+    canvas.width = sampleSize;
+    canvas.height = sampleSize;
+    const context = canvas.getContext("2d", { willReadFrequently: true });
+    if (!context) return null;
+
+    context.drawImage(image, 0, 0, sampleSize, sampleSize);
+    const pixels = context.getImageData(0, 0, sampleSize, sampleSize).data;
+    let total = 0;
+
+    for (let index = 0; index < pixels.length; index += 4) {
+      const alpha = pixels[index + 3] / 255;
+      const red = pixels[index] * alpha;
+      const green = pixels[index + 1] * alpha;
+      const blue = pixels[index + 2] * alpha;
+      total += (0.2126 * red + 0.7152 * green + 0.0722 * blue) / 255;
+    }
+
+    return total / (pixels.length / 4);
+  } catch {
+    return null;
+  }
+}
+
 function MediaTile({ token }: { token: AlchemyNft }) {
   const media = hasVideoMedia(token) ? mintedMediaFor(token) : tokenThumbnailFor(token);
   if (!media) return null;
@@ -79,11 +110,15 @@ function MediaTile({ token }: { token: AlchemyNft }) {
 export default function FoldForge() {
   const requestSequence = useRef(0);
   const collectionRequest = useRef<AbortController | null>(null);
+  const compositionRequest = useRef<AbortController | null>(null);
   const [queryOwner, setQueryOwner] = useState(defaultOwner);
   const [queryReady, setQueryReady] = useState(false);
   const [manualAddress, setManualAddress] = useState(defaultOwner);
   const [ownerIdentity, setOwnerIdentity] = useState<OwnerIdentity | null>(null);
   const [collections, setCollections] = useState<CollectionSummary[]>([]);
+  const [compositionTokens, setCompositionTokens] = useState<AlchemyNft[]>([]);
+  const [compositionLoading, setCompositionLoading] = useState(false);
+  const [luminanceScores, setLuminanceScores] = useState<Record<string, number | null>>({});
   const [selectedContract, setSelectedContract] = useState("");
   const [selectedTokenId, setSelectedTokenId] = useState("");
   const [tokens, setTokens] = useState<AlchemyNft[]>([]);
@@ -100,6 +135,19 @@ export default function FoldForge() {
     () => collections.reduce((total, collection) => total + collection.count, 0),
     [collections],
   );
+  const orderedCompositionTokens = useMemo(() => {
+    const tokensWithMedia = compositionTokens.filter((token) => tokenThumbnailFor(token)).length;
+    if (Object.keys(luminanceScores).length < tokensWithMedia) return compositionTokens;
+
+    return [...compositionTokens].sort((a, b) => {
+      const aScore = luminanceScores[compositionKey(a)];
+      const bScore = luminanceScores[compositionKey(b)];
+      if (aScore == null && bScore == null) return compositionKey(a).localeCompare(compositionKey(b));
+      if (aScore == null) return 1;
+      if (bScore == null) return -1;
+      return aScore - bScore || compositionKey(a).localeCompare(compositionKey(b));
+    });
+  }, [compositionTokens, luminanceScores]);
 
   const loadCollections = useCallback(async (owner: string) => {
     const requestId = requestSequence.current + 1;
@@ -107,6 +155,8 @@ export default function FoldForge() {
     setState("loading");
     setMessage("");
     setCollections([]);
+    setCompositionTokens([]);
+    setLuminanceScores({});
     setOwnerIdentity(null);
     collectionRequest.current?.abort();
     const controller = new AbortController();
@@ -214,6 +264,51 @@ export default function FoldForge() {
         if (!controller.signal.aborted) setDetailLoading(false);
       }
     });
+    return () => controller.abort();
+  }, [ownerIdentity, selectedContract]);
+
+  useEffect(() => {
+    if (!ownerIdentity?.address || selectedContract) {
+      compositionRequest.current?.abort();
+      return;
+    }
+
+    const controller = new AbortController();
+    compositionRequest.current?.abort();
+    compositionRequest.current = controller;
+
+    queueMicrotask(async () => {
+      setCompositionLoading(true);
+      setCompositionTokens([]);
+
+      try {
+        await fetchOwnedNfts({
+          owner: ownerIdentity.address,
+          network,
+          signal: controller.signal,
+          onPage: (nfts) => {
+            const visible = nfts
+              .filter((nft) => {
+                const address = nft.contract?.address;
+                return address && isCollectionAllowed(ownerIdentity.ensName, address);
+              })
+              .sort((a, b) => {
+                const aKey = `${a.tokenId || ""}:${a.contract?.address || ""}`;
+                const bKey = `${b.tokenId || ""}:${b.contract?.address || ""}`;
+                return aKey.localeCompare(bKey);
+              });
+            setCompositionTokens(visible);
+          },
+        });
+      } catch (error) {
+        if (!(error instanceof DOMException && error.name === "AbortError")) {
+          setMessage(error instanceof Error ? error.message : "Archive composition failed.");
+        }
+      } finally {
+        if (!controller.signal.aborted) setCompositionLoading(false);
+      }
+    });
+
     return () => controller.abort();
   }, [ownerIdentity, selectedContract]);
 
@@ -410,6 +505,70 @@ export default function FoldForge() {
               </p>
             </div>
           </div>
+
+          <section className="composition-section min-w-0 border-b border-white/20 py-10 md:py-14">
+            <div className="mb-5 flex items-end justify-between gap-6">
+              <div>
+                <p className="text-[9px] uppercase tracking-[0.28em] text-white/40">Holdings composition</p>
+                <p className="mt-2 max-w-xl text-[9px] uppercase leading-4 tracking-[0.18em] text-white/25">
+                  Every visible work / average luminance / dark → light
+                </p>
+              </div>
+              <p className="font-mono text-[8px] uppercase tracking-[0.16em] text-white/30">
+                {compositionLoading ? "Composing" : `${compositionTokens.length.toString().padStart(3, "0")} works`}
+              </p>
+            </div>
+            {compositionLoading && !compositionTokens.length ? (
+              <div className="composition-grid is-loading" aria-label="Composing archive holdings">
+                {Array.from({ length: 48 }).map((_, index) => (
+                  <span className="composition-tile" key={index} />
+                ))}
+              </div>
+            ) : compositionTokens.length ? (
+              <div className="composition-grid">
+                {orderedCompositionTokens.map((token, index) => {
+                  const contractAddress = token.contract?.address?.toLowerCase() || "";
+                  const media = tokenThumbnailFor(token);
+                  const tokenId = token.tokenId || "";
+                  const key = compositionKey(token);
+                  return (
+                    <a
+                      aria-label={token.name || `Work ${tokenId}`}
+                      className="composition-tile group"
+                      href={`?owner=${encodeURIComponent(navigableOwner)}&collection=${contractAddress}&token=${encodeURIComponent(tokenId)}`}
+                      key={key}
+                      style={{ "--tile-index": index } as CSSProperties}
+                    >
+                      {media ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          alt=""
+                          crossOrigin="anonymous"
+                          decoding="async"
+                          fetchPriority="low"
+                          loading="eager"
+                          onError={() => {
+                            setLuminanceScores((current) => key in current ? current : { ...current, [key]: null });
+                          }}
+                          onLoad={(event) => {
+                            const score = averageImageLuminance(event.currentTarget);
+                            setLuminanceScores((current) => key in current ? current : { ...current, [key]: score });
+                          }}
+                          src={media}
+                        />
+                      ) : (
+                        <span className="composition-void" aria-hidden="true" />
+                      )}
+                    </a>
+                  );
+                })}
+              </div>
+            ) : (
+              <div className="grid min-h-40 place-items-center border border-white/10 text-[9px] uppercase tracking-[0.2em] text-white/30">
+                No visual holdings resolved
+              </div>
+            )}
+          </section>
 
           {message ? (
             <div className="border-b border-white/25 px-0 py-5 text-xs uppercase tracking-[0.12em] text-white/60">

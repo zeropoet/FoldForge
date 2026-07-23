@@ -153,6 +153,75 @@ body {
   outline-offset: -3px;
 }
 
+.composition-grid {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  background: rgb(255 255 255 / 18%);
+  border: 1px solid rgb(255 255 255 / 18%);
+}
+
+.composition-tile {
+  position: relative;
+  display: block;
+  aspect-ratio: 1;
+  min-width: 0;
+  overflow: hidden;
+  background: #050505;
+}
+
+.composition-tile img,
+.composition-void {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.composition-tile img {
+  object-fit: cover;
+  filter: grayscale(1);
+  transition: filter 240ms ease;
+}
+
+.composition-tile:hover img,
+.composition-tile:focus-visible img {
+  filter: grayscale(0);
+}
+
+.composition-tile:focus-visible {
+  z-index: 1;
+  outline: 1px solid #fff;
+  outline-offset: -2px;
+}
+
+.composition-void {
+  background:
+    linear-gradient(
+      calc(45deg + var(--tile-index, 0) * 1deg),
+      transparent 42%,
+      rgb(255 255 255 / 22%) 42% 44%,
+      transparent 44%
+    ),
+    #030303;
+}
+
+.composition-grid.is-loading .composition-tile {
+  animation: composition-loading 1.8s ease-in-out infinite alternate;
+  animation-delay: calc(var(--tile-index, 0) * -80ms);
+}
+
+@keyframes composition-loading {
+  from {
+    background: #030303;
+  }
+
+  to {
+    background: #171717;
+  }
+}
+
 button,
 input,
 select {
@@ -190,6 +259,10 @@ button:disabled {
   .masonry-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .composition-grid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 639px) {
@@ -218,6 +291,10 @@ button:disabled {
 @media (min-width: 1024px) {
   .masonry-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .composition-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 }
 
@@ -257,4 +334,10 @@ button:disabled {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .composition-grid.is-loading .composition-tile {
+    animation: none;
+  }
 }
