@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://foldforge.xyz/grammar/composition-witness.schema.json",
+  "title": "FoldForge Composition Witness",
+  "type": "object",
+  "required": [
+    "schema",
+    "stateHash",
+    "observedAt",
+    "composition",
+    "expressions",
+    "archive",
+    "evidence"
+  ],
+  "properties": {
+    "schema": { "const": "foldforge-composition-witness/v1" },
+    "stateHash": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+    "observedAt": { "type": "string", "format": "date-time" },
+    "composition": {
+      "type": "object",
+      "required": ["id", "version", "constitutionRevision"]
+    },
+    "expressions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "version", "modality"]
+      }
+    },
+    "archive": {
+      "type": "object",
+      "required": ["network", "owner", "address", "includedContracts"]
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["tokens", "tokenCount"]
+    }
+  },
+  "additionalProperties": false
+}

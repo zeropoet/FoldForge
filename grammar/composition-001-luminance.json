@@ -1,0 +1,93 @@
+{
+  "schema": "foldforge-composition/v1",
+  "id": "FF-COMP-0001",
+  "version": "1.0.0",
+  "status": "living",
+  "title": "Luminance Field",
+  "constitutionRevision": "v0.1",
+  "discovery": {
+    "name": "Composition I",
+    "statement": "The first grammar FoldForge found: individually held works disclose a collective field when ordered by average perceived light.",
+    "date": "2026-07-23"
+  },
+  "evidence": {
+    "network": "Ethereum mainnet",
+    "ownerScope": "selected archive identity",
+    "inclusionPolicy": "all currently held contracts except repository-owned exclusions",
+    "requiredFields": [
+      "contract address",
+      "token ID",
+      "owner state",
+      "token media URL"
+    ],
+    "mediaAuthority": [
+      "provider token media",
+      "canonical token metadata when provider media is absent"
+    ]
+  },
+  "transformations": [
+    {
+      "order": 1,
+      "operation": "resolve",
+      "input": "visible held tokens",
+      "output": "token-specific canonical media"
+    },
+    {
+      "order": 2,
+      "operation": "sample",
+      "input": "token image",
+      "output": "24 by 24 pixel derivative"
+    },
+    {
+      "order": 3,
+      "operation": "measure",
+      "input": "sample pixels composited against black",
+      "output": "average perceived luminance using Rec. 709 coefficients"
+    },
+    {
+      "order": 4,
+      "operation": "order",
+      "input": "luminance values",
+      "output": "ascending dark-to-light sequence",
+      "tieBreak": "contract address and token ID"
+    },
+    {
+      "order": 5,
+      "operation": "render",
+      "input": "ordered sequence",
+      "output": "equal square grayscale field with color revealed by direct focus"
+    }
+  ],
+  "presentation": {
+    "title": "Holdings composition",
+    "interfaceStatement": "Every visible work / average luminance / dark → light",
+    "tileShape": "square",
+    "tileWeight": "equal",
+    "restingColor": "grayscale",
+    "focusColor": "source color",
+    "differenceRule": "No work receives different scale without evidence and an explicit grammar."
+  },
+  "lineage": {
+    "capture": [
+      "composition ID",
+      "grammar version",
+      "constitution revision",
+      "network",
+      "owner identity",
+      "resolved owner address",
+      "included contract addresses",
+      "excluded contract addresses",
+      "token contract and ID",
+      "canonical media URL",
+      "luminance value",
+      "deterministic state hash",
+      "render timestamp"
+    ],
+    "cache": "Luminance may be cached by owner, token identity, and media URL. A changed media URL requires recalculation.",
+    "revisionTrigger": "A transformation or interpretation change requires a new grammar version. A holding change produces a new composition state under the same grammar."
+  },
+  "authority": {
+    "claims": "This ordering is a reproducible observation of average image luminance for the selected archive state.",
+    "doesNotClaim": "Luminance determines artistic value, chronology, rarity, intention, or final meaning."
+  }
+}

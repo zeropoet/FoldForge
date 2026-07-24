@@ -1,0 +1,132 @@
+{
+  "schema": "foldforge-composition/v1",
+  "id": "FF-COMP-0003",
+  "version": "6.0.0",
+  "status": "living",
+  "title": "Resonant Holdings",
+  "constitutionRevision": "v0.1",
+  "discovery": {
+    "name": "Composition III",
+    "statement": "Every held work speaks through one continuous FoldForge voice while independent evidence dimensions govern its register, articulation, spatial position, and spectral motion.",
+    "date": "2026-07-24"
+  },
+  "evidence": {
+    "network": "Ethereum mainnet",
+    "ownerScope": "selected archive identity",
+    "inclusionPolicy": "same visible holdings as Composition I",
+    "requiredFields": ["contract address", "token ID", "collection name", "token name", "description", "average luminance"]
+  },
+  "transformations": [
+    {
+      "order": 1,
+      "operation": "derive macroform",
+      "input": "state hash, luminance mean and contrast, collection count, and collection diversity",
+      "output": "a deterministic six-phase evolution through ground, fold, recurrence, fracture, convergence, and silence"
+    },
+    {
+      "order": 2,
+      "operation": "map pitch",
+      "input": "average luminance",
+      "output": "five-degree minor-pentatonic field spanning three octaves"
+    },
+    {
+      "order": 3,
+      "operation": "shape voice",
+      "input": "contract address",
+      "output": "stable harmonic intensity and micro-detuning within one sine-and-triangle FoldForge instrument"
+    },
+    {
+      "order": 4,
+      "operation": "map rhythm",
+      "input": "token ID",
+      "output": "stable pulse duration from 360 to 440 milliseconds"
+    },
+    {
+      "order": 5,
+      "operation": "map envelope",
+      "input": "token name and description density",
+      "output": "event duration from percussive strike to sustained tone"
+    },
+    {
+      "order": 6,
+      "operation": "map spatial field",
+      "input": "collection name",
+      "output": "stable restrained stereo position"
+    },
+    {
+      "order": 7,
+      "operation": "map spectrum",
+      "input": "average luminance",
+      "output": "filter cutoff from shadowed low-pass to illuminated high-frequency field"
+    },
+    {
+      "order": 8,
+      "operation": "compose",
+      "input": "ordered audible events",
+      "output": "autonomously selected, gain-normalized arrangement layers through one compressed unified voice with restrained recursive delay"
+    }
+  ],
+  "presentation": {
+    "title": "Sound composition",
+    "interfaceStatement": "One voice / value as register / token as pulse / collection as field",
+    "consent": "Sound never autoplays and begins only through explicit listener action.",
+    "maximumGain": 0.08,
+    "instrumentFamilies": ["Fold voice: sine fundamental, triangle harmonic, slow frequency movement"],
+    "tonalRange": "D2 through D5",
+    "spatialTreatment": "stereo field with bounded recursive delay"
+  },
+  "evolution": {
+    "humanControl": "The listener may witness or silence the composition. No phase, arrangement, or layer is manually selectable.",
+    "cycle": ["ground", "fold", "recurrence", "fracture", "convergence", "silence"],
+    "ground": "Luminance ascent establishes the tonal center.",
+    "fold": "Dark and light extremes answer inward.",
+    "recurrence": "Collection and contract relations form one or two simultaneous motifs according to archive diversity.",
+    "fracture": "Luminance contrast determines whether two or three independent arrangements open the field.",
+    "convergence": "Ascent and lineage seek a shared center without changing their individual order.",
+    "silence": "A state-derived rest preserves absence before the cycle reforms.",
+    "phaseDuration": "Event budgets are deterministically derived from the state hash.",
+    "stateChange": "A holdings change produces a new witness hash and therefore a newly proportioned evolution."
+  },
+  "layering": {
+    "minimumLayers": 1,
+    "maximumLayers": 3,
+    "startRelationship": "all arrangements selected by the current evolutionary phase begin together",
+    "independence": "each arrangement advances according to the pulse of the work currently encountered in that layer",
+    "gainRule": "per-event amplitude is divided by the square root of the number of active phase layers",
+    "identityRule": "layering changes event concurrence only; it never changes a work's evidence-derived sonic identity"
+  },
+  "arrangements": [
+    {
+      "id": "ascent",
+      "rule": "Composition I order from darkest to lightest"
+    },
+    {
+      "id": "descent",
+      "rule": "Composition I order reversed from lightest to darkest"
+    },
+    {
+      "id": "fold",
+      "rule": "alternate the darkest remaining work with the lightest remaining work until the sequence reaches its center"
+    },
+    {
+      "id": "collections",
+      "rule": "group by collection name, then order each body by luminance and token identity"
+    },
+    {
+      "id": "lineage",
+      "rule": "order by contract address and then numeric token ID"
+    },
+    {
+      "id": "scatter",
+      "rule": "order by a stable hash of the composition state hash and token identity"
+    }
+  ],
+  "lineage": {
+    "capture": ["composition ID", "grammar version", "state hash", "evolution phase", "active arrangement IDs", "phase event budget", "token identity", "luminance", "frequency", "instrument", "pulse", "envelope", "pan", "filter", "event order"],
+    "revisionTrigger": "An evolutionary phase, phase transition, arrangement, layering, pitch, voice, scheduling, duration, or gain change requires a new grammar version."
+  },
+  "authority": {
+    "claims": "The score is a deterministic translation of the current archive state.",
+    "doesNotClaim": "The score reproduces source audio, artist intention, emotion, or valuation."
+  }
+}

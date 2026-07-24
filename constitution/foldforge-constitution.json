@@ -1,0 +1,84 @@
+{
+  "schema": "foldforge-constitution/v1",
+  "revision": "v0.1",
+  "revisionLabel": "The Composer Threshold",
+  "status": "Living Scaffold",
+  "identity": {
+    "name": "FoldForge",
+    "definition": "An Ethereum NFT data composer that discovers, versions, and renders grammars latent within held works and their relationships.",
+    "maxim": "The archive becomes composition when evidence reveals a reproducible relation no individual holding contains."
+  },
+  "higherReference": {
+    "name": "Ethereum evidence",
+    "definition": "Canonical contract state, token identity, owner state, token metadata, source media, and preserved provenance remain prior to every FoldForge interpretation.",
+    "boundary": "FoldForge may compose from evidence. It may not rewrite source records, substitute absent token media, or present a derived pattern as the singular meaning of a work."
+  },
+  "orientation": {
+    "source": "Root Logos",
+    "relationship": "constitutional orientation, not runtime authority or shared identity",
+    "principles": [
+      "The Reflexive Architecture Principle",
+      "The Living Membrane Principle",
+      "The Creator's Threshold Principle",
+      "Intelligence Requires a Higher Reference",
+      "The Generative Compression Principle"
+    ]
+  },
+  "primitives": [
+    "identity",
+    "source",
+    "boundary",
+    "observation",
+    "relation",
+    "pattern",
+    "grammar",
+    "composition",
+    "witness",
+    "revision",
+    "release"
+  ],
+  "movement": [
+    "receive Ethereum evidence",
+    "preserve source identity",
+    "observe measurable qualities",
+    "relate observations without possession",
+    "compress recurring relations into grammar",
+    "render a reproducible composition",
+    "expose lineage and uncertainty",
+    "revise when evidence or grammar changes"
+  ],
+  "authority": {
+    "may": [
+      "read public Ethereum and canonical token metadata",
+      "measure media and metadata properties",
+      "derive versioned relations",
+      "render language, image, sound, video, and temporal sequence",
+      "cache reversible calculations",
+      "propose new grammars"
+    ],
+    "mayNot": [
+      "alter canonical Ethereum evidence",
+      "invent missing provenance or media",
+      "rank artistic worth without an explicit authorized grammar",
+      "claim computational interpretation as final meaning",
+      "silently change a published grammar",
+      "adopt a proposed grammar without versioned human review"
+    ]
+  },
+  "modalities": {
+    "language": "Token and collection language may become relational copy when every claim remains traceable to evidence or is labeled as interpretation.",
+    "image": "Visual properties may determine adjacency, order, density, scale, or transformation when the mapping is declared and reproducible.",
+    "sound": "Audible events require explicit source mapping, provenance, restrained gain, consent, and silence.",
+    "video": "Movement must arise from archive state, sequence, or declared transformation rather than decorative animation alone.",
+    "sequence": "Every captured development sequence preserves archive state, grammar version, transformation order, and release state."
+  },
+  "releaseStandard": [
+    "source fidelity",
+    "declared transformation",
+    "reproducibility",
+    "equal treatment unless difference is evidenced",
+    "uncertainty remains visible",
+    "original media remains reachable",
+    "revision and rollback remain possible"
+  ]
+}

@@ -1,7 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { isCollectionAllowed } from "./collection-policy";
+import ComposerChamber, { type ComposerEvidence } from "./composer-chamber";
+import { createCompositionWitness, type CompositionWitness } from "./composition-witness";
 import { resolveOwner } from "./ens";
 import { AlchemyNft, fetchNftMetadata, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, normalizeMediaUrl, optimizedImageUrl, summarizeContracts, tokenImageFor, tokenThumbnailFor } from "./nft-data";
 
@@ -138,6 +140,7 @@ export default function FoldForge() {
   const [compositionLoading, setCompositionLoading] = useState(false);
   const [compositionAnalyzing, setCompositionAnalyzing] = useState(false);
   const [luminanceScores, setLuminanceScores] = useState<Record<string, number | null>>({});
+  const [compositionWitness, setCompositionWitness] = useState<CompositionWitness | null>(null);
   const [selectedContract, setSelectedContract] = useState("");
   const [selectedTokenId, setSelectedTokenId] = useState("");
   const [tokens, setTokens] = useState<AlchemyNft[]>([]);
@@ -149,6 +152,7 @@ export default function FoldForge() {
   const activeOwner = manualAddress.trim();
   const resolvedAddress = ownerIdentity?.address || "";
   const navigableOwner = ownerIdentity?.ensName || resolvedAddress || activeOwner;
+  const composerEnabled = (ownerIdentity?.ensName || activeOwner).toLowerCase() === "zeropoet.eth";
   const isBusy = state === "loading";
   const totalPieces = useMemo(
     () => collections.reduce((total, collection) => total + collection.count, 0),
@@ -171,6 +175,20 @@ export default function FoldForge() {
     const tokensWithMedia = compositionTokens.filter((token) => compositionMediaFor(token)).length;
     return !compositionLoading && !compositionAnalyzing && Object.keys(luminanceScores).length >= tokensWithMedia;
   }, [compositionAnalyzing, compositionLoading, compositionTokens, luminanceScores]);
+  const composerEvidence = useMemo<ComposerEvidence[]>(() =>
+    orderedCompositionTokens.map((token) => {
+      const sourceMedia = compositionMediaFor(token);
+      return {
+        key: compositionKey(token),
+        contract: token.contract?.address?.toLowerCase() || "",
+        tokenId: token.tokenId || "",
+        name: token.name || `Token ${token.tokenId || "unknown"}`,
+        description: token.description || "",
+        collection: token.collection?.name || token.contract?.openSeaMetadata?.collectionName || token.contract?.name || "Unresolved collection",
+        media: sourceMedia ? optimizedImageUrl(sourceMedia, { width: 1280, quality: 90 }) : "",
+        luminance: luminanceScores[compositionKey(token)] ?? null,
+      };
+    }), [luminanceScores, orderedCompositionTokens]);
 
   const loadCollections = useCallback(async (owner: string) => {
     const requestId = requestSequence.current + 1;
@@ -180,6 +198,7 @@ export default function FoldForge() {
     setCollections([]);
     setCompositionTokens([]);
     setLuminanceScores({});
+    setCompositionWitness(null);
     setOwnerIdentity(null);
     collectionRequest.current?.abort();
     const controller = new AbortController();
@@ -291,7 +310,7 @@ export default function FoldForge() {
   }, [ownerIdentity, selectedContract]);
 
   useEffect(() => {
-    if (compositionLoading || !compositionTokens.length || !ownerIdentity?.address) return;
+    if (!composerEnabled || compositionLoading || !compositionTokens.length || !ownerIdentity?.address) return;
 
     const controller = new AbortController();
     const entries = compositionTokens
@@ -349,11 +368,58 @@ export default function FoldForge() {
     });
 
     return () => controller.abort();
-  }, [compositionLoading, compositionTokens, ownerIdentity]);
+  }, [composerEnabled, compositionLoading, compositionTokens, ownerIdentity]);
 
   useEffect(() => {
-    if (!ownerIdentity?.address || selectedContract) {
+    if (!composerEnabled || !compositionReady || !ownerIdentity?.address) return;
+
+    let active = true;
+    const owner = ownerIdentity.ensName || ownerIdentity.address;
+    void createCompositionWitness({
+      owner,
+      address: ownerIdentity.address,
+      includedContracts: collections.map((collection) => collection.address),
+      tokens: compositionTokens.map((token) => {
+        const key = compositionKey(token);
+        return {
+          contract: token.contract?.address || "",
+          tokenId: token.tokenId || "",
+          media: compositionMediaFor(token) || null,
+          luminance: luminanceScores[key] ?? null,
+        };
+      }),
+    }).then((witness) => {
+      if (!active) return;
+      setCompositionWitness(witness);
+
+      const storageKey = `foldforge:witnesses:v1:${ownerIdentity.address.toLowerCase()}`;
+      try {
+        const history = JSON.parse(localStorage.getItem(storageKey) || "[]") as CompositionWitness[];
+        const previous = history.find((entry) => entry.stateHash === witness.stateHash);
+        const next = previous ? history : [witness, ...history].slice(0, 24);
+        localStorage.setItem(storageKey, JSON.stringify(next));
+      } catch {
+        // Witness export remains available when browser storage is unavailable.
+      }
+    });
+
+    return () => {
+      active = false;
+    };
+  }, [collections, composerEnabled, compositionReady, compositionTokens, luminanceScores, ownerIdentity]);
+
+  useEffect(() => {
+    if (!composerEnabled || !ownerIdentity?.address || selectedContract) {
       compositionRequest.current?.abort();
+      if (!composerEnabled) {
+        queueMicrotask(() => {
+          setCompositionTokens([]);
+          setLuminanceScores({});
+          setCompositionWitness(null);
+          setCompositionLoading(false);
+          setCompositionAnalyzing(false);
+        });
+      }
       return;
     }
 
@@ -394,7 +460,7 @@ export default function FoldForge() {
     });
 
     return () => controller.abort();
-  }, [ownerIdentity, selectedContract]);
+  }, [composerEnabled, ownerIdentity, selectedContract]);
 
   useEffect(() => {
     if (!selectedContract || !selectedTokenId) return;
@@ -421,6 +487,17 @@ export default function FoldForge() {
     setSelectedContract("");
     setSelectedTokenId("");
     void loadCollections(owner);
+  }
+
+  function exportCompositionWitness() {
+    if (!compositionWitness) return;
+    const blob = new Blob([`${JSON.stringify(compositionWitness, null, 2)}\n`], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = `${compositionWitness.composition.id.toLowerCase()}-${compositionWitness.stateHash.slice(7, 19)}.json`;
+    anchor.click();
+    URL.revokeObjectURL(url);
   }
 
   return (
@@ -590,62 +667,22 @@ export default function FoldForge() {
             </div>
           </div>
 
-          <section className="composition-section min-w-0 border-b border-white/20 py-10 md:py-14">
-            <div className="mb-5 flex items-end justify-between gap-6">
-              <div>
-                <p className="text-[9px] uppercase tracking-[0.28em] text-white/40">Holdings composition</p>
-                <p className="mt-2 max-w-xl text-[9px] uppercase leading-4 tracking-[0.18em] text-white/25">
-                  Every visible work / average luminance / dark → light
-                </p>
-              </div>
-              <p className="font-mono text-[8px] uppercase tracking-[0.16em] text-white/30">
-                {compositionLoading ? "Composing" : compositionAnalyzing ? "Analyzing value" : `${compositionTokens.length.toString().padStart(3, "0")} works`}
-              </p>
-            </div>
-            {!compositionReady ? (
-              <div className="composition-grid is-loading" aria-label="Composing archive holdings">
-                {Array.from({ length: 48 }).map((_, index) => (
-                  <span className="composition-tile" key={index} />
-                ))}
-              </div>
-            ) : compositionTokens.length ? (
-              <div className="composition-grid">
-                {orderedCompositionTokens.map((token, index) => {
-                  const contractAddress = token.contract?.address?.toLowerCase() || "";
-                  const media = compositionMediaFor(token);
-                  const displayMedia = media ? optimizedImageUrl(media, { width: 640 }) : "";
-                  const tokenId = token.tokenId || "";
-                  const key = compositionKey(token);
-                  return (
-                    <a
-                      aria-label={token.name || `Work ${tokenId}`}
-                      className="composition-tile group"
-                      href={`?owner=${encodeURIComponent(navigableOwner)}&collection=${contractAddress}&token=${encodeURIComponent(tokenId)}`}
-                      key={key}
-                      style={{ "--tile-index": index } as CSSProperties}
-                    >
-                      {displayMedia ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          alt=""
-                          decoding="async"
-                          fetchPriority={index < 12 ? "high" : "auto"}
-                          loading={index < 24 ? "eager" : "lazy"}
-                          src={displayMedia}
-                        />
-                      ) : (
-                        <span className="composition-void" aria-hidden="true" />
-                      )}
-                    </a>
-                  );
-                })}
-              </div>
+          {composerEnabled ? (
+            compositionWitness && composerEvidence.length ? (
+              <ComposerChamber evidence={composerEvidence} onExportWitness={exportCompositionWitness} stateHash={compositionWitness.stateHash} />
             ) : (
-              <div className="grid min-h-40 place-items-center border border-white/10 text-[9px] uppercase tracking-[0.2em] text-white/30">
-                No visual holdings resolved
-              </div>
-            )}
-          </section>
+              <section className="grid min-h-72 place-items-center border-b border-white/20 text-center">
+                <div>
+                  <p className="text-[9px] uppercase tracking-[0.24em] text-white/40">
+                    {compositionLoading ? "Resolving sonic evidence" : compositionAnalyzing ? "Measuring luminosity" : "Awaiting visual evidence"}
+                  </p>
+                  <p className="mt-3 font-mono text-[7px] uppercase tracking-[0.14em] text-white/20">
+                    The luminosity field remains active as the hidden score
+                  </p>
+                </div>
+              </section>
+            )
+          ) : null}
 
           {message ? (
             <div className="border-b border-white/25 px-0 py-5 text-xs uppercase tracking-[0.12em] text-white/60">
@@ -653,7 +690,7 @@ export default function FoldForge() {
             </div>
           ) : null}
 
-          <section className="min-w-0 mt-10 md:mt-14">
+          <section className={`min-w-0 ${composerEnabled ? "mt-10 md:mt-14" : ""}`}>
             <div className="flex items-end justify-between gap-6 border-b border-white/25 pb-4">
               <p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Collection index / {collections.length.toString().padStart(2, "0")}</p>
               <p className="max-w-48 text-right text-[8px] uppercase leading-4 tracking-[0.2em] text-white/25">Curated exclusions / new holdings surface live</p>

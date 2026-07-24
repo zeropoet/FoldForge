@@ -1,0 +1,64 @@
+{
+  "schema": "foldforge-composition/v1",
+  "id": "FF-COMP-0002",
+  "version": "1.0.0",
+  "status": "living",
+  "title": "Lexical Field",
+  "constitutionRevision": "v0.1",
+  "discovery": {
+    "name": "Composition II",
+    "statement": "The archive speaks first through the language already carried by its titles, descriptions, and collection identities.",
+    "date": "2026-07-23"
+  },
+  "evidence": {
+    "network": "Ethereum mainnet",
+    "ownerScope": "selected archive identity",
+    "inclusionPolicy": "same visible holdings as Composition I",
+    "requiredFields": ["token name", "token description", "collection name", "contract address", "token ID"]
+  },
+  "transformations": [
+    {
+      "order": 1,
+      "operation": "normalize",
+      "input": "source language",
+      "output": "lowercase alphanumeric terms with diacritics preserved"
+    },
+    {
+      "order": 2,
+      "operation": "release",
+      "input": "normalized terms",
+      "output": "terms after structural stop-word removal"
+    },
+    {
+      "order": 3,
+      "operation": "count",
+      "input": "released terms",
+      "output": "term frequency and distinct source-work count"
+    },
+    {
+      "order": 4,
+      "operation": "order",
+      "input": "term evidence",
+      "output": "descending source-work frequency with alphabetical tie-break"
+    },
+    {
+      "order": 5,
+      "operation": "render",
+      "input": "ordered terms",
+      "output": "compressed archive utterance and traceable lexical ledger"
+    }
+  ],
+  "presentation": {
+    "title": "Language composition",
+    "interfaceStatement": "Source language / recurrence / compressed utterance",
+    "differenceRule": "Typographic scale may vary only with distinct source-work frequency."
+  },
+  "lineage": {
+    "capture": ["composition ID", "grammar version", "state hash", "term", "frequency", "source token identities"],
+    "revisionTrigger": "A normalization, stop-word, counting, ordering, or rendering change requires a new grammar version."
+  },
+  "authority": {
+    "claims": "The displayed terms recur within the selected archive's source language.",
+    "doesNotClaim": "Recurrence determines authorial intention, semantic truth, or final interpretation."
+  }
+}

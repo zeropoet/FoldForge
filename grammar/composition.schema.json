@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://foldforge.xyz/grammar/composition.schema.json",
+  "title": "FoldForge Composition Grammar",
+  "type": "object",
+  "required": [
+    "schema",
+    "id",
+    "version",
+    "status",
+    "title",
+    "constitutionRevision",
+    "evidence",
+    "transformations",
+    "presentation",
+    "lineage",
+    "authority"
+  ],
+  "properties": {
+    "schema": { "const": "foldforge-composition/v1" },
+    "id": { "type": "string", "pattern": "^FF-COMP-[0-9]{4}$" },
+    "version": { "type": "string" },
+    "status": { "enum": ["proposed", "living", "retired"] },
+    "title": { "type": "string" },
+    "constitutionRevision": { "type": "string" },
+    "evidence": {
+      "type": "object",
+      "required": ["network", "ownerScope", "inclusionPolicy", "requiredFields"]
+    },
+    "transformations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["order", "operation", "input", "output"]
+      }
+    },
+    "presentation": {
+      "type": "object",
+      "required": ["title", "interfaceStatement"]
+    },
+    "lineage": {
+      "type": "object",
+      "required": ["capture"]
+    },
+    "authority": {
+      "type": "object",
+      "required": ["claims", "doesNotClaim"]
+    }
+  },
+  "additionalProperties": true
+}
