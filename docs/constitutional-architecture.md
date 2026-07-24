@@ -70,6 +70,18 @@ The archive conducts these fixed work-level mappings through a six-phase autonom
 
 The listener may begin or silence the witness. Phase selection, event budgets, arrangement layering, and rest duration are derived from the current evidence and state hash, not manually controlled.
 
+### Memory and motif
+
+Resonant Holdings compares the current witness with the most recent distinct witness
+retained by the browser. Additions enter with bounded emphasis. Removed works may
+return once as low-gain echoes during Convergence. A work whose luminance changes by
+at least `0.01` bends from its former frequency into its current frequency. No prior
+witness means no inferred history.
+
+The current luminosity field is also grouped by evidence-derived frequency. The five
+largest clusters become motifs and recur at a state-derived interval outside Ground.
+Motifs remain tied to source works and do not consume the phase event budget.
+
 ## Revision
 
 A change in holdings creates a new composition state under the existing grammar. A change in measurement, ordering, interpretation, or presentation logic requires a new grammar version.

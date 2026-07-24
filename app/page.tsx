@@ -33,20 +33,6 @@ interface CachedLuminance {
 
 const defaultOwner = "zeropoet.eth";
 const network = "eth-mainnet";
-const archiveLineage = [
-  {
-    owner: "mancel.eth",
-    order: "01",
-    role: "Foundation",
-    description: "Origin archive",
-  },
-  {
-    owner: "zeropoet.eth",
-    order: "02",
-    role: "Lineage",
-    description: "Living continuation",
-  },
-] as const;
 
 function shortAddress(address: string): string {
   return `${address.slice(0, 6)}...${address.slice(-4)}`;
@@ -131,9 +117,7 @@ export default function FoldForge() {
   const requestSequence = useRef(0);
   const collectionRequest = useRef<AbortController | null>(null);
   const compositionRequest = useRef<AbortController | null>(null);
-  const [queryOwner, setQueryOwner] = useState(defaultOwner);
   const [queryReady, setQueryReady] = useState(false);
-  const [manualAddress, setManualAddress] = useState(defaultOwner);
   const [ownerIdentity, setOwnerIdentity] = useState<OwnerIdentity | null>(null);
   const [collections, setCollections] = useState<CollectionSummary[]>([]);
   const [compositionTokens, setCompositionTokens] = useState<AlchemyNft[]>([]);
@@ -141,6 +125,7 @@ export default function FoldForge() {
   const [compositionAnalyzing, setCompositionAnalyzing] = useState(false);
   const [luminanceScores, setLuminanceScores] = useState<Record<string, number | null>>({});
   const [compositionWitness, setCompositionWitness] = useState<CompositionWitness | null>(null);
+  const [previousCompositionWitness, setPreviousCompositionWitness] = useState<CompositionWitness | null>(null);
   const [selectedContract, setSelectedContract] = useState("");
   const [selectedTokenId, setSelectedTokenId] = useState("");
   const [tokens, setTokens] = useState<AlchemyNft[]>([]);
@@ -149,11 +134,9 @@ export default function FoldForge() {
   const [state, setState] = useState<LoadState>("idle");
   const [message, setMessage] = useState("");
 
-  const activeOwner = manualAddress.trim();
+  const activeOwner = defaultOwner;
   const resolvedAddress = ownerIdentity?.address || "";
   const navigableOwner = ownerIdentity?.ensName || resolvedAddress || activeOwner;
-  const composerEnabled = (ownerIdentity?.ensName || activeOwner).toLowerCase() === "zeropoet.eth";
-  const isBusy = state === "loading";
   const totalPieces = useMemo(
     () => collections.reduce((total, collection) => total + collection.count, 0),
     [collections],
@@ -199,6 +182,7 @@ export default function FoldForge() {
     setCompositionTokens([]);
     setLuminanceScores({});
     setCompositionWitness(null);
+    setPreviousCompositionWitness(null);
     setOwnerIdentity(null);
     collectionRequest.current?.abort();
     const controller = new AbortController();
@@ -252,12 +236,9 @@ export default function FoldForge() {
 
   useEffect(() => {
     const query = new URLSearchParams(window.location.search);
-    const owner = query.get("owner") || defaultOwner;
     const collection = query.get("collection") || "";
     const token = query.get("token") || "";
     queueMicrotask(() => {
-      setQueryOwner(owner);
-      setManualAddress(owner);
       setSelectedContract(collection);
       setSelectedTokenId(token);
       setQueryReady(true);
@@ -265,12 +246,12 @@ export default function FoldForge() {
   }, []);
 
   useEffect(() => {
-    if (queryReady && queryOwner) {
+    if (queryReady) {
       queueMicrotask(() => {
-        void loadCollections(queryOwner);
+        void loadCollections(defaultOwner);
       });
     }
-  }, [loadCollections, queryOwner, queryReady]);
+  }, [loadCollections, queryReady]);
 
   useEffect(() => {
     if (!ownerIdentity?.address || !selectedContract) return;
@@ -310,7 +291,7 @@ export default function FoldForge() {
   }, [ownerIdentity, selectedContract]);
 
   useEffect(() => {
-    if (!composerEnabled || compositionLoading || !compositionTokens.length || !ownerIdentity?.address) return;
+    if (compositionLoading || !compositionTokens.length || !ownerIdentity?.address) return;
 
     const controller = new AbortController();
     const entries = compositionTokens
@@ -368,10 +349,10 @@ export default function FoldForge() {
     });
 
     return () => controller.abort();
-  }, [composerEnabled, compositionLoading, compositionTokens, ownerIdentity]);
+  }, [compositionLoading, compositionTokens, ownerIdentity]);
 
   useEffect(() => {
-    if (!composerEnabled || !compositionReady || !ownerIdentity?.address) return;
+    if (!compositionReady || !ownerIdentity?.address) return;
 
     let active = true;
     const owner = ownerIdentity.ensName || ownerIdentity.address;
@@ -395,6 +376,7 @@ export default function FoldForge() {
       const storageKey = `foldforge:witnesses:v1:${ownerIdentity.address.toLowerCase()}`;
       try {
         const history = JSON.parse(localStorage.getItem(storageKey) || "[]") as CompositionWitness[];
+        setPreviousCompositionWitness(history.find((entry) => entry.stateHash !== witness.stateHash) || null);
         const previous = history.find((entry) => entry.stateHash === witness.stateHash);
         const next = previous ? history : [witness, ...history].slice(0, 24);
         localStorage.setItem(storageKey, JSON.stringify(next));
@@ -406,20 +388,11 @@ export default function FoldForge() {
     return () => {
       active = false;
     };
-  }, [collections, composerEnabled, compositionReady, compositionTokens, luminanceScores, ownerIdentity]);
+  }, [collections, compositionReady, compositionTokens, luminanceScores, ownerIdentity]);
 
   useEffect(() => {
-    if (!composerEnabled || !ownerIdentity?.address || selectedContract) {
+    if (!ownerIdentity?.address || selectedContract) {
       compositionRequest.current?.abort();
-      if (!composerEnabled) {
-        queueMicrotask(() => {
-          setCompositionTokens([]);
-          setLuminanceScores({});
-          setCompositionWitness(null);
-          setCompositionLoading(false);
-          setCompositionAnalyzing(false);
-        });
-      }
       return;
     }
 
@@ -460,7 +433,7 @@ export default function FoldForge() {
     });
 
     return () => controller.abort();
-  }, [composerEnabled, ownerIdentity, selectedContract]);
+  }, [ownerIdentity, selectedContract]);
 
   useEffect(() => {
     if (!selectedContract || !selectedTokenId) return;
@@ -480,14 +453,6 @@ export default function FoldForge() {
   const selectedToken = tokenDetail?.key === `${selectedContract}:${selectedTokenId}`
     ? tokenDetail.nft
     : tokens.find((token) => token.tokenId === selectedTokenId);
-
-  function selectArchive(owner: string) {
-    if (isBusy || owner.toLowerCase() === navigableOwner.toLowerCase()) return;
-    setManualAddress(owner);
-    setSelectedContract("");
-    setSelectedTokenId("");
-    void loadCollections(owner);
-  }
 
   function exportCompositionWitness() {
     if (!compositionWitness) return;
@@ -595,43 +560,6 @@ export default function FoldForge() {
               )}
             </section>
           ) : (<>
-          <section className="min-w-0 border-b border-white/20 pb-9 md:pb-12">
-            <div className="mb-5 flex items-center justify-between gap-6">
-              <p className="text-[9px] uppercase tracking-[0.3em] text-white/45">Archive lineage / Ethereum mainnet</p>
-              <p className="hidden items-center gap-3 font-mono text-[8px] uppercase tracking-[0.18em] text-white/25 sm:flex">
-                <span className="h-px w-8 bg-white/20" />
-                Foundation / Continuation
-              </p>
-            </div>
-            <div className="lineage-selector grid gap-px bg-white/20 md:grid-cols-2">
-              {archiveLineage.map((archive) => {
-                const active = archive.owner === (ownerIdentity?.ensName || manualAddress).toLowerCase();
-                return (
-                  <button
-                    aria-current={active ? "page" : undefined}
-                    className={`lineage-node group relative grid min-h-40 content-between bg-black p-5 text-left transition sm:min-h-44 md:p-7 ${active ? "is-active" : ""}`}
-                    disabled={isBusy}
-                    key={archive.owner}
-                    onClick={() => selectArchive(archive.owner)}
-                    type="button"
-                  >
-                    <span className="flex items-center justify-between gap-5">
-                      <span className="font-mono text-[9px] text-white/35">{archive.order}</span>
-                      <span className="text-[8px] uppercase tracking-[0.28em] text-white/50">{archive.role}</span>
-                    </span>
-                    <span>
-                      <span className="block text-3xl font-light uppercase tracking-[-0.035em] sm:text-4xl">{archive.owner}</span>
-                      <span className="mt-3 flex items-center gap-3 text-[8px] uppercase tracking-[0.22em] text-white/50">
-                        <span className="lineage-marker" aria-hidden="true" />
-                        {active ? "Archive in view" : archive.description}
-                      </span>
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-          </section>
-
           <div className="archive-metrics grid border-b border-white/20 sm:grid-cols-4">
             <div className="border-b border-white/20 py-5 sm:border-b-0 sm:border-r sm:border-white/20 sm:px-5 sm:first:pl-0">
               <p className="text-[8px] uppercase tracking-[0.25em] text-white/35">Current archive</p>
@@ -667,22 +595,26 @@ export default function FoldForge() {
             </div>
           </div>
 
-          {composerEnabled ? (
-            compositionWitness && composerEvidence.length ? (
-              <ComposerChamber evidence={composerEvidence} onExportWitness={exportCompositionWitness} stateHash={compositionWitness.stateHash} />
-            ) : (
-              <section className="grid min-h-72 place-items-center border-b border-white/20 text-center">
-                <div>
-                  <p className="text-[9px] uppercase tracking-[0.24em] text-white/40">
-                    {compositionLoading ? "Resolving sonic evidence" : compositionAnalyzing ? "Measuring luminosity" : "Awaiting visual evidence"}
-                  </p>
-                  <p className="mt-3 font-mono text-[7px] uppercase tracking-[0.14em] text-white/20">
-                    The luminosity field remains active as the hidden score
-                  </p>
-                </div>
-              </section>
-            )
-          ) : null}
+          {compositionWitness && composerEvidence.length ? (
+            <ComposerChamber
+              evidence={composerEvidence}
+              onExportWitness={exportCompositionWitness}
+              previousEvidence={previousCompositionWitness?.evidence.tokens}
+              previousStateHash={previousCompositionWitness?.stateHash}
+              stateHash={compositionWitness.stateHash}
+            />
+          ) : (
+            <section className="grid min-h-72 place-items-center border-b border-white/20 text-center">
+              <div>
+                <p className="text-[9px] uppercase tracking-[0.24em] text-white/40">
+                  {compositionLoading ? "Resolving sonic evidence" : compositionAnalyzing ? "Measuring luminosity" : "Awaiting visual evidence"}
+                </p>
+                <p className="mt-3 font-mono text-[7px] uppercase tracking-[0.14em] text-white/20">
+                  The luminosity field remains active as the hidden score
+                </p>
+              </div>
+            </section>
+          )}
 
           {message ? (
             <div className="border-b border-white/25 px-0 py-5 text-xs uppercase tracking-[0.12em] text-white/60">
@@ -690,7 +622,7 @@ export default function FoldForge() {
             </div>
           ) : null}
 
-          <section className={`min-w-0 ${composerEnabled ? "mt-10 md:mt-14" : ""}`}>
+          <section className="mt-10 min-w-0 md:mt-14">
             <div className="flex items-end justify-between gap-6 border-b border-white/25 pb-4">
               <p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Collection index / {collections.length.toString().padStart(2, "0")}</p>
               <p className="max-w-48 text-right text-[8px] uppercase leading-4 tracking-[0.2em] text-white/25">Curated exclusions / new holdings surface live</p>

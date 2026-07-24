@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { composerGrammars } from "./composition-grammar";
+import type { WitnessToken } from "./composition-witness";
 
 export interface ComposerEvidence {
   key: string;
@@ -39,6 +40,18 @@ interface EvolutionPhase {
   arrangements: ArrangementMode[];
   events: number;
   restMs?: number;
+}
+
+interface ArchiveMemory {
+  added: Set<string>;
+  removed: WitnessToken[];
+  shifted: Map<string, number>;
+}
+
+interface LuminosityMotif {
+  frequency: number;
+  count: number;
+  token: ComposerEvidence;
 }
 
 const arrangementModes: Array<{
@@ -203,6 +216,54 @@ function deriveEvolution(evidence: ComposerEvidence[], stateHash: string): Evolu
   ];
 }
 
+function tokenKey(token: { contract: string; tokenId: string }): string {
+  return `${token.contract.toLowerCase()}:${token.tokenId}`;
+}
+
+function deriveMemory(evidence: ComposerEvidence[], previous: WitnessToken[]): ArchiveMemory {
+  const current = new Map(evidence.map((token) => [token.key, token]));
+  const prior = new Map(previous.map((token) => [tokenKey(token), token]));
+  const shifted = new Map<string, number>();
+
+  for (const [key, token] of current) {
+    const former = prior.get(key);
+    if (
+      former?.luminance != null &&
+      token.luminance != null &&
+      Math.abs(former.luminance - token.luminance) >= 0.01
+    ) {
+      shifted.set(key, former.luminance);
+    }
+  }
+
+  return {
+    added: new Set([...current.keys()].filter((key) => !prior.has(key))),
+    removed: [...prior.entries()].filter(([key]) => !current.has(key)).map(([, token]) => token),
+    shifted,
+  };
+}
+
+function deriveMotifs(evidence: ComposerEvidence[]): LuminosityMotif[] {
+  const groups = new Map<string, { frequency: number; tokens: ComposerEvidence[] }>();
+  for (const token of evidence) {
+    if (token.luminance == null) continue;
+    const frequency = soundProfile(token).frequency;
+    const key = frequency.toFixed(3);
+    const group = groups.get(key) || { frequency, tokens: [] };
+    group.tokens.push(token);
+    groups.set(key, group);
+  }
+
+  return [...groups.values()]
+    .map((group) => ({
+      frequency: group.frequency,
+      count: group.tokens.length,
+      token: [...group.tokens].sort((left, right) => left.key.localeCompare(right.key))[0],
+    }))
+    .sort((left, right) => right.count - left.count || left.frequency - right.frequency)
+    .slice(0, 5);
+}
+
 function soundProfile(token: ComposerEvidence): SoundProfile {
   const bounded = Math.max(0, Math.min(1, token.luminance ?? 0));
   const contractSeed = stableNumber(token.contract);
@@ -228,6 +289,7 @@ function scheduleTone(
   token: ComposerEvidence,
   now: number,
   amplitude = 1,
+  originFrequency?: number,
 ) {
   const profile = soundProfile(token);
   const panner = context.createStereoPanner();
@@ -250,7 +312,10 @@ function scheduleTone(
   const movement = context.createOscillator();
   const movementDepth = context.createGain();
   fundamental.type = "sine";
-  fundamental.frequency.setValueAtTime(profile.frequency, now);
+  fundamental.frequency.setValueAtTime(originFrequency ?? profile.frequency, now);
+  if (originFrequency != null && Math.abs(originFrequency - profile.frequency) >= 0.01) {
+    fundamental.frequency.exponentialRampToValueAtTime(profile.frequency, now + profile.duration * 0.72);
+  }
   harmonic.type = "triangle";
   harmonic.frequency.setValueAtTime(profile.frequency * 2, now);
   harmonic.detune.setValueAtTime((stableNumber(token.contract) % 9) - 4, now);
@@ -273,14 +338,27 @@ function scheduleTone(
 export default function ComposerChamber({
   evidence,
   stateHash,
+  previousEvidence,
+  previousStateHash,
   onExportWitness,
 }: {
   evidence: ComposerEvidence[];
   stateHash: string;
+  previousEvidence?: WitnessToken[];
+  previousStateHash?: string;
   onExportWitness?: () => void;
 }) {
   const lexicalTerms = useMemo(() => lexicalField(evidence), [evidence]);
   const evolution = useMemo(() => deriveEvolution(evidence, stateHash), [evidence, stateHash]);
+  const memory = useMemo(
+    () => previousEvidence ? deriveMemory(evidence, previousEvidence) : {
+      added: new Set<string>(),
+      removed: [],
+      shifted: new Map<string, number>(),
+    },
+    [evidence, previousEvidence],
+  );
+  const motifs = useMemo(() => deriveMotifs(evidence), [evidence]);
   const arrangedEvidence = useMemo(() => Object.fromEntries(
     arrangementModes.map((mode) => [
       mode.id,
@@ -376,6 +454,22 @@ export default function ComposerChamber({
       }
 
       const amplitude = 1 / Math.sqrt(phase.arrangements.length);
+      if (phase.id === "convergence" && memory.removed.length) {
+        memory.removed.slice(0, 4).forEach((token, index) => {
+          if (token.luminance == null) return;
+          const echo: ComposerEvidence = {
+            key: tokenKey(token),
+            contract: token.contract,
+            tokenId: token.tokenId,
+            name: `Echo / ${token.tokenId}`,
+            description: "",
+            collection: "Archive memory",
+            media: token.media || "",
+            luminance: token.luminance,
+          };
+          scheduleTone(context, compressor, echo, context.currentTime + index * 0.18, 0.16);
+        });
+      }
       const advance = () => {
         if (transitionLocked.current || generation !== phaseGeneration.current) return;
         transitionLocked.current = true;
@@ -393,10 +487,24 @@ export default function ComposerChamber({
           const index = current % sequence.length;
           const token = sequence[index];
           const profile = soundProfile(token);
+          const formerLuminance = memory.shifted.get(token.key);
+          const originFrequency = formerLuminance == null
+            ? undefined
+            : soundProfile({ ...token, luminance: formerLuminance }).frequency;
+          const eventAmplitude = amplitude * (memory.added.has(token.key) ? 1.16 : 1);
           setSoundEvent({ arrangement: mode, index, token });
-          scheduleTone(context, compressor, token, context.currentTime, amplitude);
+          scheduleTone(context, compressor, token, context.currentTime, eventAmplitude, originFrequency);
           soundCursors.current.set(mode, (index + 1) % sequence.length);
           phaseEventCount.current += 1;
+          const motifPeriod = 7 + (stableNumber(stateHash) % 5);
+          if (
+            phase.id !== "ground" &&
+            motifs.length &&
+            phaseEventCount.current % motifPeriod === 0
+          ) {
+            const motif = motifs[Math.floor(phaseEventCount.current / motifPeriod) % motifs.length];
+            scheduleTone(context, compressor, motif.token, context.currentTime + 0.13, amplitude * 0.28);
+          }
           setPhaseProgress(phaseEventCount.current);
           if (phaseEventCount.current >= phase.events) {
             advance();
@@ -459,6 +567,29 @@ export default function ComposerChamber({
           <p className="mt-5 text-[8px] uppercase leading-4 tracking-[0.16em] text-white/25">
             Recurrence is evidence of presence, not a claim of final meaning.
           </p>
+          <div className="mt-8 border-t border-white/15 pt-5">
+            <div className="flex items-center justify-between gap-4">
+              <p className="text-[8px] uppercase tracking-[0.2em] text-white/45">Archive memory</p>
+              <p className="font-mono text-[6px] uppercase tracking-[0.12em] text-white/20">
+                {previousStateHash ? `Prior / ${previousStateHash.slice(7, 19)}` : "First witnessed state"}
+              </p>
+            </div>
+            <dl className="mt-4 grid grid-cols-3 gap-px bg-white/10 font-mono text-[7px] uppercase tracking-[0.1em]">
+              <div className="bg-black p-3"><dt className="text-white/25">Entered</dt><dd className="mt-2 text-white/60">{memory.added.size.toString().padStart(2, "0")}</dd></div>
+              <div className="bg-black p-3"><dt className="text-white/25">Echoes</dt><dd className="mt-2 text-white/60">{memory.removed.length.toString().padStart(2, "0")}</dd></div>
+              <div className="bg-black p-3"><dt className="text-white/25">Shifted</dt><dd className="mt-2 text-white/60">{memory.shifted.size.toString().padStart(2, "0")}</dd></div>
+            </dl>
+            <div className="mt-5">
+              <p className="text-[7px] uppercase tracking-[0.18em] text-white/30">Recurring luminosity motifs</p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {motifs.map((motif, index) => (
+                  <span className="border border-white/15 px-2 py-2 font-mono text-[6px] uppercase tracking-[0.1em] text-white/35" key={motif.frequency}>
+                    M{String(index + 1).padStart(2, "0")} / {motif.frequency.toFixed(1)} Hz / {motif.count} works
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </article>
 
         <article className="order-1 grid content-between bg-black p-5 md:p-8 lg:col-span-2">

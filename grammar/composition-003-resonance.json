@@ -1,7 +1,7 @@
 {
   "schema": "foldforge-composition/v1",
   "id": "FF-COMP-0003",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "status": "living",
   "title": "Resonant Holdings",
   "constitutionRevision": "v0.1",
@@ -61,9 +61,21 @@
     },
     {
       "order": 8,
+      "operation": "derive archive memory",
+      "input": "current witness and most recent distinct prior witness",
+      "output": "entered works, removed-work echoes, and changed-luminance pitch bends"
+    },
+    {
+      "order": 9,
+      "operation": "recognize motifs",
+      "input": "frequency clusters produced by current work luminance",
+      "output": "five strongest recurring luminosity-note relationships"
+    },
+    {
+      "order": 10,
       "operation": "compose",
       "input": "ordered audible events",
-      "output": "autonomously selected, gain-normalized arrangement layers through one compressed unified voice with restrained recursive delay"
+      "output": "autonomously selected, memory-bearing, motif-recurring, gain-normalized arrangement layers through one compressed unified voice with restrained recursive delay"
     }
   ],
   "presentation": {
@@ -86,6 +98,18 @@
     "silence": "A state-derived rest preserves absence before the cycle reforms.",
     "phaseDuration": "Event budgets are deterministically derived from the state hash.",
     "stateChange": "A holdings change produces a new witness hash and therefore a newly proportioned evolution."
+  },
+  "memory": {
+    "source": "the most recent locally retained witness whose state hash differs from the current witness",
+    "enteredWork": "A newly present work retains its normal evidence-derived identity with a bounded 16 percent event emphasis.",
+    "removedWork": "Up to four removed works return once at low gain as echoes when Convergence begins.",
+    "shiftedWork": "When measured luminance changes by at least 0.01, the fundamental bends from its prior frequency into its current frequency.",
+    "absence": "When no prior witness exists, the system declares a first witnessed state and invents no history."
+  },
+  "motifs": {
+    "recognition": "Works are grouped by their evidence-derived frequency and ranked by number of source works with deterministic tie-breaking.",
+    "retention": "The five strongest frequency clusters are retained as motifs for the current witness.",
+    "recurrence": "Outside Ground, a state-derived interval reintroduces a motif work at low gain without changing phase event counts."
   },
   "layering": {
     "minimumLayers": 1,
@@ -122,8 +146,8 @@
     }
   ],
   "lineage": {
-    "capture": ["composition ID", "grammar version", "state hash", "evolution phase", "active arrangement IDs", "phase event budget", "token identity", "luminance", "frequency", "instrument", "pulse", "envelope", "pan", "filter", "event order"],
-    "revisionTrigger": "An evolutionary phase, phase transition, arrangement, layering, pitch, voice, scheduling, duration, or gain change requires a new grammar version."
+    "capture": ["composition ID", "grammar version", "state hash", "prior state hash", "archive memory delta", "recognized motifs", "evolution phase", "active arrangement IDs", "phase event budget", "token identity", "luminance", "frequency", "instrument", "pulse", "envelope", "pan", "filter", "event order"],
+    "revisionTrigger": "A memory rule, motif rule, evolutionary phase, phase transition, arrangement, layering, pitch, voice, scheduling, duration, or gain change requires a new grammar version."
   },
   "authority": {
     "claims": "The score is a deterministic translation of the current archive state.",

@@ -4,7 +4,7 @@
 
 # FoldForge
 
-FoldForge is a static Ethereum NFT archive with a monochrome, typography-led interface. Its primary archive lineage presents `mancel.eth` as the foundation and `zeropoet.eth` as its living continuation.
+FoldForge is a static Ethereum NFT archive and autonomous data composer for `zeropoet.eth`, presented through a monochrome, typography-led interface.
 
 ## Features
 
@@ -16,7 +16,7 @@ FoldForge is a static Ethereum NFT archive with a monochrome, typography-led int
 - Consent-first audio with only Witness and Silence controls
 - Reproducible SHA-256 evidence witnesses and local observation history
 - Typography-only collection index with no cover thumbnails or descriptions
-- Repository-owned collection exclusions for the Mancel and Zeropoet archives
+- Repository-owned collection exclusions for the Zeropoet archive
 - Shareable collection and minted-work URLs
 - NFT media with image, animation, video, and IPFS support
 - Responsive WebP derivatives, lazy loading, and cached luminance analysis
@@ -81,12 +81,23 @@ Resonant Holdings can traverse those fixed work-to-note relationships through si
 
 The listener can only begin (`Witness`) or end (`Silence`) the performance. Within the cycle, FoldForge selects one to three arrangement layers, assigns a state-derived event budget, advances every layer independently, normalizes their combined gain, enters a state-derived rest, and reforms. A holdings change produces a new witness hash and therefore a newly proportioned evolution without changing any individual work's evidence-derived sonic identity.
 
-The Composer Chamber belongs exclusively to the `zeropoet.eth` continuation. The
-`mancel.eth` foundation remains a direct collection archive: it does not fetch the
-composer evidence set or run luminosity analysis, and its collection register follows
-the archive metrics without reserved composer space.
+The Composer Chamber belongs exclusively to `zeropoet.eth`. Incoming archive routes
+resolve to this identity; FoldForge no longer presents an alternate lineage archive.
 
 When the evidence resolves, FoldForge calculates a deterministic SHA-256 state hash from its grammar versions, archive identity, included contracts, token identities, canonical media URLs, and luminance values. Every expression shares that state hash. The interface exposes it with a JSON witness export, and up to 24 distinct states per owner are retained locally as reversible observation history.
+
+### Archive memory and motifs
+
+The current witness is compared with the most recent locally retained witness whose
+state hash differs. Newly entered works receive bounded emphasis, removed works may
+return once as low-gain echoes during Convergence, and works whose measured luminance
+changed bend from their former frequency into the current one. When no prior witness
+exists, FoldForge declares a first witnessed state and invents no history.
+
+FoldForge also groups the current archive by evidence-derived frequency. The five
+largest luminosity-note clusters become recurring motifs. Outside Ground, motifs
+return at a state-derived interval and low gain without consuming phase events or
+altering the identity of their source works.
 
 ## Archive navigation
 
