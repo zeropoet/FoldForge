@@ -541,16 +541,16 @@ export default function FoldForge() {
                 <>
                   <div className="grid gap-6 border-b border-white/25 py-10 md:grid-cols-[1fr_auto] md:items-end">
                     <div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Collection archive</p><h2 className="mt-4 text-4xl font-light tracking-[-0.04em] md:text-6xl">{selectedCollection?.name || shortAddress(selectedContract)}</h2><p className="mt-5 max-w-3xl text-sm leading-6 text-white/50">{selectedCollection?.description}</p></div>
-                    <p className="font-mono text-[10px] text-white/40">{selectedContract}</p>
+                    <p className="max-w-full break-all font-mono text-[10px] leading-5 text-white/40 md:max-w-md md:text-right">{selectedContract}</p>
                   </div>
                   {detailLoading ? <div className="grid min-h-[50vh] place-items-center text-xs uppercase tracking-[0.2em] text-white/40">Loading minted works</div> : (
                     <div className="token-grid border-x border-b border-white/25 bg-white/25">
                       {tokens.map((token) => (
-                        <a className="group bg-black" href={`?owner=${encodeURIComponent(navigableOwner)}&collection=${selectedContract}&token=${encodeURIComponent(token.tokenId || "")}`} key={token.tokenId}>
+                        <a className="group min-w-0 bg-black" href={`?owner=${encodeURIComponent(navigableOwner)}&collection=${selectedContract}&token=${encodeURIComponent(token.tokenId || "")}`} key={token.tokenId}>
                           <div className="aspect-square overflow-hidden bg-[#080808]">
                             <MediaTile token={token} />
                           </div>
-                          <div className="border-t border-white/25 p-4"><h3 className="truncate text-sm font-light">{token.name || `Token ${token.tokenId}`}</h3><p className="mt-2 font-mono text-[9px] text-white/35">#{token.tokenId}</p></div>
+                          <div className="min-w-0 border-t border-white/25 p-4"><h3 className="truncate text-sm font-light">{token.name || `Token ${token.tokenId}`}</h3><p className="mt-2 break-all font-mono text-[9px] leading-4 text-white/35">#{token.tokenId}</p></div>
                         </a>
                       ))}
                     </div>
