@@ -40,7 +40,13 @@ function shortAddress(address: string): string {
 }
 
 function mintedMediaFor(token: AlchemyNft): string {
-  const media = token.animation?.cachedUrl || token.animation?.originalUrl || tokenImageFor(token);
+  const media =
+    token.animation?.originalUrl ||
+    token.animation?.cachedUrl ||
+    token.image?.originalUrl ||
+    token.raw?.metadata?.image_url ||
+    token.raw?.metadata?.image ||
+    tokenImageFor(token);
   return normalizeMediaUrl(media);
 }
 

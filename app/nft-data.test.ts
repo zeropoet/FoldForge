@@ -43,6 +43,38 @@ describe("canonical NFT media", () => {
     expect(hydrated.image?.originalUrl).toBe("https://arweave.net/rwl-44-image");
   });
 
+  it("replaces provider placeholder names with canonical token metadata", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(new Response(JSON.stringify({
+      name: "08-the-federalist-papers",
+      image: "ar://federalist-image",
+    }), { status: 200 }));
+
+    const hydrated = await hydrateCanonicalMedia({
+      tokenId: "9",
+      name: "#9",
+      tokenUri: "https://arweave.net/manifest/1",
+    });
+
+    expect(hydrated.name).toBe("08-the-federalist-papers");
+    expect(hydrated.image?.originalUrl).toBe("https://arweave.net/federalist-image");
+  });
+
+  it("rechecks canonical metadata when only a provider derivative is available", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(new Response(JSON.stringify({
+      name: "11-the-thirteen-books-of-euclids-elements",
+      image: "ar://euclid-original",
+    }), { status: 200 }));
+
+    const hydrated = await hydrateCanonicalMedia({
+      tokenId: "12",
+      name: "11-the-thirteen-books-of-euclids-elements",
+      tokenUri: "ar://euclid-metadata",
+      image: { originalUrl: "https://i2c.seadn.io/euclid-derivative.png" },
+    }, undefined, true);
+
+    expect(hydrated.image?.originalUrl).toBe("https://arweave.net/euclid-original");
+  });
+
   it("never assigns alternate metadata belonging to another token", async () => {
     vi.spyOn(globalThis, "fetch")
       .mockResolvedValueOnce(new Response(null, { status: 404 }))

@@ -233,13 +233,41 @@ export function canonicalMetadataCandidates(tokenUri: string): string[] {
   return candidates;
 }
 
-function sameMetadataIdentity(metadataName: string | null | undefined, tokenName: string | undefined): boolean {
-  if (!metadataName || !tokenName) return true;
+function isPlaceholderTokenName(name: string | undefined, tokenId: string | undefined): boolean {
+  if (!name) return true;
+  const normalized = name.trim().toLocaleLowerCase();
+  const id = tokenId?.trim().toLocaleLowerCase();
+  return Boolean(id && (
+    normalized === `#${id}` ||
+    normalized === `token ${id}` ||
+    normalized === `token #${id}`
+  ));
+}
+
+function sameMetadataIdentity(
+  metadataName: string | null | undefined,
+  tokenName: string | undefined,
+  tokenId: string | undefined,
+): boolean {
+  if (!metadataName || !tokenName || isPlaceholderTokenName(tokenName, tokenId)) return true;
   return metadataName.trim().toLocaleLowerCase() === tokenName.trim().toLocaleLowerCase();
 }
 
-export async function hydrateCanonicalMedia(nft: AlchemyNft, signal?: AbortSignal): Promise<AlchemyNft> {
-  if (tokenImageFor(nft) || !nft.tokenUri) return nft;
+function hasDecentralizedOriginal(nft: AlchemyNft): boolean {
+  const original = normalizeMediaUrl(
+    nft.image?.originalUrl ||
+    nft.raw?.metadata?.image_url ||
+    nft.raw?.metadata?.image,
+  );
+  return /^https:\/\/(?:[^/]+\.)?arweave\.net\//i.test(original) || /\/ipfs\//i.test(original);
+}
+
+export async function hydrateCanonicalMedia(
+  nft: AlchemyNft,
+  signal?: AbortSignal,
+  preferCanonical = false,
+): Promise<AlchemyNft> {
+  if ((tokenImageFor(nft) && (!preferCanonical || hasDecentralizedOriginal(nft))) || !nft.tokenUri) return nft;
 
   const candidates = canonicalMetadataCandidates(nft.tokenUri);
 
@@ -253,12 +281,13 @@ export async function hydrateCanonicalMedia(nft: AlchemyNft, signal?: AbortSigna
 
       const metadata = (await response.json()) as {
         name?: string | null;
+        description?: string | null;
         image?: string | null;
         image_url?: string | null;
         animation_url?: string | null;
         attributes?: Array<{ trait_type?: string; value?: string | number }>;
       };
-      if (!sameMetadataIdentity(metadata.name, nft.name)) continue;
+      if (!sameMetadataIdentity(metadata.name, nft.name, nft.tokenId)) continue;
 
       const image = normalizeMediaUrl(metadata.image_url || metadata.image);
       const animation = normalizeMediaUrl(metadata.animation_url);
@@ -266,6 +295,8 @@ export async function hydrateCanonicalMedia(nft: AlchemyNft, signal?: AbortSigna
 
       return {
         ...nft,
+        name: isPlaceholderTokenName(nft.name, nft.tokenId) && metadata.name ? metadata.name : nft.name,
+        description: nft.description || metadata.description || "",
         image: image ? { ...nft.image, originalUrl: image } : nft.image,
         animation: animation ? { ...nft.animation, originalUrl: animation } : nft.animation,
         raw: {
@@ -617,5 +648,5 @@ export async function fetchNftMetadata({
   const hit = cached<AlchemyNft>(cacheKey);
   if (hit) return hit;
   const nft = await providerFetch<AlchemyNft>(endpoint, signal);
-  return remember(cacheKey, await hydrateCanonicalMedia(nft, signal));
+  return remember(cacheKey, await hydrateCanonicalMedia(nft, signal, true));
 }
