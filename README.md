@@ -118,11 +118,17 @@ Minted-work records link to the contract and token on Etherscan and expose origi
 
 Deployment is automated by [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) whenever `main` is updated.
 The production deployment is published at [foldforge.xyz](https://foldforge.xyz).
+After a successful deployment, FoldForge dispatches its exact published commit
+to Root Logos for immediate connected-source witnessing. The publisher uses the
+least-privilege `ROOT_LOGOS_DISPATCH_TOKEN` Actions secret, scoped only to Root
+Logos repository contents; Root Logos's daily source check remains the recovery
+path.
 
 1. Create a dedicated Alchemy app for this site.
 2. Add its key at **Repository settings → Secrets and variables → Actions** as `NEXT_PUBLIC_ALCHEMY_API_KEY`.
-3. Select **Repository settings → Pages → Build and deployment → Source → GitHub Actions**.
-4. Push to `main`, or run the workflow manually from the Actions tab.
+3. Add a fine-grained Root Logos dispatch token as `ROOT_LOGOS_DISPATCH_TOKEN`.
+4. Select **Repository settings → Pages → Build and deployment → Source → GitHub Actions**.
+5. Push to `main`, or run the workflow manually from the Actions tab.
 
 The Next.js configuration publishes from the domain root when `CUSTOM_DOMAIN` is set and otherwise derives the repository path for standard GitHub Pages hosting.
 
