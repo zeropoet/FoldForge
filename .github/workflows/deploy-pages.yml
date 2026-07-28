@@ -2,6 +2,8 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: "23 * * * *"
   workflow_dispatch:
 permissions:
   contents: read
@@ -12,6 +14,8 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build:
+    outputs:
+      language_witness: ${{ steps.language.outputs.witness }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,6 +24,13 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+      - name: Build Root Logos language composition export
+        id: language
+        env:
+          ALCHEMY_API_KEY: ${{ secrets.NEXT_PUBLIC_ALCHEMY_API_KEY }}
+        run: |
+          witness=$(npm run --silent build:language-export)
+          echo "witness=$witness" >> "$GITHUB_OUTPUT"
       - run: npm run build
         env:
           CUSTOM_DOMAIN: foldforge.xyz
@@ -41,12 +52,14 @@ jobs:
         env:
           ROOT_LOGOS_DISPATCH_TOKEN: ${{ secrets.ROOT_LOGOS_DISPATCH_TOKEN }}
           FOLDFORGE_REVISION: ${{ github.sha }}
+          FOLDFORGE_LANGUAGE_WITNESS: ${{ needs.build.outputs.language_witness }}
         run: |
           if [ -z "$ROOT_LOGOS_DISPATCH_TOKEN" ]; then
             echo "ROOT_LOGOS_DISPATCH_TOKEN is not configured"
             exit 1
           fi
           echo "$FOLDFORGE_REVISION" | grep -Eq '^[a-f0-9]{40}$'
+          echo "$FOLDFORGE_LANGUAGE_WITNESS" | grep -Eq '^sha256:[a-f0-9]{64}$'
           curl --fail --silent --show-error \
             --retry 4 --retry-all-errors --retry-delay 3 \
             -X POST https://api.github.com/repos/zeropoet/root-logos/dispatches \
@@ -54,4 +67,4 @@ jobs:
             -H "Authorization: Bearer $ROOT_LOGOS_DISPATCH_TOKEN" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             -H "Content-Type: application/json" \
-            --data "{\"event_type\":\"foldforge-published\",\"client_payload\":{\"revision\":\"$FOLDFORGE_REVISION\"}}"
+            --data "{\"event_type\":\"foldforge-published\",\"client_payload\":{\"revision\":\"$FOLDFORGE_REVISION\",\"language_witness\":\"$FOLDFORGE_LANGUAGE_WITNESS\"}}"

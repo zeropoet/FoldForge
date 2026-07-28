@@ -7,6 +7,7 @@
     "build": "next build",
     "preview": "python3 -m http.server 4173 --directory out",
     "start": "next start",
+    "build:language-export": "node scripts/build_language_composition_export.mjs",
     "lint": "eslint",
     "test": "vitest run"
   },

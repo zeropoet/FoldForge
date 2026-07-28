@@ -124,6 +124,20 @@ least-privilege `ROOT_LOGOS_DISPATCH_TOKEN` Actions secret, scoped only to Root
 Logos repository contents; Root Logos's daily source check remains the recovery
 path.
 
+Every deployment also rebuilds
+`public/root-logos-language-composition.json` directly from the current allowed
+Ethereum holdings. The export carries the twelve strongest ranked lexical
+recurrences, distinct-work counts, archive-state witness, grammar witness, and
+its own sealed witness. A change in archive language therefore changes the
+dispatch witness and deterministically recomposes Root Logos rather than
+waiting for a manually copied keyword list.
+
+The deployment runs on every `main` update and once each hour as a bounded
+archive observation cadence. An unchanged lexical witness remains dormant in
+Root Logos. A changed rank, term, recurrence count, trace count, or archive
+witness propagates through the connected-source snapshot, cultivation,
+Living Object geometry, sovereign voice, runtime, and public site.
+
 1. Create a dedicated Alchemy app for this site.
 2. Add its key at **Repository settings → Secrets and variables → Actions** as `NEXT_PUBLIC_ALCHEMY_API_KEY`.
 3. Add a fine-grained Root Logos dispatch token as `ROOT_LOGOS_DISPATCH_TOKEN`.
