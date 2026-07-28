@@ -1,10 +1,12 @@
 import { composerGrammars, compositionGrammar } from "./composition-grammar";
+import type { VisualSignature } from "./visual-analysis";
 
 export interface WitnessToken {
   contract: string;
   tokenId: string;
   media: string | null;
   luminance: number | null;
+  visual?: VisualSignature | null;
 }
 
 export interface CompositionWitness {
@@ -61,6 +63,7 @@ export async function createCompositionWitness(input: WitnessInput): Promise<Com
       { id: compositionGrammar.id, version: compositionGrammar.version, modality: "image" as const },
       { id: composerGrammars.language.id, version: composerGrammars.language.version, modality: "language" as const },
       { id: composerGrammars.sound.id, version: composerGrammars.sound.version, modality: "sound" as const },
+      { id: composerGrammars.visual.id, version: composerGrammars.visual.version, modality: "image" as const },
     ],
     archive: {
       network: "Ethereum mainnet" as const,

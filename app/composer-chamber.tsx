@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { composerGrammars } from "./composition-grammar";
 import type { WitnessToken } from "./composition-witness";
+import { visualDistance, type VisualSignature } from "./visual-analysis";
 
 export interface ComposerEvidence {
   key: string;
@@ -13,6 +14,7 @@ export interface ComposerEvidence {
   collection: string;
   media: string;
   luminance: number | null;
+  visual: VisualSignature | null;
 }
 
 interface LexicalTerm {
@@ -30,7 +32,7 @@ interface SoundProfile {
   harmonic: number;
 }
 
-type ArrangementMode = "ascent" | "descent" | "fold" | "collections" | "lineage" | "scatter";
+type ArrangementMode = "ascent" | "descent" | "fold" | "continuity" | "counterpoint" | "collections" | "lineage" | "scatter";
 type EvolutionPhaseId = "ground" | "fold" | "recurrence" | "fracture" | "convergence" | "silence";
 
 interface EvolutionPhase {
@@ -62,6 +64,8 @@ const arrangementModes: Array<{
   { id: "ascent", label: "Ascent", description: "Dark → light" },
   { id: "descent", label: "Descent", description: "Light → dark" },
   { id: "fold", label: "Fold", description: "Outer values → center" },
+  { id: "continuity", label: "Continuity", description: "Nearest visual answer" },
+  { id: "counterpoint", label: "Counterpoint", description: "Strongest visual difference" },
   { id: "collections", label: "Bodies", description: "Collection blocks" },
   { id: "lineage", label: "Lineage", description: "Contract → token" },
   { id: "scatter", label: "Scatter", description: "Witness-seeded field" },
@@ -136,6 +140,23 @@ function arrangeEvidence(
     }
     return folded;
   }
+  if (mode === "continuity" || mode === "counterpoint") {
+    const remaining = ordered.filter((token) => token.visual);
+    const sequence: ComposerEvidence[] = [];
+    let current = remaining.shift();
+    while (current) {
+      sequence.push(current);
+      if (!remaining.length || !current.visual) break;
+      remaining.sort((left, right) => {
+        const leftDistance = left.visual ? visualDistance(current!.visual!, left.visual) : 0;
+        const rightDistance = right.visual ? visualDistance(current!.visual!, right.visual) : 0;
+        return (mode === "continuity" ? leftDistance - rightDistance : rightDistance - leftDistance) ||
+          left.key.localeCompare(right.key);
+      });
+      current = remaining.shift();
+    }
+    return [...sequence, ...ordered.filter((token) => !token.visual)];
+  }
   if (mode === "collections") {
     return ordered.sort((left, right) =>
       left.collection.localeCompare(right.collection) ||
@@ -181,7 +202,7 @@ function deriveEvolution(evidence: ComposerEvidence[], stateHash: string): Evolu
       id: "fold",
       label: "Fold",
       description: "Luminance extremes answer inward",
-      arrangements: ["fold"],
+      arrangements: ["fold", "continuity"],
       events: span(24, 13, 4),
     },
     {
@@ -195,7 +216,7 @@ function deriveEvolution(evidence: ComposerEvidence[], stateHash: string): Evolu
       id: "fracture",
       label: "Fracture",
       description: `Contrast ${contrast.toFixed(3)} opens the field`,
-      arrangements: contrast > 0.45 ? ["fold", "scatter", "descent"] : ["fold", "scatter"],
+      arrangements: contrast > 0.45 ? ["counterpoint", "scatter", "descent"] : ["counterpoint", "scatter"],
       events: span(34, 19, 12),
     },
     {
@@ -466,6 +487,7 @@ export default function ComposerChamber({
             collection: "Archive memory",
             media: token.media || "",
             luminance: token.luminance,
+            visual: null,
           };
           scheduleTone(context, compressor, echo, context.currentTime + index * 0.18, 0.16);
         });
@@ -539,13 +561,13 @@ export default function ComposerChamber({
             The archive becomes<br />an instrument.
           </h2>
           <p className="mt-5 max-w-2xl text-[9px] uppercase leading-5 tracking-[0.18em] text-white/30">
-            A witnessed Ethereum archive conducting its own luminosity, recurrence, fracture, convergence, and rest.
+            A witnessed Ethereum archive conducting color, spatial form, recurrence, fracture, convergence, and rest.
           </p>
         </div>
         <div className="font-mono text-[7px] uppercase leading-5 tracking-[0.14em] text-white/25 md:text-right">
           <p>Witness / {stateHash.slice(7, 19)}</p>
           <p>{evidence.length.toString().padStart(3, "0")} source works</p>
-          <p>Grammars 002–003 / living</p>
+          <p>Grammars 002–004 / living</p>
         </div>
       </div>
 

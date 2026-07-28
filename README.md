@@ -11,6 +11,7 @@ FoldForge is a static Ethereum NFT archive and autonomous data composer for `zer
 - ENS/address archive lookup
 - Autonomous Ethereum NFT sound composition for `zeropoet.eth`
 - Hidden luminosity analysis across every visible holding
+- Color-and-composition signatures that sequence works by continuity and counterpoint
 - Six evidence-derived phases with deterministic arrangement layering
 - A single witnessed FoldForge voice spanning three octaves
 - Consent-first audio with only Witness and Silence controls
@@ -51,7 +52,9 @@ This is an exclusion policy rather than a fixed allowlist: collection and work t
 
 ## Holdings composition
 
-The archive resolves every visible holding into a hidden luminosity score. The former public image grid has been removed so Resonant Holdings can serve as the archive's primary compositional interface.
+The archive resolves every visible holding into a hidden visual signature. Alongside luminance, FoldForge measures circular hue, saturation, contrast, edge rhythm, bilateral balance, and visual center of mass. These are relational observations, not quality scores.
+
+The signature composes in two directions: **Continuity** selects the nearest visual answer to the current work; **Counterpoint** selects the strongest available difference. In both cases contract address and token ID break exact ties. Evaluation therefore determines adjacency and motion without pretending to determine artistic value.
 
 The current living grammar is **Composition I — Luminance Field** (`FF-COMP-0001`, version `1.0.0`). Each image is reduced to a small grayscale sample and assigned an average perceived-luminance value. The hidden field orders those values from dark to light; contract address and token ID provide deterministic tie-breaking. New holdings are analyzed by the same rule automatically.
 
@@ -70,6 +73,7 @@ FoldForge's living scaffold is defined in:
 - `grammar/composition-001-luminance.json` — canonical Composition I mapping and lineage requirements
 - `grammar/composition-002-lexical.json` — recurring language derived from collection, token, and description evidence
 - `grammar/composition-003-resonance.json` — consent-first unified sound mapping across a three-octave field
+- `grammar/composition-004-visual-relations.json` — color and spatial measurements composed as continuity and counterpoint
 - `grammar/composition-witness.schema.json` — export contract for reproducible archive-state witnesses
 - `docs/constitutional-architecture.md` — evidence → grammar → composition architecture and revision boundary
 

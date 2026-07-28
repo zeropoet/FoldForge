@@ -1,6 +1,7 @@
 import luminanceField from "../grammar/composition-001-luminance.json";
 import lexicalField from "../grammar/composition-002-lexical.json";
 import resonantHoldings from "../grammar/composition-003-resonance.json";
+import visualRelations from "../grammar/composition-004-visual-relations.json";
 
 export const compositionGrammar = {
   id: luminanceField.id,
@@ -10,7 +11,11 @@ export const compositionGrammar = {
   direction: luminanceField.transformations[3].output,
 } as const;
 
-function interfaceGrammar(manifest: typeof lexicalField | typeof resonantHoldings) {
+function interfaceGrammar(manifest: {
+  id: string;
+  version: string;
+  presentation: { title: string; interfaceStatement: string };
+}) {
   return {
     id: manifest.id,
     version: manifest.version,
@@ -22,4 +27,5 @@ function interfaceGrammar(manifest: typeof lexicalField | typeof resonantHolding
 export const composerGrammars = {
   language: interfaceGrammar(lexicalField),
   sound: interfaceGrammar(resonantHoldings),
+  visual: interfaceGrammar(visualRelations),
 } as const;

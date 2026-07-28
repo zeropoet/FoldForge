@@ -1,0 +1,58 @@
+{
+  "schema": "foldforge-composition/v1",
+  "id": "FF-COMP-0004",
+  "version": "1.0.0",
+  "status": "living",
+  "title": "Visual Relations",
+  "constitutionRevision": "v0.1",
+  "discovery": {
+    "name": "Composition IV",
+    "statement": "Evaluation becomes composition when measured visual relations determine which work answers the one before it.",
+    "date": "2026-07-27"
+  },
+  "evidence": {
+    "network": "Ethereum mainnet",
+    "ownerScope": "selected archive identity",
+    "inclusionPolicy": "all currently held contracts except repository-owned exclusions",
+    "requiredFields": ["contract address", "token ID", "owner state", "token media URL"]
+  },
+  "transformations": [
+    {
+      "order": 1,
+      "operation": "sample",
+      "input": "token image",
+      "output": "24 by 24 pixel derivative"
+    },
+    {
+      "order": 2,
+      "operation": "measure",
+      "input": "sample pixels composited against black",
+      "output": "dominant circular hue, saturation, luminance, RMS contrast, edge energy, bilateral balance, and visual center of mass"
+    },
+    {
+      "order": 3,
+      "operation": "relate",
+      "input": "pairs of visual signatures",
+      "output": "weighted perceptual distance"
+    },
+    {
+      "order": 4,
+      "operation": "compose",
+      "input": "visual distances",
+      "output": "continuity by nearest answer and counterpoint by strongest difference",
+      "tieBreak": "contract address and token ID"
+    }
+  ],
+  "presentation": {
+    "title": "Visual relations",
+    "interfaceStatement": "Color and form do not score the works; they decide how works meet."
+  },
+  "lineage": {
+    "capture": ["visual signature", "deterministic state hash"],
+    "revisionTrigger": "A metric, weight, or sequencing change requires a new grammar version."
+  },
+  "authority": {
+    "claims": "The sequence is a reproducible relation among sampled visual properties.",
+    "doesNotClaim": "The measurements determine artistic quality, intention, or final meaning."
+  }
+}

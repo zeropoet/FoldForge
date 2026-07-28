@@ -6,6 +6,7 @@ import ComposerChamber, { type ComposerEvidence } from "./composer-chamber";
 import { createCompositionWitness, type CompositionWitness } from "./composition-witness";
 import { resolveOwner } from "./ens";
 import { AlchemyNft, fetchNftMetadata, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, normalizeMediaUrl, optimizedImageUrl, summarizeContracts, tokenImageFor, tokenThumbnailFor } from "./nft-data";
+import { analyzePixels, type VisualSignature } from "./visual-analysis";
 
 type LoadState = "idle" | "loading" | "ready" | "error";
 
@@ -26,9 +27,9 @@ interface OwnerIdentity {
   ensName: string | null;
 }
 
-interface CachedLuminance {
+interface CachedVisualAnalysis {
   media: string;
-  score: number | null;
+  signature: VisualSignature | null;
 }
 
 const defaultOwner = "zeropoet.eth";
@@ -56,7 +57,7 @@ function compositionMediaFor(token: AlchemyNft): string {
   return media && !isVideoUrl(media) ? media : "";
 }
 
-async function averageImageLuminance(source: string, signal: AbortSignal): Promise<number | null> {
+async function analyzeImage(source: string, signal: AbortSignal): Promise<VisualSignature | null> {
   try {
     const response = await fetch(optimizedImageUrl(source, { width: 24, quality: 45 }), { signal });
     if (!response.ok) return null;
@@ -74,17 +75,7 @@ async function averageImageLuminance(source: string, signal: AbortSignal): Promi
     context.drawImage(bitmap, 0, 0, sampleSize, sampleSize);
     bitmap.close();
     const pixels = context.getImageData(0, 0, sampleSize, sampleSize).data;
-    let total = 0;
-
-    for (let index = 0; index < pixels.length; index += 4) {
-      const alpha = pixels[index + 3] / 255;
-      const red = pixels[index] * alpha;
-      const green = pixels[index + 1] * alpha;
-      const blue = pixels[index + 2] * alpha;
-      total += (0.2126 * red + 0.7152 * green + 0.0722 * blue) / 255;
-    }
-
-    return total / (pixels.length / 4);
+    return analyzePixels(pixels, sampleSize, sampleSize);
   } catch (error) {
     if (error instanceof DOMException && error.name === "AbortError") throw error;
     return null;
@@ -124,6 +115,7 @@ export default function FoldForge() {
   const [compositionLoading, setCompositionLoading] = useState(false);
   const [compositionAnalyzing, setCompositionAnalyzing] = useState(false);
   const [luminanceScores, setLuminanceScores] = useState<Record<string, number | null>>({});
+  const [visualSignatures, setVisualSignatures] = useState<Record<string, VisualSignature | null>>({});
   const [compositionWitness, setCompositionWitness] = useState<CompositionWitness | null>(null);
   const [previousCompositionWitness, setPreviousCompositionWitness] = useState<CompositionWitness | null>(null);
   const [selectedContract, setSelectedContract] = useState("");
@@ -170,8 +162,9 @@ export default function FoldForge() {
         collection: token.collection?.name || token.contract?.openSeaMetadata?.collectionName || token.contract?.name || "Unresolved collection",
         media: sourceMedia ? optimizedImageUrl(sourceMedia, { width: 1280, quality: 90 }) : "",
         luminance: luminanceScores[compositionKey(token)] ?? null,
+        visual: visualSignatures[compositionKey(token)] ?? null,
       };
-    }), [luminanceScores, orderedCompositionTokens]);
+    }), [luminanceScores, orderedCompositionTokens, visualSignatures]);
 
   const loadCollections = useCallback(async (owner: string) => {
     const requestId = requestSequence.current + 1;
@@ -181,6 +174,7 @@ export default function FoldForge() {
     setCollections([]);
     setCompositionTokens([]);
     setLuminanceScores({});
+    setVisualSignatures({});
     setCompositionWitness(null);
     setPreviousCompositionWitness(null);
     setOwnerIdentity(null);
@@ -297,15 +291,16 @@ export default function FoldForge() {
     const entries = compositionTokens
       .map((token) => ({ key: compositionKey(token), media: compositionMediaFor(token) }))
       .filter((entry) => entry.media);
-    const storageKey = `foldforge:luminance:v1:${ownerIdentity.address.toLowerCase()}`;
+    const storageKey = `foldforge:visual-analysis:v2:${ownerIdentity.address.toLowerCase()}`;
 
     queueMicrotask(async () => {
       setCompositionAnalyzing(true);
       const scores: Record<string, number | null> = {};
-      let cached: Record<string, CachedLuminance> = {};
+      const signatures: Record<string, VisualSignature | null> = {};
+      let cached: Record<string, CachedVisualAnalysis> = {};
 
       try {
-        cached = JSON.parse(localStorage.getItem(storageKey) || "{}") as Record<string, CachedLuminance>;
+        cached = JSON.parse(localStorage.getItem(storageKey) || "{}") as Record<string, CachedVisualAnalysis>;
       } catch {
         cached = {};
       }
@@ -313,7 +308,8 @@ export default function FoldForge() {
       const pending = entries.filter((entry) => {
         const match = cached[entry.key];
         if (!match || match.media !== entry.media) return true;
-        scores[entry.key] = match.score;
+        signatures[entry.key] = match.signature;
+        scores[entry.key] = match.signature?.luminance ?? null;
         return false;
       });
 
@@ -325,12 +321,13 @@ export default function FoldForge() {
             batch.map(async (entry) => ({
               key: entry.key,
               media: entry.media,
-              score: await averageImageLuminance(entry.media, controller.signal),
+              signature: await analyzeImage(entry.media, controller.signal),
             })),
           );
           for (const value of values) {
-            scores[value.key] = value.score;
-            cached[value.key] = { media: value.media, score: value.score };
+            signatures[value.key] = value.signature;
+            scores[value.key] = value.signature?.luminance ?? null;
+            cached[value.key] = { media: value.media, signature: value.signature };
           }
         }
         try {
@@ -339,6 +336,7 @@ export default function FoldForge() {
           // The composition remains functional when browser storage is unavailable.
         }
         setLuminanceScores(scores);
+        setVisualSignatures(signatures);
       } catch (error) {
         if (!(error instanceof DOMException && error.name === "AbortError")) {
           setMessage(error instanceof Error ? error.message : "Archive luminance analysis failed.");
@@ -367,6 +365,7 @@ export default function FoldForge() {
           tokenId: token.tokenId || "",
           media: compositionMediaFor(token) || null,
           luminance: luminanceScores[key] ?? null,
+          visual: visualSignatures[key] ?? null,
         };
       }),
     }).then((witness) => {
@@ -388,7 +387,7 @@ export default function FoldForge() {
     return () => {
       active = false;
     };
-  }, [collections, compositionReady, compositionTokens, luminanceScores, ownerIdentity]);
+  }, [collections, compositionReady, compositionTokens, luminanceScores, ownerIdentity, visualSignatures]);
 
   useEffect(() => {
     if (!ownerIdentity?.address || selectedContract) {
@@ -607,7 +606,7 @@ export default function FoldForge() {
             <section className="grid min-h-72 place-items-center border-b border-white/20 text-center">
               <div>
                 <p className="text-[9px] uppercase tracking-[0.24em] text-white/40">
-                  {compositionLoading ? "Resolving sonic evidence" : compositionAnalyzing ? "Measuring luminosity" : "Awaiting visual evidence"}
+                  {compositionLoading ? "Resolving sonic evidence" : compositionAnalyzing ? "Reading color and spatial form" : "Awaiting visual evidence"}
                 </p>
                 <p className="mt-3 font-mono text-[7px] uppercase tracking-[0.14em] text-white/20">
                   The luminosity field remains active as the hidden score
