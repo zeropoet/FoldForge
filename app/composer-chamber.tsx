@@ -3,7 +3,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { composerGrammars } from "./composition-grammar";
 import type { WitnessToken } from "./composition-witness";
-import { visualDistance, type VisualSignature } from "./visual-analysis";
+import { composeVisualSequence, type VisualSignature } from "./visual-analysis";
+import livingObjectDisplacement from "../public/root-logos-living-object-displacement.json";
 
 export interface ComposerEvidence {
   key: string;
@@ -30,6 +31,9 @@ interface SoundProfile {
   pan: number;
   cutoff: number;
   harmonic: number;
+  densityDisplacement: number;
+  energyDisplacement: number;
+  radialDisplacement: number;
 }
 
 type ArrangementMode = "ascent" | "descent" | "fold" | "continuity" | "counterpoint" | "collections" | "lineage" | "scatter";
@@ -141,21 +145,7 @@ function arrangeEvidence(
     return folded;
   }
   if (mode === "continuity" || mode === "counterpoint") {
-    const remaining = ordered.filter((token) => token.visual);
-    const sequence: ComposerEvidence[] = [];
-    let current = remaining.shift();
-    while (current) {
-      sequence.push(current);
-      if (!remaining.length || !current.visual) break;
-      remaining.sort((left, right) => {
-        const leftDistance = left.visual ? visualDistance(current!.visual!, left.visual) : 0;
-        const rightDistance = right.visual ? visualDistance(current!.visual!, right.visual) : 0;
-        return (mode === "continuity" ? leftDistance - rightDistance : rightDistance - leftDistance) ||
-          left.key.localeCompare(right.key);
-      });
-      current = remaining.shift();
-    }
-    return [...sequence, ...ordered.filter((token) => !token.visual)];
+    return composeVisualSequence(ordered, mode);
   }
   if (mode === "collections") {
     return ordered.sort((left, right) =>
@@ -201,7 +191,7 @@ function deriveEvolution(evidence: ComposerEvidence[], stateHash: string): Evolu
     {
       id: "fold",
       label: "Fold",
-      description: "Luminance extremes answer inward",
+      description: "Luminance folds while nearest visual answers continue",
       arrangements: ["fold", "continuity"],
       events: span(24, 13, 4),
     },
@@ -215,15 +205,15 @@ function deriveEvolution(evidence: ComposerEvidence[], stateHash: string): Evolu
     {
       id: "fracture",
       label: "Fracture",
-      description: `Contrast ${contrast.toFixed(3)} opens the field`,
+      description: `Contrast ${contrast.toFixed(3)} drives strongest visual difference`,
       arrangements: contrast > 0.45 ? ["counterpoint", "scatter", "descent"] : ["counterpoint", "scatter"],
       events: span(34, 19, 12),
     },
     {
       id: "convergence",
       label: "Convergence",
-      description: "Independent paths seek common value",
-      arrangements: ["ascent", "lineage"],
+      description: "Independent paths return through visual continuity",
+      arrangements: ["continuity", "ascent", "lineage"],
       events: span(28, 15, 16),
     },
     {
@@ -285,8 +275,32 @@ function deriveMotifs(evidence: ComposerEvidence[]): LuminosityMotif[] {
     .slice(0, 5);
 }
 
-function soundProfile(token: ComposerEvidence): SoundProfile {
+function sampleLivingObjectDisplacement(position: number) {
+  const bounded = Math.max(0, Math.min(1, position));
+  const scaled = bounded * (livingObjectDisplacement.samples.length - 1);
+  const lowerIndex = Math.floor(scaled);
+  const upperIndex = Math.min(livingObjectDisplacement.samples.length - 1, lowerIndex + 1);
+  const fraction = scaled - lowerIndex;
+  const lower = livingObjectDisplacement.samples[lowerIndex];
+  const upper = livingObjectDisplacement.samples[upperIndex];
+  const interpolate = (
+    field: "radialDisplacement" | "densityDisplacement" | "horizontalDisplacement" |
+      "depthDisplacement" | "radialMotion" | "energyDisplacement",
+  ) =>
+    lower[field] + (upper[field] - lower[field]) * fraction;
+  return {
+    radial: interpolate("radialDisplacement"),
+    density: interpolate("densityDisplacement"),
+    horizontal: interpolate("horizontalDisplacement"),
+    depth: interpolate("depthDisplacement"),
+    motion: interpolate("radialMotion"),
+    energy: interpolate("energyDisplacement"),
+  };
+}
+
+function soundProfile(token: ComposerEvidence, displacementPosition = 0.5): SoundProfile {
   const bounded = Math.max(0, Math.min(1, token.luminance ?? 0));
+  const displacement = sampleLivingObjectDisplacement(displacementPosition);
   const contractSeed = stableNumber(token.contract);
   const tokenSeed = stableNumber(token.tokenId);
   const metadataDensity = Math.min(1, `${token.name} ${token.description}`.length / 900);
@@ -296,11 +310,18 @@ function soundProfile(token: ComposerEvidence): SoundProfile {
 
   return {
     frequency: 73.416 * 2 ** (semitone / 12),
-    interval: [360, 400, 440][tokenSeed % 3],
-    duration: 0.34 + metadataDensity * 0.7,
-    pan: (((stableNumber(token.collection) % 201) - 100) / 100) * 0.34,
-    cutoff: 520 + bounded * 3300,
-    harmonic: 0.08 + (contractSeed % 19) / 100,
+    interval: [360, 400, 440][tokenSeed % 3] * (1 - displacement.energy * 0.09),
+    duration: (0.34 + metadataDensity * 0.7) * (1 + displacement.radial * 0.16),
+    pan: Math.max(-0.72, Math.min(0.72,
+      (((stableNumber(token.collection) % 201) - 100) / 100) * 0.34 +
+      displacement.horizontal * 0.32 +
+      displacement.motion * 0.08,
+    )),
+    cutoff: (520 + bounded * 3300) * 2 ** (displacement.radial * 0.35),
+    harmonic: (0.08 + (contractSeed % 19) / 100) * (1 + displacement.density * 0.22),
+    densityDisplacement: displacement.density,
+    energyDisplacement: displacement.energy,
+    radialDisplacement: displacement.radial,
   };
 }
 
@@ -311,8 +332,9 @@ function scheduleTone(
   now: number,
   amplitude = 1,
   originFrequency?: number,
+  displacementPosition = 0.5,
 ) {
-  const profile = soundProfile(token);
+  const profile = soundProfile(token, displacementPosition);
   const panner = context.createStereoPanner();
   const envelope = context.createGain();
   const filter = context.createBiquadFilter();
@@ -393,6 +415,7 @@ export default function ComposerChamber({
   const [soundEvent, setSoundEvent] = useState<{
     arrangement: ArrangementMode;
     index: number;
+    displacementPosition: number;
     token: ComposerEvidence;
   } | null>(null);
   const [soundPlaying, setSoundPlaying] = useState(false);
@@ -507,15 +530,24 @@ export default function ComposerChamber({
           if (generation !== phaseGeneration.current || transitionLocked.current) return;
           const current = soundCursors.current.get(mode) ?? 0;
           const index = current % sequence.length;
+          const displacementPosition = sequence.length <= 1 ? 0.5 : index / (sequence.length - 1);
           const token = sequence[index];
-          const profile = soundProfile(token);
+          const profile = soundProfile(token, displacementPosition);
           const formerLuminance = memory.shifted.get(token.key);
           const originFrequency = formerLuminance == null
             ? undefined
             : soundProfile({ ...token, luminance: formerLuminance }).frequency;
           const eventAmplitude = amplitude * (memory.added.has(token.key) ? 1.16 : 1);
-          setSoundEvent({ arrangement: mode, index, token });
-          scheduleTone(context, compressor, token, context.currentTime, eventAmplitude, originFrequency);
+          setSoundEvent({ arrangement: mode, index, displacementPosition, token });
+          scheduleTone(
+            context,
+            compressor,
+            token,
+            context.currentTime,
+            eventAmplitude,
+            originFrequency,
+            displacementPosition,
+          );
           soundCursors.current.set(mode, (index + 1) % sequence.length);
           phaseEventCount.current += 1;
           const motifPeriod = 7 + (stableNumber(stateHash) % 5);
@@ -525,7 +557,16 @@ export default function ComposerChamber({
             phaseEventCount.current % motifPeriod === 0
           ) {
             const motif = motifs[Math.floor(phaseEventCount.current / motifPeriod) % motifs.length];
-            scheduleTone(context, compressor, motif.token, context.currentTime + 0.13, amplitude * 0.28);
+            const motifPosition = phase.events <= 1 ? 0.5 : phaseEventCount.current / (phase.events - 1);
+            scheduleTone(
+              context,
+              compressor,
+              motif.token,
+              context.currentTime + 0.13,
+              amplitude * 0.28,
+              undefined,
+              motifPosition,
+            );
           }
           setPhaseProgress(phaseEventCount.current);
           if (phaseEventCount.current >= phase.events) {
@@ -547,7 +588,9 @@ export default function ComposerChamber({
     void audioContext.current?.close();
   }, []);
 
-  const currentProfile = currentSound ? soundProfile(currentSound) : null;
+  const currentProfile = currentSound
+    ? soundProfile(currentSound, soundEvent?.displacementPosition ?? 0.5)
+    : null;
   const phaseRatio = currentPhase.events
     ? Math.min(1, phaseProgress / currentPhase.events)
     : soundPlaying && currentPhase.id === "silence" ? 1 : 0;
@@ -652,11 +695,12 @@ export default function ComposerChamber({
                 <p className="mt-6 max-w-xs truncate text-[10px] uppercase tracking-[0.15em] text-white/55">{currentSound?.name || "Awaiting witness"}</p>
               </div>
             </div>
-            <dl className="grid grid-cols-2 gap-px bg-white/15 font-mono text-[7px] uppercase tracking-[0.12em] sm:grid-cols-4">
+            <dl className="grid grid-cols-2 gap-px bg-white/15 font-mono text-[7px] uppercase tracking-[0.12em] sm:grid-cols-5">
               <div className="bg-black p-3"><dt className="text-white/25">Register</dt><dd className="mt-2 text-white/60">3 octaves</dd></div>
-              <div className="bg-black p-3"><dt className="text-white/25">Pulse</dt><dd className="mt-2 text-white/60">{currentProfile?.interval ?? "—"} ms</dd></div>
+              <div className="bg-black p-3"><dt className="text-white/25">Pulse</dt><dd className="mt-2 text-white/60">{currentProfile ? Math.round(currentProfile.interval) : "—"} ms</dd></div>
               <div className="bg-black p-3"><dt className="text-white/25">Filter</dt><dd className="mt-2 text-white/60">{currentProfile ? Math.round(currentProfile.cutoff) : "—"} Hz</dd></div>
               <div className="bg-black p-3"><dt className="text-white/25">Field</dt><dd className="mt-2 text-white/60">{currentProfile ? `${currentProfile.pan < 0 ? "L" : "R"} ${Math.abs(currentProfile.pan).toFixed(2)}` : "—"}</dd></div>
+              <div className="col-span-2 bg-black p-3 sm:col-span-1"><dt className="text-white/25">Displacement</dt><dd className="mt-2 text-white/60">{currentProfile ? `R ${currentProfile.radialDisplacement.toFixed(2)} / D ${currentProfile.densityDisplacement.toFixed(2)}` : "—"}</dd></div>
             </dl>
           </div>
           <div className="mt-6 flex items-center justify-between gap-4">

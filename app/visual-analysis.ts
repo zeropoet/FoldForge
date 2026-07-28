@@ -117,3 +117,29 @@ export function visualDistance(left: VisualSignature, right: VisualSignature): n
     Math.hypot(left.focusX - right.focusX, left.focusY - right.focusY) / Math.SQRT2 * 0.1
   );
 }
+
+export type VisualRelationMode = "continuity" | "counterpoint";
+
+export function composeVisualSequence<T extends { key: string; visual: VisualSignature | null }>(
+  evidence: T[],
+  mode: VisualRelationMode,
+): T[] {
+  const remaining = evidence.filter((entry) => entry.visual);
+  const sequence: T[] = [];
+  let current = remaining.shift();
+
+  while (current) {
+    sequence.push(current);
+    if (!remaining.length || !current.visual) break;
+    const origin = current.visual;
+    remaining.sort((left, right) => {
+      const leftDistance = left.visual ? visualDistance(origin, left.visual) : 0;
+      const rightDistance = right.visual ? visualDistance(origin, right.visual) : 0;
+      return (mode === "continuity" ? leftDistance - rightDistance : rightDistance - leftDistance) ||
+        left.key.localeCompare(right.key);
+    });
+    current = remaining.shift();
+  }
+
+  return [...sequence, ...evidence.filter((entry) => !entry.visual)];
+}

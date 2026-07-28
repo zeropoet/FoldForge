@@ -20,7 +20,7 @@ FoldForge is a static Ethereum NFT archive and autonomous data composer for `zer
 - Repository-owned collection exclusions for the Zeropoet archive
 - Shareable collection and minted-work URLs
 - NFT media with image, animation, video, and IPFS support
-- Responsive WebP derivatives, lazy loading, and cached luminance analysis
+- Responsive WebP derivatives, lazy loading, and cached visual-signature analysis
 - Minted metadata, traits, token URI, contract, Etherscan, and source-file links
 - Fully static GitHub Pages deployment
 
@@ -81,14 +81,32 @@ Root Logos provides constitutional orientation, not a shared runtime or identity
 
 The Composer Chamber gives the same holdings three governed expressions: Luminance Field, Lexical Field, and Resonant Holdings. Language is extracted from recurring source terms. Sound speaks through one synthesized FoldForge voice while independently mapping luminance to register and filtering, contract identity to harmonic character, token identity to rhythm, metadata density to envelope, and collection identity to a restrained stereo position. It never autoplays.
 
-Resonant Holdings can traverse those fixed work-to-note relationships through six deterministic arrangements: luminance ascent, luminance descent, recursive fold, collection bodies, contract/token lineage, and a witness-seeded scatter. These arrangements are no longer listener-controlled. The archive derives its own six-part macroform—Ground, Fold, Recurrence, Fracture, Convergence, and Silence—from its witness hash, luminance distribution, contrast, collection count, and collection diversity.
+Resonant Holdings also traverses a witnessed, 64-step root-to-crown displacement
+field derived from the current Root Logos Living Object geometry. The map does
+not import the Living Object renderer or sovereign voice, and it does not
+replace FoldForge's timbral contour. Instead, signed deviations from the form's
+mean radius and density push filtering, duration, harmonic intensity, pulse, and
+stereo pressure above or below the existing FoldForge baseline. Each work
+retains its own evidence-derived pitch. The committed displacement records the
+Root Logos revision, geometry generator, neutral geometry, point count, bounds,
+and SHA-256 witness; regenerate it with `npm run build:displacement-map`.
+
+The [monthly displacement-renewal workflow](.github/workflows/renew-root-logos-displacement.yml)
+runs at 06:17 UTC on the first day of each month and may also be started
+manually. It checks out the current Root Logos repository, rebuilds the map,
+validates FoldForge, and commits only when the witnessed geometry has changed.
+That focused commit triggers the normal Pages deployment. The workflow reuses
+`ROOT_LOGOS_DISPATCH_TOKEN` for read-only checkout of Root Logos and the
+workflow-scoped `GITHUB_TOKEN` for its FoldForge commit.
+
+Resonant Holdings can traverse those fixed work-to-note relationships through eight deterministic arrangements: luminance ascent, luminance descent, recursive fold, visual continuity, visual counterpoint, collection bodies, contract/token lineage, and a witness-seeded scatter. These arrangements are no longer listener-controlled. The archive derives its own six-part macroform—Ground, Fold, Recurrence, Fracture, Convergence, and Silence—from its witness hash, visual-signature distribution, contrast, collection count, and collection diversity.
 
 The listener can only begin (`Witness`) or end (`Silence`) the performance. Within the cycle, FoldForge selects one to three arrangement layers, assigns a state-derived event budget, advances every layer independently, normalizes their combined gain, enters a state-derived rest, and reforms. A holdings change produces a new witness hash and therefore a newly proportioned evolution without changing any individual work's evidence-derived sonic identity.
 
 The Composer Chamber belongs exclusively to `zeropoet.eth`. Incoming archive routes
 resolve to this identity; FoldForge no longer presents an alternate lineage archive.
 
-When the evidence resolves, FoldForge calculates a deterministic SHA-256 state hash from its grammar versions, archive identity, included contracts, token identities, canonical media URLs, and luminance values. Every expression shares that state hash. The interface exposes it with a JSON witness export, and up to 24 distinct states per owner are retained locally as reversible observation history.
+When the evidence resolves, FoldForge calculates a deterministic SHA-256 state hash from its grammar versions, archive identity, included contracts, token identities, canonical media URLs, full visual signatures, and the witnessed Root Logos displacement map. Every expression shares that state hash. The interface exposes it with a JSON witness export, and up to 24 distinct states per owner are retained locally as reversible observation history.
 
 ### Archive memory and motifs
 
@@ -161,6 +179,6 @@ The Next.js configuration publishes from the domain root when `CUSTOM_DOMAIN` is
 
 ## Architecture
 
-FoldForge uses Next.js static export and performs Alchemy, ENS, image-derivative, luminance-analysis, witness-generation, and Web Audio composition directly in the browser. It has no application server, database, account system, or cross-device preference synchronization.
+FoldForge uses Next.js static export and performs Alchemy, ENS, image-derivative, visual-signature analysis, witness generation, displacement sampling, and Web Audio composition directly in the browser. It has no application server, database, account system, or cross-device preference synchronization.
 
-Alchemy provides owner, contract, token, and cached metadata. `app/collection-policy.ts` applies repository-owned exclusions. `app/nft-data.ts` normalizes provider media and constructs responsive derivative URLs. `app/page.tsx` resolves the archive and computes or restores luminance values. `app/composition-witness.ts` produces deterministic evidence witnesses, while `app/composer-chamber.tsx` derives the lexical field, autonomous six-phase macroform, arrangement layers, and unified FoldForge voice.
+Alchemy provides owner, contract, token, and cached metadata. `app/collection-policy.ts` applies repository-owned exclusions. `app/nft-data.ts` normalizes provider media and constructs responsive derivative URLs. `app/page.tsx` resolves the archive and computes or restores visual signatures. `app/composition-witness.ts` seals archive evidence with the current displacement-map witness, while `app/composer-chamber.tsx` derives the lexical field, autonomous six-phase macroform, visual-relation arrangements, displacement field, and unified FoldForge voice.

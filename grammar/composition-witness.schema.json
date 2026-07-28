@@ -9,6 +9,7 @@
     "observedAt",
     "composition",
     "expressions",
+    "displacementMap",
     "archive",
     "evidence"
   ],
@@ -27,6 +28,17 @@
         "type": "object",
         "required": ["id", "version", "modality"]
       }
+    },
+    "displacementMap": {
+      "type": "object",
+      "required": ["id", "revision", "witness", "samples"],
+      "properties": {
+        "id": { "const": "root-logos-living-object" },
+        "revision": { "type": "string" },
+        "witness": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+        "samples": { "type": "integer", "minimum": 2 }
+      },
+      "additionalProperties": false
     },
     "archive": {
       "type": "object",

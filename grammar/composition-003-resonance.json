@@ -1,7 +1,7 @@
 {
   "schema": "foldforge-composition/v1",
   "id": "FF-COMP-0003",
-  "version": "7.0.0",
+  "version": "9.0.0",
   "status": "living",
   "title": "Resonant Holdings",
   "constitutionRevision": "v0.1",
@@ -73,6 +73,12 @@
     },
     {
       "order": 10,
+      "operation": "apply constitutional displacement",
+      "input": "a witnessed 64-step root-to-crown displacement field derived from deviations within the current Root Logos Living Object geometry",
+      "output": "signed radial deviation displaces filter and duration around the FoldForge baseline, density deviation displaces harmonic intensity, centroid offset and radial motion displace stereo pressure, and signed geometric energy displaces pulse"
+    },
+    {
+      "order": 11,
       "operation": "compose",
       "input": "ordered audible events",
       "output": "autonomously selected, memory-bearing, motif-recurring, gain-normalized arrangement layers through one compressed unified voice with restrained recursive delay"
@@ -80,7 +86,7 @@
   ],
   "presentation": {
     "title": "Sound composition",
-    "interfaceStatement": "One voice / value as register / token as pulse / collection as field",
+    "interfaceStatement": "One voice / work as pitch / visual relation as sequence / Living Object as signed displacement",
     "consent": "Sound never autoplays and begins only through explicit listener action.",
     "maximumGain": 0.08,
     "instrumentFamilies": ["Fold voice: sine fundamental, triangle harmonic, slow frequency movement"],
@@ -91,10 +97,10 @@
     "humanControl": "The listener may witness or silence the composition. No phase, arrangement, or layer is manually selectable.",
     "cycle": ["ground", "fold", "recurrence", "fracture", "convergence", "silence"],
     "ground": "Luminance ascent establishes the tonal center.",
-    "fold": "Dark and light extremes answer inward.",
+    "fold": "Dark and light extremes answer inward while nearest visual relations continue.",
     "recurrence": "Collection and contract relations form one or two simultaneous motifs according to archive diversity.",
-    "fracture": "Luminance contrast determines whether two or three independent arrangements open the field.",
-    "convergence": "Ascent and lineage seek a shared center without changing their individual order.",
+    "fracture": "Luminance contrast determines whether two or three independent arrangements open the field through strongest visual difference.",
+    "convergence": "Visual continuity, ascent, and lineage seek a shared center without changing their individual order.",
     "silence": "A state-derived rest preserves absence before the cycle reforms.",
     "phaseDuration": "Event budgets are deterministically derived from the state hash.",
     "stateChange": "A holdings change produces a new witness hash and therefore a newly proportioned evolution."
@@ -133,6 +139,14 @@
       "rule": "alternate the darkest remaining work with the lightest remaining work until the sequence reaches its center"
     },
     {
+      "id": "continuity",
+      "rule": "each work calls the nearest remaining visual signature"
+    },
+    {
+      "id": "counterpoint",
+      "rule": "each work calls the most distant remaining visual signature"
+    },
+    {
       "id": "collections",
       "rule": "group by collection name, then order each body by luminance and token identity"
     },
@@ -146,7 +160,7 @@
     }
   ],
   "lineage": {
-    "capture": ["composition ID", "grammar version", "state hash", "prior state hash", "archive memory delta", "recognized motifs", "evolution phase", "active arrangement IDs", "phase event budget", "token identity", "luminance", "frequency", "instrument", "pulse", "envelope", "pan", "filter", "event order"],
+    "capture": ["composition ID", "grammar version", "state hash", "prior state hash", "Root Logos displacement-map witness", "displacement position", "radial displacement", "density displacement", "centroid displacement", "radial motion", "energy displacement", "archive memory delta", "recognized motifs", "evolution phase", "active arrangement IDs", "phase event budget", "token identity", "luminance", "frequency", "instrument", "pulse", "envelope", "pan", "filter", "event order"],
     "revisionTrigger": "A memory rule, motif rule, evolutionary phase, phase transition, arrangement, layering, pitch, voice, scheduling, duration, or gain change requires a new grammar version."
   },
   "authority": {

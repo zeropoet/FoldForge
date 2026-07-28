@@ -8,6 +8,7 @@
     "preview": "python3 -m http.server 4173 --directory out",
     "start": "next start",
     "build:language-export": "node scripts/build_language_composition_export.mjs",
+    "build:displacement-map": "node scripts/build-root-logos-displacement-map.mjs",
     "lint": "eslint",
     "test": "vitest run"
   },

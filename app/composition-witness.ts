@@ -1,5 +1,6 @@
 import { composerGrammars, compositionGrammar } from "./composition-grammar";
 import type { VisualSignature } from "./visual-analysis";
+import livingObjectDisplacement from "../public/root-logos-living-object-displacement.json";
 
 export interface WitnessToken {
   contract: string;
@@ -23,6 +24,12 @@ export interface CompositionWitness {
     version: string;
     modality: "image" | "language" | "sound";
   }>;
+  displacementMap: {
+    id: "root-logos-living-object";
+    revision: string;
+    witness: `sha256:${string}`;
+    samples: number;
+  };
   archive: {
     network: "Ethereum mainnet";
     owner: string;
@@ -65,6 +72,12 @@ export async function createCompositionWitness(input: WitnessInput): Promise<Com
       { id: composerGrammars.sound.id, version: composerGrammars.sound.version, modality: "sound" as const },
       { id: composerGrammars.visual.id, version: composerGrammars.visual.version, modality: "image" as const },
     ],
+    displacementMap: {
+      id: "root-logos-living-object" as const,
+      revision: livingObjectDisplacement.source.revision,
+      witness: livingObjectDisplacement.source.witness as `sha256:${string}`,
+      samples: livingObjectDisplacement.samples.length,
+    },
     archive: {
       network: "Ethereum mainnet" as const,
       owner: input.owner.toLowerCase(),
