@@ -2,6 +2,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   canonicalMetadataCandidates,
   hydrateCanonicalMedia,
+  optimizedImageSrcSet,
   tokenThumbnailFor,
   type AlchemyNft,
 } from "./nft-data";
@@ -18,6 +19,15 @@ describe("canonical NFT media", () => {
     };
 
     expect(tokenThumbnailFor(nft)).toBe("https://arweave.net/image-transaction");
+  });
+
+  it("builds ordered, deduplicated responsive thumbnail candidates", () => {
+    const srcSet = optimizedImageSrcSet("ar://image-transaction", [720, 240, 480, 480]);
+
+    expect(srcSet.split(", ")).toHaveLength(3);
+    expect(srcSet).toContain("w=240");
+    expect(srcSet).toContain("w=480");
+    expect(srcSet).toContain("w=720");
   });
 
   it("adds validated recovery routes for numeric Arweave metadata paths", () => {

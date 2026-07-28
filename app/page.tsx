@@ -5,7 +5,7 @@ import { isCollectionAllowed } from "./collection-policy";
 import ComposerChamber, { type ComposerEvidence } from "./composer-chamber";
 import { createCompositionWitness, type CompositionWitness } from "./composition-witness";
 import { resolveOwner } from "./ens";
-import { AlchemyNft, fetchNftMetadata, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, normalizeMediaUrl, optimizedImageUrl, summarizeContracts, tokenImageFor, tokenThumbnailFor } from "./nft-data";
+import { AlchemyNft, fetchNftMetadata, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, normalizeMediaUrl, optimizedImageSrcSet, optimizedImageUrl, summarizeContracts, tokenImageFor, tokenThumbnailFor } from "./nft-data";
 import { analyzePixels, type VisualSignature } from "./visual-analysis";
 
 type LoadState = "idle" | "loading" | "ready" | "error";
@@ -106,8 +106,18 @@ function MediaTile({ token }: { token: AlchemyNft }) {
       />
     );
   }
-  // eslint-disable-next-line @next/next/no-img-element
-  return <img alt="" className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0" decoding="async" loading="lazy" src={optimizedImageUrl(media, { width: 720 })} />;
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      alt=""
+      className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0"
+      decoding="async"
+      loading="lazy"
+      sizes="(min-width: 1600px) 310px, (min-width: 1280px) 20vw, (min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+      src={optimizedImageUrl(media, { width: 720, quality: 82 })}
+      srcSet={optimizedImageSrcSet(media, [240, 360, 480, 720, 960])}
+    />
+  );
 }
 
 export default function FoldForge() {

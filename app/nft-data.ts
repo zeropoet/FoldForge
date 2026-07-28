@@ -158,12 +158,12 @@ export function tokenImageFor(nft: AlchemyNft): string {
 
 export function tokenThumbnailFor(nft: AlchemyNft): string {
   return normalizeMediaUrl(
-    nft.image?.thumbnailUrl ||
     nft.image?.cachedUrl ||
-    nft.image?.pngUrl ||
     nft.image?.originalUrl ||
     nft.raw?.metadata?.image_url ||
     nft.raw?.metadata?.image ||
+    nft.image?.pngUrl ||
+    nft.image?.thumbnailUrl ||
     "",
   );
 }
@@ -191,6 +191,18 @@ export function optimizedImageUrl(
   endpoint.searchParams.set("output", "webp");
   endpoint.searchParams.set("q", String(quality));
   return endpoint.toString();
+}
+
+export function optimizedImageSrcSet(
+  value: string,
+  widths: readonly number[],
+  quality = 82,
+): string {
+  return [...new Set(widths)]
+    .filter((width) => Number.isFinite(width) && width > 0)
+    .sort((left, right) => left - right)
+    .map((width) => `${optimizedImageUrl(value, { width, quality })} ${width}w`)
+    .join(", ");
 }
 
 const responseCache = new Map<string, { expires: number; value: unknown }>();
