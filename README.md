@@ -64,6 +64,21 @@ Small 24px derivatives are used for luminance analysis. Original token media rem
 
 When token-level media is absent, FoldForge displays an unavailable-media state rather than substituting the collection image.
 
+### Automatic archive admission
+
+New holdings require no FoldForge code or grammar update. On each archive
+observation, FoldForge discovers current holdings through Alchemy, accepts
+processed or raw token-level media, and retrieves canonical metadata when the
+provider has not finished indexing an image. Numeric Arweave routes and IPFS
+metadata receive bounded alternate-gateway retries, and recovered metadata must
+match the minted work before its image can enter visual analysis, the evidence
+witness, or the sound composition.
+
+This process cannot reconstruct media that was never published or repair an
+on-chain token URI whose canonical and alternate routes contain no matching
+metadata. Such a work remains visibly unavailable rather than borrowing another
+token's or collection's image.
+
 ## Constitutional grammar
 
 FoldForge's living scaffold is defined in:

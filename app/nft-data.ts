@@ -147,8 +147,11 @@ export function tokenImageFor(nft: AlchemyNft): string {
     nft.image?.thumbnailUrl ||
     nft.image?.pngUrl ||
     nft.image?.originalUrl ||
+    nft.raw?.metadata?.image_url ||
+    nft.raw?.metadata?.image ||
     nft.animation?.cachedUrl ||
     nft.animation?.originalUrl ||
+    nft.raw?.metadata?.animation_url ||
     ""
   );
 }
@@ -159,6 +162,8 @@ export function tokenThumbnailFor(nft: AlchemyNft): string {
     nft.image?.cachedUrl ||
     nft.image?.pngUrl ||
     nft.image?.originalUrl ||
+    nft.raw?.metadata?.image_url ||
+    nft.raw?.metadata?.image ||
     "",
   );
 }
@@ -214,44 +219,69 @@ async function providerFetch<T>(endpoint: URL, signal?: AbortSignal): Promise<T>
   return response.json() as Promise<T>;
 }
 
-async function hydrateCanonicalMedia(nft: AlchemyNft, signal?: AbortSignal): Promise<AlchemyNft> {
+export function canonicalMetadataCandidates(tokenUri: string): string[] {
+  const metadataUrl = normalizeMediaUrl(tokenUri);
+  if (!/^https?:\/\//i.test(metadataUrl)) return [];
+
+  const candidates = [metadataUrl];
+  if (/^https:\/\/(?:[^/]+\.)?arweave\.net\/.+\/\d+$/i.test(metadataUrl)) {
+    candidates.push(`${metadataUrl}.json`);
+  }
+  if (metadataUrl.startsWith("https://ipfs.io/ipfs/")) {
+    candidates.push(metadataUrl.replace("https://ipfs.io/ipfs/", "https://cloudflare-ipfs.com/ipfs/"));
+  }
+  return candidates;
+}
+
+function sameMetadataIdentity(metadataName: string | null | undefined, tokenName: string | undefined): boolean {
+  if (!metadataName || !tokenName) return true;
+  return metadataName.trim().toLocaleLowerCase() === tokenName.trim().toLocaleLowerCase();
+}
+
+export async function hydrateCanonicalMedia(nft: AlchemyNft, signal?: AbortSignal): Promise<AlchemyNft> {
   if (tokenImageFor(nft) || !nft.tokenUri) return nft;
 
-  const metadataUrl = normalizeMediaUrl(nft.tokenUri);
-  if (!/^https?:\/\//i.test(metadataUrl)) return nft;
+  const candidates = canonicalMetadataCandidates(nft.tokenUri);
 
-  try {
-    const response = await fetch(metadataUrl, {
-      headers: { accept: "application/json" },
-      signal,
-    });
-    if (!response.ok) return nft;
+  for (const candidate of candidates) {
+    try {
+      const response = await fetch(candidate, {
+        headers: { accept: "application/json" },
+        signal,
+      });
+      if (!response.ok) continue;
 
-    const metadata = (await response.json()) as {
-      image?: string | null;
-      image_url?: string | null;
-      animation_url?: string | null;
-      attributes?: Array<{ trait_type?: string; value?: string | number }>;
-    };
-    const image = normalizeMediaUrl(metadata.image_url || metadata.image);
-    const animation = normalizeMediaUrl(metadata.animation_url);
+      const metadata = (await response.json()) as {
+        name?: string | null;
+        image?: string | null;
+        image_url?: string | null;
+        animation_url?: string | null;
+        attributes?: Array<{ trait_type?: string; value?: string | number }>;
+      };
+      if (!sameMetadataIdentity(metadata.name, nft.name)) continue;
 
-    return {
-      ...nft,
-      image: image ? { ...nft.image, originalUrl: image } : nft.image,
-      animation: animation ? { ...nft.animation, originalUrl: animation } : nft.animation,
-      raw: {
-        ...nft.raw,
-        metadata: {
-          ...nft.raw?.metadata,
-          ...metadata,
+      const image = normalizeMediaUrl(metadata.image_url || metadata.image);
+      const animation = normalizeMediaUrl(metadata.animation_url);
+      if (!image && !animation) continue;
+
+      return {
+        ...nft,
+        image: image ? { ...nft.image, originalUrl: image } : nft.image,
+        animation: animation ? { ...nft.animation, originalUrl: animation } : nft.animation,
+        raw: {
+          ...nft.raw,
+          metadata: {
+            ...nft.raw?.metadata,
+            ...metadata,
+          },
         },
-      },
-    };
-  } catch (error) {
-    if (error instanceof DOMException && error.name === "AbortError") throw error;
-    return nft;
+      };
+    } catch (error) {
+      if (error instanceof DOMException && error.name === "AbortError") throw error;
+    }
   }
+
+  return nft;
 }
 
 function contractImageFor(contract: AlchemyContract): string {
