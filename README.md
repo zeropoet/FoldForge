@@ -69,6 +69,7 @@ When token-level media is absent, FoldForge displays an unavailable-media state 
 FoldForge's living scaffold is defined in:
 
 - `constitution/foldforge-constitution.json` — identity, higher reference, primitives, authority, modalities, and release standard
+- `constitution/foldforge-instrument-completion.json` — the declared completion boundary for the FoldForge instrument
 - `grammar/composition.schema.json` — validation contract for composition grammars
 - `grammar/composition-001-luminance.json` — canonical Composition I mapping and lineage requirements
 - `grammar/composition-002-lexical.json` — recurring language derived from collection, token, and description evidence
@@ -78,6 +79,20 @@ FoldForge's living scaffold is defined in:
 - `docs/constitutional-architecture.md` — evidence → grammar → composition architecture and revision boundary
 
 Root Logos provides constitutional orientation, not a shared runtime or identity. Ethereum evidence remains prior to every FoldForge interpretation. A holdings change creates a new composition state; a change to measurement, ordering, interpretation, or presentation requires a new grammar version.
+
+### Instrument completion
+
+The FoldForge instrument is declared complete in `FF-MILESTONE-0001` at
+Resonant Holdings `9.0.0`. Its one voice, eight arrangements, six phases,
+evidence mappings, visual relations, signed displacement, memory, motifs,
+consent, silence, and witness model constitute the completed form.
+
+Completion is a living boundary, not a frozen recording. Ethereum holdings,
+canonical media, archive memory, witnessed displacement, and state-derived
+performance continue to change what the instrument sounds. New mechanisms do
+not enter through ordinary feature development. Reopening the grammar requires
+an evidenced failure or exceptional necessity, a new major version, preserved
+rollback, and explicit review of the completion declaration.
 
 The Composer Chamber gives the same holdings three governed expressions: Luminance Field, Lexical Field, and Resonant Holdings. Language is extracted from recurring source terms. Sound speaks through one synthesized FoldForge voice while independently mapping luminance to register and filtering, contract identity to harmonic character, token identity to rhythm, metadata density to envelope, and collection identity to a restrained stereo position. It never autoplays.
 

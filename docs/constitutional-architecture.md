@@ -34,10 +34,11 @@ Every resolved composition state produces a Composition Witness. The witness rec
 - Ethereum network, archive identity, and resolved owner address;
 - included contract addresses;
 - token contract, token ID, canonical media URL, and measured luminance;
+- full visual signatures and the current Root Logos displacement-map witness;
 - a deterministic SHA-256 state hash;
 - the time at which the state was observed.
 
-The hash excludes observation time. The same evidence under the same grammar therefore produces the same state hash. A holding, media, luminance, contract-policy, or grammar change produces a different hash.
+The hash excludes observation time. The same evidence under the same grammar therefore produces the same state hash. A holding, media, visual signature, displacement witness, contract-policy, or grammar change produces a different hash.
 
 Witnesses validate against `grammar/composition-witness.schema.json`. The browser preserves up to 24 distinct witnessed states per owner and permits the current witness to be exported as JSON. Local history is a convenience record, not canonical Ethereum evidence.
 
@@ -57,15 +58,23 @@ The composition therefore uses no arbitrary scale hierarchy. Missing media remai
 
 ## Composition III
 
-`FF-COMP-0003` is Resonant Holdings. Each work speaks through one FoldForge voice. Luminance determines register and spectral filtering; contract identity shapes harmonic character; token identity supplies pulse and movement; metadata density supplies envelope; collection identity supplies restrained spatial position.
+`FF-COMP-0003` is Resonant Holdings. Each work speaks through one FoldForge voice. Luminance determines register and the native spectral baseline; contract identity shapes harmonic character; token identity supplies pulse and movement; metadata density supplies envelope; collection identity supplies restrained spatial position.
+
+Composition IV supplies measured visual relations to the sound grammar.
+Continuity selects the nearest remaining visual signature; Counterpoint selects
+the most distant. A witnessed Root Logos Living Object displacement field then
+deforms the native FoldForge voice around its baseline. Signed radial,
+density, centroid, motion, and energy deviations affect timbre, duration,
+space, and pulse without replacing evidence-derived pitch or importing the
+Living Object renderer and sovereign voice.
 
 The archive conducts these fixed work-level mappings through a six-phase autonomous macroform:
 
 1. Ground establishes the tonal center from luminance ascent.
-2. Fold brings dark and light extremes into alternating relation.
+2. Fold brings dark and light extremes into alternating relation while visual continuity proceeds.
 3. Recurrence layers collection and contract memory according to archive diversity.
-4. Fracture opens two or three paths according to luminance contrast.
-5. Convergence brings ascent and lineage into shared time.
+4. Fracture opens two or three paths through visual counterpoint according to luminance contrast.
+5. Convergence brings visual continuity, ascent, and lineage into shared time.
 6. Silence retains a state-derived interval before the cycle reforms.
 
 The listener may begin or silence the witness. Phase selection, event budgets, arrangement layering, and rest duration are derived from the current evidence and state hash, not manually controlled.
@@ -87,3 +96,16 @@ Motifs remain tied to source works and do not consume the phase event budget.
 A change in holdings creates a new composition state under the existing grammar. A change in measurement, ordering, interpretation, or presentation logic requires a new grammar version.
 
 Future image, sound, video, language, or sequence grammars should begin as proposals. They become living only after their source fidelity, mappings, authority boundaries, reproducibility, accessibility, and rollback path are reviewed.
+
+## Instrument completion
+
+`FF-MILESTONE-0001` declares the FoldForge instrument complete at Resonant
+Holdings `9.0.0`. Completion does not freeze its performances: holdings,
+canonical media, visual signatures, archive memory, state-derived form, and
+the witnessed Root Logos displacement field continue to produce new states.
+
+Completion closes mechanism accumulation. Additional voices, phases,
+arrangements, mappings, or listener controls are not ordinary evolution.
+Reopening the instrument requires an evidenced failure or exceptional
+necessity, a new major grammar version, preserved rollback, and explicit human
+review of the completion boundary.

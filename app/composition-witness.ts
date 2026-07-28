@@ -18,6 +18,7 @@ export interface CompositionWitness {
     id: string;
     version: string;
     constitutionRevision: "v0.1";
+    completionMilestone: "FF-MILESTONE-0001";
   };
   expressions: Array<{
     id: string;
@@ -65,6 +66,7 @@ export async function createCompositionWitness(input: WitnessInput): Promise<Com
       id: compositionGrammar.id,
       version: compositionGrammar.version,
       constitutionRevision: "v0.1" as const,
+      completionMilestone: "FF-MILESTONE-0001" as const,
     },
     expressions: [
       { id: compositionGrammar.id, version: compositionGrammar.version, modality: "image" as const },

@@ -1,0 +1,63 @@
+{
+  "schema": "foldforge-instrument-completion/v1",
+  "id": "FF-MILESTONE-0001",
+  "declaredAt": "2026-07-28",
+  "title": "The Instrument Is Complete",
+  "status": "declared",
+  "constitutionRevision": "v0.1",
+  "instrument": {
+    "name": "FoldForge",
+    "grammar": {
+      "id": "FF-COMP-0003",
+      "version": "9.0.0"
+    },
+    "identity": "One unified FoldForge voice conducting eight deterministic arrangements through six autonomous phases.",
+    "completedForm": [
+      "one sine-and-triangle FoldForge voice",
+      "eight deterministic arrangements",
+      "six autonomous phases",
+      "visual relations governing continuity and counterpoint",
+      "archive evidence governing pitch, rhythm, spectrum, envelope, and space",
+      "a witnessed Root Logos Living Object displacement field deforming the native voice around its baseline",
+      "archive memory and recurring motifs",
+      "listener consent and constitutive silence",
+      "deterministic, exportable composition witnesses"
+    ],
+    "witnessRule": "Every composition witness names FF-MILESTONE-0001 so evidence-driven state change remains explicitly bounded by the completed instrument."
+  },
+  "livingBoundary": {
+    "continuesThrough": [
+      "changes in Ethereum holdings",
+      "changes in canonical token metadata or media",
+      "new visual-signature measurements produced by existing grammar",
+      "archive memory formed by distinct witnessed states",
+      "monthly witnessed renewal of the Root Logos displacement field",
+      "state-hash-derived phase proportions, arrangements, motifs, and rest"
+    ],
+    "doesNotReopenFor": [
+      "novelty",
+      "feature accumulation",
+      "decorative interface expansion",
+      "stylistic preference alone",
+      "the availability of new data without a coherent evidenced relation",
+      "a desire for additional instruments, voices, phases, or listener controls"
+    ]
+  },
+  "exceptionalRevision": {
+    "permittedWhen": [
+      "source fidelity is demonstrably broken",
+      "reproducibility or witness integrity fails",
+      "listener safety, accessibility, or platform compatibility requires repair",
+      "a canonical evidence-format change prevents the completed instrument from functioning",
+      "versioned constitutional review establishes a necessity stronger than completion"
+    ],
+    "requirements": [
+      "state the failure or necessity",
+      "preserve the prior grammar and rollback path",
+      "publish a new major grammar version",
+      "update this completion milestone through explicit human review",
+      "demonstrate that the revision restores or deepens the completed identity rather than accumulating features"
+    ]
+  },
+  "declaration": "FoldForge now evolves through evidence, archive change, witnessed displacement, and performance. Its instrument does not evolve through the accumulation of new mechanisms."
+}
