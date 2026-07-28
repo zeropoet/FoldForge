@@ -83,7 +83,7 @@ Root Logos provides constitutional orientation, not a shared runtime or identity
 ### Instrument completion
 
 The FoldForge instrument is declared complete in `FF-MILESTONE-0001` at
-Resonant Holdings `9.0.0`. Its one voice, eight arrangements, six phases,
+Resonant Holdings `10.0.0`. Its one voice, nine arrangements, six phases,
 evidence mappings, visual relations, signed displacement, memory, motifs,
 consent, silence, and witness model constitute the completed form.
 
@@ -94,7 +94,7 @@ not enter through ordinary feature development. Reopening the grammar requires
 an evidenced failure or exceptional necessity, a new major version, preserved
 rollback, and explicit review of the completion declaration.
 
-The Composer Chamber gives the same holdings three governed expressions: Luminance Field, Lexical Field, and Resonant Holdings. Language is extracted from recurring source terms. Sound speaks through one synthesized FoldForge voice while independently mapping luminance to register and filtering, contract identity to harmonic character, token identity to rhythm, metadata density to envelope, and collection identity to a restrained stereo position. It never autoplays.
+The Composer Chamber gives the same holdings four governed compositions: Luminance Field, Lexical Field, Resonant Holdings, and Visual Relations. Language is extracted from recurring source terms and directly conducts its attributable works during Recurrence. Sound speaks through one synthesized FoldForge voice while independently mapping luminance to register and filtering, lexical and visual relations to event order, contract identity to harmonic character, token identity to rhythm, metadata density to envelope, and collection identity to a restrained stereo position. It never autoplays.
 
 Resonant Holdings also traverses a witnessed, 64-step root-to-crown displacement
 field derived from the current Root Logos Living Object geometry. The map does
@@ -114,7 +114,7 @@ That focused commit triggers the normal Pages deployment. The workflow reuses
 `ROOT_LOGOS_DISPATCH_TOKEN` for read-only checkout of Root Logos and the
 workflow-scoped `GITHUB_TOKEN` for its FoldForge commit.
 
-Resonant Holdings can traverse those fixed work-to-note relationships through eight deterministic arrangements: luminance ascent, luminance descent, recursive fold, visual continuity, visual counterpoint, collection bodies, contract/token lineage, and a witness-seeded scatter. These arrangements are no longer listener-controlled. The archive derives its own six-part macroform—Ground, Fold, Recurrence, Fracture, Convergence, and Silence—from its witness hash, visual-signature distribution, contrast, collection count, and collection diversity.
+Resonant Holdings can traverse those fixed work-to-note relationships through nine deterministic arrangements: luminance ascent, luminance descent, recursive fold, visual continuity, visual counterpoint, lexical recurrence, collection bodies, contract/token lineage, and a witness-seeded scatter. These arrangements are no longer listener-controlled. The archive derives its own six-part macroform—Ground, Fold, Recurrence, Fracture, Convergence, and Silence—from its witness hash, visual-signature distribution, contrast, collection count, and collection diversity.
 
 The listener can only begin (`Witness`) or end (`Silence`) the performance. Within the cycle, FoldForge selects one to three arrangement layers, assigns a state-derived event budget, advances every layer independently, normalizes their combined gain, enters a state-derived rest, and reforms. A holdings change produces a new witness hash and therefore a newly proportioned evolution without changing any individual work's evidence-derived sonic identity.
 

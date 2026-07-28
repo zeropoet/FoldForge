@@ -1,7 +1,7 @@
 {
   "schema": "foldforge-composition/v1",
   "id": "FF-COMP-0003",
-  "version": "9.0.0",
+  "version": "10.0.0",
   "status": "living",
   "title": "Resonant Holdings",
   "constitutionRevision": "v0.1",
@@ -73,12 +73,18 @@
     },
     {
       "order": 10,
+      "operation": "conduct lexical recurrence",
+      "input": "ranked Lexical Field terms and their attributable source-work identities",
+      "output": "a deterministic round-robin source sequence preserving term rank and including every audible work once before fallback order"
+    },
+    {
+      "order": 11,
       "operation": "apply constitutional displacement",
       "input": "a witnessed 64-step root-to-crown displacement field derived from deviations within the current Root Logos Living Object geometry",
       "output": "signed radial deviation displaces filter and duration around the FoldForge baseline, density deviation displaces harmonic intensity, centroid offset and radial motion displace stereo pressure, and signed geometric energy displaces pulse"
     },
     {
-      "order": 11,
+      "order": 12,
       "operation": "compose",
       "input": "ordered audible events",
       "output": "autonomously selected, memory-bearing, motif-recurring, gain-normalized arrangement layers through one compressed unified voice with restrained recursive delay"
@@ -86,7 +92,7 @@
   ],
   "presentation": {
     "title": "Sound composition",
-    "interfaceStatement": "One voice / work as pitch / visual relation as sequence / Living Object as signed displacement",
+    "interfaceStatement": "One voice / luminance as pitch / language and visual relation as sequence / Living Object as signed displacement",
     "consent": "Sound never autoplays and begins only through explicit listener action.",
     "maximumGain": 0.08,
     "instrumentFamilies": ["Fold voice: sine fundamental, triangle harmonic, slow frequency movement"],
@@ -98,7 +104,7 @@
     "cycle": ["ground", "fold", "recurrence", "fracture", "convergence", "silence"],
     "ground": "Luminance ascent establishes the tonal center.",
     "fold": "Dark and light extremes answer inward while nearest visual relations continue.",
-    "recurrence": "Collection and contract relations form one or two simultaneous motifs according to archive diversity.",
+    "recurrence": "Recurring source language directly conducts its attributable works alongside collection and contract relations.",
     "fracture": "Luminance contrast determines whether two or three independent arrangements open the field through strongest visual difference.",
     "convergence": "Visual continuity, ascent, and lineage seek a shared center without changing their individual order.",
     "silence": "A state-derived rest preserves absence before the cycle reforms.",
@@ -147,6 +153,10 @@
       "rule": "each work calls the most distant remaining visual signature"
     },
     {
+      "id": "lexical",
+      "rule": "round-robin the attributable source works of the strongest recurring Lexical Field terms, preserving term rank and deterministic source identity"
+    },
+    {
       "id": "collections",
       "rule": "group by collection name, then order each body by luminance and token identity"
     },
@@ -160,7 +170,7 @@
     }
   ],
   "lineage": {
-    "capture": ["composition ID", "grammar version", "state hash", "prior state hash", "Root Logos displacement-map witness", "displacement position", "radial displacement", "density displacement", "centroid displacement", "radial motion", "energy displacement", "archive memory delta", "recognized motifs", "evolution phase", "active arrangement IDs", "phase event budget", "token identity", "luminance", "frequency", "instrument", "pulse", "envelope", "pan", "filter", "event order"],
+    "capture": ["composition ID", "grammar version", "state hash", "prior state hash", "Root Logos displacement-map witness", "displacement position", "radial displacement", "density displacement", "centroid displacement", "radial motion", "energy displacement", "Lexical Field term rank", "attributable lexical source order", "archive memory delta", "recognized motifs", "evolution phase", "active arrangement IDs", "phase event budget", "token identity", "luminance", "frequency", "instrument", "pulse", "envelope", "pan", "filter", "event order"],
     "revisionTrigger": "A memory rule, motif rule, evolutionary phase, phase transition, arrangement, layering, pitch, voice, scheduling, duration, or gain change requires a new grammar version."
   },
   "authority": {

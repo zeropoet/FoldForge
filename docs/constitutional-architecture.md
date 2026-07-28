@@ -68,11 +68,18 @@ density, centroid, motion, and energy deviations affect timbre, duration,
 space, and pulse without replacing evidence-derived pitch or importing the
 Living Object renderer and sovereign voice.
 
+Composition II also participates directly in sound. During Recurrence, the
+strongest Lexical Field terms conduct their attributable source works in
+round-robin term rank. This is an arrangement of the existing voice, not a
+second language instrument: lexical evidence determines event order while each
+work retains its established pitch, pulse, envelope, spectrum, and spatial
+identity.
+
 The archive conducts these fixed work-level mappings through a six-phase autonomous macroform:
 
 1. Ground establishes the tonal center from luminance ascent.
 2. Fold brings dark and light extremes into alternating relation while visual continuity proceeds.
-3. Recurrence layers collection and contract memory according to archive diversity.
+3. Recurrence layers lexical, collection, and contract memory according to archive diversity.
 4. Fracture opens two or three paths through visual counterpoint according to luminance contrast.
 5. Convergence brings visual continuity, ascent, and lineage into shared time.
 6. Silence retains a state-derived interval before the cycle reforms.
@@ -100,7 +107,7 @@ Future image, sound, video, language, or sequence grammars should begin as propo
 ## Instrument completion
 
 `FF-MILESTONE-0001` declares the FoldForge instrument complete at Resonant
-Holdings `9.0.0`. Completion does not freeze its performances: holdings,
+Holdings `10.0.0`. Completion does not freeze its performances: holdings,
 canonical media, visual signatures, archive memory, state-derived form, and
 the witnessed Root Logos displacement field continue to produce new states.
 
@@ -109,3 +116,9 @@ arrangements, mappings, or listener controls are not ordinary evolution.
 Reopening the instrument requires an evidenced failure or exceptional
 necessity, a new major grammar version, preserved rollback, and explicit human
 review of the completion boundary.
+
+The milestone records one explicit amendment from `9.0.0` to `10.0.0`.
+Lexical Field had been named as a governed expression but was not directly
+sounded. Version `10.0.0` resolves that incompleteness by adding lexical
+source ordering to Recurrence through the existing unified voice. It adds no
+instrument, phase, or listener control.

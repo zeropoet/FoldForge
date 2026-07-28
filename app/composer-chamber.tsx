@@ -36,7 +36,7 @@ interface SoundProfile {
   radialDisplacement: number;
 }
 
-type ArrangementMode = "ascent" | "descent" | "fold" | "continuity" | "counterpoint" | "collections" | "lineage" | "scatter";
+type ArrangementMode = "ascent" | "descent" | "fold" | "continuity" | "counterpoint" | "lexical" | "collections" | "lineage" | "scatter";
 type EvolutionPhaseId = "ground" | "fold" | "recurrence" | "fracture" | "convergence" | "silence";
 
 interface EvolutionPhase {
@@ -70,6 +70,7 @@ const arrangementModes: Array<{
   { id: "fold", label: "Fold", description: "Outer values → center" },
   { id: "continuity", label: "Continuity", description: "Nearest visual answer" },
   { id: "counterpoint", label: "Counterpoint", description: "Strongest visual difference" },
+  { id: "lexical", label: "Lexical", description: "Recurring language → source works" },
   { id: "collections", label: "Bodies", description: "Collection blocks" },
   { id: "lineage", label: "Lineage", description: "Contract → token" },
   { id: "scatter", label: "Scatter", description: "Witness-seeded field" },
@@ -147,6 +148,23 @@ function arrangeEvidence(
   if (mode === "continuity" || mode === "counterpoint") {
     return composeVisualSequence(ordered, mode);
   }
+  if (mode === "lexical") {
+    const byKey = new Map(ordered.map((token) => [token.key, token]));
+    const terms = lexicalField(ordered);
+    const sequence: ComposerEvidence[] = [];
+    const included = new Set<string>();
+    const maximumSources = Math.max(0, ...terms.map((term) => term.sources.length));
+    for (let sourceIndex = 0; sourceIndex < maximumSources; sourceIndex += 1) {
+      for (const term of terms) {
+        const key = term.sources[sourceIndex];
+        const token = key ? byKey.get(key) : undefined;
+        if (!token || included.has(token.key)) continue;
+        included.add(token.key);
+        sequence.push(token);
+      }
+    }
+    return [...sequence, ...ordered.filter((token) => !included.has(token.key))];
+  }
   if (mode === "collections") {
     return ordered.sort((left, right) =>
       left.collection.localeCompare(right.collection) ||
@@ -198,8 +216,10 @@ function deriveEvolution(evidence: ComposerEvidence[], stateHash: string): Evolu
     {
       id: "recurrence",
       label: "Recurrence",
-      description: `${collectionCount} collection bodies remember`,
-      arrangements: diversity > 0.5 ? ["collections", "lineage"] : ["collections"],
+      description: `Recurring language conducts ${collectionCount} collection bodies`,
+      arrangements: diversity > 0.5
+        ? ["lexical", "collections", "lineage"]
+        : ["lexical", "collections"],
       events: span(30, 17, 8),
     },
     {
