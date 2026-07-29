@@ -100,6 +100,10 @@ const canonicalMetadataContracts = new Set([
   "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
 ]);
 
+function requiresCanonicalMetadata(nft: AlchemyNft): boolean {
+  return canonicalMetadataContracts.has(nft.contract?.address?.toLowerCase() || "");
+}
+
 function decodeAbiString(value: string): string {
   const bytes = Uint8Array.from(value.slice(2).match(/.{1,2}/g) || [], (byte) => Number.parseInt(byte, 16));
   if (bytes.length < 64) return "";
@@ -181,6 +185,15 @@ export function imageFor(nft: AlchemyNft): string {
 }
 
 export function tokenImageFor(nft: AlchemyNft): string {
+  if (requiresCanonicalMetadata(nft)) {
+    return (
+      nft.image?.originalUrl ||
+      nft.raw?.metadata?.image_url ||
+      nft.raw?.metadata?.image ||
+      nft.animation?.originalUrl ||
+      ""
+    );
+  }
   return (
     nft.image?.cachedUrl ||
     nft.image?.thumbnailUrl ||
@@ -196,6 +209,14 @@ export function tokenImageFor(nft: AlchemyNft): string {
 }
 
 export function tokenThumbnailFor(nft: AlchemyNft): string {
+  if (requiresCanonicalMetadata(nft)) {
+    return normalizeMediaUrl(
+      nft.image?.originalUrl ||
+      nft.raw?.metadata?.image_url ||
+      nft.raw?.metadata?.image ||
+      "",
+    );
+  }
   return normalizeMediaUrl(
     nft.image?.cachedUrl ||
     nft.image?.originalUrl ||
@@ -318,8 +339,7 @@ export async function hydrateCanonicalMedia(
   signal?: AbortSignal,
   preferCanonical = false,
 ): Promise<AlchemyNft> {
-  const contractRequiresCurrentChainState = preferCanonical
-    && canonicalMetadataContracts.has(nft.contract?.address?.toLowerCase() || "");
+  const contractRequiresCurrentChainState = preferCanonical && requiresCanonicalMetadata(nft);
   if (
     !contractRequiresCurrentChainState
     && ((tokenImageFor(nft) && (!preferCanonical || hasDecentralizedOriginal(nft))) || !nft.tokenUri)
@@ -355,10 +375,18 @@ export async function hydrateCanonicalMedia(
       return {
         ...nft,
         tokenUri,
-        name: isPlaceholderTokenName(nft.name, nft.tokenId) && metadata.name ? metadata.name : nft.name,
-        description: nft.description || metadata.description || "",
-        image: image ? { ...nft.image, originalUrl: image } : nft.image,
-        animation: animation ? { ...nft.animation, originalUrl: animation } : nft.animation,
+        name: contractRequiresCurrentChainState
+          ? metadata.name || nft.name
+          : isPlaceholderTokenName(nft.name, nft.tokenId) && metadata.name ? metadata.name : nft.name,
+        description: contractRequiresCurrentChainState
+          ? metadata.description || ""
+          : nft.description || metadata.description || "",
+        image: image
+          ? contractRequiresCurrentChainState ? { originalUrl: image } : { ...nft.image, originalUrl: image }
+          : nft.image,
+        animation: animation
+          ? contractRequiresCurrentChainState ? { originalUrl: animation } : { ...nft.animation, originalUrl: animation }
+          : nft.animation,
         raw: {
           ...nft.raw,
           metadata: {
