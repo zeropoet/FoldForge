@@ -212,3 +212,11 @@ The Next.js configuration publishes from the domain root when `CUSTOM_DOMAIN` is
 FoldForge uses Next.js static export and performs Alchemy, ENS, image-derivative, visual-signature analysis, witness generation, displacement sampling, and Web Audio composition directly in the browser. It has no application server, database, account system, or cross-device preference synchronization.
 
 Alchemy provides owner, contract, token, and cached metadata. `app/collection-policy.ts` applies repository-owned exclusions. `app/nft-data.ts` normalizes provider media and constructs responsive derivative URLs. `app/page.tsx` resolves the archive and computes or restores visual signatures. `app/composition-witness.ts` seals archive evidence with the current displacement-map witness, while `app/composer-chamber.tsx` derives the lexical field, autonomous six-phase macroform, visual-relation arrangements, displacement field, and unified FoldForge voice.
+
+The FOLD FORGE contract
+`0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc` is tokenURI-first. FoldForge
+reads each held token’s exact on-chain metadata document before accepting
+provider or marketplace derivatives, and the Root Logos language export
+hydrates unresolved records by the same rule. Duplicate witnesses and absent
+works remain visible as contract evidence; the archive does not silently
+deduplicate or invent membership.

@@ -9,6 +9,7 @@ const apiKey = process.env.ALCHEMY_API_KEY || process.env.NEXT_PUBLIC_ALCHEMY_AP
 const owner = "zeropoet.eth";
 const address = "0xBd4B3a05C6A585F226aFB1952ceDd8c410C52E8F";
 const denylist = new Set(["0x1066d77f2b0ffe7a667e95ebc442866088ab1248"]);
+const canonicalMetadataContracts = new Set(["0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc"]);
 const stopWords = new Set([
   "a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "from", "in",
   "into", "is", "it", "not", "of", "on", "or", "that", "the", "this", "to",
@@ -25,6 +26,36 @@ const stable = (value) => {
   return value;
 };
 const digest = (value) => createHash("sha256").update(JSON.stringify(stable(value))).digest("hex");
+const normalizeMediaUrl = (value = "") => String(value)
+  .replace(/^ar:\/\//i, "https://arweave.net/")
+  .replace(/^ipfs:\/\//i, "https://ipfs.io/ipfs/");
+const placeholderName = (name, tokenId) => {
+  const normalized = String(name || "").trim().toLocaleLowerCase();
+  const id = String(tokenId || "").trim().toLocaleLowerCase();
+  return !normalized || normalized === `#${id}` || normalized === `token ${id}` || normalized === `token #${id}`;
+};
+const hydrateCanonicalEvidence = async (token) => {
+  const contract = token.contract?.address?.toLowerCase() || "";
+  if (!canonicalMetadataContracts.has(contract) || !token.tokenUri) return token;
+  const url = normalizeMediaUrl(token.tokenUri);
+  if (!/^https?:\/\//i.test(url)) return token;
+  try {
+    const response = await fetch(url, { headers: { accept: "application/json" } });
+    if (!response.ok) return token;
+    const metadata = await response.json();
+    return {
+      ...token,
+      name: metadata.name || token.name,
+      description: metadata.description || token.description || "",
+      image: metadata.image || metadata.image_url
+        ? { ...token.image, originalUrl: normalizeMediaUrl(metadata.image_url || metadata.image) }
+        : token.image,
+      raw: { ...token.raw, metadata: { ...token.raw?.metadata, ...metadata } }
+    };
+  } catch {
+    return token;
+  }
+};
 
 const endpoint = new URL(`https://eth-mainnet.g.alchemy.com/nft/v3/${apiKey}/getNFTsForOwner`);
 endpoint.searchParams.set("owner", address);
@@ -42,10 +73,16 @@ do {
   pageKey = payload.pageKey;
 } while (pageKey && tokens.length < 600);
 
-const visible = tokens.filter((token) => {
+const visibleRaw = tokens.filter((token) => {
   const contract = token.contract?.address?.toLowerCase();
   return contract && !denylist.has(contract);
 });
+const visible = await Promise.all(visibleRaw.map((token) =>
+  canonicalMetadataContracts.has(token.contract?.address?.toLowerCase() || "")
+    && (placeholderName(token.name, token.tokenId) || !token.raw?.metadata?.image)
+    ? hydrateCanonicalEvidence(token)
+    : token
+));
 const terms = new Map();
 for (const token of visible) {
   const contract = token.contract?.address?.toLowerCase() || "unknown";

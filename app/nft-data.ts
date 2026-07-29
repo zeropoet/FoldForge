@@ -96,6 +96,9 @@ export interface TokenSummary {
 }
 
 export const addressPattern = /^0x[a-fA-F0-9]{40}$/;
+const canonicalMetadataContracts = new Set([
+  "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
+]);
 
 export const supportedNetworks = new Map([
   ["eth-mainnet", "Ethereum"],
@@ -283,7 +286,7 @@ export async function hydrateCanonicalMedia(
 
   const candidates = canonicalMetadataCandidates(nft.tokenUri);
 
-  for (const candidate of candidates) {
+  for (const [candidateIndex, candidate] of candidates.entries()) {
     try {
       const response = await fetch(candidate, {
         headers: { accept: "application/json" },
@@ -299,7 +302,9 @@ export async function hydrateCanonicalMedia(
         animation_url?: string | null;
         attributes?: Array<{ trait_type?: string; value?: string | number }>;
       };
-      if (!sameMetadataIdentity(metadata.name, nft.name, nft.tokenId)) continue;
+      // The exact on-chain tokenURI is primary evidence. Identity matching is
+      // required only for inferred alternate-gateway candidates.
+      if (candidateIndex > 0 && !sameMetadataIdentity(metadata.name, nft.name, nft.tokenId)) continue;
 
       const image = normalizeMediaUrl(metadata.image_url || metadata.image);
       const animation = normalizeMediaUrl(metadata.animation_url);
@@ -624,7 +629,11 @@ export async function fetchOwnedNfts({
     }
 
     const payload = await providerFetch<{ ownedNfts?: AlchemyNft[]; pageKey?: string }>(endpoint, signal);
-    const page = await Promise.all((payload.ownedNfts || []).map((nft) => hydrateCanonicalMedia(nft, signal)));
+    const page = await Promise.all((payload.ownedNfts || []).map((nft) => hydrateCanonicalMedia(
+      nft,
+      signal,
+      canonicalMetadataContracts.has(nft.contract?.address?.toLowerCase() || ""),
+    )));
     nfts.push(...page);
     onPage?.([...nfts]);
     pageKey = payload.pageKey;

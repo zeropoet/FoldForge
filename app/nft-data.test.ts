@@ -101,4 +101,20 @@ describe("canonical NFT media", () => {
 
     expect(hydrated).toEqual(nft);
   });
+
+  it("treats the exact on-chain tokenURI as primary when provider identity is stale", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValueOnce(new Response(JSON.stringify({
+      name: "09-the-tempest",
+      image: "ar://tempest-image",
+    }), { status: 200 }));
+
+    const hydrated = await hydrateCanonicalMedia({
+      tokenId: "10",
+      name: "#10",
+      tokenUri: "https://arweave.net/manifest/2",
+    }, undefined, true);
+
+    expect(hydrated.name).toBe("09-the-tempest");
+    expect(hydrated.image?.originalUrl).toBe("https://arweave.net/tempest-image");
+  });
 });

@@ -11,8 +11,8 @@
   "archive": {
     "owner": "zeropoet.eth",
     "address": "0xbd4b3a05c6a585f226afb1952cedd8c410c52e8f",
-    "source_works": 241,
-    "state_witness": "sha256:5406959f49fe4ccaf7c26033ce8a900f9b3d63296c1d892fa0f1a6728aecaa40"
+    "source_works": 259,
+    "state_witness": "sha256:d4ebaa3047eb832b9ed84b7df35b2ade585561b0b886cd2c506eb9ae56689cc0"
   },
   "terms": [
     {
@@ -24,8 +24,8 @@
     {
       "rank": 2,
       "term": "rwl",
-      "works": 43,
-      "traces": 43
+      "works": 47,
+      "traces": 47
     },
     {
       "rank": 3,
@@ -59,36 +59,36 @@
     },
     {
       "rank": 8,
-      "term": "silence",
+      "term": "forge",
       "works": 16,
       "traces": 16
     },
     {
       "rank": 9,
+      "term": "silence",
+      "works": 16,
+      "traces": 16
+    },
+    {
+      "rank": 10,
+      "term": "fold",
+      "works": 15,
+      "traces": 15
+    },
+    {
+      "rank": 11,
       "term": "function",
       "works": 15,
       "traces": 15
     },
     {
-      "rank": 10,
+      "rank": 12,
       "term": "core",
       "works": 14,
       "traces": 14
-    },
-    {
-      "rank": 11,
-      "term": "actions",
-      "works": 12,
-      "traces": 12
-    },
-    {
-      "rank": 12,
-      "term": "closure",
-      "works": 12,
-      "traces": 12
     }
   ],
   "claim": "These twelve terms are the strongest current recurrences in FoldForge's selected archive source language.",
   "boundary": "Recurrence witnesses presence. It does not determine authorial intention, semantic truth, final interpretation, value, or authority.",
-  "witness": "sha256:5eca8d27a1319365f73702b1301dd62624b566d171f5de92904f57be21de9181"
+  "witness": "sha256:dfd45f8c468ab7a383f8531e27f899160bdbe50e807753ef00e002a8a6fe4c37"
 }
