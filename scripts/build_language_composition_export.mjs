@@ -29,15 +29,32 @@ const digest = (value) => createHash("sha256").update(JSON.stringify(stable(valu
 const normalizeMediaUrl = (value = "") => String(value)
   .replace(/^ar:\/\//i, "https://arweave.net/")
   .replace(/^ipfs:\/\//i, "https://ipfs.io/ipfs/");
-const placeholderName = (name, tokenId) => {
-  const normalized = String(name || "").trim().toLocaleLowerCase();
-  const id = String(tokenId || "").trim().toLocaleLowerCase();
-  return !normalized || normalized === `#${id}` || normalized === `token ${id}` || normalized === `token #${id}`;
-};
 const hydrateCanonicalEvidence = async (token) => {
   const contract = token.contract?.address?.toLowerCase() || "";
   if (!canonicalMetadataContracts.has(contract) || !token.tokenUri) return token;
-  const url = normalizeMediaUrl(token.tokenUri);
+  let tokenUri = token.tokenUri;
+  try {
+    const rpc = await fetch(`https://eth-mainnet.g.alchemy.com/v2/${apiKey}`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        jsonrpc: "2.0",
+        id: Number(token.tokenId),
+        method: "eth_call",
+        params: [{
+          to: contract,
+          data: `0xc87b56dd${BigInt(token.tokenId).toString(16).padStart(64, "0")}`
+        }, "latest"]
+      })
+    }).then((response) => response.json());
+    if (rpc.result) {
+      const bytes = Buffer.from(rpc.result.slice(2), "hex");
+      const offset = Number(BigInt(`0x${bytes.subarray(0, 32).toString("hex")}`));
+      const length = Number(BigInt(`0x${bytes.subarray(offset, offset + 32).toString("hex")}`));
+      tokenUri = bytes.subarray(offset + 32, offset + 32 + length).toString();
+    }
+  } catch {}
+  const url = normalizeMediaUrl(tokenUri);
   if (!/^https?:\/\//i.test(url)) return token;
   try {
     const response = await fetch(url, { headers: { accept: "application/json" } });
@@ -45,6 +62,7 @@ const hydrateCanonicalEvidence = async (token) => {
     const metadata = await response.json();
     return {
       ...token,
+      tokenUri,
       name: metadata.name || token.name,
       description: metadata.description || token.description || "",
       image: metadata.image || metadata.image_url
@@ -79,7 +97,6 @@ const visibleRaw = tokens.filter((token) => {
 });
 const visible = await Promise.all(visibleRaw.map((token) =>
   canonicalMetadataContracts.has(token.contract?.address?.toLowerCase() || "")
-    && (placeholderName(token.name, token.tokenId) || !token.raw?.metadata?.image)
     ? hydrateCanonicalEvidence(token)
     : token
 ));

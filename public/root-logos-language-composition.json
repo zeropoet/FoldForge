@@ -12,7 +12,7 @@
     "owner": "zeropoet.eth",
     "address": "0xbd4b3a05c6a585f226afb1952cedd8c410c52e8f",
     "source_works": 259,
-    "state_witness": "sha256:d4ebaa3047eb832b9ed84b7df35b2ade585561b0b886cd2c506eb9ae56689cc0"
+    "state_witness": "sha256:ac5231c99eb9c50ff03f4c6478cb8389fc55ddc705068d3b0e936e9241b646f0"
   },
   "terms": [
     {
@@ -90,5 +90,5 @@
   ],
   "claim": "These twelve terms are the strongest current recurrences in FoldForge's selected archive source language.",
   "boundary": "Recurrence witnesses presence. It does not determine authorial intention, semantic truth, final interpretation, value, or authority.",
-  "witness": "sha256:dfd45f8c468ab7a383f8531e27f899160bdbe50e807753ef00e002a8a6fe4c37"
+  "witness": "sha256:4776941b29d91dd2a734dae6a381198d10b1ddef20665c3ea84762f5bd6c5d8e"
 }

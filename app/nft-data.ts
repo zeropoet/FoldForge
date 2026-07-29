@@ -100,6 +100,42 @@ const canonicalMetadataContracts = new Set([
   "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
 ]);
 
+function decodeAbiString(value: string): string {
+  const bytes = Uint8Array.from(value.slice(2).match(/.{1,2}/g) || [], (byte) => Number.parseInt(byte, 16));
+  if (bytes.length < 64) return "";
+  const offset = Number(BigInt(`0x${Array.from(bytes.slice(0, 32)).map((byte) => byte.toString(16).padStart(2, "0")).join("")}`));
+  const length = Number(BigInt(`0x${Array.from(bytes.slice(offset, offset + 32)).map((byte) => byte.toString(16).padStart(2, "0")).join("")}`));
+  return new TextDecoder().decode(bytes.slice(offset + 32, offset + 32 + length));
+}
+
+async function canonicalTokenUri(nft: AlchemyNft, signal?: AbortSignal): Promise<string> {
+  const contract = nft.contract?.address?.toLowerCase() || "";
+  const tokenId = nft.tokenId;
+  const key = process.env.NEXT_PUBLIC_ALCHEMY_API_KEY;
+  if (!canonicalMetadataContracts.has(contract) || !tokenId || !key) return nft.tokenUri || "";
+  try {
+    const response = await fetch(`https://eth-mainnet.g.alchemy.com/v2/${key}`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        jsonrpc: "2.0",
+        id: Number(tokenId),
+        method: "eth_call",
+        params: [{
+          to: contract,
+          data: `0xc87b56dd${BigInt(tokenId).toString(16).padStart(64, "0")}`,
+        }, "latest"],
+      }),
+      signal,
+    });
+    const payload = await response.json() as { result?: string };
+    return payload.result ? decodeAbiString(payload.result) : nft.tokenUri || "";
+  } catch (error) {
+    if (error instanceof DOMException && error.name === "AbortError") throw error;
+    return nft.tokenUri || "";
+  }
+}
+
 export const supportedNetworks = new Map([
   ["eth-mainnet", "Ethereum"],
   ["base-mainnet", "Base"],
@@ -282,9 +318,15 @@ export async function hydrateCanonicalMedia(
   signal?: AbortSignal,
   preferCanonical = false,
 ): Promise<AlchemyNft> {
-  if ((tokenImageFor(nft) && (!preferCanonical || hasDecentralizedOriginal(nft))) || !nft.tokenUri) return nft;
+  const contractRequiresCurrentChainState = preferCanonical
+    && canonicalMetadataContracts.has(nft.contract?.address?.toLowerCase() || "");
+  if (
+    !contractRequiresCurrentChainState
+    && ((tokenImageFor(nft) && (!preferCanonical || hasDecentralizedOriginal(nft))) || !nft.tokenUri)
+  ) return nft;
 
-  const candidates = canonicalMetadataCandidates(nft.tokenUri);
+  const tokenUri = preferCanonical ? await canonicalTokenUri(nft, signal) : nft.tokenUri || "";
+  const candidates = canonicalMetadataCandidates(tokenUri);
 
   for (const [candidateIndex, candidate] of candidates.entries()) {
     try {
@@ -312,6 +354,7 @@ export async function hydrateCanonicalMedia(
 
       return {
         ...nft,
+        tokenUri,
         name: isPlaceholderTokenName(nft.name, nft.tokenId) && metadata.name ? metadata.name : nft.name,
         description: nft.description || metadata.description || "",
         image: image ? { ...nft.image, originalUrl: image } : nft.image,

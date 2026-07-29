@@ -215,8 +215,8 @@ Alchemy provides owner, contract, token, and cached metadata. `app/collection-po
 
 The FOLD FORGE contract
 `0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc` is tokenURI-first. FoldForge
-reads each held token’s exact on-chain metadata document before accepting
-provider or marketplace derivatives, and the Root Logos language export
-hydrates unresolved records by the same rule. Duplicate witnesses and absent
-works remain visible as contract evidence; the archive does not silently
-deduplicate or invent membership.
+calls `tokenURI(tokenId)` directly against current Ethereum state for every
+held token before reading its canonical metadata document or accepting
+provider and marketplace derivatives. The Root Logos language export applies
+the same rule. Provider cache invalidation is therefore useful but never
+authoritative; a base-URI change is reflected directly in contract order.
