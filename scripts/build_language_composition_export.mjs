@@ -8,7 +8,11 @@ const grammarPath = resolve(root, "grammar/composition-002-lexical.json");
 const apiKey = process.env.ALCHEMY_API_KEY || process.env.NEXT_PUBLIC_ALCHEMY_API_KEY;
 const owner = "zeropoet.eth";
 const address = "0xBd4B3a05C6A585F226aFB1952ceDd8c410C52E8F";
-const denylist = new Set(["0x1066d77f2b0ffe7a667e95ebc442866088ab1248"]);
+const denylist = new Set([
+  "0x1066d77f2b0ffe7a667e95ebc442866088ab1248",
+  "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+  "0x1e3b1154aedee78e10d67aa0001ab5c5b4d1143b",
+]);
 const canonicalMetadataContracts = new Set(["0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc"]);
 const stopWords = new Set([
   "a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "from", "in",
