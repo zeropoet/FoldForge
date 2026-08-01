@@ -2,25 +2,25 @@
   "schema": "foldforge-root-logos-displacement-map/v1",
   "source": {
     "name": "Root Logos Living Object",
-    "revision": "v1.2",
+    "revision": "v1.3",
     "generator": "living-object.js/formGeometry",
-    "generatorWitness": "sha256:d42b6a3a03100aab5b2643fd84300947f10c4a4a8d432c0ab47e53740617e4b2",
-    "witness": "sha256:7f6eed1c1cd67247de8601550167c3c04df6c556369809c44dd0644684ae3275",
-    "pointCount": 7595,
+    "generatorWitness": "sha256:7dbdddbb78b23150abcefcc6bfef6a032834d29009dd8aedd30605039e203394",
+    "witness": "sha256:1d73d54279d5ec036d4cdedcd8d78897fe7d7fa49fdb518488e46835dbb0efa8",
+    "pointCount": 58058,
     "bounds": {
       "minimumY": -1.92,
-      "maximumY": 1.704429,
-      "maximumRadius": 2.718078
+      "maximumY": 2.608591,
+      "maximumRadius": 5.384282
     }
   },
   "interpretation": {
     "direction": "root-to-crown",
     "samples": 64,
     "neutral": {
-      "radius": 0.444458,
-      "density": 0.857046,
-      "centroidX": -0.127103,
-      "centroidZ": 0.005845
+      "radius": 0.418181,
+      "density": 0.77908,
+      "centroidX": -0.058919,
+      "centroidZ": -0.189259
     },
     "radialDisplacement": "signed deviation from mean cross-sectional extent",
     "densityDisplacement": "signed deviation from mean log-normalized structural density",
@@ -32,579 +32,579 @@
   "samples": [
     {
       "position": 0,
-      "radialDisplacement": -1,
+      "radialDisplacement": -0.851438,
       "densityDisplacement": -1,
-      "horizontalDisplacement": 0.132239,
-      "depthDisplacement": -0.000739,
-      "radialMotion": 0.032331,
-      "energyDisplacement": -0.84515
+      "horizontalDisplacement": 0.060362,
+      "depthDisplacement": 0.191636,
+      "radialMotion": 0.006463,
+      "energyDisplacement": -0.77475
     },
     {
       "position": 0.015873,
-      "radialDisplacement": -0.988824,
-      "densityDisplacement": -0.888487,
-      "horizontalDisplacement": 0.131129,
-      "depthDisplacement": -0.000542,
-      "radialMotion": 0.05982,
-      "energyDisplacement": -0.79641
+      "radialDisplacement": -0.849463,
+      "densityDisplacement": -0.907882,
+      "horizontalDisplacement": 0.05986,
+      "depthDisplacement": 0.191632,
+      "radialMotion": 0.011726,
+      "energyDisplacement": -0.740731
     },
     {
       "position": 0.031746,
-      "radialDisplacement": -0.979322,
-      "densityDisplacement": -0.800396,
-      "horizontalDisplacement": 0.129914,
-      "depthDisplacement": -0.000491,
-      "radialMotion": 0.046343,
-      "energyDisplacement": -0.762848
+      "radialDisplacement": -0.847854,
+      "densityDisplacement": -0.83516,
+      "horizontalDisplacement": 0.059265,
+      "depthDisplacement": 0.191599,
+      "radialMotion": 0.0112,
+      "energyDisplacement": -0.714553
     },
     {
       "position": 0.047619,
-      "radialDisplacement": -0.972805,
-      "densityDisplacement": -0.73201,
-      "horizontalDisplacement": 0.128591,
-      "depthDisplacement": -0.000606,
-      "radialMotion": 0.027191,
-      "energyDisplacement": -0.738527
+      "radialDisplacement": -0.84604,
+      "densityDisplacement": -0.779107,
+      "horizontalDisplacement": 0.058409,
+      "depthDisplacement": 0.191396,
+      "radialMotion": 0.013781,
+      "energyDisplacement": -0.69364
     },
     {
       "position": 0.063492,
-      "radialDisplacement": -0.969923,
-      "densityDisplacement": -0.679327,
-      "horizontalDisplacement": 0.127121,
-      "depthDisplacement": -0.000877,
-      "radialMotion": 0.006245,
-      "energyDisplacement": -0.721789
+      "radialDisplacement": -0.843643,
+      "densityDisplacement": -0.736839,
+      "horizontalDisplacement": 0.057276,
+      "depthDisplacement": 0.191257,
+      "radialMotion": 0.046984,
+      "energyDisplacement": -0.672667
     },
     {
       "position": 0.079365,
-      "radialDisplacement": -0.970646,
-      "densityDisplacement": -0.641426,
-      "horizontalDisplacement": 0.125445,
-      "depthDisplacement": -0.001312,
-      "radialMotion": 0.028613,
-      "energyDisplacement": -0.70553
+      "radialDisplacement": -0.83168,
+      "densityDisplacement": -0.70528,
+      "horizontalDisplacement": 0.055737,
+      "depthDisplacement": 0.191107,
+      "radialMotion": 0.097947,
+      "energyDisplacement": -0.647996
     },
     {
       "position": 0.095238,
-      "radialDisplacement": -0.960032,
-      "densityDisplacement": -0.613303,
-      "horizontalDisplacement": 0.123033,
-      "depthDisplacement": -0.002138,
-      "radialMotion": 0.07023,
-      "energyDisplacement": -0.684138
+      "radialDisplacement": -0.813706,
+      "densityDisplacement": -0.678696,
+      "horizontalDisplacement": 0.053357,
+      "depthDisplacement": 0.191275,
+      "radialMotion": 0.127007,
+      "energyDisplacement": -0.625346
     },
     {
       "position": 0.111111,
-      "radialDisplacement": -0.94637,
-      "densityDisplacement": -0.589749,
-      "horizontalDisplacement": 0.119858,
-      "depthDisplacement": -0.003418,
-      "radialMotion": 0.151054,
-      "energyDisplacement": -0.656939
+      "radialDisplacement": -0.792862,
+      "densityDisplacement": -0.654217,
+      "horizontalDisplacement": 0.049757,
+      "depthDisplacement": 0.19178,
+      "radialMotion": 0.139012,
+      "energyDisplacement": -0.604555
     },
     {
       "position": 0.126984,
-      "radialDisplacement": -0.907818,
-      "densityDisplacement": -0.565299,
-      "horizontalDisplacement": 0.114967,
-      "depthDisplacement": -0.003794,
-      "radialMotion": 0.247961,
-      "energyDisplacement": -0.614569
+      "radialDisplacement": -0.771219,
+      "densityDisplacement": -0.628507,
+      "horizontalDisplacement": 0.044702,
+      "depthDisplacement": 0.192816,
+      "radialMotion": 0.192025,
+      "energyDisplacement": -0.576783
     },
     {
       "position": 0.142857,
-      "radialDisplacement": -0.860658,
-      "densityDisplacement": -0.53801,
-      "horizontalDisplacement": 0.107625,
-      "depthDisplacement": -0.003202,
-      "radialMotion": 0.287601,
-      "energyDisplacement": -0.575492
+      "radialDisplacement": -0.734172,
+      "densityDisplacement": -0.600126,
+      "horizontalDisplacement": 0.037986,
+      "depthDisplacement": 0.194594,
+      "radialMotion": 0.271965,
+      "energyDisplacement": -0.536335
     },
     {
       "position": 0.15873,
-      "radialDisplacement": -0.808403,
-      "densityDisplacement": -0.5037,
-      "horizontalDisplacement": 0.09704,
-      "depthDisplacement": -0.000865,
-      "radialMotion": 0.304227,
-      "energyDisplacement": -0.534863
+      "radialDisplacement": -0.688097,
+      "densityDisplacement": -0.567433,
+      "horizontalDisplacement": 0.029602,
+      "depthDisplacement": 0.196932,
+      "radialMotion": 0.310432,
+      "energyDisplacement": -0.496085
     },
     {
       "position": 0.174603,
-      "radialDisplacement": -0.755496,
-      "densityDisplacement": -0.459254,
-      "horizontalDisplacement": 0.082044,
-      "depthDisplacement": 0.003726,
-      "radialMotion": 0.338495,
-      "energyDisplacement": -0.487712
+      "radialDisplacement": -0.639292,
+      "densityDisplacement": -0.532543,
+      "horizontalDisplacement": 0.020169,
+      "depthDisplacement": 0.199546,
+      "radialMotion": 0.341453,
+      "energyDisplacement": -0.454818
     },
     {
       "position": 0.190476,
-      "radialDisplacement": -0.691396,
-      "densityDisplacement": -0.406974,
-      "horizontalDisplacement": 0.063607,
-      "depthDisplacement": 0.010766,
-      "radialMotion": 0.509514,
-      "energyDisplacement": -0.411712
+      "radialDisplacement": -0.583737,
+      "densityDisplacement": -0.496423,
+      "horizontalDisplacement": 0.010458,
+      "depthDisplacement": 0.201701,
+      "radialMotion": 0.328999,
+      "energyDisplacement": -0.416266
     },
     {
       "position": 0.206349,
-      "radialDisplacement": -0.579373,
-      "densityDisplacement": -0.347372,
-      "horizontalDisplacement": 0.041387,
-      "depthDisplacement": 0.019519,
-      "radialMotion": 0.642478,
-      "energyDisplacement": -0.314895
+      "radialDisplacement": -0.538738,
+      "densityDisplacement": -0.460854,
+      "horizontalDisplacement": 0.001356,
+      "depthDisplacement": 0.202829,
+      "radialMotion": 0.278685,
+      "energyDisplacement": -0.388865
     },
     {
       "position": 0.222222,
-      "radialDisplacement": -0.469312,
-      "densityDisplacement": -0.286449,
-      "horizontalDisplacement": 0.016813,
-      "depthDisplacement": 0.029575,
-      "radialMotion": 0.64026,
-      "energyDisplacement": -0.238874
+      "radialDisplacement": -0.49856,
+      "densityDisplacement": -0.426444,
+      "horizontalDisplacement": -0.006181,
+      "depthDisplacement": 0.202271,
+      "radialMotion": 0.219355,
+      "energyDisplacement": -0.365632
     },
     {
       "position": 0.238095,
-      "radialDisplacement": -0.358055,
-      "densityDisplacement": -0.224201,
-      "horizontalDisplacement": -0.009184,
-      "depthDisplacement": 0.038599,
-      "radialMotion": 0.665532,
-      "energyDisplacement": -0.157668
+      "radialDisplacement": -0.471695,
+      "densityDisplacement": -0.394074,
+      "horizontalDisplacement": -0.010603,
+      "depthDisplacement": 0.199579,
+      "radialMotion": 0.147135,
+      "energyDisplacement": -0.351703
     },
     {
       "position": 0.253968,
-      "radialDisplacement": -0.239258,
-      "densityDisplacement": -0.168781,
-      "horizontalDisplacement": -0.035751,
-      "depthDisplacement": 0.046157,
-      "radialMotion": 0.587007,
-      "energyDisplacement": -0.090652
+      "radialDisplacement": -0.45359,
+      "densityDisplacement": -0.362429,
+      "horizontalDisplacement": -0.011435,
+      "depthDisplacement": 0.194913,
+      "radialMotion": 0.091864,
+      "energyDisplacement": -0.339866
     },
     {
       "position": 0.269841,
-      "radialDisplacement": -0.155146,
-      "densityDisplacement": -0.120824,
-      "horizontalDisplacement": -0.061781,
-      "depthDisplacement": 0.050598,
-      "radialMotion": 0.483301,
-      "energyDisplacement": -0.047366
+      "radialDisplacement": -0.443618,
+      "densityDisplacement": -0.330793,
+      "horizontalDisplacement": -0.008292,
+      "depthDisplacement": 0.188847,
+      "radialMotion": 0.041926,
+      "energyDisplacement": -0.331298
     },
     {
       "position": 0.285714,
-      "radialDisplacement": -0.072197,
-      "densityDisplacement": -0.080731,
-      "horizontalDisplacement": -0.085098,
-      "depthDisplacement": 0.05057,
-      "radialMotion": 0.363022,
-      "energyDisplacement": -0.009901
+      "radialDisplacement": -0.440776,
+      "densityDisplacement": -0.297611,
+      "horizontalDisplacement": -0.001867,
+      "depthDisplacement": 0.182117,
+      "radialMotion": 0.168234,
+      "energyDisplacement": -0.299317
     },
     {
       "position": 0.301587,
-      "radialDisplacement": -0.02966,
-      "densityDisplacement": -0.04859,
-      "horizontalDisplacement": -0.103758,
-      "depthDisplacement": 0.045772,
-      "radialMotion": 0.22243,
-      "energyDisplacement": 0.001528
+      "radialDisplacement": -0.3922,
+      "densityDisplacement": -0.262293,
+      "horizontalDisplacement": 0.006789,
+      "depthDisplacement": 0.175739,
+      "radialMotion": 0.306351,
+      "energyDisplacement": -0.24195
     },
     {
       "position": 0.31746,
-      "radialDisplacement": 0.00469,
-      "densityDisplacement": -0.021327,
-      "horizontalDisplacement": -0.116228,
-      "depthDisplacement": 0.036597,
-      "radialMotion": 0.121691,
-      "energyDisplacement": 0.013134
+      "radialDisplacement": -0.347144,
+      "densityDisplacement": -0.227255,
+      "horizontalDisplacement": 0.015581,
+      "depthDisplacement": 0.170367,
+      "radialMotion": 0.208944,
+      "energyDisplacement": -0.22177
     },
     {
       "position": 0.333333,
-      "radialDisplacement": 0.012404,
-      "densityDisplacement": 0.003156,
-      "horizontalDisplacement": -0.119628,
-      "depthDisplacement": 0.023964,
-      "radialMotion": 0.021611,
-      "energyDisplacement": 0.010549
+      "radialDisplacement": -0.328339,
+      "densityDisplacement": -0.193411,
+      "horizontalDisplacement": 0.023561,
+      "depthDisplacement": 0.166433,
+      "radialMotion": 0.067643,
+      "energyDisplacement": -0.221717
     },
     {
       "position": 0.349206,
-      "radialDisplacement": 0.01216,
-      "densityDisplacement": 0.029212,
-      "horizontalDisplacement": -0.112671,
-      "depthDisplacement": 0.010092,
-      "radialMotion": -0.138329,
-      "energyDisplacement": -0.004445
+      "radialDisplacement": -0.32647,
+      "densityDisplacement": -0.162605,
+      "horizontalDisplacement": 0.030881,
+      "depthDisplacement": 0.163683,
+      "radialMotion": 0.030816,
+      "energyDisplacement": -0.215525
     },
     {
       "position": 0.365079,
-      "radialDisplacement": -0.035412,
-      "densityDisplacement": 0.059588,
-      "horizontalDisplacement": -0.0975,
-      "depthDisplacement": -0.002652,
-      "radialMotion": -0.152214,
-      "energyDisplacement": -0.019682
+      "radialDisplacement": -0.31892,
+      "densityDisplacement": -0.135595,
+      "horizontalDisplacement": 0.037805,
+      "depthDisplacement": 0.16228,
+      "radialMotion": 0.018969,
+      "energyDisplacement": -0.204073
     },
     {
       "position": 0.380952,
-      "radialDisplacement": -0.040455,
-      "densityDisplacement": 0.095178,
-      "horizontalDisplacement": -0.077293,
-      "depthDisplacement": -0.012609,
-      "radialMotion": 0.169903,
-      "energyDisplacement": 0.03857
+      "radialDisplacement": -0.320673,
+      "densityDisplacement": -0.11187,
+      "horizontalDisplacement": 0.045881,
+      "depthDisplacement": 0.16216,
+      "radialMotion": -0.015491,
+      "energyDisplacement": -0.201815
     },
     {
       "position": 0.396825,
-      "radialDisplacement": 0.023318,
-      "densityDisplacement": 0.135181,
-      "horizontalDisplacement": -0.056131,
-      "depthDisplacement": -0.019714,
-      "radialMotion": 0.532524,
-      "energyDisplacement": 0.138851
+      "radialDisplacement": -0.323655,
+      "densityDisplacement": -0.090051,
+      "horizontalDisplacement": 0.05565,
+      "depthDisplacement": 0.163233,
+      "radialMotion": -0.043005,
+      "energyDisplacement": -0.199796
     },
     {
       "position": 0.412698,
-      "radialDisplacement": 0.143622,
-      "densityDisplacement": 0.17896,
-      "horizontalDisplacement": -0.036585,
-      "depthDisplacement": -0.024584,
-      "radialMotion": 0.581004,
-      "energyDisplacement": 0.221598
+      "radialDisplacement": -0.333817,
+      "densityDisplacement": -0.069371,
+      "horizontalDisplacement": 0.067011,
+      "depthDisplacement": 0.16545,
+      "radialMotion": 0.04969,
+      "energyDisplacement": -0.183735
     },
     {
       "position": 0.428571,
-      "radialDisplacement": 0.224153,
-      "densityDisplacement": 0.220102,
-      "horizontalDisplacement": -0.021163,
-      "depthDisplacement": -0.028645,
-      "radialMotion": 0.339439,
-      "energyDisplacement": 0.240028
+      "radialDisplacement": -0.308468,
+      "densityDisplacement": -0.049503,
+      "horizontalDisplacement": 0.078825,
+      "depthDisplacement": 0.168486,
+      "radialMotion": 0.140228,
+      "energyDisplacement": -0.150526
     },
     {
       "position": 0.444444,
-      "radialDisplacement": 0.260955,
-      "densityDisplacement": 0.256775,
-      "horizontalDisplacement": -0.009351,
-      "depthDisplacement": -0.032123,
-      "radialMotion": 0.137694,
-      "energyDisplacement": 0.241003
+      "radialDisplacement": -0.290958,
+      "densityDisplacement": -0.031997,
+      "horizontalDisplacement": 0.089413,
+      "depthDisplacement": 0.171825,
+      "radialMotion": 0.055296,
+      "energyDisplacement": -0.148383
     },
     {
       "position": 0.460317,
-      "radialDisplacement": 0.271749,
-      "densityDisplacement": 0.287343,
-      "horizontalDisplacement": 0.000793,
-      "depthDisplacement": -0.033494,
-      "radialMotion": 0.015727,
-      "energyDisplacement": 0.238804
+      "radialDisplacement": -0.291568,
+      "densityDisplacement": -0.019232,
+      "horizontalDisplacement": 0.097417,
+      "depthDisplacement": 0.174991,
+      "radialMotion": 0.009187,
+      "energyDisplacement": -0.151137
     },
     {
       "position": 0.47619,
-      "radialDisplacement": 0.266391,
-      "densityDisplacement": 0.31109,
-      "horizontalDisplacement": 0.010803,
-      "depthDisplacement": -0.031619,
-      "radialMotion": -0.065421,
-      "energyDisplacement": 0.232264
+      "radialDisplacement": -0.28815,
+      "densityDisplacement": -0.012621,
+      "horizontalDisplacement": 0.102359,
+      "depthDisplacement": 0.17773,
+      "radialMotion": 0.002626,
+      "energyDisplacement": -0.148098
     },
     {
       "position": 0.492063,
-      "radialDisplacement": 0.249136,
-      "densityDisplacement": 0.32965,
-      "horizontalDisplacement": 0.022072,
-      "depthDisplacement": -0.023752,
-      "radialMotion": -0.185457,
-      "energyDisplacement": 0.212127
+      "radialDisplacement": -0.290765,
+      "densityDisplacement": -0.013904,
+      "horizontalDisplacement": 0.104451,
+      "depthDisplacement": 0.179964,
+      "radialMotion": 0.001328,
+      "energyDisplacement": -0.15005
     },
     {
       "position": 0.507937,
-      "radialDisplacement": 0.202285,
-      "densityDisplacement": 0.345257,
-      "horizontalDisplacement": 0.035066,
-      "depthDisplacement": -0.008203,
-      "radialMotion": -0.252171,
-      "energyDisplacement": 0.184157
+      "radialDisplacement": -0.287744,
+      "densityDisplacement": -0.022716,
+      "horizontalDisplacement": 0.104395,
+      "depthDisplacement": 0.181126,
+      "radialMotion": -0.029855,
+      "energyDisplacement": -0.156301
     },
     {
       "position": 0.52381,
-      "radialDisplacement": 0.161968,
-      "densityDisplacement": 0.360491,
-      "horizontalDisplacement": 0.048816,
-      "depthDisplacement": 0.014917,
-      "radialMotion": 0.038261,
-      "energyDisplacement": 0.212895
+      "radialDisplacement": -0.29989,
+      "densityDisplacement": -0.035647,
+      "horizontalDisplacement": 0.103651,
+      "depthDisplacement": 0.180072,
+      "radialMotion": -0.114964,
+      "energyDisplacement": -0.179666
     },
     {
       "position": 0.539683,
-      "radialDisplacement": 0.21551,
-      "densityDisplacement": 0.37615,
-      "horizontalDisplacement": 0.061174,
-      "depthDisplacement": 0.042763,
-      "radialMotion": 0.197147,
-      "energyDisplacement": 0.26898
+      "radialDisplacement": -0.322881,
+      "densityDisplacement": -0.047603,
+      "horizontalDisplacement": 0.102626,
+      "depthDisplacement": 0.174644,
+      "radialMotion": 0.075451,
+      "energyDisplacement": -0.166784
     },
     {
       "position": 0.555556,
-      "radialDisplacement": 0.230115,
-      "densityDisplacement": 0.391333,
-      "horizontalDisplacement": 0.069909,
-      "depthDisplacement": 0.071054,
-      "radialMotion": -0.001176,
-      "energyDisplacement": 0.251848
+      "radialDisplacement": -0.276829,
+      "densityDisplacement": -0.052881,
+      "horizontalDisplacement": 0.100979,
+      "depthDisplacement": 0.161223,
+      "radialMotion": 0.356151,
+      "energyDisplacement": -0.1035
     },
     {
       "position": 0.571429,
-      "radialDisplacement": 0.215104,
-      "densityDisplacement": 0.404282,
-      "horizontalDisplacement": 0.073466,
-      "depthDisplacement": 0.095103,
-      "radialMotion": -0.098693,
-      "energyDisplacement": 0.234246
+      "radialDisplacement": -0.214029,
+      "densityDisplacement": -0.043747,
+      "horizontalDisplacement": 0.096226,
+      "depthDisplacement": 0.1352,
+      "radialMotion": 0.406513,
+      "energyDisplacement": -0.061349
     },
     {
       "position": 0.587302,
-      "radialDisplacement": 0.196,
-      "densityDisplacement": 0.412445,
-      "horizontalDisplacement": 0.071204,
-      "depthDisplacement": 0.111874,
-      "radialMotion": 0.007842,
-      "energyDisplacement": 0.243532
+      "radialDisplacement": -0.152584,
+      "densityDisplacement": -0.015179,
+      "horizontalDisplacement": 0.085316,
+      "depthDisplacement": 0.094039,
+      "radialMotion": 0.452521,
+      "energyDisplacement": -0.013727
     },
     {
       "position": 0.603175,
-      "radialDisplacement": 0.217815,
-      "densityDisplacement": 0.413113,
-      "horizontalDisplacement": 0.064146,
-      "depthDisplacement": 0.119949,
-      "radialMotion": 0.065514,
-      "energyDisplacement": 0.263324
+      "radialDisplacement": -0.075722,
+      "densityDisplacement": 0.034945,
+      "horizontalDisplacement": 0.065518,
+      "depthDisplacement": 0.038863,
+      "radialMotion": 0.841448,
+      "energyDisplacement": 0.100587
     },
     {
       "position": 0.619048,
-      "radialDisplacement": 0.218646,
-      "densityDisplacement": 0.405566,
-      "horizontalDisplacement": 0.052949,
-      "depthDisplacement": 0.120086,
-      "radialMotion": 0.004012,
-      "energyDisplacement": 0.251873
+      "radialDisplacement": 0.104593,
+      "densityDisplacement": 0.104062,
+      "horizontalDisplacement": 0.038152,
+      "depthDisplacement": -0.023672,
+      "radialMotion": 1,
+      "energyDisplacement": 0.238718
     },
     {
       "position": 0.634921,
-      "radialDisplacement": 0.219202,
-      "densityDisplacement": 0.391375,
-      "horizontalDisplacement": 0.039339,
-      "depthDisplacement": 0.113923,
-      "radialMotion": -0.165077,
-      "energyDisplacement": 0.221821
+      "radialDisplacement": 0.263994,
+      "densityDisplacement": 0.187069,
+      "horizontalDisplacement": 0.006843,
+      "depthDisplacement": -0.08569,
+      "radialMotion": 0.895077,
+      "energyDisplacement": 0.331732
     },
     {
       "position": 0.650794,
-      "radialDisplacement": 0.161584,
-      "densityDisplacement": 0.372372,
-      "horizontalDisplacement": 0.023296,
-      "depthDisplacement": 0.105084,
-      "radialMotion": -0.455761,
-      "energyDisplacement": 0.142758
+      "radialDisplacement": 0.378161,
+      "densityDisplacement": 0.277474,
+      "horizontalDisplacement": -0.023899,
+      "depthDisplacement": -0.139813,
+      "radialMotion": 0.584853,
+      "energyDisplacement": 0.373924
     },
     {
       "position": 0.666667,
-      "radialDisplacement": 0.061659,
-      "densityDisplacement": 0.352055,
-      "horizontalDisplacement": 0.005394,
-      "depthDisplacement": 0.096665,
-      "radialMotion": -0.225586,
-      "energyDisplacement": 0.120211
+      "radialDisplacement": 0.442746,
+      "densityDisplacement": 0.368351,
+      "horizontalDisplacement": -0.050664,
+      "depthDisplacement": -0.183203,
+      "radialMotion": 0.447744,
+      "energyDisplacement": 0.417458
     },
     {
       "position": 0.68254,
-      "radialDisplacement": 0.083607,
-      "densityDisplacement": 0.33515,
-      "horizontalDisplacement": -0.014198,
-      "depthDisplacement": 0.091987,
-      "radialMotion": 0.416159,
-      "energyDisplacement": 0.22153
+      "radialDisplacement": 0.515008,
+      "densityDisplacement": 0.455193,
+      "horizontalDisplacement": -0.072154,
+      "depthDisplacement": -0.215108,
+      "radialMotion": 0.389847,
+      "energyDisplacement": 0.475299
     },
     {
       "position": 0.698413,
-      "radialDisplacement": 0.205512,
-      "densityDisplacement": 0.325388,
-      "horizontalDisplacement": -0.034438,
-      "depthDisplacement": 0.092011,
-      "radialMotion": 0.696739,
-      "energyDisplacement": 0.321153
+      "radialDisplacement": 0.561898,
+      "densityDisplacement": 0.534226,
+      "horizontalDisplacement": -0.088179,
+      "depthDisplacement": -0.236744,
+      "radialMotion": 0.313747,
+      "energyDisplacement": 0.51499
     },
     {
       "position": 0.714286,
-      "radialDisplacement": 0.324447,
-      "densityDisplacement": 0.32372,
-      "horizontalDisplacement": -0.053645,
-      "depthDisplacement": 0.096391,
-      "radialMotion": 0.529587,
-      "energyDisplacement": 0.354963
+      "radialDisplacement": 0.6109,
+      "densityDisplacement": 0.60335,
+      "horizontalDisplacement": -0.09921,
+      "depthDisplacement": -0.249921,
+      "radialMotion": 0.401808,
+      "energyDisplacement": 0.576894
     },
     {
       "position": 0.730159,
-      "radialDisplacement": 0.388574,
-      "densityDisplacement": 0.328015,
-      "horizontalDisplacement": -0.069864,
-      "depthDisplacement": 0.101819,
-      "radialMotion": 0.199603,
-      "energyDisplacement": 0.339033
+      "radialDisplacement": 0.684705,
+      "densityDisplacement": 0.661581,
+      "horizontalDisplacement": -0.106257,
+      "depthDisplacement": -0.256253,
+      "radialMotion": 0.335522,
+      "energyDisplacement": 0.624234
     },
     {
       "position": 0.746032,
-      "radialDisplacement": 0.393444,
-      "densityDisplacement": 0.335052,
-      "horizontalDisplacement": -0.081428,
-      "depthDisplacement": 0.104264,
-      "radialMotion": 0.165654,
-      "energyDisplacement": 0.338838
+      "radialDisplacement": 0.713448,
+      "densityDisplacement": 0.708742,
+      "horizontalDisplacement": -0.110126,
+      "depthDisplacement": -0.257434,
+      "radialMotion": 0.142952,
+      "energyDisplacement": 0.626227
     },
     {
       "position": 0.761905,
-      "radialDisplacement": 0.445835,
-      "densityDisplacement": 0.342054,
-      "horizontalDisplacement": -0.086913,
-      "depthDisplacement": 0.099622,
-      "radialMotion": 0.220765,
-      "energyDisplacement": 0.375751
+      "radialDisplacement": 0.728396,
+      "densityDisplacement": 0.744832,
+      "horizontalDisplacement": -0.111556,
+      "depthDisplacement": -0.255073,
+      "radialMotion": 0.133758,
+      "energyDisplacement": 0.644953
     },
     {
       "position": 0.777778,
-      "radialDisplacement": 0.469755,
-      "densityDisplacement": 0.344771,
-      "horizontalDisplacement": -0.087205,
-      "depthDisplacement": 0.085649,
-      "radialMotion": 0.083821,
-      "energyDisplacement": 0.36812
+      "radialDisplacement": 0.754329,
+      "densityDisplacement": 0.770151,
+      "horizontalDisplacement": -0.111178,
+      "depthDisplacement": -0.250889,
+      "radialMotion": 0.253827,
+      "energyDisplacement": 0.684792
     },
     {
       "position": 0.793651,
-      "radialDisplacement": 0.474809,
-      "densityDisplacement": 0.34201,
-      "horizontalDisplacement": -0.083628,
-      "depthDisplacement": 0.06009,
-      "radialMotion": 0.079549,
-      "energyDisplacement": 0.36904
+      "radialDisplacement": 0.805975,
+      "densityDisplacement": 0.784862,
+      "horizontalDisplacement": -0.109573,
+      "depthDisplacement": -0.246615,
+      "radialMotion": 0.253982,
+      "energyDisplacement": 0.715786
     },
     {
       "position": 0.809524,
-      "radialDisplacement": 0.497252,
-      "densityDisplacement": 0.334709,
-      "horizontalDisplacement": -0.076895,
-      "depthDisplacement": 0.022735,
-      "radialMotion": 0.045418,
-      "energyDisplacement": 0.372587
+      "radialDisplacement": 0.831956,
+      "densityDisplacement": 0.789189,
+      "horizontalDisplacement": -0.107158,
+      "depthDisplacement": -0.244064,
+      "radialMotion": 0.179369,
+      "energyDisplacement": 0.719099
     },
     {
       "position": 0.825397,
-      "radialDisplacement": 0.490509,
-      "densityDisplacement": 0.321596,
-      "horizontalDisplacement": -0.068987,
-      "depthDisplacement": -0.024786,
-      "radialMotion": 0.075125,
-      "energyDisplacement": 0.369082
+      "radialDisplacement": 0.860796,
+      "densityDisplacement": 0.783341,
+      "horizontalDisplacement": -0.104207,
+      "depthDisplacement": -0.244706,
+      "radialMotion": 0.142581,
+      "energyDisplacement": 0.725955
     },
     {
       "position": 0.84127,
-      "radialDisplacement": 0.523221,
-      "densityDisplacement": 0.303281,
-      "horizontalDisplacement": -0.061307,
-      "depthDisplacement": -0.077978,
-      "radialMotion": 0.242961,
-      "energyDisplacement": 0.404203
+      "radialDisplacement": 0.875534,
+      "densityDisplacement": 0.767395,
+      "horizontalDisplacement": -0.10102,
+      "depthDisplacement": -0.249928,
+      "radialMotion": 0.066815,
+      "energyDisplacement": 0.716377
     },
     {
       "position": 0.857143,
-      "radialDisplacement": 0.574493,
-      "densityDisplacement": 0.279665,
-      "horizontalDisplacement": -0.053939,
-      "depthDisplacement": -0.130505,
-      "radialMotion": 0.262596,
-      "energyDisplacement": 0.424518
+      "radialDisplacement": 0.881217,
+      "densityDisplacement": 0.741388,
+      "horizontalDisplacement": -0.097794,
+      "depthDisplacement": -0.260679,
+      "radialMotion": 0.065034,
+      "energyDisplacement": 0.70985
     },
     {
       "position": 0.873016,
-      "radialDisplacement": 0.613992,
-      "densityDisplacement": 0.24933,
-      "horizontalDisplacement": -0.047641,
-      "depthDisplacement": -0.175707,
-      "radialMotion": 0.172006,
-      "energyDisplacement": 0.420062
+      "radialDisplacement": 0.89541,
+      "densityDisplacement": 0.705575,
+      "horizontalDisplacement": -0.094509,
+      "depthDisplacement": -0.277035,
+      "radialMotion": 0.200935,
+      "energyDisplacement": 0.724797
     },
     {
       "position": 0.888889,
-      "radialDisplacement": 0.63395,
-      "densityDisplacement": 0.210141,
-      "horizontalDisplacement": -0.042397,
-      "depthDisplacement": -0.208297,
-      "radialMotion": 0.180507,
-      "energyDisplacement": 0.4176
+      "radialDisplacement": 0.94263,
+      "densityDisplacement": 0.659735,
+      "horizontalDisplacement": -0.091261,
+      "depthDisplacement": -0.298757,
+      "radialMotion": 0.181921,
+      "energyDisplacement": 0.729511
     },
     {
       "position": 0.904762,
-      "radialDisplacement": 0.676387,
-      "densityDisplacement": 0.159718,
-      "horizontalDisplacement": -0.038307,
-      "depthDisplacement": -0.225167,
-      "radialMotion": 0.230389,
-      "energyDisplacement": 0.428653
+      "radialDisplacement": 0.951012,
+      "densityDisplacement": 0.6034,
+      "horizontalDisplacement": -0.088063,
+      "depthDisplacement": -0.324755,
+      "radialMotion": 0.08549,
+      "energyDisplacement": 0.69952
     },
     {
       "position": 0.920635,
-      "radialDisplacement": 0.713588,
-      "densityDisplacement": 0.09636,
-      "horizontalDisplacement": -0.035557,
-      "depthDisplacement": -0.225371,
-      "radialMotion": 0.040048,
-      "energyDisplacement": 0.396527
+      "radialDisplacement": 0.968759,
+      "densityDisplacement": 0.535882,
+      "horizontalDisplacement": -0.084794,
+      "depthDisplacement": -0.35358,
+      "radialMotion": 0.119426,
+      "energyDisplacement": 0.689852
     },
     {
       "position": 0.936508,
-      "radialDisplacement": 0.690231,
-      "densityDisplacement": 0.018344,
-      "horizontalDisplacement": -0.034922,
-      "depthDisplacement": -0.210069,
-      "radialMotion": -0.319779,
-      "energyDisplacement": 0.303569
+      "radialDisplacement": 0.987513,
+      "densityDisplacement": 0.456032,
+      "horizontalDisplacement": -0.081357,
+      "depthDisplacement": -0.383619,
+      "radialMotion": 0.102215,
+      "energyDisplacement": 0.6687
     },
     {
       "position": 0.952381,
-      "radialDisplacement": 0.60305,
-      "densityDisplacement": -0.076218,
-      "horizontalDisplacement": -0.037379,
-      "depthDisplacement": -0.182102,
-      "radialMotion": -0.567335,
-      "energyDisplacement": 0.189749
+      "radialDisplacement": 1,
+      "densityDisplacement": 0.362041,
+      "horizontalDisplacement": -0.077788,
+      "depthDisplacement": -0.413462,
+      "radialMotion": -0.01576,
+      "energyDisplacement": 0.62435
     },
     {
       "position": 0.968254,
-      "radialDisplacement": 0.494121,
-      "densityDisplacement": -0.189778,
-      "horizontalDisplacement": -0.044275,
-      "depthDisplacement": -0.146087,
-      "radialMotion": -0.425018,
-      "energyDisplacement": 0.116886
+      "radialDisplacement": 0.982696,
+      "densityDisplacement": 0.25228,
+      "horizontalDisplacement": -0.073798,
+      "depthDisplacement": -0.441964,
+      "radialMotion": -0.010161,
+      "energyDisplacement": 0.578122
     },
     {
       "position": 0.984127,
-      "radialDisplacement": 0.456135,
-      "densityDisplacement": -0.322813,
-      "horizontalDisplacement": -0.054687,
-      "depthDisplacement": -0.106132,
-      "radialMotion": -0.072144,
-      "energyDisplacement": 0.104261
+      "radialDisplacement": 0.996894,
+      "densityDisplacement": 0.124287,
+      "horizontalDisplacement": -0.069582,
+      "depthDisplacement": -0.468688,
+      "radialMotion": 0.031807,
+      "energyDisplacement": 0.546719
     },
     {
       "position": 1,
-      "radialDisplacement": 0.469183,
-      "densityDisplacement": -0.474958,
-      "horizontalDisplacement": -0.069506,
-      "depthDisplacement": -0.06434,
-      "radialMotion": 0.037746,
-      "energyDisplacement": 0.074018
+      "radialDisplacement": 0.992418,
+      "densityDisplacement": -0.023484,
+      "horizontalDisplacement": -0.065118,
+      "depthDisplacement": -0.493686,
+      "radialMotion": -0.014647,
+      "energyDisplacement": 0.485792
     }
   ]
 }
