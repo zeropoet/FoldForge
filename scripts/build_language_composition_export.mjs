@@ -1,9 +1,16 @@
-import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import {
+  archiveCandidate,
+  digest,
+  lexicalMeaningWitness,
+  stabilizeArchiveObservation,
+  stabilizeLexicalObservation,
+} from "./language-composition-witness.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const outputPath = resolve(root, "public/root-logos-language-composition.json");
+const observationPath = resolve(root, "public/root-logos-language-observation.json");
 const grammarPath = resolve(root, "grammar/composition-002-lexical.json");
 const apiKey = process.env.ALCHEMY_API_KEY || process.env.NEXT_PUBLIC_ALCHEMY_API_KEY;
 const owner = "zeropoet.eth";
@@ -22,14 +29,14 @@ const stopWords = new Set([
 
 if (!apiKey) throw new Error("ALCHEMY_API_KEY is required.");
 
-const stable = (value) => {
-  if (Array.isArray(value)) return value.map(stable);
-  if (value && typeof value === "object") {
-    return Object.fromEntries(Object.keys(value).sort().map((key) => [key, stable(value[key])]));
+const readOptionalJson = async (path) => {
+  if (!path) return null;
+  try {
+    return JSON.parse(await readFile(path, "utf8"));
+  } catch {
+    return null;
   }
-  return value;
 };
-const digest = (value) => createHash("sha256").update(JSON.stringify(stable(value))).digest("hex");
 const normalizeMediaUrl = (value = "") => String(value)
   .replace(/^ar:\/\//i, "https://arweave.net/")
   .replace(/^ipfs:\/\//i, "https://ipfs.io/ipfs/");
@@ -131,18 +138,18 @@ const ranked = [...terms.entries()]
 if (ranked.length !== 12) throw new Error(`Expected twelve lexical terms; received ${ranked.length}.`);
 
 const grammar = JSON.parse(await readFile(grammarPath, "utf8"));
-const stateEvidence = visible.map((token) => ({
-  contract: token.contract?.address?.toLowerCase() || "",
-  token_id: token.tokenId || "",
-  name: token.name || "",
-  description: token.description || "",
-  collection: token.collection?.name
-    || token.contract?.openSeaMetadata?.collectionName
-    || token.contract?.name
-    || ""
-})).sort((left, right) =>
-  left.contract.localeCompare(right.contract) || left.token_id.localeCompare(right.token_id)
-);
+const previousExport = await readOptionalJson(process.env.FOLDFORGE_PREVIOUS_LANGUAGE_EXPORT);
+const previousObservation = await readOptionalJson(process.env.FOLDFORGE_PREVIOUS_LANGUAGE_OBSERVATION);
+const stabilized = stabilizeArchiveObservation({
+  candidate: archiveCandidate(visible),
+  previousArchive: previousExport?.archive,
+  previousObservation: previousObservation?.archive || previousObservation,
+});
+const stabilizedLexical = stabilizeLexicalObservation({
+  candidateTerms: ranked,
+  previousTerms: previousExport?.terms,
+  previousObservation: previousObservation?.lexical,
+});
 const exportPayload = {
   schema: "foldforge-language-composition-export/v1",
   source_id: "foldforge",
@@ -156,13 +163,22 @@ const exportPayload = {
   archive: {
     owner,
     address: address.toLowerCase(),
-    source_works: visible.length,
-    state_witness: `sha256:${digest(stateEvidence)}`
+    ...stabilized.archive,
+    confirmation_policy: "two-consecutive-observations"
   },
-  terms: ranked,
+  terms: stabilizedLexical.terms,
   claim: "These twelve terms are the strongest current recurrences in FoldForge's selected archive source language.",
   boundary: "Recurrence witnesses presence. It does not determine authorial intention, semantic truth, final interpretation, value, or authority."
 };
-const output = { ...exportPayload, witness: `sha256:${digest(exportPayload)}` };
+const outputWithMeaning = {
+  ...exportPayload,
+  semantic_witness: lexicalMeaningWitness(exportPayload),
+};
+const output = { ...outputWithMeaning, witness: `sha256:${digest(outputWithMeaning)}` };
 await writeFile(outputPath, `${JSON.stringify(output, null, 2)}\n`);
+await writeFile(observationPath, `${JSON.stringify({
+  schema: "foldforge-language-observation/v1",
+  archive: stabilized.observation,
+  lexical: stabilizedLexical.observation,
+}, null, 2)}\n`);
 process.stdout.write(`${output.witness}\n`);

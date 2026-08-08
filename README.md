@@ -175,16 +175,21 @@ path.
 Every deployment also rebuilds
 `public/root-logos-language-composition.json` directly from the current allowed
 Ethereum holdings. The export carries the twelve strongest ranked lexical
-recurrences, distinct-work counts, archive-state witness, grammar witness, and
-its own sealed witness. A change in archive language therefore changes the
-dispatch witness and deterministically recomposes Root Logos rather than
-waiting for a manually copied keyword list.
+recurrences, distinct-work counts, a canonical token-identity witness, grammar
+witness, semantic witness, and its own sealed witness. Provider titles,
+descriptions, response ordering, and media recovery do not enter the archive
+identity witness. A changed holdings count, identity set, or lexical term set
+must appear in two consecutive hourly observations before it becomes confirmed
+evidence. Pending observations are retained in a public sidecar but do not wake
+Root Logos.
 
 The deployment runs on every `main` update and once each hour as a bounded
 archive observation cadence. An unchanged lexical witness remains dormant in
-Root Logos. A changed rank, term, recurrence count, trace count, or archive
-witness propagates through the connected-source snapshot, cultivation,
-Living Object geometry, sovereign voice, runtime, and public site.
+Root Logos, and unchanged deployments do not dispatch. A confirmed archive
+change updates the connected-source evidence. Only a changed rank, term,
+recurrence count, trace count, or grammar changes the semantic witness and
+recomposes Library editions. This separates a meaningful language change from
+provider fluctuation while preserving the system-wide propagation policy.
 
 1. Create a dedicated Alchemy app for this site.
 2. Add its key at **Repository settings → Secrets and variables → Actions** as `NEXT_PUBLIC_ALCHEMY_API_KEY`.

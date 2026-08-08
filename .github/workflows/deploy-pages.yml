@@ -16,6 +16,8 @@ jobs:
   build:
     outputs:
       language_witness: ${{ steps.language.outputs.witness }}
+      semantic_witness: ${{ steps.language.outputs.semantic_witness }}
+      language_changed: ${{ steps.language.outputs.changed }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,13 +26,31 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+      - name: Recover prior confirmed language observation
+        run: |
+          curl --fail --silent --show-error --retry 3 \
+            "https://foldforge.xyz/root-logos-language-composition.json?run=${GITHUB_RUN_ID}" \
+            -o /tmp/foldforge-language-previous.json || true
+          curl --fail --silent --show-error --retry 3 \
+            "https://foldforge.xyz/root-logos-language-observation.json?run=${GITHUB_RUN_ID}" \
+            -o /tmp/foldforge-language-observation-previous.json || true
       - name: Build Root Logos language composition export
         id: language
         env:
           ALCHEMY_API_KEY: ${{ secrets.NEXT_PUBLIC_ALCHEMY_API_KEY }}
+          FOLDFORGE_PREVIOUS_LANGUAGE_EXPORT: /tmp/foldforge-language-previous.json
+          FOLDFORGE_PREVIOUS_LANGUAGE_OBSERVATION: /tmp/foldforge-language-observation-previous.json
         run: |
           witness=$(npm run --silent build:language-export)
+          semantic_witness=$(node -e 'process.stdout.write(require("./public/root-logos-language-composition.json").semantic_witness)')
+          previous_witness=$(node -e 'try { process.stdout.write(require("/tmp/foldforge-language-previous.json").witness || "") } catch {}')
           echo "witness=$witness" >> "$GITHUB_OUTPUT"
+          echo "semantic_witness=$semantic_witness" >> "$GITHUB_OUTPUT"
+          if [ "$witness" = "$previous_witness" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
       - run: npm run build
         env:
           CUSTOM_DOMAIN: foldforge.xyz
@@ -49,10 +69,12 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
       - name: Wake Root Logos source integration
+        if: needs.build.outputs.language_changed == 'true'
         env:
           ROOT_LOGOS_DISPATCH_TOKEN: ${{ secrets.ROOT_LOGOS_DISPATCH_TOKEN }}
           FOLDFORGE_REVISION: ${{ github.sha }}
           FOLDFORGE_LANGUAGE_WITNESS: ${{ needs.build.outputs.language_witness }}
+          FOLDFORGE_SEMANTIC_WITNESS: ${{ needs.build.outputs.semantic_witness }}
         run: |
           if [ -z "$ROOT_LOGOS_DISPATCH_TOKEN" ]; then
             echo "ROOT_LOGOS_DISPATCH_TOKEN is not configured"
@@ -60,6 +82,7 @@ jobs:
           fi
           echo "$FOLDFORGE_REVISION" | grep -Eq '^[a-f0-9]{40}$'
           echo "$FOLDFORGE_LANGUAGE_WITNESS" | grep -Eq '^sha256:[a-f0-9]{64}$'
+          echo "$FOLDFORGE_SEMANTIC_WITNESS" | grep -Eq '^sha256:[a-f0-9]{64}$'
           curl --fail --silent --show-error \
             --retry 4 --retry-all-errors --retry-delay 3 \
             -X POST https://api.github.com/repos/zeropoet/root-logos/dispatches \
@@ -67,4 +90,4 @@ jobs:
             -H "Authorization: Bearer $ROOT_LOGOS_DISPATCH_TOKEN" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             -H "Content-Type: application/json" \
-            --data "{\"event_type\":\"foldforge-published\",\"client_payload\":{\"revision\":\"$FOLDFORGE_REVISION\",\"language_witness\":\"$FOLDFORGE_LANGUAGE_WITNESS\"}}"
+            --data "{\"event_type\":\"foldforge-published\",\"client_payload\":{\"revision\":\"$FOLDFORGE_REVISION\",\"language_witness\":\"$FOLDFORGE_LANGUAGE_WITNESS\",\"semantic_witness\":\"$FOLDFORGE_SEMANTIC_WITNESS\"}}"
