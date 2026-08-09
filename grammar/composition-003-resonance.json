@@ -1,7 +1,7 @@
 {
   "schema": "foldforge-composition/v1",
   "id": "FF-COMP-0003",
-  "version": "10.0.0",
+  "version": "11.0.0",
   "status": "living",
   "title": "Resonant Holdings",
   "constitutionRevision": "v0.1",
@@ -14,7 +14,7 @@
     "network": "Ethereum mainnet",
     "ownerScope": "selected archive identity",
     "inclusionPolicy": "same visible holdings as Composition I",
-    "requiredFields": ["contract address", "token ID", "collection name", "token name", "description", "average luminance"]
+    "requiredFields": ["contract address", "token ID", "collection name", "token name", "description", "average luminance", "OKLCH visual signature"]
   },
   "transformations": [
     {
@@ -79,12 +79,18 @@
     },
     {
       "order": 11,
+      "operation": "conduct chromatic continuity",
+      "input": "Composition V achromatic ground, archive-derived hue continuum, perceptual hue, and chroma",
+      "output": "a deterministic chromatic arrangement in which hue shapes the upper partial and chroma shapes its intensity"
+    },
+    {
+      "order": 12,
       "operation": "apply constitutional displacement",
       "input": "a witnessed 64-step root-to-crown displacement field derived from deviations within the current Root Logos Living Object geometry",
       "output": "signed radial deviation displaces filter and duration around the FoldForge baseline, density deviation displaces harmonic intensity, centroid offset and radial motion displace stereo pressure, and signed geometric energy displaces pulse"
     },
     {
-      "order": 12,
+      "order": 13,
       "operation": "compose",
       "input": "ordered audible events",
       "output": "autonomously selected, memory-bearing, motif-recurring, gain-normalized arrangement layers through one compressed unified voice with restrained recursive delay"
@@ -92,7 +98,7 @@
   ],
   "presentation": {
     "title": "Sound composition",
-    "interfaceStatement": "One voice / luminance as pitch / language and visual relation as sequence / Living Object as signed displacement",
+    "interfaceStatement": "One voice / luminance as pitch / chromatic field as spectral continuity / language and visual relation as sequence / Living Object as signed displacement",
     "consent": "Sound never autoplays and begins only through explicit listener action.",
     "maximumGain": 0.08,
     "instrumentFamilies": ["Fold voice: sine fundamental, triangle harmonic, slow frequency movement"],
@@ -103,10 +109,10 @@
     "humanControl": "The listener may witness or silence the composition. No phase, arrangement, or layer is manually selectable.",
     "cycle": ["ground", "fold", "recurrence", "fracture", "convergence", "silence"],
     "ground": "Luminance ascent establishes the tonal center.",
-    "fold": "Dark and light extremes answer inward while nearest visual relations continue.",
+    "fold": "Dark and light extremes answer inward while chromatic and nearest visual relations continue.",
     "recurrence": "Recurring source language directly conducts its attributable works alongside collection and contract relations.",
     "fracture": "Luminance contrast determines whether two or three independent arrangements open the field through strongest visual difference.",
-    "convergence": "Visual continuity, ascent, and lineage seek a shared center without changing their individual order.",
+    "convergence": "Visual and chromatic continuity join lineage in seeking a shared center without changing their individual order.",
     "silence": "A state-derived rest preserves absence before the cycle reforms.",
     "phaseDuration": "Event budgets are deterministically derived from the state hash.",
     "stateChange": "A holdings change produces a new witness hash and therefore a newly proportioned evolution."
@@ -145,6 +151,10 @@
       "rule": "alternate the darkest remaining work with the lightest remaining work until the sequence reaches its center"
     },
     {
+      "id": "chromatic",
+      "rule": "order achromatic works by perceptual lightness, then traverse chromatic works from the first hue after the archive's largest unoccupied circular hue interval"
+    },
+    {
       "id": "continuity",
       "rule": "each work calls the nearest remaining visual signature"
     },
@@ -170,7 +180,7 @@
     }
   ],
   "lineage": {
-    "capture": ["composition ID", "grammar version", "state hash", "prior state hash", "Root Logos displacement-map witness", "displacement position", "radial displacement", "density displacement", "centroid displacement", "radial motion", "energy displacement", "Lexical Field term rank", "attributable lexical source order", "archive memory delta", "recognized motifs", "evolution phase", "active arrangement IDs", "phase event budget", "token identity", "luminance", "frequency", "instrument", "pulse", "envelope", "pan", "filter", "event order"],
+    "capture": ["composition ID", "grammar version", "state hash", "prior state hash", "Root Logos displacement-map witness", "displacement position", "radial displacement", "density displacement", "centroid displacement", "radial motion", "energy displacement", "Lexical Field term rank", "attributable lexical source order", "Chromatic Field seam", "perceptual hue", "chroma", "upper-partial ratio", "archive memory delta", "recognized motifs", "evolution phase", "active arrangement IDs", "phase event budget", "token identity", "luminance", "frequency", "instrument", "pulse", "envelope", "pan", "filter", "event order"],
     "revisionTrigger": "A memory rule, motif rule, evolutionary phase, phase transition, arrangement, layering, pitch, voice, scheduling, duration, or gain change requires a new grammar version."
   },
   "authority": {

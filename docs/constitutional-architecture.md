@@ -75,13 +75,22 @@ second language instrument: lexical evidence determines event order while each
 work retains its established pitch, pulse, envelope, spectrum, and spatial
 identity.
 
+Composition V supplies a distinct Chromatic Field. The same source derivatives
+are converted to OKLab, but works below the declared chroma threshold remain an
+achromatic ground ordered by perceptual lightness. Chromatic works form a
+circular hue field whose seam begins after the archive's largest unoccupied hue
+interval. This lets the evidence determine its own color-scale beginning. In
+the existing FoldForge voice, that order becomes a chromatic arrangement, hue
+shapes the upper partial, and chroma shapes harmonic intensity; luminance
+continues to determine pitch.
+
 The archive conducts these fixed work-level mappings through a six-phase autonomous macroform:
 
 1. Ground establishes the tonal center from luminance ascent.
-2. Fold brings dark and light extremes into alternating relation while visual continuity proceeds.
+2. Fold brings dark and light extremes into alternating relation while chromatic and visual continuity proceed.
 3. Recurrence layers lexical, collection, and contract memory according to archive diversity.
 4. Fracture opens two or three paths through visual counterpoint according to luminance contrast.
-5. Convergence brings visual continuity, ascent, and lineage into shared time.
+5. Convergence brings visual continuity, chromatic continuity, and lineage into shared time.
 6. Silence retains a state-derived interval before the cycle reforms.
 
 The listener may begin or silence the witness. Phase selection, event budgets, arrangement layering, and rest duration are derived from the current evidence and state hash, not manually controlled.
@@ -107,7 +116,7 @@ Future image, sound, video, language, or sequence grammars should begin as propo
 ## Instrument completion
 
 `FF-MILESTONE-0001` declares the FoldForge instrument complete at Resonant
-Holdings `10.0.0`. Completion does not freeze its performances: holdings,
+Holdings `11.0.0`. Completion does not freeze its performances: holdings,
 canonical media, visual signatures, archive memory, state-derived form, and
 the witnessed Root Logos displacement field continue to produce new states.
 
@@ -117,8 +126,15 @@ Reopening the instrument requires an evidenced failure or exceptional
 necessity, a new major grammar version, preserved rollback, and explicit human
 review of the completion boundary.
 
-The milestone records one explicit amendment from `9.0.0` to `10.0.0`.
+The milestone records explicit amendments from `9.0.0` to `10.0.0` and from
+`10.0.0` to `11.0.0`.
 Lexical Field had been named as a governed expression but was not directly
 sounded. Version `10.0.0` resolves that incompleteness by adding lexical
 source ordering to Recurrence through the existing unified voice. It adds no
 instrument, phase, or listener control.
+
+Version `11.0.0` resolves a second incompleteness established through explicit
+constitutional review: color was measured only inside pairwise visual distance
+and could not form a field comparable to luminance. Composition V makes that
+already-present evidence reproducibly composable without adding a voice, phase,
+listener control, or decorative interface color.

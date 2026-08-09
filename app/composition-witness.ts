@@ -73,6 +73,7 @@ export async function createCompositionWitness(input: WitnessInput): Promise<Com
       { id: composerGrammars.language.id, version: composerGrammars.language.version, modality: "language" as const },
       { id: composerGrammars.sound.id, version: composerGrammars.sound.version, modality: "sound" as const },
       { id: composerGrammars.visual.id, version: composerGrammars.visual.version, modality: "image" as const },
+      { id: composerGrammars.chromatic.id, version: composerGrammars.chromatic.version, modality: "image" as const },
     ],
     displacementMap: {
       id: "root-logos-living-object" as const,

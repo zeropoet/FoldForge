@@ -9,14 +9,15 @@
     "name": "FoldForge",
     "grammar": {
       "id": "FF-COMP-0003",
-      "version": "10.0.0"
+      "version": "11.0.0"
     },
-    "identity": "One unified FoldForge voice conducting nine deterministic arrangements through six autonomous phases.",
+    "identity": "One unified FoldForge voice conducting ten deterministic arrangements through six autonomous phases.",
     "completedForm": [
       "one sine-and-triangle FoldForge voice",
-      "nine deterministic arrangements",
+      "ten deterministic arrangements",
       "six autonomous phases",
       "visual relations governing continuity and counterpoint",
+      "an archive-derived Chromatic Field governing spectral continuity without coloring the interface",
       "Lexical Field recurrence directly conducting attributable source works",
       "archive evidence governing pitch, rhythm, spectrum, envelope, and space",
       "a witnessed Root Logos Living Object displacement field deforming the native voice around its baseline",
@@ -67,6 +68,13 @@
       "toGrammar": "FF-COMP-0003/10.0.0",
       "necessity": "The completed form named Lexical Field as a governed expression but left it outside the sound composition. Completion required all four declared compositions to participate directly.",
       "resolution": "Lexical recurrence now conducts attributable source works as a deterministic arrangement layer through the existing unified FoldForge voice. No voice, phase, listener control, or independent instrument was added."
+    },
+    {
+      "date": "2026-08-09",
+      "fromGrammar": "FF-COMP-0003/10.0.0",
+      "toGrammar": "FF-COMP-0003/11.0.0",
+      "necessity": "The completed instrument measured color only inside pairwise visual distance, leaving the archive's color-scale relation structurally unavailable beside its Luminance Field. Explicit constitutional review established the missing chromatic relation as evidence already present but not composed.",
+      "resolution": "Composition V derives an OKLCH continuum from the archive's own largest unoccupied hue interval. The existing FoldForge voice conducts that sequence while hue shapes its upper partial and chroma shapes intensity. No new voice, phase, listener control, or decorative interface color was added."
     }
   ],
   "declaration": "FoldForge now evolves through evidence, archive change, witnessed displacement, and performance. Its instrument does not evolve through the accumulation of new mechanisms."

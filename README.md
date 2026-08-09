@@ -11,7 +11,7 @@ FoldForge is a static Ethereum NFT archive and autonomous data composer for `zer
 - ENS/address archive lookup
 - Autonomous Ethereum NFT sound composition for `zeropoet.eth`
 - Hidden luminosity analysis across every visible holding
-- Color-and-composition signatures that sequence works by continuity and counterpoint
+- Perceptual-color signatures that compose an archive-derived chromatic continuum, continuity, and counterpoint
 - Six evidence-derived phases with deterministic arrangement layering
 - A single witnessed FoldForge voice spanning three octaves
 - Consent-first audio with only Witness and Silence controls
@@ -52,11 +52,13 @@ This is an exclusion policy rather than a fixed allowlist: collection and work t
 
 ## Holdings composition
 
-The archive resolves every visible holding into a hidden visual signature. Alongside luminance, FoldForge measures circular hue, saturation, contrast, edge rhythm, bilateral balance, and visual center of mass. These are relational observations, not quality scores.
+The archive resolves every visible holding into a hidden visual signature. Alongside luminance, FoldForge measures circular hue, saturation, OKLab lightness and chroma, contrast, edge rhythm, bilateral balance, and visual center of mass. These are relational observations, not quality scores.
 
 The signature composes in two directions: **Continuity** selects the nearest visual answer to the current work; **Counterpoint** selects the strongest available difference. In both cases contract address and token ID break exact ties. Evaluation therefore determines adjacency and motion without pretending to determine artistic value.
 
 The current living grammar is **Composition I — Luminance Field** (`FF-COMP-0001`, version `1.0.0`). Each image is reduced to a small grayscale sample and assigned an average perceived-luminance value. The hidden field orders those values from dark to light; contract address and token ID provide deterministic tie-breaking. New holdings are analyzed by the same rule automatically.
+
+**Composition V — Chromatic Field** (`FF-COMP-0005`, version `1.0.0`) reads the same 24px evidence in OKLab. Works below `0.02` mean chroma form an achromatic dark-to-light ground. The remaining hues are circularly ordered, and the first hue after the archive's largest unoccupied interval becomes the seam. Chroma, perceptual lightness, contract address, and token ID provide deterministic secondary order. The archive therefore derives its own color continuum instead of inheriting an arbitrary rainbow beginning.
 
 Luminance values are cached locally as a performance optimization. The cache is keyed by owner, token, and media URL, so changed media is recalculated. It does not control collection visibility or alter Ethereum data.
 
@@ -90,6 +92,7 @@ FoldForge's living scaffold is defined in:
 - `grammar/composition-002-lexical.json` — recurring language derived from collection, token, and description evidence
 - `grammar/composition-003-resonance.json` — consent-first unified sound mapping across a three-octave field
 - `grammar/composition-004-visual-relations.json` — color and spatial measurements composed as continuity and counterpoint
+- `grammar/composition-005-chromatic.json` — perceptual color composed around an archive-derived circular seam
 - `grammar/composition-witness.schema.json` — export contract for reproducible archive-state witnesses
 - `docs/constitutional-architecture.md` — evidence → grammar → composition architecture and revision boundary
 
@@ -98,7 +101,7 @@ Root Logos provides constitutional orientation, not a shared runtime or identity
 ### Instrument completion
 
 The FoldForge instrument is declared complete in `FF-MILESTONE-0001` at
-Resonant Holdings `10.0.0`. Its one voice, nine arrangements, six phases,
+Resonant Holdings `11.0.0`. Its one voice, ten arrangements, six phases,
 evidence mappings, visual relations, signed displacement, memory, motifs,
 consent, silence, and witness model constitute the completed form.
 
@@ -109,7 +112,7 @@ not enter through ordinary feature development. Reopening the grammar requires
 an evidenced failure or exceptional necessity, a new major version, preserved
 rollback, and explicit review of the completion declaration.
 
-The Composer Chamber gives the same holdings four governed compositions: Luminance Field, Lexical Field, Resonant Holdings, and Visual Relations. Language is extracted from recurring source terms and directly conducts its attributable works during Recurrence. Sound speaks through one synthesized FoldForge voice while independently mapping luminance to register and filtering, lexical and visual relations to event order, contract identity to harmonic character, token identity to rhythm, metadata density to envelope, and collection identity to a restrained stereo position. It never autoplays.
+The Composer Chamber gives the same holdings five governed compositions: Luminance Field, Lexical Field, Resonant Holdings, Visual Relations, and Chromatic Field. Language is extracted from recurring source terms and directly conducts its attributable works during Recurrence. Sound speaks through one synthesized FoldForge voice while independently mapping luminance to register and filtering, the Chromatic Field to sequence and upper-partial character, chroma to harmonic intensity, lexical and visual relations to event order, contract identity to harmonic identity, token identity to rhythm, metadata density to envelope, and collection identity to a restrained stereo position. It never autoplays. The interface remains black and white; color is evidence and relation, not decoration.
 
 Resonant Holdings also traverses a witnessed, 64-step root-to-crown displacement
 field derived from the current Root Logos Living Object geometry. The map does
@@ -134,7 +137,7 @@ changed witness is committed. The workflow reuses `ROOT_LOGOS_DISPATCH_TOKEN`
 for read-only checkout of Root Logos and the workflow-scoped `GITHUB_TOKEN` for
 its FoldForge commit and same-repository deployment dispatch.
 
-Resonant Holdings can traverse those fixed work-to-note relationships through nine deterministic arrangements: luminance ascent, luminance descent, recursive fold, visual continuity, visual counterpoint, lexical recurrence, collection bodies, contract/token lineage, and a witness-seeded scatter. These arrangements are no longer listener-controlled. The archive derives its own six-part macroform—Ground, Fold, Recurrence, Fracture, Convergence, and Silence—from its witness hash, visual-signature distribution, contrast, collection count, and collection diversity.
+Resonant Holdings can traverse those fixed work-to-note relationships through ten deterministic arrangements: luminance ascent, luminance descent, recursive fold, chromatic continuum, visual continuity, visual counterpoint, lexical recurrence, collection bodies, contract/token lineage, and a witness-seeded scatter. These arrangements are no longer listener-controlled. The archive derives its own six-part macroform—Ground, Fold, Recurrence, Fracture, Convergence, and Silence—from its witness hash, visual-signature distribution, contrast, collection count, and collection diversity.
 
 The listener can only begin (`Witness`) or end (`Silence`) the performance. Within the cycle, FoldForge selects one to three arrangement layers, assigns a state-derived event budget, advances every layer independently, normalizes their combined gain, enters a state-derived rest, and reforms. A holdings change produces a new witness hash and therefore a newly proportioned evolution without changing any individual work's evidence-derived sonic identity.
 
@@ -221,7 +224,7 @@ The Next.js configuration publishes from the domain root when `CUSTOM_DOMAIN` is
 
 FoldForge uses Next.js static export and performs Alchemy, ENS, image-derivative, visual-signature analysis, witness generation, displacement sampling, and Web Audio composition directly in the browser. It has no application server, database, account system, or cross-device preference synchronization.
 
-Alchemy provides owner, contract, token, and cached metadata. `app/collection-policy.ts` applies repository-owned exclusions. `app/nft-data.ts` normalizes provider media and constructs responsive derivative URLs. `app/page.tsx` resolves the archive and computes or restores visual signatures. `app/composition-witness.ts` seals archive evidence with the current displacement-map witness, while `app/composer-chamber.tsx` derives the lexical field, autonomous six-phase macroform, visual-relation arrangements, displacement field, and unified FoldForge voice.
+Alchemy provides owner, contract, token, and cached metadata. `app/collection-policy.ts` applies repository-owned exclusions. `app/nft-data.ts` normalizes provider media and constructs responsive derivative URLs. `app/page.tsx` resolves the archive and computes or restores versioned visual signatures. `app/composition-witness.ts` seals every grammar and the current displacement-map witness into archive evidence, while `app/composer-chamber.tsx` derives the lexical field, archive-seamed chromatic field, autonomous six-phase macroform, visual-relation arrangements, displacement field, and unified FoldForge voice.
 
 The FOLD FORGE contract
 `0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc` is tokenURI-first. FoldForge

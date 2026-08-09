@@ -3,7 +3,12 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { composerGrammars } from "./composition-grammar";
 import type { WitnessToken } from "./composition-witness";
-import { composeVisualSequence, type VisualSignature } from "./visual-analysis";
+import {
+  ACHROMATIC_CHROMA_THRESHOLD,
+  composeChromaticSequence,
+  composeVisualSequence,
+  type VisualSignature,
+} from "./visual-analysis";
 import livingObjectDisplacement from "../public/root-logos-living-object-displacement.json";
 
 export interface ComposerEvidence {
@@ -31,12 +36,13 @@ interface SoundProfile {
   pan: number;
   cutoff: number;
   harmonic: number;
+  harmonicRatio: number;
   densityDisplacement: number;
   energyDisplacement: number;
   radialDisplacement: number;
 }
 
-type ArrangementMode = "ascent" | "descent" | "fold" | "continuity" | "counterpoint" | "lexical" | "collections" | "lineage" | "scatter";
+type ArrangementMode = "ascent" | "descent" | "fold" | "chromatic" | "continuity" | "counterpoint" | "lexical" | "collections" | "lineage" | "scatter";
 type EvolutionPhaseId = "ground" | "fold" | "recurrence" | "fracture" | "convergence" | "silence";
 
 interface EvolutionPhase {
@@ -68,6 +74,7 @@ const arrangementModes: Array<{
   { id: "ascent", label: "Ascent", description: "Dark → light" },
   { id: "descent", label: "Descent", description: "Light → dark" },
   { id: "fold", label: "Fold", description: "Outer values → center" },
+  { id: "chromatic", label: "Chromatic", description: "Archive-derived hue continuum" },
   { id: "continuity", label: "Continuity", description: "Nearest visual answer" },
   { id: "counterpoint", label: "Counterpoint", description: "Strongest visual difference" },
   { id: "lexical", label: "Lexical", description: "Recurring language → source works" },
@@ -145,6 +152,7 @@ function arrangeEvidence(
     }
     return folded;
   }
+  if (mode === "chromatic") return composeChromaticSequence(ordered);
   if (mode === "continuity" || mode === "counterpoint") {
     return composeVisualSequence(ordered, mode);
   }
@@ -209,8 +217,8 @@ function deriveEvolution(evidence: ComposerEvidence[], stateHash: string): Evolu
     {
       id: "fold",
       label: "Fold",
-      description: "Luminance folds while nearest visual answers continue",
-      arrangements: ["fold", "continuity"],
+      description: "Luminance folds while chromatic and visual relations continue",
+      arrangements: ["fold", "chromatic", "continuity"],
       events: span(24, 13, 4),
     },
     {
@@ -232,8 +240,8 @@ function deriveEvolution(evidence: ComposerEvidence[], stateHash: string): Evolu
     {
       id: "convergence",
       label: "Convergence",
-      description: "Independent paths return through visual continuity",
-      arrangements: ["continuity", "ascent", "lineage"],
+      description: "Independent paths return through visual and chromatic continuity",
+      arrangements: ["continuity", "chromatic", "lineage"],
       events: span(28, 15, 16),
     },
     {
@@ -327,6 +335,8 @@ function soundProfile(token: ComposerEvidence, displacementPosition = 0.5): Soun
   const noteIndex = Math.round(bounded * 15);
   const octave = Math.floor(noteIndex / scaleSemitones.length);
   const semitone = scaleSemitones[noteIndex % scaleSemitones.length] + octave * 12;
+  const chroma = Math.max(0, Math.min(1, (token.visual?.chroma ?? 0) / 0.32));
+  const perceptualHue = token.visual?.perceptualHue ?? 0;
 
   return {
     frequency: 73.416 * 2 ** (semitone / 12),
@@ -338,7 +348,8 @@ function soundProfile(token: ComposerEvidence, displacementPosition = 0.5): Soun
       displacement.motion * 0.08,
     )),
     cutoff: (520 + bounded * 3300) * 2 ** (displacement.radial * 0.35),
-    harmonic: (0.08 + (contractSeed % 19) / 100) * (1 + displacement.density * 0.22),
+    harmonic: (0.08 + (contractSeed % 19) / 100) * (0.72 + chroma * 0.56) * (1 + displacement.density * 0.22),
+    harmonicRatio: 1.5 + (perceptualHue / 360) * 1.5,
     densityDisplacement: displacement.density,
     energyDisplacement: displacement.energy,
     radialDisplacement: displacement.radial,
@@ -380,7 +391,7 @@ function scheduleTone(
     fundamental.frequency.exponentialRampToValueAtTime(profile.frequency, now + profile.duration * 0.72);
   }
   harmonic.type = "triangle";
-  harmonic.frequency.setValueAtTime(profile.frequency * 2, now);
+  harmonic.frequency.setValueAtTime(profile.frequency * profile.harmonicRatio, now);
   harmonic.detune.setValueAtTime((stableNumber(token.contract) % 9) - 4, now);
   harmonicGain.gain.setValueAtTime(profile.harmonic, now);
   movement.frequency.setValueAtTime(0.7 + (stableNumber(token.tokenId) % 8) / 10, now);
@@ -422,6 +433,17 @@ export default function ComposerChamber({
     [evidence, previousEvidence],
   );
   const motifs = useMemo(() => deriveMotifs(evidence), [evidence]);
+  const chromaticSequence = useMemo(
+    () => composeChromaticSequence(evidence.filter((token) => token.visual)),
+    [evidence],
+  );
+  const chromaticCount = chromaticSequence.filter(
+    (token) => (token.visual?.chroma ?? 0) >= ACHROMATIC_CHROMA_THRESHOLD,
+  ).length;
+  const achromaticCount = chromaticSequence.length - chromaticCount;
+  const chromaticSeam = chromaticSequence.find(
+    (token) => (token.visual?.chroma ?? 0) >= ACHROMATIC_CHROMA_THRESHOLD,
+  )?.visual?.perceptualHue;
   const arrangedEvidence = useMemo(() => Object.fromEntries(
     arrangementModes.map((mode) => [
       mode.id,
@@ -627,7 +649,7 @@ export default function ComposerChamber({
         <div className="font-mono text-[7px] uppercase leading-5 tracking-[0.14em] text-white/25 md:text-right">
           <p>Witness / {stateHash.slice(7, 19)}</p>
           <p>{evidence.length.toString().padStart(3, "0")} source works</p>
-          <p>Grammars 002–004 / living</p>
+          <p>Grammars 002–005 / living</p>
         </div>
       </div>
 
@@ -671,6 +693,14 @@ export default function ComposerChamber({
                 ))}
               </div>
             </div>
+          </div>
+          <div className="mt-8 border-t border-white/15 pt-5">
+            <CompositionHeader grammar={composerGrammars.chromatic} />
+            <dl className="mt-5 grid grid-cols-3 gap-px bg-white/10 font-mono text-[7px] uppercase tracking-[0.1em]">
+              <div className="bg-black p-3"><dt className="text-white/25">Ground</dt><dd className="mt-2 text-white/60">{achromaticCount.toString().padStart(2, "0")}</dd></div>
+              <div className="bg-black p-3"><dt className="text-white/25">Chromatic</dt><dd className="mt-2 text-white/60">{chromaticCount.toString().padStart(2, "0")}</dd></div>
+              <div className="bg-black p-3"><dt className="text-white/25">Seam</dt><dd className="mt-2 text-white/60">{chromaticSeam == null ? "—" : `${Math.round(chromaticSeam)}°`}</dd></div>
+            </dl>
           </div>
         </article>
 

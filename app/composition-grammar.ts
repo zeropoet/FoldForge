@@ -2,6 +2,7 @@ import luminanceField from "../grammar/composition-001-luminance.json";
 import lexicalField from "../grammar/composition-002-lexical.json";
 import resonantHoldings from "../grammar/composition-003-resonance.json";
 import visualRelations from "../grammar/composition-004-visual-relations.json";
+import chromaticField from "../grammar/composition-005-chromatic.json";
 
 export const compositionGrammar = {
   id: luminanceField.id,
@@ -28,4 +29,5 @@ export const composerGrammars = {
   language: interfaceGrammar(lexicalField),
   sound: interfaceGrammar(resonantHoldings),
   visual: interfaceGrammar(visualRelations),
+  chromatic: interfaceGrammar(chromaticField),
 } as const;

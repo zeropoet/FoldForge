@@ -1,0 +1,66 @@
+{
+  "schema": "foldforge-composition/v1",
+  "id": "FF-COMP-0005",
+  "version": "1.0.0",
+  "status": "living",
+  "title": "Chromatic Field",
+  "constitutionRevision": "v0.1",
+  "discovery": {
+    "name": "Composition V",
+    "statement": "The archive finds its own chromatic beginning where its measured hue field leaves the greatest interval unoccupied.",
+    "date": "2026-08-09"
+  },
+  "evidence": {
+    "network": "Ethereum mainnet",
+    "ownerScope": "selected archive identity",
+    "inclusionPolicy": "same visible holdings as Composition I",
+    "requiredFields": ["contract address", "token ID", "owner state", "token media URL"]
+  },
+  "transformations": [
+    {
+      "order": 1,
+      "operation": "sample",
+      "input": "token image",
+      "output": "24 by 24 pixel derivative composited against black"
+    },
+    {
+      "order": 2,
+      "operation": "measure",
+      "input": "sample pixels converted from sRGB to OKLab",
+      "output": "mean perceptual lightness, chroma, and circular hue"
+    },
+    {
+      "order": 3,
+      "operation": "distinguish",
+      "input": "mean OKLCH chroma",
+      "output": "achromatic ground below 0.02 chroma and chromatic field at or above 0.02 chroma"
+    },
+    {
+      "order": 4,
+      "operation": "locate seam",
+      "input": "sorted circular hues of chromatic works",
+      "output": "the first work after the largest unoccupied hue interval",
+      "tieBreak": "contract address and token ID"
+    },
+    {
+      "order": 5,
+      "operation": "compose",
+      "input": "achromatic and chromatic measurements",
+      "output": "achromatic dark-to-light ground followed by an archive-derived circular chromatic continuum",
+      "tieBreak": "hue, chroma, perceptual lightness, contract address, and token ID"
+    }
+  ],
+  "presentation": {
+    "title": "Chromatic field",
+    "interfaceStatement": "Achromatic ground / the archive finds the seam / color continues around itself",
+    "interfaceBoundary": "FoldForge remains monochrome; source color is revealed through source works rather than decorative interface color."
+  },
+  "lineage": {
+    "capture": ["OKLab mean", "perceptual lightness", "OKLCH chroma", "OKLCH hue", "achromatic threshold", "largest hue gap", "derived seam", "deterministic state hash"],
+    "revisionTrigger": "A color space, alpha treatment, achromatic threshold, seam rule, secondary order, interpretation, or presentation change requires a new grammar version."
+  },
+  "authority": {
+    "claims": "The field is a reproducible ordering of sampled perceptual color for the selected archive state.",
+    "doesNotClaim": "The field determines canonical artwork color, artistic intention, emotional meaning, quality, or value."
+  }
+}

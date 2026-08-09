@@ -307,7 +307,7 @@ export default function FoldForge() {
     const entries = compositionTokens
       .map((token) => ({ key: compositionKey(token), media: compositionMediaFor(token) }))
       .filter((entry) => entry.media);
-    const storageKey = `foldforge:visual-analysis:v2:${ownerIdentity.address.toLowerCase()}`;
+    const storageKey = `foldforge:visual-analysis:v3:${ownerIdentity.address.toLowerCase()}`;
 
     queueMicrotask(async () => {
       setCompositionAnalyzing(true);
