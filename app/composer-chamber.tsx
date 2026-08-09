@@ -620,10 +620,7 @@ export default function ComposerChamber({
       <div className="mb-8 grid gap-5 md:grid-cols-[1fr_auto] md:items-end">
         <div>
           <p className="text-[9px] uppercase tracking-[0.28em] text-white/45">Composer chamber</p>
-          <h2 className="mt-4 max-w-4xl text-3xl font-light uppercase tracking-[-0.035em] md:text-6xl">
-            The archive becomes<br />an instrument.
-          </h2>
-          <p className="mt-5 max-w-2xl text-[9px] uppercase leading-5 tracking-[0.18em] text-white/30">
+          <p className="mt-4 max-w-2xl text-[9px] uppercase leading-5 tracking-[0.18em] text-white/30">
             A witnessed Ethereum archive conducting color, spatial form, recurrence, fracture, convergence, and rest.
           </p>
         </div>
