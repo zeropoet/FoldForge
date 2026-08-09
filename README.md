@@ -121,13 +121,18 @@ retains its own evidence-derived pitch. The committed displacement records the
 Root Logos revision, geometry generator, neutral geometry, point count, bounds,
 and SHA-256 witness; regenerate it with `npm run build:displacement-map`.
 
-The [monthly displacement-renewal workflow](.github/workflows/renew-root-logos-displacement.yml)
-runs at 06:17 UTC on the first day of each month and may also be started
-manually. It checks out the current Root Logos repository, rebuilds the map,
-validates FoldForge, and commits only when the witnessed geometry has changed.
-That focused commit triggers the normal Pages deployment. The workflow reuses
-`ROOT_LOGOS_DISPATCH_TOKEN` for read-only checkout of Root Logos and the
-workflow-scoped `GITHUB_TOKEN` for its FoldForge commit.
+The [displacement-renewal workflow](.github/workflows/renew-root-logos-displacement.yml)
+checks current Root Logos geometry at minute 11 of every hour, accepts a
+`root-logos-published` repository dispatch when one is available, and may also
+be started manually. The hourly check is the bounded recovery path that keeps
+the systems convergent without requiring a cross-repository sender credential.
+It regenerates the map before installing the full FoldForge toolchain, then
+installs, tests, builds, and commits only when the witnessed geometry has
+actually changed. Because workflow-token commits do not emit a second `push`
+workflow, the renewal explicitly dispatches the normal Pages publisher after a
+changed witness is committed. The workflow reuses `ROOT_LOGOS_DISPATCH_TOKEN`
+for read-only checkout of Root Logos and the workflow-scoped `GITHUB_TOKEN` for
+its FoldForge commit and same-repository deployment dispatch.
 
 Resonant Holdings can traverse those fixed work-to-note relationships through nine deterministic arrangements: luminance ascent, luminance descent, recursive fold, visual continuity, visual counterpoint, lexical recurrence, collection bodies, contract/token lineage, and a witness-seeded scatter. These arrangements are no longer listener-controlled. The archive derives its own six-part macroform—Ground, Fold, Recurrence, Fracture, Convergence, and Silence—from its witness hash, visual-signature distribution, contrast, collection count, and collection diversity.
 
