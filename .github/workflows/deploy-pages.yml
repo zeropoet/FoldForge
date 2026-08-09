@@ -69,7 +69,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
       - name: Wake Root Logos source integration
-        if: needs.build.outputs.language_changed == 'true'
+        if: github.event_name == 'push' || needs.build.outputs.language_changed == 'true'
         env:
           ROOT_LOGOS_DISPATCH_TOKEN: ${{ secrets.ROOT_LOGOS_DISPATCH_TOKEN }}
           FOLDFORGE_REVISION: ${{ github.sha }}

@@ -174,8 +174,12 @@ Minted-work records link to the contract and token on Etherscan and expose origi
 
 Deployment is automated by [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) whenever `main` is updated.
 The production deployment is published at [foldforge.xyz](https://foldforge.xyz).
-After a successful deployment, FoldForge dispatches its exact published commit
-to Root Logos for immediate connected-source witnessing. The publisher uses the
+After a successful deployment of every source push, FoldForge dispatches its
+exact published commit to Root Logos for immediate connected-source witnessing.
+Hourly archive observations also dispatch when their confirmed language witness
+changes. Root Logos performs the final witness comparison, so a source push
+whose public grammars and normalized language are unchanged remains dormant
+after inspection. The publisher uses the
 least-privilege `ROOT_LOGOS_DISPATCH_TOKEN` Actions secret, scoped only to Root
 Logos repository contents; Root Logos's daily source check remains the recovery
 path.
