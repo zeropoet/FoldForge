@@ -115,6 +115,7 @@ export default function SonicForge() {
   const [rendering, setRendering] = useState(false);
   const [masterPlaying, setMasterPlaying] = useState(false);
   const [library, setLibrary] = useState<LibraryTrack[]>([]);
+  const [playhead, setPlayhead] = useState(0);
 
   useEffect(() => () => {
     if (sourceUrl.current) URL.revokeObjectURL(sourceUrl.current);
@@ -184,6 +185,22 @@ export default function SonicForge() {
     if (playing && monitor === "sculpted") animationRef.current = requestAnimationFrame(tick);
     return () => { if (animationRef.current) cancelAnimationFrame(animationRef.current); };
   }, [displacement, monitor, phaseStretch, playing]);
+
+  useEffect(() => {
+    let frame = 0;
+    const update = () => {
+      const active = masterPlaying ? masterAudioRef.current : audioRef.current;
+      if (!active || active.paused) return;
+      setPlayhead(clamp(active.currentTime / Math.max(active.duration, 0.001), 0, 1));
+      frame = requestAnimationFrame(update);
+    };
+    if (playing || masterPlaying) frame = requestAnimationFrame(update);
+    return () => cancelAnimationFrame(frame);
+  }, [masterPlaying, playing]);
+
+  const activePhaseIndex = Math.min(phases.length - 1, Math.floor(playhead * phases.length));
+  const phaseProgress = (playhead * phases.length - activePhaseIndex) * 100;
+  const progressDuration = masterPlaying ? master?.metrics.duration ?? evidence?.duration ?? 0 : evidence?.duration ?? 0;
 
   const ingest = useCallback(async (file?: File) => {
     if (!file) return;
@@ -363,18 +380,18 @@ export default function SonicForge() {
           <>
             <section className="mt-10 border border-white/25">
               <div className="grid border-b border-white/20 md:grid-cols-[1fr_auto] md:items-center"><div className="min-w-0 p-5 md:p-7"><p className="truncate text-xl font-light">{evidence.name}</p><p className="mt-2 font-mono text-[8px] uppercase tracking-[0.14em] text-white/35">{status}</p></div><div className="grid grid-cols-4 border-t border-white/20 md:border-l md:border-t-0"><Metric label="Duration" value={formatTime(evidence.duration)} /><Metric label="Rate" value={`${(evidence.sampleRate / 1000).toFixed(1)}k`} /><Metric label="Field" value={evidence.channels === 1 ? "Mono" : `${evidence.channels}ch`} /><Metric label="Peak" value={`${db(evidence.peak).toFixed(1)} dB`} /></div></div>
-              <div className="sonic-waveform relative flex h-52 items-center gap-px overflow-hidden px-4" aria-label="Source waveform">{evidence.waveform.map((value, index) => <span key={index} style={{ height: `${Math.max(1, value * 100)}%` }} />)}<div className="sonic-scan" /></div>
+              <div className="sonic-waveform relative flex h-52 items-center gap-px overflow-hidden px-4" aria-label="Source waveform">{evidence.waveform.map((value, index) => <span key={index} style={{ height: `${Math.max(1, value * 100)}%` }} />)}<div className="sonic-scan" style={{ left: `${playhead * 100}%` }} /></div>
               <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/20 p-4"><div className="flex flex-wrap gap-2"><button className="border border-white px-5 py-3 text-[9px] uppercase tracking-[0.2em]" onClick={() => void togglePlayback()}>{playing ? "Pause" : "Witness sound"}</button><div className="flex border border-white/30"><button aria-pressed={monitor === "source"} className={`px-4 py-3 text-[8px] uppercase tracking-[0.17em] ${monitor === "source" ? "bg-white text-black" : "text-white/45"}`} onClick={() => setMonitor("source")}>Source</button><button aria-pressed={monitor === "sculpted"} className={`px-4 py-3 text-[8px] uppercase tracking-[0.17em] ${monitor === "sculpted" ? "bg-white text-black" : "text-white/45"}`} onClick={() => setMonitor("sculpted")}>Sculpted</button></div></div><button className="text-[9px] uppercase tracking-[0.18em] text-white/45 hover:text-white" onClick={() => { audioRef.current?.pause(); setEvidence(null); setAudioBuffer(null); setPlaying(false); }}>Replace source</button><audio ref={audioRef} src={audioUrl} onPause={() => setPlaying(false)} onPlay={() => setPlaying(true)} /></div>
             </section>
 
-            <div className="mt-6 flex items-center gap-3 font-mono text-[8px] uppercase tracking-[0.15em] text-white/30"><span className={`h-1.5 w-1.5 ${playing && monitor === "sculpted" ? "bg-white" : "border border-white/50"}`} />{playing ? `${monitor} monitor active` : "Audio graph armed on first playback"}</div>
+            <div className="mt-6 flex flex-wrap items-center justify-between gap-3 font-mono text-[8px] uppercase tracking-[0.15em] text-white/30"><span className="flex items-center gap-3"><span className={`h-1.5 w-1.5 ${playing && monitor === "sculpted" ? "bg-white" : "border border-white/50"}`} />{playing ? `${monitor} monitor active` : masterPlaying ? "Master monitor active" : "Audio graph armed on first playback"}</span><span>{formatTime(playhead * progressDuration)} / {formatTime(progressDuration)} · {phases[activePhaseIndex][0]} {phaseProgress.toFixed(0)}%</span></div>
             <section className="mt-6 grid gap-px bg-white/20 lg:grid-cols-3">
               <InstrumentStage label="01 / Clarify" description="The source is stabilized and its existing voice is revealed." />
               <InstrumentStage label="02 / Displace" description="The centered voice traverses witnessed depth, energy, and recurrence." />
               <InstrumentStage label="03 / Synthesize" description="Steel partials and voice-like formants are excited from the source." />
             </section>
 
-            <section className="mt-12 border-y border-white/20 py-8"><div className="flex flex-wrap items-end justify-between gap-6"><div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">FoldForge progression / deterministic score</p><h2 className="mt-3 text-3xl font-light tracking-[-0.04em]">One source / one witnessed traversal</h2></div><p className="max-w-xs text-right font-mono text-[8px] uppercase leading-4 tracking-[0.15em] text-white/30">Fixed instrument / no performance controls</p></div><div className="sonic-timeline mt-10 grid grid-cols-2 gap-px bg-white/20 md:grid-cols-6">{phases.map(([name, description], index) => <div className="bg-black p-4" key={name}><span className="font-mono text-[8px] text-white/25">{String(index + 1).padStart(2, "0")}</span><h3 className="mt-8 text-sm uppercase tracking-[0.12em]">{name}</h3><p className="mt-2 text-[10px] leading-4 text-white/35">{description}</p></div>)}</div></section>
+            <section className="mt-12 border-y border-white/20 py-8"><div className="flex flex-wrap items-end justify-between gap-6"><div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">FoldForge progression / deterministic score</p><h2 className="mt-3 text-3xl font-light tracking-[-0.04em]">One source / one witnessed traversal</h2></div><p className="max-w-xs text-right font-mono text-[8px] uppercase leading-4 tracking-[0.15em] text-white/30">Fixed instrument / no performance controls</p></div><div className="sonic-timeline relative mt-10 grid grid-cols-2 gap-px bg-white/20 md:grid-cols-6"><div className="sonic-timeline-progress" style={{ width: `${playhead * 100}%` }} />{phases.map(([name, description], index) => <div className={`relative bg-black p-4 ${index === activePhaseIndex && (playing || masterPlaying) ? "is-current" : ""}`} key={name}><span className="font-mono text-[8px] text-white/25">{String(index + 1).padStart(2, "0")}</span><h3 className="mt-8 text-sm uppercase tracking-[0.12em]">{name}</h3><p className="mt-2 text-[10px] leading-4 text-white/35">{description}</p>{index === activePhaseIndex && (playing || masterPlaying) ? <span className="absolute inset-x-0 bottom-0 h-px bg-white" style={{ width: `${phaseProgress}%` }} /> : null}</div>)}</div></section>
 
             <section className="mt-12 border border-white/25">
               <div className="grid gap-8 p-6 md:grid-cols-[1fr_auto] md:items-end md:p-8"><div><p className="text-[9px] uppercase tracking-[0.24em] text-white/40">Master chamber</p><h2 className="mt-3 text-3xl font-light tracking-[-0.04em]">Seal this progression into sound</h2><p className="mt-4 max-w-2xl text-sm leading-6 text-white/55">Offline rendering traverses the complete witnessed displacement field, normalizes for laptop playback, and encodes a lossless 48 kHz / 24-bit stereo WAV. The same source under the same instrument version produces the same master.</p></div><button disabled={rendering} className="border border-white px-6 py-4 text-[9px] uppercase tracking-[0.2em] hover:bg-white hover:text-black" onClick={() => void createMaster()}>{rendering ? "Rendering progression…" : master ? "Render again" : "Render master"}</button></div>
