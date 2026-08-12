@@ -97,6 +97,7 @@ export default function SonicForge() {
   const sourceUrl = useRef<string | null>(null);
   const masterUrl = useRef<string | null>(null);
   const graphRef = useRef<SonicGraph | null>(null);
+  const animationRef = useRef<number | null>(null);
   const [evidence, setEvidence] = useState<AudioEvidence | null>(null);
   const [audioBuffer, setAudioBuffer] = useState<AudioBuffer | null>(null);
   const [audioUrl, setAudioUrl] = useState("");
@@ -118,6 +119,7 @@ export default function SonicForge() {
   useEffect(() => () => {
     if (sourceUrl.current) URL.revokeObjectURL(sourceUrl.current);
     if (masterUrl.current) URL.revokeObjectURL(masterUrl.current);
+    if (animationRef.current) cancelAnimationFrame(animationRef.current);
     void graphRef.current?.context.close();
   }, []);
 
@@ -136,21 +138,46 @@ export default function SonicForge() {
     graph.sculpt.gain.setTargetAtTime(sculpted ? 1 : 0, now, 0.015);
     graph.highpass.frequency.setTargetAtTime(20 + c * 55, now, 0.03);
     graph.presence.frequency.setTargetAtTime(2_400 + c * 1_300, now, 0.03);
-    graph.presence.gain.setTargetAtTime(c * 2.4, now, 0.03);
-    graph.compressor.threshold.setTargetAtTime(-8 - c * 18, now, 0.03);
-    graph.compressor.ratio.setTargetAtTime(1 + c * 2.8, now, 0.03);
-    graph.delay.delayTime.setTargetAtTime(0.006 + d * 0.034, now, 0.03);
-    graph.feedback.gain.setTargetAtTime(d * 0.18, now, 0.03);
-    graph.wet.gain.setTargetAtTime(d * 0.3, now, 0.03);
-    graph.synth.gain.setTargetAtTime(s * 0.28, now, 0.03);
+    graph.presence.gain.setTargetAtTime(c * 4.5, now, 0.03);
+    graph.compressor.threshold.setTargetAtTime(-10 - c * 22, now, 0.03);
+    graph.compressor.ratio.setTargetAtTime(1 + c * 4.5, now, 0.03);
+    graph.delay.delayTime.setTargetAtTime(0.008 + d * 0.055, now, 0.03);
+    graph.feedback.gain.setTargetAtTime(d * 0.26, now, 0.03);
+    graph.wet.gain.setTargetAtTime(d * 0.46, now, 0.03);
+    graph.synth.gain.setTargetAtTime(s * 0.38, now, 0.03);
     const witnessSample = displacementMap.samples[Math.min(displacementMap.samples.length - 1, Math.round(d * (displacementMap.samples.length - 1)))];
-    graph.panner.pan.setTargetAtTime(clamp(witnessSample.horizontalDisplacement * d * 2.4, -0.7, 0.7), now, 0.08);
-    graph.output.gain.setTargetAtTime(sculpted ? 0.93 : 1, now, 0.03);
+    graph.panner.pan.setTargetAtTime(clamp(witnessSample.horizontalDisplacement * d * 4.5, -0.78, 0.78), now, 0.08);
+    graph.output.gain.setTargetAtTime(sculpted ? 0.88 : 1, now, 0.03);
   }, []);
 
   useEffect(() => {
     if (graphRef.current) updateGraph(graphRef.current, monitor, clarity, displacement, synthesis);
   }, [clarity, displacement, monitor, synthesis, updateGraph]);
+
+  useEffect(() => {
+    if (animationRef.current) cancelAnimationFrame(animationRef.current);
+    const tick = () => {
+      const audio = audioRef.current;
+      const graph = graphRef.current;
+      if (!audio || !graph || audio.paused || monitor !== "sculpted") return;
+      const linear = clamp(audio.currentTime / Math.max(audio.duration, 0.001), 0, 1);
+      const curve = 0.45 + phaseStretch / 100 * 1.1;
+      const position = linear ** (1 / curve);
+      const samplePosition = position * (displacementMap.samples.length - 1);
+      const left = Math.floor(samplePosition);
+      const right = Math.min(displacementMap.samples.length - 1, left + 1);
+      const mix = samplePosition - left;
+      const interpolate = (key: "horizontalDisplacement" | "depthDisplacement" | "energyDisplacement") => displacementMap.samples[left][key] + (displacementMap.samples[right][key] - displacementMap.samples[left][key]) * mix;
+      const amount = displacement / 100;
+      const now = graph.context.currentTime;
+      graph.panner.pan.setTargetAtTime(clamp(interpolate("horizontalDisplacement") * amount * 4.5, -0.78, 0.78), now, 0.035);
+      graph.delay.delayTime.setTargetAtTime(0.008 + Math.abs(interpolate("depthDisplacement")) * amount * 0.42, now, 0.035);
+      graph.wet.gain.setTargetAtTime(clamp((0.24 + interpolate("energyDisplacement") * 0.13) * amount, 0.03, 0.5), now, 0.035);
+      animationRef.current = requestAnimationFrame(tick);
+    };
+    if (playing && monitor === "sculpted") animationRef.current = requestAnimationFrame(tick);
+    return () => { if (animationRef.current) cancelAnimationFrame(animationRef.current); };
+  }, [displacement, monitor, phaseStretch, playing]);
 
   const ingest = useCallback(async (file?: File) => {
     if (!file) return;
@@ -324,8 +351,8 @@ export default function SonicForge() {
             <div className="mt-6 flex items-center gap-3 font-mono text-[8px] uppercase tracking-[0.15em] text-white/30"><span className={`h-1.5 w-1.5 ${playing && monitor === "sculpted" ? "bg-white" : "border border-white/50"}`} />{playing ? `${monitor} monitor active` : "Audio graph armed on first playback"}</div>
             <section className="mt-6 grid gap-px bg-white/20 lg:grid-cols-3">
               <Stage id="clarify" active={activeStage === "clarify"} label="01 / Clarify" description="Stabilize and reveal what the source already contains." value={clarity} onActivate={() => setActiveStage("clarify")} onChange={setClarity} />
-              <Stage id="displace" active={activeStage === "displace"} label="02 / Displace" description="Move the intact source through witnessed spatial relations." value={displacement} onActivate={() => setActiveStage("displace")} onChange={setDisplacement} />
-              <Stage id="synthesize" active={activeStage === "synthesize"} label="03 / Synthesize" description="Introduce new FoldForge material under explicit control." value={synthesis} onActivate={() => setActiveStage("synthesize")} onChange={setSynthesis} />
+              <Stage id="displace" active={activeStage === "displace"} label="02 / Displace" description="Traverse the witnessed field across live playback." value={displacement} onActivate={() => setActiveStage("displace")} onChange={setDisplacement} />
+              <Stage id="synthesize" active={activeStage === "synthesize"} label="03 / Synthesize" description="Introduce new harmonic material; 0% adds none." value={synthesis} onActivate={() => setActiveStage("synthesize")} onChange={setSynthesis} />
             </section>
 
             <section className="mt-12 border-y border-white/20 py-8"><div className="flex flex-wrap items-end justify-between gap-6"><div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">FoldForge progression / temporal score</p><h2 className="mt-3 text-3xl font-light tracking-[-0.04em]">Stretch the archive through the sound</h2></div><label className="w-full max-w-xs text-[8px] uppercase tracking-[0.18em] text-white/45">Timeline stretch / {phaseStretch}<input className="mt-3 w-full" type="range" min="0" max="100" value={phaseStretch} onChange={(event) => setPhaseStretch(Number(event.target.value))} /></label></div><div className="sonic-timeline mt-10 grid grid-cols-2 gap-px bg-white/20 md:grid-cols-6">{phases.map(([name, description], index) => <div className="bg-black p-4" key={name} style={{ minHeight: `${120 + Math.abs(phaseStretch - 50) * (index % 2 ? .7 : .25)}px` }}><span className="font-mono text-[8px] text-white/25">{String(index + 1).padStart(2, "0")}</span><h3 className="mt-8 text-sm uppercase tracking-[0.12em]">{name}</h3><p className="mt-2 text-[10px] leading-4 text-white/35">{description}</p></div>)}</div></section>

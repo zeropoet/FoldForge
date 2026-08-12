@@ -59,9 +59,9 @@ function scheduleProgression(
     const position = index / Math.max(1, displacementMap.samples.length - 1);
     const warped = position ** curve;
     const time = warped * duration;
-    panner.pan.linearRampToValueAtTime(clamp(sample.horizontalDisplacement * amount * 2.4, -0.7, 0.7), time);
-    delay.delayTime.linearRampToValueAtTime(0.006 + Math.abs(sample.depthDisplacement) * amount * 0.085, time);
-    wet.gain.linearRampToValueAtTime(clamp((0.12 + sample.energyDisplacement * 0.08) * amount, 0, 0.34), time);
+    panner.pan.linearRampToValueAtTime(clamp(sample.horizontalDisplacement * amount * 4.5, -0.78, 0.78), time);
+    delay.delayTime.linearRampToValueAtTime(0.008 + Math.abs(sample.depthDisplacement) * amount * 0.42, time);
+    wet.gain.linearRampToValueAtTime(clamp((0.24 + sample.energyDisplacement * 0.13) * amount, 0.03, 0.5), time);
   });
 }
 
@@ -77,25 +77,25 @@ export async function renderMaster(buffer: AudioBuffer, controls: RenderControls
   presence.type = "peaking";
   presence.frequency.value = 2_400 + controls.clarity / 100 * 1_300;
   presence.Q.value = 0.72;
-  presence.gain.value = controls.clarity / 100 * 2.4;
+  presence.gain.value = controls.clarity / 100 * 4.5;
   const compressor = context.createDynamicsCompressor();
-  compressor.threshold.value = -8 - controls.clarity / 100 * 18;
-  compressor.ratio.value = 1 + controls.clarity / 100 * 2.8;
+  compressor.threshold.value = -10 - controls.clarity / 100 * 22;
+  compressor.ratio.value = 1 + controls.clarity / 100 * 4.5;
   compressor.attack.value = 0.012;
   compressor.release.value = 0.22;
   compressor.knee.value = 16;
   const panner = context.createStereoPanner();
   const delay = context.createDelay(0.14);
   const feedback = context.createGain();
-  feedback.gain.value = controls.displacement / 100 * 0.18;
+  feedback.gain.value = controls.displacement / 100 * 0.26;
   const wet = context.createGain();
   const shaper = context.createWaveShaper();
   shaper.curve = shapingCurve();
   shaper.oversample = "4x";
   const synth = context.createGain();
-  synth.gain.value = controls.synthesis / 100 * 0.28;
+  synth.gain.value = controls.synthesis / 100 * 0.38;
   const output = context.createGain();
-  output.gain.value = 0.93;
+  output.gain.value = 0.88;
 
   source.connect(highpass).connect(presence).connect(compressor).connect(panner).connect(output);
   compressor.connect(delay).connect(wet).connect(panner);
