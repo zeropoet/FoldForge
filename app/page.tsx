@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { adjacentTokenId, isTextEntryTarget, mintedWorkHref } from "./archive-navigation";
 import { isCollectionAllowed } from "./collection-policy";
 import ComposerChamber, { type ComposerEvidence } from "./composer-chamber";
 import { createCompositionWitness, type CompositionWitness } from "./composition-witness";
@@ -225,10 +226,12 @@ export default function FoldForge() {
 
       if (typeof window !== "undefined") {
         const routedOwner = resolvedOwner.ensName || resolvedOwner.address || owner;
+        const query = new URLSearchParams(window.location.search);
+        query.set("owner", routedOwner);
         window.history.replaceState(
           null,
           "",
-          `${window.location.pathname}?owner=${encodeURIComponent(routedOwner)}`,
+          `${window.location.pathname}?${query.toString()}`,
         );
       }
     } catch (error) {
@@ -468,6 +471,42 @@ export default function FoldForge() {
   const selectedToken = tokenDetail?.key === `${selectedContract}:${selectedTokenId}`
     ? tokenDetail.nft
     : tokens.find((token) => token.tokenId === selectedTokenId);
+  const tokenSequence = useMemo(
+    () => tokens.map((token) => token.tokenId || "").filter(Boolean),
+    [tokens],
+  );
+  const selectedTokenIndex = tokenSequence.indexOf(selectedTokenId);
+  const previousTokenId = adjacentTokenId(tokenSequence, selectedTokenId, -1);
+  const nextTokenId = adjacentTokenId(tokenSequence, selectedTokenId, 1);
+
+  useEffect(() => {
+    if (!selectedContract || !selectedTokenId) return;
+
+    const handleSequenceKey = (event: KeyboardEvent) => {
+      if (
+        event.defaultPrevented
+        || event.repeat
+        || event.altKey
+        || event.ctrlKey
+        || event.metaKey
+        || event.shiftKey
+        || isTextEntryTarget(event.target)
+      ) return;
+
+      const destination = event.key === "ArrowLeft"
+        ? previousTokenId
+        : event.key === "ArrowRight"
+          ? nextTokenId
+          : null;
+      if (!destination) return;
+
+      event.preventDefault();
+      window.location.assign(mintedWorkHref(navigableOwner, selectedContract, destination));
+    };
+
+    window.addEventListener("keydown", handleSequenceKey);
+    return () => window.removeEventListener("keydown", handleSequenceKey);
+  }, [navigableOwner, nextTokenId, previousTokenId, selectedContract, selectedTokenId]);
 
   function exportCompositionWitness() {
     if (!compositionWitness) return;
@@ -524,6 +563,22 @@ export default function FoldForge() {
                       ) : <div className="text-xs uppercase tracking-[0.2em] text-white/40">No media file</div>}
                     </div>
                     <div className="grid content-start gap-8 p-6 md:p-10">
+                      <nav aria-label="Minted work sequence" className="grid grid-cols-[1fr_auto_1fr] items-center border-y border-white/25 py-4 text-[9px] uppercase tracking-[0.18em]">
+                        {previousTokenId ? (
+                          <a className="justify-self-start text-white/55 hover:text-white" href={mintedWorkHref(navigableOwner, selectedContract, previousTokenId)} rel="prev">← Previous</a>
+                        ) : (
+                          <span aria-disabled="true" className="justify-self-start text-white/20">← Previous</span>
+                        )}
+                        <span className="px-3 text-center text-white/35">
+                          {selectedTokenIndex >= 0 ? `${selectedTokenIndex + 1} / ${tokenSequence.length}` : "—"}
+                          <span className="ml-2 hidden text-white/25 sm:inline">Use ← → keys</span>
+                        </span>
+                        {nextTokenId ? (
+                          <a className="justify-self-end text-white/55 hover:text-white" href={mintedWorkHref(navigableOwner, selectedContract, nextTokenId)} rel="next">Next →</a>
+                        ) : (
+                          <span aria-disabled="true" className="justify-self-end text-white/20">Next →</span>
+                        )}
+                      </nav>
                       <div>
                         <p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Minted work / #{selectedTokenId}</p>
                         <h2 className="mt-4 text-4xl font-light tracking-[-0.04em]">{selectedToken.name || `Token ${selectedTokenId}`}</h2>
@@ -562,7 +617,7 @@ export default function FoldForge() {
                   {detailLoading ? <div className="grid min-h-[50vh] place-items-center text-xs uppercase tracking-[0.2em] text-white/40">Loading minted works</div> : (
                     <div className="token-grid border-x border-b border-white/25 bg-white/25">
                       {tokens.map((token) => (
-                        <a className="group min-w-0 bg-black" href={`?owner=${encodeURIComponent(navigableOwner)}&collection=${selectedContract}&token=${encodeURIComponent(token.tokenId || "")}`} key={token.tokenId}>
+                        <a className="group min-w-0 bg-black" href={mintedWorkHref(navigableOwner, selectedContract, token.tokenId || "")} key={token.tokenId}>
                           <div className="aspect-square overflow-hidden bg-[#080808]">
                             <MediaTile token={token} />
                           </div>

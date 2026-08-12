@@ -19,6 +19,7 @@ FoldForge is a static Ethereum NFT archive and autonomous data composer for `zer
 - Typography-only collection index with no cover thumbnails or descriptions
 - Repository-owned collection exclusions for the Zeropoet archive
 - Shareable collection and minted-work URLs
+- Sequential minted-work navigation with visible previous/next controls and left/right keyboard keys
 - NFT media with image, animation, video, and IPFS support
 - Responsive WebP derivatives, lazy loading, and cached visual-signature analysis
 - Minted metadata, traits, token URI, contract, Etherscan, and source-file links
@@ -169,6 +170,7 @@ Collection and minted-work views use query-based URLs so deep links continue to 
 ```
 
 Minted-work records link to the contract and token on Etherscan and expose original token metadata and media files when the provider returns them.
+Within a collection, the previous and next controls follow the same order shown by the collection grid. The left and right arrow keys provide the same traversal without wrapping at either boundary, and text-entry controls retain normal keyboard behavior.
 
 ## Deploy to GitHub Pages
 
