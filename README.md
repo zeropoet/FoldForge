@@ -233,11 +233,17 @@ FoldForge uses Next.js static export and performs Alchemy, ENS, image-derivative
 ## Sonic Forge
 
 `/sonic-forge` is FoldForge's private-by-default sound-sculpting chamber. A
-listener can ingest a local sound, inspect its waveform and source format,
-monitor the untouched source against a live sculpted signal, and separately
-govern clarification, witnessed displacement, and added synthesis.
+listener can ingest a local sound, inspect its waveform and source format, and
+monitor the untouched source against a live sculpted signal. Clarification,
+witnessed displacement, steel-voice synthesis, timeline traversal, and
+mastering are fixed by the versioned Sonic Forge instrument rather than exposed
+as listener-controlled effects.
 Sonic masters remain centered and balanced between left and right; witnessed
 horizontal displacement is not mapped to stereo pan.
+Its synthesis path excites three centered, high-Q formant resonators from the
+source signal, producing a restrained steel-like voice rather than an
+independent oscillator. Depth and recurrence suspend that voice without moving
+its balance between the left and right channels.
 
 The master chamber renders the full sound offline through the committed Root
 Logos displacement progression, normalizes it for clear laptop playback, and

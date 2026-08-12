@@ -30,8 +30,11 @@ type SonicGraph = {
   wet: GainNode;
   shaper: WaveShaperNode;
   synth: GainNode;
+  resonators: BiquadFilterNode[];
+  resonance: GainNode;
   panner: StereoPannerNode;
   sculpt: GainNode;
+  limiter: DynamicsCompressorNode;
   output: GainNode;
 };
 
@@ -43,6 +46,8 @@ const phases = [
   ["Convergence", "Displaced fields resolve"],
   ["Silence", "The source releases"],
 ] as const;
+
+const sonicPreset = Object.freeze({ clarity: 46, displacement: 58, synthesis: 36, phaseStretch: 50 });
 
 const formatTime = (seconds: number) => {
   const minutes = Math.floor(seconds / 60);
@@ -102,11 +107,6 @@ export default function SonicForge() {
   const [audioBuffer, setAudioBuffer] = useState<AudioBuffer | null>(null);
   const [audioUrl, setAudioUrl] = useState("");
   const [status, setStatus] = useState("Awaiting source");
-  const [activeStage, setActiveStage] = useState<"clarify" | "displace" | "synthesize">("clarify");
-  const [clarity, setClarity] = useState(32);
-  const [displacement, setDisplacement] = useState(28);
-  const [synthesis, setSynthesis] = useState(0);
-  const [phaseStretch, setPhaseStretch] = useState(50);
   const [playing, setPlaying] = useState(false);
   const [monitor, setMonitor] = useState<"source" | "sculpted">("sculpted");
   const [master, setMaster] = useState<SonicMaster | null>(null);
@@ -125,7 +125,8 @@ export default function SonicForge() {
 
   useEffect(() => { void listLibraryTracks().then(setLibrary).catch(() => setStatus("Local library unavailable")); }, []);
 
-  const currentSignature = `${evidence?.name ?? ""}:${clarity}:${displacement}:${synthesis}:${phaseStretch}`;
+  const { clarity, displacement, synthesis, phaseStretch } = sonicPreset;
+  const currentSignature = `${evidence?.name ?? ""}:${evidence?.bytes ?? 0}:${evidence?.duration ?? 0}:sonic-forge-v1`;
   const masterIsCurrent = Boolean(master && masterSignature === currentSignature);
 
   const updateGraph = useCallback((graph: SonicGraph, mode: "source" | "sculpted", clarifyValue: number, displacementValue: number, synthesisValue: number) => {
@@ -145,6 +146,12 @@ export default function SonicForge() {
     graph.feedback.gain.setTargetAtTime(d * 0.26, now, 0.03);
     graph.wet.gain.setTargetAtTime(d * 0.46, now, 0.03);
     graph.synth.gain.setTargetAtTime(s * 0.38, now, 0.03);
+    graph.resonance.gain.setTargetAtTime(s * 0.52 + d * 0.12, now, 0.04);
+    const formants = [390 + d * 90, 1_080 + c * 240, 2_760 + s * 420];
+    graph.resonators.forEach((filter, index) => {
+      filter.frequency.setTargetAtTime(formants[index], now, 0.08);
+      filter.Q.setTargetAtTime(7 + s * 13 + index * 2, now, 0.08);
+    });
     graph.panner.pan.setTargetAtTime(0, now, 0.02);
     graph.output.gain.setTargetAtTime(sculpted ? 0.88 : 1, now, 0.03);
   }, []);
@@ -205,8 +212,9 @@ export default function SonicForge() {
       peakDbfs: Number(db(evidence.peak).toFixed(2)),
       rmsDbfs: Number(db(evidence.rms).toFixed(2)),
     } : null,
-    stages: { clarify: clarity, displace: displacement, synthesize: synthesis },
-    timeline: { phases: phases.map(([name]) => name.toLowerCase()), stretch: phaseStretch },
+    instrument: "sonic-forge/steel-voice/v1",
+    stages: { clarify: clarity, displace: displacement, synthesize: synthesis, authority: "fixed" },
+    timeline: { phases: phases.map(([name]) => name.toLowerCase()), stretch: phaseStretch, authority: "fixed" },
     displacement: {
       schema: displacementMap.schema,
       witness: displacementMap.source.witness,
@@ -254,17 +262,29 @@ export default function SonicForge() {
       shaper.curve = curve;
       shaper.oversample = "4x";
       const synth = context.createGain();
+      const resonators = [context.createBiquadFilter(), context.createBiquadFilter(), context.createBiquadFilter()];
+      resonators.forEach((filter) => { filter.type = "bandpass"; });
+      const resonance = context.createGain();
       const panner = context.createStereoPanner();
       const sculpt = context.createGain();
+      const limiter = context.createDynamicsCompressor();
+      limiter.threshold.value = -2;
+      limiter.knee.value = 1;
+      limiter.ratio.value = 20;
+      limiter.attack.value = 0.002;
+      limiter.release.value = 0.12;
       const output = context.createGain();
       source.connect(input);
       input.connect(dry).connect(output);
-      input.connect(highpass).connect(presence).connect(compressor).connect(panner).connect(sculpt).connect(output);
+      input.connect(highpass).connect(presence).connect(compressor).connect(panner).connect(sculpt).connect(limiter).connect(output);
       compressor.connect(delay).connect(wet).connect(panner);
       delay.connect(feedback).connect(delay);
       compressor.connect(shaper).connect(synth).connect(panner);
+      resonators.forEach((filter) => compressor.connect(filter).connect(resonance));
+      resonance.connect(delay);
+      resonance.connect(panner);
       output.connect(context.destination);
-      graphRef.current = { context, source, input, dry, highpass, presence, compressor, delay, feedback, wet, shaper, synth, panner, sculpt, output };
+      graphRef.current = { context, source, input, dry, highpass, presence, compressor, delay, feedback, wet, shaper, synth, resonators, resonance, panner, sculpt, limiter, output };
       updateGraph(graphRef.current, monitor, clarity, displacement, synthesis);
     }
     if (graphRef.current.context.state === "suspended") await graphRef.current.context.resume();
@@ -349,15 +369,15 @@ export default function SonicForge() {
 
             <div className="mt-6 flex items-center gap-3 font-mono text-[8px] uppercase tracking-[0.15em] text-white/30"><span className={`h-1.5 w-1.5 ${playing && monitor === "sculpted" ? "bg-white" : "border border-white/50"}`} />{playing ? `${monitor} monitor active` : "Audio graph armed on first playback"}</div>
             <section className="mt-6 grid gap-px bg-white/20 lg:grid-cols-3">
-              <Stage id="clarify" active={activeStage === "clarify"} label="01 / Clarify" description="Stabilize and reveal what the source already contains." value={clarity} onActivate={() => setActiveStage("clarify")} onChange={setClarity} />
-              <Stage id="displace" active={activeStage === "displace"} label="02 / Displace" description="Traverse witnessed depth and energy while remaining centered." value={displacement} onActivate={() => setActiveStage("displace")} onChange={setDisplacement} />
-              <Stage id="synthesize" active={activeStage === "synthesize"} label="03 / Synthesize" description="Introduce new harmonic material; 0% adds none." value={synthesis} onActivate={() => setActiveStage("synthesize")} onChange={setSynthesis} />
+              <InstrumentStage label="01 / Clarify" description="The source is stabilized and its existing voice is revealed." />
+              <InstrumentStage label="02 / Displace" description="The centered voice traverses witnessed depth, energy, and recurrence." />
+              <InstrumentStage label="03 / Synthesize" description="Steel partials and voice-like formants are excited from the source." />
             </section>
 
-            <section className="mt-12 border-y border-white/20 py-8"><div className="flex flex-wrap items-end justify-between gap-6"><div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">FoldForge progression / temporal score</p><h2 className="mt-3 text-3xl font-light tracking-[-0.04em]">Stretch the archive through the sound</h2></div><label className="w-full max-w-xs text-[8px] uppercase tracking-[0.18em] text-white/45">Timeline stretch / {phaseStretch}<input className="mt-3 w-full" type="range" min="0" max="100" value={phaseStretch} onChange={(event) => setPhaseStretch(Number(event.target.value))} /></label></div><div className="sonic-timeline mt-10 grid grid-cols-2 gap-px bg-white/20 md:grid-cols-6">{phases.map(([name, description], index) => <div className="bg-black p-4" key={name} style={{ minHeight: `${120 + Math.abs(phaseStretch - 50) * (index % 2 ? .7 : .25)}px` }}><span className="font-mono text-[8px] text-white/25">{String(index + 1).padStart(2, "0")}</span><h3 className="mt-8 text-sm uppercase tracking-[0.12em]">{name}</h3><p className="mt-2 text-[10px] leading-4 text-white/35">{description}</p></div>)}</div></section>
+            <section className="mt-12 border-y border-white/20 py-8"><div className="flex flex-wrap items-end justify-between gap-6"><div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">FoldForge progression / deterministic score</p><h2 className="mt-3 text-3xl font-light tracking-[-0.04em]">One source / one witnessed traversal</h2></div><p className="max-w-xs text-right font-mono text-[8px] uppercase leading-4 tracking-[0.15em] text-white/30">Fixed instrument / no performance controls</p></div><div className="sonic-timeline mt-10 grid grid-cols-2 gap-px bg-white/20 md:grid-cols-6">{phases.map(([name, description], index) => <div className="bg-black p-4" key={name}><span className="font-mono text-[8px] text-white/25">{String(index + 1).padStart(2, "0")}</span><h3 className="mt-8 text-sm uppercase tracking-[0.12em]">{name}</h3><p className="mt-2 text-[10px] leading-4 text-white/35">{description}</p></div>)}</div></section>
 
             <section className="mt-12 border border-white/25">
-              <div className="grid gap-8 p-6 md:grid-cols-[1fr_auto] md:items-end md:p-8"><div><p className="text-[9px] uppercase tracking-[0.24em] text-white/40">Master chamber</p><h2 className="mt-3 text-3xl font-light tracking-[-0.04em]">Seal this progression into sound</h2><p className="mt-4 max-w-2xl text-sm leading-6 text-white/55">Offline rendering traverses the complete witnessed displacement field, normalizes for laptop playback, and encodes a lossless 48 kHz / 24-bit stereo WAV. Every control change invalidates the previous render.</p></div><button disabled={rendering} className="border border-white px-6 py-4 text-[9px] uppercase tracking-[0.2em] hover:bg-white hover:text-black" onClick={() => void createMaster()}>{rendering ? "Rendering progression…" : master ? "Render again" : "Render master"}</button></div>
+              <div className="grid gap-8 p-6 md:grid-cols-[1fr_auto] md:items-end md:p-8"><div><p className="text-[9px] uppercase tracking-[0.24em] text-white/40">Master chamber</p><h2 className="mt-3 text-3xl font-light tracking-[-0.04em]">Seal this progression into sound</h2><p className="mt-4 max-w-2xl text-sm leading-6 text-white/55">Offline rendering traverses the complete witnessed displacement field, normalizes for laptop playback, and encodes a lossless 48 kHz / 24-bit stereo WAV. The same source under the same instrument version produces the same master.</p></div><button disabled={rendering} className="border border-white px-6 py-4 text-[9px] uppercase tracking-[0.2em] hover:bg-white hover:text-black" onClick={() => void createMaster()}>{rendering ? "Rendering progression…" : master ? "Render again" : "Render master"}</button></div>
               {master && masterIsCurrent ? <div className="border-t border-white/20"><div className="sonic-waveform relative flex h-36 items-center gap-px overflow-hidden px-4" aria-label="Master waveform">{master.waveform.map((value, index) => <span key={index} style={{ height: `${Math.max(1, value * 100)}%` }} />)}</div><div className="grid grid-cols-2 border-t border-white/20 md:grid-cols-6"><Metric label="Format" value="WAV / I24" /><Metric label="Rate" value="48.0k" /><Metric label="Peak" value={`${master.metrics.peakDbfs} dB`} /><Metric label="Est. loudness" value={`${master.metrics.estimatedLufs} LUFS`} /><Metric label="Size" value={`${(master.metrics.bytes / 1_048_576).toFixed(1)} MB`} /><Metric label="Witness" value={master.metrics.sha256.slice(0, 10)} /></div><div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/20 p-4"><div className="flex flex-wrap gap-2"><button className="border border-white px-5 py-3 text-[9px] uppercase tracking-[0.18em]" onClick={() => { audioRef.current?.pause(); if (masterAudioRef.current?.paused) void masterAudioRef.current.play(); else masterAudioRef.current?.pause(); }}>{masterPlaying ? "Pause master" : "Witness master"}</button><button className="border border-white/35 px-5 py-3 text-[9px] uppercase tracking-[0.18em]" onClick={downloadMaster}>Download WAV</button><button className="border border-white/35 px-5 py-3 text-[9px] uppercase tracking-[0.18em]" onClick={exportWitness}>Download witness</button></div><button className="bg-white px-5 py-3 text-[9px] uppercase tracking-[0.18em] text-black" onClick={() => void admitMaster()}>Admit to private library</button><audio ref={masterAudioRef} src={masterAudioUrl} onPause={() => setMasterPlaying(false)} onPlay={() => setMasterPlaying(true)} /></div></div> : master ? <div className="border-t border-white/20 p-5 font-mono text-[8px] uppercase tracking-[0.15em] text-white/35">Recipe changed / render a new master before review or admission</div> : null}
             </section>
           </>
@@ -371,4 +391,4 @@ export default function SonicForge() {
 
 function Metric({ label, value }: { label: string; value: string }) { return <div className="min-w-20 border-r border-white/20 p-4 last:border-r-0"><p className="text-[7px] uppercase tracking-[0.18em] text-white/30">{label}</p><p className="mt-2 whitespace-nowrap font-mono text-[10px]">{value}</p></div>; }
 
-function Stage({ id, active, label, description, value, onActivate, onChange }: { id: string; active: boolean; label: string; description: string; value: number; onActivate: () => void; onChange: (value: number) => void }) { return <article className={`sonic-stage bg-black p-6 ${active ? "is-active" : ""}`}><button className="w-full text-left" onClick={onActivate}><p className="text-[9px] uppercase tracking-[0.22em] text-white/45">{label}</p><p className="mt-5 min-h-12 text-sm leading-6 text-white/55">{description}</p></button><label className="mt-8 block text-[8px] uppercase tracking-[0.18em] text-white/40" htmlFor={id}>Influence / {value}%</label><input className="mt-4 w-full" id={id} type="range" min="0" max="100" value={value} onFocus={onActivate} onChange={(event) => onChange(Number(event.target.value))} /></article>; }
+function InstrumentStage({ label, description }: { label: string; description: string }) { return <article className="sonic-stage bg-black p-6"><p className="text-[9px] uppercase tracking-[0.22em] text-white/45">{label}</p><p className="mt-5 min-h-12 text-sm leading-6 text-white/55">{description}</p><p className="mt-8 font-mono text-[8px] uppercase tracking-[0.16em] text-white/25">Governed by Sonic Forge</p></article>; }

@@ -94,13 +94,36 @@ export async function renderMaster(buffer: AudioBuffer, controls: RenderControls
   shaper.oversample = "4x";
   const synth = context.createGain();
   synth.gain.value = controls.synthesis / 100 * 0.38;
+  const resonance = context.createGain();
+  resonance.gain.value = controls.synthesis / 100 * 0.52 + controls.displacement / 100 * 0.12;
+  const formants = [
+    390 + controls.displacement / 100 * 90,
+    1_080 + controls.clarity / 100 * 240,
+    2_760 + controls.synthesis / 100 * 420,
+  ];
+  const resonators = formants.map((frequency, index) => {
+    const filter = context.createBiquadFilter();
+    filter.type = "bandpass";
+    filter.frequency.value = frequency;
+    filter.Q.value = 7 + controls.synthesis / 100 * 13 + index * 2;
+    return filter;
+  });
   const output = context.createGain();
   output.gain.value = 0.88;
+  const limiter = context.createDynamicsCompressor();
+  limiter.threshold.value = -2;
+  limiter.knee.value = 1;
+  limiter.ratio.value = 20;
+  limiter.attack.value = 0.002;
+  limiter.release.value = 0.12;
 
-  source.connect(highpass).connect(presence).connect(compressor).connect(panner).connect(output);
+  source.connect(highpass).connect(presence).connect(compressor).connect(panner).connect(limiter).connect(output);
   compressor.connect(delay).connect(wet).connect(panner);
   delay.connect(feedback).connect(delay);
   compressor.connect(shaper).connect(synth).connect(panner);
+  resonators.forEach((filter) => compressor.connect(filter).connect(resonance));
+  resonance.connect(delay);
+  resonance.connect(panner);
   output.connect(context.destination);
   scheduleProgression(panner, delay, wet, buffer.duration, controls);
   source.start();
