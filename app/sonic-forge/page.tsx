@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import displacementMap from "../../public/root-logos-living-object-displacement.json";
+import { admitLibraryTrack, listLibraryTracks, removeLibraryTrack, renderMaster, type LibraryTrack, type SonicMaster } from "./sonic-audio";
 import "./sonic-forge.css";
 
 type AudioEvidence = {
@@ -92,7 +93,9 @@ async function inspectAudio(file: File): Promise<{ evidence: AudioEvidence; buff
 export default function SonicForge() {
   const inputRef = useRef<HTMLInputElement>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const masterAudioRef = useRef<HTMLAudioElement>(null);
   const sourceUrl = useRef<string | null>(null);
+  const masterUrl = useRef<string | null>(null);
   const graphRef = useRef<SonicGraph | null>(null);
   const [evidence, setEvidence] = useState<AudioEvidence | null>(null);
   const [audioBuffer, setAudioBuffer] = useState<AudioBuffer | null>(null);
@@ -105,11 +108,23 @@ export default function SonicForge() {
   const [phaseStretch, setPhaseStretch] = useState(50);
   const [playing, setPlaying] = useState(false);
   const [monitor, setMonitor] = useState<"source" | "sculpted">("sculpted");
+  const [master, setMaster] = useState<SonicMaster | null>(null);
+  const [masterAudioUrl, setMasterAudioUrl] = useState("");
+  const [masterSignature, setMasterSignature] = useState("");
+  const [rendering, setRendering] = useState(false);
+  const [masterPlaying, setMasterPlaying] = useState(false);
+  const [library, setLibrary] = useState<LibraryTrack[]>([]);
 
   useEffect(() => () => {
     if (sourceUrl.current) URL.revokeObjectURL(sourceUrl.current);
+    if (masterUrl.current) URL.revokeObjectURL(masterUrl.current);
     void graphRef.current?.context.close();
   }, []);
+
+  useEffect(() => { void listLibraryTracks().then(setLibrary).catch(() => setStatus("Local library unavailable")); }, []);
+
+  const currentSignature = `${evidence?.name ?? ""}:${clarity}:${displacement}:${synthesis}:${phaseStretch}`;
+  const masterIsCurrent = Boolean(master && masterSignature === currentSignature);
 
   const updateGraph = useCallback((graph: SonicGraph, mode: "source" | "sculpted", clarifyValue: number, displacementValue: number, synthesisValue: number) => {
     const now = graph.context.currentTime;
@@ -154,7 +169,7 @@ export default function SonicForge() {
   }, []);
 
   const witness = useMemo(() => ({
-    schema: "foldforge-sonic-witness/v0.1",
+    schema: "foldforge-sonic-witness/v1",
     source: evidence ? {
       name: evidence.name,
       bytes: evidence.bytes,
@@ -171,8 +186,9 @@ export default function SonicForge() {
       witness: displacementMap.source.witness,
       samples: displacementMap.samples.length,
     },
+    master: masterIsCurrent ? master?.metrics ?? null : null,
     authority: "Local browser session; no source upload or autonomous library admission.",
-  }), [clarity, displacement, evidence, phaseStretch, synthesis]);
+  }), [clarity, displacement, evidence, master, masterIsCurrent, phaseStretch, synthesis]);
 
   const exportWitness = () => {
     const blob = new Blob([`${JSON.stringify(witness, null, 2)}\n`], { type: "application/json" });
@@ -230,6 +246,48 @@ export default function SonicForge() {
     else audioRef.current.pause();
   };
 
+  const createMaster = async () => {
+    if (!audioBuffer || rendering) return;
+    audioRef.current?.pause();
+    masterAudioRef.current?.pause();
+    setRendering(true);
+    setStatus("Rendering witnessed 48 kHz / 24-bit master");
+    try {
+      const rendered = await renderMaster(audioBuffer, { clarity, displacement, synthesis, phaseStretch });
+      if (masterUrl.current) URL.revokeObjectURL(masterUrl.current);
+      masterUrl.current = URL.createObjectURL(rendered.blob);
+      setMasterAudioUrl(masterUrl.current);
+      setMaster(rendered);
+      setMasterSignature(currentSignature);
+      setStatus("Master rendered locally / review before admission");
+    } catch {
+      setStatus("Master render failed in this browser");
+    } finally {
+      setRendering(false);
+    }
+  };
+
+  const downloadMaster = () => {
+    if (!master || !masterIsCurrent || !masterAudioUrl || !evidence) return;
+    const anchor = document.createElement("a");
+    anchor.href = masterAudioUrl;
+    anchor.download = `${evidence.name.replace(/\.[^.]+$/, "")}-sonic-forge-master.wav`;
+    anchor.click();
+  };
+
+  const admitMaster = async () => {
+    if (!master || !masterIsCurrent || !evidence) return;
+    const id = master.metrics.sha256;
+    await admitLibraryTrack({ id, title: evidence.name.replace(/\.[^.]+$/, ""), createdAt: new Date().toISOString(), audio: master.blob, witness, metrics: master.metrics });
+    setLibrary(await listLibraryTracks());
+    setStatus("Master admitted to this browser's private Sonic Forge library");
+  };
+
+  const removeTrack = async (id: string) => {
+    await removeLibraryTrack(id);
+    setLibrary(await listLibraryTracks());
+  };
+
   return (
     <main className="sonic-shell min-h-screen bg-black text-white">
       <header className="site-header sticky top-0 z-20 border-b border-white/20 px-5 py-3 md:px-8">
@@ -272,9 +330,14 @@ export default function SonicForge() {
 
             <section className="mt-12 border-y border-white/20 py-8"><div className="flex flex-wrap items-end justify-between gap-6"><div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">FoldForge progression / temporal score</p><h2 className="mt-3 text-3xl font-light tracking-[-0.04em]">Stretch the archive through the sound</h2></div><label className="w-full max-w-xs text-[8px] uppercase tracking-[0.18em] text-white/45">Timeline stretch / {phaseStretch}<input className="mt-3 w-full" type="range" min="0" max="100" value={phaseStretch} onChange={(event) => setPhaseStretch(Number(event.target.value))} /></label></div><div className="sonic-timeline mt-10 grid grid-cols-2 gap-px bg-white/20 md:grid-cols-6">{phases.map(([name, description], index) => <div className="bg-black p-4" key={name} style={{ minHeight: `${120 + Math.abs(phaseStretch - 50) * (index % 2 ? .7 : .25)}px` }}><span className="font-mono text-[8px] text-white/25">{String(index + 1).padStart(2, "0")}</span><h3 className="mt-8 text-sm uppercase tracking-[0.12em]">{name}</h3><p className="mt-2 text-[10px] leading-4 text-white/35">{description}</p></div>)}</div></section>
 
-            <section className="mt-12 grid gap-8 border border-white/25 p-6 md:grid-cols-[1fr_auto] md:items-end md:p-8"><div><p className="text-[9px] uppercase tracking-[0.24em] text-white/40">Prototype witness</p><p className="mt-4 max-w-2xl text-sm leading-6 text-white/55">The current R&amp;D surface records intent and source measurements. Browser rendering and lossless master export are the next instrument layer; nothing enters the public library automatically.</p></div><button className="border border-white px-6 py-4 text-[9px] uppercase tracking-[0.2em] hover:bg-white hover:text-black" onClick={exportWitness}>Export recipe</button></section>
+            <section className="mt-12 border border-white/25">
+              <div className="grid gap-8 p-6 md:grid-cols-[1fr_auto] md:items-end md:p-8"><div><p className="text-[9px] uppercase tracking-[0.24em] text-white/40">Master chamber</p><h2 className="mt-3 text-3xl font-light tracking-[-0.04em]">Seal this progression into sound</h2><p className="mt-4 max-w-2xl text-sm leading-6 text-white/55">Offline rendering traverses the complete witnessed displacement field, normalizes for laptop playback, and encodes a lossless 48 kHz / 24-bit stereo WAV. Every control change invalidates the previous render.</p></div><button disabled={rendering} className="border border-white px-6 py-4 text-[9px] uppercase tracking-[0.2em] hover:bg-white hover:text-black" onClick={() => void createMaster()}>{rendering ? "Rendering progression…" : master ? "Render again" : "Render master"}</button></div>
+              {master && masterIsCurrent ? <div className="border-t border-white/20"><div className="sonic-waveform relative flex h-36 items-center gap-px overflow-hidden px-4" aria-label="Master waveform">{master.waveform.map((value, index) => <span key={index} style={{ height: `${Math.max(1, value * 100)}%` }} />)}</div><div className="grid grid-cols-2 border-t border-white/20 md:grid-cols-6"><Metric label="Format" value="WAV / I24" /><Metric label="Rate" value="48.0k" /><Metric label="Peak" value={`${master.metrics.peakDbfs} dB`} /><Metric label="Est. loudness" value={`${master.metrics.estimatedLufs} LUFS`} /><Metric label="Size" value={`${(master.metrics.bytes / 1_048_576).toFixed(1)} MB`} /><Metric label="Witness" value={master.metrics.sha256.slice(0, 10)} /></div><div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/20 p-4"><div className="flex flex-wrap gap-2"><button className="border border-white px-5 py-3 text-[9px] uppercase tracking-[0.18em]" onClick={() => { audioRef.current?.pause(); if (masterAudioRef.current?.paused) void masterAudioRef.current.play(); else masterAudioRef.current?.pause(); }}>{masterPlaying ? "Pause master" : "Witness master"}</button><button className="border border-white/35 px-5 py-3 text-[9px] uppercase tracking-[0.18em]" onClick={downloadMaster}>Download WAV</button><button className="border border-white/35 px-5 py-3 text-[9px] uppercase tracking-[0.18em]" onClick={exportWitness}>Download witness</button></div><button className="bg-white px-5 py-3 text-[9px] uppercase tracking-[0.18em] text-black" onClick={() => void admitMaster()}>Admit to private library</button><audio ref={masterAudioRef} src={masterAudioUrl} onPause={() => setMasterPlaying(false)} onPlay={() => setMasterPlaying(true)} /></div></div> : master ? <div className="border-t border-white/20 p-5 font-mono text-[8px] uppercase tracking-[0.15em] text-white/35">Recipe changed / render a new master before review or admission</div> : null}
+            </section>
           </>
         )}
+
+        <section className="mt-14 border-t border-white/20 pt-8"><div className="flex items-end justify-between gap-6"><div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Private Sonic Forge library</p><h2 className="mt-3 text-3xl font-light tracking-[-0.04em]">Admitted masters / {library.length.toString().padStart(2, "0")}</h2></div><p className="max-w-sm text-right font-mono text-[8px] uppercase leading-4 tracking-[0.14em] text-white/25">Stored only in this browser / not deployed / removable</p></div>{library.length ? <div className="mt-8 border-x border-white/20">{library.map((track, index) => <article className="grid gap-5 border-b border-white/20 p-5 md:grid-cols-[50px_1fr_auto] md:items-center" key={track.id}><span className="font-mono text-[8px] text-white/25">M/{String(index + 1).padStart(2, "0")}</span><div className="min-w-0"><h3 className="truncate text-lg font-light">{track.title}</h3><p className="mt-2 font-mono text-[8px] uppercase tracking-[0.13em] text-white/30">{track.metrics.sampleRate / 1000} kHz / {track.metrics.bitDepth}-bit / {track.metrics.estimatedLufs} LUFS / {track.id.slice(0, 12)}</p></div><div className="flex gap-2"><button className="border border-white/35 px-4 py-3 text-[8px] uppercase tracking-[0.16em]" onClick={() => { const url = URL.createObjectURL(track.audio); const audio = new Audio(url); audio.onended = () => URL.revokeObjectURL(url); void audio.play(); }}>Play</button><button className="px-3 py-3 text-[8px] uppercase tracking-[0.16em] text-white/35 hover:text-white" onClick={() => void removeTrack(track.id)}>Remove</button></div></article>)}</div> : <div className="mt-8 grid min-h-32 place-items-center border border-white/15 text-[9px] uppercase tracking-[0.2em] text-white/25">No masters admitted</div>}</section>
       </div>
     </main>
   );

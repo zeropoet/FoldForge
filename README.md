@@ -230,6 +230,25 @@ The Next.js configuration publishes from the domain root when `CUSTOM_DOMAIN` is
 
 FoldForge uses Next.js static export and performs Alchemy, ENS, image-derivative, visual-signature analysis, witness generation, displacement sampling, and Web Audio composition directly in the browser. It has no application server, database, account system, or cross-device preference synchronization.
 
+## Sonic Forge
+
+`/sonic-forge` is FoldForge's private-by-default sound-sculpting chamber. A
+listener can ingest a local sound, inspect its waveform and source format,
+monitor the untouched source against a live sculpted signal, and separately
+govern clarification, witnessed displacement, and added synthesis.
+
+The master chamber renders the full sound offline through the committed Root
+Logos displacement progression, normalizes it for clear laptop playback, and
+encodes a 48 kHz / 24-bit stereo WAV. The WAV receives a SHA-256 identity and a
+versioned JSON witness containing source measurements, stage values, timeline
+stretch, displacement provenance, and output measurements.
+
+Master admission is explicit. Admitted audio and witnesses remain in the
+browser's IndexedDB-backed private library. Ingesting, rendering, or admitting
+a master does not upload or publish audio, and clearing site data removes the
+local library. Public library publication remains a separate repository-level
+curatorial action.
+
 Alchemy provides owner, contract, token, and cached metadata. `app/collection-policy.ts` applies repository-owned exclusions. `app/nft-data.ts` normalizes provider media and constructs responsive derivative URLs. `app/page.tsx` resolves the archive and computes or restores versioned visual signatures. `app/composition-witness.ts` seals every grammar and the current displacement-map witness into archive evidence, while `app/composer-chamber.tsx` derives the lexical field, archive-seamed chromatic field, autonomous six-phase macroform, visual-relation arrangements, displacement field, and unified FoldForge voice.
 
 The FOLD FORGE contract
