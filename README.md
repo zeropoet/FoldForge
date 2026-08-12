@@ -245,6 +245,12 @@ source signal, producing a restrained steel-like voice rather than an
 independent oscillator. Depth and recurrence suspend that voice without moving
 its balance between the left and right channels.
 
+Instrument `sonic-forge/steel-voice/v2` adds a fixed centered articulation
+mapping: a 92 Hz low shelf gives bass and kick events physical foundation, a
+restrained 168 Hz parallel body path lets plucked strings bloom into the depth
+field, and a 4.8 kHz transient shelf preserves crisp drum attacks. The final
+linked limiter contains the combined field without introducing stereo motion.
+
 The master chamber renders the full sound offline through the committed Root
 Logos displacement progression, normalizes it for clear laptop playback, and
 encodes a 48 kHz / 24-bit stereo WAV. The WAV receives a SHA-256 identity and a

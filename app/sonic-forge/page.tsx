@@ -23,7 +23,9 @@ type SonicGraph = {
   input: GainNode;
   dry: GainNode;
   highpass: BiquadFilterNode;
+  foundation: BiquadFilterNode;
   presence: BiquadFilterNode;
+  transient: BiquadFilterNode;
   compressor: DynamicsCompressorNode;
   delay: DelayNode;
   feedback: GainNode;
@@ -32,6 +34,8 @@ type SonicGraph = {
   synth: GainNode;
   resonators: BiquadFilterNode[];
   resonance: GainNode;
+  body: BiquadFilterNode;
+  bodyGain: GainNode;
   panner: StereoPannerNode;
   sculpt: GainNode;
   limiter: DynamicsCompressorNode;
@@ -127,7 +131,7 @@ export default function SonicForge() {
   useEffect(() => { void listLibraryTracks().then(setLibrary).catch(() => setStatus("Local library unavailable")); }, []);
 
   const { clarity, displacement, synthesis, phaseStretch } = sonicPreset;
-  const currentSignature = `${evidence?.name ?? ""}:${evidence?.bytes ?? 0}:${evidence?.duration ?? 0}:sonic-forge-v1`;
+  const currentSignature = `${evidence?.name ?? ""}:${evidence?.bytes ?? 0}:${evidence?.duration ?? 0}:sonic-forge-v2`;
   const masterIsCurrent = Boolean(master && masterSignature === currentSignature);
 
   const updateGraph = useCallback((graph: SonicGraph, mode: "source" | "sculpted", clarifyValue: number, displacementValue: number, synthesisValue: number) => {
@@ -139,8 +143,12 @@ export default function SonicForge() {
     graph.dry.gain.setTargetAtTime(sculpted ? 0 : 1, now, 0.015);
     graph.sculpt.gain.setTargetAtTime(sculpted ? 1 : 0, now, 0.015);
     graph.highpass.frequency.setTargetAtTime(20 + c * 55, now, 0.03);
+    graph.foundation.frequency.setTargetAtTime(92, now, 0.03);
+    graph.foundation.gain.setTargetAtTime(2.2, now, 0.03);
     graph.presence.frequency.setTargetAtTime(2_400 + c * 1_300, now, 0.03);
     graph.presence.gain.setTargetAtTime(c * 4.5, now, 0.03);
+    graph.transient.frequency.setTargetAtTime(4_800, now, 0.03);
+    graph.transient.gain.setTargetAtTime(1.8, now, 0.03);
     graph.compressor.threshold.setTargetAtTime(-10 - c * 22, now, 0.03);
     graph.compressor.ratio.setTargetAtTime(1 + c * 4.5, now, 0.03);
     graph.delay.delayTime.setTargetAtTime(0.008 + d * 0.055, now, 0.03);
@@ -148,6 +156,9 @@ export default function SonicForge() {
     graph.wet.gain.setTargetAtTime(d * 0.46, now, 0.03);
     graph.synth.gain.setTargetAtTime(s * 0.38, now, 0.03);
     graph.resonance.gain.setTargetAtTime(s * 0.52 + d * 0.12, now, 0.04);
+    graph.body.frequency.setTargetAtTime(168, now, 0.04);
+    graph.body.Q.setTargetAtTime(1.15, now, 0.04);
+    graph.bodyGain.gain.setTargetAtTime(0.16, now, 0.04);
     const formants = [390 + d * 90, 1_080 + c * 240, 2_760 + s * 420];
     graph.resonators.forEach((filter, index) => {
       filter.frequency.setTargetAtTime(formants[index], now, 0.08);
@@ -231,7 +242,7 @@ export default function SonicForge() {
       peakDbfs: Number(db(evidence.peak).toFixed(2)),
       rmsDbfs: Number(db(evidence.rms).toFixed(2)),
     } : null,
-    instrument: "sonic-forge/steel-voice/v1",
+    instrument: "sonic-forge/steel-voice/v2",
     stages: { clarify: clarity, displace: displacement, synthesize: synthesis, authority: "fixed" },
     timeline: { phases: phases.map(([name]) => name.toLowerCase()), stretch: phaseStretch, authority: "fixed" },
     displacement: {
@@ -262,9 +273,13 @@ export default function SonicForge() {
       const dry = context.createGain();
       const highpass = context.createBiquadFilter();
       highpass.type = "highpass";
+      const foundation = context.createBiquadFilter();
+      foundation.type = "lowshelf";
       const presence = context.createBiquadFilter();
       presence.type = "peaking";
       presence.Q.value = 0.72;
+      const transient = context.createBiquadFilter();
+      transient.type = "highshelf";
       const compressor = context.createDynamicsCompressor();
       compressor.attack.value = 0.012;
       compressor.release.value = 0.22;
@@ -284,6 +299,9 @@ export default function SonicForge() {
       const resonators = [context.createBiquadFilter(), context.createBiquadFilter(), context.createBiquadFilter()];
       resonators.forEach((filter) => { filter.type = "bandpass"; });
       const resonance = context.createGain();
+      const body = context.createBiquadFilter();
+      body.type = "bandpass";
+      const bodyGain = context.createGain();
       const panner = context.createStereoPanner();
       const sculpt = context.createGain();
       const limiter = context.createDynamicsCompressor();
@@ -295,15 +313,17 @@ export default function SonicForge() {
       const output = context.createGain();
       source.connect(input);
       input.connect(dry).connect(output);
-      input.connect(highpass).connect(presence).connect(compressor).connect(panner).connect(sculpt).connect(limiter).connect(output);
+      input.connect(highpass).connect(foundation).connect(presence).connect(transient).connect(compressor).connect(panner).connect(sculpt).connect(limiter).connect(output);
       compressor.connect(delay).connect(wet).connect(panner);
       delay.connect(feedback).connect(delay);
       compressor.connect(shaper).connect(synth).connect(panner);
       resonators.forEach((filter) => compressor.connect(filter).connect(resonance));
       resonance.connect(delay);
       resonance.connect(panner);
+      compressor.connect(body).connect(bodyGain).connect(delay);
+      bodyGain.connect(panner);
       output.connect(context.destination);
-      graphRef.current = { context, source, input, dry, highpass, presence, compressor, delay, feedback, wet, shaper, synth, resonators, resonance, panner, sculpt, limiter, output };
+      graphRef.current = { context, source, input, dry, highpass, foundation, presence, transient, compressor, delay, feedback, wet, shaper, synth, resonators, resonance, body, bodyGain, panner, sculpt, limiter, output };
       updateGraph(graphRef.current, monitor, clarity, displacement, synthesis);
     }
     if (graphRef.current.context.state === "suspended") await graphRef.current.context.resume();
@@ -388,9 +408,9 @@ export default function SonicForge() {
 
             <div className="mt-6 flex flex-wrap items-center justify-between gap-3 font-mono text-[8px] uppercase tracking-[0.15em] text-white/30"><span className="flex items-center gap-3"><span className={`h-1.5 w-1.5 ${playing && monitor === "sculpted" ? "bg-white" : "border border-white/50"}`} />{playing ? `${monitor} monitor active` : masterPlaying ? "Master monitor active" : "Audio graph armed on first playback"}</span><span>{formatTime(playhead * progressDuration)} / {formatTime(progressDuration)} · {phases[activePhaseIndex][0]} {phaseProgress.toFixed(0)}%</span></div>
             <section className="mt-6 grid gap-px bg-white/20 lg:grid-cols-3">
-              <InstrumentStage label="01 / Clarify" description="The source is stabilized and its existing voice is revealed." />
+              <InstrumentStage label="01 / Clarify" description="Bass gains centered foundation while drum attacks remain solid and crisp." />
               <InstrumentStage label="02 / Displace" description="The centered voice traverses witnessed depth, energy, and recurrence." />
-              <InstrumentStage label="03 / Synthesize" description="Steel partials and voice-like formants are excited from the source." />
+              <InstrumentStage label="03 / Synthesize" description="Steel partials, string-body resonance, and voice-like formants are excited from the source." />
             </section>
 
             <section className="mt-12 border-y border-white/20 py-8"><div className="flex flex-wrap items-end justify-between gap-6"><div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">FoldForge progression / deterministic score</p><h2 className="mt-3 text-3xl font-light tracking-[-0.04em]">One source / one witnessed traversal</h2></div><p className="max-w-xs text-right font-mono text-[8px] uppercase leading-4 tracking-[0.15em] text-white/30">Fixed instrument / no performance controls</p></div><div className="sonic-timeline relative mt-10 grid grid-cols-2 gap-px bg-white/20 md:grid-cols-6"><div className="sonic-timeline-progress" style={{ width: `${playhead * 100}%` }} />{phases.map(([name, description], index) => <div className={`relative bg-black p-4 ${index === activePhaseIndex && (playing || masterPlaying) ? "is-current" : ""}`} key={name}><span className="font-mono text-[8px] text-white/25">{String(index + 1).padStart(2, "0")}</span><h3 className="mt-8 text-sm uppercase tracking-[0.12em]">{name}</h3><p className="mt-2 text-[10px] leading-4 text-white/35">{description}</p>{index === activePhaseIndex && (playing || masterPlaying) ? <span className="absolute inset-x-0 bottom-0 h-px bg-white" style={{ width: `${phaseProgress}%` }} /> : null}</div>)}</div></section>
