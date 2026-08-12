@@ -523,7 +523,7 @@ export default function FoldForge() {
     <main className="archive-shell min-h-screen bg-black text-white">
       <section className="grid min-h-screen grid-rows-[auto_1fr]">
         <header className="site-header sticky top-0 z-20 border-b border-white/20 px-5 py-3 md:px-8">
-          <div className="mx-auto flex max-w-[1600px] items-center">
+          <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-6">
             <a className="flex min-w-0 items-center gap-3 sm:gap-4" href={`?owner=${encodeURIComponent(navigableOwner)}`}>
               <span className="brand-mark" aria-hidden="true">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -534,6 +534,10 @@ export default function FoldForge() {
                 <span className="mt-1 hidden text-[8px] uppercase tracking-[0.32em] text-white/40 sm:block">Ethereum archive / est. 2026</span>
               </span>
             </a>
+            <nav className="flex gap-5 text-[9px] uppercase tracking-[0.2em]">
+              <span>Archive</span>
+              <a className="text-white/40 hover:text-white" href="/sonic-forge">Sonic Forge</a>
+            </nav>
           </div>
         </header>
 
