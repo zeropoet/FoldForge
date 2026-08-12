@@ -116,7 +116,6 @@ export default function SonicForge() {
   const [masterPlaying, setMasterPlaying] = useState(false);
   const [library, setLibrary] = useState<LibraryTrack[]>([]);
   const [playhead, setPlayhead] = useState(0);
-  const progressFrame = useRef<number | null>(null);
 
   useEffect(() => () => {
     if (sourceUrl.current) URL.revokeObjectURL(sourceUrl.current);
@@ -192,19 +191,14 @@ export default function SonicForge() {
     setPlayhead(clamp(media.currentTime / media.duration, 0, 1));
   }, []);
 
-  const startProgress = useCallback((media: HTMLMediaElement) => {
-    if (progressFrame.current) cancelAnimationFrame(progressFrame.current);
-    const update = () => {
+  useEffect(() => {
+    if (!playing && !masterPlaying) return;
+    const interval = window.setInterval(() => {
+      const media = masterPlaying ? masterAudioRef.current : audioRef.current;
       syncPlayhead(media);
-      if (!media.paused && !media.ended) progressFrame.current = requestAnimationFrame(update);
-      else progressFrame.current = null;
-    };
-    progressFrame.current = requestAnimationFrame(update);
-  }, [syncPlayhead]);
-
-  useEffect(() => () => {
-    if (progressFrame.current) cancelAnimationFrame(progressFrame.current);
-  }, []);
+    }, 50);
+    return () => window.clearInterval(interval);
+  }, [masterPlaying, playing, syncPlayhead]);
 
   const activePhaseIndex = Math.min(phases.length - 1, Math.floor(playhead * phases.length));
   const phaseProgress = (playhead * phases.length - activePhaseIndex) * 100;
@@ -389,7 +383,7 @@ export default function SonicForge() {
             <section className="mt-10 border border-white/25">
               <div className="grid border-b border-white/20 md:grid-cols-[1fr_auto] md:items-center"><div className="min-w-0 p-5 md:p-7"><p className="truncate text-xl font-light">{evidence.name}</p><p className="mt-2 font-mono text-[8px] uppercase tracking-[0.14em] text-white/35">{status}</p></div><div className="grid grid-cols-4 border-t border-white/20 md:border-l md:border-t-0"><Metric label="Duration" value={formatTime(evidence.duration)} /><Metric label="Rate" value={`${(evidence.sampleRate / 1000).toFixed(1)}k`} /><Metric label="Field" value={evidence.channels === 1 ? "Mono" : `${evidence.channels}ch`} /><Metric label="Peak" value={`${db(evidence.peak).toFixed(1)} dB`} /></div></div>
               <div className="sonic-waveform relative flex h-52 items-center gap-px overflow-hidden px-4" aria-label="Source waveform"><div className="sonic-waveform-progress" style={{ width: `${playhead * 100}%` }} />{evidence.waveform.map((value, index) => <span key={index} style={{ height: `${Math.max(1, value * 100)}%` }} />)}<div className="sonic-scan" style={{ left: `${playhead * 100}%` }} /></div>
-              <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/20 p-4"><div className="flex flex-wrap gap-2"><button className="border border-white px-5 py-3 text-[9px] uppercase tracking-[0.2em]" onClick={() => void togglePlayback()}>{playing ? "Pause" : "Witness sound"}</button><div className="flex border border-white/30"><button aria-pressed={monitor === "source"} className={`px-4 py-3 text-[8px] uppercase tracking-[0.17em] ${monitor === "source" ? "bg-white text-black" : "text-white/45"}`} onClick={() => setMonitor("source")}>Source</button><button aria-pressed={monitor === "sculpted"} className={`px-4 py-3 text-[8px] uppercase tracking-[0.17em] ${monitor === "sculpted" ? "bg-white text-black" : "text-white/45"}`} onClick={() => setMonitor("sculpted")}>Sculpted</button></div></div><button className="text-[9px] uppercase tracking-[0.18em] text-white/45 hover:text-white" onClick={() => { audioRef.current?.pause(); setEvidence(null); setAudioBuffer(null); setPlaying(false); setPlayhead(0); }}>Replace source</button><audio ref={audioRef} src={audioUrl} onEnded={(event) => { setPlaying(false); syncPlayhead(event.currentTarget); }} onPause={(event) => { setPlaying(false); syncPlayhead(event.currentTarget); }} onPlay={(event) => { setPlaying(true); startProgress(event.currentTarget); }} onSeeked={(event) => syncPlayhead(event.currentTarget)} onTimeUpdate={(event) => syncPlayhead(event.currentTarget)} /></div>
+              <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/20 p-4"><div className="flex flex-wrap gap-2"><button className="border border-white px-5 py-3 text-[9px] uppercase tracking-[0.2em]" onClick={() => void togglePlayback()}>{playing ? "Pause" : "Witness sound"}</button><div className="flex border border-white/30"><button aria-pressed={monitor === "source"} className={`px-4 py-3 text-[8px] uppercase tracking-[0.17em] ${monitor === "source" ? "bg-white text-black" : "text-white/45"}`} onClick={() => setMonitor("source")}>Source</button><button aria-pressed={monitor === "sculpted"} className={`px-4 py-3 text-[8px] uppercase tracking-[0.17em] ${monitor === "sculpted" ? "bg-white text-black" : "text-white/45"}`} onClick={() => setMonitor("sculpted")}>Sculpted</button></div></div><button className="text-[9px] uppercase tracking-[0.18em] text-white/45 hover:text-white" onClick={() => { audioRef.current?.pause(); setEvidence(null); setAudioBuffer(null); setPlaying(false); setPlayhead(0); }}>Replace source</button><audio ref={audioRef} src={audioUrl} onEnded={(event) => { setPlaying(false); syncPlayhead(event.currentTarget); }} onPause={(event) => { setPlaying(false); syncPlayhead(event.currentTarget); }} onPlay={(event) => { setPlaying(true); syncPlayhead(event.currentTarget); }} onSeeked={(event) => syncPlayhead(event.currentTarget)} onTimeUpdate={(event) => syncPlayhead(event.currentTarget)} /></div>
             </section>
 
             <div className="mt-6 flex flex-wrap items-center justify-between gap-3 font-mono text-[8px] uppercase tracking-[0.15em] text-white/30"><span className="flex items-center gap-3"><span className={`h-1.5 w-1.5 ${playing && monitor === "sculpted" ? "bg-white" : "border border-white/50"}`} />{playing ? `${monitor} monitor active` : masterPlaying ? "Master monitor active" : "Audio graph armed on first playback"}</span><span>{formatTime(playhead * progressDuration)} / {formatTime(progressDuration)} · {phases[activePhaseIndex][0]} {phaseProgress.toFixed(0)}%</span></div>
