@@ -16,6 +16,24 @@ type AudioEvidence = {
   waveform: number[];
 };
 
+type SonicGraph = {
+  context: AudioContext;
+  source: MediaElementAudioSourceNode;
+  input: GainNode;
+  dry: GainNode;
+  highpass: BiquadFilterNode;
+  presence: BiquadFilterNode;
+  compressor: DynamicsCompressorNode;
+  delay: DelayNode;
+  feedback: GainNode;
+  wet: GainNode;
+  shaper: WaveShaperNode;
+  synth: GainNode;
+  panner: StereoPannerNode;
+  sculpt: GainNode;
+  output: GainNode;
+};
+
 const phases = [
   ["Ground", "Source fidelity and tonal center"],
   ["Fold", "Relations turn inward"],
@@ -31,6 +49,7 @@ const formatTime = (seconds: number) => {
 };
 
 const db = (value: number) => value > 0 ? 20 * Math.log10(value) : -Infinity;
+const clamp = (value: number, minimum: number, maximum: number) => Math.min(maximum, Math.max(minimum, value));
 
 async function inspectAudio(file: File): Promise<{ evidence: AudioEvidence; buffer: AudioBuffer }> {
   const context = new AudioContext();
@@ -74,6 +93,7 @@ export default function SonicForge() {
   const inputRef = useRef<HTMLInputElement>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
   const sourceUrl = useRef<string | null>(null);
+  const graphRef = useRef<SonicGraph | null>(null);
   const [evidence, setEvidence] = useState<AudioEvidence | null>(null);
   const [audioBuffer, setAudioBuffer] = useState<AudioBuffer | null>(null);
   const [audioUrl, setAudioUrl] = useState("");
@@ -84,10 +104,38 @@ export default function SonicForge() {
   const [synthesis, setSynthesis] = useState(0);
   const [phaseStretch, setPhaseStretch] = useState(50);
   const [playing, setPlaying] = useState(false);
+  const [monitor, setMonitor] = useState<"source" | "sculpted">("sculpted");
 
   useEffect(() => () => {
     if (sourceUrl.current) URL.revokeObjectURL(sourceUrl.current);
+    void graphRef.current?.context.close();
   }, []);
+
+  const updateGraph = useCallback((graph: SonicGraph, mode: "source" | "sculpted", clarifyValue: number, displacementValue: number, synthesisValue: number) => {
+    const now = graph.context.currentTime;
+    const sculpted = mode === "sculpted";
+    const c = sculpted ? clarifyValue / 100 : 0;
+    const d = sculpted ? displacementValue / 100 : 0;
+    const s = sculpted ? synthesisValue / 100 : 0;
+    graph.dry.gain.setTargetAtTime(sculpted ? 0 : 1, now, 0.015);
+    graph.sculpt.gain.setTargetAtTime(sculpted ? 1 : 0, now, 0.015);
+    graph.highpass.frequency.setTargetAtTime(20 + c * 55, now, 0.03);
+    graph.presence.frequency.setTargetAtTime(2_400 + c * 1_300, now, 0.03);
+    graph.presence.gain.setTargetAtTime(c * 2.4, now, 0.03);
+    graph.compressor.threshold.setTargetAtTime(-8 - c * 18, now, 0.03);
+    graph.compressor.ratio.setTargetAtTime(1 + c * 2.8, now, 0.03);
+    graph.delay.delayTime.setTargetAtTime(0.006 + d * 0.034, now, 0.03);
+    graph.feedback.gain.setTargetAtTime(d * 0.18, now, 0.03);
+    graph.wet.gain.setTargetAtTime(d * 0.3, now, 0.03);
+    graph.synth.gain.setTargetAtTime(s * 0.28, now, 0.03);
+    const witnessSample = displacementMap.samples[Math.min(displacementMap.samples.length - 1, Math.round(d * (displacementMap.samples.length - 1)))];
+    graph.panner.pan.setTargetAtTime(clamp(witnessSample.horizontalDisplacement * d * 2.4, -0.7, 0.7), now, 0.08);
+    graph.output.gain.setTargetAtTime(sculpted ? 0.93 : 1, now, 0.03);
+  }, []);
+
+  useEffect(() => {
+    if (graphRef.current) updateGraph(graphRef.current, monitor, clarity, displacement, synthesis);
+  }, [clarity, displacement, monitor, synthesis, updateGraph]);
 
   const ingest = useCallback(async (file?: File) => {
     if (!file) return;
@@ -138,6 +186,46 @@ export default function SonicForge() {
 
   const togglePlayback = async () => {
     if (!audioRef.current || !audioBuffer) return;
+    if (!graphRef.current) {
+      const context = new AudioContext({ sampleRate: 48_000 });
+      const source = context.createMediaElementSource(audioRef.current);
+      const input = context.createGain();
+      const dry = context.createGain();
+      const highpass = context.createBiquadFilter();
+      highpass.type = "highpass";
+      const presence = context.createBiquadFilter();
+      presence.type = "peaking";
+      presence.Q.value = 0.72;
+      const compressor = context.createDynamicsCompressor();
+      compressor.attack.value = 0.012;
+      compressor.release.value = 0.22;
+      compressor.knee.value = 16;
+      const delay = context.createDelay(0.12);
+      const feedback = context.createGain();
+      const wet = context.createGain();
+      const shaper = context.createWaveShaper();
+      const curve = new Float32Array(8_192);
+      for (let index = 0; index < curve.length; index += 1) {
+        const x = index * 2 / (curve.length - 1) - 1;
+        curve[index] = Math.tanh(x * 2.1);
+      }
+      shaper.curve = curve;
+      shaper.oversample = "4x";
+      const synth = context.createGain();
+      const panner = context.createStereoPanner();
+      const sculpt = context.createGain();
+      const output = context.createGain();
+      source.connect(input);
+      input.connect(dry).connect(output);
+      input.connect(highpass).connect(presence).connect(compressor).connect(panner).connect(sculpt).connect(output);
+      compressor.connect(delay).connect(wet).connect(panner);
+      delay.connect(feedback).connect(delay);
+      compressor.connect(shaper).connect(synth).connect(panner);
+      output.connect(context.destination);
+      graphRef.current = { context, source, input, dry, highpass, presence, compressor, delay, feedback, wet, shaper, synth, panner, sculpt, output };
+      updateGraph(graphRef.current, monitor, clarity, displacement, synthesis);
+    }
+    if (graphRef.current.context.state === "suspended") await graphRef.current.context.resume();
     if (audioRef.current.paused) await audioRef.current.play();
     else audioRef.current.pause();
   };
@@ -172,10 +260,11 @@ export default function SonicForge() {
             <section className="mt-10 border border-white/25">
               <div className="grid border-b border-white/20 md:grid-cols-[1fr_auto] md:items-center"><div className="min-w-0 p-5 md:p-7"><p className="truncate text-xl font-light">{evidence.name}</p><p className="mt-2 font-mono text-[8px] uppercase tracking-[0.14em] text-white/35">{status}</p></div><div className="grid grid-cols-4 border-t border-white/20 md:border-l md:border-t-0"><Metric label="Duration" value={formatTime(evidence.duration)} /><Metric label="Rate" value={`${(evidence.sampleRate / 1000).toFixed(1)}k`} /><Metric label="Field" value={evidence.channels === 1 ? "Mono" : `${evidence.channels}ch`} /><Metric label="Peak" value={`${db(evidence.peak).toFixed(1)} dB`} /></div></div>
               <div className="sonic-waveform relative flex h-52 items-center gap-px overflow-hidden px-4" aria-label="Source waveform">{evidence.waveform.map((value, index) => <span key={index} style={{ height: `${Math.max(1, value * 100)}%` }} />)}<div className="sonic-scan" /></div>
-              <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/20 p-4"><button className="border border-white px-5 py-3 text-[9px] uppercase tracking-[0.2em]" onClick={() => void togglePlayback()}>{playing ? "Pause source" : "Witness source"}</button><button className="text-[9px] uppercase tracking-[0.18em] text-white/45 hover:text-white" onClick={() => { setEvidence(null); setAudioBuffer(null); setPlaying(false); }}>Replace source</button><audio ref={audioRef} src={audioUrl} onPause={() => setPlaying(false)} onPlay={() => setPlaying(true)} /></div>
+              <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/20 p-4"><div className="flex flex-wrap gap-2"><button className="border border-white px-5 py-3 text-[9px] uppercase tracking-[0.2em]" onClick={() => void togglePlayback()}>{playing ? "Pause" : "Witness sound"}</button><div className="flex border border-white/30"><button aria-pressed={monitor === "source"} className={`px-4 py-3 text-[8px] uppercase tracking-[0.17em] ${monitor === "source" ? "bg-white text-black" : "text-white/45"}`} onClick={() => setMonitor("source")}>Source</button><button aria-pressed={monitor === "sculpted"} className={`px-4 py-3 text-[8px] uppercase tracking-[0.17em] ${monitor === "sculpted" ? "bg-white text-black" : "text-white/45"}`} onClick={() => setMonitor("sculpted")}>Sculpted</button></div></div><button className="text-[9px] uppercase tracking-[0.18em] text-white/45 hover:text-white" onClick={() => { audioRef.current?.pause(); setEvidence(null); setAudioBuffer(null); setPlaying(false); }}>Replace source</button><audio ref={audioRef} src={audioUrl} onPause={() => setPlaying(false)} onPlay={() => setPlaying(true)} /></div>
             </section>
 
-            <section className="mt-12 grid gap-px bg-white/20 lg:grid-cols-3">
+            <div className="mt-6 flex items-center gap-3 font-mono text-[8px] uppercase tracking-[0.15em] text-white/30"><span className={`h-1.5 w-1.5 ${playing && monitor === "sculpted" ? "bg-white" : "border border-white/50"}`} />{playing ? `${monitor} monitor active` : "Audio graph armed on first playback"}</div>
+            <section className="mt-6 grid gap-px bg-white/20 lg:grid-cols-3">
               <Stage id="clarify" active={activeStage === "clarify"} label="01 / Clarify" description="Stabilize and reveal what the source already contains." value={clarity} onActivate={() => setActiveStage("clarify")} onChange={setClarity} />
               <Stage id="displace" active={activeStage === "displace"} label="02 / Displace" description="Move the intact source through witnessed spatial relations." value={displacement} onActivate={() => setActiveStage("displace")} onChange={setDisplacement} />
               <Stage id="synthesize" active={activeStage === "synthesize"} label="03 / Synthesize" description="Introduce new FoldForge material under explicit control." value={synthesis} onActivate={() => setActiveStage("synthesize")} onChange={setSynthesis} />
