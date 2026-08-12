@@ -63,7 +63,7 @@ function shapingCurve(): Float32Array<ArrayBuffer> {
   const curve = new Float32Array(8_192);
   for (let index = 0; index < curve.length; index += 1) {
     const x = index * 2 / (curve.length - 1) - 1;
-    curve[index] = Math.tanh(x * 2.1);
+    curve[index] = Math.tanh(x * 1.35);
   }
   return curve;
 }
@@ -99,8 +99,8 @@ export async function renderMaster(buffer: AudioBuffer, controls: RenderControls
   highpass.frequency.value = 20 + controls.clarity / 100 * 55;
   const foundation = context.createBiquadFilter();
   foundation.type = "lowshelf";
-  foundation.frequency.value = 92;
-  foundation.gain.value = 2.2;
+  foundation.frequency.value = 82;
+  foundation.gain.value = 2.6;
   const presence = context.createBiquadFilter();
   presence.type = "peaking";
   presence.frequency.value = 2_400 + controls.clarity / 100 * 1_300;
@@ -108,8 +108,8 @@ export async function renderMaster(buffer: AudioBuffer, controls: RenderControls
   presence.gain.value = controls.clarity / 100 * 4.5;
   const transient = context.createBiquadFilter();
   transient.type = "highshelf";
-  transient.frequency.value = 4_800;
-  transient.gain.value = 1.8;
+  transient.frequency.value = 3_200;
+  transient.gain.value = 1.25;
   const compressor = context.createDynamicsCompressor();
   compressor.threshold.value = -10 - controls.clarity / 100 * 22;
   compressor.ratio.value = 1 + controls.clarity / 100 * 4.5;
@@ -125,27 +125,27 @@ export async function renderMaster(buffer: AudioBuffer, controls: RenderControls
   shaper.curve = shapingCurve();
   shaper.oversample = "4x";
   const synth = context.createGain();
-  synth.gain.value = controls.synthesis / 100 * 0.38;
+  synth.gain.value = controls.synthesis / 100 * 0.2;
   const resonance = context.createGain();
-  resonance.gain.value = controls.synthesis / 100 * 0.52 + controls.displacement / 100 * 0.12;
+  resonance.gain.value = controls.synthesis / 100 * 0.34 + controls.displacement / 100 * 0.1;
   const formants = [
-    390 + controls.displacement / 100 * 90,
-    1_080 + controls.clarity / 100 * 240,
-    2_760 + controls.synthesis / 100 * 420,
+    220 + controls.displacement / 100 * 34,
+    554 + controls.clarity / 100 * 72,
+    1_318 + controls.synthesis / 100 * 155,
   ];
   const resonators = formants.map((frequency, index) => {
     const filter = context.createBiquadFilter();
     filter.type = "bandpass";
     filter.frequency.value = frequency;
-    filter.Q.value = 7 + controls.synthesis / 100 * 13 + index * 2;
+    filter.Q.value = 2.4 + controls.synthesis / 100 * 2.8 + index * 0.7;
     return filter;
   });
   const body = context.createBiquadFilter();
   body.type = "bandpass";
-  body.frequency.value = 168;
-  body.Q.value = 1.15;
+  body.frequency.value = 132;
+  body.Q.value = 0.72;
   const bodyGain = context.createGain();
-  bodyGain.gain.value = 0.16;
+  bodyGain.gain.value = 0.24;
   const output = context.createGain();
   output.gain.value = 0.88;
   const limiter = context.createDynamicsCompressor();

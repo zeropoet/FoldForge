@@ -133,7 +133,7 @@ export default function SonicForge() {
 
   const { clarity, displacement, synthesis, phaseStretch } = sonicPreset;
   const recoveryGain = useMemo(() => audioBuffer ? sourceRecoveryGain(audioBuffer) : 1, [audioBuffer]);
-  const currentSignature = `${evidence?.name ?? ""}:${evidence?.bytes ?? 0}:${evidence?.duration ?? 0}:sonic-forge-v3`;
+  const currentSignature = `${evidence?.name ?? ""}:${evidence?.bytes ?? 0}:${evidence?.duration ?? 0}:sonic-forge-v4`;
   const masterIsCurrent = Boolean(master && masterSignature === currentSignature);
 
   const updateGraph = useCallback((graph: SonicGraph, mode: "source" | "sculpted", clarifyValue: number, displacementValue: number, synthesisValue: number) => {
@@ -146,26 +146,26 @@ export default function SonicForge() {
     graph.sculpt.gain.setTargetAtTime(sculpted ? 1 : 0, now, 0.015);
     graph.recovery.gain.setTargetAtTime(sculpted ? recoveryGain : 1, now, 0.02);
     graph.highpass.frequency.setTargetAtTime(20 + c * 55, now, 0.03);
-    graph.foundation.frequency.setTargetAtTime(92, now, 0.03);
-    graph.foundation.gain.setTargetAtTime(2.2, now, 0.03);
+    graph.foundation.frequency.setTargetAtTime(82, now, 0.03);
+    graph.foundation.gain.setTargetAtTime(2.6, now, 0.03);
     graph.presence.frequency.setTargetAtTime(2_400 + c * 1_300, now, 0.03);
     graph.presence.gain.setTargetAtTime(c * 4.5, now, 0.03);
-    graph.transient.frequency.setTargetAtTime(4_800, now, 0.03);
-    graph.transient.gain.setTargetAtTime(1.8, now, 0.03);
+    graph.transient.frequency.setTargetAtTime(3_200, now, 0.03);
+    graph.transient.gain.setTargetAtTime(1.25, now, 0.03);
     graph.compressor.threshold.setTargetAtTime(-10 - c * 22, now, 0.03);
     graph.compressor.ratio.setTargetAtTime(1 + c * 4.5, now, 0.03);
     graph.delay.delayTime.setTargetAtTime(0.008 + d * 0.055, now, 0.03);
     graph.feedback.gain.setTargetAtTime(d * 0.26, now, 0.03);
     graph.wet.gain.setTargetAtTime(d * 0.46, now, 0.03);
-    graph.synth.gain.setTargetAtTime(s * 0.38, now, 0.03);
-    graph.resonance.gain.setTargetAtTime(s * 0.52 + d * 0.12, now, 0.04);
-    graph.body.frequency.setTargetAtTime(168, now, 0.04);
-    graph.body.Q.setTargetAtTime(1.15, now, 0.04);
-    graph.bodyGain.gain.setTargetAtTime(0.16, now, 0.04);
-    const formants = [390 + d * 90, 1_080 + c * 240, 2_760 + s * 420];
+    graph.synth.gain.setTargetAtTime(s * 0.2, now, 0.03);
+    graph.resonance.gain.setTargetAtTime(s * 0.34 + d * 0.1, now, 0.04);
+    graph.body.frequency.setTargetAtTime(132, now, 0.04);
+    graph.body.Q.setTargetAtTime(0.72, now, 0.04);
+    graph.bodyGain.gain.setTargetAtTime(0.24, now, 0.04);
+    const formants = [220 + d * 34, 554 + c * 72, 1_318 + s * 155];
     graph.resonators.forEach((filter, index) => {
       filter.frequency.setTargetAtTime(formants[index], now, 0.08);
-      filter.Q.setTargetAtTime(7 + s * 13 + index * 2, now, 0.08);
+      filter.Q.setTargetAtTime(2.4 + s * 2.8 + index * 0.7, now, 0.08);
     });
     graph.panner.pan.setTargetAtTime(0, now, 0.02);
     graph.output.gain.setTargetAtTime(sculpted ? 0.88 : 1, now, 0.03);
@@ -245,7 +245,7 @@ export default function SonicForge() {
       peakDbfs: Number(db(evidence.peak).toFixed(2)),
       rmsDbfs: Number(db(evidence.rms).toFixed(2)),
     } : null,
-    instrument: "sonic-forge/steel-voice/v3",
+    instrument: "sonic-forge/resonant-piano-body/v4",
     levelRecovery: audioBuffer ? {
       gain: Number(recoveryGain.toFixed(6)),
       gainDb: Number((20 * Math.log10(recoveryGain)).toFixed(2)),
@@ -302,7 +302,7 @@ export default function SonicForge() {
       const curve = new Float32Array(8_192);
       for (let index = 0; index < curve.length; index += 1) {
         const x = index * 2 / (curve.length - 1) - 1;
-        curve[index] = Math.tanh(x * 2.1);
+        curve[index] = Math.tanh(x * 1.35);
       }
       shaper.curve = curve;
       shaper.oversample = "4x";
@@ -419,9 +419,9 @@ export default function SonicForge() {
 
             <div className="mt-6 flex flex-wrap items-center justify-between gap-3 font-mono text-[8px] uppercase tracking-[0.15em] text-white/30"><span className="flex items-center gap-3"><span className={`h-1.5 w-1.5 ${playing && monitor === "sculpted" ? "bg-white" : "border border-white/50"}`} />{playing ? `${monitor} monitor active` : masterPlaying ? "Master monitor active" : "Audio graph armed on first playback"}</span><span>{formatTime(playhead * progressDuration)} / {formatTime(progressDuration)} · {phases[activePhaseIndex][0]} {phaseProgress.toFixed(0)}%</span></div>
             <section className="mt-6 grid gap-px bg-white/20 lg:grid-cols-3">
-              <InstrumentStage label="01 / Clarify" description="Bass gains centered foundation while drum attacks remain solid and crisp." />
+              <InstrumentStage label="01 / Clarify" description="Bass gains soundboard foundation while attacks retain a soft, defined edge." />
               <InstrumentStage label="02 / Displace" description="The centered voice traverses witnessed depth, energy, and recurrence." />
-              <InstrumentStage label="03 / Synthesize" description="Steel partials, string-body resonance, and voice-like formants are excited from the source." />
+              <InstrumentStage label="03 / Synthesize" description="Broad string partials and a grand-piano-like body bloom from the source." />
             </section>
 
             <section className="mt-12 border-y border-white/20 py-8"><div className="flex flex-wrap items-end justify-between gap-6"><div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">FoldForge progression / deterministic score</p><h2 className="mt-3 text-3xl font-light tracking-[-0.04em]">One source / one witnessed traversal</h2></div><p className="max-w-xs text-right font-mono text-[8px] uppercase leading-4 tracking-[0.15em] text-white/30">Fixed instrument / no performance controls</p></div><div className="sonic-timeline relative mt-10 grid grid-cols-2 gap-px bg-white/20 md:grid-cols-6"><div className="sonic-timeline-progress" style={{ width: `${playhead * 100}%` }} />{phases.map(([name, description], index) => <div className={`relative bg-black p-4 ${index === activePhaseIndex && (playing || masterPlaying) ? "is-current" : ""}`} key={name}><span className="font-mono text-[8px] text-white/25">{String(index + 1).padStart(2, "0")}</span><h3 className="mt-8 text-sm uppercase tracking-[0.12em]">{name}</h3><p className="mt-2 text-[10px] leading-4 text-white/35">{description}</p>{index === activePhaseIndex && (playing || masterPlaying) ? <span className="absolute inset-x-0 bottom-0 h-px bg-white" style={{ width: `${phaseProgress}%` }} /> : null}</div>)}</div></section>

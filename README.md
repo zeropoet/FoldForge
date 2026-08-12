@@ -252,11 +252,18 @@ field, and a 4.8 kHz transient shelf preserves crisp drum attacks. The final
 linked limiter contains the combined field without introducing stereo motion.
 
 Quiet sources receive deterministic level recovery in
-`sonic-forge/steel-voice/v3` before the articulation
+`sonic-forge/resonant-piano-body/v4` before the articulation
 mapping. Sonic Forge raises RMS toward -20 dBFS, preserves -3 dBFS input-peak
 headroom, and caps recovery at +12 dB. Source monitoring remains untouched;
 only the Sculpted path and rendered master receive recovery. The linked limiter
 and final master normalization continue to contain the resulting field.
+
+Instrument `sonic-forge/resonant-piano-body/v4` moves the fixed voice away from
+high-Q metallic-bar resonance and toward a grand-piano-like physical body. Its
+broad source-excited partials center near 220, 554, and 1318 Hz; a wide 132 Hz
+soundboard path supplies bloom; an 82 Hz shelf anchors the lowest register; and
+a restrained 3.2 kHz shelf preserves a felt-like attack. It remains an original
+FoldForge transformation rather than a sampled or simulated piano.
 
 ## Audio-native archive evidence
 
