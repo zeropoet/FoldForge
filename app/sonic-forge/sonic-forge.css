@@ -2,6 +2,7 @@
 .sonic-drop { background: repeating-linear-gradient(90deg, transparent 0, transparent calc(10% - 1px), rgb(255 255 255 / 5%) 10%); transition: background-color 180ms ease, border-color 180ms ease; }
 .sonic-drop:hover { border-color: rgb(255 255 255 / 70%); background-color: rgb(255 255 255 / 2%); }
 .sonic-waveform span { width: 100%; min-width: 1px; background: rgb(255 255 255 / 72%); transform-origin: center; }
+.sonic-waveform-progress { position: absolute; inset: 0 auto 0 0; z-index: 1; max-width: 100%; background: rgb(255 255 255 / 8%); border-right: 1px solid rgb(255 255 255 / 70%); transition: width 80ms linear; pointer-events: none; }
 .sonic-waveform::after { position: absolute; inset: 50% 0 auto; height: 1px; background: rgb(255 255 255 / 18%); content: ""; }
 .sonic-scan { position: absolute; inset: 0 auto 0 0; z-index: 2; width: 1px; background: #fff; box-shadow: 0 0 18px rgb(255 255 255 / 60%); transition: left 80ms linear; }
 .sonic-stage { position: relative; }
