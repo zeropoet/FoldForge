@@ -28,6 +28,8 @@ export interface SonicMaster {
 export interface LibraryTrack {
   id: string;
   title: string;
+  sequence: number;
+  fileName: string;
   createdAt: string;
   audio: Blob;
   witness: Record<string, unknown>;
@@ -196,8 +198,11 @@ async function encodeMaster(buffer: AudioBuffer): Promise<SonicMaster> {
 
 function openLibrary(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
-    const request = indexedDB.open("foldforge-sonic-library", 1);
-    request.onupgradeneeded = () => request.result.createObjectStore("tracks", { keyPath: "id" });
+    const request = indexedDB.open("foldforge-sonic-library", 2);
+    request.onupgradeneeded = () => {
+      if (!request.result.objectStoreNames.contains("tracks")) request.result.createObjectStore("tracks", { keyPath: "id" });
+      if (!request.result.objectStoreNames.contains("meta")) request.result.createObjectStore("meta");
+    };
     request.onsuccess = () => resolve(request.result);
     request.onerror = () => reject(request.error);
   });
@@ -214,15 +219,51 @@ export async function listLibraryTracks(): Promise<LibraryTrack[]> {
   });
 }
 
-export async function admitLibraryTrack(track: LibraryTrack): Promise<void> {
+export async function admitLibraryTrack(track: Omit<LibraryTrack, "sequence" | "fileName">): Promise<LibraryTrack> {
   const database = await openLibrary();
-  await new Promise<void>((resolve, reject) => {
-    const transaction = database.transaction("tracks", "readwrite");
-    transaction.objectStore("tracks").put(track);
-    transaction.oncomplete = () => resolve();
+  const admitted = await new Promise<LibraryTrack>((resolve, reject) => {
+    const transaction = database.transaction(["tracks", "meta"], "readwrite");
+    const tracks = transaction.objectStore("tracks");
+    const meta = transaction.objectStore("meta");
+    let result: LibraryTrack | undefined;
+    const storeWithSequence = (sequence: number) => {
+      const safeTitle = track.title.replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "") || "untitled";
+      result = {
+        ...track,
+        sequence,
+        fileName: `Sonic-Forge-${String(sequence).padStart(4, "0")}-${safeTitle}-master.wav`,
+      };
+      tracks.put(result);
+      meta.put(sequence + 1, "next-sequence");
+    };
+    const allocateSequence = () => {
+      const counterRequest = meta.get("next-sequence");
+      counterRequest.onsuccess = () => {
+        if (typeof counterRequest.result === "number") {
+          storeWithSequence(counterRequest.result);
+          return;
+        }
+        const allRequest = tracks.getAll();
+        allRequest.onsuccess = () => {
+          const existingTracks = allRequest.result as Array<Partial<LibraryTrack>>;
+          const maximum = existingTracks.reduce((value, item) => Math.max(value, item.sequence ?? 0), existingTracks.length);
+          storeWithSequence(maximum + 1);
+        };
+      };
+    };
+    const existingRequest = tracks.get(track.id);
+    existingRequest.onsuccess = () => {
+      if (existingRequest.result?.sequence && existingRequest.result?.fileName) {
+        result = existingRequest.result as LibraryTrack;
+        return;
+      }
+      allocateSequence();
+    };
+    transaction.oncomplete = () => result ? resolve(result) : reject(new Error("Library admission did not complete"));
     transaction.onerror = () => reject(transaction.error);
   });
   database.close();
+  return admitted;
 }
 
 export async function removeLibraryTrack(id: string): Promise<void> {

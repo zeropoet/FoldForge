@@ -257,6 +257,10 @@ a master does not upload or publish audio, and clearing site data removes the
 local library. Public library publication remains a separate repository-level
 curatorial action.
 
+Admission assigns a persistent, monotonic library sequence and filename in the
+form `Sonic-Forge-0001-source-title-master.wav`. Sequence numbers are never
+reused when a local master is removed.
+
 Alchemy provides owner, contract, token, and cached metadata. `app/collection-policy.ts` applies repository-owned exclusions. `app/nft-data.ts` normalizes provider media and constructs responsive derivative URLs. `app/page.tsx` resolves the archive and computes or restores versioned visual signatures. `app/composition-witness.ts` seals every grammar and the current displacement-map witness into archive evidence, while `app/composer-chamber.tsx` derives the lexical field, archive-seamed chromatic field, autonomous six-phase macroform, visual-relation arrangements, displacement field, and unified FoldForge voice.
 
 The FOLD FORGE contract
