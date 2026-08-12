@@ -145,8 +145,7 @@ export default function SonicForge() {
     graph.feedback.gain.setTargetAtTime(d * 0.26, now, 0.03);
     graph.wet.gain.setTargetAtTime(d * 0.46, now, 0.03);
     graph.synth.gain.setTargetAtTime(s * 0.38, now, 0.03);
-    const witnessSample = displacementMap.samples[Math.min(displacementMap.samples.length - 1, Math.round(d * (displacementMap.samples.length - 1)))];
-    graph.panner.pan.setTargetAtTime(clamp(witnessSample.horizontalDisplacement * d * 4.5, -0.78, 0.78), now, 0.08);
+    graph.panner.pan.setTargetAtTime(0, now, 0.02);
     graph.output.gain.setTargetAtTime(sculpted ? 0.88 : 1, now, 0.03);
   }, []);
 
@@ -167,10 +166,10 @@ export default function SonicForge() {
       const left = Math.floor(samplePosition);
       const right = Math.min(displacementMap.samples.length - 1, left + 1);
       const mix = samplePosition - left;
-      const interpolate = (key: "horizontalDisplacement" | "depthDisplacement" | "energyDisplacement") => displacementMap.samples[left][key] + (displacementMap.samples[right][key] - displacementMap.samples[left][key]) * mix;
+      const interpolate = (key: "depthDisplacement" | "energyDisplacement") => displacementMap.samples[left][key] + (displacementMap.samples[right][key] - displacementMap.samples[left][key]) * mix;
       const amount = displacement / 100;
       const now = graph.context.currentTime;
-      graph.panner.pan.setTargetAtTime(clamp(interpolate("horizontalDisplacement") * amount * 4.5, -0.78, 0.78), now, 0.035);
+      graph.panner.pan.setTargetAtTime(0, now, 0.02);
       graph.delay.delayTime.setTargetAtTime(0.008 + Math.abs(interpolate("depthDisplacement")) * amount * 0.42, now, 0.035);
       graph.wet.gain.setTargetAtTime(clamp((0.24 + interpolate("energyDisplacement") * 0.13) * amount, 0.03, 0.5), now, 0.035);
       animationRef.current = requestAnimationFrame(tick);
@@ -351,7 +350,7 @@ export default function SonicForge() {
             <div className="mt-6 flex items-center gap-3 font-mono text-[8px] uppercase tracking-[0.15em] text-white/30"><span className={`h-1.5 w-1.5 ${playing && monitor === "sculpted" ? "bg-white" : "border border-white/50"}`} />{playing ? `${monitor} monitor active` : "Audio graph armed on first playback"}</div>
             <section className="mt-6 grid gap-px bg-white/20 lg:grid-cols-3">
               <Stage id="clarify" active={activeStage === "clarify"} label="01 / Clarify" description="Stabilize and reveal what the source already contains." value={clarity} onActivate={() => setActiveStage("clarify")} onChange={setClarity} />
-              <Stage id="displace" active={activeStage === "displace"} label="02 / Displace" description="Traverse the witnessed field across live playback." value={displacement} onActivate={() => setActiveStage("displace")} onChange={setDisplacement} />
+              <Stage id="displace" active={activeStage === "displace"} label="02 / Displace" description="Traverse witnessed depth and energy while remaining centered." value={displacement} onActivate={() => setActiveStage("displace")} onChange={setDisplacement} />
               <Stage id="synthesize" active={activeStage === "synthesize"} label="03 / Synthesize" description="Introduce new harmonic material; 0% adds none." value={synthesis} onActivate={() => setActiveStage("synthesize")} onChange={setSynthesis} />
             </section>
 

@@ -59,7 +59,7 @@ function scheduleProgression(
     const position = index / Math.max(1, displacementMap.samples.length - 1);
     const warped = position ** curve;
     const time = warped * duration;
-    panner.pan.linearRampToValueAtTime(clamp(sample.horizontalDisplacement * amount * 4.5, -0.78, 0.78), time);
+    panner.pan.setValueAtTime(0, time);
     delay.delayTime.linearRampToValueAtTime(0.008 + Math.abs(sample.depthDisplacement) * amount * 0.42, time);
     wet.gain.linearRampToValueAtTime(clamp((0.24 + sample.energyDisplacement * 0.13) * amount, 0.03, 0.5), time);
   });

@@ -236,6 +236,8 @@ FoldForge uses Next.js static export and performs Alchemy, ENS, image-derivative
 listener can ingest a local sound, inspect its waveform and source format,
 monitor the untouched source against a live sculpted signal, and separately
 govern clarification, witnessed displacement, and added synthesis.
+Sonic masters remain centered and balanced between left and right; witnessed
+horizontal displacement is not mapped to stereo pan.
 
 The master chamber renders the full sound offline through the committed Root
 Logos displacement progression, normalizes it for clear laptop playback, and
