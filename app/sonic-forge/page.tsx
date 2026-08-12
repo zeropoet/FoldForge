@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import displacementMap from "../../public/root-logos-living-object-displacement.json";
-import { admitLibraryTrack, listLibraryTracks, removeLibraryTrack, renderMaster, type LibraryTrack, type SonicMaster } from "./sonic-audio";
+import { admitLibraryTrack, listLibraryTracks, removeLibraryTrack, renderMaster, sourceRecoveryGain, type LibraryTrack, type SonicMaster } from "./sonic-audio";
 import "./sonic-forge.css";
 
 type AudioEvidence = {
@@ -21,6 +21,7 @@ type SonicGraph = {
   context: AudioContext;
   source: MediaElementAudioSourceNode;
   input: GainNode;
+  recovery: GainNode;
   dry: GainNode;
   highpass: BiquadFilterNode;
   foundation: BiquadFilterNode;
@@ -131,7 +132,8 @@ export default function SonicForge() {
   useEffect(() => { void listLibraryTracks().then(setLibrary).catch(() => setStatus("Local library unavailable")); }, []);
 
   const { clarity, displacement, synthesis, phaseStretch } = sonicPreset;
-  const currentSignature = `${evidence?.name ?? ""}:${evidence?.bytes ?? 0}:${evidence?.duration ?? 0}:sonic-forge-v2`;
+  const recoveryGain = useMemo(() => audioBuffer ? sourceRecoveryGain(audioBuffer) : 1, [audioBuffer]);
+  const currentSignature = `${evidence?.name ?? ""}:${evidence?.bytes ?? 0}:${evidence?.duration ?? 0}:sonic-forge-v3`;
   const masterIsCurrent = Boolean(master && masterSignature === currentSignature);
 
   const updateGraph = useCallback((graph: SonicGraph, mode: "source" | "sculpted", clarifyValue: number, displacementValue: number, synthesisValue: number) => {
@@ -142,6 +144,7 @@ export default function SonicForge() {
     const s = sculpted ? synthesisValue / 100 : 0;
     graph.dry.gain.setTargetAtTime(sculpted ? 0 : 1, now, 0.015);
     graph.sculpt.gain.setTargetAtTime(sculpted ? 1 : 0, now, 0.015);
+    graph.recovery.gain.setTargetAtTime(sculpted ? recoveryGain : 1, now, 0.02);
     graph.highpass.frequency.setTargetAtTime(20 + c * 55, now, 0.03);
     graph.foundation.frequency.setTargetAtTime(92, now, 0.03);
     graph.foundation.gain.setTargetAtTime(2.2, now, 0.03);
@@ -166,7 +169,7 @@ export default function SonicForge() {
     });
     graph.panner.pan.setTargetAtTime(0, now, 0.02);
     graph.output.gain.setTargetAtTime(sculpted ? 0.88 : 1, now, 0.03);
-  }, []);
+  }, [recoveryGain]);
 
   useEffect(() => {
     if (graphRef.current) updateGraph(graphRef.current, monitor, clarity, displacement, synthesis);
@@ -242,7 +245,14 @@ export default function SonicForge() {
       peakDbfs: Number(db(evidence.peak).toFixed(2)),
       rmsDbfs: Number(db(evidence.rms).toFixed(2)),
     } : null,
-    instrument: "sonic-forge/steel-voice/v2",
+    instrument: "sonic-forge/steel-voice/v3",
+    levelRecovery: audioBuffer ? {
+      gain: Number(recoveryGain.toFixed(6)),
+      gainDb: Number((20 * Math.log10(recoveryGain)).toFixed(2)),
+      targetRmsDbfs: -20,
+      maximumGainDb: 12,
+      peakHeadroomDbfs: -3,
+    } : null,
     stages: { clarify: clarity, displace: displacement, synthesize: synthesis, authority: "fixed" },
     timeline: { phases: phases.map(([name]) => name.toLowerCase()), stretch: phaseStretch, authority: "fixed" },
     displacement: {
@@ -252,7 +262,7 @@ export default function SonicForge() {
     },
     master: masterIsCurrent ? master?.metrics ?? null : null,
     authority: "Local browser session; no source upload or autonomous library admission.",
-  }), [clarity, displacement, evidence, master, masterIsCurrent, phaseStretch, synthesis]);
+  }), [audioBuffer, clarity, displacement, evidence, master, masterIsCurrent, phaseStretch, recoveryGain, synthesis]);
 
   const exportWitness = () => {
     const blob = new Blob([`${JSON.stringify(witness, null, 2)}\n`], { type: "application/json" });
@@ -270,6 +280,7 @@ export default function SonicForge() {
       const context = new AudioContext({ sampleRate: 48_000 });
       const source = context.createMediaElementSource(audioRef.current);
       const input = context.createGain();
+      const recovery = context.createGain();
       const dry = context.createGain();
       const highpass = context.createBiquadFilter();
       highpass.type = "highpass";
@@ -313,7 +324,7 @@ export default function SonicForge() {
       const output = context.createGain();
       source.connect(input);
       input.connect(dry).connect(output);
-      input.connect(highpass).connect(foundation).connect(presence).connect(transient).connect(compressor).connect(panner).connect(sculpt).connect(limiter).connect(output);
+      input.connect(recovery).connect(highpass).connect(foundation).connect(presence).connect(transient).connect(compressor).connect(panner).connect(sculpt).connect(limiter).connect(output);
       compressor.connect(delay).connect(wet).connect(panner);
       delay.connect(feedback).connect(delay);
       compressor.connect(shaper).connect(synth).connect(panner);
@@ -323,7 +334,7 @@ export default function SonicForge() {
       compressor.connect(body).connect(bodyGain).connect(delay);
       bodyGain.connect(panner);
       output.connect(context.destination);
-      graphRef.current = { context, source, input, dry, highpass, foundation, presence, transient, compressor, delay, feedback, wet, shaper, synth, resonators, resonance, body, bodyGain, panner, sculpt, limiter, output };
+      graphRef.current = { context, source, input, recovery, dry, highpass, foundation, presence, transient, compressor, delay, feedback, wet, shaper, synth, resonators, resonance, body, bodyGain, panner, sculpt, limiter, output };
       updateGraph(graphRef.current, monitor, clarity, displacement, synthesis);
     }
     if (graphRef.current.context.state === "suspended") await graphRef.current.context.resume();

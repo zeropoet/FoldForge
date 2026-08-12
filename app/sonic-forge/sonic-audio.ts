@@ -39,6 +39,26 @@ export interface LibraryTrack {
 const outputRate = 48_000;
 const clamp = (value: number, minimum: number, maximum: number) => Math.min(maximum, Math.max(minimum, value));
 
+export function sourceRecoveryGain(buffer: AudioBuffer): number {
+  let sum = 0;
+  let peak = 0;
+  let count = 0;
+  for (let channel = 0; channel < buffer.numberOfChannels; channel += 1) {
+    const samples = buffer.getChannelData(channel);
+    for (let index = 0; index < samples.length; index += 1) {
+      const sample = samples[index];
+      sum += sample * sample;
+      peak = Math.max(peak, Math.abs(sample));
+      count += 1;
+    }
+  }
+  const rms = Math.sqrt(sum / Math.max(1, count));
+  const targetRms = 10 ** (-20 / 20);
+  const rmsGain = rms > 0 ? targetRms / rms : 1;
+  const peakSafeGain = peak > 0 ? 10 ** (-3 / 20) / peak : 1;
+  return clamp(Math.min(rmsGain, peakSafeGain), 1, 10 ** (12 / 20));
+}
+
 function shapingCurve(): Float32Array<ArrayBuffer> {
   const curve = new Float32Array(8_192);
   for (let index = 0; index < curve.length; index += 1) {
@@ -72,6 +92,8 @@ export async function renderMaster(buffer: AudioBuffer, controls: RenderControls
   const context = new OfflineAudioContext(2, frames, outputRate);
   const source = context.createBufferSource();
   source.buffer = buffer;
+  const recovery = context.createGain();
+  recovery.gain.value = sourceRecoveryGain(buffer);
   const highpass = context.createBiquadFilter();
   highpass.type = "highpass";
   highpass.frequency.value = 20 + controls.clarity / 100 * 55;
@@ -133,7 +155,7 @@ export async function renderMaster(buffer: AudioBuffer, controls: RenderControls
   limiter.attack.value = 0.002;
   limiter.release.value = 0.12;
 
-  source.connect(highpass).connect(foundation).connect(presence).connect(transient).connect(compressor).connect(panner).connect(limiter).connect(output);
+  source.connect(recovery).connect(highpass).connect(foundation).connect(presence).connect(transient).connect(compressor).connect(panner).connect(limiter).connect(output);
   compressor.connect(delay).connect(wet).connect(panner);
   delay.connect(feedback).connect(delay);
   compressor.connect(shaper).connect(synth).connect(panner);

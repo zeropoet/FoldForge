@@ -251,6 +251,13 @@ restrained 168 Hz parallel body path lets plucked strings bloom into the depth
 field, and a 4.8 kHz transient shelf preserves crisp drum attacks. The final
 linked limiter contains the combined field without introducing stereo motion.
 
+Quiet sources receive deterministic level recovery in
+`sonic-forge/steel-voice/v3` before the articulation
+mapping. Sonic Forge raises RMS toward -20 dBFS, preserves -3 dBFS input-peak
+headroom, and caps recovery at +12 dB. Source monitoring remains untouched;
+only the Sculpted path and rendered master receive recovery. The linked limiter
+and final master normalization continue to contain the resulting field.
+
 The master chamber renders the full sound offline through the committed Root
 Logos displacement progression, normalizes it for clear laptop playback, and
 encodes a 48 kHz / 24-bit stereo WAV. The WAV receives a SHA-256 identity and a
