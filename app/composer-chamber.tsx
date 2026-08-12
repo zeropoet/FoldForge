@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { composerGrammars } from "./composition-grammar";
 import type { WitnessToken } from "./composition-witness";
+import type { AudioSignature } from "./audio-analysis";
 import {
   ACHROMATIC_CHROMA_THRESHOLD,
   composeChromaticSequence,
@@ -21,6 +22,7 @@ export interface ComposerEvidence {
   media: string;
   luminance: number | null;
   visual: VisualSignature | null;
+  audio: AudioSignature | null;
 }
 
 interface LexicalTerm {
@@ -196,8 +198,8 @@ function arrangeEvidence(
 }
 
 function deriveEvolution(evidence: ComposerEvidence[], stateHash: string): EvolutionPhase[] {
-  const audible = evidence.filter((token) => token.luminance != null);
-  const values = audible.map((token) => token.luminance ?? 0);
+  const audible = evidence.filter((token) => token.luminance != null || token.audio != null);
+  const values = audible.map((token) => token.luminance ?? Math.min(1, (token.audio?.zeroCrossingRate ?? 0.05) * 9));
   const mean = values.reduce((total, value) => total + value, 0) / Math.max(values.length, 1);
   const variance = values.reduce((total, value) => total + (value - mean) ** 2, 0) / Math.max(values.length, 1);
   const contrast = Math.min(1, Math.sqrt(variance) * 3.2);
@@ -327,7 +329,8 @@ function sampleLivingObjectDisplacement(position: number) {
 }
 
 function soundProfile(token: ComposerEvidence, displacementPosition = 0.5): SoundProfile {
-  const bounded = Math.max(0, Math.min(1, token.luminance ?? 0));
+  const audioRegister = token.audio ? Math.max(0, Math.min(1, token.audio.zeroCrossingRate * 9)) : null;
+  const bounded = Math.max(0, Math.min(1, token.luminance ?? audioRegister ?? 0.5));
   const displacement = sampleLivingObjectDisplacement(displacementPosition);
   const contractSeed = stableNumber(token.contract);
   const tokenSeed = stableNumber(token.tokenId);
@@ -340,15 +343,15 @@ function soundProfile(token: ComposerEvidence, displacementPosition = 0.5): Soun
 
   return {
     frequency: 73.416 * 2 ** (semitone / 12),
-    interval: [360, 400, 440][tokenSeed % 3] * (1 - displacement.energy * 0.09),
-    duration: (0.34 + metadataDensity * 0.7) * (1 + displacement.radial * 0.16),
+    interval: (token.audio ? Math.max(180, 900 - Math.min(60, token.audio.onsetDensity) * 10) : [360, 400, 440][tokenSeed % 3]) * (1 - displacement.energy * 0.09),
+    duration: (token.audio ? 0.3 + Math.min(1, token.audio.dynamicRange / 30) * 0.8 : 0.34 + metadataDensity * 0.7) * (1 + displacement.radial * 0.16),
     pan: Math.max(-0.72, Math.min(0.72,
       (((stableNumber(token.collection) % 201) - 100) / 100) * 0.34 +
       displacement.horizontal * 0.32 +
       displacement.motion * 0.08,
     )),
-    cutoff: (520 + bounded * 3300) * 2 ** (displacement.radial * 0.35),
-    harmonic: (0.08 + (contractSeed % 19) / 100) * (0.72 + chroma * 0.56) * (1 + displacement.density * 0.22),
+    cutoff: (520 + bounded * 3300 + (token.audio?.lowFrequencyEnergy ?? 0) * 480) * 2 ** (displacement.radial * 0.35),
+    harmonic: (0.08 + (contractSeed % 19) / 100) * (0.72 + chroma * 0.56 + (token.audio?.tonalConfidence ?? 0) * 0.22) * (1 + displacement.density * 0.22),
     harmonicRatio: 1.5 + (perceptualHue / 360) * 1.5,
     densityDisplacement: displacement.density,
     energyDisplacement: displacement.energy,
@@ -448,7 +451,7 @@ export default function ComposerChamber({
     arrangementModes.map((mode) => [
       mode.id,
       arrangeEvidence(
-        evidence.filter((token) => token.luminance != null),
+        evidence.filter((token) => token.luminance != null || token.audio != null),
         mode.id,
         stateHash,
       ),
@@ -542,7 +545,7 @@ export default function ComposerChamber({
       const amplitude = 1 / Math.sqrt(phase.arrangements.length);
       if (phase.id === "convergence" && memory.removed.length) {
         memory.removed.slice(0, 4).forEach((token, index) => {
-          if (token.luminance == null) return;
+          if (token.luminance == null && token.audio == null) return;
           const echo: ComposerEvidence = {
             key: tokenKey(token),
             contract: token.contract,
@@ -553,6 +556,7 @@ export default function ComposerChamber({
             media: token.media || "",
             luminance: token.luminance,
             visual: null,
+            audio: token.audio ?? null,
           };
           scheduleTone(context, compressor, echo, context.currentTime + index * 0.18, 0.16);
         });

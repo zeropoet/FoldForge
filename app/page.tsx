@@ -8,6 +8,7 @@ import { createCompositionWitness, type CompositionWitness } from "./composition
 import { resolveOwner } from "./ens";
 import { AlchemyNft, fetchNftMetadata, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, normalizeMediaUrl, optimizedImageSrcSet, optimizedImageUrl, summarizeContracts, tokenImageFor, tokenThumbnailFor } from "./nft-data";
 import { analyzePixels, type VisualSignature } from "./visual-analysis";
+import { analyzeAudio, isAudioUrl, type AudioSignature } from "./audio-analysis";
 
 type LoadState = "idle" | "loading" | "ready" | "error";
 
@@ -52,7 +53,12 @@ function mintedMediaFor(token: AlchemyNft): string {
 }
 
 function hasVideoMedia(token: AlchemyNft): boolean {
-  return Boolean(token.animation?.cachedUrl || token.animation?.originalUrl) || isVideoUrl(mintedMediaFor(token));
+  return !isAudioUrl(mintedMediaFor(token)) && (Boolean(token.animation?.cachedUrl || token.animation?.originalUrl) || isVideoUrl(mintedMediaFor(token)));
+}
+
+function audioMediaFor(token: AlchemyNft): string {
+  const candidates = [token.animation?.originalUrl, token.animation?.cachedUrl, token.raw?.metadata?.animation_url];
+  return normalizeMediaUrl(candidates.find((media) => isAudioUrl(media)) || "");
 }
 
 function compositionKey(token: AlchemyNft): string {
@@ -92,6 +98,9 @@ async function analyzeImage(source: string, signal: AbortSignal): Promise<Visual
 function MediaTile({ token }: { token: AlchemyNft }) {
   const media = hasVideoMedia(token) ? mintedMediaFor(token) : tokenThumbnailFor(token);
   if (!media) return null;
+  if (isAudioUrl(media)) {
+    return <div className="grid h-full place-items-center bg-[#050505] px-4 text-center font-mono text-[8px] uppercase tracking-[0.16em] text-white/45">Audio work</div>;
+  }
   if (hasVideoMedia(token)) {
     return (
       <video
@@ -131,8 +140,10 @@ export default function FoldForge() {
   const [compositionTokens, setCompositionTokens] = useState<AlchemyNft[]>([]);
   const [compositionLoading, setCompositionLoading] = useState(false);
   const [compositionAnalyzing, setCompositionAnalyzing] = useState(false);
+  const [audioAnalyzing, setAudioAnalyzing] = useState(false);
   const [luminanceScores, setLuminanceScores] = useState<Record<string, number | null>>({});
   const [visualSignatures, setVisualSignatures] = useState<Record<string, VisualSignature | null>>({});
+  const [audioSignatures, setAudioSignatures] = useState<Record<string, AudioSignature | null>>({});
   const [compositionWitness, setCompositionWitness] = useState<CompositionWitness | null>(null);
   const [previousCompositionWitness, setPreviousCompositionWitness] = useState<CompositionWitness | null>(null);
   const [selectedContract, setSelectedContract] = useState("");
@@ -165,8 +176,9 @@ export default function FoldForge() {
   }, [compositionTokens, luminanceScores]);
   const compositionReady = useMemo(() => {
     const tokensWithMedia = compositionTokens.filter((token) => compositionMediaFor(token)).length;
-    return !compositionLoading && !compositionAnalyzing && Object.keys(luminanceScores).length >= tokensWithMedia;
-  }, [compositionAnalyzing, compositionLoading, compositionTokens, luminanceScores]);
+    const tokensWithAudio = compositionTokens.filter((token) => audioMediaFor(token)).length;
+    return !compositionLoading && !compositionAnalyzing && !audioAnalyzing && Object.keys(luminanceScores).length >= tokensWithMedia && Object.keys(audioSignatures).length >= tokensWithAudio;
+  }, [audioAnalyzing, audioSignatures, compositionAnalyzing, compositionLoading, compositionTokens, luminanceScores]);
   const composerEvidence = useMemo<ComposerEvidence[]>(() =>
     orderedCompositionTokens.map((token) => {
       const sourceMedia = compositionMediaFor(token);
@@ -180,8 +192,9 @@ export default function FoldForge() {
         media: sourceMedia ? optimizedImageUrl(sourceMedia, { width: 1280, quality: 90 }) : "",
         luminance: luminanceScores[compositionKey(token)] ?? null,
         visual: visualSignatures[compositionKey(token)] ?? null,
+        audio: audioSignatures[compositionKey(token)] ?? null,
       };
-    }), [luminanceScores, orderedCompositionTokens, visualSignatures]);
+    }), [audioSignatures, luminanceScores, orderedCompositionTokens, visualSignatures]);
 
   const loadCollections = useCallback(async (owner: string) => {
     const requestId = requestSequence.current + 1;
@@ -192,6 +205,7 @@ export default function FoldForge() {
     setCompositionTokens([]);
     setLuminanceScores({});
     setVisualSignatures({});
+    setAudioSignatures({});
     setCompositionWitness(null);
     setPreviousCompositionWitness(null);
     setOwnerIdentity(null);
@@ -369,6 +383,42 @@ export default function FoldForge() {
   }, [compositionLoading, compositionTokens, ownerIdentity]);
 
   useEffect(() => {
+    if (compositionLoading || !compositionTokens.length || !ownerIdentity?.address) return;
+    const controller = new AbortController();
+    const entries = compositionTokens
+      .map((token) => ({ key: compositionKey(token), media: audioMediaFor(token) }))
+      .filter((entry) => entry.media);
+    const storageKey = `foldforge:audio-analysis:v1:${ownerIdentity.address.toLowerCase()}`;
+    queueMicrotask(async () => {
+      setAudioAnalyzing(true);
+      const signatures: Record<string, AudioSignature | null> = {};
+      let cached: Record<string, { media: string; signature: AudioSignature | null }> = {};
+      try { cached = JSON.parse(localStorage.getItem(storageKey) || "{}"); } catch { cached = {}; }
+      const pending = entries.filter((entry) => {
+        const match = cached[entry.key];
+        if (!match || match.media !== entry.media) return true;
+        signatures[entry.key] = match.signature;
+        return false;
+      });
+      try {
+        for (let index = 0; index < pending.length; index += 3) {
+          const batch = pending.slice(index, index + 3);
+          const values = await Promise.all(batch.map(async (entry) => ({ ...entry, signature: await analyzeAudio(entry.media, controller.signal) })));
+          for (const value of values) {
+            signatures[value.key] = value.signature;
+            cached[value.key] = { media: value.media, signature: value.signature };
+          }
+        }
+        try { localStorage.setItem(storageKey, JSON.stringify(cached)); } catch {}
+        setAudioSignatures(signatures);
+      } finally {
+        if (!controller.signal.aborted) setAudioAnalyzing(false);
+      }
+    });
+    return () => controller.abort();
+  }, [compositionLoading, compositionTokens, ownerIdentity]);
+
+  useEffect(() => {
     if (!compositionReady || !ownerIdentity?.address) return;
 
     let active = true;
@@ -385,6 +435,12 @@ export default function FoldForge() {
           media: compositionMediaFor(token) || null,
           luminance: luminanceScores[key] ?? null,
           visual: visualSignatures[key] ?? null,
+          audio: audioSignatures[key] ?? null,
+          modalities: [
+            ...(visualSignatures[key] ? ["image" as const] : []),
+            ...(audioSignatures[key] ? ["audio" as const] : []),
+            "language" as const,
+          ],
         };
       }),
     }).then((witness) => {
@@ -406,7 +462,7 @@ export default function FoldForge() {
     return () => {
       active = false;
     };
-  }, [collections, compositionReady, compositionTokens, luminanceScores, ownerIdentity, visualSignatures]);
+  }, [audioSignatures, collections, compositionReady, compositionTokens, luminanceScores, ownerIdentity, visualSignatures]);
 
   useEffect(() => {
     if (!ownerIdentity?.address || selectedContract) {
@@ -558,7 +614,9 @@ export default function FoldForge() {
                   <article className="grid border-b border-white/25 lg:grid-cols-[minmax(0,1.2fr)_minmax(360px,0.8fr)]">
                     <div className="grid min-h-[50vh] place-items-center border-b border-white/25 bg-[#080808] lg:border-b-0 lg:border-r lg:border-white/25">
                       {mintedMediaFor(selectedToken) ? (
-                        hasVideoMedia(selectedToken) ? (
+                        isAudioUrl(mintedMediaFor(selectedToken)) ? (
+                          <div className="grid w-full gap-5 p-8 text-center"><p className="text-[9px] uppercase tracking-[0.2em] text-white/40">Canonical audio work</p><audio className="w-full" controls preload="metadata" src={mintedMediaFor(selectedToken)} /></div>
+                        ) : hasVideoMedia(selectedToken) ? (
                           <video autoPlay className="max-h-[80vh] w-full object-contain" controls loop muted playsInline preload="metadata" src={mintedMediaFor(selectedToken)} />
                         ) : (
                           // eslint-disable-next-line @next/next/no-img-element
@@ -681,7 +739,7 @@ export default function FoldForge() {
             <section className="grid min-h-72 place-items-center border-b border-white/20 text-center">
               <div>
                 <p className="text-[9px] uppercase tracking-[0.24em] text-white/40">
-                  {compositionLoading ? "Resolving sonic evidence" : compositionAnalyzing ? "Reading color and spatial form" : "Awaiting visual evidence"}
+                  {compositionLoading ? "Resolving compositional evidence" : compositionAnalyzing ? "Reading color and spatial form" : audioAnalyzing ? "Reading spectrum, rhythm, and dynamics" : "Awaiting attributable evidence"}
                 </p>
                 <p className="mt-3 font-mono text-[7px] uppercase tracking-[0.14em] text-white/20">
                   The luminosity field remains active as the hidden score

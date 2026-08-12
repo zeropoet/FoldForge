@@ -258,6 +258,18 @@ headroom, and caps recovery at +12 dB. Source monitoring remains untouched;
 only the Sculpted path and rendered master receive recovery. The linked limiter
 and final master normalization continue to contain the resulting field.
 
+## Audio-native archive evidence
+
+FoldForge admits audio-only mints without inventing image evidence. Canonical
+audio in `animation_url` is decoded locally into a versioned signature covering
+duration, sample rate, channels, RMS, peak, dynamic range, zero-crossing rate,
+low-frequency energy, onset density, and tonal confidence. These measurements
+govern register, event interval, envelope, spectral mass, and harmonic pressure.
+Artwork, when present, continues to govern luminance, chroma, and visual
+relations independently. Every token witness declares its available image,
+audio, and language modalities; failed or inaccessible media remains explicitly
+unresolved rather than receiving synthetic fallback evidence.
+
 The master chamber renders the full sound offline through the committed Root
 Logos displacement progression, normalizes it for clear laptop playback, and
 encodes a 48 kHz / 24-bit stereo WAV. The WAV receives a SHA-256 identity and a

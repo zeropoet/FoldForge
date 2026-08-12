@@ -1,5 +1,6 @@
 import { composerGrammars, compositionGrammar } from "./composition-grammar";
 import type { VisualSignature } from "./visual-analysis";
+import type { AudioSignature } from "./audio-analysis";
 import livingObjectDisplacement from "../public/root-logos-living-object-displacement.json";
 
 export interface WitnessToken {
@@ -8,6 +9,8 @@ export interface WitnessToken {
   media: string | null;
   luminance: number | null;
   visual?: VisualSignature | null;
+  audio?: AudioSignature | null;
+  modalities?: Array<"image" | "audio" | "language">;
 }
 
 export interface CompositionWitness {
