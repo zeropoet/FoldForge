@@ -1,4 +1,5 @@
 import displacementMap from "../../public/root-logos-living-object-displacement.json";
+import constitutionMap from "../../public/root-logos-founding-constitution-sonic-map.json";
 
 export interface RenderControls {
   clarity: number;
@@ -38,6 +39,28 @@ export interface LibraryTrack {
 
 const outputRate = 48_000;
 const clamp = (value: number, minimum: number, maximum: number) => Math.min(maximum, Math.max(minimum, value));
+
+export function createConstitutionImpulse(context: BaseAudioContext, sourceDuration: number): AudioBuffer {
+  const mapping = constitutionMap.mapping;
+  const duration = clamp(sourceDuration * mapping.durationScale, mapping.minimumDurationSeconds, mapping.maximumDurationSeconds);
+  const length = Math.max(1, Math.round(duration * context.sampleRate));
+  const impulse = context.createBuffer(2, length, context.sampleRate);
+  let seed = Number.parseInt(constitutionMap.source.constitutionalGraphSha256.slice(0, 8), 16) >>> 0;
+  const random = () => {
+    seed = (Math.imul(seed, 1_664_525) + 1_013_904_223) >>> 0;
+    return seed / 4_294_967_296 * 2 - 1;
+  };
+  const mono = new Float32Array(length);
+  for (let index = 0; index < length; index += 1) {
+    const position = index / Math.max(1, length - 1);
+    const envelope = (1 - position) ** mapping.decayExponent;
+    const density = 0.72 + 0.28 * Math.sin(position * Math.PI * constitutionMap.source.nodeCount);
+    mono[index] = random() * envelope * density;
+  }
+  impulse.copyToChannel(mono, 0);
+  impulse.copyToChannel(mono, 1);
+  return impulse;
+}
 
 function shapingCurve(): Float32Array<ArrayBuffer> {
   const curve = new Float32Array(8_192);
@@ -118,6 +141,16 @@ export async function renderMaster(buffer: AudioBuffer, controls: RenderControls
   limiter.ratio.value = 20;
   limiter.attack.value = 0.002;
   limiter.release.value = 0.12;
+  const constitutionDelay = context.createDelay(0.1);
+  constitutionDelay.delayTime.value = constitutionMap.mapping.preDelaySeconds;
+  const constitutionTone = context.createBiquadFilter();
+  constitutionTone.type = "lowpass";
+  constitutionTone.frequency.value = constitutionMap.mapping.lowpassHz;
+  const constitutionSpace = context.createConvolver();
+  constitutionSpace.normalize = true;
+  constitutionSpace.buffer = createConstitutionImpulse(context, buffer.duration);
+  const constitutionWet = context.createGain();
+  constitutionWet.gain.value = constitutionMap.mapping.wetGain;
 
   source.connect(highpass).connect(presence).connect(compressor).connect(panner).connect(limiter).connect(output);
   compressor.connect(delay).connect(wet).connect(panner);
@@ -126,6 +159,7 @@ export async function renderMaster(buffer: AudioBuffer, controls: RenderControls
   resonators.forEach((filter) => compressor.connect(filter).connect(resonance));
   resonance.connect(delay);
   resonance.connect(panner);
+  compressor.connect(constitutionDelay).connect(constitutionTone).connect(constitutionSpace).connect(constitutionWet).connect(panner);
   output.connect(context.destination);
   scheduleProgression(panner, delay, wet, buffer.duration, controls);
   source.start();

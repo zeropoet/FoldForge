@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import displacementMap from "../../public/root-logos-living-object-displacement.json";
-import { admitLibraryTrack, listLibraryTracks, removeLibraryTrack, renderMaster, type LibraryTrack, type SonicMaster } from "./sonic-audio";
+import constitutionMap from "../../public/root-logos-founding-constitution-sonic-map.json";
+import { admitLibraryTrack, createConstitutionImpulse, listLibraryTracks, removeLibraryTrack, renderMaster, type LibraryTrack, type SonicMaster } from "./sonic-audio";
 import "./sonic-forge.css";
 
 type AudioEvidence = {
@@ -32,6 +33,8 @@ type SonicGraph = {
   synth: GainNode;
   resonators: BiquadFilterNode[];
   resonance: GainNode;
+  constitutionSpace: ConvolverNode;
+  constitutionWet: GainNode;
   panner: StereoPannerNode;
   sculpt: GainNode;
   limiter: DynamicsCompressorNode;
@@ -148,6 +151,7 @@ export default function SonicForge() {
     graph.wet.gain.setTargetAtTime(d * 0.46, now, 0.03);
     graph.synth.gain.setTargetAtTime(s * 0.38, now, 0.03);
     graph.resonance.gain.setTargetAtTime(s * 0.52 + d * 0.12, now, 0.04);
+    graph.constitutionWet.gain.setTargetAtTime(constitutionMap.mapping.wetGain, now, 0.04);
     const formants = [390 + d * 90, 1_080 + c * 240, 2_760 + s * 420];
     graph.resonators.forEach((filter, index) => {
       filter.frequency.setTargetAtTime(formants[index], now, 0.08);
@@ -239,6 +243,12 @@ export default function SonicForge() {
       witness: displacementMap.source.witness,
       samples: displacementMap.samples.length,
     },
+    constitution: {
+      schema: constitutionMap.schema,
+      source: constitutionMap.source,
+      mapping: constitutionMap.mapping,
+      impulseDurationSeconds: evidence ? Number(clamp(evidence.duration * constitutionMap.mapping.durationScale, constitutionMap.mapping.minimumDurationSeconds, constitutionMap.mapping.maximumDurationSeconds).toFixed(6)) : null,
+    },
     master: masterIsCurrent ? master?.metrics ?? null : null,
     authority: "Local browser session; no source upload or autonomous library admission.",
   }), [clarity, displacement, evidence, master, masterIsCurrent, phaseStretch, synthesis]);
@@ -284,6 +294,15 @@ export default function SonicForge() {
       const resonators = [context.createBiquadFilter(), context.createBiquadFilter(), context.createBiquadFilter()];
       resonators.forEach((filter) => { filter.type = "bandpass"; });
       const resonance = context.createGain();
+      const constitutionDelay = context.createDelay(0.1);
+      constitutionDelay.delayTime.value = constitutionMap.mapping.preDelaySeconds;
+      const constitutionTone = context.createBiquadFilter();
+      constitutionTone.type = "lowpass";
+      constitutionTone.frequency.value = constitutionMap.mapping.lowpassHz;
+      const constitutionSpace = context.createConvolver();
+      constitutionSpace.normalize = true;
+      constitutionSpace.buffer = createConstitutionImpulse(context, audioBuffer.duration);
+      const constitutionWet = context.createGain();
       const panner = context.createStereoPanner();
       const sculpt = context.createGain();
       const limiter = context.createDynamicsCompressor();
@@ -302,8 +321,9 @@ export default function SonicForge() {
       resonators.forEach((filter) => compressor.connect(filter).connect(resonance));
       resonance.connect(delay);
       resonance.connect(panner);
+      compressor.connect(constitutionDelay).connect(constitutionTone).connect(constitutionSpace).connect(constitutionWet).connect(panner);
       output.connect(context.destination);
-      graphRef.current = { context, source, input, dry, highpass, presence, compressor, delay, feedback, wet, shaper, synth, resonators, resonance, panner, sculpt, limiter, output };
+      graphRef.current = { context, source, input, dry, highpass, presence, compressor, delay, feedback, wet, shaper, synth, resonators, resonance, constitutionSpace, constitutionWet, panner, sculpt, limiter, output };
       updateGraph(graphRef.current, monitor, clarity, displacement, synthesis);
     }
     if (graphRef.current.context.state === "suspended") await graphRef.current.context.resume();

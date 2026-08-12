@@ -245,6 +245,12 @@ source signal, producing a restrained steel-like voice rather than an
 independent oscillator. Depth and recurrence suspend that voice without moving
 its balance between the left and right channels.
 
+The Root Logos Founding Constitution enters as a separately witnessed
+atmospheric layer. Its canonical graph seeds an identical-channel convolution
+impulse whose duration is 1.8% of the source, clamped to 1.8–6.5 seconds. A
+0.065 low-passed wet path adds quiet weight and enclosure without changing the
+track duration, pitch, centered balance, or constitutional authority boundary.
+
 The master chamber renders the full sound offline through the committed Root
 Logos displacement progression, normalizes it for clear laptop playback, and
 encodes a 48 kHz / 24-bit stereo WAV. The WAV receives a SHA-256 identity and a
