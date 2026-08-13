@@ -1,0 +1,2140 @@
+{
+  "schema": "foldportrait-mint-catalog/v1",
+  "authority": "FoldPortrait",
+  "issuance_channel": "FoldForge Ledger Witness",
+  "signing_boundary": "human steward through Xaman",
+  "public_root": "https://zeropoet.github.io/FoldPortrait",
+  "work_count": 55,
+  "works": [
+    {
+      "sequence": 1,
+      "era": 1,
+      "artifact_id": "foldportrait-v1-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v1",
+      "description": "FoldPortrait v1, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 5af19cfcc5729d16be8e556fd76709c11697d1f8d16a93f825fe2091acc0da19.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v1-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v1-zero-poet-2cfdfa64.png",
+      "sha256": "f3706b9611f7f3a726398f19d932a41f9a3c99deb56b17f1547df257f58f48ea",
+      "byte_size": 1138160,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v1-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v1-zero-poet-2cfdfa64.json",
+      "mint_status": "minted",
+      "xrpl": {
+        "network": "MAINNET",
+        "nftoken_id": "0000000047D6BDCD766717B67A937E83CFEF22B1760537E385C8FDA80644142D",
+        "payload_uuid": "manual-chain-recovery-616EC68D18DB1AF70A805C05F1D6B340647FACAE4F00FDD8D310B3D14FFD9368",
+        "transaction_hash": "616EC68D18DB1AF70A805C05F1D6B340647FACAE4F00FDD8D310B3D14FFD9368",
+        "transaction_result": "tesSUCCESS",
+        "transaction_type": "NFTokenMint",
+        "validated": true,
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "ledger_index": 105392182
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76312D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76312D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2266333730366239363131663766336137323633393866313964393332613431663961336339396465623536623137663135343764663235376635386634386561227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 2,
+      "era": 1,
+      "artifact_id": "foldportrait-v2-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v2",
+      "description": "FoldPortrait v2, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 07995d8b0803f11c6de436bc4b064ef512177a40ca3fd1e502f5482b8d7a6142.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v2-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v2-zero-poet-2cfdfa64.png",
+      "sha256": "fff45bd73c14f5378f5c108e23bba5c4deb3a50464750f6c1cd574e97a970964",
+      "byte_size": 1066296,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v2-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v2-zero-poet-2cfdfa64.json",
+      "mint_status": "minted",
+      "xrpl": {
+        "network": "MAINNET",
+        "nftoken_id": "0000000047D6BDCD766717B67A937E83CFEF22B1760537E39AD68CA90644142E",
+        "payload_uuid": "c1ccd268-8355-46e2-91b6-21a4cc0f7a02",
+        "transaction_hash": "E4F1756C36F7344BEDC7520F7BFE1EDF74911697C1193000D06250A6CBE87472",
+        "transaction_result": "tesSUCCESS",
+        "transaction_type": "NFTokenMint",
+        "validated": true,
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "ledger_index": 105392939
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76322D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76322D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2266666634356264373363313466353337386635633130386532336262613563346465623361353034363437353066366331636435373465393761393730393634227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 3,
+      "era": 1,
+      "artifact_id": "foldportrait-v3-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v3",
+      "description": "FoldPortrait v3, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash ae5907ddd86eeec0c402ea1c544515039b6be1781c7aad1d089ce3cd64a2c96e.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v3-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v3-zero-poet-2cfdfa64.png",
+      "sha256": "f50ba4a677f817a0a34434dfe5678f4b33a9c1bb8d5637dc6abee1ec0305c0e8",
+      "byte_size": 1162275,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v3-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v3-zero-poet-2cfdfa64.json",
+      "mint_status": "minted",
+      "xrpl": {
+        "network": "MAINNET",
+        "nftoken_id": "0000000047D6BDCD766717B67A937E83CFEF22B1760537E3B3FC5BAA0644142F",
+        "payload_uuid": "eaba84d3-d58c-47fe-ad8d-5f15153db39b",
+        "transaction_hash": "6E4315A8AAA5E00B7A91833CBFE25C2A19EA81FF9FC78D0AD4BF233FDD85771B",
+        "transaction_result": "tesSUCCESS",
+        "transaction_type": "NFTokenMint",
+        "validated": true,
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "ledger_index": 105392976
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76332D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76332D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2266353062613461363737663831376130613334343334646665353637386634623333613963316262386435363337646336616265653165633033303563306538227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 4,
+      "era": 1,
+      "artifact_id": "foldportrait-v4-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v4",
+      "description": "FoldPortrait v4, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash ed043c8c2e120168e7528b3b6f080e9bfdc92ebeab7c4ba6e33eedc4fd013085.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v4-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v4-zero-poet-2cfdfa64.png",
+      "sha256": "bfe189c0ba8c59df3acc1d3926d2255b106e50d30f1ed11e12c74f104f4d75f9",
+      "byte_size": 1276748,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v4-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v4-zero-poet-2cfdfa64.json",
+      "mint_status": "minted",
+      "xrpl": {
+        "network": "MAINNET",
+        "nftoken_id": "0000000047D6BDCD766717B67A937E83CFEF22B1760537E3C89A6AAB06441430",
+        "payload_uuid": "335a3752-5261-4818-b577-b97bc608c2ac",
+        "transaction_hash": "99EE6CD30905313A2F32397A65DF0C70616A762D33D17EE4666ABED7720881A9",
+        "transaction_result": "tesSUCCESS",
+        "transaction_type": "NFTokenMint",
+        "validated": true,
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "ledger_index": 105393027
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76342D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76342D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2262666531383963306261386335396466336163633164333932366432323535623130366535306433306631656431316531326337346631303466346437356639227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 5,
+      "era": 1,
+      "artifact_id": "foldportrait-v5-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v5",
+      "description": "FoldPortrait v5, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 393c0eb52db85557b4b969f12b1c792452ff1f7bad1673c376da967e2768b620.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v5-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v5-zero-poet-2cfdfa64.png",
+      "sha256": "b22b622af44f09f0cf6ba1096703d97c8b23cfbfdd02d7fea00917c9d0113731",
+      "byte_size": 1229301,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v5-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v5-zero-poet-2cfdfa64.json",
+      "mint_status": "minted",
+      "xrpl": {
+        "network": "MAINNET",
+        "nftoken_id": "0000000047D6BDCD766717B67A937E83CFEF22B1760537E3E1A039AC06441431",
+        "payload_uuid": "ac26bbd6-3514-49ab-9de4-7952a7f3b00f",
+        "transaction_hash": "AA2B8856CC792376010FFB94FCDEF37301FC7DFB8D8C094D653EFA34421786DF",
+        "transaction_result": "tesSUCCESS",
+        "transaction_type": "NFTokenMint",
+        "validated": true,
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "ledger_index": 105393153
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76352D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76352D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2262323262363232616634346630396630636636626131303936373033643937633862323363666266646430326437666561303039313763396430313133373331227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 6,
+      "era": 1,
+      "artifact_id": "foldportrait-v6-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v6",
+      "description": "FoldPortrait v6, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash f01326b77fc7b41e1cdcb4342692d9c0670e5a7ac26f2f7d5d014cd4c9dc19b3.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v6-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v6-zero-poet-2cfdfa64.png",
+      "sha256": "7a295b2206c752b1631a58483a0a89c69078948cb0e6eef665da54832d4afad7",
+      "byte_size": 1288252,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v6-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v6-zero-poet-2cfdfa64.json",
+      "mint_status": "minted",
+      "xrpl": {
+        "network": "MAINNET",
+        "nftoken_id": "0000000047D6BDCD766717B67A937E83CFEF22B1760537E3F64FC8AD06441432",
+        "payload_uuid": "b1d1e5b5-e648-4357-b87a-08882ac67462",
+        "transaction_hash": "4386C6690E1C69B4533A22A5B3A95ADC8BC641BF87B1301530FCDCB548DD0D33",
+        "transaction_result": "tesSUCCESS",
+        "transaction_type": "NFTokenMint",
+        "validated": true,
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "ledger_index": 105393244
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76362D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76362D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2237613239356232323036633735326231363331613538343833613061383963363930373839343863623065366565663636356461353438333264346166616437227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 7,
+      "era": 1,
+      "artifact_id": "foldportrait-v7-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v7",
+      "description": "FoldPortrait v7, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 242827e49821ecb738887626b33344bc95d75b6ed80cb59c8bb5a0245eb8e749.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v7-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v7-zero-poet-2cfdfa64.png",
+      "sha256": "f8434708eb2cfb6eb713c39b05ba992253593e4c696000aeb024d308f25f5bc1",
+      "byte_size": 1448636,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v7-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v7-zero-poet-2cfdfa64.json",
+      "mint_status": "minted",
+      "xrpl": {
+        "network": "MAINNET",
+        "nftoken_id": "0000000047D6BDCD766717B67A937E83CFEF22B1760537E30F55E7AE06441433",
+        "payload_uuid": "860a1399-a0c1-47bb-be2a-5268e3abafe7",
+        "transaction_hash": "09370F19DE32EAF7C379956F8AED2D3FDB5ACEDEE004782B2A20D9FE43BA7A55",
+        "transaction_result": "tesSUCCESS",
+        "transaction_type": "NFTokenMint",
+        "validated": true,
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "ledger_index": 105393275
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76372D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76372D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2266383433343730386562326366623665623731336333396230356261393932323533353933653463363936303030616562303234643330386632356635626331227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 8,
+      "era": 1,
+      "artifact_id": "foldportrait-v8-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v8",
+      "description": "FoldPortrait v8, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash c2277340fd681a886dc741da155553815dd62f68ffa79c38fe087192fb29c2fc.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v8-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v8-zero-poet-2cfdfa64.png",
+      "sha256": "984c9c957b5a11e0c93294c87c08520ac01104061b27849aaef42b5d9a0f43fd",
+      "byte_size": 1494163,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v8-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v8-zero-poet-2cfdfa64.json",
+      "mint_status": "minted",
+      "xrpl": {
+        "network": "MAINNET",
+        "nftoken_id": "0000000047D6BDCD766717B67A937E83CFEF22B1760537E32473B6AF06441434",
+        "payload_uuid": "682d54b3-3384-4d23-8c66-15c1e23c48a0",
+        "transaction_hash": "EB128EC23A2A5716573CB7164040A8A56882C6CF6F1115CA74DE1F024F015127",
+        "transaction_result": "tesSUCCESS",
+        "transaction_type": "NFTokenMint",
+        "validated": true,
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "ledger_index": 105393424
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76382D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76382D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2239383463396339353762356131316530633933323934633837633038353230616330313130343036316232373834396161656634326235643961306634336664227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 9,
+      "era": 1,
+      "artifact_id": "foldportrait-v9-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v9",
+      "description": "FoldPortrait v9, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash de7dd664279d7cba2df7d277724787d85bfd298b6e5ff9ca8c5ae0680b0db8f9.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v9-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v9-zero-poet-2cfdfa64.png",
+      "sha256": "aa8abbbe87fbab1da24e347de0a1459d8c5c5ae161f31384ed5acd1d12f1c5d2",
+      "byte_size": 1679236,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v9-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v9-zero-poet-2cfdfa64.json",
+      "mint_status": "minted",
+      "xrpl": {
+        "network": "MAINNET",
+        "nftoken_id": "0000000047D6BDCD766717B67A937E83CFEF22B1760537E33D1945B006441435",
+        "payload_uuid": "5443688d-d054-402e-9021-2f64d8baa2ae",
+        "transaction_hash": "88EC266B17965A5A5E8ACA47D86EB11EA934B0489FDB59FDF2935CC416042399",
+        "transaction_result": "tesSUCCESS",
+        "transaction_type": "NFTokenMint",
+        "validated": true,
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "ledger_index": 105393449
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76392D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76392D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2261613861626262653837666261623164613234653334376465306131343539643863356335616531363166333133383465643561636431643132663163356432227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 10,
+      "era": 1,
+      "artifact_id": "foldportrait-v10-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v10",
+      "description": "FoldPortrait v10, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash bbdffda153fa0d7bda653617639031da61c00a3985fd283bd9ca3fd928c6b4d4.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v10-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v10-zero-poet-2cfdfa64.png",
+      "sha256": "a6af09164f900745dbebfb6ca29543598577a81e9adc47f7f448f33464511dd6",
+      "byte_size": 1795661,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v10-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v10-zero-poet-2cfdfa64.json",
+      "mint_status": "minted",
+      "xrpl": {
+        "network": "MAINNET",
+        "nftoken_id": "0000000047D6BDCD766717B67A937E83CFEF22B1760537E3522714B106441436",
+        "payload_uuid": "42c13d29-73b4-4588-a805-3c6c801c4ea2",
+        "transaction_hash": "613906A0B2522689A7DB3A9A107A5539AB9F043752EF9294338DD611EE39D061",
+        "transaction_result": "tesSUCCESS",
+        "transaction_type": "NFTokenMint",
+        "validated": true,
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "ledger_index": 105393492
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7631302D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7631302D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2261366166303931363466393030373435646265626662366361323935343335393835373761383165396164633437663766343438663333343634353131646436227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 11,
+      "era": 1,
+      "artifact_id": "foldportrait-v11-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v11",
+      "description": "FoldPortrait v11, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 1401313c8b8a53694d0a97e7896a3eca53ef982f260df8ef48a2a9c75bde5290.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v11-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v11-zero-poet-2cfdfa64.png",
+      "sha256": "aabbe35ee5f9dcbe6c6a7cbc129abb2cb5e526b604dca23f080c82a65d41a03f",
+      "byte_size": 1655512,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v11-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v11-zero-poet-2cfdfa64.json",
+      "mint_status": "minted",
+      "xrpl": {
+        "network": "MAINNET",
+        "nftoken_id": "0000000047D6BDCD766717B67A937E83CFEF22B1760537E368CD23B206441437",
+        "payload_uuid": "78277148-35b6-49bc-8360-65e6a133e346",
+        "transaction_hash": "225084E7684CC6FBE92FDEB0F9975AFB875765F07E9AFFDD69269FC25D51C727",
+        "transaction_result": "tesSUCCESS",
+        "transaction_type": "NFTokenMint",
+        "validated": true,
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "ledger_index": 105393537
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7631312D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7631312D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2261616262653335656535663964636265366336613763626331323961626232636235653532366236303464636132336630383063383261363564343161303366227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 12,
+      "era": 1,
+      "artifact_id": "foldportrait-v12-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v12",
+      "description": "FoldPortrait v12, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 3d42a74b5ac7a0d997ac84d54e6741db719b6ecff5fe0d7d1310938b59fa8f50.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v12-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v12-zero-poet-2cfdfa64.png",
+      "sha256": "0705bce08675d37502935b8176917b136a3f1ee9518c32980f5b7e94e631146d",
+      "byte_size": 1757728,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v12-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v12-zero-poet-2cfdfa64.json",
+      "mint_status": "minted",
+      "xrpl": {
+        "network": "MAINNET",
+        "nftoken_id": "0000000047D6BDCD766717B67A937E83CFEF22B1760537E381E8F2B306441438",
+        "payload_uuid": "be109cef-2a56-4531-9817-429d2d6d7987",
+        "transaction_hash": "86EEFE180296013A4104C0C9D0949A09FD4ABB321D8D52CCD535ACB38721EA07",
+        "transaction_result": "tesSUCCESS",
+        "transaction_type": "NFTokenMint",
+        "validated": true,
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "ledger_index": 105393556
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7631322D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7631322D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2230373035626365303836373564333735303239333562383137363931376231333661336631656539353138633332393830663562376539346536333131343664227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 13,
+      "era": 1,
+      "artifact_id": "foldportrait-v1.2-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v1.2",
+      "description": "FoldPortrait v1.2, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash b50698aa372aa188f52816809cb9bb61daf2b3563f80ceba918a73bb12cd5464.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v1.2-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v1.2-zero-poet-2cfdfa64.png",
+      "sha256": "8af00edcb73e9c1f58de792734d9258bcdf29f9e145bcc7d25a44f30657e9239",
+      "byte_size": 1160071,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v1.2-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v1.2-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76312E322D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76312E322D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2238616630306564636237336539633166353864653739323733346439323538626364663239663965313435626363376432356134346633303635376539323339227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 14,
+      "era": 1,
+      "artifact_id": "foldportrait-v2.2-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v2.2",
+      "description": "FoldPortrait v2.2, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash d9c642fcc7315e3cac46cae07cf1857f434b5a4e71c3cad29fad065dec753c10.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v2.2-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v2.2-zero-poet-2cfdfa64.png",
+      "sha256": "43c461c30253998ebf926ee9b8131b4970b211e4ad943d3d8bd904e148cfda08",
+      "byte_size": 1305362,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v2.2-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v2.2-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76322E322D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76322E322D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2234336334363163333032353339393865626639323665653962383133316234393730623231316534616439343364336438626439303465313438636664613038227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 15,
+      "era": 1,
+      "artifact_id": "foldportrait-v3.2-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v3.2",
+      "description": "FoldPortrait v3.2, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 186d7ba32d3ef1e44f9b6c3fb7b47ef7baa231810dc0aeab71c12180b5dc699e.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v3.2-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v3.2-zero-poet-2cfdfa64.png",
+      "sha256": "7c9a64bb44ef1f59da9060275e42d2461ae3bc12b6efbfa10def169310cf52f9",
+      "byte_size": 1230350,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v3.2-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v3.2-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76332E322D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76332E322D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2237633961363462623434656631663539646139303630323735653432643234363161653362633132623665666266613130646566313639333130636635326639227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 16,
+      "era": 1,
+      "artifact_id": "foldportrait-v4.2-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v4.2",
+      "description": "FoldPortrait v4.2, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash a4a555d4284408c419e249f57348e9901fd0e356c790c3f3970dccc0eeff0434.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v4.2-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v4.2-zero-poet-2cfdfa64.png",
+      "sha256": "6b399956001c0c18aa6842c39ecaaa49a4980050fdcfab100d1d92b59faf60be",
+      "byte_size": 1344029,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v4.2-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v4.2-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76342E322D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76342E322D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2236623339393935363030316330633138616136383432633339656361616134396134393830303530666463666162313030643164393262353966616636306265227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 17,
+      "era": 1,
+      "artifact_id": "foldportrait-v5.2-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v5.2",
+      "description": "FoldPortrait v5.2, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 63786dd67aee6f8fe10594384ede493924ef5e59e1e9bf6d72b8879b9d63e7bc.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v5.2-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v5.2-zero-poet-2cfdfa64.png",
+      "sha256": "30f56de4635bdb8897b28f0823124900bbbc10b09c703c4ab27352791dc7930c",
+      "byte_size": 1384892,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v5.2-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v5.2-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76352E322D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76352E322D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2233306635366465343633356264623838393762323866303832333132343930306262626331306230396337303363346162323733353237393164633739333063227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 18,
+      "era": 1,
+      "artifact_id": "foldportrait-v6.2-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v6.2",
+      "description": "FoldPortrait v6.2, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 5791623e87c8a7248dcc562adb7fb11552a85f70f78e0e87a8ecdbeb22cf705a.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v6.2-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v6.2-zero-poet-2cfdfa64.png",
+      "sha256": "57772bb1fb9ad8e9b73d56bacc4b9ce871dd20f52dd8c1c4acd59e8f7d6cef09",
+      "byte_size": 1409453,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v6.2-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v6.2-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76362E322D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76362E322D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2235373737326262316662396164386539623733643536626163633462396365383731646432306635326464386331633461636435396538663764366365663039227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 19,
+      "era": 1,
+      "artifact_id": "foldportrait-v7.2-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v7.2",
+      "description": "FoldPortrait v7.2, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 4d91c59af833cdf9fe0b21de3d81ccfa1ab73347193e11231f43a4594fb54b8d.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v7.2-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v7.2-zero-poet-2cfdfa64.png",
+      "sha256": "75b295307471879b292cbd5e1a8972e57de6adc6c847c2fd326495490df27925",
+      "byte_size": 1470020,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v7.2-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v7.2-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76372E322D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76372E322D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2237356232393533303734373138373962323932636264356531613839373265353764653661646336633834376332666433323634393534393064663237393235227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 20,
+      "era": 1,
+      "artifact_id": "foldportrait-v8.2-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v8.2",
+      "description": "FoldPortrait v8.2, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 4cef18bb22a4372bb53bb27b9af6f03118d92d6688d672faad8d1b3fd2a9018a.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v8.2-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v8.2-zero-poet-2cfdfa64.png",
+      "sha256": "134c657a073f065d72eb949af63efdb1f481d7f2d9dc3eb0ae456584ef68fc69",
+      "byte_size": 1675259,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v8.2-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v8.2-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76382E322D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76382E322D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2231333463363537613037336630363564373265623934396166363365666462316634383164376632643964633365623061653435363538346566363866633639227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 21,
+      "era": 1,
+      "artifact_id": "foldportrait-v9.2-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v9.2",
+      "description": "FoldPortrait v9.2, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 294947c05e9dc0e8a2a9161bb4c3aa3629a10e14bf74b82bfe7d72abf7623de8.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v9.2-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v9.2-zero-poet-2cfdfa64.png",
+      "sha256": "016ed481569b8cd7ea4b511ace7399175efd8d88708a96b4740e94e399211c8b",
+      "byte_size": 1644540,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v9.2-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v9.2-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76392E322D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76392E322D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2230313665643438313536396238636437656134623531316163653733393931373565666438643838373038613936623437343065393465333939323131633862227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 22,
+      "era": 1,
+      "artifact_id": "foldportrait-v10.2-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v10.2",
+      "description": "FoldPortrait v10.2, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 8a737c53b6ad06e5d54e77ebda96ae261bc09c0a408f481f69d5e7892f6520a1.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v10.2-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v10.2-zero-poet-2cfdfa64.png",
+      "sha256": "04615ef78e0bc83be246647b367493c46e9cec20e8810b35c1806b901493cbc0",
+      "byte_size": 1684215,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v10.2-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v10.2-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7631302E322D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7631302E322D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2230343631356566373865306263383362653234363634376233363734393363343665396365633230653838313062333563313830366239303134393363626330227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 23,
+      "era": 1,
+      "artifact_id": "foldportrait-v11.2-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v11.2",
+      "description": "FoldPortrait v11.2, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 53ace26a59ee1b557f1064d99693b1373e7c72aaef789d6d304bc6522d011861.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v11.2-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v11.2-zero-poet-2cfdfa64.png",
+      "sha256": "4c163581def9598d2c3be1f102418c53802f429ad0e578d7e47c9e4545d2da04",
+      "byte_size": 1822367,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v11.2-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v11.2-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7631312E322D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7631312E322D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2234633136333538316465663935393864326333626531663130323431386335333830326634323961643065353738643765343763396534353435643264613034227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 24,
+      "era": 1,
+      "artifact_id": "foldportrait-v12.2-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v12.2",
+      "description": "FoldPortrait v12.2, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 6d1f14589dfae7ac9ae2bc0c6c81a111c960d27842a630dbacab08510a585969.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v12.2-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v12.2-zero-poet-2cfdfa64.png",
+      "sha256": "15846c5d27ce606c6102f5b85956e008c0e9ba1203c6f7b230f67441216deba5",
+      "byte_size": 1801711,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v12.2-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v12.2-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7631322E322D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7631322E322D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2231353834366335643237636536303663363130326635623835393536653030386330653962613132303363366637623233306636373434313231366465626135227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 25,
+      "era": 1,
+      "artifact_id": "foldportrait-v1.3-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v1.3",
+      "description": "FoldPortrait v1.3, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 4f308913c2dd11ad348aaae4843dfed000365f98be552c6bbdb72c2a729b7d33.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v1.3-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v1.3-zero-poet-2cfdfa64.png",
+      "sha256": "687b497225a738caffd58b556aa2d962f33e3746f0bf8f27f6c4ae8980c86899",
+      "byte_size": 1192500,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v1.3-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v1.3-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76312E332D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76312E332D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2236383762343937323235613733386361666664353862353536616132643936326633336533373436663062663866323766366334616538393830633836383939227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 26,
+      "era": 1,
+      "artifact_id": "foldportrait-v2.3-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v2.3",
+      "description": "FoldPortrait v2.3, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 8edfc6c228c1a455d7df4c03dfe0eb68628236ab7f5a356997cb52523b67aab9.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v2.3-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v2.3-zero-poet-2cfdfa64.png",
+      "sha256": "73febf0f721a16f8a9c77c898e72f49e91e0a79915f01616d1caed958d536a95",
+      "byte_size": 1304046,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v2.3-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v2.3-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76322E332D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76322E332D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2237336665626630663732316131366638613963373763383938653732663439653931653061373939313566303136313664316361656439353864353336613935227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 27,
+      "era": 1,
+      "artifact_id": "foldportrait-v3.3-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v3.3",
+      "description": "FoldPortrait v3.3, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash da1790ebd76fc335e12632f99bf46209c7a9e664614c3db6fae7fb8c6d4935df.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v3.3-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v3.3-zero-poet-2cfdfa64.png",
+      "sha256": "7b299a8a3e1b6feb6c1d0e447c205220bba09168990a79e5dce2cb4a860fe7a3",
+      "byte_size": 1409810,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v3.3-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v3.3-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76332E332D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76332E332D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2237623239396138613365316236666562366331643065343437633230353232306262613039313638393930613739653564636532636234613836306665376133227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 28,
+      "era": 1,
+      "artifact_id": "foldportrait-v4.3-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v4.3",
+      "description": "FoldPortrait v4.3, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 91e1a8f579b122fb4949743c9671c295e1c022672f7801239042ad6d268e285f.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v4.3-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v4.3-zero-poet-2cfdfa64.png",
+      "sha256": "490c346eeff4d33d6898d79f4796e55bad8882669801de53423a1e67712d476a",
+      "byte_size": 1422697,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v4.3-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v4.3-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76342E332D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76342E332D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2234393063333436656566663464333364363839386437396634373936653535626164383838323636393830316465353334323361316536373731326434373661227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 29,
+      "era": 1,
+      "artifact_id": "foldportrait-v5.3-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v5.3",
+      "description": "FoldPortrait v5.3, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash c5fea95d82931a901535362ee3ae21811f89239b251d9045f5f601bdab6ab675.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v5.3-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v5.3-zero-poet-2cfdfa64.png",
+      "sha256": "f8c42c12583b72e217bfca8b18f7cdeffe30181b2ee9ec3fc2d902042a64f183",
+      "byte_size": 1488658,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v5.3-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v5.3-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76352E332D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76352E332D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2266386334326331323538336237326532313762666361386231386637636465666665333031383162326565396563336663326439303230343261363466313833227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 30,
+      "era": 1,
+      "artifact_id": "foldportrait-v6.3-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v6.3",
+      "description": "FoldPortrait v6.3, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash e3fe00b9e7da8075467401a245303c56c788376e47b07be13d45d236d0db8ca8.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v6.3-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v6.3-zero-poet-2cfdfa64.png",
+      "sha256": "4316d51eba6ec04076c3beb0896b1aa0f8c2ab168de0809e3464a9f5190dc141",
+      "byte_size": 1561685,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v6.3-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v6.3-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76362E332D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76362E332D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2234333136643531656261366563303430373663336265623038393662316161306638633261623136386465303830396533343634613966353139306463313431227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 31,
+      "era": 1,
+      "artifact_id": "foldportrait-v7.3-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v7.3",
+      "description": "FoldPortrait v7.3, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash e25467dd214feaa7067f927faf2260aac5ba31b1f6a8d4b3c397418c603f42a5.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v7.3-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v7.3-zero-poet-2cfdfa64.png",
+      "sha256": "f9f6f9c101c6bdc4f6d9db1d9767d8b7717310c2f6437037dfd7fd2b5e6afa4d",
+      "byte_size": 1543511,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v7.3-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v7.3-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76372E332D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76372E332D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2266396636663963313031633662646334663664396462316439373637643862373731373331306332663634333730333764666437666432623565366166613464227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 32,
+      "era": 1,
+      "artifact_id": "foldportrait-v8.3-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v8.3",
+      "description": "FoldPortrait v8.3, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 5fb682e75da4b06437edf61fdc0f1aafd68d123fedce07e91c07a37d058d7e8b.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v8.3-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v8.3-zero-poet-2cfdfa64.png",
+      "sha256": "189583b02bb1691abacd93e5c8ffd2ed6fd9eb2cc55c6ea5f563b3a6eff34316",
+      "byte_size": 1573330,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v8.3-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v8.3-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76382E332D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76382E332D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2231383935383362303262623136393161626163643933653563386666643265643666643965623263633535633665613566353633623361366566663334333136227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 33,
+      "era": 1,
+      "artifact_id": "foldportrait-v9.3-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v9.3",
+      "description": "FoldPortrait v9.3, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 35d8c672b574f64aa6b257efe2c21e9fd8a16055b31ed7dd8fdf0d5bbd8061bc.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v9.3-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v9.3-zero-poet-2cfdfa64.png",
+      "sha256": "9a901a2f23917ce79ff11e4da2759da7a2a88a108a354aff37e06f56826fbe81",
+      "byte_size": 1676373,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v9.3-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v9.3-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76392E332D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76392E332D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2239613930316132663233393137636537396666313165346461323735396461376132613838613130386133353461666633376530366635363832366662653831227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 34,
+      "era": 1,
+      "artifact_id": "foldportrait-v10.3-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v10.3",
+      "description": "FoldPortrait v10.3, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash de15348944b1cbbac05444ddbedf2aa8e65d76f542cfe823564dec24b6ac5e7c.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v10.3-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v10.3-zero-poet-2cfdfa64.png",
+      "sha256": "a177ed79486e6f7362e761bf57393ca52e3073cafe846f1167c091d3449e7756",
+      "byte_size": 1776518,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v10.3-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v10.3-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7631302E332D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7631302E332D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2261313737656437393438366536663733363265373631626635373339336361353265333037336361666538343666313136376330393164333434396537373536227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 35,
+      "era": 1,
+      "artifact_id": "foldportrait-v11.3-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v11.3",
+      "description": "FoldPortrait v11.3, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 98845e7f989d5a1d62269c10b4cd1a8d7141d686b0359a99c2ad362393ee9a04.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v11.3-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v11.3-zero-poet-2cfdfa64.png",
+      "sha256": "b228d340b475eb5fabcf45e9b1bcdb32edd378bc254fd63efb1cce5d6c2dd5dd",
+      "byte_size": 1698173,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v11.3-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v11.3-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7631312E332D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7631312E332D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2262323238643334306234373565623566616263663435653962316263646233326564643337386263323534666436336566623163636535643663326464356464227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 36,
+      "era": 1,
+      "artifact_id": "foldportrait-v12.3-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v12.3",
+      "description": "FoldPortrait v12.3, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 68b32bb2ef100271711f2e09b9da3ef799ef04f5798121ece67636c4522ce325.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v12.3-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v12.3-zero-poet-2cfdfa64.png",
+      "sha256": "15bbc0c5ac7c11fb0564629f82fdc6ae1cacd2b83767145a52d32a3cab5280a1",
+      "byte_size": 1910149,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v12.3-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v12.3-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7631322E332D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7631322E332D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2231356262633063356163376331316662303536343632396638326664633661653163616364326238333736373134356135326433326133636162353238306131227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 37,
+      "era": 1,
+      "artifact_id": "foldportrait-v1.4-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v1.4",
+      "description": "FoldPortrait v1.4, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 3c4408e1d7e81fc1b8032c07e7135bc12f6d3bf5ac299f22b5cd78244c8deb54.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v1.4-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v1.4-zero-poet-2cfdfa64.png",
+      "sha256": "174cc095d3f78bca02c853399d24581ddc2fc2004ce59a9ec9a9ca3ce6d5237d",
+      "byte_size": 1272660,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v1.4-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v1.4-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76312E342D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76312E342D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2231373463633039356433663738626361303263383533333939643234353831646463326663323030346365353961396563396139636133636536643532333764227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 38,
+      "era": 1,
+      "artifact_id": "foldportrait-v2.4-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v2.4",
+      "description": "FoldPortrait v2.4, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 457cdf0ad236b6a1726a12fda327d2628489ebb5aec6874f18e9215ef6df76fa.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v2.4-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v2.4-zero-poet-2cfdfa64.png",
+      "sha256": "c4809894555537122b72faa7c873097db008c58e8c39fbf8f3a4c9517d883b86",
+      "byte_size": 1350855,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v2.4-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v2.4-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76322E342D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76322E342D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2263343830393839343535353533373132326237326661613763383733303937646230303863353865386333396662663866336134633935313764383833623836227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 39,
+      "era": 1,
+      "artifact_id": "foldportrait-v3.4-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v3.4",
+      "description": "FoldPortrait v3.4, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 1c53f71464589568da8d5900bebd320ea9d925b4c3df63e6e714d434a543d905.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v3.4-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v3.4-zero-poet-2cfdfa64.png",
+      "sha256": "4cee7159e56d0d03a77675a3c30cb6f6afddbc0b06f0e4314323d8127e4a1776",
+      "byte_size": 1405099,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v3.4-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v3.4-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76332E342D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76332E342D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2234636565373135396535366430643033613737363735613363333063623666366166646462633062303666306534333134333233643831323765346131373736227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 40,
+      "era": 1,
+      "artifact_id": "foldportrait-v4.4-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v4.4",
+      "description": "FoldPortrait v4.4, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 7068f47c81baca01fd7916320bda91fac76a27a29397ff1bebf82f0a39f5f710.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v4.4-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v4.4-zero-poet-2cfdfa64.png",
+      "sha256": "76e6fe6478741d1ac07c4ce699a7d72e5158efff0c1c2b70ab58f3c33d46c470",
+      "byte_size": 1459120,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v4.4-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v4.4-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76342E342D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76342E342D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2237366536666536343738373431643161633037633463653639396137643732653531353865666666306331633262373061623538663363333364343663343730227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 41,
+      "era": 1,
+      "artifact_id": "foldportrait-v5.4-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v5.4",
+      "description": "FoldPortrait v5.4, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 6e684fd8e2fd70da2eb8e1a6967ca9cf846900b9b507c6a75e4ff8f86666d24b.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v5.4-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v5.4-zero-poet-2cfdfa64.png",
+      "sha256": "880680da0c75fee9eab3c939c4732dafccb1ee2a23b1dcea08fcbf8955f09423",
+      "byte_size": 1396432,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v5.4-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v5.4-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76352E342D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76352E342D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2238383036383064613063373566656539656162336339333963343733326461666363623165653261323362316463656130386663626638393535663039343233227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 42,
+      "era": 1,
+      "artifact_id": "foldportrait-v6.4-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v6.4",
+      "description": "FoldPortrait v6.4, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 6dc6a2fc2c165a14eea87243f76edd06829b35d8293f3e71e199725ee95a8340.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v6.4-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v6.4-zero-poet-2cfdfa64.png",
+      "sha256": "515cbf4cd43f4644240fcadb469dc3c9c058bce8212044350b0533ce9879c32f",
+      "byte_size": 1447555,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v6.4-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v6.4-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76362E342D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76362E342D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2235313563626634636434336634363434323430666361646234363964633363396330353862636538323132303434333530623035333363653938373963333266227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 43,
+      "era": 1,
+      "artifact_id": "foldportrait-v7.4-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v7.4",
+      "description": "FoldPortrait v7.4, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash ca20c939584f6bd59f56d6e3e4bb971b936e1646405d69a23209c9cf8e13bfa6.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v7.4-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v7.4-zero-poet-2cfdfa64.png",
+      "sha256": "7d81dc246dae76243aec2d33fd8223b5b6e4c8f922681cd1d0ae4a2654aadeb8",
+      "byte_size": 1435634,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v7.4-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v7.4-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76372E342D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76372E342D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2237643831646332343664616537363234336165633264333366643832323362356236653463386639323236383163643164306165346132363534616164656238227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 44,
+      "era": 1,
+      "artifact_id": "foldportrait-v8.4-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v8.4",
+      "description": "FoldPortrait v8.4, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash ab4a0d94b01fa9bb0efb37f30a0e8b0b858d647ce1ed3996ade13b2dc616a262.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v8.4-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v8.4-zero-poet-2cfdfa64.png",
+      "sha256": "4671416b291fb1523c5f6c0310feeb8412dcb7177f5353ed408bda521c2a3462",
+      "byte_size": 1596940,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v8.4-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v8.4-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76382E342D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76382E342D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2234363731343136623239316662313532336335663663303331306665656238343132646362373137376635333533656434303862646135323163326133343632227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 45,
+      "era": 1,
+      "artifact_id": "foldportrait-v9.4-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v9.4",
+      "description": "FoldPortrait v9.4, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 4c8273a8435dbe36a89824a1c60e9a01a33e7a03b04172e174571af1c4379f1f.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v9.4-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v9.4-zero-poet-2cfdfa64.png",
+      "sha256": "fd62f4b99fca4ad418f21d3800b9561b8bf63b4f596344673635041b0e7f8ff9",
+      "byte_size": 1628073,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v9.4-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v9.4-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76392E342D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76392E342D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2266643632663462393966636134616434313866323164333830306239353631623862663633623466353936333434363733363335303431623065376638666639227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 46,
+      "era": 1,
+      "artifact_id": "foldportrait-v10.4-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v10.4",
+      "description": "FoldPortrait v10.4, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 0eeda59e87a90d89f76a7c14dc7c8ae63e22dad1fe8fe15fe0b75cf021092027.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v10.4-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v10.4-zero-poet-2cfdfa64.png",
+      "sha256": "fdb7bf800f83fac0f25e580f4788e47c09b4ef95117c531ebafcc834ad6899a4",
+      "byte_size": 1789202,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v10.4-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v10.4-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7631302E342D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7631302E342D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2266646237626638303066383366616330663235653538306634373838653437633039623465663935313137633533316562616663633833346164363839396134227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 47,
+      "era": 1,
+      "artifact_id": "foldportrait-v11.4-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v11.4",
+      "description": "FoldPortrait v11.4, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 9e1876d1ea3bf5edc2430e0dc10dae6841c0081ca71b8ca203785c96e0b729c0.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v11.4-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v11.4-zero-poet-2cfdfa64.png",
+      "sha256": "d8020f695adf1ef12f708956530d5427acdd826d7e379cdc9433c4dc7d592f32",
+      "byte_size": 1793118,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v11.4-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v11.4-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7631312E342D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7631312E342D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2264383032306636393561646631656631326637303839353635333064353432376163646438323664376533373963646339343333633464633764353932663332227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 48,
+      "era": 1,
+      "artifact_id": "foldportrait-v12.4-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v12.4",
+      "description": "FoldPortrait v12.4, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash aaecbcfb7f9258f138b21619d366375aee9cd5c437cf3d80d87b7ed6a6bd0497.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v12.4-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v12.4-zero-poet-2cfdfa64.png",
+      "sha256": "291734de0cf600df259bea374b629daad9cb45d24187fa7a42468073a1142007",
+      "byte_size": 1842798,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v12.4-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v12.4-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7631322E342D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7631322E342D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2232393137333464653063663630306466323539626561333734623632396461616439636234356432343138376661376134323436383037336131313432303037227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 49,
+      "era": 1,
+      "artifact_id": "foldportrait-v1.5-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v1.5",
+      "description": "FoldPortrait v1.5, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash fbe52129d1d96616daaef2c1cb534fde4174f0df1b55e90d3ef34f2b047ab795.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v1.5-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v1.5-zero-poet-2cfdfa64.png",
+      "sha256": "29e2c87d51ba650ba4fc7d8699b04aff66cb4c19f3466dc1c41a9c0060c7fb6b",
+      "byte_size": 1364361,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v1.5-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v1.5-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76312E352D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76312E352D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2232396532633837643531626136353062613466633764383639396230346166663636636234633139663334363664633163343161396330303630633766623662227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 50,
+      "era": 1,
+      "artifact_id": "foldportrait-v2.5-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v2.5",
+      "description": "FoldPortrait v2.5, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash b2b8392b636345d9a2f13904c3e9af7a56b92ade30aec5bf051e02862bee1a20.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v2.5-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v2.5-zero-poet-2cfdfa64.png",
+      "sha256": "efb9562730227e1fcaa162805c5f8027c449c0cdacbc74ee183d185faf7e9cc2",
+      "byte_size": 1179779,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v2.5-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v2.5-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76322E352D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76322E352D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2265666239353632373330323237653166636161313632383035633566383032376334343963306364616362633734656531383364313835666166376539636332227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 51,
+      "era": 1,
+      "artifact_id": "foldportrait-v3.5-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v3.5",
+      "description": "FoldPortrait v3.5, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash e6d13e938c5dbd7d4ebdfb365c060a5384432af20b7354de7e5256d6b34ae83b.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v3.5-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v3.5-zero-poet-2cfdfa64.png",
+      "sha256": "346694f425d0cddb00af804ccc9add9723d031025d086b42beed25ffff95fdaf",
+      "byte_size": 1367157,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v3.5-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v3.5-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76332E352D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76332E352D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2233343636393466343235643063646462303061663830346363633961646439373233643033313032356430383662343262656564323566666666393566646166227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 52,
+      "era": 1,
+      "artifact_id": "foldportrait-v4.5-zero-poet-2cfdfa64",
+      "title": "FoldPortrait v4.5",
+      "description": "FoldPortrait v4.5, from the completed zero poet archive. This XRPL Witness draft preserves the PNG render, convergence hash 2cfdfa6456d25c85296f9de096b186740898601190536d14ea4283c7bbc85f3c, and render hash 9cd191ffe1842b56b3fccaaabea819204c4a04c0e89628657c51294aef8c1366.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/png/foldportrait-v4.5-zero-poet-2cfdfa64.png",
+      "source_file": "Output/png/foldportrait-v4.5-zero-poet-2cfdfa64.png",
+      "sha256": "cd1170a2734487dadb92bbc49b4f15626455b0b275ce0c678f9e3d97732fd9e9",
+      "byte_size": 1375939,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v4.5-zero-poet-2cfdfa64.json",
+      "metadata_file": "Mint/metadata/foldportrait-v4.5-zero-poet-2cfdfa64.json",
+      "mint_status": "prepared",
+      "xrpl": {
+        "network": "MAINNET",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "transaction_type": "NFTokenMint",
+        "transaction_hash": null,
+        "nftoken_id": null,
+        "payload_uuid": null,
+        "transaction_result": null,
+        "validated": false
+      },
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 20260704,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D76342E352D7A65726F2D706F65742D32636664666136342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D76342E352D7A65726F2D706F65742D3263666466613634222C2266696C655F736861323536223A2263643131373061323733343438376461646239326262633439623466313536323634353562306232373563653063363738663965336439373733326664396539227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 53,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0001",
+      "title": "FoldPortrait FP-REFLECT-0001",
+      "description": "Autonomous system reflection FP-REFLECT-0001, preserving its FoldKernel identity, public witness digest, and prior-cycle lineage.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0001.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0001.png",
+      "sha256": "99b23bc6d82fc30f8de8f86c9e7a3222238379a7a08142d810481a6eea9fe059",
+      "byte_size": 2949469,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0001.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0001.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303030312E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303031222C2266696C655F736861323536223A2239396232336263366438326663333066386465386638366339653761333232323233383337396137613038313432643831303438316136656561396665303539227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 54,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0002",
+      "title": "FoldPortrait FP-REFLECT-0002",
+      "description": "Autonomous system reflection FP-REFLECT-0002, preserving its FoldKernel identity, public witness digest, and prior-cycle lineage.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0002.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0002.png",
+      "sha256": "6ae55375523a61d9dde0e00edddcc9833c3f3b2878af119929269f97aaf54aa8",
+      "byte_size": 3245772,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0002.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0002.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303030322E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303032222C2266696C655F736861323536223A2236616535353337353532336136316439646465306530306564646463633938333363336633623238373861663131393932393236396639376161663534616138227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 55,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0003",
+      "title": "FoldPortrait FP-REFLECT-0003",
+      "description": "Autonomous system reflection FP-REFLECT-0003, preserving its FoldKernel identity, public witness digest, and prior-cycle lineage.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0003.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0003.png",
+      "sha256": "5b42f6c8ec658c2a845463949d3ebb7ddf4213ad263390d236b68bf4fce3a571",
+      "byte_size": 3031323,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0003.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0003.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303030332E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303033222C2266696C655F736861323536223A2235623432663663386563363538633261383435343633393439643365626237646466343231336164323633333930643233366236386266346663653361353731227D"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

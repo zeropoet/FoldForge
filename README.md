@@ -312,13 +312,15 @@ browser and are neither uploaded nor admitted to a public library.
 
 Ledger Witness is FoldForge's steward-operated XRPL minting and provenance
 instrument and FoldPortrait's exclusive minting channel. It replaces the former Sovereign Standard Witness interface while
-preserving Sovereign Standard as the authority for prepared mint documents,
+preserving FoldPortrait as the authority for artwork, metadata, and prepared mint documents,
 public work metadata, vessel attachments, and committed archive results.
 
-The page reads committed local snapshots of SS prepared batches and claimed-vessel
-state, or hashes a new local source file without uploading it. Drafts and intents
-persist only in the operator's browser. Sovereign Standard remains the authority
-for those snapshots; refreshing them is an explicit reviewed repository change.
+The page reads committed local snapshots of FoldPortrait's canonical mint catalog
+and SS claimed-vessel state, or hashes a new local source file without uploading
+it. Drafts and intents persist only in the operator's browser. FoldPortrait owns
+artwork, metadata, hashes, and mint candidates; SS owns vessel state and the
+resulting public relationship. Refreshing either snapshot is an explicit reviewed
+repository change.
 Prepared FoldPortrait sequence numbers attach automatically to claimed SS vessels
 in `claimed_at` order. Unmatched works remain in preparation until the
 corresponding vessel exists; the operator cannot override this relation.

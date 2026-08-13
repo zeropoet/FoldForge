@@ -17,7 +17,7 @@ export function buildMintTransaction(input: { account: string; id: string; title
     URI: textToHex(input.metadataUri),
     Memos: [{ Memo: {
       MemoType: textToHex("foldforge:ledger-witness"),
-      MemoData: textToHex(JSON.stringify({ work_id: input.id, title: input.title, file_sha256: input.sha256, source_authority: "sovereign-standard-public-archive" })),
+      MemoData: textToHex(JSON.stringify({ work_id: input.id, title: input.title, file_sha256: input.sha256, source_authority: "foldportrait-mint-catalog" })),
     } }],
   };
 }
