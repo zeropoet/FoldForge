@@ -8,5 +8,5 @@
     "path": "/ledger-witness/ss-vessels.json",
     "authority": "sovereign-standard/units.json"
   },
-  "policy": "FoldForge operates from committed local snapshots and admits only works sequenced in FoldPortrait's canonical mint catalog. No local-file bypass exists. FoldPortrait is authoritative for artwork, metadata, and mint candidates; Sovereign Standard is authoritative only for vessel state and resulting vessel relations."
+  "policy": "FoldForge operates from committed local snapshots and admits only works sequenced in FoldPortrait's canonical mint catalog. The operator view exposes only prepared works whose claim-order vessel is available; minted and unmatched entries remain hidden. No local-file bypass exists. FoldPortrait is authoritative for artwork, metadata, and mint candidates; Sovereign Standard is authoritative only for vessel state and resulting vessel relations."
 }

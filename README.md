@@ -326,6 +326,8 @@ repository change.
 Prepared FoldPortrait sequence numbers attach automatically to claimed SS vessels
 in `claimed_at` order. Unmatched works remain in preparation until the
 corresponding vessel exists; the operator cannot override this relation.
+The selector exposes only `prepared` works whose corresponding claimed vessel
+already exists; minted and not-yet-assignable catalog entries remain hidden.
 Ledger Witness deterministically
 prepares an `NFTokenMint` transaction, hands that exact draft to the configured
 Xaman witness wallet, and submits only the verified payload and transaction
