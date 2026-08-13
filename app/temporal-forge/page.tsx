@@ -1,8 +1,8 @@
 "use client";
 
 import { GIFEncoder, applyPalette, quantize } from "gifenc";
-import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import PublicHeader from "../public-header";
 import { moveFrame, naturalFrameOrder, sequenceDuration, type SequenceFrame } from "./sequence";
 import "./temporal-forge.css";
 
@@ -161,12 +161,7 @@ export default function TemporalForge() {
   };
 
   return <main className="temporal-shell min-h-screen text-white">
-    <header className="site-header sticky top-0 z-20 border-b border-white/20 px-5 py-3 md:px-8">
-      <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-3 sm:flex-nowrap sm:gap-5">
-        <Link href="/"><span className="block text-[10px] uppercase tracking-[0.26em]">FoldForge</span><span className="mt-1 block font-mono text-[7px] uppercase tracking-[0.18em] text-white/35">Visual time instrument</span></Link>
-        <nav className="flex w-full justify-between border-t border-white/10 pt-3 text-[9px] uppercase tracking-[0.2em] sm:w-auto sm:gap-5 sm:border-0 sm:pt-0"><Link className="text-white/40 hover:text-white" href="/">Archive</Link><Link className="text-white/40 hover:text-white" href="/sonic-forge">Sonic</Link><span>Temporal</span><Link className="text-white/40 hover:text-white" href="/ledger-witness">Ledger</Link></nav>
-      </div>
-    </header>
+    <PublicHeader active="temporal" subtitle="Visual time instrument" />
     <div className="mx-auto max-w-[1600px] px-5 py-10 md:px-8 md:py-16">
       <section className="grid gap-10 border-b border-white/20 pb-12 lg:grid-cols-[1fr_0.75fr] lg:items-end">
         <div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Collection frames / temporal recurrence</p><h1 className="mt-5 max-w-3xl text-5xl font-light tracking-[-0.055em] md:text-7xl">Temporal Forge</h1><p className="mt-7 max-w-2xl text-sm leading-7 text-white/55">Sequence a collection as frames, watch its visual grammar accumulate through time, and render the observation as a loop with a verifiable order.</p></div>

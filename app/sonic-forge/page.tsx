@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import PublicHeader from "../public-header";
 import displacementMap from "../../public/root-logos-living-object-displacement.json";
 import { admitLibraryTrack, listLibraryTracks, removeLibraryTrack, renderMaster, sourceRecoveryGain, type LibraryTrack, type SonicMaster } from "./sonic-audio";
 import "./sonic-forge.css";
@@ -386,12 +386,7 @@ export default function SonicForge() {
 
   return (
     <main className="sonic-shell min-h-screen bg-black text-white">
-      <header className="site-header sticky top-0 z-20 border-b border-white/20 px-5 py-3 md:px-8">
-        <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-3 sm:flex-nowrap sm:gap-5">
-          <Link href="/"><span className="block text-[10px] uppercase tracking-[0.26em]">FoldForge</span><span className="mt-1 block font-mono text-[7px] uppercase tracking-[0.18em] text-white/35">Audio displacement &amp; mastering instrument</span></Link>
-          <nav className="flex w-full justify-between border-t border-white/10 pt-3 text-[9px] uppercase tracking-[0.2em] sm:w-auto sm:gap-5 sm:border-0 sm:pt-0"><Link className="text-white/40 hover:text-white" href="/">Archive</Link><span>Sonic</span><Link className="text-white/40 hover:text-white" href="/temporal-forge">Temporal</Link><Link className="text-white/40 hover:text-white" href="/ledger-witness">Ledger</Link></nav>
-        </div>
-      </header>
+      <PublicHeader active="sonic" subtitle="Audio displacement & mastering instrument" />
 
       <div className="mx-auto max-w-[1600px] px-5 py-10 md:px-8 md:py-16">
         <section className="grid gap-10 border-b border-white/20 pb-12 lg:grid-cols-[1fr_0.75fr] lg:items-end">

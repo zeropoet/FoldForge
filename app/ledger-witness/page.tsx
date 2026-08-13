@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
+import PublicHeader from "../public-header";
 import { validateMint } from "./ledger";
 
 declare global { interface Window { Xumm?: new (key: string) => XamanClient } }
@@ -124,7 +124,7 @@ export default function LedgerWitness() {
   };
 
   return <main className="min-h-screen bg-black text-white">
-    <header className="site-header sticky top-0 z-20 border-b border-white/20 px-5 py-3 md:px-8"><div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-3 sm:flex-nowrap sm:gap-5"><Link href="/"><span className="block text-[10px] uppercase tracking-[0.26em]">FoldForge</span><span className="mt-1 block font-mono text-[7px] uppercase tracking-[0.18em] text-white/35">XRPL minting &amp; provenance instrument</span></Link><nav className="flex w-full justify-between border-t border-white/10 pt-3 text-[9px] uppercase tracking-[0.2em] sm:w-auto sm:gap-5 sm:border-0 sm:pt-0"><Link className="text-white/40" href="/">Archive</Link><Link className="text-white/40" href="/sonic-forge">Sonic</Link><Link className="text-white/40" href="/temporal-forge">Temporal</Link><span>Ledger</span></nav></div></header>
+    <PublicHeader active="ledger" subtitle="XRPL minting & provenance instrument" />
     <div className="mx-auto max-w-[1600px] px-5 py-10 md:px-8 md:py-16">
       <section className="grid gap-10 border-b border-white/20 pb-12 lg:grid-cols-[1fr_0.75fr] lg:items-end"><div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">FoldPortrait issuance / evidence / signature / relation</p><h1 className="mt-5 text-5xl font-light tracking-[-0.055em] md:text-7xl">Ledger Witness</h1><p className="mt-7 max-w-2xl text-sm leading-7 text-white/55">FoldPortrait’s exclusive XRPL issuance channel. Prepare one sealed work, hand its exact mint transaction to the configured Xaman wallet, and return the verified ledger result to its FoldPortrait record and Sovereign Standard vessel relation.</p></div><div className="border border-white/20 p-5 font-mono text-[8px] uppercase leading-5 tracking-[0.14em] text-white/35">FoldPortrait works only<br />Local source snapshots and drafts<br />XRPL mainnet / NFTokenMint<br />Human Xaman signature required</div></section>
       <section className="mt-12 grid gap-px bg-white/20 lg:grid-cols-[1fr_330px]">

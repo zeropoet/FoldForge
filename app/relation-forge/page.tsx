@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
+import PublicHeader from "../public-header";
 import { composeCouplets, grammar, inspectCouplet, type Couplet, type EventState, type SystemTerm } from "./relation-grammar";
 import "./relation-forge.css";
 
@@ -89,18 +89,15 @@ export default function RelationForge() {
 
   return (
     <main className="relation-shell min-h-screen text-white">
-      <header className="flex items-center justify-between border-b border-white/20 px-5 py-4 md:px-8">
-        <Link className="font-mono text-[10px] uppercase tracking-[.2em] text-white/55 hover:text-white" href="/">← FoldForge</Link>
-        <span className="font-mono text-[9px] uppercase tracking-[.18em] text-white/38">Private local instrument / {grammar.version}</span>
-      </header>
+      <PublicHeader active="relation" subtitle="Image-to-language instrument" />
 
-      <section className="border-b border-white/20 px-5 py-12 md:px-8 md:py-16">
-        <p className="mb-4 font-mono text-[9px] uppercase tracking-[.22em] text-white/42">Composition VI / proposal</p>
-        <h1 className="max-w-5xl text-5xl font-light tracking-[-.055em] md:text-8xl">Relation Forge</h1>
-        <p className="mt-6 max-w-2xl text-sm leading-6 text-white/52">Image → confirmed observation → relation → witness couplet. The source remains greater than the utterance.</p>
+      <div className="mx-auto w-full max-w-[1600px] px-5 py-10 md:px-8 md:py-16">
+      <section className="grid gap-10 border-b border-white/20 pb-12 lg:grid-cols-[1fr_0.75fr] lg:items-end">
+        <div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Confirmed observation / relation / utterance</p><h1 className="mt-5 max-w-3xl text-5xl font-light tracking-[-0.055em] md:text-7xl">Relation Forge</h1><p className="mt-7 max-w-2xl text-sm leading-7 text-white/55">Admit an image, confirm what it visibly supports, and compose a two-line witnessed relation without exhausting the source.</p></div>
+        <div className="border border-white/20 p-5 font-mono text-[8px] uppercase leading-5 tracking-[0.14em] text-white/35">Private by default<br />Root Logos v1.4 constraints<br />Human-confirmed observation<br />{grammar.version}</div>
       </section>
 
-      <div className="relation-grid border-b border-white/20">
+      <div className="relation-grid mt-10 border border-white/20">
         <section className="border-b border-white/20 p-5 md:border-r md:border-b-0 md:p-8">
           <button className="relation-drop grid w-full place-items-center border border-white/20 text-left" onClick={() => inputRef.current?.click()} type="button">
             {imageUrl ? <>
@@ -172,6 +169,7 @@ export default function RelationForge() {
         <p><span className="text-white/68">Root Logos v1.4.</span><br />Reality remains greater than the system’s account of it.</p>
         <p><span className="text-white/68">Authority boundary.</span><br />A composed relation is not the final meaning of the image.</p>
       </footer>
+      </div>
     </main>
   );
 }

@@ -9,6 +9,7 @@ import { resolveOwner } from "./ens";
 import { AlchemyNft, fetchNftMetadata, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, normalizeMediaUrl, optimizedImageSrcSet, optimizedImageUrl, summarizeContracts, tokenImageFor, tokenThumbnailFor } from "./nft-data";
 import { analyzePixels, type VisualSignature } from "./visual-analysis";
 import { analyzeAudio, isAudioUrl, type AudioSignature } from "./audio-analysis";
+import PublicHeader from "./public-header";
 
 type LoadState = "idle" | "loading" | "ready" | "error";
 
@@ -578,17 +579,7 @@ export default function FoldForge() {
   return (
     <main className="archive-shell min-h-screen bg-black text-white">
       <section className="grid min-h-screen grid-rows-[auto_1fr]">
-        <header className="site-header sticky top-0 z-20 border-b border-white/20 px-5 py-3 md:px-8">
-          <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-3 sm:flex-nowrap sm:gap-5">
-            <a href={`?owner=${encodeURIComponent(navigableOwner)}`}><span className="block text-[10px] uppercase tracking-[0.26em]">FoldForge</span><span className="mt-1 block font-mono text-[7px] uppercase tracking-[0.18em] text-white/35">Ethereum archive / est. 2026</span></a>
-            <nav className="flex w-full justify-between border-t border-white/10 pt-3 text-[9px] uppercase tracking-[0.2em] sm:w-auto sm:gap-5 sm:border-0 sm:pt-0">
-              <span>Archive</span>
-              <a className="text-white/40 hover:text-white" href="/sonic-forge">Sonic</a>
-              <a className="text-white/40 hover:text-white" href="/temporal-forge">Temporal</a>
-              <a className="text-white/40 hover:text-white" href="/ledger-witness">Ledger</a>
-            </nav>
-          </div>
-        </header>
+        <PublicHeader active="archive" subtitle="Ethereum archive / est. 2026" />
 
         <div className="mx-auto grid w-full min-w-0 max-w-[1600px] grid-rows-[auto_auto_1fr] px-5 py-10 md:px-8 md:py-16">
           {selectedContract ? (
