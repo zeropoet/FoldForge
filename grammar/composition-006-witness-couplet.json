@@ -1,0 +1,35 @@
+{
+  "schema": "foldforge-language-grammar/v1",
+  "id": "FF-COMP-0006",
+  "version": "0.1.0-proposal",
+  "status": "proposal",
+  "title": "Witness Couplet",
+  "rootLogosReference": {
+    "identity": "root-logos",
+    "revision": "v1.4",
+    "principles": [
+      "Reality remains greater than the system's account of it.",
+      "Coherence is selected through relation, consequence, correction, and time.",
+      "New meaning appears through witnessed relations and relation grammars.",
+      "Desire for emergence is never evidence that emergence has occurred."
+    ]
+  },
+  "movement": ["source", "witness", "relation", "utterance"],
+  "constraints": {
+    "lines": 2,
+    "maximumWordsPerLine": 8,
+    "maximumTotalWords": 14,
+    "minimumSystemTerms": 1,
+    "maximumSystemTerms": 2,
+    "requiredEvidenceStates": ["human-confirmed"],
+    "forbiddenLanguage": [
+      "buy", "shop", "limited", "exclusive", "premium", "luxury", "perfect",
+      "discover", "experience", "journey", "unforgettable", "must-have"
+    ]
+  },
+  "authority": {
+    "claims": "The utterance composes a human-confirmed observation and a declared relation under a versioned grammar.",
+    "doesNotClaim": "The utterance exhausts the image, proves intention, or supplies the final meaning of the witnessed event."
+  },
+  "privacy": "Image bytes remain in the browser and are excluded from exported witnesses."
+}

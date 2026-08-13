@@ -245,6 +245,20 @@ source signal, producing a restrained steel-like voice rather than an
 independent oscillator. Depth and recurrence suspend that voice without moving
 its balance between the left and right channels.
 
+## Relation Forge
+
+`/relation-forge` is a private, local-first image-to-language instrument. A
+participant admits an image, records and explicitly confirms visible evidence,
+names the lived field the event enters, and composes a two-line Witness Couplet
+under the proposed `FF-COMP-0006` grammar. Root Logos v1.4 supplies the higher
+language constraints: evidence remains prior to interpretation, relation does
+not exhaust the source, and the resulting utterance retains a corrigible
+witness. Sovereign Standard supplies the first bounded field vocabulary.
+
+Image bytes remain in the browser. Exported witnesses contain only the source
+filename, dimensions, byte count, SHA-256 identity, confirmed observations,
+grammar version, selected relation, constraint results, and final couplet.
+
 Instrument `sonic-forge/steel-voice/v2` adds a fixed centered articulation
 mapping: a 92 Hz low shelf gives bass and kick events physical foundation, a
 restrained 168 Hz parallel body path lets plucked strings bloom into the depth
