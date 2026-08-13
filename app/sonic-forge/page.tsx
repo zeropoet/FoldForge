@@ -395,7 +395,7 @@ export default function SonicForge() {
             </span>
             <span><span className="block text-base font-medium uppercase tracking-[0.2em]">FoldForge</span><span className="mt-1 hidden text-[8px] uppercase tracking-[0.32em] text-white/40 sm:block">Sonic instrument / R&amp;D chamber</span></span>
           </Link>
-          <nav className="flex gap-5 text-[9px] uppercase tracking-[0.2em]"><Link className="text-white/40 hover:text-white" href="/">Archive</Link><span>Sonic Forge</span></nav>
+          <nav className="flex gap-5 text-[9px] uppercase tracking-[0.2em]"><Link className="text-white/40 hover:text-white" href="/">Archive</Link><span>Sonic Forge</span><Link className="text-white/40 hover:text-white" href="/temporal-forge">Temporal Forge</Link></nav>
         </div>
       </header>
 

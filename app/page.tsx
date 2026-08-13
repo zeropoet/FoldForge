@@ -593,6 +593,7 @@ export default function FoldForge() {
             <nav className="flex gap-5 text-[9px] uppercase tracking-[0.2em]">
               <span>Archive</span>
               <a className="text-white/40 hover:text-white" href="/sonic-forge">Sonic Forge</a>
+              <a className="text-white/40 hover:text-white" href="/temporal-forge">Temporal Forge</a>
             </nav>
           </div>
         </header>

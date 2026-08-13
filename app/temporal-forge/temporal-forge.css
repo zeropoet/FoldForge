@@ -1,0 +1,8 @@
+.temporal-shell { background: radial-gradient(circle at 50% 30%, rgb(255 255 255 / 6%), transparent 34%), #000; }
+.temporal-stage { background: repeating-linear-gradient(90deg, transparent 0, transparent calc(12.5% - 1px), rgb(255 255 255 / 4%) 12.5%), #030303; }
+.temporal-stage::after { position: absolute; inset: 0; border: 1px solid rgb(255 255 255 / 8%); content: ""; pointer-events: none; }
+.temporal-strip { scrollbar-color: rgb(255 255 255 / 35%) transparent; }
+.temporal-frame { transition: opacity 120ms ease, border-color 120ms ease; }
+.temporal-frame[aria-current="true"] { border-color: #fff; opacity: 1; }
+.temporal-shell input[type="range"] { height: 1px; appearance: none; background: rgb(255 255 255 / 35%); }
+.temporal-shell input[type="range"]::-webkit-slider-thumb { width: 12px; height: 12px; appearance: none; border: 1px solid #fff; border-radius: 50%; background: #000; }

@@ -293,6 +293,21 @@ Admission assigns a persistent, monotonic library sequence and filename in the
 form `Sonic-Forge-0001-source-title-master.wav`. Sequence numbers are never
 reused when a local master is removed.
 
+## Temporal Forge
+
+Temporal Forge brings the deterministic frame-player lineage of Sovereign
+Standard's `sigil-sequence` into FoldForge as a complete visual-time
+instrument. Multiple image frames are admitted locally, ordered naturally by
+filename, and played as an infinite sequence at a selectable cadence. Frames
+can be scrubbed, stepped, and reordered to expose recurrence, transition, and
+collection-scale motion that is not visible in a static grid.
+
+The chamber renders an actual 720 × 720 GIF89a loop while preserving every
+source frame's aspect ratio against a black field. A separate versioned JSON
+witness records the exact frame order, SHA-256 source identities, cadence,
+duration, fit rule, and Sovereign Standard lineage. Source frames remain in the
+browser and are neither uploaded nor admitted to a public library.
+
 Alchemy provides owner, contract, token, and cached metadata. `app/collection-policy.ts` applies repository-owned exclusions. `app/nft-data.ts` normalizes provider media and constructs responsive derivative URLs. `app/page.tsx` resolves the archive and computes or restores versioned visual signatures. `app/composition-witness.ts` seals every grammar and the current displacement-map witness into archive evidence, while `app/composer-chamber.tsx` derives the lexical field, archive-seamed chromatic field, autonomous six-phase macroform, visual-relation arrangements, displacement field, and unified FoldForge voice.
 
 The FOLD FORGE contract
