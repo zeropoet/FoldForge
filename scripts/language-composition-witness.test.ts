@@ -1,6 +1,5 @@
 import { describe, expect, it } from "vitest";
 // This module is shared with the Node-based static export builder.
-// @ts-expect-error JavaScript helper intentionally has no separate declaration file.
 import {
   archiveCandidate,
   lexicalMeaningWitness,

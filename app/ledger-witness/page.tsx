@@ -36,6 +36,7 @@ export default function LedgerWitness() {
   const [intent, setIntent] = useState<Record<string, unknown> | null>(null);
   const [payload, setPayload] = useState<XamanPayload | null>(null);
   const [transaction, setTransaction] = useState("");
+  const [propagation, setPropagation] = useState<"idle" | "queued" | "ss" | "foldportrait" | "complete">("idle");
 
   useEffect(() => { Promise.all([
     fetch(LOCAL_PREPARED_MINTS).then((response) => response.json()),
@@ -48,6 +49,34 @@ export default function LedgerWitness() {
 
   const errors = useMemo(() => validateMint({ account: CONFIG.witnessWallet, title, description, sha256: hash, metadataUri, visibleUnits }), [title, description, hash, metadataUri, visibleUnits]);
   const actionableWorks = useMemo(() => batch.filter((work) => work.mint_status === "prepared" && Boolean(work.sequence && units[work.sequence - 1])), [batch, units]);
+
+  useEffect(() => {
+    if (!preparedId || !transaction || propagation === "idle" || propagation === "complete") return;
+    let active = true;
+    const poll = async () => {
+      try {
+        const nonce = Date.now();
+        const [relations, canonical, local] = await Promise.all([
+          fetch(`https://sovereignstandard.co/foldportrait-relations.json?status=${nonce}`, { cache: "no-store" }).then((response) => response.json()),
+          fetch(`https://zeropoet.github.io/FoldPortrait/Mint/catalog.json?status=${nonce}`, { cache: "no-store" }).then((response) => response.json()),
+          fetch(`${LOCAL_PREPARED_MINTS}?status=${nonce}`, { cache: "no-store" }).then((response) => response.json()),
+        ]);
+        if (!active) return;
+        const minted = (value: { works?: BatchWork[] }) => value.works?.find((work) => work.artifact_id === preparedId)?.mint_status === "minted";
+        if (minted(local)) {
+          setPropagation("complete"); setStatus("Propagation complete / SS relation, FoldPortrait catalog, and FoldForge snapshot agree");
+          sessionStorage.removeItem("foldforge_ledger_witness_payload"); localStorage.removeItem("foldforge_ledger_witness_intent");
+        } else if (minted(canonical)) {
+          setPropagation("foldportrait"); setStatus("FoldPortrait canonical record synchronized / awaiting FoldForge deployment");
+        } else if (minted(relations)) {
+          setPropagation("ss"); setStatus("Sovereign Standard relation committed / awaiting FoldPortrait synchronization");
+        }
+      } catch { /* retain the last verified stage and retry */ }
+    };
+    void poll();
+    const timer = window.setInterval(() => void poll(), 10_000);
+    return () => { active = false; window.clearInterval(timer); };
+  }, [preparedId, propagation, transaction]);
 
   const choosePrepared = (id: string) => {
     setPreparedId(id);
@@ -89,7 +118,9 @@ export default function LedgerWitness() {
     setStatus("Submitting verified result to SS archive boundary…");
     const work = intent.work as { id: string; sha256: string; visible_on_units: number[] };
     const response = await fetch(CONFIG.archiveEndpoint, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ artifact_id: work.id, title, file_sha256: work.sha256, visible_on_units: work.visible_on_units, payload_uuid: payload.uuid, transaction_hash: transaction, witness_wallet: CONFIG.witnessWallet, network: "MAINNET", archived_at: new Date().toISOString() }) });
-    const result = await response.json().catch(() => ({})); setStatus(response.ok ? "Verified result queued for SS archive commit" : result.error || "Archive submission failed");
+    const result = await response.json().catch(() => ({}));
+    if (response.ok) { setPropagation("queued"); setStatus("Verified result queued / tracking propagation automatically"); }
+    else setStatus(result.error || "Archive submission failed");
   };
 
   return <main className="min-h-screen bg-black text-white">
@@ -100,7 +131,7 @@ export default function LedgerWitness() {
         <div className="space-y-10 bg-black p-6 md:p-8"><div><p className="text-[9px] uppercase tracking-[0.22em] text-white/40">01 / Select admitted FoldPortrait work</p><label className="mt-5 block border border-white/25 p-4 text-[8px] uppercase tracking-[0.16em] text-white/45">Ready to mint / {actionableWorks.length.toString().padStart(2, "0")}<select className="mt-3 w-full bg-black text-sm normal-case text-white" value={preparedId} onChange={(event) => choosePrepared(event.target.value)}><option value="">{actionableWorks.length ? "Select prepared work" : "No prepared works have an available vessel"}</option>{actionableWorks.map((work) => <option key={work.artifact_id} value={work.artifact_id}>{work.sequence ? `${work.sequence}. ` : ""}{work.title} → Vessel {work.sequence ? units[work.sequence - 1]?.id : ""}</option>)}</select></label><p className="mt-3 font-mono text-[8px] uppercase leading-5 tracking-[0.13em] text-white/30">Shows only unminted catalog works whose claim-order Sovereign Standard vessel is already available.</p></div>
           <div><p className="text-[9px] uppercase tracking-[0.22em] text-white/40">02 / Verify and attach</p><div className="mt-5 grid gap-4"><input readOnly className="border-b border-white/25 bg-black py-3 text-xl outline-none" placeholder="Catalog work title" value={title} /><textarea readOnly className="min-h-24 border border-white/20 bg-black p-4 text-sm leading-6 outline-none" placeholder="Catalog description" value={description} /><input readOnly className="border-b border-white/25 bg-black py-3 font-mono text-[10px] outline-none" placeholder="Canonical FoldPortrait metadata URI" value={metadataUri} /><div className="border border-white/20 p-4"><p className="text-[8px] uppercase tracking-[0.16em] text-white/40">SS vessel relation / claim order</p><p className="mt-3 text-sm">{visibleUnits.length ? `Vessel ${visibleUnits[0]} / fixed automatically` : "Awaiting the corresponding claimed vessel"}</p></div></div></div>
           <div><p className="text-[9px] uppercase tracking-[0.22em] text-white/40">03 / Prepare and sign</p><div className="mt-5 flex flex-wrap gap-2"><button className="border border-white px-5 py-4 text-[8px] uppercase tracking-[0.18em]" onClick={prepare}>Prepare mint intent</button><button className="border border-white/35 px-5 py-4 text-[8px] uppercase tracking-[0.18em]" onClick={() => void connect()}>{account ? "Wallet connected" : "Connect Xaman"}</button><button disabled={!intent} className="bg-white px-5 py-4 text-[8px] uppercase tracking-[0.18em] text-black disabled:opacity-25" onClick={() => void sign()}>Open signing request</button></div></div></div>
-        <aside className="flex flex-col bg-black p-6"><p className="text-[9px] uppercase tracking-[0.22em] text-white/40">Witness state</p><p className="mt-5 text-xl font-light leading-8">{status}</p><dl className="mt-8 space-y-4 border-t border-white/20 pt-5 font-mono text-[8px] uppercase tracking-[0.13em]"><div className="flex justify-between gap-4"><dt className="text-white/35">Source hash</dt><dd>{hash ? hash.slice(0, 12) : "Waiting"}</dd></div><div className="flex justify-between gap-4"><dt className="text-white/35">Intent</dt><dd>{intent ? "Prepared" : "Waiting"}</dd></div><div className="flex justify-between gap-4"><dt className="text-white/35">Wallet</dt><dd>{account ? `${account.slice(0, 8)}…` : "Disconnected"}</dd></div><div className="flex justify-between gap-4"><dt className="text-white/35">Payload</dt><dd>{payload?.uuid ? payload.uuid.slice(0, 8) : "Waiting"}</dd></div><div className="flex justify-between gap-4"><dt className="text-white/35">Transaction</dt><dd>{transaction ? `${transaction.slice(0, 10)}…` : "Waiting"}</dd></div></dl>{payload?.next?.always ? <a className="mt-8 border border-white/30 p-4 text-center text-[8px] uppercase tracking-[0.18em]" href={payload.next.always} rel="noreferrer" target="_blank">Open in Xaman</a> : null}<div className="mt-auto grid gap-2 pt-10"><button disabled={!payload?.uuid} className="border border-white/25 p-4 text-[8px] uppercase tracking-[0.18em] disabled:opacity-25" onClick={() => void checkResult()}>Check result</button><button disabled={!transaction} className="border border-white p-4 text-[8px] uppercase tracking-[0.18em] disabled:opacity-25" onClick={() => void archive()}>Archive verified result</button></div></aside>
+        <aside className="flex flex-col bg-black p-6"><p className="text-[9px] uppercase tracking-[0.22em] text-white/40">Witness state</p><p className="mt-5 text-xl font-light leading-8">{status}</p><dl className="mt-8 space-y-4 border-t border-white/20 pt-5 font-mono text-[8px] uppercase tracking-[0.13em]"><div className="flex justify-between gap-4"><dt className="text-white/35">Source hash</dt><dd>{hash ? hash.slice(0, 12) : "Waiting"}</dd></div><div className="flex justify-between gap-4"><dt className="text-white/35">Intent</dt><dd>{intent ? "Prepared" : "Waiting"}</dd></div><div className="flex justify-between gap-4"><dt className="text-white/35">Wallet</dt><dd>{account ? `${account.slice(0, 8)}…` : "Disconnected"}</dd></div><div className="flex justify-between gap-4"><dt className="text-white/35">Payload</dt><dd>{payload?.uuid ? payload.uuid.slice(0, 8) : "Waiting"}</dd></div><div className="flex justify-between gap-4"><dt className="text-white/35">Transaction</dt><dd>{transaction ? `${transaction.slice(0, 10)}…` : "Waiting"}</dd></div><div className="flex justify-between gap-4"><dt className="text-white/35">Propagation</dt><dd>{propagation}</dd></div></dl>{payload?.next?.always ? <a className="mt-8 border border-white/30 p-4 text-center text-[8px] uppercase tracking-[0.18em]" href={payload.next.always} rel="noreferrer" target="_blank">Open in Xaman</a> : null}<div className="mt-auto grid gap-2 pt-10"><button disabled={!payload?.uuid} className="border border-white/25 p-4 text-[8px] uppercase tracking-[0.18em] disabled:opacity-25" onClick={() => void checkResult()}>Check result</button><button disabled={!transaction || propagation !== "idle"} className="border border-white p-4 text-[8px] uppercase tracking-[0.18em] disabled:opacity-25" onClick={() => void archive()}>{propagation === "idle" ? "Archive verified result" : "Propagation in progress"}</button></div></aside>
       </section>
       {intent ? <details className="mt-8 border border-white/20 p-5"><summary className="cursor-pointer text-[8px] uppercase tracking-[0.18em] text-white/40">Prepared transaction evidence</summary><pre className="mt-5 overflow-x-auto text-[8px] leading-5 text-white/45">{JSON.stringify(intent, null, 2)}</pre></details> : null}
     </div>
