@@ -583,8 +583,8 @@ export default function FoldForge() {
             <a href={`?owner=${encodeURIComponent(navigableOwner)}`}><span className="block text-[10px] uppercase tracking-[0.26em]">FoldForge</span><span className="mt-1 block font-mono text-[7px] uppercase tracking-[0.18em] text-white/35">Ethereum archive / est. 2026</span></a>
             <nav className="flex w-full justify-between border-t border-white/10 pt-3 text-[9px] uppercase tracking-[0.2em] sm:w-auto sm:gap-5 sm:border-0 sm:pt-0">
               <span>Archive</span>
-              <a className="text-white/40 hover:text-white" href="/sonic-forge">Sonic Forge</a>
-              <a className="text-white/40 hover:text-white" href="/temporal-forge">Temporal Forge</a>
+              <a className="text-white/40 hover:text-white" href="/sonic-forge">Sonic</a>
+              <a className="text-white/40 hover:text-white" href="/temporal-forge">Temporal</a>
             </nav>
           </div>
         </header>
