@@ -308,6 +308,27 @@ witness records the exact frame order, SHA-256 source identities, cadence,
 duration, fit rule, and Sovereign Standard lineage. Source frames remain in the
 browser and are neither uploaded nor admitted to a public library.
 
+## Ledger Witness
+
+Ledger Witness is FoldForge's steward-operated XRPL minting and provenance
+instrument and FoldPortrait's exclusive minting channel. It replaces the former Sovereign Standard Witness interface while
+preserving Sovereign Standard as the authority for prepared mint documents,
+public work metadata, vessel attachments, and committed archive results.
+
+The page reads committed local snapshots of SS prepared batches and claimed-vessel
+state, or hashes a new local source file without uploading it. Drafts and intents
+persist only in the operator's browser. Sovereign Standard remains the authority
+for those snapshots; refreshing them is an explicit reviewed repository change.
+Prepared FoldPortrait sequence numbers attach automatically to claimed SS vessels
+in `claimed_at` order. Unmatched works remain in preparation until the
+corresponding vessel exists; the operator cannot override this relation.
+Ledger Witness deterministically
+prepares an `NFTokenMint` transaction, hands that exact draft to the configured
+Xaman witness wallet, and submits only the verified payload and transaction
+identity to the existing server-side archive boundary. Seeds, API secrets, and
+signing authority never enter FoldForge; every submission still requires the
+human steward in Xaman.
+
 Alchemy provides owner, contract, token, and cached metadata. `app/collection-policy.ts` applies repository-owned exclusions. `app/nft-data.ts` normalizes provider media and constructs responsive derivative URLs. `app/page.tsx` resolves the archive and computes or restores versioned visual signatures. `app/composition-witness.ts` seals every grammar and the current displacement-map witness into archive evidence, while `app/composer-chamber.tsx` derives the lexical field, archive-seamed chromatic field, autonomous six-phase macroform, visual-relation arrangements, displacement field, and unified FoldForge voice.
 
 The FOLD FORGE contract

@@ -1,0 +1,12 @@
+{
+  "schema": "foldforge-ledger-witness-local-sources/v1",
+  "prepared_mints": {
+    "path": "/ledger-witness/prepared-mints.json",
+    "authority": "sovereign-standard/witness/batches/foldportrait-complete-collection.json"
+  },
+  "vessels": {
+    "path": "/ledger-witness/ss-vessels.json",
+    "authority": "sovereign-standard/units.json"
+  },
+  "policy": "FoldForge operates from committed local snapshots. Sovereign Standard remains authoritative; snapshot refresh is a reviewed repository change."
+}

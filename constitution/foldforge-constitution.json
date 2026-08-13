@@ -47,6 +47,12 @@
     "expose lineage and uncertainty",
     "revise when evidence or grammar changes"
   ],
+  "instruments": [
+    { "id": "archive", "role": "Ethereum holdings and attributable composition evidence" },
+    { "id": "sonic-forge", "role": "deterministic audio displacement and lossless mastering" },
+    { "id": "temporal-forge", "role": "collection-frame sequencing and witnessed visual-time rendering" },
+    { "id": "ledger-witness", "role": "FoldPortrait-exclusive XRPL NFTokenMint preparation, Xaman human-signature handoff, and verified SS archive return" }
+  ],
   "authority": {
     "may": [
       "read public Ethereum and canonical token metadata",
@@ -54,7 +60,8 @@
       "derive versioned relations",
       "render language, image, sound, video, and temporal sequence",
       "cache reversible calculations",
-      "propose new grammars"
+      "propose new grammars",
+      "prepare XRPL mint intent from attributable evidence without signing it"
     ],
     "mayNot": [
       "alter canonical Ethereum evidence",
@@ -62,7 +69,8 @@
       "rank artistic worth without an explicit authorized grammar",
       "claim computational interpretation as final meaning",
       "silently change a published grammar",
-      "adopt a proposed grammar without versioned human review"
+      "adopt a proposed grammar without versioned human review",
+      "sign or submit an XRPL mint without the human steward through Xaman"
     ]
   },
   "modalities": {

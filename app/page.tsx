@@ -585,6 +585,7 @@ export default function FoldForge() {
               <span>Archive</span>
               <a className="text-white/40 hover:text-white" href="/sonic-forge">Sonic</a>
               <a className="text-white/40 hover:text-white" href="/temporal-forge">Temporal</a>
+              <a className="text-white/40 hover:text-white" href="/ledger-witness">Ledger</a>
             </nav>
           </div>
         </header>
