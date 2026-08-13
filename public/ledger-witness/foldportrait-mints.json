@@ -539,16 +539,18 @@
       "byte_size": 1305362,
       "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-v2.2-zero-poet-2cfdfa64.json",
       "metadata_file": "Mint/metadata/foldportrait-v2.2-zero-poet-2cfdfa64.json",
-      "mint_status": "prepared",
+      "mint_status": "minted",
       "xrpl": {
-        "network": "MAINNET",
-        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
         "transaction_type": "NFTokenMint",
-        "transaction_hash": null,
-        "nftoken_id": null,
-        "payload_uuid": null,
-        "transaction_result": null,
-        "validated": false
+        "transaction_hash": "92EEA7E2E78AD7C5610699F27CE026A2221FE72C42F0E1FCC34105056A2ABB1A",
+        "nftoken_id": "0000000047D6BDCD766717B67A937E83CFEF22B1760537E3AF9C50B50644143A",
+        "payload_uuid": "7e99cf06-eee0-493a-b5c1-0870daa376af",
+        "witness_wallet": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "network": "MAINNET",
+        "validated": true,
+        "transaction_result": "tesSUCCESS",
+        "ledger_index": 106259001,
+        "archived_at": "2026-08-13T04:58:17.843Z"
       },
       "xrpl_transaction": {
         "TransactionType": "NFTokenMint",
