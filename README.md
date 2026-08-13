@@ -321,8 +321,10 @@ and SS claimed-vessel state. There is no local-file bypass: new works become
 selectable only after FoldPortrait archives and sequences them. Intents persist
 only in the operator's browser. FoldPortrait owns
 artwork, metadata, hashes, and mint candidates; SS owns vessel state and the
-resulting public relationship. Refreshing either snapshot is an explicit reviewed
-repository change.
+resulting public relationship. A scheduled repository workflow imports the
+published FoldPortrait catalog every five minutes, validates its schema,
+authority, and work count, commits only a changed snapshot, and lets the normal
+Pages deployment publish it. A failure opens one deduplicated FoldForge issue.
 Prepared FoldPortrait sequence numbers attach automatically to claimed SS vessels
 in `claimed_at` order. Unmatched works remain in preparation until the
 corresponding vessel exists; the operator cannot override this relation.
@@ -334,6 +336,14 @@ Xaman witness wallet, and submits only the verified payload and transaction
 identity to the existing server-side archive boundary. Seeds, API secrets, and
 signing authority never enter FoldForge; every submission still requires the
 human steward in Xaman.
+
+After archive submission, Ledger Witness polls the public Sovereign Standard
+relation, FoldPortrait catalog, and deployed FoldForge snapshot. Its visible
+state advances through `queued`, `ss`, `foldportrait`, and `complete`; local
+intent and payload references are cleared only after all three public records
+agree. This is operational propagation only. It does not alter FoldForge's
+Ethereum archive or compositional grammar, and Root Logos recomposes Library
+voices only when FoldForge's separate composition witness changes.
 
 Alchemy provides owner, contract, token, and cached metadata. `app/collection-policy.ts` applies repository-owned exclusions. `app/nft-data.ts` normalizes provider media and constructs responsive derivative URLs. `app/page.tsx` resolves the archive and computes or restores versioned visual signatures. `app/composition-witness.ts` seals every grammar and the current displacement-map witness into archive evidence, while `app/composer-chamber.tsx` derives the lexical field, archive-seamed chromatic field, autonomous six-phase macroform, visual-relation arrangements, displacement field, and unified FoldForge voice.
 
