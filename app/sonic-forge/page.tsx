@@ -387,22 +387,16 @@ export default function SonicForge() {
   return (
     <main className="sonic-shell min-h-screen bg-black text-white">
       <header className="site-header sticky top-0 z-20 border-b border-white/20 px-5 py-3 md:px-8">
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-6">
-          <Link className="flex min-w-0 items-center gap-3 sm:gap-4" href="/">
-            <span className="brand-mark" aria-hidden="true">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img alt="" src="/favicon.svg" />
-            </span>
-            <span><span className="block text-base font-medium uppercase tracking-[0.2em]">FoldForge</span><span className="mt-1 hidden text-[8px] uppercase tracking-[0.32em] text-white/40 sm:block">Sonic instrument / R&amp;D chamber</span></span>
-          </Link>
-          <nav className="flex gap-5 text-[9px] uppercase tracking-[0.2em]"><Link className="text-white/40 hover:text-white" href="/">Archive</Link><span>Sonic Forge</span><Link className="text-white/40 hover:text-white" href="/temporal-forge">Temporal Forge</Link></nav>
+        <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-3 sm:flex-nowrap sm:gap-5">
+          <Link href="/"><span className="block text-[10px] uppercase tracking-[0.26em]">FoldForge</span><span className="mt-1 block font-mono text-[7px] uppercase tracking-[0.18em] text-white/35">Audio displacement &amp; mastering instrument</span></Link>
+          <nav className="flex w-full justify-between border-t border-white/10 pt-3 text-[9px] uppercase tracking-[0.2em] sm:w-auto sm:gap-5 sm:border-0 sm:pt-0"><Link className="text-white/40 hover:text-white" href="/">Archive</Link><span>Sonic Forge</span><Link className="text-white/40 hover:text-white" href="/temporal-forge">Temporal Forge</Link></nav>
         </div>
       </header>
 
-      <div className="mx-auto max-w-[1600px] px-5 py-10 md:px-8 md:py-14">
-        <section className="grid gap-10 border-b border-white/20 pb-12 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
-          <div><p className="text-[9px] uppercase tracking-[0.28em] text-white/40">Instrument II / source → displaced master</p><h1 className="mt-5 text-6xl font-light uppercase tracking-[-0.065em] sm:text-8xl lg:text-[9rem] lg:leading-[.78]">Sonic<br />Forge</h1></div>
-          <div className="max-w-xl lg:justify-self-end"><p className="text-lg font-light leading-8 text-white/65">Sound enters as evidence. Clarification repairs its field. Displacement moves it through FoldForge history. Synthesis begins only where the source permits.</p><p className="mt-6 font-mono text-[9px] uppercase leading-5 tracking-[0.14em] text-white/30">Private by default / reversible stages / witnessed output</p></div>
+      <div className="mx-auto max-w-[1600px] px-5 py-10 md:px-8 md:py-16">
+        <section className="grid gap-10 border-b border-white/20 pb-12 lg:grid-cols-[1fr_0.75fr] lg:items-end">
+          <div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Source clarification / displacement / mastering</p><h1 className="mt-5 max-w-3xl text-5xl font-light tracking-[-0.055em] md:text-7xl">Sonic Forge</h1><p className="mt-7 max-w-2xl text-sm leading-7 text-white/55">Transform an admitted sound through one fixed, source-responsive FoldForge signal path, then render a clear lossless master with its processing evidence intact.</p></div>
+          <div className="border border-white/20 p-5 font-mono text-[8px] uppercase leading-5 tracking-[0.14em] text-white/35">Private by default<br />Deterministic signal path<br />48 kHz / 24-bit stereo WAV<br />Witnessed source and master</div>
         </section>
 
         {!evidence ? (

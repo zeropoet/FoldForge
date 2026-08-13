@@ -579,18 +579,9 @@ export default function FoldForge() {
     <main className="archive-shell min-h-screen bg-black text-white">
       <section className="grid min-h-screen grid-rows-[auto_1fr]">
         <header className="site-header sticky top-0 z-20 border-b border-white/20 px-5 py-3 md:px-8">
-          <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-6">
-            <a className="flex min-w-0 items-center gap-3 sm:gap-4" href={`?owner=${encodeURIComponent(navigableOwner)}`}>
-              <span className="brand-mark" aria-hidden="true">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img alt="" src="/favicon.svg" />
-              </span>
-              <span>
-                <span className="block text-base font-medium uppercase tracking-[0.2em] sm:text-lg sm:tracking-[0.22em]">FoldForge</span>
-                <span className="mt-1 hidden text-[8px] uppercase tracking-[0.32em] text-white/40 sm:block">Ethereum archive / est. 2026</span>
-              </span>
-            </a>
-            <nav className="flex gap-5 text-[9px] uppercase tracking-[0.2em]">
+          <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-3 sm:flex-nowrap sm:gap-5">
+            <a href={`?owner=${encodeURIComponent(navigableOwner)}`}><span className="block text-[10px] uppercase tracking-[0.26em]">FoldForge</span><span className="mt-1 block font-mono text-[7px] uppercase tracking-[0.18em] text-white/35">Ethereum archive / est. 2026</span></a>
+            <nav className="flex w-full justify-between border-t border-white/10 pt-3 text-[9px] uppercase tracking-[0.2em] sm:w-auto sm:gap-5 sm:border-0 sm:pt-0">
               <span>Archive</span>
               <a className="text-white/40 hover:text-white" href="/sonic-forge">Sonic Forge</a>
               <a className="text-white/40 hover:text-white" href="/temporal-forge">Temporal Forge</a>
@@ -598,7 +589,7 @@ export default function FoldForge() {
           </div>
         </header>
 
-        <div className="mx-auto grid w-full min-w-0 max-w-[1600px] grid-rows-[auto_auto_1fr] px-5 py-9 md:px-8 md:py-14">
+        <div className="mx-auto grid w-full min-w-0 max-w-[1600px] grid-rows-[auto_auto_1fr] px-5 py-10 md:px-8 md:py-16">
           {selectedContract ? (
             <section>
               <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/25 pb-6">
@@ -693,6 +684,11 @@ export default function FoldForge() {
               )}
             </section>
           ) : (<>
+          <section className="grid gap-10 border-b border-white/20 pb-12 lg:grid-cols-[1fr_0.75fr] lg:items-end">
+            <div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Held collections / attributable works</p><h1 className="mt-5 max-w-3xl text-5xl font-light tracking-[-0.055em] md:text-7xl">Ethereum Archive</h1><p className="mt-7 max-w-2xl text-sm leading-7 text-white/55">Resolve an Ethereum identity into its held collections, canonical minted works, and the evidence FoldForge derives from their visual, sonic, and language fields.</p></div>
+            <div className="border border-white/20 p-5 font-mono text-[8px] uppercase leading-5 tracking-[0.14em] text-white/35">Established 2026<br />Ethereum mainnet holdings<br />Contract-indexed records<br />Attributable archive evidence</div>
+          </section>
+
           <div className="archive-metrics grid border-b border-white/20 sm:grid-cols-4">
             <div className="border-b border-white/20 py-5 sm:border-b-0 sm:border-r sm:border-white/20 sm:px-5 sm:first:pl-0">
               <p className="text-[8px] uppercase tracking-[0.25em] text-white/35">Current archive</p>
