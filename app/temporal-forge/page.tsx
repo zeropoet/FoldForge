@@ -45,9 +45,28 @@ function drawFrame(context: CanvasRenderingContext2D, image: HTMLImageElement, s
   const scale = Math.min(size / image.naturalWidth, size / image.naturalHeight);
   const width = Math.round(image.naturalWidth * scale);
   const height = Math.round(image.naturalHeight * scale);
-  context.filter = inverted ? "invert(1)" : "none";
-  context.drawImage(image, (size - width) / 2, (size - height) / 2, width, height);
-  context.filter = "none";
+  const x = (size - width) / 2;
+  const y = (size - height) / 2;
+  if (!inverted) {
+    context.drawImage(image, x, y, width, height);
+    return;
+  }
+
+  const layer = document.createElement("canvas");
+  layer.width = width;
+  layer.height = height;
+  const layerContext = layer.getContext("2d", { willReadFrequently: true });
+  if (!layerContext) throw new Error("Canvas inversion is unavailable.");
+  layerContext.drawImage(image, 0, 0, width, height);
+  const pixels = layerContext.getImageData(0, 0, width, height);
+  for (let index = 0; index < pixels.data.length; index += 4) {
+    if (pixels.data[index + 3] === 0) continue;
+    pixels.data[index] = 255 - pixels.data[index];
+    pixels.data[index + 1] = 255 - pixels.data[index + 1];
+    pixels.data[index + 2] = 255 - pixels.data[index + 2];
+  }
+  layerContext.putImageData(pixels, 0, 0);
+  context.drawImage(layer, x, y);
 }
 
 function supportedMp4MimeType(): string {
