@@ -6,7 +6,8 @@ import PublicHeader from "../public-header";
 import { moveFrame, naturalFrameOrder, sequenceDuration, type SequenceFrame } from "./sequence";
 import "./temporal-forge.css";
 
-const EXPORT_SIZE = 720;
+const EXPORT_SIZES = [720, 1080, 1440] as const;
+type ExportSize = (typeof EXPORT_SIZES)[number];
 type FrameBackground = "black" | "white";
 
 const FRAME_BACKGROUNDS: Record<FrameBackground, string> = {
@@ -45,6 +46,7 @@ export default function TemporalForge() {
   const [frames, setFrames] = useState<SequenceFrame[]>([]);
   const [frameIndex, setFrameIndex] = useState(0);
   const [fps, setFps] = useState(8);
+  const [exportSize, setExportSize] = useState<ExportSize>(720);
   const [frameBackground, setFrameBackground] = useState<FrameBackground>("black");
   const [playing, setPlaying] = useState(false);
   const [status, setStatus] = useState("Awaiting collection frames");
@@ -120,8 +122,8 @@ export default function TemporalForge() {
     setExporting(true);
     try {
       const canvas = document.createElement("canvas");
-      canvas.width = EXPORT_SIZE;
-      canvas.height = EXPORT_SIZE;
+      canvas.width = exportSize;
+      canvas.height = exportSize;
       const context = canvas.getContext("2d", { willReadFrequently: true });
       if (!context) throw new Error("Canvas export is unavailable.");
       const gif = GIFEncoder({ initialCapacity: 1024 * 1024 });
@@ -129,20 +131,20 @@ export default function TemporalForge() {
         setStatus(`Encoding frame ${index + 1} / ${frames.length}`);
         const image = await loadImage(frames[index].url);
         context.fillStyle = FRAME_BACKGROUNDS[frameBackground];
-        context.fillRect(0, 0, EXPORT_SIZE, EXPORT_SIZE);
-        const scale = Math.min(EXPORT_SIZE / image.naturalWidth, EXPORT_SIZE / image.naturalHeight);
+        context.fillRect(0, 0, exportSize, exportSize);
+        const scale = Math.min(exportSize / image.naturalWidth, exportSize / image.naturalHeight);
         const width = Math.round(image.naturalWidth * scale);
         const height = Math.round(image.naturalHeight * scale);
-        context.drawImage(image, (EXPORT_SIZE - width) / 2, (EXPORT_SIZE - height) / 2, width, height);
-        const rgba = context.getImageData(0, 0, EXPORT_SIZE, EXPORT_SIZE).data;
+        context.drawImage(image, (exportSize - width) / 2, (exportSize - height) / 2, width, height);
+        const rgba = context.getImageData(0, 0, exportSize, exportSize).data;
         const palette = quantize(rgba, 256, { format: "rgb444" });
         const indexed = applyPalette(rgba, palette, "rgb444");
-        gif.writeFrame(indexed, EXPORT_SIZE, EXPORT_SIZE, { palette, delay: Math.round(1000 / fps), repeat: 0 });
+        gif.writeFrame(indexed, exportSize, exportSize, { palette, delay: Math.round(1000 / fps), repeat: 0 });
         await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
       }
       gif.finish();
       download(new Blob([gif.bytes().slice().buffer], { type: "image/gif" }), `Temporal-Forge-${sequenceId}.gif`);
-      setStatus(`GIF rendered / ${frames.length} frames / ${fps} fps`);
+      setStatus(`GIF rendered / ${exportSize} × ${exportSize} / ${frames.length} frames / ${fps} fps`);
     } catch (error) {
       setStatus(error instanceof Error ? error.message : "GIF export failed.");
     } finally {
@@ -160,7 +162,7 @@ export default function TemporalForge() {
       sequence: sequenceId,
       fps,
       loopDurationSeconds: duration,
-      export: { format: "GIF89a", width: EXPORT_SIZE, height: EXPORT_SIZE, fit: "contain", background: FRAME_BACKGROUNDS[frameBackground] },
+      export: { format: "GIF89a", width: exportSize, height: exportSize, fit: "contain", background: FRAME_BACKGROUNDS[frameBackground] },
       frames: frames.map(({ name, bytes, lastModified, digest }, index) => ({ index, name, bytes, lastModified, sha256: digest })),
     };
     download(new Blob([JSON.stringify(witness, null, 2)], { type: "application/json" }), `Temporal-Forge-${sequenceId}-witness.json`);
@@ -172,7 +174,7 @@ export default function TemporalForge() {
     <div className="mx-auto max-w-[1600px] px-5 py-10 md:px-8 md:py-16">
       <section className="grid gap-10 border-b border-white/20 pb-12 lg:grid-cols-[1fr_0.75fr] lg:items-end">
         <div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Collection frames / temporal recurrence</p><h1 className="mt-5 max-w-3xl text-5xl font-light tracking-[-0.055em] md:text-7xl">Temporal Forge</h1><p className="mt-7 max-w-2xl text-sm leading-7 text-white/55">Sequence a collection as frames, watch its visual grammar accumulate through time, and render the observation as a loop with a verifiable order.</p></div>
-        <div className="border border-white/20 p-5 font-mono text-[8px] uppercase leading-5 tracking-[0.14em] text-white/35">Local by default<br />Natural filename order on ingest<br />GIF89a / 720 × 720 / infinite loop<br />Witnessed source sequence</div>
+        <div className="border border-white/20 p-5 font-mono text-[8px] uppercase leading-5 tracking-[0.14em] text-white/35">Local by default<br />Natural filename order on ingest<br />GIF89a / up to 1440 × 1440 / infinite loop<br />Witnessed source sequence</div>
       </section>
 
       {!frames.length ? <button className="mt-12 grid min-h-[430px] w-full place-items-center border border-dashed border-white/30 px-8 text-center hover:border-white" onClick={() => inputRef.current?.click()}><span><span className="block text-xl font-light">Admit collection frames</span><span className="mt-4 block font-mono text-[8px] uppercase tracking-[0.2em] text-white/35">Choose multiple PNG, JPEG, WebP, GIF, or SVG files</span></span></button> : <>
@@ -191,6 +193,12 @@ export default function TemporalForge() {
               <legend className="text-[8px] uppercase tracking-[0.18em] text-white/40">Alpha background</legend>
               <div className="mt-4 grid grid-cols-2 border border-white/25">
                 {(["black", "white"] as const).map((background) => <button aria-pressed={frameBackground === background} className="temporal-background-option px-4 py-3 text-[8px] uppercase tracking-[0.16em]" key={background} onClick={() => { setFrameBackground(background); setStatus(`${background[0].toUpperCase()}${background.slice(1)} alpha background selected`); }} type="button">{background}</button>)}
+              </div>
+            </fieldset>
+            <fieldset className="mt-8">
+              <legend className="text-[8px] uppercase tracking-[0.18em] text-white/40">Render size</legend>
+              <div className="mt-4 grid grid-cols-3 border border-white/25">
+                {EXPORT_SIZES.map((size) => <button aria-label={`${size} by ${size} pixels`} aria-pressed={exportSize === size} className="temporal-resolution-option px-2 py-3 text-[8px] uppercase tracking-[0.1em]" key={size} onClick={() => { setExportSize(size); setStatus(`${size} × ${size} render size selected`); }} type="button">{size}</button>)}
               </div>
             </fieldset>
             <div className="mt-auto grid gap-2 pt-10"><button className="border border-white/40 px-5 py-4 text-[8px] uppercase tracking-[0.18em] disabled:opacity-35" disabled={exporting} onClick={() => void exportGif()}>{exporting ? "Rendering…" : "Render animated GIF"}</button><button className="border border-white/20 px-5 py-4 text-[8px] uppercase tracking-[0.18em]" onClick={exportWitness}>Export sequence witness</button><button className="px-5 py-3 text-[8px] uppercase tracking-[0.18em] text-white/40" onClick={() => inputRef.current?.click()}>Replace frames</button></div>
