@@ -203,8 +203,7 @@ export default function TemporalForge() {
       if (!context) throw new Error("Canvas export is unavailable.");
       drawFrame(context, images[0], exportSize, FRAME_BACKGROUNDS[frameBackground], inverted);
 
-      const stream = canvas.captureStream(0);
-      const videoTrack = stream.getVideoTracks()[0] as CanvasCaptureMediaStreamTrack;
+      const stream = canvas.captureStream(fps);
       const chunks: Blob[] = [];
       const recorder = new MediaRecorder(stream, {
         mimeType,
@@ -215,13 +214,17 @@ export default function TemporalForge() {
         recorder.onerror = () => reject(new Error("MP4 encoding failed."));
         recorder.onstop = () => resolve();
       });
+      const started = new Promise<void>((resolve) => {
+        recorder.addEventListener("start", () => resolve(), { once: true });
+      });
 
       recorder.start();
+      await started;
       const frameDuration = 1000 / fps;
       for (let index = 0; index < images.length; index += 1) {
         setStatus(`Encoding MP4 frame ${index + 1} / ${images.length}`);
         drawFrame(context, images[index], exportSize, FRAME_BACKGROUNDS[frameBackground], inverted);
-        videoTrack.requestFrame();
+        await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
         await new Promise<void>((resolve) => setTimeout(resolve, frameDuration));
       }
       recorder.stop();
