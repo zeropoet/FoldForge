@@ -7,6 +7,12 @@ import { moveFrame, naturalFrameOrder, sequenceDuration, type SequenceFrame } fr
 import "./temporal-forge.css";
 
 const EXPORT_SIZE = 720;
+type FrameBackground = "black" | "white";
+
+const FRAME_BACKGROUNDS: Record<FrameBackground, string> = {
+  black: "#000000",
+  white: "#ffffff",
+};
 
 function download(blob: Blob, name: string) {
   const url = URL.createObjectURL(blob);
@@ -39,6 +45,7 @@ export default function TemporalForge() {
   const [frames, setFrames] = useState<SequenceFrame[]>([]);
   const [frameIndex, setFrameIndex] = useState(0);
   const [fps, setFps] = useState(8);
+  const [frameBackground, setFrameBackground] = useState<FrameBackground>("black");
   const [playing, setPlaying] = useState(false);
   const [status, setStatus] = useState("Awaiting collection frames");
   const [exporting, setExporting] = useState(false);
@@ -121,7 +128,7 @@ export default function TemporalForge() {
       for (let index = 0; index < frames.length; index += 1) {
         setStatus(`Encoding frame ${index + 1} / ${frames.length}`);
         const image = await loadImage(frames[index].url);
-        context.fillStyle = "#000";
+        context.fillStyle = FRAME_BACKGROUNDS[frameBackground];
         context.fillRect(0, 0, EXPORT_SIZE, EXPORT_SIZE);
         const scale = Math.min(EXPORT_SIZE / image.naturalWidth, EXPORT_SIZE / image.naturalHeight);
         const width = Math.round(image.naturalWidth * scale);
@@ -153,7 +160,7 @@ export default function TemporalForge() {
       sequence: sequenceId,
       fps,
       loopDurationSeconds: duration,
-      export: { format: "GIF89a", width: EXPORT_SIZE, height: EXPORT_SIZE, fit: "contain", background: "#000000" },
+      export: { format: "GIF89a", width: EXPORT_SIZE, height: EXPORT_SIZE, fit: "contain", background: FRAME_BACKGROUNDS[frameBackground] },
       frames: frames.map(({ name, bytes, lastModified, digest }, index) => ({ index, name, bytes, lastModified, sha256: digest })),
     };
     download(new Blob([JSON.stringify(witness, null, 2)], { type: "application/json" }), `Temporal-Forge-${sequenceId}-witness.json`);
@@ -170,7 +177,7 @@ export default function TemporalForge() {
 
       {!frames.length ? <button className="mt-12 grid min-h-[430px] w-full place-items-center border border-dashed border-white/30 px-8 text-center hover:border-white" onClick={() => inputRef.current?.click()}><span><span className="block text-xl font-light">Admit collection frames</span><span className="mt-4 block font-mono text-[8px] uppercase tracking-[0.2em] text-white/35">Choose multiple PNG, JPEG, WebP, GIF, or SVG files</span></span></button> : <>
         <section className="mt-12 grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
-          <div className="temporal-stage relative grid aspect-square max-h-[78vh] place-items-center overflow-hidden border border-white/20">
+          <div className="temporal-stage relative grid aspect-square max-h-[78vh] place-items-center overflow-hidden border border-white/20" style={{ backgroundColor: FRAME_BACKGROUNDS[frameBackground] }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img alt={current?.name || "Current sequence frame"} className="h-full w-full object-contain" src={current?.url} />
             <div className="absolute inset-x-0 bottom-0 flex justify-between bg-black/75 p-4 font-mono text-[8px] uppercase tracking-[0.14em]"><span>{String(frameIndex + 1).padStart(4, "0")} / {String(frames.length).padStart(4, "0")}</span><span className="max-w-[60%] truncate text-white/45">{current?.name}</span></div>
@@ -180,12 +187,18 @@ export default function TemporalForge() {
             <div className="mt-9 grid grid-cols-3 border border-white/25"><button className="p-4 text-sm" onClick={() => setFrameIndex((frameIndex - 1 + frames.length) % frames.length)} aria-label="Previous frame">←</button><button className="border-x border-white/25 p-4 text-[8px] uppercase tracking-[0.14em]" onClick={() => setPlaying((value) => !value)}>{playing ? "Pause" : "Play"}</button><button className="p-4 text-sm" onClick={() => setFrameIndex((frameIndex + 1) % frames.length)} aria-label="Next frame">→</button></div>
             <label className="mt-8 text-[8px] uppercase tracking-[0.18em] text-white/40">Cadence / {fps} fps<input className="mt-4 w-full" type="range" min="1" max="24" value={fps} onChange={(event) => setFps(Number(event.target.value))} /></label>
             <label className="mt-8 text-[8px] uppercase tracking-[0.18em] text-white/40">Frame / {frameIndex + 1}<input className="mt-4 w-full" type="range" min="0" max={frames.length - 1} value={frameIndex} onChange={(event) => { setPlaying(false); setFrameIndex(Number(event.target.value)); }} /></label>
+            <fieldset className="mt-8">
+              <legend className="text-[8px] uppercase tracking-[0.18em] text-white/40">Alpha background</legend>
+              <div className="mt-4 grid grid-cols-2 border border-white/25">
+                {(["black", "white"] as const).map((background) => <button aria-pressed={frameBackground === background} className="temporal-background-option px-4 py-3 text-[8px] uppercase tracking-[0.16em]" key={background} onClick={() => { setFrameBackground(background); setStatus(`${background[0].toUpperCase()}${background.slice(1)} alpha background selected`); }} type="button">{background}</button>)}
+              </div>
+            </fieldset>
             <div className="mt-auto grid gap-2 pt-10"><button className="border border-white/40 px-5 py-4 text-[8px] uppercase tracking-[0.18em] disabled:opacity-35" disabled={exporting} onClick={() => void exportGif()}>{exporting ? "Rendering…" : "Render animated GIF"}</button><button className="border border-white/20 px-5 py-4 text-[8px] uppercase tracking-[0.18em]" onClick={exportWitness}>Export sequence witness</button><button className="px-5 py-3 text-[8px] uppercase tracking-[0.18em] text-white/40" onClick={() => inputRef.current?.click()}>Replace frames</button></div>
           </aside>
         </section>
         <section className="mt-8"><div className="mb-4 flex justify-between font-mono text-[8px] uppercase tracking-[0.15em] text-white/35"><span>{status}</span><span>{sequenceId}</span></div><div className="temporal-strip flex gap-2 overflow-x-auto pb-3">{frames.map((frame, index) => <article aria-current={index === frameIndex} className="temporal-frame w-32 shrink-0 border border-white/15 p-2 opacity-55" key={frame.id}><button className="block w-full" onClick={() => { setPlaying(false); setFrameIndex(index); }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img alt="" className="aspect-square w-full bg-black object-contain" src={frame.url} /><span className="mt-2 block truncate text-left font-mono text-[7px] text-white/50">{String(index + 1).padStart(4, "0")} {frame.name}</span></button><div className="mt-2 grid grid-cols-2 gap-1"><button disabled={index === 0} className="border border-white/15 py-1 text-[8px] disabled:opacity-20" onClick={() => reorder(index, index - 1)}>←</button><button disabled={index === frames.length - 1} className="border border-white/15 py-1 text-[8px] disabled:opacity-20" onClick={() => reorder(index, index + 1)}>→</button></div></article>)}</div></section>
+          <img alt="" className="aspect-square w-full object-contain" src={frame.url} style={{ backgroundColor: FRAME_BACKGROUNDS[frameBackground] }} /><span className="mt-2 block truncate text-left font-mono text-[7px] text-white/50">{String(index + 1).padStart(4, "0")} {frame.name}</span></button><div className="mt-2 grid grid-cols-2 gap-1"><button disabled={index === 0} className="border border-white/15 py-1 text-[8px] disabled:opacity-20" onClick={() => reorder(index, index - 1)}>←</button><button disabled={index === frames.length - 1} className="border border-white/15 py-1 text-[8px] disabled:opacity-20" onClick={() => reorder(index, index + 1)}>→</button></div></article>)}</div></section>
       </>}
       <input ref={inputRef} className="hidden" type="file" accept="image/*,.svg" multiple onChange={(event) => void ingest(event.target.files)} />
     </div>
