@@ -14,6 +14,7 @@ const FRAME_BACKGROUNDS: Record<FrameBackground, string> = {
   black: "#000000",
   white: "#ffffff",
 };
+const MP4_MIME_TYPES = ["video/mp4;codecs=avc1.42E01E", "video/mp4;codecs=h264", "video/mp4"];
 
 function download(blob: Blob, name: string) {
   const url = URL.createObjectURL(blob);
@@ -38,6 +39,22 @@ function loadImage(source: string): Promise<HTMLImageElement> {
   });
 }
 
+function drawFrame(context: CanvasRenderingContext2D, image: HTMLImageElement, size: number, background: string, inverted: boolean) {
+  context.fillStyle = background;
+  context.fillRect(0, 0, size, size);
+  const scale = Math.min(size / image.naturalWidth, size / image.naturalHeight);
+  const width = Math.round(image.naturalWidth * scale);
+  const height = Math.round(image.naturalHeight * scale);
+  context.filter = inverted ? "invert(1)" : "none";
+  context.drawImage(image, (size - width) / 2, (size - height) / 2, width, height);
+  context.filter = "none";
+}
+
+function supportedMp4MimeType(): string {
+  if (typeof MediaRecorder === "undefined") return "";
+  return MP4_MIME_TYPES.find((type) => MediaRecorder.isTypeSupported(type)) || "";
+}
+
 export default function TemporalForge() {
   const inputRef = useRef<HTMLInputElement>(null);
   const animationRef = useRef<number | null>(null);
@@ -48,6 +65,7 @@ export default function TemporalForge() {
   const [fps, setFps] = useState(8);
   const [exportSize, setExportSize] = useState<ExportSize>(720);
   const [frameBackground, setFrameBackground] = useState<FrameBackground>("black");
+  const [inverted, setInverted] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [status, setStatus] = useState("Awaiting collection frames");
   const [exporting, setExporting] = useState(false);
@@ -130,12 +148,7 @@ export default function TemporalForge() {
       for (let index = 0; index < frames.length; index += 1) {
         setStatus(`Encoding frame ${index + 1} / ${frames.length}`);
         const image = await loadImage(frames[index].url);
-        context.fillStyle = FRAME_BACKGROUNDS[frameBackground];
-        context.fillRect(0, 0, exportSize, exportSize);
-        const scale = Math.min(exportSize / image.naturalWidth, exportSize / image.naturalHeight);
-        const width = Math.round(image.naturalWidth * scale);
-        const height = Math.round(image.naturalHeight * scale);
-        context.drawImage(image, (exportSize - width) / 2, (exportSize - height) / 2, width, height);
+        drawFrame(context, image, exportSize, FRAME_BACKGROUNDS[frameBackground], inverted);
         const rgba = context.getImageData(0, 0, exportSize, exportSize).data;
         const palette = quantize(rgba, 256, { format: "rgb444" });
         const indexed = applyPalette(rgba, palette, "rgb444");
@@ -152,17 +165,69 @@ export default function TemporalForge() {
     }
   };
 
+  const exportMp4 = async () => {
+    if (!frames.length) return;
+    const mimeType = supportedMp4MimeType();
+    if (!mimeType) {
+      setStatus("MP4 encoding is unavailable in this browser. Try Safari or a current Chromium browser.");
+      return;
+    }
+    setPlaying(false);
+    setExporting(true);
+    try {
+      setStatus("Preparing MP4 frames…");
+      const images = await Promise.all(frames.map((frame) => loadImage(frame.url)));
+      const canvas = document.createElement("canvas");
+      canvas.width = exportSize;
+      canvas.height = exportSize;
+      const context = canvas.getContext("2d");
+      if (!context) throw new Error("Canvas export is unavailable.");
+      drawFrame(context, images[0], exportSize, FRAME_BACKGROUNDS[frameBackground], inverted);
+
+      const stream = canvas.captureStream(0);
+      const videoTrack = stream.getVideoTracks()[0] as CanvasCaptureMediaStreamTrack;
+      const chunks: Blob[] = [];
+      const recorder = new MediaRecorder(stream, {
+        mimeType,
+        videoBitsPerSecond: Math.min(20_000_000, Math.round(12_000_000 * (exportSize / 1080) ** 2)),
+      });
+      const stopped = new Promise<void>((resolve, reject) => {
+        recorder.ondataavailable = (event) => { if (event.data.size) chunks.push(event.data); };
+        recorder.onerror = () => reject(new Error("MP4 encoding failed."));
+        recorder.onstop = () => resolve();
+      });
+
+      recorder.start();
+      const frameDuration = 1000 / fps;
+      for (let index = 0; index < images.length; index += 1) {
+        setStatus(`Encoding MP4 frame ${index + 1} / ${images.length}`);
+        drawFrame(context, images[index], exportSize, FRAME_BACKGROUNDS[frameBackground], inverted);
+        videoTrack.requestFrame();
+        await new Promise<void>((resolve) => setTimeout(resolve, frameDuration));
+      }
+      recorder.stop();
+      await stopped;
+      stream.getTracks().forEach((track) => track.stop());
+      download(new Blob(chunks, { type: mimeType }), `Temporal-Forge-${sequenceId}.mp4`);
+      setStatus(`MP4 rendered / ${exportSize} × ${exportSize} / ${frames.length} frames / ${fps} fps`);
+    } catch (error) {
+      setStatus(error instanceof Error ? error.message : "MP4 export failed.");
+    } finally {
+      setExporting(false);
+    }
+  };
+
   const exportWitness = () => {
     if (!frames.length) return;
     const witness = {
-      schema: "foldforge-temporal-sequence-witness/v1",
-      instrument: "Temporal Forge / v1",
+      schema: "foldforge-temporal-sequence-witness/v2",
+      instrument: "Temporal Forge / v2",
       lineage: "Sovereign Standard / sigil-sequence / deterministic frame player",
       privacy: "local browser processing; source frames not uploaded",
       sequence: sequenceId,
       fps,
       loopDurationSeconds: duration,
-      export: { format: "GIF89a", width: exportSize, height: exportSize, fit: "contain", background: FRAME_BACKGROUNDS[frameBackground] },
+      export: { formats: ["GIF89a", "MP4"], width: exportSize, height: exportSize, fit: "contain", background: FRAME_BACKGROUNDS[frameBackground], colorInversion: inverted },
       frames: frames.map(({ name, bytes, lastModified, digest }, index) => ({ index, name, bytes, lastModified, sha256: digest })),
     };
     download(new Blob([JSON.stringify(witness, null, 2)], { type: "application/json" }), `Temporal-Forge-${sequenceId}-witness.json`);
@@ -174,14 +239,14 @@ export default function TemporalForge() {
     <div className="mx-auto max-w-[1600px] px-5 py-10 md:px-8 md:py-16">
       <section className="grid gap-10 border-b border-white/20 pb-12 lg:grid-cols-[1fr_0.75fr] lg:items-end">
         <div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Collection frames / temporal recurrence</p><h1 className="mt-5 max-w-3xl text-5xl font-light tracking-[-0.055em] md:text-7xl">Temporal Forge</h1><p className="mt-7 max-w-2xl text-sm leading-7 text-white/55">Sequence a collection as frames, watch its visual grammar accumulate through time, and render the observation as a loop with a verifiable order.</p></div>
-        <div className="border border-white/20 p-5 font-mono text-[8px] uppercase leading-5 tracking-[0.14em] text-white/35">Local by default<br />Natural filename order on ingest<br />GIF89a / up to 1440 × 1440 / infinite loop<br />Witnessed source sequence</div>
+        <div className="border border-white/20 p-5 font-mono text-[8px] uppercase leading-5 tracking-[0.14em] text-white/35">Local by default<br />Natural filename order on ingest<br />GIF89a + MP4 / up to 1440 × 1440<br />Witnessed source sequence</div>
       </section>
 
       {!frames.length ? <button className="mt-12 grid min-h-[430px] w-full place-items-center border border-dashed border-white/30 px-8 text-center hover:border-white" onClick={() => inputRef.current?.click()}><span><span className="block text-xl font-light">Admit collection frames</span><span className="mt-4 block font-mono text-[8px] uppercase tracking-[0.2em] text-white/35">Choose multiple PNG, JPEG, WebP, GIF, or SVG files</span></span></button> : <>
         <section className="mt-12 grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
           <div className="temporal-stage relative grid aspect-square max-h-[78vh] place-items-center overflow-hidden border border-white/20" style={{ backgroundColor: FRAME_BACKGROUNDS[frameBackground] }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img alt={current?.name || "Current sequence frame"} className="h-full w-full object-contain" src={current?.url} />
+            <img alt={current?.name || "Current sequence frame"} className="h-full w-full object-contain" src={current?.url} style={{ filter: inverted ? "invert(1)" : "none" }} />
             <div className="absolute inset-x-0 bottom-0 flex justify-between bg-black/75 p-4 font-mono text-[8px] uppercase tracking-[0.14em]"><span>{String(frameIndex + 1).padStart(4, "0")} / {String(frames.length).padStart(4, "0")}</span><span className="max-w-[60%] truncate text-white/45">{current?.name}</span></div>
           </div>
           <aside className="flex flex-col border border-white/20 p-5">
@@ -201,12 +266,13 @@ export default function TemporalForge() {
                 {EXPORT_SIZES.map((size) => <button aria-label={`${size} by ${size} pixels`} aria-pressed={exportSize === size} className="temporal-resolution-option px-2 py-3 text-[8px] uppercase tracking-[0.1em]" key={size} onClick={() => { setExportSize(size); setStatus(`${size} × ${size} render size selected`); }} type="button">{size}</button>)}
               </div>
             </fieldset>
-            <div className="mt-auto grid gap-2 pt-10"><button className="border border-white/40 px-5 py-4 text-[8px] uppercase tracking-[0.18em] disabled:opacity-35" disabled={exporting} onClick={() => void exportGif()}>{exporting ? "Rendering…" : "Render animated GIF"}</button><button className="border border-white/20 px-5 py-4 text-[8px] uppercase tracking-[0.18em]" onClick={exportWitness}>Export sequence witness</button><button className="px-5 py-3 text-[8px] uppercase tracking-[0.18em] text-white/40" onClick={() => inputRef.current?.click()}>Replace frames</button></div>
+            <button aria-pressed={inverted} className="temporal-inversion-option mt-8 flex items-center justify-between border border-white/25 px-4 py-3 text-[8px] uppercase tracking-[0.16em]" onClick={() => { const next = !inverted; setInverted(next); setStatus(`Color inversion ${next ? "enabled" : "disabled"}`); }} type="button"><span>Color inversion</span><span>{inverted ? "On" : "Off"}</span></button>
+            <div className="mt-auto grid gap-2 pt-10"><button className="border border-white/40 px-5 py-4 text-[8px] uppercase tracking-[0.18em] disabled:opacity-35" disabled={exporting} onClick={() => void exportGif()}>{exporting ? "Rendering…" : "Render animated GIF"}</button><button className="border border-white/40 px-5 py-4 text-[8px] uppercase tracking-[0.18em] disabled:opacity-35" disabled={exporting} onClick={() => void exportMp4()} title="Render one sequence cycle as MP4">{exporting ? "Rendering…" : "Render MP4"}</button><button className="border border-white/20 px-5 py-4 text-[8px] uppercase tracking-[0.18em]" onClick={exportWitness}>Export sequence witness</button><button className="px-5 py-3 text-[8px] uppercase tracking-[0.18em] text-white/40" onClick={() => inputRef.current?.click()}>Replace frames</button></div>
           </aside>
         </section>
         <section className="mt-8"><div className="mb-4 flex justify-between font-mono text-[8px] uppercase tracking-[0.15em] text-white/35"><span>{status}</span><span>{sequenceId}</span></div><div className="temporal-strip flex gap-2 overflow-x-auto pb-3">{frames.map((frame, index) => <article aria-current={index === frameIndex} className="temporal-frame w-32 shrink-0 border border-white/15 p-2 opacity-55" key={frame.id}><button className="block w-full" onClick={() => { setPlaying(false); setFrameIndex(index); }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img alt="" className="aspect-square w-full object-contain" src={frame.url} style={{ backgroundColor: FRAME_BACKGROUNDS[frameBackground] }} /><span className="mt-2 block truncate text-left font-mono text-[7px] text-white/50">{String(index + 1).padStart(4, "0")} {frame.name}</span></button><div className="mt-2 grid grid-cols-2 gap-1"><button disabled={index === 0} className="border border-white/15 py-1 text-[8px] disabled:opacity-20" onClick={() => reorder(index, index - 1)}>←</button><button disabled={index === frames.length - 1} className="border border-white/15 py-1 text-[8px] disabled:opacity-20" onClick={() => reorder(index, index + 1)}>→</button></div></article>)}</div></section>
+          <span className="block aspect-square w-full" style={{ backgroundColor: FRAME_BACKGROUNDS[frameBackground] }}><img alt="" className="h-full w-full object-contain" src={frame.url} style={{ filter: inverted ? "invert(1)" : "none" }} /></span><span className="mt-2 block truncate text-left font-mono text-[7px] text-white/50">{String(index + 1).padStart(4, "0")} {frame.name}</span></button><div className="mt-2 grid grid-cols-2 gap-1"><button disabled={index === 0} className="border border-white/15 py-1 text-[8px] disabled:opacity-20" onClick={() => reorder(index, index - 1)}>←</button><button disabled={index === frames.length - 1} className="border border-white/15 py-1 text-[8px] disabled:opacity-20" onClick={() => reorder(index, index + 1)}>→</button></div></article>)}</div></section>
       </>}
       <input ref={inputRef} className="hidden" type="file" accept="image/*,.svg" multiple onChange={(event) => void ingest(event.target.files)} />
     </div>

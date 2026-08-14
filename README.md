@@ -316,8 +316,9 @@ filename, and played as an infinite sequence at a selectable cadence. Frames
 can be scrubbed, stepped, and reordered to expose recurrence, transition, and
 collection-scale motion that is not visible in a static grid.
 
-The chamber renders an actual 720, 1080, or 1440 square GIF89a loop while preserving every
-source frame's aspect ratio against a selected black or white field. A separate versioned JSON
+The chamber renders an actual 720, 1080, or 1440 square GIF89a loop or MP4 cycle while preserving
+every source frame's aspect ratio against a selected black or white field, with optional color
+inversion. A separate versioned JSON
 witness records the exact frame order, SHA-256 source identities, cadence,
 duration, fit rule, and Sovereign Standard lineage. Source frames remain in the
 browser and are neither uploaded nor admitted to a public library.
