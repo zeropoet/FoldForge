@@ -4,7 +4,7 @@
   "issuance_channel": "FoldForge Ledger Witness",
   "signing_boundary": "human steward through Xaman",
   "public_root": "https://zeropoet.github.io/FoldPortrait",
-  "work_count": 55,
+  "work_count": 56,
   "works": [
     {
       "sequence": 1,
@@ -2135,6 +2135,36 @@
             "Memo": {
               "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
               "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303033222C2266696C655F736861323536223A2235623432663663386563363538633261383435343633393439643365626237646466343231336164323633333930643233366236386266346663653361353731227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 56,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0004",
+      "title": "FoldPortrait FP-REFLECT-0004",
+      "description": "FP-REFLECT-0004 presses palimpsest, strata, and sediment across 7 witnessed relations, forming an evolving figure held inside the FoldKernel lineage.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0004.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0004.png",
+      "sha256": "eb1e056cfef0476cb647f64423dbf4d9c498e7c24cc2075bb915fc6d4be43f48",
+      "byte_size": 3310134,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0004.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0004.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303030342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303034222C2266696C655F736861323536223A2265623165303536636665663034373663623634376636343432336462663464396334393865376332346363323037356262393135666336643462653433663438227D"
             }
           }
         ]
