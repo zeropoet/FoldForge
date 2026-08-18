@@ -677,7 +677,7 @@ export default function FoldForge() {
             </section>
           ) : (<>
           <section className="grid gap-10 border-b border-white/20 pb-12 lg:grid-cols-[1fr_0.75fr] lg:items-end">
-            <div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Held collections / attributable works</p><h1 className="mt-5 max-w-3xl text-5xl font-light tracking-[-0.055em] md:text-7xl">Ethereum Archive</h1><p className="mt-7 max-w-2xl text-sm leading-7 text-white/55">Resolve an Ethereum identity into its held collections, canonical minted works, and the evidence FoldForge derives from their visual, sonic, and language fields.</p></div>
+            <div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Held collections / attributable works</p><h1 className="mt-5 max-w-3xl text-5xl font-light tracking-[-0.055em] md:text-7xl">Ethereum Archive</h1><p className="mt-7 max-w-2xl text-sm leading-7 text-white/55">The Ethereum Archive presents held collections, canonical minted works, and the evidence FoldForge derives from their visual, sonic, and language fields.</p></div>
             <div className="border border-white/20 p-5 font-mono text-[8px] uppercase leading-5 tracking-[0.14em] text-white/35">Established 2026<br />Ethereum mainnet holdings<br />Contract-indexed records<br />Attributable archive evidence</div>
           </section>
 
