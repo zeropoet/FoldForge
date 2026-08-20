@@ -68,18 +68,24 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v5
+      - name: Mint a Root Logos dispatch token
+        if: github.event_name == 'push' || needs.build.outputs.language_changed == 'true'
+        id: root-logos-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.TELOS_BRIDGE_APP_CLIENT_ID }}
+          private-key: ${{ secrets.TELOS_BRIDGE_APP_PRIVATE_KEY }}
+          owner: zeropoet
+          repositories: root-logos
+          permission-contents: write
       - name: Wake Root Logos source integration
         if: github.event_name == 'push' || needs.build.outputs.language_changed == 'true'
         env:
-          ROOT_LOGOS_DISPATCH_TOKEN: ${{ secrets.ROOT_LOGOS_DISPATCH_TOKEN }}
+          ROOT_LOGOS_DISPATCH_TOKEN: ${{ steps.root-logos-token.outputs.token }}
           FOLDFORGE_REVISION: ${{ github.sha }}
           FOLDFORGE_LANGUAGE_WITNESS: ${{ needs.build.outputs.language_witness }}
           FOLDFORGE_SEMANTIC_WITNESS: ${{ needs.build.outputs.semantic_witness }}
         run: |
-          if [ -z "$ROOT_LOGOS_DISPATCH_TOKEN" ]; then
-            echo "ROOT_LOGOS_DISPATCH_TOKEN is not configured"
-            exit 1
-          fi
           echo "$FOLDFORGE_REVISION" | grep -Eq '^[a-f0-9]{40}$'
           echo "$FOLDFORGE_LANGUAGE_WITNESS" | grep -Eq '^sha256:[a-f0-9]{64}$'
           echo "$FOLDFORGE_SEMANTIC_WITNESS" | grep -Eq '^sha256:[a-f0-9]{64}$'

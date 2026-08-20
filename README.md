@@ -134,9 +134,9 @@ It regenerates the map before installing the full FoldForge toolchain, then
 installs, tests, builds, and commits only when the witnessed geometry has
 actually changed. Because workflow-token commits do not emit a second `push`
 workflow, the renewal explicitly dispatches the normal Pages publisher after a
-changed witness is committed. The workflow reuses `ROOT_LOGOS_DISPATCH_TOKEN`
-for read-only checkout of Root Logos and the workflow-scoped `GITHUB_TOKEN` for
-its FoldForge commit and same-repository deployment dispatch.
+changed witness is committed. Root Logos is public, so that evidence checkout
+requires no credential; the workflow-scoped `GITHUB_TOKEN` handles the
+FoldForge commit and same-repository deployment dispatch.
 
 Resonant Holdings can traverse those fixed work-to-note relationships through ten deterministic arrangements: luminance ascent, luminance descent, recursive fold, chromatic continuum, visual continuity, visual counterpoint, lexical recurrence, collection bodies, contract/token lineage, and a witness-seeded scatter. These arrangements are no longer listener-controlled. The archive derives its own six-part macroform—Ground, Fold, Recurrence, Fracture, Convergence, and Silence—from its witness hash, visual-signature distribution, contrast, collection count, and collection diversity.
 
@@ -182,9 +182,9 @@ Hourly archive observations also dispatch when their confirmed language witness
 changes. Root Logos performs the final witness comparison, so a source push
 whose public grammars and normalized language are unchanged remains dormant
 after inspection. The publisher uses the
-least-privilege `ROOT_LOGOS_DISPATCH_TOKEN` Actions secret, scoped only to Root
-Logos repository contents; Root Logos's daily source check remains the recovery
-path.
+one-hour installation token minted by the Telos Bridge GitHub App and scoped to
+Root Logos Contents write solely for `repository_dispatch`; Root Logos's daily
+source check remains the recovery path.
 
 Every deployment also rebuilds
 `public/root-logos-language-composition.json` directly from the current allowed
@@ -207,7 +207,9 @@ provider fluctuation while preserving the system-wide propagation policy.
 
 1. Create a dedicated Alchemy app for this site.
 2. Add its key at **Repository settings → Secrets and variables → Actions** as `NEXT_PUBLIC_ALCHEMY_API_KEY`.
-3. Add a fine-grained Root Logos dispatch token as `ROOT_LOGOS_DISPATCH_TOKEN`.
+3. Add the Telos Bridge GitHub App client ID as the repository variable
+   `TELOS_BRIDGE_APP_CLIENT_ID` and its PKCS#8 private key as the repository
+   secret `TELOS_BRIDGE_APP_PRIVATE_KEY`.
 4. Select **Repository settings → Pages → Build and deployment → Source → GitHub Actions**.
 5. Push to `main`, or run the workflow manually from the Actions tab.
 

@@ -31,7 +31,6 @@ jobs:
         with:
           repository: zeropoet/root-logos
           path: root-logos
-          token: ${{ secrets.ROOT_LOGOS_DISPATCH_TOKEN }}
 
       - uses: actions/setup-node@v7
         with:
