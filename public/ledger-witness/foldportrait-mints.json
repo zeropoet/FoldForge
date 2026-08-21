@@ -4,7 +4,7 @@
   "issuance_channel": "FoldForge Ledger Witness",
   "signing_boundary": "human steward through Xaman",
   "public_root": "https://zeropoet.github.io/FoldPortrait",
-  "work_count": 61,
+  "work_count": 63,
   "works": [
     {
       "sequence": 1,
@@ -2315,6 +2315,66 @@
             "Memo": {
               "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
               "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303039222C2266696C655F736861323536223A2234643838393662313064363866616438656337373038626461613664333364646337386466306131313261616432323765353964303065363064613263646635227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 62,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0010",
+      "title": "FoldPortrait FP-REFLECT-0010",
+      "description": "FP-REFLECT-0010 opens palimpsest, counterfield, and veil across 7 witnessed relations, forming a distinct silhouette from the public witness.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0010.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0010.png",
+      "sha256": "a9fa191a384c4cc200b519b3c0be221207c5930dd83f6ace0fb6e44ecf795a3f",
+      "byte_size": 3437539,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0010.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0010.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303031302E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303130222C2266696C655F736861323536223A2261396661313931613338346334636332303062353139623363306265323231323037633539333064643833663661636530666236653434656366373935613366227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 63,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0011",
+      "title": "FoldPortrait FP-REFLECT-0011",
+      "description": "FP-REFLECT-0011 layers braid, aperture, and strata across 7 witnessed relations, forming the latest shape of FoldPortrait's reflective lineage.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0011.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0011.png",
+      "sha256": "ed99bd4b48051fdaab61eae4c3266167f4ffc0d52ca824779e319e6c374d9e7c",
+      "byte_size": 3495409,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0011.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0011.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303031312E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303131222C2266696C655F736861323536223A2265643939626434623438303531666461616236316561653463333236363136376634666663306435326361383234373739653331396536633337346439653763227D"
             }
           }
         ]
