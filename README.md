@@ -182,6 +182,8 @@ The same successful deployment sends a bounded `telos-propagation` receipt to
 Telos. It contains only repository identity, commit, change class, a public
 summary, public witness URL, and time; Telos records it as pending semantic
 synchronization rather than treating receipt as adoption.
+The originating workflow then wakes FoldPortrait with the same short-lived App
+token; Telos does not retain another private-key copy solely to relay the event.
 Hourly archive observations also dispatch when their confirmed language witness
 changes. Root Logos performs the final witness comparison, so a source push
 whose public grammars and normalized language are unchanged remains dormant
