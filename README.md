@@ -178,6 +178,10 @@ Deployment is automated by [`.github/workflows/deploy-pages.yml`](.github/workfl
 The production deployment is published at [foldforge.xyz](https://foldforge.xyz).
 After a successful deployment of every source push, FoldForge dispatches its
 exact published commit to Root Logos for immediate connected-source witnessing.
+The same successful deployment sends a bounded `telos-propagation` receipt to
+Telos. It contains only repository identity, commit, change class, a public
+summary, public witness URL, and time; Telos records it as pending semantic
+synchronization rather than treating receipt as adoption.
 Hourly archive observations also dispatch when their confirmed language witness
 changes. Root Logos performs the final witness comparison, so a source push
 whose public grammars and normalized language are unchanged remains dormant
