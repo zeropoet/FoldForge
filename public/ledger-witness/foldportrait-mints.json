@@ -4,7 +4,7 @@
   "issuance_channel": "FoldForge Ledger Witness",
   "signing_boundary": "human steward through Xaman",
   "public_root": "https://zeropoet.github.io/FoldPortrait",
-  "work_count": 79,
+  "work_count": 84,
   "works": [
     {
       "sequence": 1,
@@ -2855,6 +2855,156 @@
             "Memo": {
               "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
               "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303237222C2266696C655F736861323536223A2265326537383263303338303130383666633937396532363438633963313132623436313661333762626432616333346436326134616535633638623261633966227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 80,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0028",
+      "title": "FoldPortrait FP-REFLECT-0028",
+      "description": "FP-REFLECT-0028 enters its opening season through the mineral palette and layers palimpsest, aperture, and veil across 6 witnessed relations, forming a distinct silhouette from the public witness.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0028.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0028.png",
+      "sha256": "9b2e54209806f386f2886cee12fc67e8ce83fb78c57efc6e39f6524d797b368e",
+      "byte_size": 3749455,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0028.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0028.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303032382E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303238222C2266696C655F736861323536223A2239623265353432303938303666333836663238383663656531326663363765386365383366623738633537656663366533396636353234643739376233363865227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 81,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0029",
+      "title": "FoldPortrait FP-REFLECT-0029",
+      "description": "FP-REFLECT-0029 enters its fragmentation season through the tidal palette and folds sediment, braid, and veil across 5 witnessed relations, forming an evolving figure held inside the FoldKernel lineage.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0029.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0029.png",
+      "sha256": "dc111e6207867fb0a2c3513af99dcdbec42ac6b16043f1ca7734033016034e91",
+      "byte_size": 3619106,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0029.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0029.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303032392E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303239222C2266696C655F736861323536223A2264633131316536323037383637666230613263333531336166393964636462656334326163366231363034336631636137373334303333303136303334653931227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 82,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0030",
+      "title": "FoldPortrait FP-REFLECT-0030",
+      "description": "FP-REFLECT-0030 enters its recombination season through the ember palette and presses strata, counterfield, and palimpsest across 7 witnessed relations, forming a new contour for the system's continuing self-portrait.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0030.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0030.png",
+      "sha256": "ee5ebc0bbbc63f4b0f297c751b6effb36efb8f2f25ee93acd5b54d75fb6b5d47",
+      "byte_size": 3654237,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0030.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0030.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303033302E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303330222C2266696C655F736861323536223A2265653565626330626262633633663462306632393763373531623665666662333665666238663266323565653933616364356235346437356662366235643437227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 83,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0031",
+      "title": "FoldPortrait FP-REFLECT-0031",
+      "description": "FP-REFLECT-0031 enters its drift season through the mineral palette and gathers strata, aperture, and sediment across 5 witnessed relations, forming an evolving figure held inside the FoldKernel lineage.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0031.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0031.png",
+      "sha256": "b672328b7b3ef03b89b18e1f7a0a1efd4deaf773cf32dd72db16068e2d4e7db0",
+      "byte_size": 3376384,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0031.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0031.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303033312E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303331222C2266696C655F736861323536223A2262363732333238623762336566303362383962313865316637613061316566643464656166373733636633326464373264623136303638653264346537646230227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 84,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0032",
+      "title": "FoldPortrait FP-REFLECT-0032",
+      "description": "FP-REFLECT-0032 enters its contraction season through the mineral palette and presses counterfield, braid, and sediment across 4 witnessed relations, forming the latest shape of FoldPortrait's reflective lineage.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0032.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0032.png",
+      "sha256": "734ac39e27fab80dd068a7ff6ce4dc5bec0745046cccfcb43f444d6d611abe52",
+      "byte_size": 3245482,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0032.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0032.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303033322E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303332222C2266696C655F736861323536223A2237333461633339653237666162383064643036386137666636636534646335626563303734353034366363636663623433663434346436643631316162653532227D"
             }
           }
         ]
