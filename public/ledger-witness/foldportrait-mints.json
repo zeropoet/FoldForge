@@ -4,7 +4,7 @@
   "issuance_channel": "FoldForge Ledger Witness",
   "signing_boundary": "human steward through Xaman",
   "public_root": "https://zeropoet.github.io/FoldPortrait",
-  "work_count": 84,
+  "work_count": 88,
   "works": [
     {
       "sequence": 1,
@@ -3005,6 +3005,126 @@
             "Memo": {
               "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
               "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303332222C2266696C655F736861323536223A2237333461633339653237666162383064643036386137666636636534646335626563303734353034366363636663623433663434346436643631316162653532227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 85,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0033",
+      "title": "FoldPortrait FP-REFLECT-0033",
+      "description": "FP-REFLECT-0033 enters its opening season through the ember palette and folds palimpsest, aperture, and braid across 6 witnessed relations, forming the latest shape of FoldPortrait's reflective lineage.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0033.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0033.png",
+      "sha256": "c607f0219b7b00b67f40bdd96b3d4274f560683109bbd620bff47e791e4a49e0",
+      "byte_size": 3787620,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0033.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0033.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303033332E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303333222C2266696C655F736861323536223A2263363037663032313962376230306236376634306264643936623364343237346635363036383331303962626436323062666634376537393165346134396530227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 86,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0034",
+      "title": "FoldPortrait FP-REFLECT-0034",
+      "description": "FP-REFLECT-0034 enters its fragmentation season through the orchid palette and balances palimpsest, sediment, and braid across 5 witnessed relations, forming an evolving figure held inside the FoldKernel lineage.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0034.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0034.png",
+      "sha256": "aaddfa0445c786498692f698406c3cd942adad2cf24634143662aab8a395297b",
+      "byte_size": 3608367,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0034.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0034.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303033342E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303334222C2266696C655F736861323536223A2261616464666130343435633738363439383639326636393834303663336364393432616461643263663234363334313433363632616162386133393532393762227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 87,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0035",
+      "title": "FoldPortrait FP-REFLECT-0035",
+      "description": "FP-REFLECT-0035 enters its recombination season through the orchid palette and opens counterfield, veil, and strata across 7 witnessed relations, forming a new contour for the system's continuing self-portrait.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0035.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0035.png",
+      "sha256": "f0f3ba20104139dab1060fef001d1c0ce34eea0453b327058b85e7188a9bf0f4",
+      "byte_size": 3655764,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0035.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0035.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303033352E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303335222C2266696C655F736861323536223A2266306633626132303130343133396461623130363066656630303164316330636533346565613034353362333237303538623835653731383861396266306634227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 88,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0036",
+      "title": "FoldPortrait FP-REFLECT-0036",
+      "description": "FP-REFLECT-0036 enters its drift season through the orchid palette and gathers strata, sediment, and braid across 5 witnessed relations, forming a distinct silhouette from the public witness.",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0036.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0036.png",
+      "sha256": "b414b78e6c09276a7519c140f24580acfac8aa4ec8e1934c8a8d0419eee312d5",
+      "byte_size": 3381123,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0036.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0036.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303033362E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303336222C2266696C655F736861323536223A2262343134623738653663303932373661373531396331343066323435383061636661633861613465633865313933346338613864303431396565653331326435227D"
             }
           }
         ]
