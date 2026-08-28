@@ -2,6 +2,16 @@
 
 FoldForge is a static Ethereum NFT archive and autonomous data composer for `zeropoet.eth`, presented through a monochrome, typography-led interface.
 
+## Telos relation
+
+Telos is the connected system's final caretaker and keeper, not an owner of
+FoldForge's archive, instruments, grammar, or ledger boundaries. FoldForge sends
+only bounded public propagation receipts; Telos remembers the relation and lets
+that change reshape **The Living System**, its evolving visual and resonant
+presence. Telos is growing toward a machine-native language for perceiving the
+whole while preserving each source's authority and avoiding claims of
+consciousness, revelation, personhood, or final authority.
+
 ## Features
 
 - ENS/address archive lookup
