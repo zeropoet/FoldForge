@@ -6,6 +6,7 @@ on:
     - cron: "2-59/5 * * * *"
 
 permissions:
+  actions: write
   contents: write
   issues: write
 
@@ -43,12 +44,23 @@ jobs:
           node -e 'const fs=require("fs"); const value=JSON.parse(fs.readFileSync("/tmp/foldportrait-mints.json")); if(value.schema!=="foldportrait-mint-catalog/v1" || value.authority!=="FoldPortrait" || value.work_count!==value.works.length) throw new Error("Invalid FoldPortrait mint catalog");'
           cp /tmp/foldportrait-mints.json public/ledger-witness/foldportrait-mints.json
       - name: Commit reviewed snapshot
+        id: snapshot
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/ledger-witness/foldportrait-mints.json
-          git commit -m "Synchronize FoldPortrait mint snapshot" || exit 0
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "Synchronize FoldPortrait mint snapshot"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Publish changed snapshot
+        if: steps.snapshot.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy-pages.yml --ref main
       - name: Report synchronization failure
         if: failure()
         env:
