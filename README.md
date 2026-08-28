@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="public/brand/foldforge-mark.svg" alt="FoldForge" width="240">
-</p>
-
 # FoldForge
 
 FoldForge is a static Ethereum NFT archive and autonomous data composer for `zeropoet.eth`, presented through a monochrome, typography-led interface.

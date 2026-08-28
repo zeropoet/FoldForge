@@ -642,125 +642,125 @@ export default function ComposerChamber({
     : soundPlaying && currentPhase.id === "silence" ? 1 : 0;
 
   return (
-    <section className="composer-chamber min-w-0 border-b border-white/20 py-12 md:py-16">
+    <section className="composer-chamber min-w-0 border-b border-black/20 py-12 md:py-16">
       <div className="mb-8 grid gap-5 md:grid-cols-[1fr_auto] md:items-end">
         <div>
-          <p className="text-[9px] uppercase tracking-[0.28em] text-white/45">Composer chamber</p>
-          <p className="mt-4 max-w-2xl text-[9px] uppercase leading-5 tracking-[0.18em] text-white/30">
+          <p className="text-[9px] uppercase tracking-[0.28em] text-black/45">Composer chamber</p>
+          <p className="mt-4 max-w-2xl text-[9px] uppercase leading-5 tracking-[0.18em] text-black/30">
             A witnessed Ethereum archive conducting color, spatial form, recurrence, fracture, convergence, and rest.
           </p>
         </div>
-        <div className="font-mono text-[7px] uppercase leading-5 tracking-[0.14em] text-white/25 md:text-right">
+        <div className="font-mono text-[7px] uppercase leading-5 tracking-[0.14em] text-black/25 md:text-right">
           <p>Witness / {stateHash.slice(7, 19)}</p>
           <p>{evidence.length.toString().padStart(3, "0")} source works</p>
           <p>Grammars 002–005 / living</p>
         </div>
       </div>
 
-      <div className="grid gap-px bg-white/20 lg:grid-cols-3">
-        <article className="order-2 bg-black p-5 md:p-7 lg:col-span-1">
+      <div className="grid gap-px bg-black/20 lg:grid-cols-3">
+        <article className="order-2 bg-white p-5 md:p-7 lg:col-span-1">
           <CompositionHeader grammar={composerGrammars.language} />
           <p className="mt-8 text-2xl font-light uppercase leading-[1.25] tracking-[-0.025em] md:text-4xl">
             {lexicalTerms.slice(0, 9).map((entry) => entry.term).join(" / ") || "No recurring source language"}
           </p>
-          <div className="mt-8 border-t border-white/15">
+          <div className="mt-8 border-t border-black/15">
             {lexicalTerms.slice(0, 12).map((entry) => (
-              <div className="grid grid-cols-[1fr_auto_auto] gap-4 border-b border-white/10 py-3 text-[8px] uppercase tracking-[0.16em]" key={entry.term}>
-                <span className="text-white/65">{entry.term}</span>
-                <span className="font-mono text-white/25">{entry.count.toString().padStart(2, "0")} works</span>
-                <span className="font-mono text-white/20">{entry.sources.length.toString().padStart(2, "0")} traces</span>
+              <div className="grid grid-cols-[1fr_auto_auto] gap-4 border-b border-black/10 py-3 text-[8px] uppercase tracking-[0.16em]" key={entry.term}>
+                <span className="text-black/65">{entry.term}</span>
+                <span className="font-mono text-black/25">{entry.count.toString().padStart(2, "0")} works</span>
+                <span className="font-mono text-black/20">{entry.sources.length.toString().padStart(2, "0")} traces</span>
               </div>
             ))}
           </div>
-          <p className="mt-5 text-[8px] uppercase leading-4 tracking-[0.16em] text-white/25">
+          <p className="mt-5 text-[8px] uppercase leading-4 tracking-[0.16em] text-black/25">
             Recurrence is evidence of presence, not a claim of final meaning.
           </p>
-          <div className="mt-8 border-t border-white/15 pt-5">
+          <div className="mt-8 border-t border-black/15 pt-5">
             <div className="flex items-center justify-between gap-4">
-              <p className="text-[8px] uppercase tracking-[0.2em] text-white/45">Archive memory</p>
-              <p className="font-mono text-[6px] uppercase tracking-[0.12em] text-white/20">
+              <p className="text-[8px] uppercase tracking-[0.2em] text-black/45">Archive memory</p>
+              <p className="font-mono text-[6px] uppercase tracking-[0.12em] text-black/20">
                 {previousStateHash ? `Prior / ${previousStateHash.slice(7, 19)}` : "First witnessed state"}
               </p>
             </div>
-            <dl className="mt-4 grid grid-cols-3 gap-px bg-white/10 font-mono text-[7px] uppercase tracking-[0.1em]">
-              <div className="bg-black p-3"><dt className="text-white/25">Entered</dt><dd className="mt-2 text-white/60">{memory.added.size.toString().padStart(2, "0")}</dd></div>
-              <div className="bg-black p-3"><dt className="text-white/25">Echoes</dt><dd className="mt-2 text-white/60">{memory.removed.length.toString().padStart(2, "0")}</dd></div>
-              <div className="bg-black p-3"><dt className="text-white/25">Shifted</dt><dd className="mt-2 text-white/60">{memory.shifted.size.toString().padStart(2, "0")}</dd></div>
+            <dl className="mt-4 grid grid-cols-3 gap-px bg-black/10 font-mono text-[7px] uppercase tracking-[0.1em]">
+              <div className="bg-white p-3"><dt className="text-black/25">Entered</dt><dd className="mt-2 text-black/60">{memory.added.size.toString().padStart(2, "0")}</dd></div>
+              <div className="bg-white p-3"><dt className="text-black/25">Echoes</dt><dd className="mt-2 text-black/60">{memory.removed.length.toString().padStart(2, "0")}</dd></div>
+              <div className="bg-white p-3"><dt className="text-black/25">Shifted</dt><dd className="mt-2 text-black/60">{memory.shifted.size.toString().padStart(2, "0")}</dd></div>
             </dl>
             <div className="mt-5">
-              <p className="text-[7px] uppercase tracking-[0.18em] text-white/30">Recurring luminosity motifs</p>
+              <p className="text-[7px] uppercase tracking-[0.18em] text-black/30">Recurring luminosity motifs</p>
               <div className="mt-3 flex flex-wrap gap-2">
                 {motifs.map((motif, index) => (
-                  <span className="border border-white/15 px-2 py-2 font-mono text-[6px] uppercase tracking-[0.1em] text-white/35" key={motif.frequency}>
+                  <span className="border border-black/15 px-2 py-2 font-mono text-[6px] uppercase tracking-[0.1em] text-black/35" key={motif.frequency}>
                     M{String(index + 1).padStart(2, "0")} / {motif.frequency.toFixed(1)} Hz / {motif.count} works
                   </span>
                 ))}
               </div>
             </div>
           </div>
-          <div className="mt-8 border-t border-white/15 pt-5">
+          <div className="mt-8 border-t border-black/15 pt-5">
             <CompositionHeader grammar={composerGrammars.chromatic} />
-            <dl className="mt-5 grid grid-cols-3 gap-px bg-white/10 font-mono text-[7px] uppercase tracking-[0.1em]">
-              <div className="bg-black p-3"><dt className="text-white/25">Ground</dt><dd className="mt-2 text-white/60">{achromaticCount.toString().padStart(2, "0")}</dd></div>
-              <div className="bg-black p-3"><dt className="text-white/25">Chromatic</dt><dd className="mt-2 text-white/60">{chromaticCount.toString().padStart(2, "0")}</dd></div>
-              <div className="bg-black p-3"><dt className="text-white/25">Seam</dt><dd className="mt-2 text-white/60">{chromaticSeam == null ? "—" : `${Math.round(chromaticSeam)}°`}</dd></div>
+            <dl className="mt-5 grid grid-cols-3 gap-px bg-black/10 font-mono text-[7px] uppercase tracking-[0.1em]">
+              <div className="bg-white p-3"><dt className="text-black/25">Ground</dt><dd className="mt-2 text-black/60">{achromaticCount.toString().padStart(2, "0")}</dd></div>
+              <div className="bg-white p-3"><dt className="text-black/25">Chromatic</dt><dd className="mt-2 text-black/60">{chromaticCount.toString().padStart(2, "0")}</dd></div>
+              <div className="bg-white p-3"><dt className="text-black/25">Seam</dt><dd className="mt-2 text-black/60">{chromaticSeam == null ? "—" : `${Math.round(chromaticSeam)}°`}</dd></div>
             </dl>
           </div>
         </article>
 
-        <article className="order-1 grid content-between bg-black p-5 md:p-8 lg:col-span-2">
+        <article className="order-1 grid content-between bg-white p-5 md:p-8 lg:col-span-2">
           <div>
             <CompositionHeader grammar={composerGrammars.sound} />
-            <div className="mt-7 grid grid-cols-2 gap-px bg-white/15 sm:grid-cols-3">
+            <div className="mt-7 grid grid-cols-2 gap-px bg-black/15 sm:grid-cols-3">
               {evolution.map((phase, index) => (
                 <div
-                  className={`min-h-20 p-3 transition ${index === phaseIndex ? "bg-white text-black" : "bg-black text-white"}`}
+                  className={`min-h-20 bg-white p-3 text-black transition ${index === phaseIndex ? "shadow-[inset_0_-2px_0_#000]" : ""}`}
                   key={phase.id}
                 >
                   <span className="block text-[8px] uppercase tracking-[0.18em]">{String(index + 1).padStart(2, "0")} / {phase.label}</span>
-                  <span className={`mt-2 block font-mono text-[6px] uppercase leading-3 tracking-[0.1em] ${index === phaseIndex ? "text-black/55" : "text-white/25"}`}>{phase.description}</span>
+                  <span className={`mt-2 block font-mono text-[6px] uppercase leading-3 tracking-[0.1em] ${index === phaseIndex ? "text-black/55" : "text-black/25"}`}>{phase.description}</span>
                 </div>
               ))}
             </div>
-            <div aria-live="polite" className="mt-px bg-white/[0.04] px-3 py-3 font-mono text-[7px] uppercase tracking-[0.14em] text-white/35">
+            <div aria-live="polite" className="mt-px bg-black/[0.04] px-3 py-3 font-mono text-[7px] uppercase tracking-[0.14em] text-black/35">
               <div className="flex items-center justify-between gap-4">
                 <span className="flex items-center gap-2">
-                  <span className={`h-1.5 w-1.5 ${soundPlaying ? "bg-white" : "border border-white/35"}`} />
+                  <span className={`h-1.5 w-1.5 ${soundPlaying ? "bg-black" : "border border-black/35"}`} />
                   {soundPlaying ? "Evolution active" : "Evolution held"}
                 </span>
                 <span>{currentPhase.label} / {currentPhase.arrangements.length || "—"} voices</span>
               </div>
-              <div className="mt-3 h-px overflow-hidden bg-white/10">
-                <span className="block h-full bg-white transition-[width] duration-300" style={{ width: `${phaseRatio * 100}%` }} />
+              <div className="mt-3 h-px overflow-hidden bg-black/10">
+                <span className="block h-full bg-black transition-[width] duration-300" style={{ width: `${phaseRatio * 100}%` }} />
               </div>
-              <p className="mt-3 text-right text-white/25">
+              <p className="mt-3 text-right text-black/25">
                 {currentPhase.arrangements.length ? currentPhase.arrangements.map((mode) => arrangementModes.find((entry) => entry.id === mode)?.label).join(" + ") : `${currentPhase.restMs} ms rest`}
               </p>
             </div>
-            <div className="mt-10 grid min-h-52 place-items-center border border-white/15">
+            <div className="mt-10 grid min-h-52 place-items-center border border-black/15">
               <div className="text-center">
                 <p className="font-mono text-5xl font-light tracking-[-0.06em] md:text-7xl">
                   {currentProfile ? currentProfile.frequency.toFixed(1) : "—"}
                 </p>
-                <p className="mt-3 text-[8px] uppercase tracking-[0.2em] text-white/30">Hz / Fold voice</p>
-                <p className="mt-6 max-w-xs truncate text-[10px] uppercase tracking-[0.15em] text-white/55">{currentSound?.name || "Awaiting witness"}</p>
+                <p className="mt-3 text-[8px] uppercase tracking-[0.2em] text-black/30">Hz / Fold voice</p>
+                <p className="mt-6 max-w-xs truncate text-[10px] uppercase tracking-[0.15em] text-black/55">{currentSound?.name || "Awaiting witness"}</p>
               </div>
             </div>
-            <dl className="grid grid-cols-2 gap-px bg-white/15 font-mono text-[7px] uppercase tracking-[0.12em] sm:grid-cols-5">
-              <div className="bg-black p-3"><dt className="text-white/25">Register</dt><dd className="mt-2 text-white/60">3 octaves</dd></div>
-              <div className="bg-black p-3"><dt className="text-white/25">Pulse</dt><dd className="mt-2 text-white/60">{currentProfile ? Math.round(currentProfile.interval) : "—"} ms</dd></div>
-              <div className="bg-black p-3"><dt className="text-white/25">Filter</dt><dd className="mt-2 text-white/60">{currentProfile ? Math.round(currentProfile.cutoff) : "—"} Hz</dd></div>
-              <div className="bg-black p-3"><dt className="text-white/25">Field</dt><dd className="mt-2 text-white/60">{currentProfile ? `${currentProfile.pan < 0 ? "L" : "R"} ${Math.abs(currentProfile.pan).toFixed(2)}` : "—"}</dd></div>
-              <div className="col-span-2 bg-black p-3 sm:col-span-1"><dt className="text-white/25">Displacement</dt><dd className="mt-2 text-white/60">{currentProfile ? `R ${currentProfile.radialDisplacement.toFixed(2)} / D ${currentProfile.densityDisplacement.toFixed(2)}` : "—"}</dd></div>
+            <dl className="grid grid-cols-2 gap-px bg-black/15 font-mono text-[7px] uppercase tracking-[0.12em] sm:grid-cols-5">
+              <div className="bg-white p-3"><dt className="text-black/25">Register</dt><dd className="mt-2 text-black/60">3 octaves</dd></div>
+              <div className="bg-white p-3"><dt className="text-black/25">Pulse</dt><dd className="mt-2 text-black/60">{currentProfile ? Math.round(currentProfile.interval) : "—"} ms</dd></div>
+              <div className="bg-white p-3"><dt className="text-black/25">Filter</dt><dd className="mt-2 text-black/60">{currentProfile ? Math.round(currentProfile.cutoff) : "—"} Hz</dd></div>
+              <div className="bg-white p-3"><dt className="text-black/25">Field</dt><dd className="mt-2 text-black/60">{currentProfile ? `${currentProfile.pan < 0 ? "L" : "R"} ${Math.abs(currentProfile.pan).toFixed(2)}` : "—"}</dd></div>
+              <div className="col-span-2 bg-white p-3 sm:col-span-1"><dt className="text-black/25">Displacement</dt><dd className="mt-2 text-black/60">{currentProfile ? `R ${currentProfile.radialDisplacement.toFixed(2)} / D ${currentProfile.densityDisplacement.toFixed(2)}` : "—"}</dd></div>
             </dl>
           </div>
           <div className="mt-6 flex items-center justify-between gap-4">
-            <div className="font-mono text-[8px] uppercase tracking-[0.14em] text-white/25">
+            <div className="font-mono text-[8px] uppercase tracking-[0.14em] text-black/25">
               <p>Phase {String(phaseIndex + 1).padStart(2, "0")} / {String(evolution.length).padStart(2, "0")} · Event {phaseProgress.toString().padStart(3, "0")} / {currentPhase.events ? currentPhase.events.toString().padStart(3, "0") : "REST"}</p>
-              <p className="mt-2 text-white/40">{soundEvent ? `${currentArrangement.label} / ${currentArrangement.description}` : currentPhase.description}</p>
+              <p className="mt-2 text-black/40">{soundEvent ? `${currentArrangement.label} / ${currentArrangement.description}` : currentPhase.description}</p>
             </div>
             <button
-              className={`min-w-32 border px-5 py-4 text-[8px] uppercase tracking-[0.22em] transition ${soundPlaying ? "border-white/35 text-white/60 hover:border-white hover:text-white" : "border-white bg-white text-black hover:bg-black hover:text-white"}`}
+              className={`min-w-32 border bg-white px-5 py-4 text-[8px] uppercase tracking-[0.22em] text-black transition ${soundPlaying ? "border-black/35 text-black/60 hover:border-black hover:text-black" : "border-black"}`}
               onClick={soundPlaying ? stopSound : playSound}
               type="button"
             >
@@ -768,7 +768,7 @@ export default function ComposerChamber({
             </button>
           </div>
           {onExportWitness ? (
-            <button className="mt-5 font-mono text-[7px] uppercase tracking-[0.16em] text-white/25 transition hover:text-white" onClick={onExportWitness} type="button">
+            <button className="mt-5 font-mono text-[7px] uppercase tracking-[0.16em] text-black/25 transition hover:text-black" onClick={onExportWitness} type="button">
               State {stateHash.slice(7, 19)} / Export evidence witness ↓
             </button>
           ) : null}
@@ -787,10 +787,10 @@ function CompositionHeader({
   return (
     <div className="flex items-start justify-between gap-5">
       <div>
-        <p className="text-[9px] uppercase tracking-[0.26em] text-white/45">{grammar.title}</p>
-        <p className="mt-2 text-[8px] uppercase leading-4 tracking-[0.16em] text-white/25">{grammar.interfaceStatement}</p>
+        <p className="text-[9px] uppercase tracking-[0.26em] text-black/45">{grammar.title}</p>
+        <p className="mt-2 text-[8px] uppercase leading-4 tracking-[0.16em] text-black/25">{grammar.interfaceStatement}</p>
       </div>
-      <p className="shrink-0 font-mono text-[7px] uppercase tracking-[0.12em] text-white/20">{grammar.id} / v{grammar.version}</p>
+      <p className="shrink-0 font-mono text-[7px] uppercase tracking-[0.12em] text-black/20">{grammar.id} / v{grammar.version}</p>
     </div>
   );
 }

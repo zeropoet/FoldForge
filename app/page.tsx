@@ -100,7 +100,7 @@ function MediaTile({ token }: { token: AlchemyNft }) {
   const media = hasVideoMedia(token) ? mintedMediaFor(token) : tokenThumbnailFor(token);
   if (!media) return null;
   if (isAudioUrl(media)) {
-    return <div className="grid h-full place-items-center bg-[#050505] px-4 text-center font-mono text-[8px] uppercase tracking-[0.16em] text-white/45">Audio work</div>;
+    return <div className="grid h-full place-items-center bg-white px-4 text-center font-mono text-[8px] uppercase tracking-[0.16em] text-black/45">Audio work</div>;
   }
   if (hasVideoMedia(token)) {
     return (
@@ -577,97 +577,97 @@ export default function FoldForge() {
   }
 
   return (
-    <main className="archive-shell min-h-screen bg-black text-white">
+    <main className="archive-shell min-h-screen bg-white text-black">
       <section className="grid min-h-screen grid-rows-[auto_1fr]">
-        <PublicHeader active="archive" subtitle="Ethereum archive / est. 2026" />
+        <PublicHeader active="archive" />
 
         <div className="mx-auto grid w-full min-w-0 max-w-[1600px] grid-rows-[auto_auto_1fr] px-5 py-10 md:px-8 md:py-16">
           {selectedContract ? (
             <section>
-              <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/25 pb-6">
-                <a className="text-[10px] uppercase tracking-[0.22em] text-white/50 hover:text-white" href={`?owner=${encodeURIComponent(navigableOwner)}`}>
+              <div className="flex flex-wrap items-center justify-between gap-4 border-b border-black/25 pb-6">
+                <a className="text-[10px] uppercase tracking-[0.22em] text-black/50 hover:text-black" href={`?owner=${encodeURIComponent(navigableOwner)}`}>
                   ← All collections
                 </a>
-                <a className="text-[10px] uppercase tracking-[0.22em] text-white/50 hover:text-white" href={`https://etherscan.io/address/${selectedContract}`} rel="noreferrer" target="_blank">
+                <a className="text-[10px] uppercase tracking-[0.22em] text-black/50 hover:text-black" href={`https://etherscan.io/address/${selectedContract}`} rel="noreferrer" target="_blank">
                   Contract ↗
                 </a>
               </div>
 
               {selectedTokenId ? (
                 selectedToken ? (
-                  <article className="grid border-b border-white/25 lg:grid-cols-[minmax(0,1.2fr)_minmax(360px,0.8fr)]">
-                    <div className="grid min-h-[50vh] place-items-center border-b border-white/25 bg-[#080808] lg:border-b-0 lg:border-r lg:border-white/25">
+                  <article className="grid border-b border-black/25 lg:grid-cols-[minmax(0,1.2fr)_minmax(360px,0.8fr)]">
+                    <div className="grid min-h-[50vh] place-items-center border-b border-black/25 bg-white lg:border-b-0 lg:border-r lg:border-black/25">
                       {mintedMediaFor(selectedToken) ? (
                         isAudioUrl(mintedMediaFor(selectedToken)) ? (
-                          <div className="grid w-full gap-5 p-8 text-center"><p className="text-[9px] uppercase tracking-[0.2em] text-white/40">Canonical audio work</p><audio className="w-full" controls preload="metadata" src={mintedMediaFor(selectedToken)} /></div>
+                          <div className="grid w-full gap-5 p-8 text-center"><p className="text-[9px] uppercase tracking-[0.2em] text-black/40">Canonical audio work</p><audio className="w-full" controls preload="metadata" src={mintedMediaFor(selectedToken)} /></div>
                         ) : hasVideoMedia(selectedToken) ? (
                           <video autoPlay className="max-h-[80vh] w-full object-contain" controls loop muted playsInline preload="metadata" src={mintedMediaFor(selectedToken)} />
                         ) : (
                           // eslint-disable-next-line @next/next/no-img-element
                           <img alt={selectedToken.name || `Token ${selectedTokenId}`} className="max-h-[80vh] w-full object-contain" decoding="async" fetchPriority="high" src={mintedMediaFor(selectedToken)} />
                         )
-                      ) : <div className="text-xs uppercase tracking-[0.2em] text-white/40">No media file</div>}
+                      ) : <div className="text-xs uppercase tracking-[0.2em] text-black/40">No media file</div>}
                     </div>
                     <div className="grid content-start gap-8 p-6 md:p-10">
-                      <nav aria-label="Minted work sequence" className="grid grid-cols-[1fr_auto_1fr] items-center border-y border-white/25 py-4 text-[9px] uppercase tracking-[0.18em]">
+                      <nav aria-label="Minted work sequence" className="grid grid-cols-[1fr_auto_1fr] items-center border-y border-black/25 py-4 text-[9px] uppercase tracking-[0.18em]">
                         {previousTokenId ? (
-                          <a className="justify-self-start text-white/55 hover:text-white" href={mintedWorkHref(navigableOwner, selectedContract, previousTokenId)} rel="prev">← Previous</a>
+                          <a className="justify-self-start text-black/55 hover:text-black" href={mintedWorkHref(navigableOwner, selectedContract, previousTokenId)} rel="prev">← Previous</a>
                         ) : (
-                          <span aria-disabled="true" className="justify-self-start text-white/20">← Previous</span>
+                          <span aria-disabled="true" className="justify-self-start text-black/20">← Previous</span>
                         )}
-                        <span className="px-3 text-center text-white/35">
+                        <span className="px-3 text-center text-black/35">
                           {selectedTokenIndex >= 0 ? `${selectedTokenIndex + 1} / ${tokenSequence.length}` : "—"}
-                          <span className="ml-2 hidden text-white/25 sm:inline">Use ← → keys</span>
+                          <span className="ml-2 hidden text-black/25 sm:inline">Use ← → keys</span>
                         </span>
                         {nextTokenId ? (
-                          <a className="justify-self-end text-white/55 hover:text-white" href={mintedWorkHref(navigableOwner, selectedContract, nextTokenId)} rel="next">Next →</a>
+                          <a className="justify-self-end text-black/55 hover:text-black" href={mintedWorkHref(navigableOwner, selectedContract, nextTokenId)} rel="next">Next →</a>
                         ) : (
-                          <span aria-disabled="true" className="justify-self-end text-white/20">Next →</span>
+                          <span aria-disabled="true" className="justify-self-end text-black/20">Next →</span>
                         )}
                       </nav>
                       <div>
-                        <p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Minted work / #{selectedTokenId}</p>
+                        <p className="text-[9px] uppercase tracking-[0.25em] text-black/40">Minted work / #{selectedTokenId}</p>
                         <h2 className="mt-4 text-4xl font-light tracking-[-0.04em]">{selectedToken.name || `Token ${selectedTokenId}`}</h2>
-                        <p className="mt-5 text-sm leading-6 text-white/55">{selectedToken.description || "No description recorded in the token metadata."}</p>
+                        <p className="mt-5 text-sm leading-6 text-black/55">{selectedToken.description || "No description recorded in the token metadata."}</p>
                       </div>
-                      <dl className="grid gap-px bg-white/20 text-xs">
-                        <div className="grid grid-cols-[110px_1fr] bg-black p-4"><dt className="text-white/40">Token ID</dt><dd className="break-all">{selectedTokenId}</dd></div>
-                        <div className="grid grid-cols-[110px_1fr] bg-black p-4"><dt className="text-white/40">Standard</dt><dd>{selectedToken.tokenType || selectedToken.contract?.tokenType || "NFT"}</dd></div>
-                        <div className="grid grid-cols-[110px_1fr] bg-black p-4"><dt className="text-white/40">Contract</dt><dd className="break-all font-mono text-[10px]">{selectedContract}</dd></div>
-                        <div className="grid grid-cols-[110px_1fr] bg-black p-4"><dt className="text-white/40">Token URI</dt><dd className="break-all font-mono text-[10px]">{selectedToken.tokenUri || "Not returned"}</dd></div>
+                      <dl className="grid gap-px bg-black/20 text-xs">
+                        <div className="grid grid-cols-[110px_1fr] bg-white p-4"><dt className="text-black/40">Token ID</dt><dd className="break-all">{selectedTokenId}</dd></div>
+                        <div className="grid grid-cols-[110px_1fr] bg-white p-4"><dt className="text-black/40">Standard</dt><dd>{selectedToken.tokenType || selectedToken.contract?.tokenType || "NFT"}</dd></div>
+                        <div className="grid grid-cols-[110px_1fr] bg-white p-4"><dt className="text-black/40">Contract</dt><dd className="break-all font-mono text-[10px]">{selectedContract}</dd></div>
+                        <div className="grid grid-cols-[110px_1fr] bg-white p-4"><dt className="text-black/40">Token URI</dt><dd className="break-all font-mono text-[10px]">{selectedToken.tokenUri || "Not returned"}</dd></div>
                       </dl>
                       {selectedToken.raw?.metadata?.attributes?.length ? (
                         <div>
-                          <p className="mb-3 text-[9px] uppercase tracking-[0.25em] text-white/40">Minted traits</p>
-                          <div className="grid grid-cols-2 gap-px bg-white/20">
+                          <p className="mb-3 text-[9px] uppercase tracking-[0.25em] text-black/40">Minted traits</p>
+                          <div className="grid grid-cols-2 gap-px bg-black/20">
                             {selectedToken.raw.metadata.attributes.map((trait, index) => (
-                              <div className="bg-black p-4" key={`${trait.trait_type}-${index}`}><p className="text-[9px] uppercase tracking-[0.16em] text-white/40">{trait.trait_type || "Trait"}</p><p className="mt-2 text-sm">{trait.value ?? "—"}</p></div>
+                              <div className="bg-white p-4" key={`${trait.trait_type}-${index}`}><p className="text-[9px] uppercase tracking-[0.16em] text-black/40">{trait.trait_type || "Trait"}</p><p className="mt-2 text-sm">{trait.value ?? "—"}</p></div>
                             ))}
                           </div>
                         </div>
                       ) : null}
                       <div className="flex flex-wrap gap-3">
-                        <a className="border border-white px-4 py-3 text-[9px] uppercase tracking-[0.18em] hover:bg-white hover:text-black" href={`https://etherscan.io/nft/${selectedContract}/${selectedTokenId}`} rel="noreferrer" target="_blank">Mint record ↗</a>
-                        {selectedToken.tokenUri ? <a className="border border-white/40 px-4 py-3 text-[9px] uppercase tracking-[0.18em] hover:border-white" href={selectedToken.tokenUri.replace("ipfs://", "https://ipfs.io/ipfs/")} rel="noreferrer" target="_blank">Metadata file ↗</a> : null}
-                        {mintedMediaFor(selectedToken) ? <a className="border border-white/40 px-4 py-3 text-[9px] uppercase tracking-[0.18em] hover:border-white" href={mintedMediaFor(selectedToken).replace("ipfs://", "https://ipfs.io/ipfs/")} rel="noreferrer" target="_blank">Media file ↗</a> : null}
+                        <a className="border border-black px-4 py-3 text-[9px] uppercase tracking-[0.18em] hover:underline" href={`https://etherscan.io/nft/${selectedContract}/${selectedTokenId}`} rel="noreferrer" target="_blank">Mint record ↗</a>
+                        {selectedToken.tokenUri ? <a className="border border-black/40 px-4 py-3 text-[9px] uppercase tracking-[0.18em] hover:border-black" href={selectedToken.tokenUri.replace("ipfs://", "https://ipfs.io/ipfs/")} rel="noreferrer" target="_blank">Metadata file ↗</a> : null}
+                        {mintedMediaFor(selectedToken) ? <a className="border border-black/40 px-4 py-3 text-[9px] uppercase tracking-[0.18em] hover:border-black" href={mintedMediaFor(selectedToken).replace("ipfs://", "https://ipfs.io/ipfs/")} rel="noreferrer" target="_blank">Media file ↗</a> : null}
                       </div>
                     </div>
                   </article>
-                ) : <div className="grid min-h-[50vh] place-items-center text-xs uppercase tracking-[0.2em] text-white/40">{detailLoading ? "Loading minted record" : "Minted record unavailable"}</div>
+                ) : <div className="grid min-h-[50vh] place-items-center text-xs uppercase tracking-[0.2em] text-black/40">{detailLoading ? "Loading minted record" : "Minted record unavailable"}</div>
               ) : (
                 <>
-                  <div className="grid gap-6 border-b border-white/25 py-10 md:grid-cols-[1fr_auto] md:items-end">
-                    <div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Collection archive</p><h2 className="mt-4 text-4xl font-light tracking-[-0.04em] md:text-6xl">{selectedCollection?.name || shortAddress(selectedContract)}</h2><p className="mt-5 max-w-3xl text-sm leading-6 text-white/50">{selectedCollection?.description}</p></div>
-                    <p className="max-w-full break-all font-mono text-[10px] leading-5 text-white/40 md:max-w-md md:text-right">{selectedContract}</p>
+                  <div className="grid gap-6 border-b border-black/25 py-10 md:grid-cols-[1fr_auto] md:items-end">
+                    <div><p className="text-[9px] uppercase tracking-[0.25em] text-black/40">Collection archive</p><h2 className="mt-4 text-4xl font-light tracking-[-0.04em] md:text-6xl">{selectedCollection?.name || shortAddress(selectedContract)}</h2><p className="mt-5 max-w-3xl text-sm leading-6 text-black/50">{selectedCollection?.description}</p></div>
+                    <p className="max-w-full break-all font-mono text-[10px] leading-5 text-black/40 md:max-w-md md:text-right">{selectedContract}</p>
                   </div>
-                  {detailLoading ? <div className="grid min-h-[50vh] place-items-center text-xs uppercase tracking-[0.2em] text-white/40">Loading minted works</div> : (
-                    <div className="token-grid border-x border-b border-white/25 bg-white/25">
+                  {detailLoading ? <div className="grid min-h-[50vh] place-items-center text-xs uppercase tracking-[0.2em] text-black/40">Loading minted works</div> : (
+                    <div className="token-grid border-x border-b border-black/25 bg-black/25">
                       {tokens.map((token) => (
-                        <a className="group min-w-0 bg-black" href={mintedWorkHref(navigableOwner, selectedContract, token.tokenId || "")} key={token.tokenId}>
-                          <div className="aspect-square overflow-hidden bg-[#080808]">
+                        <a className="group min-w-0 bg-white" href={mintedWorkHref(navigableOwner, selectedContract, token.tokenId || "")} key={token.tokenId}>
+                          <div className="aspect-square overflow-hidden bg-white">
                             <MediaTile token={token} />
                           </div>
-                          <div className="min-w-0 border-t border-white/25 p-4"><h3 className="truncate text-sm font-light">{token.name || `Token ${token.tokenId}`}</h3><p className="mt-2 break-all font-mono text-[9px] leading-4 text-white/35">#{token.tokenId}</p></div>
+                          <div className="min-w-0 border-t border-black/25 p-4"><h3 className="truncate text-sm font-light">{token.name || `Token ${token.tokenId}`}</h3><p className="mt-2 break-all font-mono text-[9px] leading-4 text-black/35">#{token.tokenId}</p></div>
                         </a>
                       ))}
                     </div>
@@ -676,14 +676,14 @@ export default function FoldForge() {
               )}
             </section>
           ) : (<>
-          <section className="grid gap-10 border-b border-white/20 pb-12 lg:grid-cols-[1fr_0.75fr] lg:items-end">
-            <div><p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Held collections / attributable works</p><h1 className="mt-5 max-w-3xl text-5xl font-light tracking-[-0.055em] md:text-7xl">Ethereum Archive</h1><p className="mt-7 max-w-2xl text-sm leading-7 text-white/55">The Ethereum Archive presents held collections, canonical minted works, and the evidence FoldForge derives from their visual, sonic, and language fields.</p></div>
-            <div className="border border-white/20 p-5 font-mono text-[8px] uppercase leading-5 tracking-[0.14em] text-white/35">Established 2026<br />Ethereum mainnet holdings<br />Contract-indexed records<br />Attributable archive evidence</div>
+          <section className="grid gap-10 border-b border-black/20 pb-12 lg:grid-cols-[1fr_0.75fr] lg:items-end">
+            <div><p className="text-[9px] uppercase tracking-[0.25em] text-black/40">Held collections / attributable works</p><h1 className="mt-5 max-w-3xl text-5xl font-light tracking-[-0.055em] md:text-7xl">Ethereum Archive</h1><p className="mt-7 max-w-2xl text-sm leading-7 text-black/55">The Ethereum Archive presents held collections, canonical minted works, and the evidence FoldForge derives from their visual, sonic, and language fields.</p></div>
+            <div className="border border-black/20 p-5 font-mono text-[8px] uppercase leading-5 tracking-[0.14em] text-black/35">Established 2026<br />Ethereum mainnet holdings<br />Contract-indexed records<br />Attributable archive evidence</div>
           </section>
 
-          <div className="archive-metrics grid border-b border-white/20 sm:grid-cols-4">
-            <div className="border-b border-white/20 py-5 sm:border-b-0 sm:border-r sm:border-white/20 sm:px-5 sm:first:pl-0">
-              <p className="text-[8px] uppercase tracking-[0.25em] text-white/35">Current archive</p>
+          <div className="archive-metrics grid border-b border-black/20 sm:grid-cols-4">
+            <div className="border-b border-black/20 py-5 sm:border-b-0 sm:border-r sm:border-black/20 sm:px-5 sm:first:pl-0">
+              <p className="text-[8px] uppercase tracking-[0.25em] text-black/35">Current archive</p>
               <p className="mt-3 truncate text-sm font-medium">
                 {ownerIdentity?.ensName
                   ? ownerIdentity.ensName
@@ -694,23 +694,23 @@ export default function FoldForge() {
                       : "None"}
               </p>
               {ownerIdentity?.ensName ? (
-                <p className="mt-1 truncate font-mono text-[10px] text-white/35">
+                <p className="mt-1 truncate font-mono text-[10px] text-black/35">
                   {shortAddress(ownerIdentity.address)}
                 </p>
               ) : null}
             </div>
-            <div className="border-b border-white/20 py-5 sm:border-b-0 sm:border-r sm:border-white/20 sm:px-5">
-              <p className="text-[8px] uppercase tracking-[0.25em] text-white/35">Collections</p>
+            <div className="border-b border-black/20 py-5 sm:border-b-0 sm:border-r sm:border-black/20 sm:px-5">
+              <p className="text-[8px] uppercase tracking-[0.25em] text-black/35">Collections</p>
               <p className="mt-3 text-3xl font-light tracking-[-0.04em]">{collections.length.toString().padStart(2, "0")}</p>
             </div>
-            <div className="border-b border-white/20 py-5 sm:border-b-0 sm:border-r sm:border-white/20 sm:px-5">
-              <p className="text-[8px] uppercase tracking-[0.25em] text-white/35">Works held</p>
+            <div className="border-b border-black/20 py-5 sm:border-b-0 sm:border-r sm:border-black/20 sm:px-5">
+              <p className="text-[8px] uppercase tracking-[0.25em] text-black/35">Works held</p>
               <p className="mt-3 text-3xl font-light tracking-[-0.04em]">{totalPieces.toString().padStart(2, "0")}</p>
             </div>
             <div className="py-5 sm:px-5">
-              <p className="text-[8px] uppercase tracking-[0.25em] text-white/35">Index state</p>
-              <p className="mt-4 flex items-center gap-3 text-[9px] uppercase tracking-[0.18em] text-white/60">
-                <span className={`h-1.5 w-1.5 ${state === "ready" ? "bg-white" : "border border-white/45"}`} />
+              <p className="text-[8px] uppercase tracking-[0.25em] text-black/35">Index state</p>
+              <p className="mt-4 flex items-center gap-3 text-[9px] uppercase tracking-[0.18em] text-black/60">
+                <span className={`h-1.5 w-1.5 ${state === "ready" ? "bg-black" : "border border-black/45"}`} />
                 {state === "ready" ? "Live holdings" : state === "loading" ? "Resolving" : "Standby"}
               </p>
             </div>
@@ -725,12 +725,12 @@ export default function FoldForge() {
               stateHash={compositionWitness.stateHash}
             />
           ) : (
-            <section className="grid min-h-72 place-items-center border-b border-white/20 text-center">
+            <section className="grid min-h-72 place-items-center border-b border-black/20 text-center">
               <div>
-                <p className="text-[9px] uppercase tracking-[0.24em] text-white/40">
+                <p className="text-[9px] uppercase tracking-[0.24em] text-black/40">
                   {compositionLoading ? "Resolving compositional evidence" : compositionAnalyzing ? "Reading color and spatial form" : audioAnalyzing ? "Reading spectrum, rhythm, and dynamics" : "Awaiting attributable evidence"}
                 </p>
-                <p className="mt-3 font-mono text-[7px] uppercase tracking-[0.14em] text-white/20">
+                <p className="mt-3 font-mono text-[7px] uppercase tracking-[0.14em] text-black/20">
                   The luminosity field remains active as the hidden score
                 </p>
               </div>
@@ -738,44 +738,44 @@ export default function FoldForge() {
           )}
 
           {message ? (
-            <div className="border-b border-white/25 px-0 py-5 text-xs uppercase tracking-[0.12em] text-white/60">
+            <div className="border-b border-black/25 px-0 py-5 text-xs uppercase tracking-[0.12em] text-black/60">
               {message}
             </div>
           ) : null}
 
           <section className="mt-10 min-w-0 md:mt-14">
-            <div className="flex items-end justify-between gap-6 border-b border-white/25 pb-4">
-              <p className="text-[9px] uppercase tracking-[0.25em] text-white/40">Collection index / {collections.length.toString().padStart(2, "0")}</p>
-              <p className="max-w-48 text-right text-[8px] uppercase leading-4 tracking-[0.2em] text-white/25">Curated exclusions / new holdings surface live</p>
+            <div className="flex items-end justify-between gap-6 border-b border-black/25 pb-4">
+              <p className="text-[9px] uppercase tracking-[0.25em] text-black/40">Collection index / {collections.length.toString().padStart(2, "0")}</p>
+              <p className="max-w-48 text-right text-[8px] uppercase leading-4 tracking-[0.2em] text-black/25">Curated exclusions / new holdings surface live</p>
             </div>
             {state === "loading" ? (
               <div className="grid">
                 {Array.from({ length: 8 }).map((_, index) => (
-                  <div className="h-28 animate-pulse border-b border-white/10 bg-[#030303]" key={index} />
+                  <div className="h-28 animate-pulse border-b border-black/10 bg-white" key={index} />
                 ))}
               </div>
             ) : collections.length ? (
-              <div className="collection-register border-x border-white/10">
+              <div className="collection-register border-x border-black/10">
                 {collections.map((collection, index) => (
-                  <article className="group border-b border-white/25" key={collection.address}>
+                  <article className="group border-b border-black/25" key={collection.address}>
                     <a className="collection-link grid min-w-0 gap-4 px-4 py-6 outline-none sm:grid-cols-[58px_1fr_auto_18px] sm:items-center md:px-6 md:py-8" href={`?owner=${encodeURIComponent(navigableOwner)}&collection=${collection.address}`}>
-                      <span className="font-mono text-[8px] text-white/25">C/{String(index + 1).padStart(2, "0")}</span>
+                      <span className="font-mono text-[8px] text-black/25">C/{String(index + 1).padStart(2, "0")}</span>
                       <h2 className="truncate text-3xl font-light uppercase tracking-[-0.045em] transition sm:text-4xl md:text-5xl">{collection.name}</h2>
-                      <div className="flex items-center gap-4 text-[8px] uppercase tracking-[0.18em] text-white/35">
+                      <div className="flex items-center gap-4 text-[8px] uppercase tracking-[0.18em] text-black/35">
                         <span>{collection.symbol || shortAddress(collection.address)}</span>
                         <span>{collection.count.toString().padStart(2, "0")} works</span>
                       </div>
-                      <span className="collection-arrow hidden text-right text-sm text-white/25 transition sm:block" aria-hidden="true">→</span>
+                      <span className="collection-arrow hidden text-right text-sm text-black/25 transition sm:block" aria-hidden="true">→</span>
                     </a>
                   </article>
                 ))}
               </div>
             ) : (
-              <div className="col-span-full grid min-h-[50vh] place-items-center bg-black p-8 text-center text-xs uppercase tracking-[0.2em] text-white/40">
+              <div className="col-span-full grid min-h-[50vh] place-items-center bg-white p-8 text-center text-xs uppercase tracking-[0.2em] text-black/40">
                 {state === "ready" ? "No collections found" : "Enter an identity to begin"}
               </div>
             )}
-            <div className="mt-5 flex items-center justify-between gap-5 font-mono text-[8px] uppercase tracking-[0.14em] text-white/20">
+            <div className="mt-5 flex items-center justify-between gap-5 font-mono text-[8px] uppercase tracking-[0.14em] text-black/20">
               <span>Ethereum mainnet</span>
               <span>Contract-indexed / dynamically resolved</span>
             </div>

@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000;
-  --foreground: #fff;
+  --background: #fff;
+  --foreground: #000;
 }
 
 @theme inline {
@@ -31,12 +31,12 @@ body {
 
 .archive-shell {
   background:
-    linear-gradient(90deg, transparent calc(50% - 1px), rgb(255 255 255 / 2%) 50%, transparent calc(50% + 1px)),
-    #000;
+    linear-gradient(90deg, transparent calc(50% - 1px), rgb(0 0 0 / 2%) 50%, transparent calc(50% + 1px)),
+    #fff;
 }
 
 .site-header {
-  background: rgb(0 0 0 / 88%);
+  background: rgb(255 255 255 / 88%);
   backdrop-filter: blur(14px);
 }
 
@@ -51,7 +51,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  filter: invert(1);
+  filter: none;
   object-fit: contain;
 }
 
@@ -66,14 +66,14 @@ body {
   bottom: 0;
   left: -1px;
   width: 2px;
-  background: #fff;
+  background: #000;
   content: "";
   opacity: 0;
   transition: opacity 180ms ease;
 }
 
 .collection-link:hover {
-  background: rgb(255 255 255 / 3%);
+  background: rgb(0 0 0 / 3%);
 }
 
 .collection-link:hover::before,
@@ -86,12 +86,12 @@ body {
 }
 
 .collection-link:hover .collection-arrow {
-  color: #fff;
+  color: #000;
   transform: translateX(0.2rem);
 }
 
 .collection-link:focus-visible {
-  outline: 1px solid #fff;
+  outline: 1px solid #000;
   outline-offset: -3px;
 }
 
@@ -101,8 +101,8 @@ body {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1px;
   overflow: hidden;
-  background: rgb(255 255 255 / 18%);
-  border: 1px solid rgb(255 255 255 / 18%);
+  background: rgb(0 0 0 / 18%);
+  border: 1px solid rgb(0 0 0 / 18%);
 }
 
 .composition-tile {
@@ -111,7 +111,7 @@ body {
   aspect-ratio: 1;
   min-width: 0;
   overflow: hidden;
-  background: #050505;
+  background: #fff;
 }
 
 .composition-tile img,
@@ -134,7 +134,7 @@ body {
 
 .composition-tile:focus-visible {
   z-index: 1;
-  outline: 1px solid #fff;
+  outline: 1px solid #000;
   outline-offset: -2px;
 }
 
@@ -143,10 +143,10 @@ body {
     linear-gradient(
       calc(45deg + var(--tile-index, 0) * 1deg),
       transparent 42%,
-      rgb(255 255 255 / 22%) 42% 44%,
+      rgb(0 0 0 / 22%) 42% 44%,
       transparent 44%
     ),
-    #030303;
+    #fff;
 }
 
 .composition-grid.is-loading .composition-tile {
@@ -156,11 +156,11 @@ body {
 
 @keyframes composition-loading {
   from {
-    background: #030303;
+    background: #fff;
   }
 
   to {
-    background: #171717;
+    background: #fff;
   }
 }
 
@@ -181,8 +181,8 @@ button:disabled {
 }
 
 ::selection {
-  background: #fff;
-  color: #000;
+  background: #000;
+  color: #fff;
 }
 
 .masonry-grid {
@@ -209,7 +209,7 @@ button:disabled {
 
 @media (max-width: 639px) {
   .archive-shell {
-    background: #000;
+    background: #fff;
   }
 
   .archive-metrics {
@@ -217,7 +217,7 @@ button:disabled {
   }
 
   .archive-metrics > :nth-child(odd) {
-    border-right: 1px solid rgb(255 255 255 / 20%);
+    border-right: 1px solid rgb(0 0 0 / 20%);
   }
 }
 
