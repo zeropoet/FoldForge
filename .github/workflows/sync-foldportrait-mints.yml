@@ -20,11 +20,26 @@ jobs:
       - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - name: Fetch canonical public catalog
+      - name: Mint a read-only FoldPortrait token
+        id: foldportrait-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.TELOS_BRIDGE_APP_CLIENT_ID }}
+          private-key: ${{ secrets.TELOS_BRIDGE_APP_PRIVATE_KEY }}
+          owner: zeropoet
+          repositories: FoldPortrait
+          permission-contents: read
+      - name: Check out canonical FoldPortrait catalog
+        uses: actions/checkout@v7
+        with:
+          repository: zeropoet/FoldPortrait
+          path: FoldPortrait
+          ref: main
+          fetch-depth: 1
+          token: ${{ steps.foldportrait-token.outputs.token }}
+      - name: Import canonical private catalog
         run: |
-          curl --fail --silent --show-error --retry 4 --retry-all-errors \
-            https://raw.githubusercontent.com/zeropoet/FoldPortrait/main/Mint/catalog.json \
-            -o /tmp/foldportrait-mints.json
+          cp FoldPortrait/Mint/catalog.json /tmp/foldportrait-mints.json
           node -e 'const fs=require("fs"); const value=JSON.parse(fs.readFileSync("/tmp/foldportrait-mints.json")); if(value.schema!=="foldportrait-mint-catalog/v1" || value.authority!=="FoldPortrait" || value.work_count!==value.works.length) throw new Error("Invalid FoldPortrait mint catalog");'
           cp /tmp/foldportrait-mints.json public/ledger-witness/foldportrait-mints.json
       - name: Commit reviewed snapshot
