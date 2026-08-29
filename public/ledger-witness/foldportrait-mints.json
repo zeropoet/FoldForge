@@ -4,7 +4,7 @@
   "issuance_channel": "FoldForge Ledger Witness",
   "signing_boundary": "human steward through Xaman",
   "public_root": "https://zeropoet.github.io/FoldPortrait",
-  "work_count": 101,
+  "work_count": 104,
   "works": [
     {
       "sequence": 1,
@@ -3616,6 +3616,99 @@
             "Memo": {
               "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
               "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303439222C2266696C655F736861323536223A2262356135393739336431343735383834366630633936643961353835303264326437303530646136316139363061663033306465303164656162396632636438227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 102,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0050",
+      "title": "FoldPortrait FP-REFLECT-0050",
+      "description": "FP-REFLECT-0050 enters its recombination season through the lichen palette and folds aperture, sediment, and palimpsest across 7 witnessed relations, forming a fresh boundary between memory and emergence.",
+      "public_url": "https://zeropoet.github.io/FoldPortrait/Web/#era-2/foldportrait-reflection-0050",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0050.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0050.png",
+      "sha256": "e3455c7578b39dae9b69d66315bd635777e596b956b06de81ad323149da3cf20",
+      "byte_size": 3676417,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0050.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0050.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303035302E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303530222C2266696C655F736861323536223A2265333435356337353738623339646165396236396436363331356264363335373737653539366239353662303664653831616433323331343964613363663230227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 103,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0051",
+      "title": "FoldPortrait FP-REFLECT-0051",
+      "description": "FP-REFLECT-0051 enters its drift season through the nocturne palette and balances counterfield, veil, and sediment across 5 witnessed relations, forming a distinct silhouette from the public witness.",
+      "public_url": "https://zeropoet.github.io/FoldPortrait/Web/#era-2/foldportrait-reflection-0051",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0051.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0051.png",
+      "sha256": "421ad63eb956c1c2f252f268368efe221d07dc96f43c93d035107bb7ee6b397d",
+      "byte_size": 3402465,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0051.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0051.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303035312E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303531222C2266696C655F736861323536223A2234323161643633656239353663316332663235326632363833363865666532323164303764633936663433633933643033353130376262376565366233393764227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 104,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0052",
+      "title": "FoldPortrait FP-REFLECT-0052",
+      "description": "FP-REFLECT-0052 enters its contraction season through the orchid palette and folds veil, aperture, and palimpsest across 4 witnessed relations, forming an evolving figure held inside the FoldKernel lineage.",
+      "public_url": "https://zeropoet.github.io/FoldPortrait/Web/#era-2/foldportrait-reflection-0052",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0052.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0052.png",
+      "sha256": "1e63c5ceab4e82cb0e1752d460faf0fbc558b7cfa49c9bbd80f64a6bc6c807fd",
+      "byte_size": 3216709,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0052.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0052.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303035322E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303532222C2266696C655F736861323536223A2231653633633563656162346538326362306531373532643436306661663066626335353862376366613439633962626438306636346136626336633830376664227D"
             }
           }
         ]
