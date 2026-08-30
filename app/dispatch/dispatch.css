@@ -4,21 +4,32 @@
 
 .dispatch-label-preview {
   display: grid;
-  min-height: 2.35in;
+  min-height: 59mm;
   place-items: center;
   overflow-x: auto;
   background: #ecece8;
-  padding: 0.175in;
+  padding: 4.5mm;
 }
 
 .dispatch-label-svg {
   display: block;
-  width: 3in;
-  height: 2in;
+  width: 75mm;
+  height: 50mm;
   max-width: none;
   flex: 0 0 auto;
   background: #fff;
   box-shadow: 0 8px 24px rgb(0 0 0 / 8%);
+}
+
+.dispatch-print-frame {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .dispatch-record.is-excluded .dispatch-label-preview {
@@ -29,81 +40,4 @@
   width: 0.85rem;
   height: 0.85rem;
   accent-color: #000;
-}
-
-@media print {
-  @page {
-    size: 3in 2in;
-    margin: 0;
-  }
-
-  html,
-  body {
-    width: 3in;
-    min-height: 2in;
-    margin: 0;
-    background: #fff;
-  }
-
-  .site-header,
-  .dispatch-intro,
-  .dispatch-empty,
-  .dispatch-controls,
-  .dispatch-record-header,
-  .dispatch-status {
-    display: none !important;
-  }
-
-  .dispatch-workspace {
-    display: block !important;
-    width: 3in !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .dispatch-content {
-    display: block !important;
-    margin: 0 !important;
-  }
-
-  .dispatch-print-area {
-    display: block !important;
-    width: 3in;
-    margin: 0;
-    padding: 0;
-  }
-
-  .dispatch-record {
-    display: block;
-    width: 3in;
-    height: 2in;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border: 0;
-    break-after: page;
-    page-break-after: always;
-  }
-
-  .dispatch-record.is-excluded {
-    display: none !important;
-  }
-
-  .dispatch-label-preview {
-    display: block;
-    width: 3in;
-    height: 2in;
-    min-height: 0;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: #fff;
-    opacity: 1 !important;
-  }
-
-  .dispatch-label-svg {
-    width: 3in;
-    height: 2in;
-    box-shadow: none;
-  }
 }

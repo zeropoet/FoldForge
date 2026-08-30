@@ -2,6 +2,7 @@
 
 import { DragEvent, useRef, useState } from "react";
 import PublicHeader from "../public-header";
+import { buildPrintDocument } from "./print-document";
 import { addressLines, fittedFontSize, parseShippingManifest, type ShippingManifest, type ShippingParty, type ShippingRecord } from "./shipping-manifest";
 import "./dispatch.css";
 
@@ -72,8 +73,30 @@ export default function Dispatch() {
 
   const print = () => {
     if (!selected.size) return;
-    setStatus(`Opening local print dialog for ${selected.size} label${selected.size === 1 ? "" : "s"}`);
-    requestAnimationFrame(() => window.print());
+    const labels = Array.from(document.querySelectorAll<SVGSVGElement>(".dispatch-record:not(.is-excluded) .dispatch-label-svg"));
+    if (labels.length !== selected.size) {
+      setStatus("Print boundary could not resolve every selected label");
+      return;
+    }
+    const frame = document.createElement("iframe");
+    frame.className = "dispatch-print-frame";
+    frame.setAttribute("aria-hidden", "true");
+    frame.srcdoc = buildPrintDocument(labels.map((label) => label.outerHTML));
+    frame.onload = () => {
+      const printWindow = frame.contentWindow;
+      if (!printWindow) {
+        frame.remove();
+        setStatus("Local print boundary could not open");
+        return;
+      }
+      const cleanup = () => frame.remove();
+      printWindow.addEventListener("afterprint", cleanup, { once: true });
+      setStatus(`Opening 75 x 50 mm local print dialog for ${selected.size} label${selected.size === 1 ? "" : "s"}`);
+      printWindow.focus();
+      printWindow.print();
+      window.setTimeout(cleanup, 60_000);
+    };
+    document.body.appendChild(frame);
   };
 
   return <main className="dispatch-shell min-h-screen text-black">
@@ -81,7 +104,7 @@ export default function Dispatch() {
     <div className="dispatch-workspace mx-auto max-w-[1600px] px-5 py-10 md:px-8 md:py-16">
       <section className="dispatch-intro grid gap-10 border-b border-black/20 pb-12 lg:grid-cols-[1fr_0.75fr] lg:items-end">
         <div><p className="text-[9px] uppercase tracking-[0.25em] text-black/40">Sovereign Standard / private fulfillment / thermal output</p><h1 className="mt-5 max-w-3xl text-5xl font-light tracking-[-0.055em] md:text-7xl">Dispatch</h1><p className="mt-7 max-w-2xl text-sm leading-7 text-black/55">Admit one weekly fulfillment manifest, inspect the exact address carried by each vessel, and hand the selected labels to the local MUNBYN printer.</p></div>
-        <div className="border border-black/20 p-5 font-mono text-[8px] uppercase leading-5 tracking-[0.14em] text-black/35">Local file memory only<br />3 × 2 inch vector labels<br />No address upload or browser storage<br />macOS print boundary</div>
+        <div className="border border-black/20 p-5 font-mono text-[8px] uppercase leading-5 tracking-[0.14em] text-black/35">Local file memory only<br />75 × 50 mm vector labels<br />No address upload or browser storage<br />Dedicated print-only document</div>
       </section>
 
       {!manifest ? <button className="dispatch-empty mt-12 grid min-h-[430px] w-full place-items-center border border-dashed border-black/30 px-8 text-center hover:border-black" onClick={() => inputRef.current?.click()} onDragOver={(event) => event.preventDefault()} onDrop={receiveDrop} type="button"><span><span className="block text-xl font-light">Admit weekly dispatch manifest</span><span className="mt-4 block font-mono text-[8px] uppercase tracking-[0.2em] text-black/35">Choose or drop SovereignStandard-Shipping-&lt;date&gt;-manifest.json</span></span></button> : <>
@@ -94,10 +117,10 @@ export default function Dispatch() {
           </div>
           <aside className="dispatch-controls flex flex-col border border-black/20 p-5 lg:sticky lg:top-24 lg:self-start">
             <p className="text-[9px] uppercase tracking-[0.22em] text-black/40">Dispatch state</p><p className="mt-4 text-3xl font-light">{selected.size} / {manifest.shipments.length}</p><p className="mt-2 font-mono text-[8px] uppercase tracking-[0.15em] text-black/30">labels selected</p>
-            <dl className="mt-8 space-y-4 border-t border-black/20 pt-5 font-mono text-[8px] uppercase tracking-[0.13em]"><div className="flex justify-between gap-4"><dt className="text-black/35">Manifest</dt><dd className="max-w-40 truncate">{manifestName}</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Week</dt><dd>{manifest.manifest_date}</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Profile</dt><dd>3 × 2 in</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Witness</dt><dd>{manifestDigest.slice(0, 12)}</dd></div></dl>
+            <dl className="mt-8 space-y-4 border-t border-black/20 pt-5 font-mono text-[8px] uppercase tracking-[0.13em]"><div className="flex justify-between gap-4"><dt className="text-black/35">Manifest</dt><dd className="max-w-40 truncate">{manifestName}</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Week</dt><dd>{manifest.manifest_date}</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Profile</dt><dd>75 × 50 mm</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Witness</dt><dd>{manifestDigest.slice(0, 12)}</dd></div></dl>
             <div className="mt-8 grid grid-cols-2 border border-black/25"><button className="border-r border-black/25 px-3 py-3 text-[8px] uppercase tracking-[0.14em]" onClick={() => setSelected(new Set(manifest.shipments.map((shipment) => shipment.shipment_id)))} type="button">Select all</button><button className="px-3 py-3 text-[8px] uppercase tracking-[0.14em]" onClick={() => setSelected(new Set())} type="button">Clear</button></div>
-            <div className="mt-auto grid gap-2 pt-10"><button className="border border-black bg-black px-5 py-4 text-[8px] uppercase tracking-[0.18em] text-white disabled:opacity-25" disabled={!selected.size} onClick={print} type="button">Open MUNBYN print dialog</button><button className="px-5 py-3 text-[8px] uppercase tracking-[0.18em] text-black/40" onClick={() => inputRef.current?.click()} type="button">Replace manifest</button></div>
-            <p className="mt-6 border-t border-black/15 pt-5 font-mono text-[7px] uppercase leading-4 tracking-[0.12em] text-black/30">In the system dialog choose MUNBYN, 3 × 2 inches, landscape, actual size / 100%, no margins.</p>
+            <div className="mt-auto grid gap-2 pt-10"><button className="border border-black bg-black px-5 py-4 text-[8px] uppercase tracking-[0.18em] text-white disabled:opacity-25" disabled={!selected.size} onClick={print} type="button">Open 75 × 50 mm print dialog</button><button className="px-5 py-3 text-[8px] uppercase tracking-[0.18em] text-black/40" onClick={() => inputRef.current?.click()} type="button">Replace manifest</button></div>
+            <p className="mt-6 border-t border-black/15 pt-5 font-mono text-[7px] uppercase leading-4 tracking-[0.12em] text-black/30">Choose MUNBYN and 75 × 50 mm. Leave orientation at the driver default. Use 100% scale, no margins, and no headers or footers.</p>
           </aside>
         </section>
       </>}

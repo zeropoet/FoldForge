@@ -4,7 +4,7 @@ import { addressLines, fittedFontSize, parseShippingManifest } from "./shipping-
 const manifest = {
   schema: "sovereign-standard-shipping-manifest/v1",
   manifest_date: "2026-08-31",
-  label_size_inches: { width: 3, height: 2 },
+  label_size_mm: { width: 75, height: 50 },
   origin: { name: "Sovereign Standard", address: { line1: "1 Origin Road", line2: "", city: "St Petersburg", state: "FL", postal_code: "33705", country: "US" } },
   shipments: [{ shipment_id: "ss-abc", order_id: "order-1", fulfilled_at: "2026-08-31T12:00:00Z", vessel: 42, recipient: { name: "Ada Collector", address: { line1: "2 Main Street", line2: "Apt 4", city: "Columbus", state: "OH", postal_code: "43215", country: "US" } } }],
 };
@@ -14,7 +14,15 @@ describe("Dispatch manifest", () => {
     const parsed = parseShippingManifest(JSON.stringify(manifest));
     expect(parsed.shipments).toHaveLength(1);
     expect(parsed.shipments[0].vessel).toBe(42);
+    expect(parsed.label_size_mm).toEqual({ width: 75, height: 50 });
     expect(addressLines(parsed.shipments[0].recipient.address)).toEqual(["2 Main Street", "Apt 4", "Columbus, OH 43215"]);
+  });
+
+  it("normalizes the original 3 x 2 inch manifest profile to the printer driver size", () => {
+    const legacy = structuredClone(manifest) as Record<string, unknown>;
+    delete legacy.label_size_mm;
+    legacy.label_size_inches = { width: 3, height: 2 };
+    expect(parseShippingManifest(JSON.stringify(legacy)).label_size_mm).toEqual({ width: 75, height: 50 });
   });
 
   it("rejects incomplete and duplicate delivery evidence", () => {

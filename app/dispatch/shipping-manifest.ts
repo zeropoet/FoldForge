@@ -25,7 +25,7 @@ export interface ShippingRecord {
 export interface ShippingManifest {
   schema: typeof SHIPPING_MANIFEST_SCHEMA;
   manifest_date: string;
-  label_size_inches: { width: 3; height: 2 };
+  label_size_mm: { width: 75; height: 50 };
   origin: ShippingParty;
   shipments: ShippingRecord[];
 }
@@ -69,8 +69,11 @@ export function parseShippingManifest(sourceText: string): ShippingManifest {
   if (source.schema !== SHIPPING_MANIFEST_SCHEMA) throw new Error(`Unsupported manifest schema: ${String(source.schema || "missing")}`);
   const manifestDate = text(source.manifest_date, "manifest_date");
   if (!/^\d{4}-\d{2}-\d{2}$/.test(manifestDate)) throw new Error("manifest_date must use YYYY-MM-DD");
-  const labelSize = object(source.label_size_inches, "label_size_inches");
-  if (Number(labelSize.width) !== 3 || Number(labelSize.height) !== 2) throw new Error("Dispatch currently requires the canonical 3 x 2 inch label profile");
+  const millimeterSize = source.label_size_mm ? object(source.label_size_mm, "label_size_mm") : null;
+  const legacyInchSize = source.label_size_inches ? object(source.label_size_inches, "label_size_inches") : null;
+  const isCanonicalMillimeterSize = millimeterSize && Number(millimeterSize.width) === 75 && Number(millimeterSize.height) === 50;
+  const isLegacyThreeByTwoSize = legacyInchSize && Number(legacyInchSize.width) === 3 && Number(legacyInchSize.height) === 2;
+  if (!isCanonicalMillimeterSize && !isLegacyThreeByTwoSize) throw new Error("Dispatch requires the canonical 75 x 50 mm MUNBYN label profile");
   if (!Array.isArray(source.shipments) || !source.shipments.length) throw new Error("Manifest contains no fulfilled shipments");
 
   const seen = new Set<string>();
@@ -93,7 +96,7 @@ export function parseShippingManifest(sourceText: string): ShippingManifest {
   return {
     schema: SHIPPING_MANIFEST_SCHEMA,
     manifest_date: manifestDate,
-    label_size_inches: { width: 3, height: 2 },
+    label_size_mm: { width: 75, height: 50 },
     origin: party(source.origin, "origin"),
     shipments,
   };
