@@ -80,7 +80,7 @@ const server = createServer(async (request, response) => {
 });
 
 server.listen(PORT, HOST, async () => {
-  const url = `https://foldforge.xyz/dispatch/#bridge=${TOKEN}`;
+  const url = `https://foldforge.xyz/dispatch/?local_bridge=${Date.now()}#bridge=${TOKEN}`;
   process.stdout.write("FoldForge Dispatch bridge active until this process is stopped.\n");
   if (process.env.DISPATCH_NO_OPEN === "1") process.stdout.write(`${url}\n`);
   else await execFileAsync("/usr/bin/open", [url]);
