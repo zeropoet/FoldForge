@@ -1,0 +1,51 @@
+.ledger-witness-shell {
+  background: #f7f7f4;
+}
+
+.ledger-witness-record,
+.ledger-witness-controls {
+  transition: border-color 160ms ease;
+}
+
+.ledger-witness-record:focus-within,
+.ledger-witness-controls:focus-within {
+  border-color: #000;
+}
+
+.ledger-witness-record select {
+  min-height: 2.5rem;
+  border: 0;
+  border-top: 1px solid rgb(0 0 0 / 14%);
+  outline: 0;
+}
+
+.ledger-witness-record textarea {
+  resize: vertical;
+}
+
+.ledger-witness-record input:focus-visible,
+.ledger-witness-record select:focus-visible,
+.ledger-witness-record textarea:focus-visible,
+.ledger-witness-controls button:focus-visible,
+.ledger-witness-controls a:focus-visible {
+  outline: 1px solid #000;
+  outline-offset: 3px;
+}
+
+.ledger-witness-record button,
+.ledger-witness-controls button,
+.ledger-witness-controls a {
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.ledger-witness-record button:not(:disabled):hover,
+.ledger-witness-controls button:not(:disabled):hover,
+.ledger-witness-controls a:hover {
+  border-color: #000;
+}
+
+@media (max-width: 1023px) {
+  .ledger-witness-controls {
+    min-height: 32rem;
+  }
+}
