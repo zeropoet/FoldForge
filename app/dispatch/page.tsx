@@ -25,8 +25,6 @@ function ShippingLabel({ origin, shipment }: { origin: ShippingParty; shipment: 
     <text fontFamily="Helvetica, Arial, sans-serif" fontSize="5.5" fontWeight="700" x="10" y="73">TO</text>
     <text fontFamily="Helvetica, Arial, sans-serif" fontSize={fittedFontSize(shipment.recipient.name, 11, 26, 7)} fontWeight="700" x="10" y="91">{shipment.recipient.name.toUpperCase()}</text>
     {recipientLines.map((line, index) => <text fontFamily="Helvetica, Arial, sans-serif" fontSize={fittedFontSize(line, 8.2, 40, 6.5)} key={`${line}-${index}`} x="10" y={104 + index * recipientGap}>{line.toUpperCase()}</text>)}
-    <text fontFamily="Helvetica, Arial, sans-serif" fontSize="4.6" x="10" y="136">{shipment.shipment_id.toUpperCase()}</text>
-    <text fontFamily="Helvetica, Arial, sans-serif" fontSize="5.5" fontWeight="700" textAnchor="end" x="206" y="136">BLACK TIN VESSEL {String(shipment.vessel).padStart(3, "0")}</text>
   </svg>;
 }
 
