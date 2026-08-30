@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-type Surface = "archive" | "sonic" | "temporal" | "relation" | "ledger";
+type Surface = "archive" | "sonic" | "temporal" | "relation" | "ledger" | "dispatch";
 
 const surfaces: Array<{ id: Surface; label: string; href: string }> = [
   { id: "archive", label: "Archive", href: "/" },
@@ -8,6 +8,7 @@ const surfaces: Array<{ id: Surface; label: string; href: string }> = [
   { id: "temporal", label: "Temporal", href: "/temporal-forge" },
   { id: "relation", label: "Relation", href: "/relation-forge" },
   { id: "ledger", label: "Ledger", href: "/ledger-witness" },
+  { id: "dispatch", label: "Dispatch", href: "/dispatch" },
 ];
 
 export default function PublicHeader({ active }: { active: Surface }) {

@@ -374,6 +374,28 @@ agree. This is operational propagation only. It does not alter FoldForge's
 Ethereum archive or compositional grammar, and Root Logos recomposes Library
 voices only when FoldForge's separate composition witness changes.
 
+## Dispatch
+
+`/dispatch` is FoldForge's private local fulfillment chamber for Sovereign
+Standard. SS remains authoritative for paid orders, monthly fulfillment,
+collector identity, addresses, and vessel assignment. Its local weekly
+fulfillment command emits one purpose-built
+`sovereign-standard-shipping-manifest/v1` JSON file containing only the
+packages fulfilled during that cycle.
+
+Dispatch admits that file into volatile browser memory, validates every
+required name and postal field, verifies the canonical `3 x 2 inch` profile,
+and renders one vector label per assigned Black Tin Vessel. The steward can
+review, select, and print any subset through the local macOS print boundary.
+The system print dialog remains responsible for selecting the MUNBYN printer,
+landscape orientation, and actual-size output. Standard browser security does
+not permit silent printer selection, which keeps final physical dispatch under
+human control.
+
+No imported address is uploaded, stored in browser persistence, written to the
+FoldForge repository, or propagated to Telos or Root Logos. Refreshing or
+replacing the manifest releases the imported bytes.
+
 Alchemy provides owner, contract, token, and cached metadata. `app/collection-policy.ts` applies repository-owned exclusions. `app/nft-data.ts` normalizes provider media and constructs responsive derivative URLs. `app/page.tsx` resolves the archive and computes or restores versioned visual signatures. `app/composition-witness.ts` seals every grammar and the current displacement-map witness into archive evidence, while `app/composer-chamber.tsx` derives the lexical field, archive-seamed chromatic field, autonomous six-phase macroform, visual-relation arrangements, displacement field, and unified FoldForge voice.
 
 The FOLD FORGE contract
