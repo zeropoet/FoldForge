@@ -386,11 +386,20 @@ packages fulfilled during that cycle.
 Dispatch admits that file into volatile browser memory, validates every
 required name and postal field, verifies the canonical `75 x 50 mm` MUNBYN profile,
 and renders one vector label per assigned Black Tin Vessel. The steward can
-review, select, and print any subset through the local macOS print boundary.
-The system print dialog remains responsible for selecting the MUNBYN printer,
-the driver-defined orientation, the installed ITPP130 queue's pinned 270-degree correction, and actual-size output. Standard browser security does
-not permit silent printer selection, which keeps final physical dispatch under
-human control.
+review, select, and print any subset through a single-use macOS print bridge.
+From a local FoldForge checkout, run `npm run dispatch:bridge`. The bridge
+creates a random 256-bit pairing token, opens the live Dispatch page with that
+token held only in the URL fragment, and accepts one authorized print batch.
+It generates an exact-size PDF and sends it directly to `Printer_ITPP130` with
+the verified `75 x 50 mm`, 270-degree correction, 100% scale, and no-banner
+CUPS settings. The bridge then exits. It also expires after 15 minutes if no
+batch is printed.
+
+The bridge binds only to loopback, permits only the FoldForge production and
+local development origins, validates the pairing token, page count, PDF
+signature, and exact media dimensions, and removes its mode-0600 temporary PDF
+as soon as CUPS accepts the job. It is not installed as a daemon and cannot
+remain available for a later webpage to trigger.
 
 No imported address is uploaded, stored in browser persistence, written to the
 FoldForge repository, or propagated to Telos or Root Logos. Refreshing or
