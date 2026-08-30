@@ -81,7 +81,7 @@ export default function Dispatch() {
     const frame = document.createElement("iframe");
     frame.className = "dispatch-print-frame";
     frame.setAttribute("aria-hidden", "true");
-    frame.srcdoc = buildPrintDocument(labels.map((label) => label.outerHTML));
+    frame.srcdoc = buildPrintDocument(labels.map((label) => label.innerHTML));
     frame.onload = () => {
       const printWindow = frame.contentWindow;
       if (!printWindow) {
