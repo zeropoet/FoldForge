@@ -388,7 +388,7 @@ required name and postal field, verifies the canonical `75 x 50 mm` MUNBYN profi
 and renders one vector label per assigned Black Tin Vessel. The steward can
 review, select, and print any subset through the local macOS print boundary.
 The system print dialog remains responsible for selecting the MUNBYN printer,
-the driver-defined orientation, a deterministic counter-rotation for the installed MUNBYN profile, and actual-size output. Standard browser security does
+the driver-defined orientation, the installed ITPP130 queue's pinned 270-degree correction, and actual-size output. Standard browser security does
 not permit silent printer selection, which keeps final physical dispatch under
 human control.
 

@@ -81,7 +81,7 @@ export default function Dispatch() {
     const frame = document.createElement("iframe");
     frame.className = "dispatch-print-frame";
     frame.setAttribute("aria-hidden", "true");
-    frame.srcdoc = buildPrintDocument(labels.map((label) => label.innerHTML));
+    frame.srcdoc = buildPrintDocument(labels.map((label) => label.outerHTML));
     frame.onload = () => {
       const printWindow = frame.contentWindow;
       if (!printWindow) {
@@ -117,10 +117,10 @@ export default function Dispatch() {
           </div>
           <aside className="dispatch-controls flex flex-col border border-black/20 p-5 lg:sticky lg:top-24 lg:self-start">
             <p className="text-[9px] uppercase tracking-[0.22em] text-black/40">Dispatch state</p><p className="mt-4 text-3xl font-light">{selected.size} / {manifest.shipments.length}</p><p className="mt-2 font-mono text-[8px] uppercase tracking-[0.15em] text-black/30">labels selected</p>
-            <dl className="mt-8 space-y-4 border-t border-black/20 pt-5 font-mono text-[8px] uppercase tracking-[0.13em]"><div className="flex justify-between gap-4"><dt className="text-black/35">Manifest</dt><dd className="max-w-40 truncate">{manifestName}</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Week</dt><dd>{manifest.manifest_date}</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Profile</dt><dd>75 × 50 mm</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Driver</dt><dd>−90° correction</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Witness</dt><dd>{manifestDigest.slice(0, 12)}</dd></div></dl>
+            <dl className="mt-8 space-y-4 border-t border-black/20 pt-5 font-mono text-[8px] uppercase tracking-[0.13em]"><div className="flex justify-between gap-4"><dt className="text-black/35">Manifest</dt><dd className="max-w-40 truncate">{manifestName}</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Week</dt><dd>{manifest.manifest_date}</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Profile</dt><dd>75 × 50 mm</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Driver</dt><dd>ITPP130 / 270°</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Witness</dt><dd>{manifestDigest.slice(0, 12)}</dd></div></dl>
             <div className="mt-8 grid grid-cols-2 border border-black/25"><button className="border-r border-black/25 px-3 py-3 text-[8px] uppercase tracking-[0.14em]" onClick={() => setSelected(new Set(manifest.shipments.map((shipment) => shipment.shipment_id)))} type="button">Select all</button><button className="px-3 py-3 text-[8px] uppercase tracking-[0.14em]" onClick={() => setSelected(new Set())} type="button">Clear</button></div>
-            <div className="mt-auto grid gap-2 pt-10"><button className="border border-black bg-black px-5 py-4 text-[8px] uppercase tracking-[0.18em] text-white disabled:opacity-25" disabled={!selected.size} onClick={print} type="button">Open corrected MUNBYN print dialog</button><button className="px-5 py-3 text-[8px] uppercase tracking-[0.18em] text-black/40" onClick={() => inputRef.current?.click()} type="button">Replace manifest</button></div>
-            <p className="mt-6 border-t border-black/15 pt-5 font-mono text-[7px] uppercase leading-4 tracking-[0.12em] text-black/30">Choose MUNBYN and 75 × 50 mm. Leave orientation at the driver default. Use 100% scale, no margins, and no headers or footers.</p>
+            <div className="mt-auto grid gap-2 pt-10"><button className="border border-black bg-black px-5 py-4 text-[8px] uppercase tracking-[0.18em] text-white disabled:opacity-25" disabled={!selected.size} onClick={print} type="button">Open ITPP130 print dialog</button><button className="px-5 py-3 text-[8px] uppercase tracking-[0.18em] text-black/40" onClick={() => inputRef.current?.click()} type="button">Replace manifest</button></div>
+            <p className="mt-6 border-t border-black/15 pt-5 font-mono text-[7px] uppercase leading-4 tracking-[0.12em] text-black/30">Choose Printer ITPP130 and 75 × 50 mm. This Mac is pinned to Rotate 270°. Use 100% scale, no margins, and no headers or footers.</p>
           </aside>
         </section>
       </>}
