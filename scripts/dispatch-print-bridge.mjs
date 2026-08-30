@@ -11,10 +11,8 @@ const execFileAsync = promisify(execFile);
 const HOST = "127.0.0.1";
 const PORT = 47831;
 const MAX_BODY_BYTES = 12 * 1024 * 1024;
-const SESSION_MILLISECONDS = 30 * 60 * 1000;
 const PRINTER = "Printer_ITPP130";
 const TOKEN = randomBytes(32).toString("hex");
-const EXPIRES_AT = new Date(Date.now() + SESSION_MILLISECONDS);
 let jobsAccepted = 0;
 const ALLOWED_ORIGINS = new Set(["https://foldforge.xyz", "https://www.foldforge.xyz", "http://localhost:3000", "http://127.0.0.1:3000"]);
 
@@ -74,7 +72,7 @@ const server = createServer(async (request, response) => {
     await validatePdf(pdfBytes, count);
     const jobID = await print(pdfBytes);
     jobsAccepted += 1;
-    send(response, 200, { status: "accepted", job_id: jobID, label_count: count, jobs_accepted: jobsAccepted, session_expires_at: EXPIRES_AT.toISOString() }, origin);
+    send(response, 200, { status: "accepted", job_id: jobID, label_count: count, jobs_accepted: jobsAccepted }, origin);
     process.stdout.write(`${jobID}: ${count} label${count === 1 ? "" : "s"} accepted (${jobsAccepted} batch${jobsAccepted === 1 ? "" : "es"} this session).\n`);
   } catch (error) {
     send(response, 400, { error: error instanceof Error ? error.message : "Local print job failed" }, origin);
@@ -83,9 +81,7 @@ const server = createServer(async (request, response) => {
 
 server.listen(PORT, HOST, async () => {
   const url = `https://foldforge.xyz/dispatch/#bridge=${TOKEN}`;
-  process.stdout.write(`FoldForge Dispatch bridge paired for multiple batches until ${EXPIRES_AT.toLocaleTimeString()}.\n`);
+  process.stdout.write("FoldForge Dispatch bridge active until this process is stopped.\n");
   if (process.env.DISPATCH_NO_OPEN === "1") process.stdout.write(`${url}\n`);
   else await execFileAsync("/usr/bin/open", [url]);
 });
-
-setTimeout(() => server.close(() => process.exit(0)), SESSION_MILLISECONDS).unref();

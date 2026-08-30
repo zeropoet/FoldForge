@@ -40,9 +40,13 @@ export default function Dispatch() {
   const [status, setStatus] = useState("Waiting for a private SS dispatch manifest");
 
   useEffect(() => {
-    const token = new URLSearchParams(window.location.hash.slice(1)).get("bridge") || "";
+    const hashToken = new URLSearchParams(window.location.hash.slice(1)).get("bridge") || "";
+    const token = /^[a-f0-9]{64}$/.test(hashToken) ? hashToken : sessionStorage.getItem("foldforge-dispatch-bridge") || "";
     if (!/^[a-f0-9]{64}$/.test(token)) return;
-    window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+    if (hashToken) {
+      sessionStorage.setItem("foldforge-dispatch-bridge", token);
+      window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+    }
     queueMicrotask(() => {
       setBridgeToken(token);
       setStatus("Local ITPP130 bridge paired / admit a dispatch manifest");
@@ -114,7 +118,7 @@ export default function Dispatch() {
     <div className="dispatch-workspace mx-auto max-w-[1600px] px-5 py-10 md:px-8 md:py-16">
       <section className="dispatch-intro grid gap-10 border-b border-black/20 pb-12 lg:grid-cols-[1fr_0.75fr] lg:items-end">
         <div><p className="text-[9px] uppercase tracking-[0.25em] text-black/40">Sovereign Standard / private fulfillment / thermal output</p><h1 className="mt-5 max-w-3xl text-5xl font-light tracking-[-0.055em] md:text-7xl">Dispatch</h1><p className="mt-7 max-w-2xl text-sm leading-7 text-black/55">Admit one weekly fulfillment manifest, inspect the exact address carried by each vessel, and hand the selected labels to the local MUNBYN printer.</p></div>
-        <div className="border border-black/20 p-5 font-mono text-[8px] uppercase leading-5 tracking-[0.14em] text-black/35">Local file memory only<br />75 × 50 mm thermal labels<br />No address upload or browser storage<br />Bounded local print session</div>
+        <div className="border border-black/20 p-5 font-mono text-[8px] uppercase leading-5 tracking-[0.14em] text-black/35">Local file memory only<br />75 × 50 mm thermal labels<br />No address upload or manifest storage<br />Continuous local print bridge</div>
       </section>
 
       {!manifest ? <button className="dispatch-empty mt-12 grid min-h-[430px] w-full place-items-center border border-dashed border-black/30 px-8 text-center hover:border-black" onClick={() => inputRef.current?.click()} onDragOver={(event) => event.preventDefault()} onDrop={receiveDrop} type="button"><span><span className="block text-xl font-light">Admit weekly dispatch manifest</span><span className="mt-4 block font-mono text-[8px] uppercase tracking-[0.2em] text-black/35">Choose or drop SovereignStandard-Shipping-&lt;date&gt;-manifest.json</span></span></button> : <>
@@ -130,7 +134,7 @@ export default function Dispatch() {
             <dl className="mt-8 space-y-4 border-t border-black/20 pt-5 font-mono text-[8px] uppercase tracking-[0.13em]"><div className="flex justify-between gap-4"><dt className="text-black/35">Manifest</dt><dd className="max-w-40 truncate">{manifestName}</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Week</dt><dd>{manifest.manifest_date}</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Profile</dt><dd>75 × 50 mm</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Driver</dt><dd>ITPP130 / direct</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Bridge</dt><dd>{bridgeToken ? "paired" : "not paired"}</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Witness</dt><dd>{manifestDigest.slice(0, 12)}</dd></div></dl>
             <div className="mt-8 grid grid-cols-2 border border-black/25"><button className="border-r border-black/25 px-3 py-3 text-[8px] uppercase tracking-[0.14em]" onClick={() => setSelected(new Set(manifest.shipments.map((shipment) => shipment.shipment_id)))} type="button">Select all</button><button className="px-3 py-3 text-[8px] uppercase tracking-[0.14em]" onClick={() => setSelected(new Set())} type="button">Clear</button></div>
             <div className="mt-auto grid gap-2 pt-10"><button className="border border-black bg-black px-5 py-4 text-[8px] uppercase tracking-[0.18em] text-white disabled:opacity-25" disabled={!selected.size} onClick={() => void print()} type="button">Print selected labels</button><button className="px-5 py-3 text-[8px] uppercase tracking-[0.18em] text-black/40" onClick={() => inputRef.current?.click()} type="button">Replace manifest</button></div>
-            <p className="mt-6 border-t border-black/15 pt-5 font-mono text-[7px] uppercase leading-4 tracking-[0.12em] text-black/30">Run npm run dispatch:bridge on this Mac first. The 30-minute paired session pins Printer ITPP130, 75 × 50 mm media, 270° correction, and 100% scale for every batch.</p>
+            <p className="mt-6 border-t border-black/15 pt-5 font-mono text-[7px] uppercase leading-4 tracking-[0.12em] text-black/30">Run npm run dispatch:bridge on this Mac first. The bridge remains active for unlimited batches until its terminal process is stopped, with the ITPP130 profile pinned throughout.</p>
           </aside>
         </section>
       </>}
