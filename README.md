@@ -23,10 +23,15 @@ visual, sonic, or witness identity.
 
 [`public/foldkernel-integration.json`](public/foldkernel-integration.json)
 publishes the exact `FoldKernel-Integration-1.0.0` boundary and pins FoldKernel
-`1.0.4`. CI checks the native TypeScript projection, validates the declaration
+`1.0.5`. CI checks the native TypeScript projection, validates the declaration
 with the canonical Swift verifier, and retains a commit-specific receipt for 90
 days. Telos may observe the public declaration and report drift; FoldForge keeps
 application history, interpretation, and event meaning.
+
+FoldForge can now issue an initial `evidenced` Value Receipt 1.0 for a completed
+visual, sonic, temporal, ledger, or production artifact. The receipt carries
+the artifact's SHA-256 evidence without assigning a price. Monetary advancement
+requires a distinct externally evidenced settlement boundary.
 
 ## Features
 

@@ -1,7 +1,7 @@
 export const FOLDKERNEL_INTEGRATION = {
   contractVersion: "FoldKernel-Integration-1.0.0",
   protocolVersion: "FoldKernel-1.0.0",
-  packageVersion: "1.0.4",
+  packageVersion: "1.0.5",
   event: "permutation_commit",
 } as const;
 
