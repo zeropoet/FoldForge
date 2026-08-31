@@ -1,0 +1,48 @@
+{
+  "contractVersion": "FoldKernel-Integration-1.0.0",
+  "consumer": {
+    "name": "FoldForge",
+    "repository": "https://github.com/zeropoet/FoldForge",
+    "publicManifestURL": "https://foldforge.xyz/foldkernel-integration.json"
+  },
+  "foldKernel": {
+    "protocolVersion": "FoldKernel-1.0.0",
+    "packageRequirement": {
+      "kind": "exact",
+      "version": "1.0.4"
+    },
+    "conformanceVectors": {
+      "algorithm": "keccak-256",
+      "digest": "6f499505db8d966631993780c32960965fad039d11aa3606caad58e70845fb38"
+    }
+  },
+  "authority": {
+    "applicationOwns": [
+      "application_history",
+      "artifact_interpretation",
+      "event_meaning"
+    ],
+    "foldKernelOwns": [
+      "canonical_encoding",
+      "conformance_contract",
+      "convergence_identity"
+    ],
+    "telosMay": [
+      "observe_declared_versions",
+      "report_drift",
+      "verify_public_conformance"
+    ],
+    "telosMustNot": [
+      "absorb_application_authority",
+      "alter_foldkernel_output",
+      "write_application_history"
+    ]
+  },
+  "eventMeanings": [
+    {
+      "event": "permutation_commit",
+      "owner": "FoldForge",
+      "meaning": "A SHA-256 witnessed archive composition after FoldForge's deterministic token and contract ordering."
+    }
+  ]
+}

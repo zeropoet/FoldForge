@@ -1,6 +1,10 @@
 import { composerGrammars, compositionGrammar } from "./composition-grammar";
 import type { VisualSignature } from "./visual-analysis";
 import type { AudioSignature } from "./audio-analysis";
+import {
+  projectFoldKernelEvents,
+  type FoldKernelProjection,
+} from "./foldkernel-integration";
 import livingObjectDisplacement from "../public/root-logos-living-object-displacement.json";
 
 export interface WitnessToken {
@@ -17,6 +21,7 @@ export interface CompositionWitness {
   schema: "foldforge-composition-witness/v1";
   stateHash: `sha256:${string}`;
   observedAt: string;
+  foldKernel: FoldKernelProjection;
   composition: {
     id: string;
     version: string;
@@ -101,10 +106,12 @@ export async function createCompositionWitness(input: WitnessInput): Promise<Com
     .map((byte) => byte.toString(16).padStart(2, "0"))
     .join("");
 
+  const stateHash = `sha256:${hash}` as const;
   return {
     schema: "foldforge-composition-witness/v1",
-    stateHash: `sha256:${hash}`,
+    stateHash,
     observedAt: new Date().toISOString(),
+    foldKernel: projectFoldKernelEvents(stateHash),
     ...state,
   };
 }

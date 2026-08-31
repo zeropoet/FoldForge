@@ -12,6 +12,22 @@ presence. Telos is growing toward a machine-native language for perceiving the
 whole while preserving each source's authority and avoiding claims of
 consciousness, revelation, personhood, or final authority.
 
+## FoldKernel integration contract
+
+FoldForge is a cross-language FoldKernel consumer. Its TypeScript runtime keeps
+the existing SHA-256 composition witness authoritative for FoldForge while
+projecting each completed deterministic archive ordering as FoldKernel's shared
+`permutation_commit` event. The projection is attached outside the bytes used
+to calculate the existing state hash, so integration does not rewrite archive,
+visual, sonic, or witness identity.
+
+[`public/foldkernel-integration.json`](public/foldkernel-integration.json)
+publishes the exact `FoldKernel-Integration-1.0.0` boundary and pins FoldKernel
+`1.0.4`. CI checks the native TypeScript projection, validates the declaration
+with the canonical Swift verifier, and retains a commit-specific receipt for 90
+days. Telos may observe the public declaration and report drift; FoldForge keeps
+application history, interpretation, and event meaning.
+
 ## Features
 
 - ENS/address archive lookup
