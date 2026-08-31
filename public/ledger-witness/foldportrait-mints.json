@@ -4,7 +4,7 @@
   "issuance_channel": "FoldForge Ledger Witness",
   "signing_boundary": "human steward through Xaman",
   "public_root": "https://zeropoet.github.io/FoldPortrait",
-  "work_count": 106,
+  "work_count": 108,
   "works": [
     {
       "sequence": 1,
@@ -3771,6 +3771,68 @@
             "Memo": {
               "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
               "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303534222C2266696C655F736861323536223A2235373063343633326366633062623435313565333664663838613039613336626430616339333438333765343131356638646566383766383065316661346137227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 107,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0055",
+      "title": "FoldPortrait FP-REFLECT-0055",
+      "description": "FP-REFLECT-0055 enters its recombination season through the mineral palette and presses sediment, veil, and aperture across 7 witnessed relations, forming an evolving figure held inside the FoldKernel lineage.",
+      "public_url": "https://zeropoet.github.io/FoldPortrait/Web/#era-2/foldportrait-reflection-0055",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0055.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0055.png",
+      "sha256": "dcc9aadb36d6844e92ec4cbaec04a606c502d4a6e8cff883cb2a85fc669e767f",
+      "byte_size": 3689917,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0055.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0055.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303035352E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303535222C2266696C655F736861323536223A2264636339616164623336643638343465393265633463626165633034613630366335303264346136653863666638383363623261383566633636396537363766227D"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 108,
+      "era": 2,
+      "artifact_id": "foldportrait-reflection-0056",
+      "title": "FoldPortrait FP-REFLECT-0056",
+      "description": "FP-REFLECT-0056 enters its drift season through the nocturne palette and balances palimpsest, veil, and braid across 5 witnessed relations, forming a fresh boundary between memory and emergence.",
+      "public_url": "https://zeropoet.github.io/FoldPortrait/Web/#era-2/foldportrait-reflection-0056",
+      "image": "https://zeropoet.github.io/FoldPortrait/Output/reflections/png/foldportrait-reflection-0056.png",
+      "source_file": "Output/reflections/png/foldportrait-reflection-0056.png",
+      "sha256": "8a8aea777210e3e1ee91baa41afff32a3f9d521a44ef659c35a3422a2998dd76",
+      "byte_size": 3418240,
+      "metadata_uri": "https://zeropoet.github.io/FoldPortrait/Mint/metadata/foldportrait-reflection-0056.json",
+      "metadata_file": "Mint/metadata/foldportrait-reflection-0056.json",
+      "mint_status": "prepared",
+      "xrpl": null,
+      "xrpl_transaction": {
+        "TransactionType": "NFTokenMint",
+        "Account": "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
+        "NFTokenTaxon": 0,
+        "Flags": 0,
+        "URI": "68747470733A2F2F7A65726F706F65742E6769746875622E696F2F466F6C64506F7274726169742F4D696E742F6D657461646174612F666F6C64706F7274726169742D7265666C656374696F6E2D303035362E6A736F6E",
+        "Memos": [
+          {
+            "Memo": {
+              "MemoType": "666F6C64706F7274726169743A6C65646765722D7769746E657373",
+              "MemoData": "7B2261727469666163745F6964223A22666F6C64706F7274726169742D7265666C656374696F6E2D30303536222C2266696C655F736861323536223A2238613861656137373732313065336531656539316261613431616666663332613366396435323161343465663635396333356133343232613239393864643736227D"
             }
           }
         ]
