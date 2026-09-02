@@ -14,7 +14,7 @@ const MAX_BODY_BYTES = 12 * 1024 * 1024;
 const PRINTER = "Printer_ITPP130";
 const TOKEN = randomBytes(32).toString("hex");
 let jobsAccepted = 0;
-const ALLOWED_ORIGINS = new Set(["https://foldforge.xyz", "https://www.foldforge.xyz", "http://localhost:3000", "http://127.0.0.1:3000"]);
+const ALLOWED_ORIGINS = new Set(["https://foldforge.zeropoet.xyz", "https://foldforge.xyz", "https://www.foldforge.xyz", "http://localhost:3000", "http://127.0.0.1:3000"]);
 
 function headers(origin) {
   return { "Access-Control-Allow-Headers": "Authorization, Content-Type", "Access-Control-Allow-Methods": "POST, OPTIONS", "Access-Control-Allow-Origin": origin, "Access-Control-Allow-Private-Network": "true", "Cache-Control": "no-store", "Content-Type": "application/json; charset=utf-8", "Vary": "Origin" };
@@ -80,7 +80,7 @@ const server = createServer(async (request, response) => {
 });
 
 server.listen(PORT, HOST, async () => {
-  const url = `https://foldforge.xyz/dispatch/?local_bridge=${Date.now()}#bridge=${TOKEN}`;
+  const url = `https://foldforge.zeropoet.xyz/dispatch/?local_bridge=${Date.now()}#bridge=${TOKEN}`;
   process.stdout.write("FoldForge Dispatch bridge active until this process is stopped.\n");
   if (process.env.DISPATCH_NO_OPEN === "1") process.stdout.write(`${url}\n`);
   else await execFileAsync("/usr/bin/open", [url]);

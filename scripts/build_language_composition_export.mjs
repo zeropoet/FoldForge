@@ -153,7 +153,7 @@ const stabilizedLexical = stabilizeLexicalObservation({
 const exportPayload = {
   schema: "foldforge-language-composition-export/v1",
   source_id: "foldforge",
-  source_url: `https://foldforge.xyz/?owner=${owner}`,
+  source_url: `https://foldforge.zeropoet.xyz/?owner=${owner}`,
   grammar: {
     id: grammar.id,
     version: grammar.version,

@@ -1,7 +1,7 @@
 {
   "schema": "foldforge-language-composition-export/v1",
   "source_id": "foldforge",
-  "source_url": "https://foldforge.xyz/?owner=zeropoet.eth",
+  "source_url": "https://foldforge.zeropoet.xyz/?owner=zeropoet.eth",
   "grammar": {
     "id": "FF-COMP-0002",
     "version": "1.0.0",
@@ -11,52 +11,52 @@
   "archive": {
     "owner": "zeropoet.eth",
     "address": "0xbd4b3a05c6a585f226afb1952cedd8c410c52e8f",
-    "source_works": 280,
-    "state_witness": "sha256:f68ac5be7034f3a0a6fc770c5a2812736ab342d3b674316d91a5b91da40078ef",
+    "source_works": 313,
+    "state_witness": "sha256:83424dea2fedf92d61d80ddf803dd4ef361e279ff33987fc476ed644158290ee",
     "confirmation_policy": "two-consecutive-observations"
   },
   "terms": [
     {
       "rank": 1,
+      "term": "forge",
+      "works": 57,
+      "traces": 57
+    },
+    {
+      "rank": 2,
+      "term": "fold",
+      "works": 56,
+      "traces": 56
+    },
+    {
+      "rank": 3,
       "term": "archive",
       "works": 51,
       "traces": 51
     },
     {
-      "rank": 2,
+      "rank": 4,
       "term": "rwl",
-      "works": 47,
-      "traces": 47
+      "works": 49,
+      "traces": 49
     },
     {
-      "rank": 3,
+      "rank": 5,
       "term": "void",
       "works": 43,
       "traces": 43
     },
     {
-      "rank": 4,
+      "rank": 6,
       "term": "architecture",
       "works": 41,
       "traces": 41
     },
     {
-      "rank": 5,
+      "rank": 7,
       "term": "hært",
       "works": 41,
       "traces": 41
-    },
-    {
-      "rank": 6,
-      "term": "forge",
-      "works": 39,
-      "traces": 39
-    },
-    {
-      "rank": 7,
-      "term": "fold",
-      "works": 38,
-      "traces": 38
     },
     {
       "rank": 8,
@@ -91,6 +91,6 @@
   ],
   "claim": "These twelve terms are the strongest current recurrences in FoldForge's selected archive source language.",
   "boundary": "Recurrence witnesses presence. It does not determine authorial intention, semantic truth, final interpretation, value, or authority.",
-  "semantic_witness": "sha256:4e575f3b3451d6f12704145e6f92dec97d8db55147c43f84392f94cde1f87777",
-  "witness": "sha256:785ef0200b2f73c2327fe7fa1f887d1f3f297bcb879be345eb64e0bd6dd2f74c"
+  "semantic_witness": "sha256:6d5d16853b2a6b8ba0518bcec0d5ed4900322232e8d88f28cd6355d1b9c12630",
+  "witness": "sha256:84aebaf3dd319d36994b2083ddf8614782841d8fde61fe5735a52da7664f1e02"
 }

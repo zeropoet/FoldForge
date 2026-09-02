@@ -1,9 +1,5 @@
 name: Deploy GitHub Pages
 on:
-  push:
-    branches: [main]
-  schedule:
-    - cron: "23 * * * *"
   workflow_dispatch:
 permissions:
   contents: read
@@ -29,10 +25,10 @@ jobs:
       - name: Recover prior confirmed language observation
         run: |
           curl --fail --silent --show-error --retry 3 \
-            "https://foldforge.xyz/root-logos-language-composition.json?run=${GITHUB_RUN_ID}" \
+            "https://foldforge.zeropoet.xyz/root-logos-language-composition.json?run=${GITHUB_RUN_ID}" \
             -o /tmp/foldforge-language-previous.json || true
           curl --fail --silent --show-error --retry 3 \
-            "https://foldforge.xyz/root-logos-language-observation.json?run=${GITHUB_RUN_ID}" \
+            "https://foldforge.zeropoet.xyz/root-logos-language-observation.json?run=${GITHUB_RUN_ID}" \
             -o /tmp/foldforge-language-observation-previous.json || true
       - name: Build Root Logos language composition export
         id: language
@@ -53,7 +49,6 @@ jobs:
           fi
       - run: npm run build
         env:
-          CUSTOM_DOMAIN: foldforge.xyz
           NEXT_PUBLIC_ALCHEMY_API_KEY: ${{ secrets.NEXT_PUBLIC_ALCHEMY_API_KEY }}
       - uses: actions/upload-pages-artifact@v5
         with:
@@ -78,7 +73,6 @@ jobs:
           owner: zeropoet
           repositories: |
             Telos
-            FoldPortrait
           permission-contents: write
       - name: Propagate the deployed instrument to Telos
         if: github.event_name == 'push' || needs.build.outputs.language_changed == 'true'
@@ -92,7 +86,7 @@ jobs:
             --arg source_sha "$SOURCE_SHA" \
             --arg change_class "public-interface" \
             --arg summary "FoldForge deployed its current visual-time, sonic, archive, and witness instruments." \
-            --arg witness_url "https://foldforge.xyz/" \
+            --arg witness_url "https://foldforge.zeropoet.xyz/" \
             --arg occurred_at "$occurred_at" \
             '{event_type:"telos-propagation",client_payload:{source_repository:$source_repository,source_sha:$source_sha,change_class:$change_class,summary:$summary,witness_url:$witness_url,occurred_at:$occurred_at}}')
           curl --fail --silent --show-error \
@@ -100,25 +94,6 @@ jobs:
             -X POST https://api.github.com/repos/zeropoet/Telos/dispatches \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer $TELOS_DISPATCH_TOKEN" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \
-            -H "Content-Type: application/json" \
-            --data "$payload"
-
-      - name: Wake FoldPortrait from the deployed source event
-        if: github.event_name == 'push' || needs.build.outputs.language_changed == 'true'
-        env:
-          FOLDPORTRAIT_DISPATCH_TOKEN: ${{ steps.connected-system-token.outputs.token }}
-          SOURCE_SHA: ${{ github.sha }}
-        run: |
-          payload=$(jq -n \
-            --arg source_repository "zeropoet/FoldForge" \
-            --arg source_sha "$SOURCE_SHA" \
-            '{event_type:"connected-system-changed",client_payload:{source_repository:$source_repository,source_sha:$source_sha}}')
-          curl --fail --silent --show-error \
-            --retry 4 --retry-all-errors --retry-delay 3 \
-            -X POST https://api.github.com/repos/zeropoet/FoldPortrait/dispatches \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer $FOLDPORTRAIT_DISPATCH_TOKEN" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             -H "Content-Type: application/json" \
             --data "$payload"

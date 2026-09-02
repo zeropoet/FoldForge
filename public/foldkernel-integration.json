@@ -3,7 +3,7 @@
   "consumer": {
     "name": "FoldForge",
     "repository": "https://github.com/zeropoet/FoldForge",
-    "publicManifestURL": "https://foldforge.xyz/foldkernel-integration.json"
+    "publicManifestURL": "https://foldforge.zeropoet.xyz/foldkernel-integration.json"
   },
   "foldKernel": {
     "protocolVersion": "FoldKernel-1.0.0",

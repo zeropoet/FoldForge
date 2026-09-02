@@ -1,0 +1,91 @@
+{
+  "schema": "foldforge-language-observation/v1",
+  "archive": {
+    "schema": "foldforge-language-archive-observation/v1",
+    "candidate": {
+      "source_works": 313,
+      "state_witness": "sha256:83424dea2fedf92d61d80ddf803dd4ef361e279ff33987fc476ed644158290ee"
+    },
+    "confirmations": 2,
+    "promoted": false
+  },
+  "lexical": {
+    "candidate_terms": [
+      {
+        "rank": 1,
+        "term": "forge",
+        "works": 57,
+        "traces": 57
+      },
+      {
+        "rank": 2,
+        "term": "fold",
+        "works": 56,
+        "traces": 56
+      },
+      {
+        "rank": 3,
+        "term": "archive",
+        "works": 51,
+        "traces": 51
+      },
+      {
+        "rank": 4,
+        "term": "rwl",
+        "works": 49,
+        "traces": 49
+      },
+      {
+        "rank": 5,
+        "term": "void",
+        "works": 43,
+        "traces": 43
+      },
+      {
+        "rank": 6,
+        "term": "architecture",
+        "works": 41,
+        "traces": 41
+      },
+      {
+        "rank": 7,
+        "term": "hært",
+        "works": 41,
+        "traces": 41
+      },
+      {
+        "rank": 8,
+        "term": "ritual",
+        "works": 22,
+        "traces": 22
+      },
+      {
+        "rank": 9,
+        "term": "vow",
+        "works": 17,
+        "traces": 17
+      },
+      {
+        "rank": 10,
+        "term": "silence",
+        "works": 16,
+        "traces": 16
+      },
+      {
+        "rank": 11,
+        "term": "function",
+        "works": 15,
+        "traces": 15
+      },
+      {
+        "rank": 12,
+        "term": "core",
+        "works": 14,
+        "traces": 14
+      }
+    ],
+    "candidate_witness": "sha256:7b2afc2d73549d95eec1d35bc369581860372bbc3dae13246a4388100cf85fef",
+    "confirmations": 2,
+    "promoted": true
+  }
+}

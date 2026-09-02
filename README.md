@@ -2,6 +2,12 @@
 
 FoldForge is a static Ethereum NFT archive and autonomous data composer for `zeropoet.eth`, presented through a monochrome, typography-led interface.
 
+Canonical public entry:
+[foldforge.zeropoet.xyz](https://foldforge.zeropoet.xyz/). FoldForge is a studio
+instrument beneath the Mancel Lindsey / Zeropoet artist and developer identity.
+Its outputs may enter Sovereign Standard and Root Logos through their existing
+bounded relations without transferring FoldForge authority.
+
 ## Telos relation
 
 Telos is the connected system's final caretaker and keeper, not an owner of
@@ -199,10 +205,13 @@ Collection and minted-work views use query-based URLs so deep links continue to 
 Minted-work records link to the contract and token on Etherscan and expose original token metadata and media files when the provider returns them.
 Within a collection, the previous and next controls follow the same order shown by the collection grid. The left and right arrow keys provide the same traversal without wrapping at either boundary, and text-entry controls retain normal keyboard behavior.
 
-## Deploy to GitHub Pages
+## Canonical deployment and GitHub backup
 
-Deployment is automated by [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) whenever `main` is updated.
-The production deployment is published at [foldforge.xyz](https://foldforge.xyz).
+The canonical production deployment is published from Lightsail at
+[foldforge.zeropoet.xyz](https://foldforge.zeropoet.xyz). The former public
+address, [foldforge.xyz](https://foldforge.xyz), permanently redirects to that
+canonical studio subdomain. GitHub Pages is a manually invoked backup build;
+it is not the live runtime or release authority.
 After a successful deployment of every source push, FoldForge dispatches its
 exact published commit to Root Logos for immediate connected-source witnessing.
 The same successful deployment sends a bounded `telos-propagation` receipt to
@@ -230,13 +239,11 @@ must appear in two consecutive hourly observations before it becomes confirmed
 evidence. Pending observations are retained in a public sidecar but do not wake
 Root Logos.
 
-The deployment runs on every `main` update and once each hour as a bounded
-archive observation cadence. An unchanged lexical witness remains dormant in
-Root Logos, and unchanged deployments do not dispatch. A confirmed archive
-change updates the connected-source evidence. Only a changed rank, term,
-recurrence count, trace count, or grammar changes the semantic witness and
-recomposes Library editions. This separates a meaningful language change from
-provider fluctuation while preserving the system-wide propagation policy.
+The canonical Lightsail release and its bounded observer carry live archive
+changes. The manual GitHub backup does not define production state. An
+unchanged lexical witness remains dormant in Root Logos. Only a changed rank,
+term, recurrence count, trace count, or grammar changes the semantic witness
+and recomposes Library editions.
 
 1. Create a dedicated Alchemy app for this site.
 2. Add its key at **Repository settings → Secrets and variables → Actions** as `NEXT_PUBLIC_ALCHEMY_API_KEY`.
@@ -244,7 +251,7 @@ provider fluctuation while preserving the system-wide propagation policy.
    `TELOS_BRIDGE_APP_CLIENT_ID` and its PKCS#8 private key as the repository
    secret `TELOS_BRIDGE_APP_PRIVATE_KEY`.
 4. Select **Repository settings → Pages → Build and deployment → Source → GitHub Actions**.
-5. Push to `main`, or run the workflow manually from the Actions tab.
+5. Run the workflow manually only when a GitHub Pages backup snapshot is needed.
 
 The Next.js configuration publishes from the domain root when `CUSTOM_DOMAIN` is set and otherwise derives the repository path for standard GitHub Pages hosting.
 

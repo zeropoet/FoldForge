@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://foldforge.xyz"),
+  metadataBase: new URL("https://foldforge.zeropoet.xyz"),
   title: "FoldForge — Ethereum Archive",
   description: "An archival index of Ethereum NFT collections and minted works.",
   manifest: "/manifest.webmanifest",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "FoldForge — Ethereum Archive",
     description: "An archival index of Ethereum NFT collections and minted works.",
-    url: "https://foldforge.xyz",
+    url: "https://foldforge.zeropoet.xyz",
     siteName: "FoldForge",
     images: [{ url: "/foldforge-social.png", width: 1200, height: 630, alt: "FoldForge Ethereum Archive" }],
     type: "website",
