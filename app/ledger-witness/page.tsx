@@ -43,7 +43,7 @@ export default function LedgerWitness() {
 
   useEffect(() => { Promise.all([
     fetch(LOCAL_PREPARED_MINTS).then((response) => response.json()),
-    fetch(LOCAL_SS_VESSELS).then((response) => response.json()),
+    fetch(LOCAL_SS_VESSELS, { cache: "no-store" }).then((response) => response.json()),
     fetch(LIVE_RELATIONS, { cache: "no-store" }).then((response) => response.ok ? response.json() : null).catch(() => null),
     fetch(LIVE_UNITS, { cache: "no-store" }).then((response) => response.ok ? response.json() : null).catch(() => null),
   ]).then(([batchData, unitData, liveRelations, liveUnits]) => {
