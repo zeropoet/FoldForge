@@ -219,6 +219,12 @@ Telos. It contains only repository identity, commit, change class, a public
 summary, public witness URL, and time; Telos records it as pending semantic
 synchronization rather than treating receipt as adoption.
 FoldPortrait is a sealed archive and is never woken by FoldForge propagation.
+
+FoldForge also publishes `public/record-sound-archive.json` as its bounded sound
+manifest for [The Record](https://record.zeropoet.xyz/). The manifest exposes
+declared structures and SHA-256 witnesses, not private browser media. The Record
+pulls and validates it from the live FoldForge Lightsail surface; GitHub remains
+a backup and is not part of that archive path.
 Hourly archive observations also dispatch when their confirmed language witness
 changes. Root Logos performs the final witness comparison, so a source push
 whose public grammars and normalized language are unchanged remains dormant
