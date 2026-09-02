@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import PublicHeader from "../public-header";
-import { validateMint } from "./ledger";
+import { actionableMintWorks, mintAvailability, validateMint } from "./ledger";
 import "./ledger-witness.css";
 
 declare global { interface Window { Xumm?: new (key: string) => XamanClient } }
@@ -43,13 +43,24 @@ export default function LedgerWitness() {
     fetch(LOCAL_PREPARED_MINTS).then((response) => response.json()),
     fetch(LOCAL_SS_VESSELS).then((response) => response.json()),
   ]).then(([batchData, unitData]) => {
-    setBatch(Array.isArray(batchData.works) ? batchData.works : []);
-    setUnits((Array.isArray(unitData.units) ? unitData.units : []).filter((unit: Unit & { claimed_at?: string }) => unit.state === "claimed" || unit.display_state === "CLAIMED").sort((left: Unit & { claimed_at?: string }, right: Unit & { claimed_at?: string }) => String(left.claimed_at || "").localeCompare(String(right.claimed_at || "")) || left.id - right.id));
-    setStatus("Local mint evidence ready");
+    const loadedBatch = Array.isArray(batchData.works) ? batchData.works as BatchWork[] : [];
+    const loadedUnits = (Array.isArray(unitData.units) ? unitData.units : []).filter((unit: Unit & { claimed_at?: string }) => unit.state === "claimed" || unit.display_state === "CLAIMED").sort((left: Unit & { claimed_at?: string }, right: Unit & { claimed_at?: string }) => String(left.claimed_at || "").localeCompare(String(right.claimed_at || "")) || left.id - right.id);
+    const ready = actionableMintWorks(loadedBatch, loadedUnits);
+    setBatch(loadedBatch);
+    setUnits(loadedUnits);
+    if (ready.length === 1) {
+      const work = ready[0];
+      const assigned = work.sequence && loadedUnits[work.sequence - 1] ? [loadedUnits[work.sequence - 1].id] : [];
+      setPreparedId(work.artifact_id); setVisibleUnits(assigned); setTitle(work.title); setDescription(work.description); setHash(work.sha256); setMetadataUri(work.metadata_uri);
+      setStatus(`${work.title} → SS Vessel ${assigned[0]} / claim order ${work.sequence}`);
+    } else {
+      setStatus(`Completed FoldPortrait archive ready / ${loadedBatch.length} works / ${ready.length} currently eligible`);
+    }
   }).catch(() => setStatus("Local prepared evidence is unavailable")); }, []);
 
   const errors = useMemo(() => validateMint({ account: CONFIG.witnessWallet, title, description, sha256: hash, metadataUri, visibleUnits }), [title, description, hash, metadataUri, visibleUnits]);
-  const actionableWorks = useMemo(() => batch.filter((work) => work.mint_status === "prepared" && Boolean(work.sequence && units[work.sequence - 1])), [batch, units]);
+  const actionableWorks = useMemo(() => actionableMintWorks(batch, units), [batch, units]);
+  const mintedCount = useMemo(() => batch.filter((work) => work.mint_status === "minted").length, [batch]);
 
   useEffect(() => {
     if (!preparedId || !transaction || propagation === "idle" || propagation === "complete") return;
@@ -134,6 +145,12 @@ export default function LedgerWitness() {
           <article className="ledger-witness-record border border-black/20 bg-white p-6 md:p-8"><p className="text-[9px] uppercase tracking-[0.22em] text-black/40">03 / Prepare and sign</p><div className="mt-5 flex flex-wrap gap-2"><button className="border border-black bg-black px-5 py-4 text-[8px] uppercase tracking-[0.18em] text-white" onClick={prepare}>Prepare mint intent</button><button className="border border-black/35 px-5 py-4 text-[8px] uppercase tracking-[0.18em]" onClick={() => void connect()}>{account ? "Wallet connected" : "Connect Xaman"}</button><button disabled={!intent} className="border border-black bg-white px-5 py-4 text-[8px] uppercase tracking-[0.18em] text-black disabled:opacity-25" onClick={() => void sign()}>Open signing request</button></div></article></div>
         <aside className="ledger-witness-controls flex flex-col border border-black/20 bg-white p-5 lg:sticky lg:top-24 lg:self-start"><p className="text-[9px] uppercase tracking-[0.22em] text-black/40">Witness state</p><p className="mt-4 text-3xl font-light">{preparedId ? "01 / 01" : "00 / 01"}</p><p className="mt-2 font-mono text-[8px] uppercase tracking-[0.15em] text-black/30">work admitted</p><p className="mt-7 border-t border-black/20 pt-5 text-sm font-light leading-6">{status}</p><dl className="mt-6 space-y-4 border-t border-black/20 pt-5 font-mono text-[8px] uppercase tracking-[0.13em]"><div className="flex justify-between gap-4"><dt className="text-black/35">Source hash</dt><dd>{hash ? hash.slice(0, 12) : "Waiting"}</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Intent</dt><dd>{intent ? "Prepared" : "Waiting"}</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Wallet</dt><dd>{account ? `${account.slice(0, 8)}…` : "Disconnected"}</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Payload</dt><dd>{payload?.uuid ? payload.uuid.slice(0, 8) : "Waiting"}</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Transaction</dt><dd>{transaction ? `${transaction.slice(0, 10)}…` : "Waiting"}</dd></div><div className="flex justify-between gap-4"><dt className="text-black/35">Propagation</dt><dd>{propagation}</dd></div></dl>{payload?.next?.always ? <a className="mt-8 border border-black/30 p-4 text-center text-[8px] uppercase tracking-[0.18em]" href={payload.next.always} rel="noreferrer" target="_blank">Open in Xaman</a> : null}<div className="mt-auto grid gap-2 pt-10"><button disabled={!payload?.uuid} className="border border-black/25 p-4 text-[8px] uppercase tracking-[0.18em] disabled:opacity-25" onClick={() => void checkResult()}>Check result</button><button disabled={!transaction || propagation !== "idle"} className="border border-black bg-black p-4 text-[8px] uppercase tracking-[0.18em] text-white disabled:opacity-25" onClick={() => void archive()}>{propagation === "idle" ? "Archive verified result" : "Propagation in progress"}</button></div><p className="mt-6 border-t border-black/15 pt-5 font-mono text-[7px] uppercase leading-4 tracking-[0.12em] text-black/30">The transaction remains unsigned until the configured human steward confirms it through Xaman.</p></aside>
       </section>
+      <details className="mt-8 border border-black/20 bg-white p-5">
+        <summary className="cursor-pointer text-[8px] uppercase tracking-[0.18em] text-black/40">Completed FoldPortrait archive / {batch.length.toString().padStart(3, "0")} works / {mintedCount.toString().padStart(3, "0")} minted / {actionableWorks.length.toString().padStart(2, "0")} ready</summary>
+        <ol className="mt-6 grid gap-px border border-black/15 bg-black/15 sm:grid-cols-2 lg:grid-cols-3">
+          {batch.map((work) => <li className="flex items-center justify-between gap-4 bg-white p-3 font-mono text-[7px] uppercase leading-4 tracking-[0.11em]" key={work.artifact_id}><span>{String(work.sequence || 0).padStart(3, "0")} / {work.title}</span><span className={mintAvailability(work, units) === "ready" ? "text-red-600" : "text-black/30"}>{mintAvailability(work, units)}</span></li>)}
+        </ol>
+      </details>
       {intent ? <details className="mt-8 border border-black/20 bg-white p-5"><summary className="cursor-pointer text-[8px] uppercase tracking-[0.18em] text-black/40">Prepared transaction evidence</summary><pre className="mt-5 overflow-x-auto text-[8px] leading-5 text-black/45">{JSON.stringify(intent, null, 2)}</pre></details> : null}
       <div aria-live="polite" className="ledger-witness-status mt-8 flex flex-wrap justify-between gap-4 border-t border-black/20 pt-4 font-mono text-[8px] uppercase tracking-[0.14em] text-black/35"><span>{status}</span><span>Canonical evidence / human signature boundary</span></div>
     </div>

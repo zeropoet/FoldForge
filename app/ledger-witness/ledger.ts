@@ -1,5 +1,16 @@
 export const XRPL_ADDRESS = /^r[1-9A-HJ-NP-Za-km-z]{24,34}$/;
 
+export type MintCatalogWork = { sequence?: number; mint_status?: string };
+
+export function actionableMintWorks<T extends MintCatalogWork>(works: T[], claimedUnits: { id: number }[]): T[] {
+  return works.filter((work) => work.mint_status === "prepared" && Boolean(work.sequence && claimedUnits[work.sequence - 1]));
+}
+
+export function mintAvailability(work: MintCatalogWork, claimedUnits: { id: number }[]): "minted" | "ready" | "awaiting vessel" {
+  if (work.mint_status === "minted") return "minted";
+  return work.sequence && claimedUnits[work.sequence - 1] ? "ready" : "awaiting vessel";
+}
+
 export function textToHex(value: string): string {
   return Array.from(new TextEncoder().encode(value), (byte) => byte.toString(16).padStart(2, "0")).join("").toUpperCase();
 }

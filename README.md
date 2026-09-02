@@ -367,8 +367,11 @@ authority for artwork, metadata, prepared mint documents, and canonical ledger
 results. Sovereign Standard owns only vessel state and resulting relations.
 
 The page reads committed local snapshots of FoldPortrait's canonical mint catalog
-and SS claimed-vessel state. There is no local-file bypass: new works become
-selectable only after FoldPortrait archives and sequences them. Intents persist
+and SS claimed-vessel state. The completed archive contains 108 sealed canonical
+works. Ledger Witness exposes that complete sequence as a compact status index,
+while the signing selector admits only the next prepared work whose claim-order
+vessel exists. There is no local-file bypass: works become selectable only after
+FoldPortrait archives and sequences them. Intents persist
 only in the operator's browser. FoldPortrait owns
 artwork, metadata, hashes, and mint candidates; SS owns vessel state and the
 resulting public relationship. A scheduled repository workflow imports the
@@ -379,7 +382,10 @@ Prepared FoldPortrait sequence numbers attach automatically to claimed SS vessel
 in `claimed_at` order. Unmatched works remain in preparation until the
 corresponding vessel exists; the operator cannot override this relation.
 The selector exposes only `prepared` works whose corresponding claimed vessel
-already exists; minted and not-yet-assignable catalog entries remain hidden.
+already exists; minted and not-yet-assignable entries remain visible in the
+archive index but cannot enter the signing flow. When exactly one work is
+eligible, Ledger Witness selects it automatically without weakening the Xaman
+human-signature boundary.
 Ledger Witness deterministically
 prepares an `NFTokenMint` transaction, hands that exact draft to the configured
 Xaman witness wallet, and submits only the verified payload and transaction

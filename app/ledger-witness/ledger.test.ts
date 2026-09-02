@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildMintTransaction, slugify, textToHex, validateMint } from "./ledger";
+import { actionableMintWorks, buildMintTransaction, mintAvailability, slugify, textToHex, validateMint } from "./ledger";
 
 describe("Ledger Witness mint grammar", () => {
   it("builds deterministic XRPL hex fields", () => {
@@ -13,5 +13,16 @@ describe("Ledger Witness mint grammar", () => {
   it("normalizes work identifiers and rejects incomplete drafts", () => {
     expect(slugify(" A Work / One ")).toBe("a-work-one");
     expect(validateMint({ account: "bad", title: "", description: "", sha256: "", metadataUri: "", visibleUnits: [] })).toHaveLength(6);
+  });
+
+  it("admits only the next prepared portrait whose claim-order vessel exists", () => {
+    const works = Array.from({ length: 108 }, (_, offset) => ({
+      sequence: offset + 1,
+      mint_status: offset < 14 ? "minted" : "prepared",
+    }));
+    const claimedUnits = Array.from({ length: 15 }, (_, id) => ({ id }));
+    expect(actionableMintWorks(works, claimedUnits).map((work) => work.sequence)).toEqual([15]);
+    expect(mintAvailability(works[14], claimedUnits)).toBe("ready");
+    expect(mintAvailability(works[15], claimedUnits)).toBe("awaiting vessel");
   });
 });
