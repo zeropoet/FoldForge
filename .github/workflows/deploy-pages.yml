@@ -77,30 +77,9 @@ jobs:
           private-key: ${{ secrets.TELOS_BRIDGE_APP_PRIVATE_KEY }}
           owner: zeropoet
           repositories: |
-            root-logos
             Telos
             FoldPortrait
           permission-contents: write
-      - name: Wake Root Logos source integration
-        if: github.event_name == 'push' || needs.build.outputs.language_changed == 'true'
-        env:
-          ROOT_LOGOS_DISPATCH_TOKEN: ${{ steps.connected-system-token.outputs.token }}
-          FOLDFORGE_REVISION: ${{ github.sha }}
-          FOLDFORGE_LANGUAGE_WITNESS: ${{ needs.build.outputs.language_witness }}
-          FOLDFORGE_SEMANTIC_WITNESS: ${{ needs.build.outputs.semantic_witness }}
-        run: |
-          echo "$FOLDFORGE_REVISION" | grep -Eq '^[a-f0-9]{40}$'
-          echo "$FOLDFORGE_LANGUAGE_WITNESS" | grep -Eq '^sha256:[a-f0-9]{64}$'
-          echo "$FOLDFORGE_SEMANTIC_WITNESS" | grep -Eq '^sha256:[a-f0-9]{64}$'
-          curl --fail --silent --show-error \
-            --retry 4 --retry-all-errors --retry-delay 3 \
-            -X POST https://api.github.com/repos/zeropoet/root-logos/dispatches \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer $ROOT_LOGOS_DISPATCH_TOKEN" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \
-            -H "Content-Type: application/json" \
-            --data "{\"event_type\":\"foldforge-published\",\"client_payload\":{\"revision\":\"$FOLDFORGE_REVISION\",\"language_witness\":\"$FOLDFORGE_LANGUAGE_WITNESS\",\"semantic_witness\":\"$FOLDFORGE_SEMANTIC_WITNESS\"}}"
-
       - name: Propagate the deployed instrument to Telos
         if: github.event_name == 'push' || needs.build.outputs.language_changed == 'true'
         env:
