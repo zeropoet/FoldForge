@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { actionableMintWorks, buildMintTransaction, mintAvailability, slugify, textToHex, validateMint } from "./ledger";
+import { actionableMintWorks, buildMintTransaction, mergeMintRegistry, mintAvailability, slugify, textToHex, validateMint } from "./ledger";
 
 describe("Ledger Witness mint grammar", () => {
   it("builds deterministic XRPL hex fields", () => {
@@ -24,5 +24,17 @@ describe("Ledger Witness mint grammar", () => {
     expect(actionableMintWorks(works, claimedUnits).map((work) => work.sequence)).toEqual([15]);
     expect(mintAvailability(works[14], claimedUnits)).toBe("ready");
     expect(mintAvailability(works[15], claimedUnits)).toBe("awaiting vessel");
+  });
+
+  it("removes a live minted work immediately without exposing the next vesselless work", () => {
+    const works = [15, 16].map((sequence) => ({
+      sequence, artifact_id: `foldportrait-${sequence}`, sha256: String(sequence).padStart(64, "0"), mint_status: "prepared",
+    }));
+    const live = { works: [{
+      artifact_id: "foldportrait-15", file_sha256: String(15).padStart(64, "0"), mint_status: "minted", xrpl: { validated: true },
+    }] };
+    const merged = mergeMintRegistry(works, live);
+    expect(merged[0].mint_status).toBe("minted");
+    expect(actionableMintWorks(merged, Array.from({ length: 15 }, (_, id) => ({ id })))).toEqual([]);
   });
 });

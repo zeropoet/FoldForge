@@ -218,8 +218,7 @@ The same successful deployment sends a bounded `telos-propagation` receipt to
 Telos. It contains only repository identity, commit, change class, a public
 summary, public witness URL, and time; Telos records it as pending semantic
 synchronization rather than treating receipt as adoption.
-The originating workflow then wakes FoldPortrait with the same short-lived App
-token; Telos does not retain another private-key copy solely to relay the event.
+FoldPortrait is a sealed archive and is never woken by FoldForge propagation.
 Hourly archive observations also dispatch when their confirmed language witness
 changes. Root Logos performs the final witness comparison, so a source push
 whose public grammars and normalized language are unchanged remains dormant
@@ -381,10 +380,10 @@ vessel exists. There is no local-file bypass: works become selectable only after
 FoldPortrait archives and sequences them. Intents persist
 only in the operator's browser. FoldPortrait owns
 artwork, metadata, hashes, and mint candidates; SS owns vessel state and the
-resulting public relationship. A scheduled repository workflow imports the
-published FoldPortrait catalog every five minutes, validates its schema,
-authority, and work count, commits only a changed snapshot, and lets the normal
-Pages deployment publish it. A failure opens one deduplicated FoldForge issue.
+resulting public relationship. The local release process imports the sealed
+FoldPortrait catalog, validates its schema, authority, and work count, and
+retains it as backup evidence. A manual GitHub workflow can refresh that backup
+snapshot, but no schedule polls or wakes the completed FoldPortrait archive.
 Prepared FoldPortrait sequence numbers attach automatically to claimed SS vessels
 in `claimed_at` order. Unmatched works remain in preparation until the
 corresponding vessel exists; the operator cannot override this relation.
@@ -400,11 +399,12 @@ identity to the existing server-side archive boundary. Seeds, API secrets, and
 signing authority never enter FoldForge; every submission still requires the
 human steward in Xaman.
 
-After archive submission, Ledger Witness polls the public Sovereign Standard
-relation, FoldPortrait catalog, and deployed FoldForge snapshot. Its visible
-state advances through `queued`, `ss`, `foldportrait`, and `complete`; local
-intent and payload references are cleared only after all three public records
-agree. This is operational propagation only. It does not alter FoldForge's
+After archive submission, Ledger Witness polls the live, canonical Sovereign
+Standard Lightsail projection through the Cloudflare edge. Once that projection
+confirms the mint, the Ledger updates in place and removes the completed work
+from eligibility immediately. GitHub and deployed static catalogs remain backup
+evidence; neither sits in the live completion path. This is operational
+propagation only. It does not alter FoldForge's
 Ethereum archive or compositional grammar, and Root Logos recomposes Library
 voices only when FoldForge's separate composition witness changes.
 

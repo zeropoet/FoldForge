@@ -2,6 +2,18 @@ export const XRPL_ADDRESS = /^r[1-9A-HJ-NP-Za-km-z]{24,34}$/;
 
 export type MintCatalogWork = { sequence?: number; mint_status?: string };
 
+export function mergeMintRegistry<T extends MintCatalogWork & { artifact_id: string; sha256: string }>(
+  catalog: T[],
+  registry: { works?: Array<{ artifact_id: string; file_sha256?: string; mint_status?: string; xrpl?: unknown }> },
+): T[] {
+  const live = new Map((registry.works || []).map((work) => [work.artifact_id, work]));
+  return catalog.map((work) => {
+    const relation = live.get(work.artifact_id);
+    if (!relation || relation.file_sha256 !== work.sha256) return work;
+    return { ...work, mint_status: relation.mint_status || work.mint_status, xrpl: relation.xrpl } as T;
+  });
+}
+
 export function actionableMintWorks<T extends MintCatalogWork>(works: T[], claimedUnits: { id: number }[]): T[] {
   return works.filter((work) => work.mint_status === "prepared" && Boolean(work.sequence && claimedUnits[work.sequence - 1]));
 }

@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import PublicHeader from "../public-header";
-import { actionableMintWorks, mintAvailability, validateMint } from "./ledger";
+import { actionableMintWorks, mergeMintRegistry, mintAvailability, validateMint } from "./ledger";
 import "./ledger-witness.css";
 
 declare global { interface Window { Xumm?: new (key: string) => XamanClient } }
@@ -14,6 +14,8 @@ type Unit = { id: number; state?: string; display_state?: string };
 
 const LOCAL_PREPARED_MINTS = "/ledger-witness/foldportrait-mints.json";
 const LOCAL_SS_VESSELS = "/ledger-witness/ss-vessels.json";
+const LIVE_RELATIONS = "https://sovereign-standard-claim-relay.mancel.workers.dev/witness/foldportrait-relations";
+const LIVE_UNITS = "https://sovereign-standard-claim-relay.mancel.workers.dev/registry/units";
 const CONFIG = {
   xamanKey: "12b958fc-7cef-4b5d-933d-2c285bf09955",
   witnessWallet: "rfYiNfgLefTAZGfEyun1EjG68mTtC75vDe",
@@ -42,9 +44,13 @@ export default function LedgerWitness() {
   useEffect(() => { Promise.all([
     fetch(LOCAL_PREPARED_MINTS).then((response) => response.json()),
     fetch(LOCAL_SS_VESSELS).then((response) => response.json()),
-  ]).then(([batchData, unitData]) => {
-    const loadedBatch = Array.isArray(batchData.works) ? batchData.works as BatchWork[] : [];
-    const loadedUnits = (Array.isArray(unitData.units) ? unitData.units : []).filter((unit: Unit & { claimed_at?: string }) => unit.state === "claimed" || unit.display_state === "CLAIMED").sort((left: Unit & { claimed_at?: string }, right: Unit & { claimed_at?: string }) => String(left.claimed_at || "").localeCompare(String(right.claimed_at || "")) || left.id - right.id);
+    fetch(LIVE_RELATIONS, { cache: "no-store" }).then((response) => response.ok ? response.json() : null).catch(() => null),
+    fetch(LIVE_UNITS, { cache: "no-store" }).then((response) => response.ok ? response.json() : null).catch(() => null),
+  ]).then(([batchData, unitData, liveRelations, liveUnits]) => {
+    const localBatch = Array.isArray(batchData.works) ? batchData.works as BatchWork[] : [];
+    const loadedBatch = liveRelations ? mergeMintRegistry(localBatch, liveRelations) : localBatch;
+    const effectiveUnitData = Array.isArray(liveUnits?.units) ? liveUnits : unitData;
+    const loadedUnits = (Array.isArray(effectiveUnitData.units) ? effectiveUnitData.units : []).filter((unit: Unit & { claimed_at?: string }) => unit.state === "claimed" || unit.display_state === "CLAIMED").sort((left: Unit & { claimed_at?: string }, right: Unit & { claimed_at?: string }) => String(left.claimed_at || "").localeCompare(String(right.claimed_at || "")) || left.id - right.id);
     const ready = actionableMintWorks(loadedBatch, loadedUnits);
     setBatch(loadedBatch);
     setUnits(loadedUnits);
@@ -68,20 +74,13 @@ export default function LedgerWitness() {
     const poll = async () => {
       try {
         const nonce = Date.now();
-        const [relations, canonical, local] = await Promise.all([
-          fetch(`https://sovereignstandard.co/foldportrait-relations.json?status=${nonce}`, { cache: "no-store" }).then((response) => response.json()),
-          fetch(`https://zeropoet.github.io/FoldPortrait/Mint/catalog.json?status=${nonce}`, { cache: "no-store" }).then((response) => response.json()),
-          fetch(`${LOCAL_PREPARED_MINTS}?status=${nonce}`, { cache: "no-store" }).then((response) => response.json()),
-        ]);
+        const relations = await fetch(`${LIVE_RELATIONS}?status=${nonce}`, { cache: "no-store" }).then((response) => response.json());
         if (!active) return;
         const minted = (value: { works?: BatchWork[] }) => value.works?.find((work) => work.artifact_id === preparedId)?.mint_status === "minted";
-        if (minted(local)) {
-          setPropagation("complete"); setStatus("Propagation complete / SS relation, FoldPortrait catalog, and FoldForge snapshot agree");
+        if (minted(relations)) {
+          setBatch((current) => mergeMintRegistry(current, relations));
+          setPropagation("complete"); setStatus("Canonical SS relation committed / FoldForge Ledger synchronized");
           sessionStorage.removeItem("foldforge_ledger_witness_payload"); localStorage.removeItem("foldforge_ledger_witness_intent");
-        } else if (minted(canonical)) {
-          setPropagation("foldportrait"); setStatus("FoldPortrait canonical record synchronized / awaiting FoldForge deployment");
-        } else if (minted(relations)) {
-          setPropagation("ss"); setStatus("Sovereign Standard relation committed / awaiting FoldPortrait synchronization");
         }
       } catch { /* retain the last verified stage and retry */ }
     };
