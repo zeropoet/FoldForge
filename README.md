@@ -294,17 +294,24 @@ its balance between the left and right channels.
 
 ## Relation Forge
 
-`/relation-forge` is a private, local-first image-to-language instrument. A
-participant admits an image, records and explicitly confirms visible evidence,
-names the lived field the event enters, and composes a two-line Witness Couplet
-under the proposed `FF-COMP-0006` grammar. Root Logos v1.4 supplies the higher
-language constraints: evidence remains prior to interpretation, relation does
-not exhaust the source, and the resulting utterance retains a corrigible
-witness. Sovereign Standard supplies the first bounded field vocabulary.
+`/relation-forge` is Sovereign Standard's private, pre-publication image and
+language boundary for
+[`@sovereignstandardtea`](https://www.instagram.com/sovereignstandardtea/).
+It admits one browser-readable JPG, PNG, or WebP photograph into volatile local
+memory, records its dimensions, SHA-256 identity, and visual field, then asks
+the steward to confirm the subject, setting, light, material details, ritual
+gesture, atmospheric field, and any product truth the image can responsibly
+carry.
 
-Image bytes remain in the browser. Exported witnesses contain only the source
-filename, dimensions, byte count, SHA-256 identity, confirmed observations,
-grammar version, selected relation, constraint results, and final couplet.
+From that witnessed observation it deterministically composes three editable
+post movements: stillness, ritual, and relation. Each includes literal alt text
+and a three-part caption shaped by the eight approved Sovereign Standard posts.
+The validator excludes hashtags, embedded links, pricing, wallet language, and
+operational mechanics. A valid draft exports as
+`foldforge-sovereign-instagram-draft/v1`, ready for human review and later
+admission into the canonical Sovereign Standard image archive and Telos post
+catalog. The photograph itself is never uploaded, retained, or embedded in the
+packet, and Relation Forge has no Instagram credentials or posting authority.
 
 Instrument `sonic-forge/steel-voice/v2` adds a fixed centered articulation
 mapping: a 92 Hz low shelf gives bass and kick events physical foundation, a
