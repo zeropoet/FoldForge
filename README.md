@@ -456,9 +456,13 @@ replacing the manifest releases the imported bytes.
 Alchemy provides owner, contract, token, and cached metadata. `app/collection-policy.ts` applies repository-owned exclusions. `app/nft-data.ts` normalizes provider media and constructs responsive derivative URLs. `app/page.tsx` resolves the archive and computes or restores versioned visual signatures. `app/composition-witness.ts` seals every grammar and the current displacement-map witness into archive evidence, while `app/composer-chamber.tsx` derives the lexical field, archive-seamed chromatic field, autonomous six-phase macroform, visual-relation arrangements, displacement field, and unified FoldForge voice.
 
 The FOLD FORGE contract
-`0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc` is tokenURI-first. FoldForge
+`0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc` and SOVEREIGN STANDARD contract
+`0x716d8251ce9521657b6d36786e6f414e5c915895` are tokenURI-first. FoldForge
 calls `tokenURI(tokenId)` directly against current Ethereum state for every
 held token before reading its canonical metadata document or accepting
 provider and marketplace derivatives. The Root Logos language export applies
 the same rule. Provider cache invalidation is therefore useful but never
 authoritative; a base-URI change is reflected directly in contract order.
+
+`npm run refresh:eth-media` asks Alchemy to refresh every currently held
+Ethereum token without rewriting any canonical media or repository data.

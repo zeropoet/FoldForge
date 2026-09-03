@@ -98,6 +98,7 @@ export interface TokenSummary {
 export const addressPattern = /^0x[a-fA-F0-9]{40}$/;
 const canonicalMetadataContracts = new Set([
   "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
+  "0x716d8251ce9521657b6d36786e6f414e5c915895",
 ]);
 
 function requiresCanonicalMetadata(nft: AlchemyNft): boolean {

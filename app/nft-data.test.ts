@@ -34,6 +34,19 @@ describe("canonical NFT media", () => {
     expect(tokenThumbnailFor(nft)).toBe("https://arweave.net/current-contract-image");
   });
 
+  it("never lets a provider thumbnail override canonical Sovereign Standard media", () => {
+    const nft: AlchemyNft = {
+      contract: { address: "0x716d8251ce9521657b6d36786e6f414e5c915895" },
+      image: {
+        cachedUrl: "https://provider.example/stale-token.png",
+        thumbnailUrl: "https://provider.example/stale-thumbnail.png",
+        originalUrl: "https://arweave.net/current-sovereign-image",
+      },
+    };
+
+    expect(tokenThumbnailFor(nft)).toBe("https://arweave.net/current-sovereign-image");
+  });
+
   it("builds ordered, deduplicated responsive thumbnail candidates", () => {
     const srcSet = optimizedImageSrcSet("ar://image-transaction", [720, 240, 480, 480]);
 

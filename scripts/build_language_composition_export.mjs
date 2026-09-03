@@ -20,7 +20,10 @@ const denylist = new Set([
   "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
   "0x1e3b1154aedee78e10d67aa0001ab5c5b4d1143b",
 ]);
-const canonicalMetadataContracts = new Set(["0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc"]);
+const canonicalMetadataContracts = new Set([
+  "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
+  "0x716d8251ce9521657b6d36786e6f414e5c915895",
+]);
 const stopWords = new Set([
   "a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "from", "in",
   "into", "is", "it", "not", "of", "on", "or", "that", "the", "this", "to",
