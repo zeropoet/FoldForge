@@ -20,7 +20,7 @@ const denylist = new Set([
   "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
   "0x1e3b1154aedee78e10d67aa0001ab5c5b4d1143b",
 ]);
-const canonicalMetadataContracts = new Set([
+const directTokenUriContracts = new Set([
   "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "0x716d8251ce9521657b6d36786e6f414e5c915895",
 ]);
@@ -45,29 +45,31 @@ const normalizeMediaUrl = (value = "") => String(value)
   .replace(/^ipfs:\/\//i, "https://ipfs.io/ipfs/");
 const hydrateCanonicalEvidence = async (token) => {
   const contract = token.contract?.address?.toLowerCase() || "";
-  if (!canonicalMetadataContracts.has(contract) || !token.tokenUri) return token;
+  if (!token.tokenUri) return token;
   let tokenUri = token.tokenUri;
-  try {
-    const rpc = await fetch(`https://eth-mainnet.g.alchemy.com/v2/${apiKey}`, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({
-        jsonrpc: "2.0",
-        id: Number(token.tokenId),
-        method: "eth_call",
-        params: [{
-          to: contract,
-          data: `0xc87b56dd${BigInt(token.tokenId).toString(16).padStart(64, "0")}`
-        }, "latest"]
-      })
-    }).then((response) => response.json());
-    if (rpc.result) {
-      const bytes = Buffer.from(rpc.result.slice(2), "hex");
-      const offset = Number(BigInt(`0x${bytes.subarray(0, 32).toString("hex")}`));
-      const length = Number(BigInt(`0x${bytes.subarray(offset, offset + 32).toString("hex")}`));
-      tokenUri = bytes.subarray(offset + 32, offset + 32 + length).toString();
-    }
-  } catch {}
+  if (directTokenUriContracts.has(contract)) {
+    try {
+      const rpc = await fetch(`https://eth-mainnet.g.alchemy.com/v2/${apiKey}`, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          jsonrpc: "2.0",
+          id: Number(token.tokenId),
+          method: "eth_call",
+          params: [{
+            to: contract,
+            data: `0xc87b56dd${BigInt(token.tokenId).toString(16).padStart(64, "0")}`
+          }, "latest"]
+        })
+      }).then((response) => response.json());
+      if (rpc.result) {
+        const bytes = Buffer.from(rpc.result.slice(2), "hex");
+        const offset = Number(BigInt(`0x${bytes.subarray(0, 32).toString("hex")}`));
+        const length = Number(BigInt(`0x${bytes.subarray(offset, offset + 32).toString("hex")}`));
+        tokenUri = bytes.subarray(offset + 32, offset + 32 + length).toString();
+      }
+    } catch {}
+  }
   const url = normalizeMediaUrl(tokenUri);
   if (!/^https?:\/\//i.test(url)) return token;
   try {
@@ -109,11 +111,7 @@ const visibleRaw = tokens.filter((token) => {
   const contract = token.contract?.address?.toLowerCase();
   return contract && !denylist.has(contract);
 });
-const visible = await Promise.all(visibleRaw.map((token) =>
-  canonicalMetadataContracts.has(token.contract?.address?.toLowerCase() || "")
-    ? hydrateCanonicalEvidence(token)
-    : token
-));
+const visible = await Promise.all(visibleRaw.map((token) => hydrateCanonicalEvidence(token)));
 const terms = new Map();
 for (const token of visible) {
   const contract = token.contract?.address?.toLowerCase() || "unknown";

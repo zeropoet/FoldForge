@@ -21,6 +21,18 @@ describe("canonical NFT media", () => {
     expect(tokenThumbnailFor(nft)).toBe("https://arweave.net/image-transaction");
   });
 
+  it("prefers canonical original media over a provider cache for every contract", () => {
+    const nft: AlchemyNft = {
+      contract: { address: "0x1111111111111111111111111111111111111111" },
+      image: {
+        cachedUrl: "https://provider.example/stale-token.png",
+        originalUrl: "https://arweave.net/current-original",
+      },
+    };
+
+    expect(tokenThumbnailFor(nft)).toBe("https://arweave.net/current-original");
+  });
+
   it("never lets a provider thumbnail override canonical FoldForge media", () => {
     const nft: AlchemyNft = {
       contract: { address: "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc" },

@@ -96,13 +96,13 @@ export interface TokenSummary {
 }
 
 export const addressPattern = /^0x[a-fA-F0-9]{40}$/;
-const canonicalMetadataContracts = new Set([
+const directTokenUriContracts = new Set([
   "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "0x716d8251ce9521657b6d36786e6f414e5c915895",
 ]);
 
-function requiresCanonicalMetadata(nft: AlchemyNft): boolean {
-  return canonicalMetadataContracts.has(nft.contract?.address?.toLowerCase() || "");
+function readsTokenUriFromChain(nft: AlchemyNft): boolean {
+  return directTokenUriContracts.has(nft.contract?.address?.toLowerCase() || "");
 }
 
 function decodeAbiString(value: string): string {
@@ -117,7 +117,7 @@ async function canonicalTokenUri(nft: AlchemyNft, signal?: AbortSignal): Promise
   const contract = nft.contract?.address?.toLowerCase() || "";
   const tokenId = nft.tokenId;
   const key = process.env.NEXT_PUBLIC_ALCHEMY_API_KEY;
-  if (!canonicalMetadataContracts.has(contract) || !tokenId || !key) return nft.tokenUri || "";
+  if (!directTokenUriContracts.has(contract) || !tokenId || !key) return nft.tokenUri || "";
   try {
     const response = await fetch(`https://eth-mainnet.g.alchemy.com/v2/${key}`, {
       method: "POST",
@@ -186,43 +186,26 @@ export function imageFor(nft: AlchemyNft): string {
 }
 
 export function tokenImageFor(nft: AlchemyNft): string {
-  if (requiresCanonicalMetadata(nft)) {
-    return (
-      nft.image?.originalUrl ||
-      nft.raw?.metadata?.image_url ||
-      nft.raw?.metadata?.image ||
-      nft.animation?.originalUrl ||
-      ""
-    );
-  }
   return (
-    nft.image?.cachedUrl ||
-    nft.image?.thumbnailUrl ||
-    nft.image?.pngUrl ||
     nft.image?.originalUrl ||
     nft.raw?.metadata?.image_url ||
     nft.raw?.metadata?.image ||
-    nft.animation?.cachedUrl ||
     nft.animation?.originalUrl ||
     nft.raw?.metadata?.animation_url ||
+    nft.image?.cachedUrl ||
+    nft.image?.pngUrl ||
+    nft.image?.thumbnailUrl ||
+    nft.animation?.cachedUrl ||
     ""
   );
 }
 
 export function tokenThumbnailFor(nft: AlchemyNft): string {
-  if (requiresCanonicalMetadata(nft)) {
-    return normalizeMediaUrl(
-      nft.image?.originalUrl ||
-      nft.raw?.metadata?.image_url ||
-      nft.raw?.metadata?.image ||
-      "",
-    );
-  }
   return normalizeMediaUrl(
-    nft.image?.cachedUrl ||
     nft.image?.originalUrl ||
     nft.raw?.metadata?.image_url ||
     nft.raw?.metadata?.image ||
+    nft.image?.cachedUrl ||
     nft.image?.pngUrl ||
     nft.image?.thumbnailUrl ||
     "",
@@ -326,24 +309,15 @@ function sameMetadataIdentity(
   return metadataName.trim().toLocaleLowerCase() === tokenName.trim().toLocaleLowerCase();
 }
 
-function hasDecentralizedOriginal(nft: AlchemyNft): boolean {
-  const original = normalizeMediaUrl(
-    nft.image?.originalUrl ||
-    nft.raw?.metadata?.image_url ||
-    nft.raw?.metadata?.image,
-  );
-  return /^https:\/\/(?:[^/]+\.)?arweave\.net\//i.test(original) || /\/ipfs\//i.test(original);
-}
-
 export async function hydrateCanonicalMedia(
   nft: AlchemyNft,
   signal?: AbortSignal,
   preferCanonical = false,
 ): Promise<AlchemyNft> {
-  const contractRequiresCurrentChainState = preferCanonical && requiresCanonicalMetadata(nft);
+  const contractRequiresCurrentChainState = preferCanonical && readsTokenUriFromChain(nft);
   if (
-    !contractRequiresCurrentChainState
-    && ((tokenImageFor(nft) && (!preferCanonical || hasDecentralizedOriginal(nft))) || !nft.tokenUri)
+    !preferCanonical
+    && (tokenImageFor(nft) || !nft.tokenUri)
   ) return nft;
 
   const tokenUri = preferCanonical ? await canonicalTokenUri(nft, signal) : nft.tokenUri || "";
@@ -701,11 +675,9 @@ export async function fetchOwnedNfts({
     }
 
     const payload = await providerFetch<{ ownedNfts?: AlchemyNft[]; pageKey?: string }>(endpoint, signal);
-    const page = await Promise.all((payload.ownedNfts || []).map((nft) => hydrateCanonicalMedia(
-      nft,
-      signal,
-      canonicalMetadataContracts.has(nft.contract?.address?.toLowerCase() || ""),
-    )));
+    const page = await Promise.all((payload.ownedNfts || []).map((nft) =>
+      hydrateCanonicalMedia(nft, signal, true)
+    ));
     nfts.push(...page);
     onPage?.([...nfts]);
     pageKey = payload.pageKey;
