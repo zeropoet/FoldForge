@@ -201,15 +201,24 @@ export function tokenImageFor(nft: AlchemyNft): string {
 }
 
 export function tokenThumbnailFor(nft: AlchemyNft): string {
-  return normalizeMediaUrl(
+  return tokenThumbnailCandidates(nft)[0] || "";
+}
+
+export function tokenThumbnailCandidates(nft: AlchemyNft): string[] {
+  return [...new Set([
     nft.image?.originalUrl ||
+    "",
     nft.raw?.metadata?.image_url ||
+    "",
     nft.raw?.metadata?.image ||
+    "",
     nft.image?.cachedUrl ||
+    "",
     nft.image?.pngUrl ||
+    "",
     nft.image?.thumbnailUrl ||
     "",
-  );
+  ].map(normalizeMediaUrl).filter(Boolean))];
 }
 
 export function optimizedImageUrl(
@@ -356,12 +365,8 @@ export async function hydrateCanonicalMedia(
         description: contractRequiresCurrentChainState
           ? metadata.description || ""
           : nft.description || metadata.description || "",
-        image: image
-          ? contractRequiresCurrentChainState ? { originalUrl: image } : { ...nft.image, originalUrl: image }
-          : nft.image,
-        animation: animation
-          ? contractRequiresCurrentChainState ? { originalUrl: animation } : { ...nft.animation, originalUrl: animation }
-          : nft.animation,
+        image: image ? { ...nft.image, originalUrl: image } : nft.image,
+        animation: animation ? { ...nft.animation, originalUrl: animation } : nft.animation,
         raw: {
           ...nft.raw,
           metadata: {

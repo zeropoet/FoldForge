@@ -6,7 +6,7 @@ import { isCollectionAllowed } from "./collection-policy";
 import ComposerChamber, { type ComposerEvidence } from "./composer-chamber";
 import { createCompositionWitness, type CompositionWitness } from "./composition-witness";
 import { resolveOwner } from "./ens";
-import { AlchemyNft, fetchNftMetadata, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, normalizeMediaUrl, optimizedImageSrcSet, optimizedImageUrl, summarizeContracts, tokenImageFor, tokenThumbnailFor } from "./nft-data";
+import { AlchemyNft, fetchNftMetadata, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, normalizeMediaUrl, optimizedImageSrcSet, optimizedImageUrl, summarizeContracts, tokenImageFor, tokenThumbnailCandidates, tokenThumbnailFor } from "./nft-data";
 import { analyzePixels, type VisualSignature } from "./visual-analysis";
 import { analyzeAudio, isAudioUrl, type AudioSignature } from "./audio-analysis";
 import PublicHeader from "./public-header";
@@ -98,6 +98,8 @@ async function analyzeImage(source: string, signal: AbortSignal): Promise<Visual
 
 function MediaTile({ token }: { token: AlchemyNft }) {
   const media = hasVideoMedia(token) ? mintedMediaFor(token) : tokenThumbnailFor(token);
+  const thumbnailCandidates = useMemo(() => tokenThumbnailCandidates(token), [token]);
+  const [thumbnailIndex, setThumbnailIndex] = useState(0);
   if (!media) return null;
   if (isAudioUrl(media)) {
     return <div className="grid h-full place-items-center bg-white px-4 text-center font-mono text-[8px] uppercase tracking-[0.16em] text-black/45">Audio work</div>;
@@ -117,6 +119,7 @@ function MediaTile({ token }: { token: AlchemyNft }) {
       />
     );
   }
+  const thumbnail = thumbnailCandidates[thumbnailIndex] || media;
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
@@ -124,9 +127,10 @@ function MediaTile({ token }: { token: AlchemyNft }) {
       className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0"
       decoding="async"
       loading="lazy"
+      onError={() => setThumbnailIndex((current) => Math.min(current + 1, thumbnailCandidates.length - 1))}
       sizes="(min-width: 1600px) 310px, (min-width: 1280px) 20vw, (min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-      src={optimizedImageUrl(media, { width: 720, quality: 82 })}
-      srcSet={optimizedImageSrcSet(media, [240, 360, 480, 720, 960])}
+      src={optimizedImageUrl(thumbnail, { width: 720, quality: 82 })}
+      srcSet={optimizedImageSrcSet(thumbnail, [240, 360, 480, 720, 960])}
     />
   );
 }

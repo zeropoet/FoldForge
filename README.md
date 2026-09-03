@@ -457,7 +457,9 @@ Alchemy provides owner, contract, token, and cached metadata. `app/collection-po
 
 Every held contract is tokenURI-first: FoldForge reads its canonical metadata
 document and original media before accepting provider or marketplace
-derivatives. For the FOLD FORGE contract
+derivatives. If a canonical gateway is temporarily unavailable, gallery tiles
+fall through their ordered refreshed derivatives rather than disappearing.
+For the FOLD FORGE contract
 `0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc` and SOVEREIGN STANDARD contract
 `0x716d8251ce9521657b6d36786e6f414e5c915895`, FoldForge additionally calls
 `tokenURI(tokenId)` directly against current Ethereum state. The Root Logos

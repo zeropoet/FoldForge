@@ -3,6 +3,7 @@ import {
   canonicalMetadataCandidates,
   hydrateCanonicalMedia,
   optimizedImageSrcSet,
+  tokenThumbnailCandidates,
   tokenThumbnailFor,
   type AlchemyNft,
 } from "./nft-data";
@@ -31,6 +32,10 @@ describe("canonical NFT media", () => {
     };
 
     expect(tokenThumbnailFor(nft)).toBe("https://arweave.net/current-original");
+    expect(tokenThumbnailCandidates(nft)).toEqual([
+      "https://arweave.net/current-original",
+      "https://provider.example/stale-token.png",
+    ]);
   });
 
   it("never lets a provider thumbnail override canonical FoldForge media", () => {
