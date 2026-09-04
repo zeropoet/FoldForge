@@ -3,8 +3,8 @@
   "archive": {
     "schema": "foldforge-language-archive-observation/v1",
     "candidate": {
-      "source_works": 313,
-      "state_witness": "sha256:83424dea2fedf92d61d80ddf803dd4ef361e279ff33987fc476ed644158290ee"
+      "source_works": 315,
+      "state_witness": "sha256:7d5e0c7281353f47fc4562c270b78a618ad3ef742a3265a78a88fdfe2de35d62"
     },
     "confirmations": 2,
     "promoted": false
@@ -14,14 +14,14 @@
       {
         "rank": 1,
         "term": "forge",
-        "works": 57,
-        "traces": 57
+        "works": 56,
+        "traces": 56
       },
       {
         "rank": 2,
         "term": "fold",
-        "works": 56,
-        "traces": 56
+        "works": 55,
+        "traces": 55
       },
       {
         "rank": 3,
@@ -84,7 +84,7 @@
         "traces": 14
       }
     ],
-    "candidate_witness": "sha256:7b2afc2d73549d95eec1d35bc369581860372bbc3dae13246a4388100cf85fef",
+    "candidate_witness": "sha256:35c341e5e160e72eade89dbf749c2af6a61f9e55a4e2c6caaafec54a870176c7",
     "confirmations": 2,
     "promoted": true
   }
