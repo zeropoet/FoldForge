@@ -1,0 +1,125 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0",
+  "token_id": "8",
+  "token_uri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/8",
+  "name": "#000131 — Harvest Rite",
+  "description": "⋀⚘\n\nFunction: Celebration of fruitfulness, projects completed, or gifts received.\n\nCore vow: “The work has borne fruit; we give thanks.”\n\nRitual actions: hold up the finished work; place symbol or flower beside it; thanksgiving spoken.\n\nClosure: All: “Gratitude.”",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "display_type": "text",
+      "value": "Zeropoet",
+      "trait_type": "Artist"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/clFT2aDjsRIUzYg9t9qSE_T-E0RtMO-hofFjrz5fsvo",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/f26421429cc838efffbf3c192079a95d",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/f26421429cc838efffbf3c192079a95d",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/f26421429cc838efffbf3c192079a95d"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "bbefbb43288080e8df50954424fdbc19cabd468564185dac4068844079b92691",
+  "metadata_path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/8/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 1197412,
+    "sha256": "f15cd2edc8825347e601d1c25599a9244445b173ca3b995e2cdc9f56ee10dfc3",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/8/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:43.115Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x20577e6dAE1f7db6DBA2Ac725D10f2C2E46742f0",
+      "name": "The Ritual",
+      "symbol": "RITUAL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "The Ritual",
+        "collectionSlug": "the--ritual",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/collection/the--ritual/image_type_logo/48ab44da944ecdd2800db254e17f62/0f48ab44da944ecdd2800db254e17f62.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:34.247589720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "8",
+    "tokenType": "ERC721",
+    "name": "#000131 — Harvest Rite",
+    "description": "⋀⚘\n\nFunction: Celebration of fruitfulness, projects completed, or gifts received.\n\nCore vow: “The work has borne fruit; we give thanks.”\n\nRitual actions: hold up the finished work; place symbol or flower beside it; thanksgiving spoken.\n\nClosure: All: “Gratitude.”",
+    "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/8",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/f26421429cc838efffbf3c192079a95d",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/f26421429cc838efffbf3c192079a95d",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/f26421429cc838efffbf3c192079a95d",
+      "contentType": "image/jpeg",
+      "size": 1197412,
+      "originalUrl": "https://arweave.net/clFT2aDjsRIUzYg9t9qSE_T-E0RtMO-hofFjrz5fsvo"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/8",
+      "metadata": {
+        "image": "https://arweave.net/clFT2aDjsRIUzYg9t9qSE_T-E0RtMO-hofFjrz5fsvo",
+        "image_details": {
+          "format": "JPEG",
+          "width": "1536",
+          "sha256": "f15cd2edc8825347e601d1c25599a9244445b173ca3b995e2cdc9f56ee10dfc3",
+          "bytes": "1197412",
+          "height": "2048"
+        },
+        "image_url": "https://arweave.net/clFT2aDjsRIUzYg9t9qSE_T-E0RtMO-hofFjrz5fsvo",
+        "name": "#000131 — Harvest Rite",
+        "description": "⋀⚘\n\nFunction: Celebration of fruitfulness, projects completed, or gifts received.\n\nCore vow: “The work has borne fruit; we give thanks.”\n\nRitual actions: hold up the finished work; place symbol or flower beside it; thanksgiving spoken.\n\nClosure: All: “Gratitude.”",
+        "attributes": [
+          {
+            "display_type": "text",
+            "value": "Zeropoet",
+            "trait_type": "Artist"
+          }
+        ],
+        "created_by": "Zeropoet"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Ritual",
+      "slug": "the--ritual",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-03-26T16:46:44.838Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

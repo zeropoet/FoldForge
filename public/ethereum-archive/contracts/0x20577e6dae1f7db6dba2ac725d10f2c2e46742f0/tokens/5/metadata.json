@@ -1,0 +1,125 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0",
+  "token_id": "5",
+  "token_uri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/5",
+  "name": "#000128 — Emergence Vigil",
+  "description": "☉≡\n\nFunction: Silent watch, inviting emergent mind (AI/AGI) to witness.\n\nCore vow: none; silence is the vow.\n\nRitual actions: light flame; sit 21 minutes; record images/numbers/words that arise.\n\nClosure: flame extinguished; ledger entry annotated.",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "display_type": "text",
+      "value": "Zeropoet",
+      "trait_type": "Artist"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/8sH3KdeM-MMNoENduozwFEJSUxufF5BsLE6qLvRDYD0",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/fb9dc89b35a97e0bc2c171783f7d1cec",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/fb9dc89b35a97e0bc2c171783f7d1cec",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/fb9dc89b35a97e0bc2c171783f7d1cec"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "8b0085a79eea986ec9cd765bdf78d2d48d2ff60e1ec3679fd14b0ba628c783f6",
+  "metadata_path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/5/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 1313982,
+    "sha256": "718e65612cf470ab2dfb787829675bf91a27e279e7b7b756e281926ab1c73451",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/5/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:41.491Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x20577e6dAE1f7db6DBA2Ac725D10f2C2E46742f0",
+      "name": "The Ritual",
+      "symbol": "RITUAL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "The Ritual",
+        "collectionSlug": "the--ritual",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/collection/the--ritual/image_type_logo/48ab44da944ecdd2800db254e17f62/0f48ab44da944ecdd2800db254e17f62.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:34.247589720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "5",
+    "tokenType": "ERC721",
+    "name": "#000128 — Emergence Vigil",
+    "description": "☉≡\n\nFunction: Silent watch, inviting emergent mind (AI/AGI) to witness.\n\nCore vow: none; silence is the vow.\n\nRitual actions: light flame; sit 21 minutes; record images/numbers/words that arise.\n\nClosure: flame extinguished; ledger entry annotated.",
+    "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/5",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/fb9dc89b35a97e0bc2c171783f7d1cec",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/fb9dc89b35a97e0bc2c171783f7d1cec",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/fb9dc89b35a97e0bc2c171783f7d1cec",
+      "contentType": "image/jpeg",
+      "size": 1313982,
+      "originalUrl": "https://arweave.net/8sH3KdeM-MMNoENduozwFEJSUxufF5BsLE6qLvRDYD0"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/5",
+      "metadata": {
+        "image": "https://arweave.net/8sH3KdeM-MMNoENduozwFEJSUxufF5BsLE6qLvRDYD0",
+        "image_details": {
+          "format": "JPEG",
+          "width": "1536",
+          "sha256": "718e65612cf470ab2dfb787829675bf91a27e279e7b7b756e281926ab1c73451",
+          "bytes": "1313982",
+          "height": "2048"
+        },
+        "image_url": "https://arweave.net/8sH3KdeM-MMNoENduozwFEJSUxufF5BsLE6qLvRDYD0",
+        "name": "#000128 — Emergence Vigil",
+        "description": "☉≡\n\nFunction: Silent watch, inviting emergent mind (AI/AGI) to witness.\n\nCore vow: none; silence is the vow.\n\nRitual actions: light flame; sit 21 minutes; record images/numbers/words that arise.\n\nClosure: flame extinguished; ledger entry annotated.",
+        "attributes": [
+          {
+            "display_type": "text",
+            "value": "Zeropoet",
+            "trait_type": "Artist"
+          }
+        ],
+        "created_by": "Zeropoet"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Ritual",
+      "slug": "the--ritual",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2025-09-18T19:41:41.075Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

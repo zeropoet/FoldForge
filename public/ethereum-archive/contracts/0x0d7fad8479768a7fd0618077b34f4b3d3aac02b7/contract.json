@@ -1,0 +1,13 @@
+{
+  "schema": "foldforge-ethereum-contract/v1",
+  "address": "0x0d7fad8479768a7fd0618077b34f4b3d3aac02b7",
+  "name": "Zerø Temporal Receipts",
+  "symbol": "ZTR",
+  "description": "",
+  "total_supply": "",
+  "token_type": "ERC721",
+  "token_ids": [
+    "1"
+  ],
+  "image": ""
+}

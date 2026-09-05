@@ -1,0 +1,111 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
+  "token_id": "41",
+  "token_uri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/4",
+  "name": "40-zhuangzi",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://arweave.net/2E5Xue1xRE_IDATMcmVFduUUtXdI1qLSqaTMYBWrU9w",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/6551ec6bd2a87dd41dc119988884119e_249ead05",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/6551ec6bd2a87dd41dc119988884119e_249ead05",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/6551ec6bd2a87dd41dc119988884119e_249ead05"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "f82a0f06004c57426ca81c54b668b7dc4b9c619c5c269e7ef305d839c3d919c3",
+  "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/41/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 381959,
+    "sha256": "f26ab4e04039ea06c95ebbed53d15973aadb84cf426f355e2da8e54596eb5550",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/41/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:20.512Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x16Bc29eA6E1B9390f70349bfB93eA87fFC9105Fc",
+      "name": "FOLD FORGE",
+      "symbol": "FLDFRG",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "FOLD FORGE",
+        "collectionSlug": "fold-forge",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-28T20:54:50.144847720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "41",
+    "tokenType": "ERC721",
+    "name": "40-zhuangzi",
+    "description": "",
+    "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/4",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/6551ec6bd2a87dd41dc119988884119e_249ead05",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/6551ec6bd2a87dd41dc119988884119e_249ead05",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/6551ec6bd2a87dd41dc119988884119e_249ead05",
+      "contentType": "image/png",
+      "size": 381959,
+      "originalUrl": "https://arweave.net/2E5Xue1xRE_IDATMcmVFduUUtXdI1qLSqaTMYBWrU9w"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/4",
+      "metadata": {
+        "name": "40-zhuangzi",
+        "description": "",
+        "image_details": {
+          "bytes": 381959,
+          "format": "PNG",
+          "sha256": "f26ab4e04039ea06c95ebbed53d15973aadb84cf426f355e2da8e54596eb5550",
+          "width": 2400,
+          "height": 2400
+        },
+        "image": "https://arweave.net/2E5Xue1xRE_IDATMcmVFduUUtXdI1qLSqaTMYBWrU9w",
+        "image_url": "https://arweave.net/2E5Xue1xRE_IDATMcmVFduUUtXdI1qLSqaTMYBWrU9w"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "FOLD FORGE",
+      "slug": "fold-forge",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-04T06:04:08.743888356Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

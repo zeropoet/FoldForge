@@ -1,0 +1,105 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x00a65cff273beb75c657e5673c0b453e33b077bd",
+  "token_id": "4",
+  "token_uri": "ipfs://Qma69xAogKgk7uxDA6x5eQovPJb81nZQz3qFq5mCPmNwBz/metadata.json",
+  "name": "Cognitive Singularity",
+  "description": "The precise point where thought collapses into understanding.",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmZz692JSnu9e3WvM3Vo4cPDmoeG9hd9UyyZMuQ9Y8cUuo/nft.png",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/84f416446106ccc206ec609ce412e8d6_4731a6c0",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/84f416446106ccc206ec609ce412e8d6_4731a6c0",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/84f416446106ccc206ec609ce412e8d6_4731a6c0"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "a35950df5c07415fd335db34498ac584dfb8596ae77d746b34d65976e7fe2b2b",
+  "metadata_path": "/ethereum-archive/contracts/0x00a65cff273beb75c657e5673c0b453e33b077bd/tokens/4/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 1417152,
+    "sha256": "d2b2cd52396973b68ca0cf5644694626bbc8d0a486ebfa6855b117057ea4a88b",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x00a65cff273beb75c657e5673c0b453e33b077bd/tokens/4/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:47:39.723Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x00a65cFf273bEb75c657E5673c0b453e33b077bd",
+      "name": "The Something",
+      "symbol": "SMTHNG",
+      "totalSupply": "2",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "The Something",
+        "collectionSlug": "the-something-662836888",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/0x00a65cff273beb75c657e5673c0b453e33b077bd/827ab18b0e56d7d393ea8f490af6d9/25827ab18b0e56d7d393ea8f490af6d9.png",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:34.248657842Z"
+      },
+      "isSpam": false,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "4",
+    "tokenType": "ERC721",
+    "name": "Cognitive Singularity",
+    "description": "The precise point where thought collapses into understanding.",
+    "tokenUri": "ipfs://Qma69xAogKgk7uxDA6x5eQovPJb81nZQz3qFq5mCPmNwBz/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/84f416446106ccc206ec609ce412e8d6_4731a6c0",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/84f416446106ccc206ec609ce412e8d6_4731a6c0",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/84f416446106ccc206ec609ce412e8d6_4731a6c0",
+      "contentType": "image/png",
+      "size": 1417152,
+      "originalUrl": "https://ipfs.io/ipfs/QmZz692JSnu9e3WvM3Vo4cPDmoeG9hd9UyyZMuQ9Y8cUuo/nft.png"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://Qma69xAogKgk7uxDA6x5eQovPJb81nZQz3qFq5mCPmNwBz/metadata.json",
+      "metadata": {
+        "name": "Cognitive Singularity",
+        "description": "The precise point where thought collapses into understanding.",
+        "image": "ipfs://QmZz692JSnu9e3WvM3Vo4cPDmoeG9hd9UyyZMuQ9Y8cUuo/nft.png"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Something",
+      "slug": "the-something-662836888",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-22T00:27:11.496089384Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

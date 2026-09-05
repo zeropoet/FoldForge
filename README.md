@@ -98,7 +98,7 @@ Luminance values are cached locally as a performance optimization. The cache is 
 
 Small 24px derivatives are used for luminance analysis. Original token media remains available in the individual work view and through its source-file link.
 
-When token-level media is absent, FoldForge displays an unavailable-media state rather than substituting the collection image.
+When token-level media is absent, FoldForge may use the collection image as an explicitly subordinate display fallback. If neither is present, the work retains a deterministic minted-record tile instead of disappearing.
 
 ### Automatic archive admission
 
@@ -114,6 +114,22 @@ This process cannot reconstruct media that was never published or repair an
 on-chain token URI whose canonical and alternate routes contain no matching
 metadata. Such a work remains visibly unavailable rather than borrowing another
 token's or collection's image.
+
+### Repository Ethereum archive
+
+`npm run sync:eth-archive` maintains a durable, public read copy beneath
+`public/ethereum-archive/contracts/<contract>/tokens/<token-id>/`. Each work
+folder contains normalized metadata and the retrieved media bytes; each contract
+also has a contract manifest, and `public/ethereum-archive/index.json` provides
+the complete offline index used by the gallery and minted-work routes.
+
+Ethereum remains the provenance authority. The committed copy is the default
+read fallback when ENS, Alchemy, a gateway, or Ethereum itself is unavailable.
+Every deployment sync compares evidence fingerprints, admits newly held works,
+and downloads media again only when metadata or its canonical media reference
+changes. A failed observation never deletes an existing archived work; it is
+retained as `unobserved` until a later successful reconciliation determines its
+current state.
 
 ## Constitutional grammar
 

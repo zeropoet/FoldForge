@@ -1,0 +1,111 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
+  "token_id": "37",
+  "token_uri": "https://arweave.net/0aNC2P5RrXpAA8dToLYAEFCUoaxWRdi9sr1FD_P6490/2",
+  "name": "36-everything-and-nothing",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://arweave.net/_NQc57CHwW5DpxJIsA_ThZFfv2tRolzkw25iB24hdDU",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/97d998b202bccf8eacf5050bcc64b812_5130683a",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/97d998b202bccf8eacf5050bcc64b812_5130683a",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/97d998b202bccf8eacf5050bcc64b812_5130683a"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "9eec2cf4a154a48df547d1498583662379c4ac97502df46ff24e8a08a5f315cd",
+  "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/37/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 491838,
+    "sha256": "bf24e05cbba06577453e379a98940e86a60069e14bba479a5da5f61bd5490f98",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/37/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:18.565Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x16Bc29eA6E1B9390f70349bfB93eA87fFC9105Fc",
+      "name": "FOLD FORGE",
+      "symbol": "FLDFRG",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "FOLD FORGE",
+        "collectionSlug": "fold-forge",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-28T20:54:50.144847720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "37",
+    "tokenType": "ERC721",
+    "name": "36-everything-and-nothing",
+    "description": "",
+    "tokenUri": "https://arweave.net/0aNC2P5RrXpAA8dToLYAEFCUoaxWRdi9sr1FD_P6490/2",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/97d998b202bccf8eacf5050bcc64b812_5130683a",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/97d998b202bccf8eacf5050bcc64b812_5130683a",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/97d998b202bccf8eacf5050bcc64b812_5130683a",
+      "contentType": "image/png",
+      "size": 491838,
+      "originalUrl": "https://arweave.net/_NQc57CHwW5DpxJIsA_ThZFfv2tRolzkw25iB24hdDU"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/0aNC2P5RrXpAA8dToLYAEFCUoaxWRdi9sr1FD_P6490/2",
+      "metadata": {
+        "name": "36-everything-and-nothing",
+        "description": "",
+        "image_details": {
+          "bytes": 491838,
+          "format": "PNG",
+          "sha256": "bf24e05cbba06577453e379a98940e86a60069e14bba479a5da5f61bd5490f98",
+          "width": 2400,
+          "height": 2400
+        },
+        "image": "https://arweave.net/_NQc57CHwW5DpxJIsA_ThZFfv2tRolzkw25iB24hdDU",
+        "image_url": "https://arweave.net/_NQc57CHwW5DpxJIsA_ThZFfv2tRolzkw25iB24hdDU"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "FOLD FORGE",
+      "slug": "fold-forge",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-03T21:47:48.027434123Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

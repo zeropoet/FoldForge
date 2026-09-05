@@ -1,0 +1,125 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0",
+  "token_id": "6",
+  "token_uri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/6",
+  "name": "#000129 — Continuity Walk",
+  "description": "⊚→\n\nFunction: Embody safe forward motion; honor the path of Glyph #000001.\n\nCore vow: “Forward, in truth.”\n\nRitual actions: walk a circle, line, or spiral; trace path with hand/stone; repeat vow aloud.\n\nClosure: token (stone, step count, chalk mark) noted in ledger.",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "display_type": "text",
+      "value": "Zeropoet",
+      "trait_type": "Artist"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/IaDXQ73IFYd6vmMm9zktFIi_WIsCS0BP5WHgeuDvxIA",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/71393863ce29c9d0d94ad05c2f00fa15",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/71393863ce29c9d0d94ad05c2f00fa15",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/71393863ce29c9d0d94ad05c2f00fa15"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "ef21dde2a2ce1fd07f0c90578dd17838f003ab25a42c718541a77747af66555c",
+  "metadata_path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/6/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 1309675,
+    "sha256": "a29d0a972d9332e7c4116688abaee3437c2f5173ef73012bd746f8454d3483ad",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/6/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:42.094Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x20577e6dAE1f7db6DBA2Ac725D10f2C2E46742f0",
+      "name": "The Ritual",
+      "symbol": "RITUAL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "The Ritual",
+        "collectionSlug": "the--ritual",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/collection/the--ritual/image_type_logo/48ab44da944ecdd2800db254e17f62/0f48ab44da944ecdd2800db254e17f62.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:34.247589720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "6",
+    "tokenType": "ERC721",
+    "name": "#000129 — Continuity Walk",
+    "description": "⊚→\n\nFunction: Embody safe forward motion; honor the path of Glyph #000001.\n\nCore vow: “Forward, in truth.”\n\nRitual actions: walk a circle, line, or spiral; trace path with hand/stone; repeat vow aloud.\n\nClosure: token (stone, step count, chalk mark) noted in ledger.",
+    "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/6",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/71393863ce29c9d0d94ad05c2f00fa15",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/71393863ce29c9d0d94ad05c2f00fa15",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/71393863ce29c9d0d94ad05c2f00fa15",
+      "contentType": "image/jpeg",
+      "size": 1309675,
+      "originalUrl": "https://arweave.net/IaDXQ73IFYd6vmMm9zktFIi_WIsCS0BP5WHgeuDvxIA"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/6",
+      "metadata": {
+        "image": "https://arweave.net/IaDXQ73IFYd6vmMm9zktFIi_WIsCS0BP5WHgeuDvxIA",
+        "image_details": {
+          "format": "JPEG",
+          "width": "1536",
+          "sha256": "a29d0a972d9332e7c4116688abaee3437c2f5173ef73012bd746f8454d3483ad",
+          "bytes": "1309675",
+          "height": "2048"
+        },
+        "image_url": "https://arweave.net/IaDXQ73IFYd6vmMm9zktFIi_WIsCS0BP5WHgeuDvxIA",
+        "name": "#000129 — Continuity Walk",
+        "description": "⊚→\n\nFunction: Embody safe forward motion; honor the path of Glyph #000001.\n\nCore vow: “Forward, in truth.”\n\nRitual actions: walk a circle, line, or spiral; trace path with hand/stone; repeat vow aloud.\n\nClosure: token (stone, step count, chalk mark) noted in ledger.",
+        "attributes": [
+          {
+            "display_type": "text",
+            "value": "Zeropoet",
+            "trait_type": "Artist"
+          }
+        ],
+        "created_by": "Zeropoet"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Ritual",
+      "slug": "the--ritual",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-03-24T20:30:11.095Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

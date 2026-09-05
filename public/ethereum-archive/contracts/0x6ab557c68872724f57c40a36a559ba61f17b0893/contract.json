@@ -1,0 +1,20 @@
+{
+  "schema": "foldforge-ethereum-contract/v1",
+  "address": "0x6ab557c68872724f57c40a36a559ba61f17b0893",
+  "name": "MTL",
+  "symbol": "MTL",
+  "description": "",
+  "total_supply": "",
+  "token_type": "ERC721",
+  "token_ids": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+  ],
+  "image": "/ethereum-archive/contracts/0x6ab557c68872724f57c40a36a559ba61f17b0893/tokens/6/image.jpg"
+}

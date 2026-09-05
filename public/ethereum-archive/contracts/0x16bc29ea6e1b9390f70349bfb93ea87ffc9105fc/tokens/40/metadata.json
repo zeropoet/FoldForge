@@ -1,0 +1,111 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
+  "token_id": "40",
+  "token_uri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/3",
+  "name": "39-the-dhammapada",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://arweave.net/M7aoKRhClg3t6rZklXYNI0fCUAnr0X6PkUsP4tMNKbI",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/864d0e59afc1158837b5a265396143b9_3cbd1b3f",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/864d0e59afc1158837b5a265396143b9_3cbd1b3f",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/864d0e59afc1158837b5a265396143b9_3cbd1b3f"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "7479fa8dbd4b16797fdb831ae504c34e7eafc8461b402da7016817525126eb07",
+  "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/40/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 478458,
+    "sha256": "90d07588813d5cc9efa250b24fc6ad15c72efa94a38f0e27ddff9d23c7137d31",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/40/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:20.060Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x16Bc29eA6E1B9390f70349bfB93eA87fFC9105Fc",
+      "name": "FOLD FORGE",
+      "symbol": "FLDFRG",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "FOLD FORGE",
+        "collectionSlug": "fold-forge",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-28T20:54:50.144847720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "40",
+    "tokenType": "ERC721",
+    "name": "39-the-dhammapada",
+    "description": "",
+    "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/3",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/864d0e59afc1158837b5a265396143b9_3cbd1b3f",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/864d0e59afc1158837b5a265396143b9_3cbd1b3f",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/864d0e59afc1158837b5a265396143b9_3cbd1b3f",
+      "contentType": "image/png",
+      "size": 478458,
+      "originalUrl": "https://arweave.net/M7aoKRhClg3t6rZklXYNI0fCUAnr0X6PkUsP4tMNKbI"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/3",
+      "metadata": {
+        "name": "39-the-dhammapada",
+        "description": "",
+        "image_details": {
+          "bytes": 478458,
+          "format": "PNG",
+          "sha256": "90d07588813d5cc9efa250b24fc6ad15c72efa94a38f0e27ddff9d23c7137d31",
+          "width": 2400,
+          "height": 2400
+        },
+        "image": "https://arweave.net/M7aoKRhClg3t6rZklXYNI0fCUAnr0X6PkUsP4tMNKbI",
+        "image_url": "https://arweave.net/M7aoKRhClg3t6rZklXYNI0fCUAnr0X6PkUsP4tMNKbI"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "FOLD FORGE",
+      "slug": "fold-forge",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-04T06:04:07.841035240Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "foldforge-ethereum-contract/v1",
+  "address": "0x716d8251ce9521657b6d36786e6f414e5c915895",
+  "name": "SOVEREIGN STANDARD",
+  "symbol": "SOVE",
+  "description": "",
+  "total_supply": "",
+  "token_type": "ERC721",
+  "token_ids": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+  ],
+  "image": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/1/image.webp"
+}

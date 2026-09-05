@@ -10,6 +10,7 @@ import { AlchemyNft, enrichCollectionsWithTokenMedia, fallbackGradient, fetchNft
 import { analyzePixels, type VisualSignature } from "./visual-analysis";
 import { analyzeAudio, isAudioUrl, type AudioSignature } from "./audio-analysis";
 import PublicHeader from "./public-header";
+import { fetchLocalEthereumArchive, localCollections, localTokens } from "./local-ethereum-archive";
 
 type LoadState = "idle" | "loading" | "ready" | "error";
 
@@ -226,8 +227,20 @@ export default function FoldForge() {
     const controller = new AbortController();
     collectionRequest.current = controller;
 
+    let repositoryCollections: CollectionSummary[] = [];
     try {
-      if (!process.env.NEXT_PUBLIC_ALCHEMY_API_KEY) throw new Error("Set NEXT_PUBLIC_ALCHEMY_API_KEY to load live collections.");
+      repositoryCollections = localCollections(await fetchLocalEthereumArchive()).filter((collection) =>
+        isCollectionAllowed(owner, collection.address)
+      );
+      if (requestId === requestSequence.current && repositoryCollections.length) {
+        setCollections(repositoryCollections);
+      }
+      if (!process.env.NEXT_PUBLIC_ALCHEMY_API_KEY) {
+        setOwnerIdentity({ input: owner, address: "", ensName: owner });
+        setState("ready");
+        setMessage("Repository archive / Ethereum connection unavailable");
+        return;
+      }
       const resolvedOwner = await resolveOwner(owner);
       const curate = (contracts: Parameters<typeof summarizeContracts>[0]) =>
         summarizeContracts(contracts).filter((collection) =>
@@ -267,10 +280,17 @@ export default function FoldForge() {
         return;
       }
 
-      setCollections([]);
-      setOwnerIdentity(null);
-      setState("error");
-      setMessage(error instanceof Error ? error.message : "Collection load failed.");
+      if (repositoryCollections.length) {
+        setCollections(repositoryCollections);
+        setOwnerIdentity({ input: owner, address: "", ensName: owner });
+        setState("ready");
+        setMessage("Repository archive / Ethereum connection unavailable");
+      } else {
+        setCollections([]);
+        setOwnerIdentity(null);
+        setState("error");
+        setMessage(error instanceof Error ? error.message : "Collection load failed.");
+      }
     }
   }, []);
 
@@ -294,7 +314,7 @@ export default function FoldForge() {
   }, [loadCollections, queryReady]);
 
   useEffect(() => {
-    if (!ownerIdentity?.address || !selectedContract) return;
+    if (!ownerIdentity || !selectedContract) return;
     if (!isCollectionAllowed(ownerIdentity.ensName, selectedContract)) {
       queueMicrotask(() => {
         setSelectedContract("");
@@ -313,6 +333,9 @@ export default function FoldForge() {
       setTokens([]);
       setMessage("");
       try {
+        const archived = localTokens(await fetchLocalEthereumArchive(), selectedContract);
+        if (archived.length) setTokens(archived);
+        if (!ownerIdentity.address) return;
         await fetchOwnedNfts({
           owner: ownerIdentity.address,
           network,
@@ -478,7 +501,7 @@ export default function FoldForge() {
   }, [audioSignatures, collections, compositionReady, compositionTokens, luminanceScores, ownerIdentity, visualSignatures]);
 
   useEffect(() => {
-    if (!ownerIdentity?.address || selectedContract) {
+    if (!ownerIdentity || selectedContract) {
       compositionRequest.current?.abort();
       return;
     }
@@ -492,6 +515,12 @@ export default function FoldForge() {
       setCompositionTokens([]);
 
       try {
+        const archived = localTokens(await fetchLocalEthereumArchive());
+        if (archived.length) setCompositionTokens(archived.filter((nft) => {
+          const address = nft.contract?.address;
+          return address && isCollectionAllowed(ownerIdentity.ensName, address);
+        }));
+        if (!ownerIdentity.address) return;
         await fetchOwnedNfts({
           owner: ownerIdentity.address,
           network,
@@ -526,15 +555,22 @@ export default function FoldForge() {
     if (!selectedContract || !selectedTokenId) return;
     const controller = new AbortController();
     const detailKey = `${selectedContract}:${selectedTokenId}`;
-    void fetchNftMetadata({ contractAddress: selectedContract, network, tokenId: selectedTokenId, signal: controller.signal })
-      .then((nft) => setTokenDetail({ key: detailKey, nft }))
-      .catch((error: unknown) => {
-        if (!(error instanceof DOMException && error.name === "AbortError")) {
+    void (async () => {
+      const archived = localTokens(await fetchLocalEthereumArchive(), selectedContract)
+        .find((token) => token.tokenId === selectedTokenId);
+      if (archived) setTokenDetail({ key: detailKey, nft: archived });
+      if (!ownerIdentity?.address) return;
+      try {
+        const nft = await fetchNftMetadata({ contractAddress: selectedContract, network, tokenId: selectedTokenId, signal: controller.signal });
+        setTokenDetail({ key: detailKey, nft });
+      } catch (error) {
+        if (!(error instanceof DOMException && error.name === "AbortError") && !archived) {
           setMessage(error instanceof Error ? error.message : "Minted record failed.");
         }
-      });
+      }
+    })();
     return () => controller.abort();
-  }, [selectedContract, selectedTokenId]);
+  }, [ownerIdentity?.address, selectedContract, selectedTokenId]);
 
   const selectedCollection = collections.find((collection) => collection.address === selectedContract);
   const displayedCollections = useMemo(

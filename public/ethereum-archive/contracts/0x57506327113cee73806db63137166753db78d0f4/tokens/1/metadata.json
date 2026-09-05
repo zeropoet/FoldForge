@@ -1,0 +1,131 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x57506327113cee73806db63137166753db78d0f4",
+  "token_id": "1",
+  "token_uri": "https://arweave.net/k21JYAbopIHNjzUkqCO05eBVATPJ6S-Kw5X3BKRB6vQ",
+  "name": "Tattoo Money",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [],
+  "animation_sources": [],
+  "evidence_sha256": "9803738810472301db9a8ca7aec15c722a7b21f07ee71de66a9b9c5279c1a229",
+  "metadata_path": "/ethereum-archive/contracts/0x57506327113cee73806db63137166753db78d0f4/tokens/1/metadata.json",
+  "media": null,
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:49:20.982Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x57506327113CEE73806dB63137166753Db78D0F4",
+      "name": "FOUND",
+      "symbol": "FOUND",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "FOUND",
+        "collectionSlug": "found-521560828",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-25T17:11:13.639343671Z"
+      },
+      "isSpam": true,
+      "spamClassifications": [
+        "EmptyMetadata",
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "1",
+    "tokenType": "ERC721",
+    "name": "Tattoo Money",
+    "description": "",
+    "tokenUri": "https://arweave.net/k21JYAbopIHNjzUkqCO05eBVATPJ6S-Kw5X3BKRB6vQ",
+    "image": {
+      "cachedUrl": null,
+      "thumbnailUrl": null,
+      "pngUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/k21JYAbopIHNjzUkqCO05eBVATPJ6S-Kw5X3BKRB6vQ",
+      "metadata": {
+        "identifier": "1",
+        "collection": "found-521560828",
+        "contract": "0x57506327113cee73806db63137166753db78d0f4",
+        "token_standard": "erc721",
+        "name": "Tattoo Money",
+        "description": "",
+        "image_url": null,
+        "display_image_url": null,
+        "display_animation_url": null,
+        "metadata_url": "https://arweave.net/k21JYAbopIHNjzUkqCO05eBVATPJ6S-Kw5X3BKRB6vQ",
+        "opensea_url": "https://opensea.io/assets/ethereum/0x57506327113cee73806db63137166753db78d0f4/1",
+        "updated_at": "2026-08-25T17:11:15.254668",
+        "is_disabled": false,
+        "is_nsfw": false,
+        "original_image_url": "https://arweave.net/wIawOuRwY0EhQYKGFX2N6nypC3a5y7RHY0j7LDPeA2g",
+        "original_animation_url": null,
+        "traits": [
+          {
+            "trait_type": "Artist",
+            "display_type": null,
+            "max_value": null,
+            "value": "Zeropoet"
+          }
+        ],
+        "estimated_value_usd": null,
+        "decimals": null,
+        "animation_url": null,
+        "is_suspicious": false,
+        "creator": "",
+        "owners": [
+          {
+            "address": "0xbd4b3a05c6a585f226afb1952cedd8c410c52e8f",
+            "quantity": 1,
+            "quantity_string": "1"
+          }
+        ],
+        "rarity": null,
+        "subscription": null,
+        "agent_binding": null
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "FOUND",
+      "slug": "found-521560828",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-25T17:11:17.241726702Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

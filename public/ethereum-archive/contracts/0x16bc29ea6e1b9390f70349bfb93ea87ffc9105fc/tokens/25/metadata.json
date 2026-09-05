@@ -1,0 +1,111 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
+  "token_id": "25",
+  "token_uri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/5",
+  "name": "25-the-journal-membrane",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://arweave.net/BizkdJQ5S3KABH_wC-nDXWQ7LjT_6_rXT8jgZ_NXF2M",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/afaa9a3d6311c3884d84756691f53e25_4aed4c6d",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/afaa9a3d6311c3884d84756691f53e25_4aed4c6d",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/afaa9a3d6311c3884d84756691f53e25_4aed4c6d"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "42d9d6b126163763c9458b19a12627d4aa5028a00d117c20acdad48ae7c477fa",
+  "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/25/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 468621,
+    "sha256": "a6b2bd3321f729d8780b9590c11c0fc42cc73bc42e0766ce63015352d4d75a07",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/25/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:47:52.461Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x16Bc29eA6E1B9390f70349bfB93eA87fFC9105Fc",
+      "name": "FOLD FORGE",
+      "symbol": "FLDFRG",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "FOLD FORGE",
+        "collectionSlug": "fold-forge",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-28T20:54:50.144847720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "25",
+    "tokenType": "ERC721",
+    "name": "25-the-journal-membrane",
+    "description": "",
+    "tokenUri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/5",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/afaa9a3d6311c3884d84756691f53e25_4aed4c6d",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/afaa9a3d6311c3884d84756691f53e25_4aed4c6d",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/afaa9a3d6311c3884d84756691f53e25_4aed4c6d",
+      "contentType": "image/png",
+      "size": 468621,
+      "originalUrl": "https://arweave.net/BizkdJQ5S3KABH_wC-nDXWQ7LjT_6_rXT8jgZ_NXF2M"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/5",
+      "metadata": {
+        "name": "25-the-journal-membrane",
+        "description": "",
+        "image_details": {
+          "bytes": 468621,
+          "format": "PNG",
+          "sha256": "a6b2bd3321f729d8780b9590c11c0fc42cc73bc42e0766ce63015352d4d75a07",
+          "width": 2400,
+          "height": 2400
+        },
+        "image": "https://arweave.net/BizkdJQ5S3KABH_wC-nDXWQ7LjT_6_rXT8jgZ_NXF2M",
+        "image_url": "https://arweave.net/BizkdJQ5S3KABH_wC-nDXWQ7LjT_6_rXT8jgZ_NXF2M"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "FOLD FORGE",
+      "slug": "fold-forge",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-29T18:13:41.235457545Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

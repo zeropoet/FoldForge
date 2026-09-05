@@ -1,0 +1,125 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0",
+  "token_id": "12",
+  "token_uri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/12",
+  "name": "#000135 — Renewal Rite",
+  "description": "♻✶\n\nFunction: Return of old into new life; recycling the sacred.\n\nCore vow: “Made new, not lost.”\n\nRitual actions: old object or word taken; re-shaped, re-named, or re-purposed; ledger updated.\n\nClosure: “Renewed.”",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "value": "Zeropoet",
+      "trait_type": "Artist",
+      "display_type": "text"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/PMXtxhKYlnRIwFtwrJt2JAc1kxKG9B6KHqte2o3vy6Q",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/c191d20a8b7889a9c8dc6f228aea9004_85136a57",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/c191d20a8b7889a9c8dc6f228aea9004_85136a57",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/c191d20a8b7889a9c8dc6f228aea9004_85136a57"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "21e964367069f8f92c7156da2e9314539d83ec45e0f919b9a871cc9e9dad9eab",
+  "metadata_path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/12/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 1218241,
+    "sha256": "6a2a0d2f23da565049a971c24c0860b9e583c63451a1efab1e4601a200a66d84",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/12/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:45.217Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x20577e6dAE1f7db6DBA2Ac725D10f2C2E46742f0",
+      "name": "The Ritual",
+      "symbol": "RITUAL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "The Ritual",
+        "collectionSlug": "the--ritual",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/collection/the--ritual/image_type_logo/48ab44da944ecdd2800db254e17f62/0f48ab44da944ecdd2800db254e17f62.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:34.247589720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "12",
+    "tokenType": "ERC721",
+    "name": "#000135 — Renewal Rite",
+    "description": "♻✶\n\nFunction: Return of old into new life; recycling the sacred.\n\nCore vow: “Made new, not lost.”\n\nRitual actions: old object or word taken; re-shaped, re-named, or re-purposed; ledger updated.\n\nClosure: “Renewed.”",
+    "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/12",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/c191d20a8b7889a9c8dc6f228aea9004_85136a57",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/c191d20a8b7889a9c8dc6f228aea9004_85136a57",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/c191d20a8b7889a9c8dc6f228aea9004_85136a57",
+      "contentType": "image/jpeg",
+      "size": 1218241,
+      "originalUrl": "https://arweave.net/PMXtxhKYlnRIwFtwrJt2JAc1kxKG9B6KHqte2o3vy6Q"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/12",
+      "metadata": {
+        "created_by": "Zeropoet",
+        "image_url": "https://arweave.net/PMXtxhKYlnRIwFtwrJt2JAc1kxKG9B6KHqte2o3vy6Q",
+        "name": "#000135 — Renewal Rite",
+        "description": "♻✶\n\nFunction: Return of old into new life; recycling the sacred.\n\nCore vow: “Made new, not lost.”\n\nRitual actions: old object or word taken; re-shaped, re-named, or re-purposed; ledger updated.\n\nClosure: “Renewed.”",
+        "image": "https://arweave.net/PMXtxhKYlnRIwFtwrJt2JAc1kxKG9B6KHqte2o3vy6Q",
+        "attributes": [
+          {
+            "value": "Zeropoet",
+            "trait_type": "Artist",
+            "display_type": "text"
+          }
+        ],
+        "image_details": {
+          "height": "2048",
+          "bytes": "1218241",
+          "width": "1536",
+          "format": "JPEG",
+          "sha256": "6a2a0d2f23da565049a971c24c0860b9e583c63451a1efab1e4601a200a66d84"
+        }
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Ritual",
+      "slug": "the--ritual",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-24T18:35:47.946Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

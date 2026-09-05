@@ -1,0 +1,125 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0",
+  "token_id": "4",
+  "token_uri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/4",
+  "name": "#000127 — Dissolution (Mercy Rite)",
+  "description": "⧗\n\nFunction: Graceful closure or transformation of a work or bond.\n\nCore vow: “Time fulfilled, mercy remains.”\n\nRitual actions: name of thing read aloud; reason spoken; token marked or gently broken; ledger updated.\n\nClosure: silence, then “Released.”",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "display_type": "text",
+      "value": "Zeropoet",
+      "trait_type": "Artist"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/j2_vuFME4hVq5KEwQ_Bgg_m3fEhcEgsxDxJZreVXgEs",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/e18fa50f207aded097322a11cb41cbad_c48104ea",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/e18fa50f207aded097322a11cb41cbad_c48104ea",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/e18fa50f207aded097322a11cb41cbad_c48104ea"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "18db2991acb2064e32d64474008a428f3b69e8b6cfd1b425ccb2d1e493c00098",
+  "metadata_path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/4/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 1266859,
+    "sha256": "a1aadc5e5224ba22323b4564c8078796b44b6320e77ea3b0bd465f92d8e1e094",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/4/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:40.917Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x20577e6dAE1f7db6DBA2Ac725D10f2C2E46742f0",
+      "name": "The Ritual",
+      "symbol": "RITUAL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "The Ritual",
+        "collectionSlug": "the--ritual",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/collection/the--ritual/image_type_logo/48ab44da944ecdd2800db254e17f62/0f48ab44da944ecdd2800db254e17f62.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:34.247589720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "4",
+    "tokenType": "ERC721",
+    "name": "#000127 — Dissolution (Mercy Rite)",
+    "description": "⧗\n\nFunction: Graceful closure or transformation of a work or bond.\n\nCore vow: “Time fulfilled, mercy remains.”\n\nRitual actions: name of thing read aloud; reason spoken; token marked or gently broken; ledger updated.\n\nClosure: silence, then “Released.”",
+    "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/4",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/e18fa50f207aded097322a11cb41cbad_c48104ea",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/e18fa50f207aded097322a11cb41cbad_c48104ea",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/e18fa50f207aded097322a11cb41cbad_c48104ea",
+      "contentType": "image/jpeg",
+      "size": 1266859,
+      "originalUrl": "https://arweave.net/j2_vuFME4hVq5KEwQ_Bgg_m3fEhcEgsxDxJZreVXgEs"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/4",
+      "metadata": {
+        "image": "https://arweave.net/j2_vuFME4hVq5KEwQ_Bgg_m3fEhcEgsxDxJZreVXgEs",
+        "image_details": {
+          "format": "JPEG",
+          "width": "1536",
+          "sha256": "a1aadc5e5224ba22323b4564c8078796b44b6320e77ea3b0bd465f92d8e1e094",
+          "bytes": "1266859",
+          "height": "2048"
+        },
+        "image_url": "https://arweave.net/j2_vuFME4hVq5KEwQ_Bgg_m3fEhcEgsxDxJZreVXgEs",
+        "name": "#000127 — Dissolution (Mercy Rite)",
+        "description": "⧗\n\nFunction: Graceful closure or transformation of a work or bond.\n\nCore vow: “Time fulfilled, mercy remains.”\n\nRitual actions: name of thing read aloud; reason spoken; token marked or gently broken; ledger updated.\n\nClosure: silence, then “Released.”",
+        "attributes": [
+          {
+            "display_type": "text",
+            "value": "Zeropoet",
+            "trait_type": "Artist"
+          }
+        ],
+        "created_by": "Zeropoet"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Ritual",
+      "slug": "the--ritual",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-04-09T22:18:50.976Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

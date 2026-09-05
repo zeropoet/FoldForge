@@ -1,0 +1,111 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
+  "token_id": "47",
+  "token_uri": "https://arweave.net/qp3dBDGOEK7RKg40vq4G6jbJZ_4qm-R4Kj6AyOcO4Js/3",
+  "name": "46-frankenstein-or-the-modern-prometheus",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://arweave.net/XuEQ-j4b6ihifZVmDdCDcgRTGyN49rH99Uxz8MjdbVA",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/3a07e8d3c00fccb8014088c1449603e0_139d3a9d",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/3a07e8d3c00fccb8014088c1449603e0_139d3a9d",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/3a07e8d3c00fccb8014088c1449603e0_139d3a9d"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "1188c89ddc2dbda41ad121f24811d50fb2296b28a27445734fae5236757b66c7",
+  "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/47/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 315096,
+    "sha256": "08890afd99b016c281e76dffa051cc7b270be9b30cb7e67f2a7b722b05e6b75e",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/47/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:23.478Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x16Bc29eA6E1B9390f70349bfB93eA87fFC9105Fc",
+      "name": "FOLD FORGE",
+      "symbol": "FLDFRG",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "FOLD FORGE",
+        "collectionSlug": "fold-forge",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-28T20:54:50.144847720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "47",
+    "tokenType": "ERC721",
+    "name": "46-frankenstein-or-the-modern-prometheus",
+    "description": "",
+    "tokenUri": "https://arweave.net/qp3dBDGOEK7RKg40vq4G6jbJZ_4qm-R4Kj6AyOcO4Js/3",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/3a07e8d3c00fccb8014088c1449603e0_139d3a9d",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/3a07e8d3c00fccb8014088c1449603e0_139d3a9d",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/3a07e8d3c00fccb8014088c1449603e0_139d3a9d",
+      "contentType": "image/avif",
+      "size": 3721,
+      "originalUrl": "https://arweave.net/XuEQ-j4b6ihifZVmDdCDcgRTGyN49rH99Uxz8MjdbVA"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/qp3dBDGOEK7RKg40vq4G6jbJZ_4qm-R4Kj6AyOcO4Js/3",
+      "metadata": {
+        "name": "46-frankenstein-or-the-modern-prometheus",
+        "description": "",
+        "image_details": {
+          "bytes": 315096,
+          "format": "PNG",
+          "sha256": "08890afd99b016c281e76dffa051cc7b270be9b30cb7e67f2a7b722b05e6b75e",
+          "width": 2400,
+          "height": 2400
+        },
+        "image": "https://arweave.net/XuEQ-j4b6ihifZVmDdCDcgRTGyN49rH99Uxz8MjdbVA",
+        "image_url": "https://arweave.net/XuEQ-j4b6ihifZVmDdCDcgRTGyN49rH99Uxz8MjdbVA"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "FOLD FORGE",
+      "slug": "fold-forge",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-04T06:05:37.809443328Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

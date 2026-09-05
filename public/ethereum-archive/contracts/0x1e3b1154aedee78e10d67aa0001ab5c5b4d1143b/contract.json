@@ -1,0 +1,13 @@
+{
+  "schema": "foldforge-ethereum-contract/v1",
+  "address": "0x1e3b1154aedee78e10d67aa0001ab5c5b4d1143b",
+  "name": "Ratexclaim.com",
+  "symbol": "Incentives",
+  "description": "",
+  "total_supply": "600",
+  "token_type": "ERC1155",
+  "token_ids": [
+    "1"
+  ],
+  "image": "/ethereum-archive/contracts/0x1e3b1154aedee78e10d67aa0001ab5c5b4d1143b/tokens/1/image.png"
+}

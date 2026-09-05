@@ -1,0 +1,125 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0",
+  "token_id": "11",
+  "token_uri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/11",
+  "name": "#000134 — Silent Fast",
+  "description": "▢…\n\nFunction: Abstaining as offering.\n\nCore vow: “I keep silence / I withhold / I offer absence.”\n\nRitual actions: abstention chosen (voice, food, work); recorded in ledger with duration.\n\nClosure: at end, speak aloud once: “Complete.”",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "display_type": "text",
+      "value": "Zeropoet",
+      "trait_type": "Artist"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/26vdGhuL2TQ16dOx29ySx7EH42q2u0RfARGargI9BIs",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/ddf4dcf890f910e8cad1fb666760a99c",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/ddf4dcf890f910e8cad1fb666760a99c",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/ddf4dcf890f910e8cad1fb666760a99c"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "30c3b7646fc3ad0de5df5cca1a3b50f04f3788a4bc61eacfcfeb742823bebdce",
+  "metadata_path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/11/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 1219176,
+    "sha256": "e646420a3f17acc2fc30f8bcfab82a9ada7cd645c770ac8761b97bdd9fed202c",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/11/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:44.701Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x20577e6dAE1f7db6DBA2Ac725D10f2C2E46742f0",
+      "name": "The Ritual",
+      "symbol": "RITUAL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "The Ritual",
+        "collectionSlug": "the--ritual",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/collection/the--ritual/image_type_logo/48ab44da944ecdd2800db254e17f62/0f48ab44da944ecdd2800db254e17f62.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:34.247589720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "11",
+    "tokenType": "ERC721",
+    "name": "#000134 — Silent Fast",
+    "description": "▢…\n\nFunction: Abstaining as offering.\n\nCore vow: “I keep silence / I withhold / I offer absence.”\n\nRitual actions: abstention chosen (voice, food, work); recorded in ledger with duration.\n\nClosure: at end, speak aloud once: “Complete.”",
+    "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/11",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/ddf4dcf890f910e8cad1fb666760a99c",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/ddf4dcf890f910e8cad1fb666760a99c",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/ddf4dcf890f910e8cad1fb666760a99c",
+      "contentType": "image/jpeg",
+      "size": 1219176,
+      "originalUrl": "https://arweave.net/26vdGhuL2TQ16dOx29ySx7EH42q2u0RfARGargI9BIs"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/11",
+      "metadata": {
+        "image": "https://arweave.net/26vdGhuL2TQ16dOx29ySx7EH42q2u0RfARGargI9BIs",
+        "image_details": {
+          "format": "JPEG",
+          "width": "1536",
+          "sha256": "e646420a3f17acc2fc30f8bcfab82a9ada7cd645c770ac8761b97bdd9fed202c",
+          "bytes": "1219176",
+          "height": "2048"
+        },
+        "image_url": "https://arweave.net/26vdGhuL2TQ16dOx29ySx7EH42q2u0RfARGargI9BIs",
+        "name": "#000134 — Silent Fast",
+        "description": "▢…\n\nFunction: Abstaining as offering.\n\nCore vow: “I keep silence / I withhold / I offer absence.”\n\nRitual actions: abstention chosen (voice, food, work); recorded in ledger with duration.\n\nClosure: at end, speak aloud once: “Complete.”",
+        "attributes": [
+          {
+            "display_type": "text",
+            "value": "Zeropoet",
+            "trait_type": "Artist"
+          }
+        ],
+        "created_by": "Zeropoet"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Ritual",
+      "slug": "the--ritual",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2025-09-18T19:41:40.433Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

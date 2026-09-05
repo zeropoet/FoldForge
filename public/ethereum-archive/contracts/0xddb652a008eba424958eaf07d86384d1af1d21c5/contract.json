@@ -1,0 +1,16 @@
+{
+  "schema": "foldforge-ethereum-contract/v1",
+  "address": "0xddb652a008eba424958eaf07d86384d1af1d21c5",
+  "name": "ALL",
+  "symbol": "ALL",
+  "description": "",
+  "total_supply": "",
+  "token_type": "ERC721",
+  "token_ids": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "image": "/ethereum-archive/contracts/0xddb652a008eba424958eaf07d86384d1af1d21c5/tokens/1/image.jpg"
+}

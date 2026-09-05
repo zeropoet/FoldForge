@@ -1,0 +1,124 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0xddb652a008eba424958eaf07d86384d1af1d21c5",
+  "token_id": "3",
+  "token_uri": "https://arweave.net/s46Jzabr6gF1QUnUGWLrx3vGfsMFbQnNkHNBFul2E8I",
+  "name": "ALL-3",
+  "description": "USA",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "ALL",
+      "display_type": "text"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/9TOjy3OH524-2PuHj3X-f2E0DSOlqK9mNeHVEZwI3is",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/d52260f4543c37073a955dc141aa008c_09f1a6f9",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/d52260f4543c37073a955dc141aa008c_09f1a6f9",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/d52260f4543c37073a955dc141aa008c_09f1a6f9"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "f3d95150846df99c37e07653659e93cdac526741301052629ff95e94e841a697",
+  "metadata_path": "/ethereum-archive/contracts/0xddb652a008eba424958eaf07d86384d1af1d21c5/tokens/3/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 3765851,
+    "sha256": "e7d5adc8c3b95230dc42950b6683103c276e2155553a64d90f666e462eda5b24",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0xddb652a008eba424958eaf07d86384d1af1d21c5/tokens/3/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T04:10:58.337Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0xdDB652a008eBa424958eAF07D86384d1AF1d21c5",
+      "name": "ALL",
+      "symbol": "ALL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "ALL",
+        "collectionSlug": "all-856022738",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/0xddb652a008eba424958eaf07d86384d1af1d21c5/4379fe391db403cbba55197f59847c/a34379fe391db403cbba55197f59847c.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-23T21:36:10.475886259Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "3",
+    "tokenType": "ERC721",
+    "name": "ALL-3",
+    "description": "USA",
+    "tokenUri": "https://arweave.net/s46Jzabr6gF1QUnUGWLrx3vGfsMFbQnNkHNBFul2E8I",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/d52260f4543c37073a955dc141aa008c_09f1a6f9",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/d52260f4543c37073a955dc141aa008c_09f1a6f9",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/d52260f4543c37073a955dc141aa008c_09f1a6f9",
+      "contentType": "image/jpeg",
+      "size": 3765851,
+      "originalUrl": "https://arweave.net/9TOjy3OH524-2PuHj3X-f2E0DSOlqK9mNeHVEZwI3is"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/s46Jzabr6gF1QUnUGWLrx3vGfsMFbQnNkHNBFul2E8I",
+      "metadata": {
+        "name": "ALL-3",
+        "description": "USA",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "ALL",
+            "display_type": "text"
+          }
+        ],
+        "image_details": {
+          "bytes": 3765851,
+          "format": "JPEG",
+          "sha256": "e7d5adc8c3b95230dc42950b6683103c276e2155553a64d90f666e462eda5b24",
+          "width": 5048,
+          "height": 3780
+        },
+        "image": "https://arweave.net/9TOjy3OH524-2PuHj3X-f2E0DSOlqK9mNeHVEZwI3is",
+        "image_url": "https://arweave.net/9TOjy3OH524-2PuHj3X-f2E0DSOlqK9mNeHVEZwI3is"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "ALL",
+      "slug": "all-856022738",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-23T23:29:09.483497687Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

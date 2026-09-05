@@ -1,0 +1,100 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x8b27a07b7425b75d6f61d76cbf13eaf799ed1aea",
+  "token_id": "1",
+  "token_uri": "ipfs://QmfD7SFE9zf6fzU2bqipRLTTvsYctfestB1BZZvDMS7C2N/metadata.json",
+  "name": "The Tabernacle",
+  "description": "I",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmYkm7fDjwizB9XYu391KNVrRzAzRxYZrLLFjiwsy5JuzY/nft.jpg",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/6867abf962b1dc9753b02618bf1585ff",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/6867abf962b1dc9753b02618bf1585ff",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/6867abf962b1dc9753b02618bf1585ff"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "62a7921d425f090c6dc56b1f55cbe13b93075c0df2a099af3ad49f388924250f",
+  "metadata_path": "/ethereum-archive/contracts/0x8b27a07b7425b75d6f61d76cbf13eaf799ed1aea/tokens/1/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 287721,
+    "sha256": "d915b7de92d2be9c312bdbdb31770de659fa60f72da2e2975cf462d0b016d524",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x8b27a07b7425b75d6f61d76cbf13eaf799ed1aea/tokens/1/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:51:45.899Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x8b27a07B7425b75d6f61d76Cbf13EAf799ed1AeA",
+      "name": "The Library",
+      "symbol": "LIBRARY",
+      "totalSupply": "4",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": null,
+        "collectionSlug": null,
+        "safelistRequestStatus": null,
+        "imageUrl": null,
+        "description": null,
+        "externalUrl": null,
+        "twitterUsername": null,
+        "discordUrl": null,
+        "bannerImageUrl": null,
+        "lastIngestedAt": null
+      },
+      "isSpam": true,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "1",
+    "tokenType": "ERC721",
+    "name": "The Tabernacle",
+    "description": "I",
+    "tokenUri": "ipfs://QmfD7SFE9zf6fzU2bqipRLTTvsYctfestB1BZZvDMS7C2N/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/6867abf962b1dc9753b02618bf1585ff",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/6867abf962b1dc9753b02618bf1585ff",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/6867abf962b1dc9753b02618bf1585ff",
+      "contentType": "image/jpeg",
+      "size": 287721,
+      "originalUrl": "https://ipfs.io/ipfs/QmYkm7fDjwizB9XYu391KNVrRzAzRxYZrLLFjiwsy5JuzY/nft.jpg"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmfD7SFE9zf6fzU2bqipRLTTvsYctfestB1BZZvDMS7C2N/metadata.json",
+      "metadata": {
+        "name": "The Tabernacle",
+        "description": "I",
+        "image": "ipfs://QmYkm7fDjwizB9XYu391KNVrRzAzRxYZrLLFjiwsy5JuzY/nft.jpg"
+      },
+      "error": null
+    },
+    "collection": null,
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-23T02:23:39.956978398Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

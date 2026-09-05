@@ -1,0 +1,111 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
+  "token_id": "3",
+  "token_uri": "https://arweave.net/npIhya-TMjMJz-cxsrxt7YSrA943LyHisb9tpR_qJiA/2",
+  "name": "02-the-odyssey",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://arweave.net/hfEV-nvPkHL-7xYk-TZ-CUcDeiBHPy6R2dveXH3zKxQ",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/db299983917ccb01779909f007064637_f82ae579",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/db299983917ccb01779909f007064637_f82ae579",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/db299983917ccb01779909f007064637_f82ae579"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "1c18ea5af76ce24ccb15e118ece93688ef048d0b460fac2c57f892748aa5d079",
+  "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/3/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 566618,
+    "sha256": "0f1da912654e807d2ef6662edd8ef573365e2f8dd6a04bfc02d9aad1f9013dab",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/3/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:47:42.430Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x16Bc29eA6E1B9390f70349bfB93eA87fFC9105Fc",
+      "name": "FOLD FORGE",
+      "symbol": "FLDFRG",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "FOLD FORGE",
+        "collectionSlug": "fold-forge",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-28T20:54:50.144847720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "3",
+    "tokenType": "ERC721",
+    "name": "02-the-odyssey",
+    "description": "",
+    "tokenUri": "https://arweave.net/npIhya-TMjMJz-cxsrxt7YSrA943LyHisb9tpR_qJiA/2",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/db299983917ccb01779909f007064637_f82ae579",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/db299983917ccb01779909f007064637_f82ae579",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/db299983917ccb01779909f007064637_f82ae579",
+      "contentType": "image/avif",
+      "size": 3446,
+      "originalUrl": "https://arweave.net/hfEV-nvPkHL-7xYk-TZ-CUcDeiBHPy6R2dveXH3zKxQ"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/npIhya-TMjMJz-cxsrxt7YSrA943LyHisb9tpR_qJiA/2",
+      "metadata": {
+        "name": "02-the-odyssey",
+        "description": "",
+        "image_details": {
+          "bytes": 566618,
+          "format": "PNG",
+          "sha256": "0f1da912654e807d2ef6662edd8ef573365e2f8dd6a04bfc02d9aad1f9013dab",
+          "width": 2400,
+          "height": 2400
+        },
+        "image": "https://arweave.net/hfEV-nvPkHL-7xYk-TZ-CUcDeiBHPy6R2dveXH3zKxQ",
+        "image_url": "https://arweave.net/hfEV-nvPkHL-7xYk-TZ-CUcDeiBHPy6R2dveXH3zKxQ"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "FOLD FORGE",
+      "slug": "fold-forge",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-28T22:01:31.815453194Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

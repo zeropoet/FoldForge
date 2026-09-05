@@ -1,0 +1,126 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x6ab557c68872724f57c40a36a559ba61f17b0893",
+  "token_id": "6",
+  "token_uri": "https://arweave.net/sxdbLnA8NlPTqHOwIIexVgbzB_pj3lbHOwVpzDKj6GE/1",
+  "name": "MTL-6",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet",
+      "display_type": "text"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/QeTsrW_YyUva6LSELVETPcnQEXJ10ZRjtQKJYaXeafE",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/573964bae482eca8500450bc499f7949_1fd6705c",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/573964bae482eca8500450bc499f7949_1fd6705c",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/573964bae482eca8500450bc499f7949_1fd6705c"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "35b03944ddbdc7de8dfda8df1c00ad509f187681f3ce448d13abba42b7b5fcfc",
+  "metadata_path": "/ethereum-archive/contracts/0x6ab557c68872724f57c40a36a559ba61f17b0893/tokens/6/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 4572910,
+    "sha256": "9342fbdd7e0930cfb85274f33bdb7fa793e805e59c4e2b1d92c0c7e8b510593d",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x6ab557c68872724f57c40a36a559ba61f17b0893/tokens/6/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:49:39.286Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x6Ab557c68872724f57C40A36a559bA61F17B0893",
+      "name": "MTL",
+      "symbol": "MTL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "MTL",
+        "collectionSlug": "mtl-455612542",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-08T14:07:56.650035683Z"
+      },
+      "isSpam": false,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "6",
+    "tokenType": "ERC721",
+    "name": "MTL-6",
+    "description": "",
+    "tokenUri": "https://arweave.net/sxdbLnA8NlPTqHOwIIexVgbzB_pj3lbHOwVpzDKj6GE/1",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/573964bae482eca8500450bc499f7949_1fd6705c",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/573964bae482eca8500450bc499f7949_1fd6705c",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/573964bae482eca8500450bc499f7949_1fd6705c",
+      "contentType": "image/jpeg",
+      "size": 4572910,
+      "originalUrl": "https://arweave.net/QeTsrW_YyUva6LSELVETPcnQEXJ10ZRjtQKJYaXeafE"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/sxdbLnA8NlPTqHOwIIexVgbzB_pj3lbHOwVpzDKj6GE/1",
+      "metadata": {
+        "name": "MTL-6",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet",
+            "display_type": "text"
+          }
+        ],
+        "description": "",
+        "image_details": {
+          "bytes": 4572910,
+          "format": "JPEG",
+          "sha256": "9342fbdd7e0930cfb85274f33bdb7fa793e805e59c4e2b1d92c0c7e8b510593d",
+          "width": 3922,
+          "height": 3922
+        },
+        "image": "https://arweave.net/QeTsrW_YyUva6LSELVETPcnQEXJ10ZRjtQKJYaXeafE",
+        "image_url": "https://arweave.net/QeTsrW_YyUva6LSELVETPcnQEXJ10ZRjtQKJYaXeafE"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "MTL",
+      "slug": "mtl-455612542",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-20T15:55:51.270417701Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

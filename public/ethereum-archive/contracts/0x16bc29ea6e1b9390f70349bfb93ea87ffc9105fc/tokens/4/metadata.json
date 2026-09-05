@@ -1,0 +1,111 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
+  "token_id": "4",
+  "token_uri": "https://arweave.net/npIhya-TMjMJz-cxsrxt7YSrA943LyHisb9tpR_qJiA/3",
+  "name": "03-ornament-of-abhidharma",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://arweave.net/xdM-KHYbkHvo9q7oxEMBJVwSIjcmQqOP5fCo5LtfQ_4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/f618fc80206258792d4dc8aba6df3a04_d8e704b5",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/f618fc80206258792d4dc8aba6df3a04_d8e704b5",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/f618fc80206258792d4dc8aba6df3a04_d8e704b5"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "6ebce88c7ad84de47271849c6572ea1f1b422bbf93f99d312c1c9cedb87b5e72",
+  "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/4/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 507719,
+    "sha256": "84a1eadf79c35f4da45860b8fc8b7934ebf1d3273e10fa9c035110f9eb8117d8",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/4/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:47:42.861Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x16Bc29eA6E1B9390f70349bfB93eA87fFC9105Fc",
+      "name": "FOLD FORGE",
+      "symbol": "FLDFRG",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "FOLD FORGE",
+        "collectionSlug": "fold-forge",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-28T20:54:50.144847720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "4",
+    "tokenType": "ERC721",
+    "name": "03-ornament-of-abhidharma",
+    "description": "",
+    "tokenUri": "https://arweave.net/npIhya-TMjMJz-cxsrxt7YSrA943LyHisb9tpR_qJiA/3",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/f618fc80206258792d4dc8aba6df3a04_d8e704b5",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/f618fc80206258792d4dc8aba6df3a04_d8e704b5",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/f618fc80206258792d4dc8aba6df3a04_d8e704b5",
+      "contentType": "image/avif",
+      "size": 8798,
+      "originalUrl": "https://arweave.net/xdM-KHYbkHvo9q7oxEMBJVwSIjcmQqOP5fCo5LtfQ_4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/npIhya-TMjMJz-cxsrxt7YSrA943LyHisb9tpR_qJiA/3",
+      "metadata": {
+        "name": "03-ornament-of-abhidharma",
+        "description": "",
+        "image_details": {
+          "bytes": 507719,
+          "format": "PNG",
+          "sha256": "84a1eadf79c35f4da45860b8fc8b7934ebf1d3273e10fa9c035110f9eb8117d8",
+          "width": 2400,
+          "height": 2400
+        },
+        "image": "https://arweave.net/xdM-KHYbkHvo9q7oxEMBJVwSIjcmQqOP5fCo5LtfQ_4",
+        "image_url": "https://arweave.net/xdM-KHYbkHvo9q7oxEMBJVwSIjcmQqOP5fCo5LtfQ_4"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "FOLD FORGE",
+      "slug": "fold-forge",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-28T22:01:32.026118935Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

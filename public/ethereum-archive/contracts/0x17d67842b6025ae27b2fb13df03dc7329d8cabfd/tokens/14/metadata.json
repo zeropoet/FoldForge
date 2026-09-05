@@ -1,0 +1,123 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x17d67842b6025ae27b2fb13df03dc7329d8cabfd",
+  "token_id": "14",
+  "token_uri": "https://arweave.net/YgJDM5FBSLReYKiz2svGa01T5xMoNkqNmvKoe1xVPxQ/2",
+  "name": "#14",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [],
+  "animation_sources": [],
+  "evidence_sha256": "6e38ca7f4d529347fd3d81517f957c7af68c02e740e163f17a4b9b9ecd27cc6c",
+  "metadata_path": "/ethereum-archive/contracts/0x17d67842b6025ae27b2fb13df03dc7329d8cabfd/tokens/14/metadata.json",
+  "media": null,
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:37.798Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x17d67842b6025ae27B2FB13Df03DC7329d8Cabfd",
+      "name": "RWL",
+      "symbol": "RWL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "RWL",
+        "collectionSlug": "rwl-424080445",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/0x17d67842b6025ae27b2fb13df03dc7329d8cabfd/827f0c242b76e3beb1e1d2bfc7a9b4/c9827f0c242b76e3beb1e1d2bfc7a9b4.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-23T21:30:49.405273497Z"
+      },
+      "isSpam": false,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "14",
+    "tokenType": "ERC721",
+    "name": "#14",
+    "description": null,
+    "tokenUri": "https://arweave.net/YgJDM5FBSLReYKiz2svGa01T5xMoNkqNmvKoe1xVPxQ/2",
+    "image": {
+      "cachedUrl": null,
+      "thumbnailUrl": null,
+      "pngUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/YgJDM5FBSLReYKiz2svGa01T5xMoNkqNmvKoe1xVPxQ/2",
+      "metadata": {
+        "identifier": "14",
+        "collection": "rwl-424080445",
+        "contract": "0x17d67842b6025ae27b2fb13df03dc7329d8cabfd",
+        "token_standard": "erc721",
+        "name": "#14",
+        "description": null,
+        "image_url": null,
+        "display_image_url": null,
+        "display_animation_url": null,
+        "metadata_url": null,
+        "opensea_url": "https://opensea.io/assets/ethereum/0x17d67842b6025ae27b2fb13df03dc7329d8cabfd/14",
+        "updated_at": "2026-08-25T16:51:52.274645",
+        "is_disabled": false,
+        "is_nsfw": false,
+        "original_image_url": null,
+        "original_animation_url": null,
+        "traits": [],
+        "estimated_value_usd": null,
+        "decimals": null,
+        "animation_url": null,
+        "is_suspicious": false,
+        "creator": "",
+        "owners": [
+          {
+            "address": "0xbd4b3a05c6a585f226afb1952cedd8c410c52e8f",
+            "quantity": 1,
+            "quantity_string": "1"
+          }
+        ],
+        "rarity": null,
+        "subscription": null,
+        "agent_binding": null
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "RWL",
+      "slug": "rwl-424080445",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-25T16:51:55.255486411Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

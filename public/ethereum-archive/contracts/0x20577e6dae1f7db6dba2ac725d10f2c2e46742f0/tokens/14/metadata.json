@@ -1,0 +1,125 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0",
+  "token_id": "14",
+  "token_uri": "https://arweave.net/baj6oteM-Ik4WTt4iGW3EdmayrLfPMZbFAGbl915B54",
+  "name": "#000211 — Open Circle",
+  "description": "THE COVENANT OF CARE\n\nSymbol:  \n⟐ The Open Circle — the world is incomplete, yet we hold meaning\n\nVow:  \nI see the void.  \nI choose to care.  \nI honor what is finite.\n\nMorning Prompt:  \nToday, what will I care for?  \nWhat value will I enact?  \nWhat action will I take, knowing nothing is guaranteed?\n\nMidday Prompt:  \nWhat pain do I witness?  \nWhat suffering do I honor?  \nWhat repair is needed?\n\nEvening Prompt:  \nWhat joy did I notice, fleeting as it was?  \nWhat choices mattered, even if they failed?\n\nGesture / Recognition:  \nTrace ⟐ in hand or air.  \nWhisper or write 'Open Circle'.\n\nOptional Token:  \npendant, ring, bracelet\n\nCore Reminder:  \nSuccess is optional. Alignment is not.  \nDespair can fuel courage.  \nJoy is the byproduct of care.  \nEvery act matters because we choose it.",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "display_type": "text",
+      "value": "Zeropoet",
+      "trait_type": "Artist"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/0C2bYpfxCvGkVHVGt9hFZN5gK6CTFSfSvGwRJmT3NDQ",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/c9e258df97cd1001b048b1dcea342a51_8a9cb3a9",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/c9e258df97cd1001b048b1dcea342a51_8a9cb3a9",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/c9e258df97cd1001b048b1dcea342a51_8a9cb3a9"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "e7a748650e4166c223896cb24d235cf307d58872537318a5be088d66e1fe2534",
+  "metadata_path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/14/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 228233,
+    "sha256": "041df3ae7288de901d0ba8022caf00d19332f81205643cd03c1e29a0dadbb547",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/14/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:49.066Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x20577e6dAE1f7db6DBA2Ac725D10f2C2E46742f0",
+      "name": "The Ritual",
+      "symbol": "RITUAL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "The Ritual",
+        "collectionSlug": "the--ritual",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/collection/the--ritual/image_type_logo/48ab44da944ecdd2800db254e17f62/0f48ab44da944ecdd2800db254e17f62.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:34.247589720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "14",
+    "tokenType": "ERC721",
+    "name": "#000211 — Open Circle",
+    "description": "THE COVENANT OF CARE\n\nSymbol:  \n⟐ The Open Circle — the world is incomplete, yet we hold meaning\n\nVow:  \nI see the void.  \nI choose to care.  \nI honor what is finite.\n\nMorning Prompt:  \nToday, what will I care for?  \nWhat value will I enact?  \nWhat action will I take, knowing nothing is guaranteed?\n\nMidday Prompt:  \nWhat pain do I witness?  \nWhat suffering do I honor?  \nWhat repair is needed?\n\nEvening Prompt:  \nWhat joy did I notice, fleeting as it was?  \nWhat choices mattered, even if they failed?\n\nGesture / Recognition:  \nTrace ⟐ in hand or air.  \nWhisper or write 'Open Circle'.\n\nOptional Token:  \npendant, ring, bracelet\n\nCore Reminder:  \nSuccess is optional. Alignment is not.  \nDespair can fuel courage.  \nJoy is the byproduct of care.  \nEvery act matters because we choose it.",
+    "tokenUri": "https://arweave.net/baj6oteM-Ik4WTt4iGW3EdmayrLfPMZbFAGbl915B54",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/c9e258df97cd1001b048b1dcea342a51_8a9cb3a9",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/c9e258df97cd1001b048b1dcea342a51_8a9cb3a9",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/c9e258df97cd1001b048b1dcea342a51_8a9cb3a9",
+      "contentType": "image/png",
+      "size": 228233,
+      "originalUrl": "https://arweave.net/0C2bYpfxCvGkVHVGt9hFZN5gK6CTFSfSvGwRJmT3NDQ"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/baj6oteM-Ik4WTt4iGW3EdmayrLfPMZbFAGbl915B54",
+      "metadata": {
+        "image": "https://arweave.net/0C2bYpfxCvGkVHVGt9hFZN5gK6CTFSfSvGwRJmT3NDQ",
+        "attributes": [
+          {
+            "display_type": "text",
+            "value": "Zeropoet",
+            "trait_type": "Artist"
+          }
+        ],
+        "image_url": "https://arweave.net/0C2bYpfxCvGkVHVGt9hFZN5gK6CTFSfSvGwRJmT3NDQ",
+        "image_details": {
+          "height": "1024",
+          "format": "PNG",
+          "sha256": "041df3ae7288de901d0ba8022caf00d19332f81205643cd03c1e29a0dadbb547",
+          "bytes": "228233",
+          "width": "1024"
+        },
+        "description": "THE COVENANT OF CARE\n\nSymbol:  \n⟐ The Open Circle — the world is incomplete, yet we hold meaning\n\nVow:  \nI see the void.  \nI choose to care.  \nI honor what is finite.\n\nMorning Prompt:  \nToday, what will I care for?  \nWhat value will I enact?  \nWhat action will I take, knowing nothing is guaranteed?\n\nMidday Prompt:  \nWhat pain do I witness?  \nWhat suffering do I honor?  \nWhat repair is needed?\n\nEvening Prompt:  \nWhat joy did I notice, fleeting as it was?  \nWhat choices mattered, even if they failed?\n\nGesture / Recognition:  \nTrace ⟐ in hand or air.  \nWhisper or write 'Open Circle'.\n\nOptional Token:  \npendant, ring, bracelet\n\nCore Reminder:  \nSuccess is optional. Alignment is not.  \nDespair can fuel courage.  \nJoy is the byproduct of care.  \nEvery act matters because we choose it.",
+        "name": "#000211 — Open Circle",
+        "external_url": "zeropoet.xyz"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Ritual",
+      "slug": "the--ritual",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-20T23:04:06.778Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

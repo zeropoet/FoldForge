@@ -1,0 +1,105 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x00a65cff273beb75c657e5673c0b453e33b077bd",
+  "token_id": "7",
+  "token_uri": "ipfs://QmSJdc9eoE6aVHe1Q3mw42H6gVqnBNVktpb9P9Dd9hpZP3/metadata.json",
+  "name": "Nakamoto ][ Satoshi",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmeodBdcVh4Cr2z2tJFjLLQ1ysjiVKWnpUT5xVv8wdvT8V/nft.jpg",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/107b33a2aa19b748da8cd27c4f848b29_622d0cd9",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/107b33a2aa19b748da8cd27c4f848b29_622d0cd9",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/107b33a2aa19b748da8cd27c4f848b29_622d0cd9"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "a097857c75fd5698cca82bf33f7c7095133a672dccb5a1da5252ac4c543c1242",
+  "metadata_path": "/ethereum-archive/contracts/0x00a65cff273beb75c657e5673c0b453e33b077bd/tokens/7/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 1831966,
+    "sha256": "da2f8f7e383be721b6e2dbeca55de34a5ce5ba918f6a0f3a2f0df30319ad5282",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x00a65cff273beb75c657e5673c0b453e33b077bd/tokens/7/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:47:39.820Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x00a65cFf273bEb75c657E5673c0b453e33b077bd",
+      "name": "The Something",
+      "symbol": "SMTHNG",
+      "totalSupply": "2",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "The Something",
+        "collectionSlug": "the-something-662836888",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/0x00a65cff273beb75c657e5673c0b453e33b077bd/827ab18b0e56d7d393ea8f490af6d9/25827ab18b0e56d7d393ea8f490af6d9.png",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:34.248657842Z"
+      },
+      "isSpam": false,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "7",
+    "tokenType": "ERC721",
+    "name": "Nakamoto ][ Satoshi",
+    "description": "",
+    "tokenUri": "ipfs://QmSJdc9eoE6aVHe1Q3mw42H6gVqnBNVktpb9P9Dd9hpZP3/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/107b33a2aa19b748da8cd27c4f848b29_622d0cd9",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/107b33a2aa19b748da8cd27c4f848b29_622d0cd9",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/107b33a2aa19b748da8cd27c4f848b29_622d0cd9",
+      "contentType": "image/jpeg",
+      "size": 1831966,
+      "originalUrl": "https://ipfs.io/ipfs/QmeodBdcVh4Cr2z2tJFjLLQ1ysjiVKWnpUT5xVv8wdvT8V/nft.jpg"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmSJdc9eoE6aVHe1Q3mw42H6gVqnBNVktpb9P9Dd9hpZP3/metadata.json",
+      "metadata": {
+        "name": "Nakamoto ][ Satoshi",
+        "description": "",
+        "image": "ipfs://QmeodBdcVh4Cr2z2tJFjLLQ1ysjiVKWnpUT5xVv8wdvT8V/nft.jpg"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Something",
+      "slug": "the-something-662836888",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-22T00:27:11.513686137Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

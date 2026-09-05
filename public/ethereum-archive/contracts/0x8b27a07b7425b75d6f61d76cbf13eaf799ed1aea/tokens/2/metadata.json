@@ -1,0 +1,100 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x8b27a07b7425b75d6f61d76cbf13eaf799ed1aea",
+  "token_id": "2",
+  "token_uri": "ipfs://QmPzi6PQLYgzWPJcgB4eSRmDvkdEMXxWvMX7rPuTSiQNuz/metadata.json",
+  "name": "The Prototype",
+  "description": "0",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmT1SCspDQ4V9TkvqYPbmqCUAu5BdbQLcTRBsMrS8GuSNW/nft.jpg",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/fb88ccef9f791252860bdf8600326586",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/fb88ccef9f791252860bdf8600326586",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/fb88ccef9f791252860bdf8600326586"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "1eb1618e4fd0b5b0fe7b654c20af47f91da851f93c4fa9f44635b8c08d6add29",
+  "metadata_path": "/ethereum-archive/contracts/0x8b27a07b7425b75d6f61d76cbf13eaf799ed1aea/tokens/2/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 1353337,
+    "sha256": "79f56bdd7d6972b4cdd177cf01afe1679810de07236779fb1e1a5451860d3344",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x8b27a07b7425b75d6f61d76cbf13eaf799ed1aea/tokens/2/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:51:46.702Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x8b27a07B7425b75d6f61d76Cbf13EAf799ed1AeA",
+      "name": "The Library",
+      "symbol": "LIBRARY",
+      "totalSupply": "4",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": null,
+        "collectionSlug": null,
+        "safelistRequestStatus": null,
+        "imageUrl": null,
+        "description": null,
+        "externalUrl": null,
+        "twitterUsername": null,
+        "discordUrl": null,
+        "bannerImageUrl": null,
+        "lastIngestedAt": null
+      },
+      "isSpam": true,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "2",
+    "tokenType": "ERC721",
+    "name": "The Prototype",
+    "description": "0",
+    "tokenUri": "ipfs://QmPzi6PQLYgzWPJcgB4eSRmDvkdEMXxWvMX7rPuTSiQNuz/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/fb88ccef9f791252860bdf8600326586",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/fb88ccef9f791252860bdf8600326586",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/fb88ccef9f791252860bdf8600326586",
+      "contentType": "image/jpeg",
+      "size": 1353337,
+      "originalUrl": "https://ipfs.io/ipfs/QmT1SCspDQ4V9TkvqYPbmqCUAu5BdbQLcTRBsMrS8GuSNW/nft.jpg"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmPzi6PQLYgzWPJcgB4eSRmDvkdEMXxWvMX7rPuTSiQNuz/metadata.json",
+      "metadata": {
+        "name": "The Prototype",
+        "description": "0",
+        "image": "ipfs://QmT1SCspDQ4V9TkvqYPbmqCUAu5BdbQLcTRBsMrS8GuSNW/nft.jpg"
+      },
+      "error": null
+    },
+    "collection": null,
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-23T02:23:44.070086188Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

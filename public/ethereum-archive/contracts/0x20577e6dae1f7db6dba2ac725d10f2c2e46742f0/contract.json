@@ -1,0 +1,27 @@
+{
+  "schema": "foldforge-ethereum-contract/v1",
+  "address": "0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0",
+  "name": "The Ritual",
+  "symbol": "RITUAL",
+  "description": "",
+  "total_supply": "",
+  "token_type": "ERC721",
+  "token_ids": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15"
+  ],
+  "image": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/1/image.jpg"
+}

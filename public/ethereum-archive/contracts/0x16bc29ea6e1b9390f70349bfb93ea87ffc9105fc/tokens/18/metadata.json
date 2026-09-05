@@ -1,0 +1,132 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
+  "token_id": "18",
+  "token_uri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/4",
+  "name": "#18",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://arweave.net/z2Pb70qv9IPyivQBIrQj34AJqz9GPsexP8GcuOLZ_PY",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/74081ca8bf03c6eb3ab88f1f2f35c412_c4f46882",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/74081ca8bf03c6eb3ab88f1f2f35c412_c4f46882",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/74081ca8bf03c6eb3ab88f1f2f35c412_c4f46882"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "9fe9e14fe56812619161a4b82ccf5e935c2204cd1b716564d63e725088252f7f",
+  "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/18/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 482543,
+    "sha256": "901689ae7b99b608e30aab848e6a5778efb5a8b6892b43815f6d0e54accc391d",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/18/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:47:48.604Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x16Bc29eA6E1B9390f70349bfB93eA87fFC9105Fc",
+      "name": "FOLD FORGE",
+      "symbol": "FLDFRG",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "FOLD FORGE",
+        "collectionSlug": "fold-forge",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-28T20:54:50.144847720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "18",
+    "tokenType": "ERC721",
+    "name": "#18",
+    "description": null,
+    "tokenUri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/4",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/74081ca8bf03c6eb3ab88f1f2f35c412_c4f46882",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/74081ca8bf03c6eb3ab88f1f2f35c412_c4f46882",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/74081ca8bf03c6eb3ab88f1f2f35c412_c4f46882",
+      "contentType": "image/png",
+      "size": 482543,
+      "originalUrl": "https://arweave.net/z2Pb70qv9IPyivQBIrQj34AJqz9GPsexP8GcuOLZ_PY"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/4",
+      "metadata": {
+        "identifier": "18",
+        "collection": "fold-forge",
+        "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
+        "token_standard": "erc721",
+        "name": "#18",
+        "description": null,
+        "image_url": null,
+        "display_image_url": null,
+        "display_animation_url": null,
+        "metadata_url": null,
+        "opensea_url": "https://opensea.io/assets/ethereum/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/18",
+        "updated_at": "2026-07-29T17:13:15.515426",
+        "is_disabled": false,
+        "is_nsfw": false,
+        "original_image_url": null,
+        "original_animation_url": null,
+        "traits": [],
+        "estimated_value_usd": null,
+        "decimals": null,
+        "animation_url": null,
+        "is_suspicious": false,
+        "creator": "",
+        "owners": [
+          {
+            "address": "0xbd4b3a05c6a585f226afb1952cedd8c410c52e8f",
+            "quantity": 1,
+            "quantity_string": "1"
+          }
+        ],
+        "rarity": null,
+        "subscription": null,
+        "agent_binding": null
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "FOLD FORGE",
+      "slug": "fold-forge",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-29T17:13:30.588010610Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

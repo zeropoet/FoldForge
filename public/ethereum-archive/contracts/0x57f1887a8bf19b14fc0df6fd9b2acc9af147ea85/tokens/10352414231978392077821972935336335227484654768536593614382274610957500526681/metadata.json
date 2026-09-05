@@ -1,0 +1,174 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+  "token_id": "10352414231978392077821972935336335227484654768536593614382274610957500526681",
+  "token_uri": "https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0x16e342416feb31265fa6d45cc9770d46f0f4c78383242ad3741b53e16937b059",
+  "name": "zeropoet.eth",
+  "description": "zeropoet.eth, an ENS name.",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "trait_type": "Created Date",
+      "display_type": "date",
+      "value": "1636598612000"
+    },
+    {
+      "value": "8",
+      "trait_type": "Length",
+      "display_type": "number"
+    },
+    {
+      "trait_type": "Segment Length",
+      "display_type": "number",
+      "value": "8"
+    },
+    {
+      "value": "letter",
+      "display_type": "string",
+      "trait_type": "Character Set"
+    },
+    {
+      "trait_type": "Registration Date",
+      "value": "1636598612000",
+      "display_type": "date"
+    },
+    {
+      "value": "1952168132000",
+      "trait_type": "Expiration Date",
+      "display_type": "date"
+    }
+  ],
+  "image_sources": [
+    "https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0x16e342416feb31265fa6d45cc9770d46f0f4c78383242ad3741b53e16937b059/image",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/6e9331f50a6e4d3c34427259a53aaae7_d05ddee2",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/6e9331f50a6e4d3c34427259a53aaae7_d05ddee2",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/6e9331f50a6e4d3c34427259a53aaae7_d05ddee2"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "9cad9378b5e85df212487a76e8d73caea85469fac87f735d5f50feb5ac832650",
+  "metadata_path": "/ethereum-archive/contracts/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/tokens/10352414231978392077821972935336335227484654768536593614382274610957500526681/metadata.json",
+  "media": {
+    "file": "image.svg",
+    "bytes": 101093,
+    "sha256": "a95b2e14b1aa9de69630fd1ca4bb3de3cbebea53605ffb37d891ddfef6ce3f40",
+    "media_type": "image/svg+xml",
+    "path": "/ethereum-archive/contracts/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/tokens/10352414231978392077821972935336335227484654768536593614382274610957500526681/image.svg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:49:23.162Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85",
+      "name": null,
+      "symbol": null,
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0.0000247,
+        "collectionName": "ENS: Ethereum Name Service",
+        "collectionSlug": "ens",
+        "safelistRequestStatus": "verified",
+        "imageUrl": "https://i2c.seadn.io/collection/ens/image/2389b989ec47442bc2c714bcdf3e19/b02389b989ec47442bc2c714bcdf3e19.png",
+        "description": "Ethereum Name Service (ENS) domains are secure domain names for the decentralized world. ENS domains provide a way for users to map human readable names to blockchain and non-blockchain resources, like Ethereum addresses, IPFS hashes, or website URLs. ENS domains can be bought and sold on secondary markets.",
+        "externalUrl": "https://ens.domains",
+        "twitterUsername": "ensdomains",
+        "discordUrl": "",
+        "bannerImageUrl": "https://i2c.seadn.io/collection/ens/desktopHeroMedia/dd03416d9fdbfa8469940079031f9e/dcdd03416d9fdbfa8469940079031f9e.png?fit=inside",
+        "lastIngestedAt": "2026-07-14T02:52:24.240026568Z"
+      },
+      "isSpam": false,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "10352414231978392077821972935336335227484654768536593614382274610957500526681",
+    "tokenType": "ERC721",
+    "name": "zeropoet.eth",
+    "description": "zeropoet.eth, an ENS name.",
+    "tokenUri": "https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0x16e342416feb31265fa6d45cc9770d46f0f4c78383242ad3741b53e16937b059",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/6e9331f50a6e4d3c34427259a53aaae7_d05ddee2",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/6e9331f50a6e4d3c34427259a53aaae7_d05ddee2",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/6e9331f50a6e4d3c34427259a53aaae7_d05ddee2",
+      "contentType": "image/svg+xml",
+      "size": 101093,
+      "originalUrl": "https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0x16e342416feb31265fa6d45cc9770d46f0f4c78383242ad3741b53e16937b059/image"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0x16e342416feb31265fa6d45cc9770d46f0f4c78383242ad3741b53e16937b059",
+      "metadata": {
+        "last_request_date": "1787241487597",
+        "background_image": "https://metadata.ens.domains/mainnet/avatar/zeropoet.eth",
+        "description": "zeropoet.eth, an ENS name.",
+        "is_normalized": true,
+        "image_url": "https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0x16e342416feb31265fa6d45cc9770d46f0f4c78383242ad3741b53e16937b059/image",
+        "version": "0",
+        "attributes": [
+          {
+            "trait_type": "Created Date",
+            "display_type": "date",
+            "value": "1636598612000"
+          },
+          {
+            "value": "8",
+            "trait_type": "Length",
+            "display_type": "number"
+          },
+          {
+            "trait_type": "Segment Length",
+            "display_type": "number",
+            "value": "8"
+          },
+          {
+            "value": "letter",
+            "display_type": "string",
+            "trait_type": "Character Set"
+          },
+          {
+            "trait_type": "Registration Date",
+            "value": "1636598612000",
+            "display_type": "date"
+          },
+          {
+            "value": "1952168132000",
+            "trait_type": "Expiration Date",
+            "display_type": "date"
+          }
+        ],
+        "url": "https://app.ens.domains/name/zeropoet.eth",
+        "image": "https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0x16e342416feb31265fa6d45cc9770d46f0f4c78383242ad3741b53e16937b059/image",
+        "name": "zeropoet.eth"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "ENS: Ethereum Name Service",
+      "slug": "ens",
+      "externalUrl": "https://ens.domains",
+      "bannerImageUrl": "https://i2c.seadn.io/collection/ens/desktopHeroMedia/dd03416d9fdbfa8469940079031f9e/dcdd03416d9fdbfa8469940079031f9e.png?fit=inside"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-20T17:52:08.682Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

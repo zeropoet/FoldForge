@@ -1,0 +1,111 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
+  "token_id": "39",
+  "token_uri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/2",
+  "name": "38-the-poetic-edda",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://arweave.net/gmdMaDhLlcaYz8AQd1uEUHIz_4XvsKallh4RXbDzybE",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/8f30a364a89b7df4085bc2a15d6e3a06_3acbef9c",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/8f30a364a89b7df4085bc2a15d6e3a06_3acbef9c",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/8f30a364a89b7df4085bc2a15d6e3a06_3acbef9c"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "14fa940df586b6ad20a4a25fd3846e502c3e37c96f7c49c6efc299748cc71974",
+  "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/39/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 486221,
+    "sha256": "278b7faa74d398d7ca84016495cfbcc3bfd4c6c78a608d0c47da8a8221d16202",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/39/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:19.584Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x16Bc29eA6E1B9390f70349bfB93eA87fFC9105Fc",
+      "name": "FOLD FORGE",
+      "symbol": "FLDFRG",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "FOLD FORGE",
+        "collectionSlug": "fold-forge",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-28T20:54:50.144847720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "39",
+    "tokenType": "ERC721",
+    "name": "38-the-poetic-edda",
+    "description": "",
+    "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/2",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/8f30a364a89b7df4085bc2a15d6e3a06_3acbef9c",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/8f30a364a89b7df4085bc2a15d6e3a06_3acbef9c",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/8f30a364a89b7df4085bc2a15d6e3a06_3acbef9c",
+      "contentType": "image/png",
+      "size": 486221,
+      "originalUrl": "https://arweave.net/gmdMaDhLlcaYz8AQd1uEUHIz_4XvsKallh4RXbDzybE"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/2",
+      "metadata": {
+        "name": "38-the-poetic-edda",
+        "description": "",
+        "image_details": {
+          "bytes": 486221,
+          "format": "PNG",
+          "sha256": "278b7faa74d398d7ca84016495cfbcc3bfd4c6c78a608d0c47da8a8221d16202",
+          "width": 2400,
+          "height": 2400
+        },
+        "image": "https://arweave.net/gmdMaDhLlcaYz8AQd1uEUHIz_4XvsKallh4RXbDzybE",
+        "image_url": "https://arweave.net/gmdMaDhLlcaYz8AQd1uEUHIz_4XvsKallh4RXbDzybE"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "FOLD FORGE",
+      "slug": "fold-forge",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-04T06:04:08.411259026Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

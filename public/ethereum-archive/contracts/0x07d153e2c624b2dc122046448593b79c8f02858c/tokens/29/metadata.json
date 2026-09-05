@@ -1,0 +1,105 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x07d153e2c624b2dc122046448593b79c8f02858c",
+  "token_id": "29",
+  "token_uri": "ipfs://QmQBE4yXBgrF7MVMSf76PB6r7mVp6NJiRHh9Sqiey5h9pC/metadata.json",
+  "name": "199",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmYVB8ToRsKMDQYGap7WMHEmHbfh9moLeayjpFf3UNjRKw/nft.jpg",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/55e5d0cd14d3f9cdb9df6c1bb2264e70_cf925b87",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/55e5d0cd14d3f9cdb9df6c1bb2264e70_cf925b87",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/55e5d0cd14d3f9cdb9df6c1bb2264e70_cf925b87"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "00fc6aa9ce28385f439724339156c7166c5048654295d8c678d297ab29e0cffe",
+  "metadata_path": "/ethereum-archive/contracts/0x07d153e2c624b2dc122046448593b79c8f02858c/tokens/29/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 4639131,
+    "sha256": "a710f46a8d23d8c4289b7fca08e4b12e140df872016f98fa58c42a13f436a1ef",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x07d153e2c624b2dc122046448593b79c8f02858c/tokens/29/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:47:40.535Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x07D153e2c624B2dc122046448593B79c8F02858c",
+      "name": "The Stacks",
+      "symbol": "STACKS",
+      "totalSupply": "11",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "The Stacks",
+        "collectionSlug": "the-stacks",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/0x07d153e2c624b2dc122046448593b79c8f02858c/77071cdc13361d2c12740a62c0b0da/ba77071cdc13361d2c12740a62c0b0da.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:34.248508574Z"
+      },
+      "isSpam": true,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "29",
+    "tokenType": "ERC721",
+    "name": "199",
+    "description": "",
+    "tokenUri": "ipfs://QmQBE4yXBgrF7MVMSf76PB6r7mVp6NJiRHh9Sqiey5h9pC/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/55e5d0cd14d3f9cdb9df6c1bb2264e70_cf925b87",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/55e5d0cd14d3f9cdb9df6c1bb2264e70_cf925b87",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/55e5d0cd14d3f9cdb9df6c1bb2264e70_cf925b87",
+      "contentType": "image/jpeg",
+      "size": 4639131,
+      "originalUrl": "https://ipfs.io/ipfs/QmYVB8ToRsKMDQYGap7WMHEmHbfh9moLeayjpFf3UNjRKw/nft.jpg"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmQBE4yXBgrF7MVMSf76PB6r7mVp6NJiRHh9Sqiey5h9pC/metadata.json",
+      "metadata": {
+        "name": "199",
+        "image": "ipfs://QmYVB8ToRsKMDQYGap7WMHEmHbfh9moLeayjpFf3UNjRKw/nft.jpg",
+        "description": ""
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Stacks",
+      "slug": "the-stacks",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-21T22:43:30.237228788Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

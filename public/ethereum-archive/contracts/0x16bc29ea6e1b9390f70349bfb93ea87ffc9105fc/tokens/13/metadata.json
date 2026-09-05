@@ -1,0 +1,111 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
+  "token_id": "13",
+  "token_uri": "https://arweave.net/HoueUOUcI9RooAsJZCxVg1ApZNsdfio_9EYctHRXOFk/2",
+  "name": "12-the-iliad",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://arweave.net/Bgk7mt_Szn0mFb57gJh5vNE1_XTECVv_kMMR08z-GaQ",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/11738ac66b1403ad8245ffc624c4f43c_fc787a3b",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/11738ac66b1403ad8245ffc624c4f43c_fc787a3b",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/11738ac66b1403ad8245ffc624c4f43c_fc787a3b"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "ab051787abd1f3c8a29235c036faa093c5fc023743422833cdd5056e0467d2a0",
+  "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/13/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 512941,
+    "sha256": "3bac6a9c89b592d87e418bc7d3ec2b01f39e1651ad1663a937d842d8e0fdad65",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/13/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:47:46.623Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x16Bc29eA6E1B9390f70349bfB93eA87fFC9105Fc",
+      "name": "FOLD FORGE",
+      "symbol": "FLDFRG",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "FOLD FORGE",
+        "collectionSlug": "fold-forge",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-28T20:54:50.144847720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "13",
+    "tokenType": "ERC721",
+    "name": "12-the-iliad",
+    "description": "",
+    "tokenUri": "https://arweave.net/HoueUOUcI9RooAsJZCxVg1ApZNsdfio_9EYctHRXOFk/2",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/11738ac66b1403ad8245ffc624c4f43c_fc787a3b",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/11738ac66b1403ad8245ffc624c4f43c_fc787a3b",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/11738ac66b1403ad8245ffc624c4f43c_fc787a3b",
+      "contentType": "image/avif",
+      "size": 22562,
+      "originalUrl": "https://arweave.net/Bgk7mt_Szn0mFb57gJh5vNE1_XTECVv_kMMR08z-GaQ"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/HoueUOUcI9RooAsJZCxVg1ApZNsdfio_9EYctHRXOFk/2",
+      "metadata": {
+        "name": "12-the-iliad",
+        "description": "",
+        "image_details": {
+          "bytes": 512941,
+          "format": "PNG",
+          "sha256": "3bac6a9c89b592d87e418bc7d3ec2b01f39e1651ad1663a937d842d8e0fdad65",
+          "width": 2400,
+          "height": 2400
+        },
+        "image": "https://arweave.net/Bgk7mt_Szn0mFb57gJh5vNE1_XTECVv_kMMR08z-GaQ",
+        "image_url": "https://arweave.net/Bgk7mt_Szn0mFb57gJh5vNE1_XTECVv_kMMR08z-GaQ"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "FOLD FORGE",
+      "slug": "fold-forge",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-28T23:28:07.237257245Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

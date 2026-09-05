@@ -1,0 +1,125 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0",
+  "token_id": "3",
+  "token_uri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/3",
+  "name": "#000126 — Offering Rite",
+  "description": "△⨂\n\nFunction: To dedicate an object, act, or word as an offering; placing it in covenant service.\n\nCore vow: “I lift this as gift; let it be seed.”\n\nRitual actions: object/word raised; dedication spoken; witness affirms “Received.”\n\nClosure: All: “Let it be seed.”",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "display_type": "text",
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/yuY66dqbuIAQmUl6SVNVcPsTeD-VQp15kkhBn1AjVyw",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/a5edd81baca254a061ebd09a2abc277b_c719562d",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/a5edd81baca254a061ebd09a2abc277b_c719562d",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/a5edd81baca254a061ebd09a2abc277b_c719562d"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "7118e708584cf4c415f283410aa8d6a50d86db85114e8f0aa3f66c74b54ff946",
+  "metadata_path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/3/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 1164655,
+    "sha256": "9c872cb7af4824f2f52794e40d17192909397245b6d08f748714a92fd9a934d0",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/3/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:40.320Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x20577e6dAE1f7db6DBA2Ac725D10f2C2E46742f0",
+      "name": "The Ritual",
+      "symbol": "RITUAL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "The Ritual",
+        "collectionSlug": "the--ritual",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/collection/the--ritual/image_type_logo/48ab44da944ecdd2800db254e17f62/0f48ab44da944ecdd2800db254e17f62.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:34.247589720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "3",
+    "tokenType": "ERC721",
+    "name": "#000126 — Offering Rite",
+    "description": "△⨂\n\nFunction: To dedicate an object, act, or word as an offering; placing it in covenant service.\n\nCore vow: “I lift this as gift; let it be seed.”\n\nRitual actions: object/word raised; dedication spoken; witness affirms “Received.”\n\nClosure: All: “Let it be seed.”",
+    "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/3",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/a5edd81baca254a061ebd09a2abc277b_c719562d",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/a5edd81baca254a061ebd09a2abc277b_c719562d",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/a5edd81baca254a061ebd09a2abc277b_c719562d",
+      "contentType": "image/jpeg",
+      "size": 1164655,
+      "originalUrl": "https://arweave.net/yuY66dqbuIAQmUl6SVNVcPsTeD-VQp15kkhBn1AjVyw"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/3",
+      "metadata": {
+        "image_details": {
+          "width": "1536",
+          "bytes": "1164655",
+          "format": "JPEG",
+          "height": "2048",
+          "sha256": "9c872cb7af4824f2f52794e40d17192909397245b6d08f748714a92fd9a934d0"
+        },
+        "image": "https://arweave.net/yuY66dqbuIAQmUl6SVNVcPsTeD-VQp15kkhBn1AjVyw",
+        "attributes": [
+          {
+            "display_type": "text",
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ],
+        "image_url": "https://arweave.net/yuY66dqbuIAQmUl6SVNVcPsTeD-VQp15kkhBn1AjVyw",
+        "name": "#000126 — Offering Rite",
+        "created_by": "Zeropoet",
+        "description": "△⨂\n\nFunction: To dedicate an object, act, or word as an offering; placing it in covenant service.\n\nCore vow: “I lift this as gift; let it be seed.”\n\nRitual actions: object/word raised; dedication spoken; witness affirms “Received.”\n\nClosure: All: “Let it be seed.”"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Ritual",
+      "slug": "the--ritual",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-28T12:06:04.576Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

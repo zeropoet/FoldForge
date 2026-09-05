@@ -1,0 +1,15 @@
+{
+  "schema": "foldforge-ethereum-contract/v1",
+  "address": "0x6704fec6e09b2e30d320727f255f175034983dad",
+  "name": "Pæce",
+  "symbol": "PEACE",
+  "description": "",
+  "total_supply": "3",
+  "token_type": "ERC721",
+  "token_ids": [
+    "1",
+    "2",
+    "3"
+  ],
+  "image": "/ethereum-archive/contracts/0x6704fec6e09b2e30d320727f255f175034983dad/tokens/2/image.jpg"
+}

@@ -9,6 +9,7 @@
     "start": "next start",
     "dispatch:bridge": "node scripts/dispatch-print-bridge.mjs",
     "refresh:eth-media": "node scripts/refresh-ethereum-media.mjs",
+    "sync:eth-archive": "node scripts/sync-ethereum-archive.mjs",
     "build:language-export": "node scripts/build_language_composition_export.mjs",
     "build:displacement-map": "node scripts/build-root-logos-displacement-map.mjs",
     "lint": "eslint",

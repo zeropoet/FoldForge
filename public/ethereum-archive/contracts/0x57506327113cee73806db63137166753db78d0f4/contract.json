@@ -1,0 +1,13 @@
+{
+  "schema": "foldforge-ethereum-contract/v1",
+  "address": "0x57506327113cee73806db63137166753db78d0f4",
+  "name": "FOUND",
+  "symbol": "FOUND",
+  "description": "",
+  "total_supply": "",
+  "token_type": "ERC721",
+  "token_ids": [
+    "1"
+  ],
+  "image": ""
+}

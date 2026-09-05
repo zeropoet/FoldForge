@@ -1,0 +1,134 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x716d8251ce9521657b6d36786e6f414e5c915895",
+  "token_id": "6",
+  "token_uri": "https://arweave.net/KS0FtvRWmZiNgk7w1TnZoP6Xu6SV1C4LYM2Z7NHNsZc",
+  "name": "FoldForge",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/7957d3ecd8d05733f63f1e6c20bca3/1e7957d3ecd8d05733f63f1e6c20bca3.png",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/27d338cb989c844196652daa1b8f20ba_1e7957d3",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/27d338cb989c844196652daa1b8f20ba_1e7957d3",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/27d338cb989c844196652daa1b8f20ba_1e7957d3"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "0f0c2a2973ef4f4547fbeae31fd89e8d49df92d0577a212d5ca7cbea464be07f",
+  "metadata_path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/6/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 1234,
+    "sha256": "84f8d083e43b3dfc1447f63ca43db5736c27db1bf5d6c4eb7c1bd3146f83ed2e",
+    "media_type": "image/avif",
+    "path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/6/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:49:41.659Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x716d8251Ce9521657b6d36786E6f414E5c915895",
+      "name": "SOVEREIGN STANDARD",
+      "symbol": "SOVE",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "SOVEREIGN STANDARD",
+        "collectionSlug": "sovereign-standard",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/4ead16b5d42ad6ff703fbb6a38c73f/c64ead16b5d42ad6ff703fbb6a38c73f.gif",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-16T20:36:16.423951454Z"
+      },
+      "isSpam": false,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "6",
+    "tokenType": "ERC721",
+    "name": "FoldForge",
+    "description": "",
+    "tokenUri": "https://arweave.net/KS0FtvRWmZiNgk7w1TnZoP6Xu6SV1C4LYM2Z7NHNsZc",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/27d338cb989c844196652daa1b8f20ba_1e7957d3",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/27d338cb989c844196652daa1b8f20ba_1e7957d3",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/27d338cb989c844196652daa1b8f20ba_1e7957d3",
+      "contentType": "image/png",
+      "size": 656042,
+      "originalUrl": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/7957d3ecd8d05733f63f1e6c20bca3/1e7957d3ecd8d05733f63f1e6c20bca3.png"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/KS0FtvRWmZiNgk7w1TnZoP6Xu6SV1C4LYM2Z7NHNsZc",
+      "metadata": {
+        "identifier": "6",
+        "collection": "sovereign-standard",
+        "contract": "0x716d8251ce9521657b6d36786e6f414e5c915895",
+        "token_standard": "erc721",
+        "name": "FoldForge",
+        "description": "",
+        "image_url": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/7957d3ecd8d05733f63f1e6c20bca3/1e7957d3ecd8d05733f63f1e6c20bca3.png",
+        "display_image_url": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/7957d3ecd8d05733f63f1e6c20bca3/1e7957d3ecd8d05733f63f1e6c20bca3.png",
+        "display_animation_url": null,
+        "metadata_url": "https://arweave.net/zEo2Ocvy_mrVmFYj7Z8SwLuxCQOIJRN9BuygSH5YhkQ",
+        "opensea_url": "https://opensea.io/assets/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/6",
+        "updated_at": "2026-09-02T20:44:04.927782",
+        "is_disabled": false,
+        "is_nsfw": false,
+        "original_image_url": "https://arweave.net/Cdt8g8OYsweLsOtJGGzltTrYxPrYtsvBAMGkQpAb62M",
+        "original_animation_url": null,
+        "traits": [],
+        "estimated_value_usd": null,
+        "decimals": null,
+        "animation_url": null,
+        "is_suspicious": false,
+        "creator": "",
+        "owners": [
+          {
+            "address": "0xbd4b3a05c6a585f226afb1952cedd8c410c52e8f",
+            "quantity": 1,
+            "quantity_string": "1"
+          }
+        ],
+        "rarity": null,
+        "subscription": null,
+        "agent_binding": null
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "SOVEREIGN STANDARD",
+      "slug": "sovereign-standard",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-09-02T20:44:04.984013132Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

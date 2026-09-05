@@ -1,0 +1,103 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x6704fec6e09b2e30d320727f255f175034983dad",
+  "token_id": "2",
+  "token_uri": "ipfs://QmXVn9maEtQsBH3wNrJymyAw6ihcg33bBN4hvvabeD4ezJ/metadata.json",
+  "name": "Anwar",
+  "description": "✵",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmP2baRsJZfxJRuxSCJw9b6keiL16Hx6Moq8mahqPd3gy5/nft.jpg",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/0820fa409ef1810d17dbb28d6e342ec2_d1a4ab26",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/0820fa409ef1810d17dbb28d6e342ec2_d1a4ab26",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/0820fa409ef1810d17dbb28d6e342ec2_d1a4ab26"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "437cefa1d7e2ead59615775ef802bf5d678cdee2aa81c311189ec697b63e6f01",
+  "metadata_path": "/ethereum-archive/contracts/0x6704fec6e09b2e30d320727f255f175034983dad/tokens/2/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 3938970,
+    "sha256": "adb45e4a7fc4efdf20bd05761f070e5e8534a12ba5dfbc00068396caa180eb4a",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x6704fec6e09b2e30d320727f255f175034983dad/tokens/2/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:49:37.320Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x6704feC6e09B2E30d320727f255F175034983dAD",
+      "name": "Pæce",
+      "symbol": "PEACE",
+      "totalSupply": "3",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "Pæce",
+        "collectionSlug": "paece-300604948",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x6704fec6e09b2e30d320727f255f175034983dad/36e06da76109ea89adc90161ede74b/5836e06da76109ea89adc90161ede74b.mp4",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:30.368593468Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "2",
+    "tokenType": "ERC721",
+    "name": "Anwar",
+    "description": "✵",
+    "tokenUri": "ipfs://QmXVn9maEtQsBH3wNrJymyAw6ihcg33bBN4hvvabeD4ezJ/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/0820fa409ef1810d17dbb28d6e342ec2_d1a4ab26",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/0820fa409ef1810d17dbb28d6e342ec2_d1a4ab26",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/0820fa409ef1810d17dbb28d6e342ec2_d1a4ab26",
+      "contentType": "image/jpeg",
+      "size": 3938970,
+      "originalUrl": "https://ipfs.io/ipfs/QmP2baRsJZfxJRuxSCJw9b6keiL16Hx6Moq8mahqPd3gy5/nft.jpg"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmXVn9maEtQsBH3wNrJymyAw6ihcg33bBN4hvvabeD4ezJ/metadata.json",
+      "metadata": {
+        "name": "Anwar",
+        "image": "ipfs://QmP2baRsJZfxJRuxSCJw9b6keiL16Hx6Moq8mahqPd3gy5/nft.jpg",
+        "description": "✵"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "Pæce",
+      "slug": "paece-300604948",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-24T18:35:57.370Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

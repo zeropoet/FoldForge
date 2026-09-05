@@ -1,0 +1,113 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x716d8251ce9521657b6d36786e6f414e5c915895",
+  "token_id": "8",
+  "token_uri": "https://arweave.net/0-mODHUFvSDJeaVaNrqar3OJvQAUkwnLVpA_Ml5d0g8/2",
+  "name": "Zeropoet",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://arweave.net/Lnca5Y1a034yx4pfWCAl5L2Yjyabre_ayDyKwATzjIY",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/08a236a2729bbf8902c2bfaaa63b9bc3_d6308a20",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/08a236a2729bbf8902c2bfaaa63b9bc3_d6308a20",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/08a236a2729bbf8902c2bfaaa63b9bc3_d6308a20"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "6b2d053541c8cdfc270c40bf4215432c2b39cd3f355cadcdbb1983bd6404a23e",
+  "metadata_path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/8/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 53097,
+    "sha256": "1d501f6370d772a5908bd447c1ecd8dd0208388a1e443061148aaca64c704e3b",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/8/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:49:42.569Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x716d8251Ce9521657b6d36786E6f414E5c915895",
+      "name": "SOVEREIGN STANDARD",
+      "symbol": "SOVE",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "SOVEREIGN STANDARD",
+        "collectionSlug": "sovereign-standard",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/4ead16b5d42ad6ff703fbb6a38c73f/c64ead16b5d42ad6ff703fbb6a38c73f.gif",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-16T20:36:16.423951454Z"
+      },
+      "isSpam": false,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "8",
+    "tokenType": "ERC721",
+    "name": "Zeropoet",
+    "description": "",
+    "tokenUri": "https://arweave.net/0-mODHUFvSDJeaVaNrqar3OJvQAUkwnLVpA_Ml5d0g8/2",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/08a236a2729bbf8902c2bfaaa63b9bc3_d6308a20",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/08a236a2729bbf8902c2bfaaa63b9bc3_d6308a20",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/08a236a2729bbf8902c2bfaaa63b9bc3_d6308a20",
+      "contentType": "image/png",
+      "size": 53097,
+      "originalUrl": "https://arweave.net/Lnca5Y1a034yx4pfWCAl5L2Yjyabre_ayDyKwATzjIY"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/0-mODHUFvSDJeaVaNrqar3OJvQAUkwnLVpA_Ml5d0g8/2",
+      "metadata": {
+        "name": "Zeropoet",
+        "description": "",
+        "image_details": {
+          "bytes": 53097,
+          "format": "PNG",
+          "sha256": "1d501f6370d772a5908bd447c1ecd8dd0208388a1e443061148aaca64c704e3b",
+          "width": 1024,
+          "height": 1024
+        },
+        "image": "https://arweave.net/Lnca5Y1a034yx4pfWCAl5L2Yjyabre_ayDyKwATzjIY",
+        "image_url": "https://arweave.net/Lnca5Y1a034yx4pfWCAl5L2Yjyabre_ayDyKwATzjIY"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "SOVEREIGN STANDARD",
+      "slug": "sovereign-standard",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-09T20:25:02.716898683Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

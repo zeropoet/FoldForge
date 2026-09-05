@@ -1,0 +1,116 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
+  "token_id": "36",
+  "token_uri": "https://arweave.net/0aNC2P5RrXpAA8dToLYAEFCUoaxWRdi9sr1FD_P6490/1",
+  "name": "35-the-art-of-war",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://arweave.net/XDT1PwPN7bg_1KnAsM5CqorhTsE5iKDpGZb5IqdVwBs",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/0a79963d3f8e55829501b9bad9c15f5f_0f464a38",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/0a79963d3f8e55829501b9bad9c15f5f_0f464a38",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/0a79963d3f8e55829501b9bad9c15f5f_0f464a38"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "5c2501093e22a7f44e7088513beae21cc66fdc022d7f3a404f8120c36492f99b",
+  "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/36/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 338904,
+    "sha256": "1128ae7536cdb834b9630381b5733f502f0872c1d69e692a98551642392654bf",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/36/image.png"
+  },
+  "animation": null,
+  "archive_errors": [
+    {
+      "source": "https://arweave.net/XDT1PwPN7bg_1KnAsM5CqorhTsE5iKDpGZb5IqdVwBs",
+      "error": "Media request failed (404) for https://arweave.net/XDT1PwPN7bg_1KnAsM5CqorhTsE5iKDpGZb5IqdVwBs"
+    }
+  ],
+  "observed_at": "2026-09-05T03:48:18.024Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x16Bc29eA6E1B9390f70349bfB93eA87fFC9105Fc",
+      "name": "FOLD FORGE",
+      "symbol": "FLDFRG",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "FOLD FORGE",
+        "collectionSlug": "fold-forge",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-28T20:54:50.144847720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "36",
+    "tokenType": "ERC721",
+    "name": "35-the-art-of-war",
+    "description": "",
+    "tokenUri": "https://arweave.net/0aNC2P5RrXpAA8dToLYAEFCUoaxWRdi9sr1FD_P6490/1",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/0a79963d3f8e55829501b9bad9c15f5f_0f464a38",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/0a79963d3f8e55829501b9bad9c15f5f_0f464a38",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/0a79963d3f8e55829501b9bad9c15f5f_0f464a38",
+      "contentType": "image/png",
+      "size": 338904,
+      "originalUrl": "https://arweave.net/XDT1PwPN7bg_1KnAsM5CqorhTsE5iKDpGZb5IqdVwBs"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/0aNC2P5RrXpAA8dToLYAEFCUoaxWRdi9sr1FD_P6490/1",
+      "metadata": {
+        "name": "35-the-art-of-war",
+        "description": "",
+        "image_details": {
+          "bytes": 338904,
+          "format": "PNG",
+          "sha256": "1128ae7536cdb834b9630381b5733f502f0872c1d69e692a98551642392654bf",
+          "width": 2400,
+          "height": 2400
+        },
+        "image": "https://arweave.net/XDT1PwPN7bg_1KnAsM5CqorhTsE5iKDpGZb5IqdVwBs",
+        "image_url": "https://arweave.net/XDT1PwPN7bg_1KnAsM5CqorhTsE5iKDpGZb5IqdVwBs"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "FOLD FORGE",
+      "slug": "fold-forge",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-03T21:47:48.000880555Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "foldforge-ethereum-contract/v1",
+  "address": "0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa",
+  "name": "The Ovel Node",
+  "symbol": "OVEL",
+  "description": "",
+  "total_supply": "8",
+  "token_type": "ERC721",
+  "token_ids": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+  ],
+  "image": "/ethereum-archive/contracts/0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa/tokens/1/image.png"
+}

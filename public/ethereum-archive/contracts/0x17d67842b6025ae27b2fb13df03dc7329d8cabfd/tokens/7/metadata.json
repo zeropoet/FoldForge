@@ -1,0 +1,126 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x17d67842b6025ae27b2fb13df03dc7329d8cabfd",
+  "token_id": "7",
+  "token_uri": "https://arweave.net/DfMKsCe4GCpKPTzUmxjFApgTsQ7rwk4YDxEGJqyHHc8/5",
+  "name": "RWL-42",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "RWL",
+      "display_type": "text"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/3gECiJHMwsWdsVJViNs_s65TzQJW2_hR0X4IMSNwoRM",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/fde580dcfed0df03903a87f568c4f815_8d793af2",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/fde580dcfed0df03903a87f568c4f815_8d793af2",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/fde580dcfed0df03903a87f568c4f815_8d793af2"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "ab3d00320a8a7d88cccb8af23e409bfab56d42b64a4448ab0a6e89ef76f12fa6",
+  "metadata_path": "/ethereum-archive/contracts/0x17d67842b6025ae27b2fb13df03dc7329d8cabfd/tokens/7/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 6706205,
+    "sha256": "63068de8c6cf4bf1f55813915a15e23f989748e84cea06a107ecbef37dd033ed",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x17d67842b6025ae27b2fb13df03dc7329d8cabfd/tokens/7/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:31.892Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x17d67842b6025ae27B2FB13Df03DC7329d8Cabfd",
+      "name": "RWL",
+      "symbol": "RWL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "RWL",
+        "collectionSlug": "rwl-424080445",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/0x17d67842b6025ae27b2fb13df03dc7329d8cabfd/827f0c242b76e3beb1e1d2bfc7a9b4/c9827f0c242b76e3beb1e1d2bfc7a9b4.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-23T21:30:49.405273497Z"
+      },
+      "isSpam": false,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "7",
+    "tokenType": "ERC721",
+    "name": "RWL-42",
+    "description": "",
+    "tokenUri": "https://arweave.net/DfMKsCe4GCpKPTzUmxjFApgTsQ7rwk4YDxEGJqyHHc8/5",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/fde580dcfed0df03903a87f568c4f815_8d793af2",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/fde580dcfed0df03903a87f568c4f815_8d793af2",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/fde580dcfed0df03903a87f568c4f815_8d793af2",
+      "contentType": "image/jpeg",
+      "size": 6706205,
+      "originalUrl": "https://arweave.net/3gECiJHMwsWdsVJViNs_s65TzQJW2_hR0X4IMSNwoRM"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/DfMKsCe4GCpKPTzUmxjFApgTsQ7rwk4YDxEGJqyHHc8/5",
+      "metadata": {
+        "name": "RWL-42",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "RWL",
+            "display_type": "text"
+          }
+        ],
+        "description": "",
+        "image_details": {
+          "bytes": 6706205,
+          "format": "JPEG",
+          "sha256": "63068de8c6cf4bf1f55813915a15e23f989748e84cea06a107ecbef37dd033ed",
+          "width": 3777,
+          "height": 5066
+        },
+        "image": "https://arweave.net/3gECiJHMwsWdsVJViNs_s65TzQJW2_hR0X4IMSNwoRM",
+        "image_url": "https://arweave.net/3gECiJHMwsWdsVJViNs_s65TzQJW2_hR0X4IMSNwoRM"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "RWL",
+      "slug": "rwl-424080445",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-23T21:30:58.480666503Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

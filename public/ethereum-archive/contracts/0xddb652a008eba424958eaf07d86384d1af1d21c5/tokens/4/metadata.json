@@ -1,0 +1,139 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0xddb652a008eba424958eaf07d86384d1af1d21c5",
+  "token_id": "4",
+  "token_uri": "https://arweave.net/gKjNzJjWE8l1ZkdEW_m19bjmyOG1qxSzbRZ_KoU35P0",
+  "name": "ALL-4",
+  "description": "The Sword",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://arweave.net/3_QQ5oFrUzvnVk5yfaswzDe4VcNgZ0GWfXPCTWG7M9A",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/1096de081a199444fab55727fac161e4_48a1e08d",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/1096de081a199444fab55727fac161e4_48a1e08d",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/1096de081a199444fab55727fac161e4_48a1e08d"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "f8b57916e6ffd955225565c5d6f1791f71082af4b4d18caa85d25aa966c4f442",
+  "metadata_path": "/ethereum-archive/contracts/0xddb652a008eba424958eaf07d86384d1af1d21c5/tokens/4/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 6154430,
+    "sha256": "4c63b30efdab2cce4b888321b37f78238ad86e3c4ad37f01e7287a658dcf168e",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0xddb652a008eba424958eaf07d86384d1af1d21c5/tokens/4/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T04:10:59.114Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0xdDB652a008eBa424958eAF07D86384d1AF1d21c5",
+      "name": "ALL",
+      "symbol": "ALL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "ALL",
+        "collectionSlug": "all-856022738",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/0xddb652a008eba424958eaf07d86384d1af1d21c5/4379fe391db403cbba55197f59847c/a34379fe391db403cbba55197f59847c.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-23T21:36:10.475886259Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "4",
+    "tokenType": "ERC721",
+    "name": "ALL-4",
+    "description": "The Sword",
+    "tokenUri": "https://arweave.net/gKjNzJjWE8l1ZkdEW_m19bjmyOG1qxSzbRZ_KoU35P0",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/1096de081a199444fab55727fac161e4_48a1e08d",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/1096de081a199444fab55727fac161e4_48a1e08d",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/1096de081a199444fab55727fac161e4_48a1e08d",
+      "contentType": "image/jpeg",
+      "size": 6154430,
+      "originalUrl": "https://arweave.net/3_QQ5oFrUzvnVk5yfaswzDe4VcNgZ0GWfXPCTWG7M9A"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/gKjNzJjWE8l1ZkdEW_m19bjmyOG1qxSzbRZ_KoU35P0",
+      "metadata": {
+        "identifier": "4",
+        "collection": "all-856022738",
+        "contract": "0xddb652a008eba424958eaf07d86384d1af1d21c5",
+        "token_standard": "erc721",
+        "name": "ALL-4",
+        "description": "The Sword",
+        "image_url": null,
+        "display_image_url": null,
+        "display_animation_url": null,
+        "metadata_url": "https://arweave.net/gKjNzJjWE8l1ZkdEW_m19bjmyOG1qxSzbRZ_KoU35P0",
+        "opensea_url": "https://opensea.io/assets/ethereum/0xddb652a008eba424958eaf07d86384d1af1d21c5/4",
+        "updated_at": "2026-08-08T14:17:05.613523",
+        "is_disabled": false,
+        "is_nsfw": false,
+        "original_image_url": "https://arweave.net/3_QQ5oFrUzvnVk5yfaswzDe4VcNgZ0GWfXPCTWG7M9A",
+        "original_animation_url": null,
+        "traits": [
+          {
+            "trait_type": "Artist",
+            "display_type": null,
+            "max_value": null,
+            "value": "ALL"
+          }
+        ],
+        "estimated_value_usd": null,
+        "decimals": null,
+        "animation_url": null,
+        "is_suspicious": false,
+        "creator": "",
+        "owners": [
+          {
+            "address": "0xbd4b3a05c6a585f226afb1952cedd8c410c52e8f",
+            "quantity": 1,
+            "quantity_string": "1"
+          }
+        ],
+        "rarity": null,
+        "subscription": null,
+        "agent_binding": null
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "ALL",
+      "slug": "all-856022738",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-08T14:17:08.651896240Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

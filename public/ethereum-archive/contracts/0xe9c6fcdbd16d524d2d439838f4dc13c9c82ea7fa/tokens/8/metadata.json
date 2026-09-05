@@ -1,0 +1,110 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa",
+  "token_id": "8",
+  "token_uri": "ipfs://QmU4ihiTMXYqYTE4Dp8cppDok36rCKMEWWWVJLQRp8vxqw/metadata.json",
+  "name": "ovel-8",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmXW36Rpu3TMdqUpzQfprSAhsvjmpdoBN4GuSyhspUqm5Z/nft.jpg",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/5a63b5898d52c6eda92169b2b05d5b0e_9424f020",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/5a63b5898d52c6eda92169b2b05d5b0e_9424f020",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/5a63b5898d52c6eda92169b2b05d5b0e_9424f020"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "6b8a42f1d49ef6f8129325a40e421e247ba369574a83b6bc81dcd25726517825",
+  "metadata_path": "/ethereum-archive/contracts/0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa/tokens/8/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 338321,
+    "sha256": "fb0318ed4d9e0ee1bac672c6ce59c19d0ae9bdecdda1d0bd344a55ed88183360",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa/tokens/8/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [
+    {
+      "source": "https://ipfs.io/ipfs/QmXW36Rpu3TMdqUpzQfprSAhsvjmpdoBN4GuSyhspUqm5Z/nft.jpg",
+      "error": "Media request failed (429) for https://ipfs.io/ipfs/QmXW36Rpu3TMdqUpzQfprSAhsvjmpdoBN4GuSyhspUqm5Z/nft.jpg"
+    }
+  ],
+  "observed_at": "2026-09-05T04:11:51.068Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0xE9c6FcDBD16D524D2d439838f4dC13c9c82ea7fA",
+      "name": "The Ovel Node",
+      "symbol": "OVEL",
+      "totalSupply": "8",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "The Ovel Node",
+        "collectionSlug": "the-ovel-node",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa/f80504095e6f230fb0240e3b773f42/e6f80504095e6f230fb0240e3b773f42.png",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:30.375459621Z"
+      },
+      "isSpam": true,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "8",
+    "tokenType": "ERC721",
+    "name": "ovel-8",
+    "description": "",
+    "tokenUri": "ipfs://QmU4ihiTMXYqYTE4Dp8cppDok36rCKMEWWWVJLQRp8vxqw/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/5a63b5898d52c6eda92169b2b05d5b0e_9424f020",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/5a63b5898d52c6eda92169b2b05d5b0e_9424f020",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/5a63b5898d52c6eda92169b2b05d5b0e_9424f020",
+      "contentType": "image/jpeg",
+      "size": 338321,
+      "originalUrl": "https://ipfs.io/ipfs/QmXW36Rpu3TMdqUpzQfprSAhsvjmpdoBN4GuSyhspUqm5Z/nft.jpg"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmU4ihiTMXYqYTE4Dp8cppDok36rCKMEWWWVJLQRp8vxqw/metadata.json",
+      "metadata": {
+        "name": "ovel-8",
+        "description": "",
+        "image": "ipfs://QmXW36Rpu3TMdqUpzQfprSAhsvjmpdoBN4GuSyhspUqm5Z/nft.jpg"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Ovel Node",
+      "slug": "the-ovel-node",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-22T23:58:54.730950103Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "foldforge-ethereum-contract/v1",
+  "address": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+  "name": "ENS: Ethereum Name Service",
+  "symbol": "",
+  "description": "Ethereum Name Service (ENS) domains are secure domain names for the decentralized world. ENS domains provide a way for users to map human readable names to blockchain and non-blockchain resources, like Ethereum addresses, IPFS hashes, or website URLs. ENS domains can be bought and sold on secondary markets.",
+  "total_supply": "",
+  "token_type": "ERC721",
+  "token_ids": [
+    "10352414231978392077821972935336335227484654768536593614382274610957500526681",
+    "44111026140004660598065734954871146518257355040235704583153304971667763602813"
+  ],
+  "image": "/ethereum-archive/contracts/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/tokens/10352414231978392077821972935336335227484654768536593614382274610957500526681/image.svg"
+}

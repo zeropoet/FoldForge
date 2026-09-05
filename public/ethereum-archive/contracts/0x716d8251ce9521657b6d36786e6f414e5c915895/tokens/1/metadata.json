@@ -1,0 +1,134 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x716d8251ce9521657b6d36786e6f414e5c915895",
+  "token_id": "1",
+  "token_uri": "https://arweave.net/1YEK1k4nOS1kNGmiJHo4Ay2iit3tun8x9Y2ZmtedrSQ",
+  "name": "Black Tin Vessel 000-135",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/d4db1cc40f4f079afa54c944ddba72/bcd4db1cc40f4f079afa54c944ddba72.gif",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/a2d71929c3575ad221a9af9e0cfd7db0_bcd4db1c",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/a2d71929c3575ad221a9af9e0cfd7db0_bcd4db1c",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/a2d71929c3575ad221a9af9e0cfd7db0_bcd4db1c"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "6ee45be85237c163b43c7b8e01211b74ad40fcaae6b31a1479170334d25f2c94",
+  "metadata_path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/1/metadata.json",
+  "media": {
+    "file": "image.webp",
+    "bytes": 412346,
+    "sha256": "f3b41f599b5d0fd840ea39ef9a4117b5bf5703c0d1ab652393d5c6d86de19587",
+    "media_type": "image/webp",
+    "path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/1/image.webp"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:49:40.437Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x716d8251Ce9521657b6d36786E6f414E5c915895",
+      "name": "SOVEREIGN STANDARD",
+      "symbol": "SOVE",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "SOVEREIGN STANDARD",
+        "collectionSlug": "sovereign-standard",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/4ead16b5d42ad6ff703fbb6a38c73f/c64ead16b5d42ad6ff703fbb6a38c73f.gif",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-16T20:36:16.423951454Z"
+      },
+      "isSpam": false,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "1",
+    "tokenType": "ERC721",
+    "name": "Black Tin Vessel 000-135",
+    "description": "",
+    "tokenUri": "https://arweave.net/1YEK1k4nOS1kNGmiJHo4Ay2iit3tun8x9Y2ZmtedrSQ",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/a2d71929c3575ad221a9af9e0cfd7db0_bcd4db1c",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/a2d71929c3575ad221a9af9e0cfd7db0_bcd4db1c",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/a2d71929c3575ad221a9af9e0cfd7db0_bcd4db1c",
+      "contentType": "image/gif",
+      "size": 1279589,
+      "originalUrl": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/d4db1cc40f4f079afa54c944ddba72/bcd4db1cc40f4f079afa54c944ddba72.gif"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/1YEK1k4nOS1kNGmiJHo4Ay2iit3tun8x9Y2ZmtedrSQ",
+      "metadata": {
+        "identifier": "1",
+        "collection": "sovereign-standard",
+        "contract": "0x716d8251ce9521657b6d36786e6f414e5c915895",
+        "token_standard": "erc721",
+        "name": "Black Tin Vessel 000-135",
+        "description": "",
+        "image_url": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/d4db1cc40f4f079afa54c944ddba72/bcd4db1cc40f4f079afa54c944ddba72.gif",
+        "display_image_url": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/d4db1cc40f4f079afa54c944ddba72/bcd4db1cc40f4f079afa54c944ddba72.gif",
+        "display_animation_url": null,
+        "metadata_url": "https://arweave.net/TAKNSKLPkyZDGLf4r_I2h0_kHkGpKV16e6Djh1Da22A",
+        "opensea_url": "https://opensea.io/assets/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/1",
+        "updated_at": "2026-09-02T20:41:42.687479",
+        "is_disabled": false,
+        "is_nsfw": false,
+        "original_image_url": "https://arweave.net/Ac9Lwbob4R5b5-Cqc-nsdi-PKtyZZHodlQY6cxI0ZR0",
+        "original_animation_url": null,
+        "traits": [],
+        "estimated_value_usd": null,
+        "decimals": null,
+        "animation_url": null,
+        "is_suspicious": false,
+        "creator": "",
+        "owners": [
+          {
+            "address": "0xbd4b3a05c6a585f226afb1952cedd8c410c52e8f",
+            "quantity": 1,
+            "quantity_string": "1"
+          }
+        ],
+        "rarity": null,
+        "subscription": null,
+        "agent_binding": null
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "SOVEREIGN STANDARD",
+      "slug": "sovereign-standard",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-09-02T20:41:42.754920905Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

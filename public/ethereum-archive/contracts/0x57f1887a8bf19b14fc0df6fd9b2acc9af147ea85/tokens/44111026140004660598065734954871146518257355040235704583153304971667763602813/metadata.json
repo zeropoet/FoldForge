@@ -1,0 +1,174 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+  "token_id": "44111026140004660598065734954871146518257355040235704583153304971667763602813",
+  "token_uri": "https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0x6185f4beb76546cf8a51468cf329e6d379bb1f4abc49a72d5207380674bfa57d",
+  "name": "sovereignstandard.eth",
+  "description": "sovereignstandard.eth, an ENS name.",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "display_type": "date",
+      "value": "1775940167000",
+      "trait_type": "Created Date"
+    },
+    {
+      "display_type": "number",
+      "trait_type": "Length",
+      "value": "17"
+    },
+    {
+      "display_type": "number",
+      "trait_type": "Segment Length",
+      "value": "17"
+    },
+    {
+      "display_type": "string",
+      "value": "letter",
+      "trait_type": "Character Set"
+    },
+    {
+      "display_type": "date",
+      "value": "1775940167000",
+      "trait_type": "Registration Date"
+    },
+    {
+      "trait_type": "Expiration Date",
+      "display_type": "date",
+      "value": "2091559367000"
+    }
+  ],
+  "image_sources": [
+    "https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0x6185f4beb76546cf8a51468cf329e6d379bb1f4abc49a72d5207380674bfa57d/image",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/95df791bb801fc4be32bd0d5916efbe7_c5d663e7",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/95df791bb801fc4be32bd0d5916efbe7_c5d663e7",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/95df791bb801fc4be32bd0d5916efbe7_c5d663e7"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "31e82c33609f28fb0fc76b967b726159bccf08f162fcb8980d99ce12614061ee",
+  "metadata_path": "/ethereum-archive/contracts/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/tokens/44111026140004660598065734954871146518257355040235704583153304971667763602813/metadata.json",
+  "media": {
+    "file": "image.svg",
+    "bytes": 101102,
+    "sha256": "55e1ef802b5fbebec94ebe3d7d21e39f6dc77edba6166b899b383b19371413fd",
+    "media_type": "image/svg+xml",
+    "path": "/ethereum-archive/contracts/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/tokens/44111026140004660598065734954871146518257355040235704583153304971667763602813/image.svg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:49:24.808Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85",
+      "name": null,
+      "symbol": null,
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0.0000247,
+        "collectionName": "ENS: Ethereum Name Service",
+        "collectionSlug": "ens",
+        "safelistRequestStatus": "verified",
+        "imageUrl": "https://i2c.seadn.io/collection/ens/image/2389b989ec47442bc2c714bcdf3e19/b02389b989ec47442bc2c714bcdf3e19.png",
+        "description": "Ethereum Name Service (ENS) domains are secure domain names for the decentralized world. ENS domains provide a way for users to map human readable names to blockchain and non-blockchain resources, like Ethereum addresses, IPFS hashes, or website URLs. ENS domains can be bought and sold on secondary markets.",
+        "externalUrl": "https://ens.domains",
+        "twitterUsername": "ensdomains",
+        "discordUrl": "",
+        "bannerImageUrl": "https://i2c.seadn.io/collection/ens/desktopHeroMedia/dd03416d9fdbfa8469940079031f9e/dcdd03416d9fdbfa8469940079031f9e.png?fit=inside",
+        "lastIngestedAt": "2026-07-14T02:52:24.240026568Z"
+      },
+      "isSpam": false,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "44111026140004660598065734954871146518257355040235704583153304971667763602813",
+    "tokenType": "ERC721",
+    "name": "sovereignstandard.eth",
+    "description": "sovereignstandard.eth, an ENS name.",
+    "tokenUri": "https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0x6185f4beb76546cf8a51468cf329e6d379bb1f4abc49a72d5207380674bfa57d",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/95df791bb801fc4be32bd0d5916efbe7_c5d663e7",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/95df791bb801fc4be32bd0d5916efbe7_c5d663e7",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/95df791bb801fc4be32bd0d5916efbe7_c5d663e7",
+      "contentType": "image/svg+xml",
+      "size": 101102,
+      "originalUrl": "https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0x6185f4beb76546cf8a51468cf329e6d379bb1f4abc49a72d5207380674bfa57d/image"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0x6185f4beb76546cf8a51468cf329e6d379bb1f4abc49a72d5207380674bfa57d",
+      "metadata": {
+        "description": "sovereignstandard.eth, an ENS name.",
+        "image": "https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0x6185f4beb76546cf8a51468cf329e6d379bb1f4abc49a72d5207380674bfa57d/image",
+        "last_request_date": "1786482242384",
+        "is_normalized": true,
+        "name": "sovereignstandard.eth",
+        "version": "0",
+        "attributes": [
+          {
+            "display_type": "date",
+            "value": "1775940167000",
+            "trait_type": "Created Date"
+          },
+          {
+            "display_type": "number",
+            "trait_type": "Length",
+            "value": "17"
+          },
+          {
+            "display_type": "number",
+            "trait_type": "Segment Length",
+            "value": "17"
+          },
+          {
+            "display_type": "string",
+            "value": "letter",
+            "trait_type": "Character Set"
+          },
+          {
+            "display_type": "date",
+            "value": "1775940167000",
+            "trait_type": "Registration Date"
+          },
+          {
+            "trait_type": "Expiration Date",
+            "display_type": "date",
+            "value": "2091559367000"
+          }
+        ],
+        "background_image": "https://metadata.ens.domains/mainnet/avatar/sovereignstandard.eth",
+        "url": "https://app.ens.domains/name/sovereignstandard.eth",
+        "image_url": "https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0x6185f4beb76546cf8a51468cf329e6d379bb1f4abc49a72d5207380674bfa57d/image"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "ENS: Ethereum Name Service",
+      "slug": "ens",
+      "externalUrl": "https://ens.domains",
+      "bannerImageUrl": "https://i2c.seadn.io/collection/ens/desktopHeroMedia/dd03416d9fdbfa8469940079031f9e/dcdd03416d9fdbfa8469940079031f9e.png?fit=inside"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-11T21:10:11.574Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

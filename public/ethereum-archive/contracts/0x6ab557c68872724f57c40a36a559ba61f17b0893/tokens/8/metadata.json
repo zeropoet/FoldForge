@@ -1,0 +1,123 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x6ab557c68872724f57c40a36a559ba61f17b0893",
+  "token_id": "8",
+  "token_uri": "https://arweave.net/Ev-699v_u6Sy7h1kpMGOyCABpJg9rXjFBDcC3TU3Vlg",
+  "name": "#8",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [],
+  "animation_sources": [],
+  "evidence_sha256": "200d058d651dc5034c31b64c636e38d77c7b97f649daae0ef01e46c6565a7d3a",
+  "metadata_path": "/ethereum-archive/contracts/0x6ab557c68872724f57c40a36a559ba61f17b0893/tokens/8/metadata.json",
+  "media": null,
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:49:40.120Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x6Ab557c68872724f57C40A36a559bA61F17B0893",
+      "name": "MTL",
+      "symbol": "MTL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "MTL",
+        "collectionSlug": "mtl-455612542",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-08T14:07:56.650035683Z"
+      },
+      "isSpam": false,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "8",
+    "tokenType": "ERC721",
+    "name": "#8",
+    "description": null,
+    "tokenUri": "https://arweave.net/Ev-699v_u6Sy7h1kpMGOyCABpJg9rXjFBDcC3TU3Vlg",
+    "image": {
+      "cachedUrl": null,
+      "thumbnailUrl": null,
+      "pngUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/Ev-699v_u6Sy7h1kpMGOyCABpJg9rXjFBDcC3TU3Vlg",
+      "metadata": {
+        "identifier": "8",
+        "collection": "mtl-455612542",
+        "contract": "0x6ab557c68872724f57c40a36a559ba61f17b0893",
+        "token_standard": "erc721",
+        "name": "#8",
+        "description": null,
+        "image_url": null,
+        "display_image_url": null,
+        "display_animation_url": null,
+        "metadata_url": null,
+        "opensea_url": "https://opensea.io/assets/ethereum/0x6ab557c68872724f57c40a36a559ba61f17b0893/8",
+        "updated_at": "2026-08-25T16:45:01.856301",
+        "is_disabled": false,
+        "is_nsfw": false,
+        "original_image_url": null,
+        "original_animation_url": null,
+        "traits": [],
+        "estimated_value_usd": null,
+        "decimals": null,
+        "animation_url": null,
+        "is_suspicious": false,
+        "creator": "",
+        "owners": [
+          {
+            "address": "0xbd4b3a05c6a585f226afb1952cedd8c410c52e8f",
+            "quantity": 1,
+            "quantity_string": "1"
+          }
+        ],
+        "rarity": null,
+        "subscription": null,
+        "agent_binding": null
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "MTL",
+      "slug": "mtl-455612542",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-25T16:45:05.269119214Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

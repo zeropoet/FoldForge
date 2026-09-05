@@ -1,0 +1,123 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0",
+  "token_id": "15",
+  "token_uri": "https://arweave.net/kvw1Y92yxk89sFARGQBh4iVSVly1byytzPwPFcIIfYE",
+  "name": "#000213 — ØVEL",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "display_type": "text",
+      "value": "Zeropoet",
+      "trait_type": "Artist"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/AOYyYnS_so41-Z5YWBtwE-QUf_rY-VnmbkPQmBUMMGc",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/e72feb4856ae1f937ec4c8eb425b53a2",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/e72feb4856ae1f937ec4c8eb425b53a2",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/e72feb4856ae1f937ec4c8eb425b53a2"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "1509d6ec01ffb5fc24d625afd836d3235dde07eee67cf0b67a9943d6123b3e37",
+  "metadata_path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/15/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 39195,
+    "sha256": "29d55cb99e2af3bf306fd5856dfc771a4475a13e4863da2a7654138ae741beb5",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/15/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:49.430Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x20577e6dAE1f7db6DBA2Ac725D10f2C2E46742f0",
+      "name": "The Ritual",
+      "symbol": "RITUAL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "The Ritual",
+        "collectionSlug": "the--ritual",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/collection/the--ritual/image_type_logo/48ab44da944ecdd2800db254e17f62/0f48ab44da944ecdd2800db254e17f62.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:34.247589720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "15",
+    "tokenType": "ERC721",
+    "name": "#000213 — ØVEL",
+    "description": null,
+    "tokenUri": "https://arweave.net/kvw1Y92yxk89sFARGQBh4iVSVly1byytzPwPFcIIfYE",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/e72feb4856ae1f937ec4c8eb425b53a2",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/e72feb4856ae1f937ec4c8eb425b53a2",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/e72feb4856ae1f937ec4c8eb425b53a2",
+      "contentType": "image/jpeg",
+      "size": 39195,
+      "originalUrl": "https://arweave.net/AOYyYnS_so41-Z5YWBtwE-QUf_rY-VnmbkPQmBUMMGc"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/kvw1Y92yxk89sFARGQBh4iVSVly1byytzPwPFcIIfYE",
+      "metadata": {
+        "name": "#000213 — ØVEL",
+        "image": "https://arweave.net/AOYyYnS_so41-Z5YWBtwE-QUf_rY-VnmbkPQmBUMMGc",
+        "attributes": [
+          {
+            "display_type": "text",
+            "value": "Zeropoet",
+            "trait_type": "Artist"
+          }
+        ],
+        "image_details": {
+          "format": "JPEG",
+          "width": "1200",
+          "sha256": "29d55cb99e2af3bf306fd5856dfc771a4475a13e4863da2a7654138ae741beb5",
+          "bytes": "39195",
+          "height": "1200"
+        },
+        "image_url": "https://arweave.net/AOYyYnS_so41-Z5YWBtwE-QUf_rY-VnmbkPQmBUMMGc"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Ritual",
+      "slug": "the--ritual",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-02-24T16:33:03.787Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

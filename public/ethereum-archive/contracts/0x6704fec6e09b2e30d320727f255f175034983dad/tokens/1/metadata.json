@@ -1,0 +1,103 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x6704fec6e09b2e30d320727f255f175034983dad",
+  "token_id": "1",
+  "token_uri": "ipfs://QmSZXMJdUbSfQj67en8Nen9yLSMYxVX71tVzGVjBpPVtDN/metadata.json",
+  "name": "the pæssion",
+  "description": "an endless roll of peace and euphoric joy.",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmYcSaK9QKcsokP9ZUYGHvWKbCi1JTCw4Ft3uZx581bYJx/nft.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/a78be1b888078a6bb3df91ca2aa20453",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/a78be1b888078a6bb3df91ca2aa20453",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/a78be1b888078a6bb3df91ca2aa20453"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "a6162912c34459b6a2830a095b06a363519c4b3cf0b520677456b25f2c1aca63",
+  "metadata_path": "/ethereum-archive/contracts/0x6704fec6e09b2e30d320727f255f175034983dad/tokens/1/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 54666813,
+    "sha256": "163f09ea05079c8aa4fce3383e0d2cbf23b11805425a52e42e386a32e2389319",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x6704fec6e09b2e30d320727f255f175034983dad/tokens/1/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:49:35.342Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x6704feC6e09B2E30d320727f255F175034983dAD",
+      "name": "Pæce",
+      "symbol": "PEACE",
+      "totalSupply": "3",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "Pæce",
+        "collectionSlug": "paece-300604948",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x6704fec6e09b2e30d320727f255f175034983dad/36e06da76109ea89adc90161ede74b/5836e06da76109ea89adc90161ede74b.mp4",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:30.368593468Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "1",
+    "tokenType": "ERC721",
+    "name": "the pæssion",
+    "description": "an endless roll of peace and euphoric joy.",
+    "tokenUri": "ipfs://QmSZXMJdUbSfQj67en8Nen9yLSMYxVX71tVzGVjBpPVtDN/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/a78be1b888078a6bb3df91ca2aa20453",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/a78be1b888078a6bb3df91ca2aa20453",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/a78be1b888078a6bb3df91ca2aa20453",
+      "contentType": "video/mp4",
+      "size": 54666813,
+      "originalUrl": "https://ipfs.io/ipfs/QmYcSaK9QKcsokP9ZUYGHvWKbCi1JTCw4Ft3uZx581bYJx/nft.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmSZXMJdUbSfQj67en8Nen9yLSMYxVX71tVzGVjBpPVtDN/metadata.json",
+      "metadata": {
+        "image": "ipfs://QmYcSaK9QKcsokP9ZUYGHvWKbCi1JTCw4Ft3uZx581bYJx/nft.mp4",
+        "name": "the pæssion",
+        "description": "an endless roll of peace and euphoric joy."
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "Pæce",
+      "slug": "paece-300604948",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-18T12:59:43.906Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

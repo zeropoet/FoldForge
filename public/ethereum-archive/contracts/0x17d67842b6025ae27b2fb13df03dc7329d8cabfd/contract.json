@@ -1,0 +1,26 @@
+{
+  "schema": "foldforge-ethereum-contract/v1",
+  "address": "0x17d67842b6025ae27b2fb13df03dc7329d8cabfd",
+  "name": "RWL",
+  "symbol": "RWL",
+  "description": "",
+  "total_supply": "",
+  "token_type": "ERC721",
+  "token_ids": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14"
+  ],
+  "image": "/ethereum-archive/contracts/0x17d67842b6025ae27b2fb13df03dc7329d8cabfd/tokens/1/image.jpg"
+}

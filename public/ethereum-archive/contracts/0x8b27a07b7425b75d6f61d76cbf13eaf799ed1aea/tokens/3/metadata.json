@@ -1,0 +1,129 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x8b27a07b7425b75d6f61d76cbf13eaf799ed1aea",
+  "token_id": "3",
+  "token_uri": "ipfs://QmSF1fcme8ZNJV7NtWdeSChePXrrJSr2Q8Cj43dnMhHtnp/metadata.json",
+  "name": "The Nothing",
+  "description": "II",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://i2c.seadn.io/ethereum/0x8b27a07b7425b75d6f61d76cbf13eaf799ed1aea/6f6b32bf59c5304814e1001b50e725/cb6f6b32bf59c5304814e1001b50e725.jpeg",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/6f755e423319851f182eab2a100804d5",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/6f755e423319851f182eab2a100804d5",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/6f755e423319851f182eab2a100804d5"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "e051ca4645fb4f3820e8146c8479f26d867c1554d6f53641915d9b682d30379a",
+  "metadata_path": "/ethereum-archive/contracts/0x8b27a07b7425b75d6f61d76cbf13eaf799ed1aea/tokens/3/metadata.json",
+  "media": {
+    "file": "image.jpeg",
+    "bytes": 5332,
+    "sha256": "19fd4be2e1774f98b5bc2dabfb32ead21f8a23bc229819f51f0b00bb9846e9e1",
+    "media_type": "image/avif",
+    "path": "/ethereum-archive/contracts/0x8b27a07b7425b75d6f61d76cbf13eaf799ed1aea/tokens/3/image.jpeg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:51:46.965Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x8b27a07B7425b75d6f61d76Cbf13EAf799ed1AeA",
+      "name": "The Library",
+      "symbol": "LIBRARY",
+      "totalSupply": "4",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": null,
+        "collectionSlug": null,
+        "safelistRequestStatus": null,
+        "imageUrl": null,
+        "description": null,
+        "externalUrl": null,
+        "twitterUsername": null,
+        "discordUrl": null,
+        "bannerImageUrl": null,
+        "lastIngestedAt": null
+      },
+      "isSpam": true,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "3",
+    "tokenType": "ERC721",
+    "name": "The Nothing",
+    "description": "II",
+    "tokenUri": "ipfs://QmSF1fcme8ZNJV7NtWdeSChePXrrJSr2Q8Cj43dnMhHtnp/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/6f755e423319851f182eab2a100804d5",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/6f755e423319851f182eab2a100804d5",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/6f755e423319851f182eab2a100804d5",
+      "contentType": "image/jpeg",
+      "size": 501804,
+      "originalUrl": "https://i2c.seadn.io/ethereum/0x8b27a07b7425b75d6f61d76cbf13eaf799ed1aea/6f6b32bf59c5304814e1001b50e725/cb6f6b32bf59c5304814e1001b50e725.jpeg"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmSF1fcme8ZNJV7NtWdeSChePXrrJSr2Q8Cj43dnMhHtnp/metadata.json",
+      "metadata": {
+        "identifier": "3",
+        "collection": "the-library-5",
+        "contract": "0x8b27a07b7425b75d6f61d76cbf13eaf799ed1aea",
+        "token_standard": "erc721",
+        "name": "The Nothing",
+        "description": "II",
+        "image_url": "https://i2c.seadn.io/ethereum/0x8b27a07b7425b75d6f61d76cbf13eaf799ed1aea/6f6b32bf59c5304814e1001b50e725/cb6f6b32bf59c5304814e1001b50e725.jpeg",
+        "display_image_url": "https://i2c.seadn.io/ethereum/0x8b27a07b7425b75d6f61d76cbf13eaf799ed1aea/6f6b32bf59c5304814e1001b50e725/cb6f6b32bf59c5304814e1001b50e725.jpeg",
+        "display_animation_url": null,
+        "metadata_url": "ipfs://QmSF1fcme8ZNJV7NtWdeSChePXrrJSr2Q8Cj43dnMhHtnp/metadata.json",
+        "opensea_url": "https://opensea.io/assets/ethereum/0x8b27a07b7425b75d6f61d76cbf13eaf799ed1aea/3",
+        "updated_at": "2026-07-31T16:59:36.628471",
+        "is_disabled": false,
+        "is_nsfw": false,
+        "original_image_url": "ipfs://QmeMsDjcg3Sj9wXo41sfyttQcYCAJLoGi6hfxFmDELVV8J/nft.jpg",
+        "original_animation_url": null,
+        "traits": [],
+        "estimated_value_usd": null,
+        "decimals": null,
+        "animation_url": null,
+        "is_suspicious": false,
+        "creator": "",
+        "owners": [
+          {
+            "address": "0xbd4b3a05c6a585f226afb1952cedd8c410c52e8f",
+            "quantity": 1,
+            "quantity_string": "1"
+          }
+        ],
+        "rarity": null,
+        "subscription": null,
+        "agent_binding": null
+      },
+      "error": null
+    },
+    "collection": null,
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-31T16:59:38.356840887Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

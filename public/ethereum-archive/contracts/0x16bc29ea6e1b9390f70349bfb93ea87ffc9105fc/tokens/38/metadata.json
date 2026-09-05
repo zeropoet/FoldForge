@@ -1,0 +1,111 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
+  "token_id": "38",
+  "token_uri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/1",
+  "name": "37-psychology-of-the-unconscious",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://arweave.net/Wh0sCk0EgAYpx9U45bUCB5Io8_6Zi_XLu_eHMyi7XqM",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/1faec944f134a95910e2441155de6c68_3220c6ab",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/1faec944f134a95910e2441155de6c68_3220c6ab",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/1faec944f134a95910e2441155de6c68_3220c6ab"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "73caadb5347f9b8b42101d589934de97317115683093ebb02e0b7fad75f64c66",
+  "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/38/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 431399,
+    "sha256": "eed8f98ae58110f038005a674745252b16803b0af02e49c8e60fb6b1b2de4e61",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/38/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:19.044Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x16Bc29eA6E1B9390f70349bfB93eA87fFC9105Fc",
+      "name": "FOLD FORGE",
+      "symbol": "FLDFRG",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "FOLD FORGE",
+        "collectionSlug": "fold-forge",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-28T20:54:50.144847720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "38",
+    "tokenType": "ERC721",
+    "name": "37-psychology-of-the-unconscious",
+    "description": "",
+    "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/1",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/1faec944f134a95910e2441155de6c68_3220c6ab",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/1faec944f134a95910e2441155de6c68_3220c6ab",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/1faec944f134a95910e2441155de6c68_3220c6ab",
+      "contentType": "image/png",
+      "size": 431399,
+      "originalUrl": "https://arweave.net/Wh0sCk0EgAYpx9U45bUCB5Io8_6Zi_XLu_eHMyi7XqM"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/1",
+      "metadata": {
+        "name": "37-psychology-of-the-unconscious",
+        "description": "",
+        "image_details": {
+          "bytes": 431399,
+          "format": "PNG",
+          "sha256": "eed8f98ae58110f038005a674745252b16803b0af02e49c8e60fb6b1b2de4e61",
+          "width": 2400,
+          "height": 2400
+        },
+        "image": "https://arweave.net/Wh0sCk0EgAYpx9U45bUCB5Io8_6Zi_XLu_eHMyi7XqM",
+        "image_url": "https://arweave.net/Wh0sCk0EgAYpx9U45bUCB5Io8_6Zi_XLu_eHMyi7XqM"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "FOLD FORGE",
+      "slug": "fold-forge",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-04T06:04:08.131274899Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

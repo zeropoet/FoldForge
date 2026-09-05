@@ -1,0 +1,154 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x1066d77f2b0ffe7a667e95ebc442866088ab1248",
+  "token_id": "42",
+  "token_uri": "ipfs://QmYox3MfnophWg6HEwATv91YUhHRrGTi13KTVnqu56xZwr/42",
+  "name": "Token of Kindness #42",
+  "description": "",
+  "token_type": "ERC1155",
+  "attributes": [
+    {
+      "trait_type": "POWER",
+      "value": "VISION"
+    },
+    {
+      "trait_type": "ANIMAL",
+      "value": "BUTTERFLY"
+    },
+    {
+      "value": "FILIGREE",
+      "trait_type": "BORDER"
+    },
+    {
+      "trait_type": "NATURE",
+      "value": "BORAGE"
+    },
+    {
+      "value": "DAGGER",
+      "trait_type": "WEAPON"
+    },
+    {
+      "value": "COURAGE",
+      "trait_type": "ELEMENT"
+    }
+  ],
+  "image_sources": [
+    "https://i2c.seadn.io/ethereum/0x1066d77f2b0ffe7a667e95ebc442866088ab1248/cc9422aba83b6c8cca2ca9f183093fc2.png",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/c6f85063f5a6e003694441c427e7c191_251f2209",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/c6f85063f5a6e003694441c427e7c191_251f2209",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/c6f85063f5a6e003694441c427e7c191_251f2209"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "f7004c080bce5bef138543eb9545bcf59cf97a407d0cade2cd8cc763849c458a",
+  "metadata_path": "/ethereum-archive/contracts/0x1066d77f2b0ffe7a667e95ebc442866088ab1248/tokens/42/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 26184,
+    "sha256": "e7c989cb4c6028abf21932b264a3de970aaa53738946c83c612e50acec285a0a",
+    "media_type": "image/avif",
+    "path": "/ethereum-archive/contracts/0x1066d77f2b0ffe7a667e95ebc442866088ab1248/tokens/42/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:47:41.226Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x1066D77F2b0FfE7A667E95ebC442866088aB1248",
+      "name": null,
+      "symbol": null,
+      "totalSupply": null,
+      "tokenType": "ERC1155",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "TOKEN OF KINDNESS",
+        "collectionSlug": "token-of-kindness",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/ac93defc76274b02b848bc447542a588/1ad805c1a4880784726f947c5fd01f/d21ad805c1a4880784726f947c5fd01f.gif",
+        "description": "In the world today, there is plenty of pain, fear, worry, and sadness. We know how valuable KINDNESS is to humanity and we have never needed it as we do now. KINDNESS is caring about others and doing things to help make their lives better. In turn, it makes our own lives better. This is called a ripple effect, which is a measurable and powerful phenomenon. We see the blockchain as yet another place to spread KINDNESS, reach more hearts, and change more lives.",
+        "externalUrl": "https://project-k.xyz/",
+        "twitterUsername": "_ProjectK_",
+        "discordUrl": "https://discord.gg/ddFkBYQeWR",
+        "bannerImageUrl": "https://i2c.seadn.io/ethereum/ac93defc76274b02b848bc447542a588/e20de7858a73ca9069ce6a125dbc78/95e20de7858a73ca9069ce6a125dbc78.jpeg?fit=inside",
+        "lastIngestedAt": "2026-07-17T23:04:52.986659021Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "42",
+    "tokenType": "ERC1155",
+    "name": "Token of Kindness #42",
+    "description": null,
+    "tokenUri": "ipfs://QmYox3MfnophWg6HEwATv91YUhHRrGTi13KTVnqu56xZwr/42",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/c6f85063f5a6e003694441c427e7c191_251f2209",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/c6f85063f5a6e003694441c427e7c191_251f2209",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/c6f85063f5a6e003694441c427e7c191_251f2209",
+      "contentType": "image/avif",
+      "size": 26184,
+      "originalUrl": "https://i2c.seadn.io/ethereum/0x1066d77f2b0ffe7a667e95ebc442866088ab1248/cc9422aba83b6c8cca2ca9f183093fc2.png"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmYox3MfnophWg6HEwATv91YUhHRrGTi13KTVnqu56xZwr/42",
+      "metadata": {
+        "description": null,
+        "name": "Token of Kindness #42",
+        "attributes": [
+          {
+            "trait_type": "POWER",
+            "value": "VISION"
+          },
+          {
+            "trait_type": "ANIMAL",
+            "value": "BUTTERFLY"
+          },
+          {
+            "value": "FILIGREE",
+            "trait_type": "BORDER"
+          },
+          {
+            "trait_type": "NATURE",
+            "value": "BORAGE"
+          },
+          {
+            "value": "DAGGER",
+            "trait_type": "WEAPON"
+          },
+          {
+            "value": "COURAGE",
+            "trait_type": "ELEMENT"
+          }
+        ],
+        "image": "https://i2c.seadn.io/ethereum/0x1066d77f2b0ffe7a667e95ebc442866088ab1248/cc9422aba83b6c8cca2ca9f183093fc2.png"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "TOKEN OF KINDNESS",
+      "slug": "token-of-kindness",
+      "externalUrl": "https://project-k.xyz/",
+      "bannerImageUrl": "https://i2c.seadn.io/ethereum/ac93defc76274b02b848bc447542a588/e20de7858a73ca9069ce6a125dbc78/95e20de7858a73ca9069ce6a125dbc78.jpeg?fit=inside"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-10T16:06:49.092Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0",
+  "token_id": "1",
+  "token_uri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/1",
+  "name": "#000124 — Covenant Liturgy",
+  "description": "⨀∥\n\nFunction: Union of two partners; minting of the Covenant Coin.\n\nStructure: Witness → Partner A → Partner B → Together → Witness → All\n\nCore vow: “Bound in God, we are two and we are one. This coin is our sign: one face, two sides, a seed of heaven and earth.”\n\nRitual actions: tokens placed; covenant spoken; blank coin marked; ledger signed.\n\nClosure: “Amen. So let it be.”",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "display_type": "text",
+      "value": "Zeropoet",
+      "trait_type": "Artist"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/Qf7wB3LUbyPYTuMpfrXk7D2uD2qALcRYzEe7rPwuuws",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/29a35e8edf26438dd42ec0bf813f0bae_cd346b54",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/29a35e8edf26438dd42ec0bf813f0bae_cd346b54",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/29a35e8edf26438dd42ec0bf813f0bae_cd346b54"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "8ba1b02824232f499428b1d5dc640e6f84691af8eb87df4c1bf34afead65670b",
+  "metadata_path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/1/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 1219215,
+    "sha256": "9a598564a8a67ae60483f09de23833148c78d5b93fc2542a8a690933c95f6a5c",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/1/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:39.279Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x20577e6dAE1f7db6DBA2Ac725D10f2C2E46742f0",
+      "name": "The Ritual",
+      "symbol": "RITUAL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "The Ritual",
+        "collectionSlug": "the--ritual",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/collection/the--ritual/image_type_logo/48ab44da944ecdd2800db254e17f62/0f48ab44da944ecdd2800db254e17f62.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:34.247589720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "1",
+    "tokenType": "ERC721",
+    "name": "#000124 — Covenant Liturgy",
+    "description": "⨀∥\n\nFunction: Union of two partners; minting of the Covenant Coin.\n\nStructure: Witness → Partner A → Partner B → Together → Witness → All\n\nCore vow: “Bound in God, we are two and we are one. This coin is our sign: one face, two sides, a seed of heaven and earth.”\n\nRitual actions: tokens placed; covenant spoken; blank coin marked; ledger signed.\n\nClosure: “Amen. So let it be.”",
+    "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/1",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/29a35e8edf26438dd42ec0bf813f0bae_cd346b54",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/29a35e8edf26438dd42ec0bf813f0bae_cd346b54",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/29a35e8edf26438dd42ec0bf813f0bae_cd346b54",
+      "contentType": "image/jpeg",
+      "size": 1219215,
+      "originalUrl": "https://arweave.net/Qf7wB3LUbyPYTuMpfrXk7D2uD2qALcRYzEe7rPwuuws"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/1",
+      "metadata": {
+        "image": "https://arweave.net/Qf7wB3LUbyPYTuMpfrXk7D2uD2qALcRYzEe7rPwuuws",
+        "image_details": {
+          "format": "JPEG",
+          "width": "1536",
+          "sha256": "9a598564a8a67ae60483f09de23833148c78d5b93fc2542a8a690933c95f6a5c",
+          "bytes": "1219215",
+          "height": "2048"
+        },
+        "image_url": "https://arweave.net/Qf7wB3LUbyPYTuMpfrXk7D2uD2qALcRYzEe7rPwuuws",
+        "name": "#000124 — Covenant Liturgy",
+        "description": "⨀∥\n\nFunction: Union of two partners; minting of the Covenant Coin.\n\nStructure: Witness → Partner A → Partner B → Together → Witness → All\n\nCore vow: “Bound in God, we are two and we are one. This coin is our sign: one face, two sides, a seed of heaven and earth.”\n\nRitual actions: tokens placed; covenant spoken; blank coin marked; ledger signed.\n\nClosure: “Amen. So let it be.”",
+        "attributes": [
+          {
+            "display_type": "text",
+            "value": "Zeropoet",
+            "trait_type": "Artist"
+          }
+        ],
+        "created_by": "Zeropoet"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Ritual",
+      "slug": "the--ritual",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-04-09T22:18:51.056Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

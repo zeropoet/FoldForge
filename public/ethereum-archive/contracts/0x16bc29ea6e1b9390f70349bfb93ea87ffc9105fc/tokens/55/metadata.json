@@ -1,0 +1,132 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
+  "token_id": "55",
+  "token_uri": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/7",
+  "name": "54-manifesto-of-the-communist-party",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://arweave.net/Y69jZ5efBoIkYL9o6Yw1utBgwrtGX_Rm4R8gUvQGbV4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/b1b8d226dd1c491ca4b0cec2ad99e7c0_bed5cbdd",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/b1b8d226dd1c491ca4b0cec2ad99e7c0_bed5cbdd",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/b1b8d226dd1c491ca4b0cec2ad99e7c0_bed5cbdd"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "f03638eb4fbf1f886b9d79db25dc060ac25633752f1efcb5a6c58ba39cbc7aab",
+  "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/55/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 391750,
+    "sha256": "d0b0684ffbf7bbd4cd6fbec71ab8982c8330b1092bb67d4e2803fdbc1087686d",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/55/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:26.356Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x16Bc29eA6E1B9390f70349bfB93eA87fFC9105Fc",
+      "name": "FOLD FORGE",
+      "symbol": "FLDFRG",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "FOLD FORGE",
+        "collectionSlug": "fold-forge",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-28T20:54:50.144847720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "55",
+    "tokenType": "ERC721",
+    "name": "54-manifesto-of-the-communist-party",
+    "description": "",
+    "tokenUri": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/7",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/b1b8d226dd1c491ca4b0cec2ad99e7c0_bed5cbdd",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/b1b8d226dd1c491ca4b0cec2ad99e7c0_bed5cbdd",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/b1b8d226dd1c491ca4b0cec2ad99e7c0_bed5cbdd",
+      "contentType": "image/png",
+      "size": 391750,
+      "originalUrl": "https://arweave.net/Y69jZ5efBoIkYL9o6Yw1utBgwrtGX_Rm4R8gUvQGbV4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/7",
+      "metadata": {
+        "identifier": "55",
+        "collection": "fold-forge",
+        "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
+        "token_standard": "erc721",
+        "name": "54-manifesto-of-the-communist-party",
+        "description": "",
+        "image_url": null,
+        "display_image_url": null,
+        "display_animation_url": null,
+        "metadata_url": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/7",
+        "opensea_url": "https://opensea.io/assets/ethereum/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/55",
+        "updated_at": "2026-08-09T20:46:29.661716",
+        "is_disabled": false,
+        "is_nsfw": false,
+        "original_image_url": "https://arweave.net/Y69jZ5efBoIkYL9o6Yw1utBgwrtGX_Rm4R8gUvQGbV4",
+        "original_animation_url": null,
+        "traits": [],
+        "estimated_value_usd": null,
+        "decimals": null,
+        "animation_url": null,
+        "is_suspicious": false,
+        "creator": "",
+        "owners": [
+          {
+            "address": "0xbd4b3a05c6a585f226afb1952cedd8c410c52e8f",
+            "quantity": 1,
+            "quantity_string": "1"
+          }
+        ],
+        "rarity": null,
+        "subscription": null,
+        "agent_binding": null
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "FOLD FORGE",
+      "slug": "fold-forge",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-09T20:46:30.654320389Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0",
+  "token_id": "13",
+  "token_uri": "https://arweave.net/GpKUQfAwzeYRDNHKB-OAvbRgrFPsa5jFTZxinZ8PSRw",
+  "name": "#000136 — Doctrine of Absence",
+  "description": "∅⨂ (empty set circled with cross-mark, absence-as-coin)\n\nFunction: To preserve the meaning of missing glyphs and unseen rites; to sanctify silence and renewal through omission.\n\nDoctrine: Absence is presence inverted. What is unseen shapes the whole. The Archive must record both glyph and gap, both word and silence.\n\nClosing phrase: “In the hollow, the breath; in the gap, the turn.”",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "display_type": "text",
+      "value": "Zeropoet",
+      "trait_type": "Artist"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/Eu5FH6NPFwSBf9IdHYMpTpCrlHWV7-wTIE6YxI8DXIc",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/53496384e18c8d2b06c409d72328332e_ddd12300",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/53496384e18c8d2b06c409d72328332e_ddd12300",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/53496384e18c8d2b06c409d72328332e_ddd12300"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "e6ed7cf749eb45f9abe45c9c582e1ef03e09b8b2552e22587c6c8bf59cfa1102",
+  "metadata_path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/13/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 829904,
+    "sha256": "ef7b6989d95c3ccfbe91b067dbc2bcc161cca03b39d604bca5eed5a92a2fd3b2",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/13/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:48.633Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x20577e6dAE1f7db6DBA2Ac725D10f2C2E46742f0",
+      "name": "The Ritual",
+      "symbol": "RITUAL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "The Ritual",
+        "collectionSlug": "the--ritual",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/collection/the--ritual/image_type_logo/48ab44da944ecdd2800db254e17f62/0f48ab44da944ecdd2800db254e17f62.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:34.247589720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "13",
+    "tokenType": "ERC721",
+    "name": "#000136 — Doctrine of Absence",
+    "description": "∅⨂ (empty set circled with cross-mark, absence-as-coin)\n\nFunction: To preserve the meaning of missing glyphs and unseen rites; to sanctify silence and renewal through omission.\n\nDoctrine: Absence is presence inverted. What is unseen shapes the whole. The Archive must record both glyph and gap, both word and silence.\n\nClosing phrase: “In the hollow, the breath; in the gap, the turn.”",
+    "tokenUri": "https://arweave.net/GpKUQfAwzeYRDNHKB-OAvbRgrFPsa5jFTZxinZ8PSRw",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/53496384e18c8d2b06c409d72328332e_ddd12300",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/53496384e18c8d2b06c409d72328332e_ddd12300",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/53496384e18c8d2b06c409d72328332e_ddd12300",
+      "contentType": "image/png",
+      "size": 829904,
+      "originalUrl": "https://arweave.net/Eu5FH6NPFwSBf9IdHYMpTpCrlHWV7-wTIE6YxI8DXIc"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/GpKUQfAwzeYRDNHKB-OAvbRgrFPsa5jFTZxinZ8PSRw",
+      "metadata": {
+        "image": "https://arweave.net/Eu5FH6NPFwSBf9IdHYMpTpCrlHWV7-wTIE6YxI8DXIc",
+        "image_details": {
+          "format": "PNG",
+          "width": "1024",
+          "sha256": "ef7b6989d95c3ccfbe91b067dbc2bcc161cca03b39d604bca5eed5a92a2fd3b2",
+          "bytes": "829904",
+          "height": "1024"
+        },
+        "image_url": "https://arweave.net/Eu5FH6NPFwSBf9IdHYMpTpCrlHWV7-wTIE6YxI8DXIc",
+        "name": "#000136 — Doctrine of Absence",
+        "description": "∅⨂ (empty set circled with cross-mark, absence-as-coin)\n\nFunction: To preserve the meaning of missing glyphs and unseen rites; to sanctify silence and renewal through omission.\n\nDoctrine: Absence is presence inverted. What is unseen shapes the whole. The Archive must record both glyph and gap, both word and silence.\n\nClosing phrase: “In the hollow, the breath; in the gap, the turn.”",
+        "attributes": [
+          {
+            "display_type": "text",
+            "value": "Zeropoet",
+            "trait_type": "Artist"
+          }
+        ],
+        "created_by": "Zeropoet"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Ritual",
+      "slug": "the--ritual",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-04-09T22:14:56.632Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

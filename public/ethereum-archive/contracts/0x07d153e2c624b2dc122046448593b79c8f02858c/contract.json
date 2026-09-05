@@ -1,0 +1,23 @@
+{
+  "schema": "foldforge-ethereum-contract/v1",
+  "address": "0x07d153e2c624b2dc122046448593b79c8f02858c",
+  "name": "The Stacks",
+  "symbol": "STACKS",
+  "description": "",
+  "total_supply": "11",
+  "token_type": "ERC721",
+  "token_ids": [
+    "20",
+    "21",
+    "24",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    "31",
+    "32",
+    "33"
+  ],
+  "image": "/ethereum-archive/contracts/0x07d153e2c624b2dc122046448593b79c8f02858c/tokens/20/image.jpg"
+}

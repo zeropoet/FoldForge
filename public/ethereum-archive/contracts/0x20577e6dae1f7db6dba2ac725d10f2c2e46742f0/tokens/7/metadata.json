@@ -1,0 +1,125 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0",
+  "token_id": "7",
+  "token_uri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/7",
+  "name": "#000130 — Remembrance Rite",
+  "description": "⌘✝\n\nFunction: To honor the dead or what has passed.\n\nCore vow: “We remember, and in remembering, we keep.”\n\nRitual actions: name spoken aloud; small mark made (flower, chalk, symbol); witness affirms.\n\nClosure: “Remembered.”",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet",
+      "display_type": "text"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/qEejVuevF32tCzoPo250-Kyv-ZeJN0wYthwM4zcbQvk",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/605ae39510c4e2c8bb7d387f5cbfa54e_1cd6f9e2",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/605ae39510c4e2c8bb7d387f5cbfa54e_1cd6f9e2",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/605ae39510c4e2c8bb7d387f5cbfa54e_1cd6f9e2"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "6d152cf1ac557a6d5c9dabacc123ac5eb827dc7154c88ac79b1422db18d5da3b",
+  "metadata_path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/7/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 1040423,
+    "sha256": "156ee1f030117ebcf05d4e1760e6c232db42d5cb020c8e65d592bbb035837d2b",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/7/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:42.578Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x20577e6dAE1f7db6DBA2Ac725D10f2C2E46742f0",
+      "name": "The Ritual",
+      "symbol": "RITUAL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "The Ritual",
+        "collectionSlug": "the--ritual",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/collection/the--ritual/image_type_logo/48ab44da944ecdd2800db254e17f62/0f48ab44da944ecdd2800db254e17f62.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:34.247589720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "7",
+    "tokenType": "ERC721",
+    "name": "#000130 — Remembrance Rite",
+    "description": "⌘✝\n\nFunction: To honor the dead or what has passed.\n\nCore vow: “We remember, and in remembering, we keep.”\n\nRitual actions: name spoken aloud; small mark made (flower, chalk, symbol); witness affirms.\n\nClosure: “Remembered.”",
+    "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/7",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/605ae39510c4e2c8bb7d387f5cbfa54e_1cd6f9e2",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/605ae39510c4e2c8bb7d387f5cbfa54e_1cd6f9e2",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/605ae39510c4e2c8bb7d387f5cbfa54e_1cd6f9e2",
+      "contentType": "image/jpeg",
+      "size": 1040423,
+      "originalUrl": "https://arweave.net/qEejVuevF32tCzoPo250-Kyv-ZeJN0wYthwM4zcbQvk"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/7",
+      "metadata": {
+        "image_url": "https://arweave.net/qEejVuevF32tCzoPo250-Kyv-ZeJN0wYthwM4zcbQvk",
+        "name": "#000130 — Remembrance Rite",
+        "description": "⌘✝\n\nFunction: To honor the dead or what has passed.\n\nCore vow: “We remember, and in remembering, we keep.”\n\nRitual actions: name spoken aloud; small mark made (flower, chalk, symbol); witness affirms.\n\nClosure: “Remembered.”",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet",
+            "display_type": "text"
+          }
+        ],
+        "created_by": "Zeropoet",
+        "image_details": {
+          "bytes": "1040423",
+          "height": "2048",
+          "width": "1536",
+          "format": "JPEG",
+          "sha256": "156ee1f030117ebcf05d4e1760e6c232db42d5cb020c8e65d592bbb035837d2b"
+        },
+        "image": "https://arweave.net/qEejVuevF32tCzoPo250-Kyv-ZeJN0wYthwM4zcbQvk"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Ritual",
+      "slug": "the--ritual",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-28T09:20:54.498Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

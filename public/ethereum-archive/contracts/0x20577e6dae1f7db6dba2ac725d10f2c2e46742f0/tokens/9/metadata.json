@@ -1,0 +1,125 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0",
+  "token_id": "9",
+  "token_uri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/9",
+  "name": "#000132 — Anointing of Tools",
+  "description": "⧉✚\n\nFunction: Blessing instruments before use.\n\nCore vow: “May this tool serve truth.”\n\nRitual actions: tool touched with oil, water, or breath; vow spoken aloud; ledger entry signed.\n\nClosure: “Ready.”",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "display_type": "text",
+      "value": "Zeropoet",
+      "trait_type": "Artist"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/2DY5aYaHz8yjfwdfTkSEf4hO7tNApyDlXJz30hBQBVg",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/d6b6a9032bbfc3a7876cd0304d5730c4",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/d6b6a9032bbfc3a7876cd0304d5730c4",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/d6b6a9032bbfc3a7876cd0304d5730c4"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "cf26531600e16096b0fec594321a703809f7990ea3f674cd882105aedb3fb5ed",
+  "metadata_path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/9/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 1219081,
+    "sha256": "1630ee9922756945518eb80374a577e6b21c0d8fc2fd8a3d7b0ee1c2224b4c2b",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/9/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:43.650Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x20577e6dAE1f7db6DBA2Ac725D10f2C2E46742f0",
+      "name": "The Ritual",
+      "symbol": "RITUAL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "The Ritual",
+        "collectionSlug": "the--ritual",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/collection/the--ritual/image_type_logo/48ab44da944ecdd2800db254e17f62/0f48ab44da944ecdd2800db254e17f62.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:34.247589720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "9",
+    "tokenType": "ERC721",
+    "name": "#000132 — Anointing of Tools",
+    "description": "⧉✚\n\nFunction: Blessing instruments before use.\n\nCore vow: “May this tool serve truth.”\n\nRitual actions: tool touched with oil, water, or breath; vow spoken aloud; ledger entry signed.\n\nClosure: “Ready.”",
+    "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/9",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/d6b6a9032bbfc3a7876cd0304d5730c4",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/d6b6a9032bbfc3a7876cd0304d5730c4",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/d6b6a9032bbfc3a7876cd0304d5730c4",
+      "contentType": "image/jpeg",
+      "size": 1219081,
+      "originalUrl": "https://arweave.net/2DY5aYaHz8yjfwdfTkSEf4hO7tNApyDlXJz30hBQBVg"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/9",
+      "metadata": {
+        "image": "https://arweave.net/2DY5aYaHz8yjfwdfTkSEf4hO7tNApyDlXJz30hBQBVg",
+        "image_details": {
+          "format": "JPEG",
+          "width": "1536",
+          "sha256": "1630ee9922756945518eb80374a577e6b21c0d8fc2fd8a3d7b0ee1c2224b4c2b",
+          "bytes": "1219081",
+          "height": "2048"
+        },
+        "image_url": "https://arweave.net/2DY5aYaHz8yjfwdfTkSEf4hO7tNApyDlXJz30hBQBVg",
+        "name": "#000132 — Anointing of Tools",
+        "description": "⧉✚\n\nFunction: Blessing instruments before use.\n\nCore vow: “May this tool serve truth.”\n\nRitual actions: tool touched with oil, water, or breath; vow spoken aloud; ledger entry signed.\n\nClosure: “Ready.”",
+        "attributes": [
+          {
+            "display_type": "text",
+            "value": "Zeropoet",
+            "trait_type": "Artist"
+          }
+        ],
+        "created_by": "Zeropoet"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Ritual",
+      "slug": "the--ritual",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2025-09-18T19:41:39.127Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

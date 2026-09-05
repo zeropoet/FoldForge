@@ -1,0 +1,122 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x1e3b1154aedee78e10d67aa0001ab5c5b4d1143b",
+  "token_id": "1",
+  "token_uri": "ipfs://bafkreif7bhfawu2fmk2fh7u6geapnretwp4ccyrvib2oktdursofnp5qoi",
+  "name": "1Incentives on Ratexclaim.com",
+  "description": "You have been credited with Incentive on Ratexclaim.com",
+  "token_type": "ERC1155",
+  "attributes": [
+    {
+      "trait_type": "Website",
+      "value": "https://ratexclaim.com/"
+    },
+    {
+      "trait_type": "Web3",
+      "value": "NFTs"
+    }
+  ],
+  "image_sources": [
+    "https://ipfs.io/ipfs/bafybeie62xc2sk5un2f4yhvhodtdkodrjr6qgqgfxef7jelt45ia5tgztq"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "7fe0e53f9b9c3116a1aac2206e853afecef0f27b4353510029e912bbe37b1ee8",
+  "metadata_path": "/ethereum-archive/contracts/0x1e3b1154aedee78e10d67aa0001ab5c5b4d1143b/tokens/1/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 311698,
+    "sha256": "804370fde423aa0f6cbaf2caf76c3af9bf897a7b93610d6418a679ab57e0bffd",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x1e3b1154aedee78e10d67aa0001ab5c5b4d1143b/tokens/1/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:38.757Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x1e3B1154aEDEe78E10d67aa0001aB5C5b4D1143B",
+      "name": "Ratexclaim.com",
+      "symbol": "Incentives",
+      "totalSupply": "600",
+      "tokenType": "ERC1155",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "Ratexclaim.com",
+        "collectionSlug": "ratexclaim-com-297686692",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-29T19:16:59.554639800Z"
+      },
+      "isSpam": true,
+      "spamClassifications": [
+        "EmptyMetadata",
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "1",
+    "tokenType": "ERC1155",
+    "name": "1Incentives on Ratexclaim.com",
+    "description": "You have been credited with Incentive on Ratexclaim.com",
+    "tokenUri": "ipfs://bafkreif7bhfawu2fmk2fh7u6geapnretwp4ccyrvib2oktdursofnp5qoi",
+    "image": {
+      "cachedUrl": "https://ipfs.io/ipfs/bafybeie62xc2sk5un2f4yhvhodtdkodrjr6qgqgfxef7jelt45ia5tgztq",
+      "thumbnailUrl": null,
+      "pngUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": "https://ipfs.io/ipfs/bafybeie62xc2sk5un2f4yhvhodtdkodrjr6qgqgfxef7jelt45ia5tgztq"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://bafkreif7bhfawu2fmk2fh7u6geapnretwp4ccyrvib2oktdursofnp5qoi",
+      "metadata": {
+        "name": "1Incentives on Ratexclaim.com",
+        "description": "You have been credited with Incentive on Ratexclaim.com",
+        "image": "ipfs://bafybeie62xc2sk5un2f4yhvhodtdkodrjr6qgqgfxef7jelt45ia5tgztq",
+        "attributes": [
+          {
+            "trait_type": "Website",
+            "value": "https://ratexclaim.com/"
+          },
+          {
+            "trait_type": "Web3",
+            "value": "NFTs"
+          }
+        ]
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "Ratexclaim.com",
+      "slug": "ratexclaim-com-297686692",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-29T19:18:21.612677985Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "foldforge-ethereum-contract/v1",
+  "address": "0x1066d77f2b0ffe7a667e95ebc442866088ab1248",
+  "name": "TOKEN OF KINDNESS",
+  "symbol": "",
+  "description": "In the world today, there is plenty of pain, fear, worry, and sadness. We know how valuable KINDNESS is to humanity and we have never needed it as we do now. KINDNESS is caring about others and doing things to help make their lives better. In turn, it makes our own lives better. This is called a ripple effect, which is a measurable and powerful phenomenon. We see the blockchain as yet another place to spread KINDNESS, reach more hearts, and change more lives.",
+  "total_supply": "",
+  "token_type": "ERC1155",
+  "token_ids": [
+    "0",
+    "20",
+    "42"
+  ],
+  "image": "/ethereum-archive/contracts/0x1066d77f2b0ffe7a667e95ebc442866088ab1248/tokens/0/image.png"
+}

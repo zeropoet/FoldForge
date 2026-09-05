@@ -1,0 +1,125 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0",
+  "token_id": "10",
+  "token_uri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/10",
+  "name": "#000133 — Threshold Crossing",
+  "description": "⧍⇆\n\nFunction: Marking transitions (home, role, major change).\n\nCore vow: “I step across; the old behind, the new before.”\n\nRitual actions: stand at doorway, line, or boundary; vow spoken; witness affirms.\n\nClosure: “Crossed.”",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "display_type": "text",
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/cCHwCMt-nIydeFA8F4cwE0S2SzWF3RWm7J_Kj6ws7tU",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/6f51292c8cb4e58c4a76d72db43ec5f0_5fa55d2f",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/6f51292c8cb4e58c4a76d72db43ec5f0_5fa55d2f",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/6f51292c8cb4e58c4a76d72db43ec5f0_5fa55d2f"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "57a8d1b5fa66f68119775aa8631b11047003206a7df0ee1f99e6be78abed3fe4",
+  "metadata_path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/10/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 1183603,
+    "sha256": "3e34052cf441a8edac64c273344f8d1825ce5eab5dff916f10f16403a894245e",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/10/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:48:44.208Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x20577e6dAE1f7db6DBA2Ac725D10f2C2E46742f0",
+      "name": "The Ritual",
+      "symbol": "RITUAL",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "The Ritual",
+        "collectionSlug": "the--ritual",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/collection/the--ritual/image_type_logo/48ab44da944ecdd2800db254e17f62/0f48ab44da944ecdd2800db254e17f62.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:34.247589720Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "10",
+    "tokenType": "ERC721",
+    "name": "#000133 — Threshold Crossing",
+    "description": "⧍⇆\n\nFunction: Marking transitions (home, role, major change).\n\nCore vow: “I step across; the old behind, the new before.”\n\nRitual actions: stand at doorway, line, or boundary; vow spoken; witness affirms.\n\nClosure: “Crossed.”",
+    "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/10",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/6f51292c8cb4e58c4a76d72db43ec5f0_5fa55d2f",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/6f51292c8cb4e58c4a76d72db43ec5f0_5fa55d2f",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/6f51292c8cb4e58c4a76d72db43ec5f0_5fa55d2f",
+      "contentType": "image/jpeg",
+      "size": 1183603,
+      "originalUrl": "https://arweave.net/cCHwCMt-nIydeFA8F4cwE0S2SzWF3RWm7J_Kj6ws7tU"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/cjfnk56jBn-1bUerktV52QEp-Z96CxnamFYYhHbwJhA/10",
+      "metadata": {
+        "image_url": "https://arweave.net/cCHwCMt-nIydeFA8F4cwE0S2SzWF3RWm7J_Kj6ws7tU",
+        "created_by": "Zeropoet",
+        "name": "#000133 — Threshold Crossing",
+        "image_details": {
+          "height": "2048",
+          "format": "JPEG",
+          "sha256": "3e34052cf441a8edac64c273344f8d1825ce5eab5dff916f10f16403a894245e",
+          "width": "1536",
+          "bytes": "1183603"
+        },
+        "attributes": [
+          {
+            "display_type": "text",
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ],
+        "description": "⧍⇆\n\nFunction: Marking transitions (home, role, major change).\n\nCore vow: “I step across; the old behind, the new before.”\n\nRitual actions: stand at doorway, line, or boundary; vow spoken; witness affirms.\n\nClosure: “Crossed.”",
+        "image": "https://arweave.net/cCHwCMt-nIydeFA8F4cwE0S2SzWF3RWm7J_Kj6ws7tU"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Ritual",
+      "slug": "the--ritual",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-24T18:35:47.937Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

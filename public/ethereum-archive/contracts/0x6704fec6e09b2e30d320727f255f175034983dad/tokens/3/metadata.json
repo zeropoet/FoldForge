@@ -1,0 +1,103 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x6704fec6e09b2e30d320727f255f175034983dad",
+  "token_id": "3",
+  "token_uri": "ipfs://Qmad5Hvq7nXzFYg3GwX5SRKp8y8vRTXVER7jecrskoxH2F/metadata.json",
+  "name": "the Awe",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmbkeDFZTLXVWbhYk5pg3aZXripHWQJ2GWBBth9QzDYvf3/nft.jpg",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/1200231448a9adf1be33a2a174c9f902",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/1200231448a9adf1be33a2a174c9f902",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/1200231448a9adf1be33a2a174c9f902"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "59b0795581afa04afaa8d02833e1f90b30c79b57c4abce9c30813b622caa80f6",
+  "metadata_path": "/ethereum-archive/contracts/0x6704fec6e09b2e30d320727f255f175034983dad/tokens/3/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 3379342,
+    "sha256": "0d2f9623a59e7af7fff0ea671d7bfca8772a46711909c0603ffe14667e6585e4",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x6704fec6e09b2e30d320727f255f175034983dad/tokens/3/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:49:38.423Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x6704feC6e09B2E30d320727f255F175034983dAD",
+      "name": "Pæce",
+      "symbol": "PEACE",
+      "totalSupply": "3",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "Pæce",
+        "collectionSlug": "paece-300604948",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x6704fec6e09b2e30d320727f255f175034983dad/36e06da76109ea89adc90161ede74b/5836e06da76109ea89adc90161ede74b.mp4",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:30.368593468Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "3",
+    "tokenType": "ERC721",
+    "name": "the Awe",
+    "description": "",
+    "tokenUri": "ipfs://Qmad5Hvq7nXzFYg3GwX5SRKp8y8vRTXVER7jecrskoxH2F/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/1200231448a9adf1be33a2a174c9f902",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/1200231448a9adf1be33a2a174c9f902",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/1200231448a9adf1be33a2a174c9f902",
+      "contentType": "image/jpeg",
+      "size": 3379342,
+      "originalUrl": "https://ipfs.io/ipfs/QmbkeDFZTLXVWbhYk5pg3aZXripHWQJ2GWBBth9QzDYvf3/nft.jpg"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://Qmad5Hvq7nXzFYg3GwX5SRKp8y8vRTXVER7jecrskoxH2F/metadata.json",
+      "metadata": {
+        "name": "the Awe",
+        "description": "",
+        "image": "ipfs://QmbkeDFZTLXVWbhYk5pg3aZXripHWQJ2GWBBth9QzDYvf3/nft.jpg"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "Pæce",
+      "slug": "paece-300604948",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2025-12-18T06:57:24.357Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}
