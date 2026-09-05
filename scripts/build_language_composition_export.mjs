@@ -23,6 +23,7 @@ const denylist = new Set([
 const directTokenUriContracts = new Set([
   "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "0x716d8251ce9521657b6d36786e6f414e5c915895",
+  "0x0d7fad8479768a7fd0618077b34f4b3d3aac02b7",
 ]);
 const stopWords = new Set([
   "a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "from", "in",

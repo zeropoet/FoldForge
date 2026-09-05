@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   canonicalMetadataCandidates,
+  enrichCollectionsWithTokenMedia,
   hydrateCanonicalMedia,
   optimizedImageSrcSet,
   tokenThumbnailCandidates,
@@ -62,6 +63,37 @@ describe("canonical NFT media", () => {
     };
 
     expect(tokenThumbnailFor(nft)).toBe("https://arweave.net/current-sovereign-image");
+  });
+
+  it("uses collection imagery only after all token-specific thumbnail candidates", () => {
+    const nft: AlchemyNft = {
+      contract: { openSeaMetadata: { imageUrl: "ar://collection-image" } },
+      image: { cachedUrl: "https://provider.example/token.png" },
+    };
+
+    expect(tokenThumbnailCandidates(nft)).toEqual([
+      "https://provider.example/token.png",
+      "https://arweave.net/collection-image",
+    ]);
+  });
+
+  it("fills missing contract thumbnails from the contract's minted works", () => {
+    const collections = [{
+      address: "0x1111111111111111111111111111111111111111",
+      name: "Temporal Receipts",
+      symbol: "ZTR",
+      count: 1,
+      image: "",
+      description: "",
+      totalSupply: "1",
+      floorPrice: null,
+    }];
+    const nfts: AlchemyNft[] = [{
+      contract: { address: collections[0].address },
+      image: { originalUrl: "ar://receipt-image" },
+    }];
+
+    expect(enrichCollectionsWithTokenMedia(collections, nfts)[0].image).toBe("https://arweave.net/receipt-image");
   });
 
   it("builds ordered, deduplicated responsive thumbnail candidates", () => {

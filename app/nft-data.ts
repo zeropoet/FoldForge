@@ -99,6 +99,7 @@ export const addressPattern = /^0x[a-fA-F0-9]{40}$/;
 const directTokenUriContracts = new Set([
   "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "0x716d8251ce9521657b6d36786e6f414e5c915895",
+  "0x0d7fad8479768a7fd0618077b34f4b3d3aac02b7",
 ]);
 
 function readsTokenUriFromChain(nft: AlchemyNft): boolean {
@@ -218,7 +219,27 @@ export function tokenThumbnailCandidates(nft: AlchemyNft): string[] {
     "",
     nft.image?.thumbnailUrl ||
     "",
+    nft.contract?.openSeaMetadata?.imageUrl ||
+    "",
   ].map(normalizeMediaUrl).filter(Boolean))];
+}
+
+export function enrichCollectionsWithTokenMedia(
+  collections: CollectionSummary[],
+  nfts: AlchemyNft[],
+): CollectionSummary[] {
+  const tokenMedia = new Map<string, string>();
+  for (const nft of nfts) {
+    const address = nft.contract?.address?.toLowerCase() || "";
+    if (!address || tokenMedia.has(address)) continue;
+    const image = tokenThumbnailFor(nft);
+    if (image) tokenMedia.set(address, image);
+  }
+
+  return collections.map((collection) => ({
+    ...collection,
+    image: normalizeMediaUrl(collection.image) || tokenMedia.get(collection.address.toLowerCase()) || "",
+  }));
 }
 
 export function optimizedImageUrl(

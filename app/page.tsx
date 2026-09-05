@@ -6,7 +6,7 @@ import { isCollectionAllowed } from "./collection-policy";
 import ComposerChamber, { type ComposerEvidence } from "./composer-chamber";
 import { createCompositionWitness, type CompositionWitness } from "./composition-witness";
 import { resolveOwner } from "./ens";
-import { AlchemyNft, fetchNftMetadata, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, normalizeMediaUrl, optimizedImageSrcSet, optimizedImageUrl, summarizeContracts, tokenImageFor, tokenThumbnailCandidates, tokenThumbnailFor } from "./nft-data";
+import { AlchemyNft, enrichCollectionsWithTokenMedia, fallbackGradient, fetchNftMetadata, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, normalizeMediaUrl, optimizedImageSrcSet, optimizedImageUrl, summarizeContracts, tokenImageFor, tokenThumbnailCandidates, tokenThumbnailFor } from "./nft-data";
 import { analyzePixels, type VisualSignature } from "./visual-analysis";
 import { analyzeAudio, isAudioUrl, type AudioSignature } from "./audio-analysis";
 import PublicHeader from "./public-header";
@@ -49,7 +49,8 @@ function mintedMediaFor(token: AlchemyNft): string {
     token.image?.originalUrl ||
     token.raw?.metadata?.image_url ||
     token.raw?.metadata?.image ||
-    tokenImageFor(token);
+    tokenImageFor(token) ||
+    tokenThumbnailFor(token);
   return normalizeMediaUrl(media);
 }
 
@@ -100,7 +101,14 @@ function MediaTile({ token }: { token: AlchemyNft }) {
   const media = hasVideoMedia(token) ? mintedMediaFor(token) : tokenThumbnailFor(token);
   const thumbnailCandidates = useMemo(() => tokenThumbnailCandidates(token), [token]);
   const [thumbnailIndex, setThumbnailIndex] = useState(0);
-  if (!media) return null;
+  if (!media) {
+    const address = token.contract?.address || "0x0000000000000000000000000000000000000000";
+    return (
+      <div className="grid h-full place-items-center px-4 text-center" style={{ background: fallbackGradient(address) }}>
+        <span className="font-mono text-[8px] uppercase tracking-[0.16em] text-white/60">Minted work<br />#{token.tokenId || "—"}</span>
+      </div>
+    );
+  }
   if (isAudioUrl(media)) {
     return <div className="grid h-full place-items-center bg-white px-4 text-center font-mono text-[8px] uppercase tracking-[0.16em] text-black/45">Audio work</div>;
   }
@@ -529,6 +537,10 @@ export default function FoldForge() {
   }, [selectedContract, selectedTokenId]);
 
   const selectedCollection = collections.find((collection) => collection.address === selectedContract);
+  const displayedCollections = useMemo(
+    () => enrichCollectionsWithTokenMedia(collections, compositionTokens),
+    [collections, compositionTokens],
+  );
   const selectedToken = tokenDetail?.key === `${selectedContract}:${selectedTokenId}`
     ? tokenDetail.nft
     : tokens.find((token) => token.tokenId === selectedTokenId);
@@ -705,7 +717,7 @@ export default function FoldForge() {
             </div>
             <div className="border-b border-black/20 py-5 sm:border-b-0 sm:border-r sm:border-black/20 sm:px-5">
               <p className="text-[8px] uppercase tracking-[0.25em] text-black/35">Collections</p>
-              <p className="mt-3 text-3xl font-light tracking-[-0.04em]">{collections.length.toString().padStart(2, "0")}</p>
+              <p className="mt-3 text-3xl font-light tracking-[-0.04em]">{displayedCollections.length.toString().padStart(2, "0")}</p>
             </div>
             <div className="border-b border-black/20 py-5 sm:border-b-0 sm:border-r sm:border-black/20 sm:px-5">
               <p className="text-[8px] uppercase tracking-[0.25em] text-black/35">Works held</p>
@@ -749,7 +761,7 @@ export default function FoldForge() {
 
           <section className="mt-10 min-w-0 md:mt-14">
             <div className="flex items-end justify-between gap-6 border-b border-black/25 pb-4">
-              <p className="text-[9px] uppercase tracking-[0.25em] text-black/40">Collection index / {collections.length.toString().padStart(2, "0")}</p>
+              <p className="text-[9px] uppercase tracking-[0.25em] text-black/40">Collection gallery / {displayedCollections.length.toString().padStart(2, "0")}</p>
               <p className="max-w-48 text-right text-[8px] uppercase leading-4 tracking-[0.2em] text-black/25">Curated exclusions / new holdings surface live</p>
             </div>
             {state === "loading" ? (
@@ -758,18 +770,27 @@ export default function FoldForge() {
                   <div className="h-28 animate-pulse border-b border-black/10 bg-white" key={index} />
                 ))}
               </div>
-            ) : collections.length ? (
-              <div className="collection-register border-x border-black/10">
-                {collections.map((collection, index) => (
+            ) : displayedCollections.length ? (
+              <div className="grid border-x border-black/10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                {displayedCollections.map((collection, index) => (
                   <article className="group border-b border-black/25" key={collection.address}>
-                    <a className="collection-link grid min-w-0 gap-4 px-4 py-6 outline-none sm:grid-cols-[58px_1fr_auto_18px] sm:items-center md:px-6 md:py-8" href={`?owner=${encodeURIComponent(navigableOwner)}&collection=${collection.address}`}>
-                      <span className="font-mono text-[8px] text-black/25">C/{String(index + 1).padStart(2, "0")}</span>
-                      <h2 className="truncate text-3xl font-light uppercase tracking-[-0.045em] transition sm:text-4xl md:text-5xl">{collection.name}</h2>
-                      <div className="flex items-center gap-4 text-[8px] uppercase tracking-[0.18em] text-black/35">
-                        <span>{collection.symbol || shortAddress(collection.address)}</span>
-                        <span>{collection.count.toString().padStart(2, "0")} works</span>
+                    <a className="collection-link block min-w-0 outline-none" href={`?owner=${encodeURIComponent(navigableOwner)}&collection=${collection.address}`}>
+                      <div className="aspect-square overflow-hidden bg-black" style={{ background: fallbackGradient(collection.address) }}>
+                        {collection.image ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img alt={`${collection.name} collection thumbnail`} className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0" decoding="async" loading="lazy" src={optimizedImageUrl(collection.image, { width: 720, quality: 84 })} srcSet={optimizedImageSrcSet(collection.image, [240, 480, 720, 960])} />
+                        ) : (
+                          <div className="grid h-full place-items-center p-6 text-center font-mono text-[9px] uppercase tracking-[0.18em] text-white/55">{shortAddress(collection.address)}</div>
+                        )}
                       </div>
-                      <span className="collection-arrow hidden text-right text-sm text-black/25 transition sm:block" aria-hidden="true">→</span>
+                      <div className="grid min-w-0 gap-3 border-t border-black/25 p-4">
+                        <span className="font-mono text-[8px] text-black/25">C/{String(index + 1).padStart(2, "0")}</span>
+                        <h2 className="truncate text-2xl font-light uppercase tracking-[-0.04em] transition">{collection.name}</h2>
+                        <div className="flex items-center justify-between gap-4 text-[8px] uppercase tracking-[0.18em] text-black/35">
+                          <span>{collection.symbol || shortAddress(collection.address)}</span>
+                          <span>{collection.count.toString().padStart(2, "0")} works</span>
+                        </div>
+                      </div>
                     </a>
                   </article>
                 ))}
