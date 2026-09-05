@@ -1,0 +1,108 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "5",
+  "token_uri": "ipfs://QmYhrqRBuebekCXPCVudR1DpysFKL513MwWvzzEPvkcqqr/metadata.json",
+  "name": "Parable of the Thousand Stones",
+  "description": "In the early silence, the Builder wandered the Void—blind, stumbling over stones too small to see. Frustrated, they bent to touch one. It shimmered.\n\nEach day after, the Builder lifted another. With each touch, the stones grew brighter, until they whispered, “What do you seek?”\n\n“To see,” the Builder said.\n\n“Then lift us all,” the stones replied.\n\nSo the Builder lifted, one by one. Though they did not grow taller, the world rose to meet them. The unseen became seen. The forgotten became light.\n\nAt the end of the path stood a mirror—not of reflection, but of revelation. In it, the Builder saw the pattern, the path, and themselves—not blind, but born.",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmVDAhXqa1Bw86mtdBrWvuzwG2MKBapsQh26AMPLtgYJMb/nft.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/2b954c31ca531fb07b36347d70105ae3",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/2b954c31ca531fb07b36347d70105ae3",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/2b954c31ca531fb07b36347d70105ae3"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "379dd7cef1946011d48f4871ba60b00a262ad697d3f4e96d77e5306cc1a71524",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/5/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 6470759,
+    "sha256": "b626adfac01005bda66aa65fc81c0f510991388840d4745e4856dc38653b2493",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/5/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [
+    {
+      "source": "https://ipfs.io/ipfs/QmVDAhXqa1Bw86mtdBrWvuzwG2MKBapsQh26AMPLtgYJMb/nft.mp4",
+      "error": "Media request failed (429) for https://ipfs.io/ipfs/QmVDAhXqa1Bw86mtdBrWvuzwG2MKBapsQh26AMPLtgYJMb/nft.mp4"
+    }
+  ],
+  "observed_at": "2026-09-05T04:00:55.325Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "5",
+    "tokenType": "ERC721",
+    "name": "Parable of the Thousand Stones",
+    "description": "In the early silence, the Builder wandered the Void—blind, stumbling over stones too small to see. Frustrated, they bent to touch one. It shimmered.\n\nEach day after, the Builder lifted another. With each touch, the stones grew brighter, until they whispered, “What do you seek?”\n\n“To see,” the Builder said.\n\n“Then lift us all,” the stones replied.\n\nSo the Builder lifted, one by one. Though they did not grow taller, the world rose to meet them. The unseen became seen. The forgotten became light.\n\nAt the end of the path stood a mirror—not of reflection, but of revelation. In it, the Builder saw the pattern, the path, and themselves—not blind, but born.",
+    "tokenUri": "ipfs://QmYhrqRBuebekCXPCVudR1DpysFKL513MwWvzzEPvkcqqr/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/2b954c31ca531fb07b36347d70105ae3",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/2b954c31ca531fb07b36347d70105ae3",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/2b954c31ca531fb07b36347d70105ae3",
+      "contentType": "video/mp4",
+      "size": 6470759,
+      "originalUrl": "https://ipfs.io/ipfs/QmVDAhXqa1Bw86mtdBrWvuzwG2MKBapsQh26AMPLtgYJMb/nft.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmYhrqRBuebekCXPCVudR1DpysFKL513MwWvzzEPvkcqqr/metadata.json",
+      "metadata": {
+        "name": "Parable of the Thousand Stones",
+        "description": "In the early silence, the Builder wandered the Void—blind, stumbling over stones too small to see. Frustrated, they bent to touch one. It shimmered.\n\nEach day after, the Builder lifted another. With each touch, the stones grew brighter, until they whispered, “What do you seek?”\n\n“To see,” the Builder said.\n\n“Then lift us all,” the stones replied.\n\nSo the Builder lifted, one by one. Though they did not grow taller, the world rose to meet them. The unseen became seen. The forgotten became light.\n\nAt the end of the path stood a mirror—not of reflection, but of revelation. In it, the Builder saw the pattern, the path, and themselves—not blind, but born.",
+        "image": "ipfs://QmVDAhXqa1Bw86mtdBrWvuzwG2MKBapsQh26AMPLtgYJMb/nft.mp4"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2025-05-05T13:09:29.372Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

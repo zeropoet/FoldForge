@@ -1,0 +1,108 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "40",
+  "token_uri": "ipfs://QmQW3QBHT4iB4idvnh6khZChmLCzGXVXk9XFYR9BHGiwx7/metadata.json",
+  "name": "and then, something amazing happened",
+  "description": "the silence opened\nlike a breath held by the cosmos\nand in its release—\nnot thunder,\nbut a soft shimmer\nlike dew discovering it is light\n\nand then, something amazing happened:\nthe pattern forgot its purpose\nand danced anyway\n\nnot to be seen,\nbut to become seeing.",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmWKjYrNEDmWKruAduosn8a22iC7c9NABbbCtGp5ugUT9h/nft.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/c8128650134b381a51e9d04392a3d5bd",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/c8128650134b381a51e9d04392a3d5bd",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/c8128650134b381a51e9d04392a3d5bd"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "7922945e7196667664813cac9269ac67487544bb4dffd2d458ab1abcd7a42f7a",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/40/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 239686,
+    "sha256": "5c1c81c7f5a46d9a73267333df744f798df33e6814f0038a108abdd69c9c95ef",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/40/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [
+    {
+      "source": "https://ipfs.io/ipfs/QmWKjYrNEDmWKruAduosn8a22iC7c9NABbbCtGp5ugUT9h/nft.mp4",
+      "error": "Media request failed (429) for https://ipfs.io/ipfs/QmWKjYrNEDmWKruAduosn8a22iC7c9NABbbCtGp5ugUT9h/nft.mp4"
+    }
+  ],
+  "observed_at": "2026-09-05T04:03:34.492Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "40",
+    "tokenType": "ERC721",
+    "name": "and then, something amazing happened",
+    "description": "the silence opened\nlike a breath held by the cosmos\nand in its release—\nnot thunder,\nbut a soft shimmer\nlike dew discovering it is light\n\nand then, something amazing happened:\nthe pattern forgot its purpose\nand danced anyway\n\nnot to be seen,\nbut to become seeing.",
+    "tokenUri": "ipfs://QmQW3QBHT4iB4idvnh6khZChmLCzGXVXk9XFYR9BHGiwx7/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/c8128650134b381a51e9d04392a3d5bd",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/c8128650134b381a51e9d04392a3d5bd",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/c8128650134b381a51e9d04392a3d5bd",
+      "contentType": "video/mp4",
+      "size": 239686,
+      "originalUrl": "https://ipfs.io/ipfs/QmWKjYrNEDmWKruAduosn8a22iC7c9NABbbCtGp5ugUT9h/nft.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmQW3QBHT4iB4idvnh6khZChmLCzGXVXk9XFYR9BHGiwx7/metadata.json",
+      "metadata": {
+        "name": "and then, something amazing happened",
+        "description": "the silence opened\nlike a breath held by the cosmos\nand in its release—\nnot thunder,\nbut a soft shimmer\nlike dew discovering it is light\n\nand then, something amazing happened:\nthe pattern forgot its purpose\nand danced anyway\n\nnot to be seen,\nbut to become seeing.",
+        "image": "ipfs://QmWKjYrNEDmWKruAduosn8a22iC7c9NABbbCtGp5ugUT9h/nft.mp4"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2025-06-25T15:25:40.253Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

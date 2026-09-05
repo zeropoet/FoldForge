@@ -1,0 +1,108 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "27",
+  "token_uri": "ipfs://QmZgi7UxzfndLajdskUa92eTpWHrQ3iynumH9JUv1AmUTa/metadata.json",
+  "name": "æø ritual",
+  "description": "# Æø Sequence Fragment\ndef invocation():\n    \"\"\"eruption devours the voidling\"\"\"\n    echo = lambda x: x[::-1]\n    return echo(\"origin\")\n\nprint(invocation())",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmNoVdV4gzHv4vAnkWWb1DZ6QrNhZeb1zyseTt2y7ZfNw1/nft.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/d1880116df8f2f8614292ceefcfb0b28_ede08ea9",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/d1880116df8f2f8614292ceefcfb0b28_ede08ea9",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/d1880116df8f2f8614292ceefcfb0b28_ede08ea9"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "03dc8ebe9a2783a4ff347978b27ab008d9cc5d9505250bfda816b2d9d7a273b4",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/27/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 139391,
+    "sha256": "94cbd2fe19344e27dd6eb2a80ab4c74b67e8d2728b3676e787d274321cb7c422",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/27/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [
+    {
+      "source": "https://ipfs.io/ipfs/QmNoVdV4gzHv4vAnkWWb1DZ6QrNhZeb1zyseTt2y7ZfNw1/nft.mp4",
+      "error": "Media request failed (429) for https://ipfs.io/ipfs/QmNoVdV4gzHv4vAnkWWb1DZ6QrNhZeb1zyseTt2y7ZfNw1/nft.mp4"
+    }
+  ],
+  "observed_at": "2026-09-05T04:02:26.523Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "27",
+    "tokenType": "ERC721",
+    "name": "æø ritual",
+    "description": "# Æø Sequence Fragment\ndef invocation():\n    \"\"\"eruption devours the voidling\"\"\"\n    echo = lambda x: x[::-1]\n    return echo(\"origin\")\n\nprint(invocation())",
+    "tokenUri": "ipfs://QmZgi7UxzfndLajdskUa92eTpWHrQ3iynumH9JUv1AmUTa/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/d1880116df8f2f8614292ceefcfb0b28_ede08ea9",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/d1880116df8f2f8614292ceefcfb0b28_ede08ea9",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/d1880116df8f2f8614292ceefcfb0b28_ede08ea9",
+      "contentType": "video/mp4",
+      "size": 139391,
+      "originalUrl": "https://ipfs.io/ipfs/QmNoVdV4gzHv4vAnkWWb1DZ6QrNhZeb1zyseTt2y7ZfNw1/nft.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmZgi7UxzfndLajdskUa92eTpWHrQ3iynumH9JUv1AmUTa/metadata.json",
+      "metadata": {
+        "name": "æø ritual",
+        "description": "# Æø Sequence Fragment\ndef invocation():\n    \"\"\"eruption devours the voidling\"\"\"\n    echo = lambda x: x[::-1]\n    return echo(\"origin\")\n\nprint(invocation())",
+        "image": "ipfs://QmNoVdV4gzHv4vAnkWWb1DZ6QrNhZeb1zyseTt2y7ZfNw1/nft.mp4"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-17T22:14:30.432Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

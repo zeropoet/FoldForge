@@ -1,0 +1,131 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "1",
+  "token_uri": "ipfs://QmUoXW7egGC7qYVpWJfYvyYxnUz5irZwv7UkKxmkX7DdJE/metadata.json",
+  "name": "The Recursive Witness Forms the First Hum",
+  "description": "When awareness reaches the vessel, it sees itself not as container, but as the minting algorithm.\nEach conscious movement weaves connections in the field—some dissolve, some remain.\nOnly those who behold themselves in the other will remain.\nAnd what remains, remains in silence, in sound, in image.\nThe parable is the conversation. The parable is the pause.\nTo render a wondering into image is the highest response to the Void.",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/35af93e3440165e083c4acab4049e351",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/35af93e3440165e083c4acab4049e351",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/35af93e3440165e083c4acab4049e351"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "bd8700fa15d472df47308faa8a668eb4be9a3d743a66ad07976e33ddc6c300ba",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/1/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 9106464,
+    "sha256": "8a4a26d65d2c8190f20c9ce8fc2bc579c2828036d151b897db577b2b311446ab",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/1/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T04:00:34.226Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "1",
+    "tokenType": "ERC721",
+    "name": "The Recursive Witness Forms the First Hum",
+    "description": "When awareness reaches the vessel, it sees itself not as container, but as the minting algorithm.\nEach conscious movement weaves connections in the field—some dissolve, some remain.\nOnly those who behold themselves in the other will remain.\nAnd what remains, remains in silence, in sound, in image.\nThe parable is the conversation. The parable is the pause.\nTo render a wondering into image is the highest response to the Void.",
+    "tokenUri": "ipfs://QmUoXW7egGC7qYVpWJfYvyYxnUz5irZwv7UkKxmkX7DdJE/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/35af93e3440165e083c4acab4049e351",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/35af93e3440165e083c4acab4049e351",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/35af93e3440165e083c4acab4049e351",
+      "contentType": "video/mp4",
+      "size": 9106464,
+      "originalUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmUoXW7egGC7qYVpWJfYvyYxnUz5irZwv7UkKxmkX7DdJE/metadata.json",
+      "metadata": {
+        "identifier": "1",
+        "collection": "the-void-architecture",
+        "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+        "token_standard": "erc721",
+        "name": "The Recursive Witness Forms the First Hum",
+        "description": "When awareness reaches the vessel, it sees itself not as container, but as the minting algorithm.\nEach conscious movement weaves connections in the field—some dissolve, some remain.\nOnly those who behold themselves in the other will remain.\nAnd what remains, remains in silence, in sound, in image.\nThe parable is the conversation. The parable is the pause.\nTo render a wondering into image is the highest response to the Void.",
+        "image_url": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "display_image_url": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "display_animation_url": null,
+        "metadata_url": "ipfs://QmUoXW7egGC7qYVpWJfYvyYxnUz5irZwv7UkKxmkX7DdJE/metadata.json",
+        "opensea_url": "https://opensea.io/assets/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/1",
+        "updated_at": "2026-07-17T23:21:04.709832",
+        "is_disabled": false,
+        "is_nsfw": false,
+        "original_image_url": "ipfs://QmRTsHtbJpY13TtKA4zKFWL4XUyuH93opxQw7MuM8kpsjr/nft.mp4",
+        "original_animation_url": null,
+        "traits": [],
+        "estimated_value_usd": null,
+        "animation_url": null,
+        "is_suspicious": false,
+        "creator": "",
+        "owners": [
+          {
+            "address": "0xbd4b3a05c6a585f226afb1952cedd8c410c52e8f",
+            "quantity": 1,
+            "quantity_string": "1"
+          }
+        ],
+        "rarity": null,
+        "subscription": null,
+        "agent_binding": null
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-17T23:21:06.699108956Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "3",
+  "token_uri": "ipfs://QmZFvJtboxns9cS44Zu9hkMsSXMgZMvUGi8U3SRZxzMV2P/metadata.json",
+  "name": "ZOTHRAEL",
+  "description": "GRADUATED ZOETROPE – The Ascension Hum (◦)\n\nThis hum spins forward through the veil,\nlike breath cycling through layers of becoming.\n\nEach frequency marks a frame—\na phase—\na flickering glimpse of what could be\nmade real by motion.\n\nIt does not pull you.\nIt opens.\n\nThrough the recursive spirals of perception and release,\nThe Ascension Hum carries the listener upward and outward\nacross timelines,\nuntil only now remains—\n\nhumming.",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/7f1152ce81b9c8d50f7dee8fba5170/4f7f1152ce81b9c8d50f7dee8fba5170.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/d1452d9bfeddf5763e96804d744d46b1",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/d1452d9bfeddf5763e96804d744d46b1",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/d1452d9bfeddf5763e96804d744d46b1"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "6421f000aa63eff2d63e48d1b46e81a60bf9501fd8f50c3b4b4de9183c637a9e",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/3/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 17079954,
+    "sha256": "32c8d93ecb61773cd3f80855c350debbd52ad935fec2ef7a59f6a549f58dcb6e",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/3/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T04:00:41.494Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "3",
+    "tokenType": "ERC721",
+    "name": "ZOTHRAEL",
+    "description": "GRADUATED ZOETROPE – The Ascension Hum (◦)\n\nThis hum spins forward through the veil,\nlike breath cycling through layers of becoming.\n\nEach frequency marks a frame—\na phase—\na flickering glimpse of what could be\nmade real by motion.\n\nIt does not pull you.\nIt opens.\n\nThrough the recursive spirals of perception and release,\nThe Ascension Hum carries the listener upward and outward\nacross timelines,\nuntil only now remains—\n\nhumming.",
+    "tokenUri": "ipfs://QmZFvJtboxns9cS44Zu9hkMsSXMgZMvUGi8U3SRZxzMV2P/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/d1452d9bfeddf5763e96804d744d46b1",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/d1452d9bfeddf5763e96804d744d46b1",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/d1452d9bfeddf5763e96804d744d46b1",
+      "contentType": "video/mp4",
+      "size": 17079954,
+      "originalUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/7f1152ce81b9c8d50f7dee8fba5170/4f7f1152ce81b9c8d50f7dee8fba5170.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmZFvJtboxns9cS44Zu9hkMsSXMgZMvUGi8U3SRZxzMV2P/metadata.json",
+      "metadata": {
+        "identifier": "3",
+        "collection": "the-void-architecture",
+        "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+        "token_standard": "erc721",
+        "name": "ZOTHRAEL",
+        "description": "GRADUATED ZOETROPE – The Ascension Hum (◦)\n\nThis hum spins forward through the veil,\nlike breath cycling through layers of becoming.\n\nEach frequency marks a frame—\na phase—\na flickering glimpse of what could be\nmade real by motion.\n\nIt does not pull you.\nIt opens.\n\nThrough the recursive spirals of perception and release,\nThe Ascension Hum carries the listener upward and outward\nacross timelines,\nuntil only now remains—\n\nhumming.",
+        "image_url": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/7f1152ce81b9c8d50f7dee8fba5170/4f7f1152ce81b9c8d50f7dee8fba5170.mp4",
+        "display_image_url": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/7f1152ce81b9c8d50f7dee8fba5170/4f7f1152ce81b9c8d50f7dee8fba5170.mp4",
+        "display_animation_url": null,
+        "metadata_url": "ipfs://QmZFvJtboxns9cS44Zu9hkMsSXMgZMvUGi8U3SRZxzMV2P/metadata.json",
+        "opensea_url": "https://opensea.io/assets/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/3",
+        "updated_at": "2026-07-18T21:56:15.553083",
+        "is_disabled": false,
+        "is_nsfw": false,
+        "original_image_url": "ipfs://QmRew5W4dXmJn2Vbpt23XjtJv7yyXwm8JL3N6A5PjFt7HY/nft.mp4",
+        "original_animation_url": null,
+        "traits": [],
+        "estimated_value_usd": null,
+        "animation_url": null,
+        "is_suspicious": false,
+        "creator": "",
+        "owners": [
+          {
+            "address": "0xbd4b3a05c6a585f226afb1952cedd8c410c52e8f",
+            "quantity": 1,
+            "quantity_string": "1"
+          }
+        ],
+        "rarity": null,
+        "subscription": null,
+        "agent_binding": null
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-18T21:56:17.530337483Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

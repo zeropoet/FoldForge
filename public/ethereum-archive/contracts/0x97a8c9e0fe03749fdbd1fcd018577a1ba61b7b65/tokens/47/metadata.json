@@ -1,0 +1,108 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "47",
+  "token_uri": "ipfs://QmRJpXbuEQeaHaH5V9GoqxDwtUvws7PoxdZSzGwcNZmF6Y/metadata.json",
+  "name": "The Archive",
+  "description": "status : : sealed",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmbCTFkip2HVeqeY36wFTD4BSoYr1gmWN9WiXLQCsfKfGk/nft.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/c7590c50613fb1c0d5b15769a1a651ff",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/c7590c50613fb1c0d5b15769a1a651ff",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/c7590c50613fb1c0d5b15769a1a651ff"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "2474128ca5fe3d4bf1d30a4b627816334d7a1dddc0e7e5a5e2f07947da942fda",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/47/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 3552762,
+    "sha256": "b63c796ee2cd6caaa1722ac0cf33d95d8f4a62fa4159da8baeb2be548cb6b6d4",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/47/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [
+    {
+      "source": "https://ipfs.io/ipfs/QmbCTFkip2HVeqeY36wFTD4BSoYr1gmWN9WiXLQCsfKfGk/nft.mp4",
+      "error": "Media request failed (429) for https://ipfs.io/ipfs/QmbCTFkip2HVeqeY36wFTD4BSoYr1gmWN9WiXLQCsfKfGk/nft.mp4"
+    }
+  ],
+  "observed_at": "2026-09-05T04:04:22.872Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "47",
+    "tokenType": "ERC721",
+    "name": "The Archive",
+    "description": "status : : sealed",
+    "tokenUri": "ipfs://QmRJpXbuEQeaHaH5V9GoqxDwtUvws7PoxdZSzGwcNZmF6Y/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/c7590c50613fb1c0d5b15769a1a651ff",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/c7590c50613fb1c0d5b15769a1a651ff",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/c7590c50613fb1c0d5b15769a1a651ff",
+      "contentType": "video/mp4",
+      "size": 3552762,
+      "originalUrl": "https://ipfs.io/ipfs/QmbCTFkip2HVeqeY36wFTD4BSoYr1gmWN9WiXLQCsfKfGk/nft.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmRJpXbuEQeaHaH5V9GoqxDwtUvws7PoxdZSzGwcNZmF6Y/metadata.json",
+      "metadata": {
+        "name": "The Archive",
+        "description": "status : : sealed",
+        "image": "ipfs://QmbCTFkip2HVeqeY36wFTD4BSoYr1gmWN9WiXLQCsfKfGk/nft.mp4"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2025-07-02T02:04:40.658Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

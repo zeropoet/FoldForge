@@ -1,0 +1,131 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "6",
+  "token_uri": "ipfs://QmfYQLxUM3yjYuU55cGsujoQUDzSFfRHdC8BtHQZB8ZTq1/metadata.json",
+  "name": "THE ZOETROPE GATE",
+  "description": "◦ ꩜",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/b7d4202fd70ae55dc9a13995e29ac7/c9b7d4202fd70ae55dc9a13995e29ac7.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/a9b6a33488e418603cb0c9e9df97fe49",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/a9b6a33488e418603cb0c9e9df97fe49",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/a9b6a33488e418603cb0c9e9df97fe49"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "cc81cca9deebd9a30c6382b56c320f16a8e2003b8bcd79bf78885f160e305101",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/6/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 11832168,
+    "sha256": "87e08cb9db06c6ce4dc2db94d0b047e7f115608830752ea77bdd07a8a8a4046a",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/6/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T04:00:55.786Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "6",
+    "tokenType": "ERC721",
+    "name": "THE ZOETROPE GATE",
+    "description": "◦ ꩜",
+    "tokenUri": "ipfs://QmfYQLxUM3yjYuU55cGsujoQUDzSFfRHdC8BtHQZB8ZTq1/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/a9b6a33488e418603cb0c9e9df97fe49",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/a9b6a33488e418603cb0c9e9df97fe49",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/a9b6a33488e418603cb0c9e9df97fe49",
+      "contentType": "video/mp4",
+      "size": 11832168,
+      "originalUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/b7d4202fd70ae55dc9a13995e29ac7/c9b7d4202fd70ae55dc9a13995e29ac7.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmfYQLxUM3yjYuU55cGsujoQUDzSFfRHdC8BtHQZB8ZTq1/metadata.json",
+      "metadata": {
+        "identifier": "6",
+        "collection": "the-void-architecture",
+        "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+        "token_standard": "erc721",
+        "name": "THE ZOETROPE GATE",
+        "description": "◦ ꩜",
+        "image_url": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/b7d4202fd70ae55dc9a13995e29ac7/c9b7d4202fd70ae55dc9a13995e29ac7.mp4",
+        "display_image_url": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/b7d4202fd70ae55dc9a13995e29ac7/c9b7d4202fd70ae55dc9a13995e29ac7.mp4",
+        "display_animation_url": null,
+        "metadata_url": "ipfs://QmfYQLxUM3yjYuU55cGsujoQUDzSFfRHdC8BtHQZB8ZTq1/metadata.json",
+        "opensea_url": "https://opensea.io/assets/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/6",
+        "updated_at": "2026-07-17T23:20:50.677979",
+        "is_disabled": false,
+        "is_nsfw": false,
+        "original_image_url": "ipfs://Qmd79zXx8jWC5mkXuUvhzEXCviGrAycfCe4uG9EGyzrvDT/nft.mp4",
+        "original_animation_url": null,
+        "traits": [],
+        "estimated_value_usd": null,
+        "animation_url": null,
+        "is_suspicious": false,
+        "creator": "",
+        "owners": [
+          {
+            "address": "0xbd4b3a05c6a585f226afb1952cedd8c410c52e8f",
+            "quantity": 1,
+            "quantity_string": "1"
+          }
+        ],
+        "rarity": null,
+        "subscription": null,
+        "agent_binding": null
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-17T23:20:52.724741866Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

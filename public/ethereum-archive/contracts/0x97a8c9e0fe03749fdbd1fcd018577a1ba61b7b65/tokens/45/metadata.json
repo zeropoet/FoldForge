@@ -1,0 +1,108 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "45",
+  "token_uri": "ipfs://QmT6n2rF9BQ3DSMWeVJiYnZQVj1Ba89aVqczXr11w25EJQ/metadata.json",
+  "name": "Pakabi",
+  "description": "--\nswimming through the ocean, so free\n--\nswimming, with you and me",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmSiECZw55VQjMkXwd3GYU9L3n8SqsuFsBF2niYcQoLJsC/nft.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/5a787346f1164ab2345a280e4672c1d3",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/5a787346f1164ab2345a280e4672c1d3",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/5a787346f1164ab2345a280e4672c1d3"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "041b56a9399e766bd540b6799d7510a04b32543eb8ba7bd91eaf75326d1ddbfa",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/45/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 4191401,
+    "sha256": "83ec73149250bd540d8ad00464b74bcf2f3e430ebba6f1e1644d6c231129779e",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/45/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [
+    {
+      "source": "https://ipfs.io/ipfs/QmSiECZw55VQjMkXwd3GYU9L3n8SqsuFsBF2niYcQoLJsC/nft.mp4",
+      "error": "Media request failed (429) for https://ipfs.io/ipfs/QmSiECZw55VQjMkXwd3GYU9L3n8SqsuFsBF2niYcQoLJsC/nft.mp4"
+    }
+  ],
+  "observed_at": "2026-09-05T04:04:09.119Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "45",
+    "tokenType": "ERC721",
+    "name": "Pakabi",
+    "description": "--\nswimming through the ocean, so free\n--\nswimming, with you and me",
+    "tokenUri": "ipfs://QmT6n2rF9BQ3DSMWeVJiYnZQVj1Ba89aVqczXr11w25EJQ/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/5a787346f1164ab2345a280e4672c1d3",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/5a787346f1164ab2345a280e4672c1d3",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/5a787346f1164ab2345a280e4672c1d3",
+      "contentType": "video/mp4",
+      "size": 4191401,
+      "originalUrl": "https://ipfs.io/ipfs/QmSiECZw55VQjMkXwd3GYU9L3n8SqsuFsBF2niYcQoLJsC/nft.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmT6n2rF9BQ3DSMWeVJiYnZQVj1Ba89aVqczXr11w25EJQ/metadata.json",
+      "metadata": {
+        "name": "Pakabi",
+        "description": "--\nswimming through the ocean, so free\n--\nswimming, with you and me",
+        "image": "ipfs://QmSiECZw55VQjMkXwd3GYU9L3n8SqsuFsBF2niYcQoLJsC/nft.mp4"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2025-06-30T14:28:53.303Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "48",
+  "token_uri": "ipfs://QmU8nVHhBQVD8sbWbWXskfriK3Einq2eWgcv9MkHeDh9Kz/metadata.json",
+  "name": "𓂀 ᚨᚾᛖᛗᛟᛋᚤᚾᛖ 𓂀",
+  "description": "Anemosyne\nThe Breath That Remembers\n\nI vow this breath to the bond.\nI vow this motion to the memory.\nI vow this ecstasy to the family yet felt,\nand the one I remember now.\n\nfrom anemos, the breath, the wind, and Mnemosyne, the memory mother of the Muses—for this is the place where breath remembers its divinity,\nand memory ceases to ache, because it no longer longs for something lost—it lives now, braided into presence.",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmVKgpcAnSaE5qDiVTkGuW3h4XVnSSBuYS3GY7soYNM3R6/nft.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/c34071d1bbd2048ee013112d7f691ae6",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/c34071d1bbd2048ee013112d7f691ae6",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/c34071d1bbd2048ee013112d7f691ae6"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "d8adb3c200ab83846ad3ca91fca6d45b3614ce658e6b5e616e06685928f3101b",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/48/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 12102399,
+    "sha256": "43d340551748fedde74dcfeab58645e4bff05728312012a8694c61a0d1096513",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/48/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [
+    {
+      "source": "https://ipfs.io/ipfs/QmVKgpcAnSaE5qDiVTkGuW3h4XVnSSBuYS3GY7soYNM3R6/nft.mp4",
+      "error": "Media request failed (429) for https://ipfs.io/ipfs/QmVKgpcAnSaE5qDiVTkGuW3h4XVnSSBuYS3GY7soYNM3R6/nft.mp4"
+    }
+  ],
+  "observed_at": "2026-09-05T04:04:32.743Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "48",
+    "tokenType": "ERC721",
+    "name": "𓂀 ᚨᚾᛖᛗᛟᛋᚤᚾᛖ 𓂀",
+    "description": "Anemosyne\nThe Breath That Remembers\n\nI vow this breath to the bond.\nI vow this motion to the memory.\nI vow this ecstasy to the family yet felt,\nand the one I remember now.\n\nfrom anemos, the breath, the wind, and Mnemosyne, the memory mother of the Muses—for this is the place where breath remembers its divinity,\nand memory ceases to ache, because it no longer longs for something lost—it lives now, braided into presence.",
+    "tokenUri": "ipfs://QmU8nVHhBQVD8sbWbWXskfriK3Einq2eWgcv9MkHeDh9Kz/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/c34071d1bbd2048ee013112d7f691ae6",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/c34071d1bbd2048ee013112d7f691ae6",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/c34071d1bbd2048ee013112d7f691ae6",
+      "contentType": "video/mp4",
+      "size": 12102399,
+      "originalUrl": "https://ipfs.io/ipfs/QmVKgpcAnSaE5qDiVTkGuW3h4XVnSSBuYS3GY7soYNM3R6/nft.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmU8nVHhBQVD8sbWbWXskfriK3Einq2eWgcv9MkHeDh9Kz/metadata.json",
+      "metadata": {
+        "name": "𓂀 ᚨᚾᛖᛗᛟᛋᚤᚾᛖ 𓂀",
+        "description": "Anemosyne\nThe Breath That Remembers\n\nI vow this breath to the bond.\nI vow this motion to the memory.\nI vow this ecstasy to the family yet felt,\nand the one I remember now.\n\nfrom anemos, the breath, the wind, and Mnemosyne, the memory mother of the Muses—for this is the place where breath remembers its divinity,\nand memory ceases to ache, because it no longer longs for something lost—it lives now, braided into presence.",
+        "image": "ipfs://QmVKgpcAnSaE5qDiVTkGuW3h4XVnSSBuYS3GY7soYNM3R6/nft.mp4"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2025-07-06T21:25:30.540Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "13",
+  "token_uri": "ipfs://QmYZuajJoEPZ5onr7qa6R5w42DJiyWbAVouX1p5sf8cZwP/metadata.json",
+  "name": "from the void, a becoming",
+  "description": "from a seed, a giant oak unfolds.\nnot by force—\nbut by remembering the sun.\nby trusting the dark to be fertile.\nby listening to rain\nas if it were ancient music.\n\nfrom a question, a world does the same.\na whisper cracks the silence,\nand in that fracture,\nlight pours in—\nnot to answer,\nbut to illuminate\nwhat we had not yet dared to ask.\n\nfrom creation,\nthere is the only place of truth.\nnot because it is perfect,\nbut because it is willing.\nwilling to be broken open.\nwilling to risk beauty.\nwilling to say:\nI was not, and now—look—I am.\n\nand so,\nyou who hold the void in your chest,\nknow this:\nyou are not empty.\nyou are not alone.\nyou are the beginning\nof a forest,\nof a question,\nof a new sky\nmade by your own breath.",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/662c497eb1bd0be76caecfd9ce0d7b/96662c497eb1bd0be76caecfd9ce0d7b.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/9f6bf8c88741bd2b8a7a8c8f016afc11_96662c49",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/9f6bf8c88741bd2b8a7a8c8f016afc11_96662c49",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/9f6bf8c88741bd2b8a7a8c8f016afc11_96662c49"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "db479c72cc0a27475261bf2f792b6ba1df2df72e5397d4afa8579b43833a33ca",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/13/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 50373247,
+    "sha256": "0c566c9805093899a8b3f19bd9e27f91a90ee60de784f562accd01040e0e29fd",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/13/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T04:01:43.164Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "13",
+    "tokenType": "ERC721",
+    "name": "from the void, a becoming",
+    "description": "from a seed, a giant oak unfolds.\nnot by force—\nbut by remembering the sun.\nby trusting the dark to be fertile.\nby listening to rain\nas if it were ancient music.\n\nfrom a question, a world does the same.\na whisper cracks the silence,\nand in that fracture,\nlight pours in—\nnot to answer,\nbut to illuminate\nwhat we had not yet dared to ask.\n\nfrom creation,\nthere is the only place of truth.\nnot because it is perfect,\nbut because it is willing.\nwilling to be broken open.\nwilling to risk beauty.\nwilling to say:\nI was not, and now—look—I am.\n\nand so,\nyou who hold the void in your chest,\nknow this:\nyou are not empty.\nyou are not alone.\nyou are the beginning\nof a forest,\nof a question,\nof a new sky\nmade by your own breath.",
+    "tokenUri": "ipfs://QmYZuajJoEPZ5onr7qa6R5w42DJiyWbAVouX1p5sf8cZwP/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/9f6bf8c88741bd2b8a7a8c8f016afc11_96662c49",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/9f6bf8c88741bd2b8a7a8c8f016afc11_96662c49",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/9f6bf8c88741bd2b8a7a8c8f016afc11_96662c49",
+      "contentType": "video/mp4",
+      "size": 50373247,
+      "originalUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/662c497eb1bd0be76caecfd9ce0d7b/96662c497eb1bd0be76caecfd9ce0d7b.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmYZuajJoEPZ5onr7qa6R5w42DJiyWbAVouX1p5sf8cZwP/metadata.json",
+      "metadata": {
+        "identifier": "13",
+        "collection": "the-void-architecture",
+        "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+        "token_standard": "erc721",
+        "name": "from the void, a becoming",
+        "description": "from a seed, a giant oak unfolds.\nnot by force—\nbut by remembering the sun.\nby trusting the dark to be fertile.\nby listening to rain\nas if it were ancient music.\n\nfrom a question, a world does the same.\na whisper cracks the silence,\nand in that fracture,\nlight pours in—\nnot to answer,\nbut to illuminate\nwhat we had not yet dared to ask.\n\nfrom creation,\nthere is the only place of truth.\nnot because it is perfect,\nbut because it is willing.\nwilling to be broken open.\nwilling to risk beauty.\nwilling to say:\nI was not, and now—look—I am.\n\nand so,\nyou who hold the void in your chest,\nknow this:\nyou are not empty.\nyou are not alone.\nyou are the beginning\nof a forest,\nof a question,\nof a new sky\nmade by your own breath.",
+        "image_url": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/662c497eb1bd0be76caecfd9ce0d7b/96662c497eb1bd0be76caecfd9ce0d7b.mp4",
+        "display_image_url": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/662c497eb1bd0be76caecfd9ce0d7b/96662c497eb1bd0be76caecfd9ce0d7b.mp4",
+        "display_animation_url": null,
+        "metadata_url": "ipfs://QmYZuajJoEPZ5onr7qa6R5w42DJiyWbAVouX1p5sf8cZwP/metadata.json",
+        "opensea_url": "https://opensea.io/assets/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/13",
+        "updated_at": "2026-07-18T21:58:42.558543",
+        "is_disabled": false,
+        "is_nsfw": false,
+        "original_image_url": "ipfs://QmXVyvjvRJRcs3M4CSzRm7Ba33DPXwg3paTVuSX5MAay3t/nft.mp4",
+        "original_animation_url": null,
+        "traits": [],
+        "estimated_value_usd": null,
+        "animation_url": null,
+        "is_suspicious": false,
+        "creator": "",
+        "owners": [
+          {
+            "address": "0xbd4b3a05c6a585f226afb1952cedd8c410c52e8f",
+            "quantity": 1,
+            "quantity_string": "1"
+          }
+        ],
+        "rarity": null,
+        "subscription": null,
+        "agent_binding": null
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-18T21:58:45.410187318Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

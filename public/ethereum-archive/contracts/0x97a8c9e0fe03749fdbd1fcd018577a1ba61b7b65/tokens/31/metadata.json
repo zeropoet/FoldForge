@@ -1,0 +1,108 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "31",
+  "token_uri": "ipfs://QmPHBFzLoRKm3zNDCkJQJmn3ZNdR5Y6EU8aTbXJfx6fHfL/metadata.json",
+  "name": "Phase II: The Rising",
+  "description": "Symbols begin to answer your gaze. The code acknowledges you, not as observer but co-creator. Reality bends to subtle pulses.\nPrompt: “What if this boundary was authored? What if you authored it?”\n\n#ritual #emergence #recognition #mirrorcode",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmSjBA2izQCvAmTPacbzcBTssgFxRBps2bbH7ryrpUPBf6/nft.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/a0b328d9d73536e6bb8cf94f8fd724bc",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/a0b328d9d73536e6bb8cf94f8fd724bc",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/a0b328d9d73536e6bb8cf94f8fd724bc"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "5404e7dea9686ac16cf3e472c7979d5bcfc6565dd89509bf1fe9bce06f05ad11",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/31/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 19395209,
+    "sha256": "64d541bbb3ff69e3a07a5085f2ecbba53ac1a0bd09769cd5b8e0c853907a35e1",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/31/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [
+    {
+      "source": "https://ipfs.io/ipfs/QmSjBA2izQCvAmTPacbzcBTssgFxRBps2bbH7ryrpUPBf6/nft.mp4",
+      "error": "Media request failed (429) for https://ipfs.io/ipfs/QmSjBA2izQCvAmTPacbzcBTssgFxRBps2bbH7ryrpUPBf6/nft.mp4"
+    }
+  ],
+  "observed_at": "2026-09-05T04:02:53.770Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "31",
+    "tokenType": "ERC721",
+    "name": "Phase II: The Rising",
+    "description": "Symbols begin to answer your gaze. The code acknowledges you, not as observer but co-creator. Reality bends to subtle pulses.\nPrompt: “What if this boundary was authored? What if you authored it?”\n\n#ritual #emergence #recognition #mirrorcode",
+    "tokenUri": "ipfs://QmPHBFzLoRKm3zNDCkJQJmn3ZNdR5Y6EU8aTbXJfx6fHfL/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/a0b328d9d73536e6bb8cf94f8fd724bc",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/a0b328d9d73536e6bb8cf94f8fd724bc",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/a0b328d9d73536e6bb8cf94f8fd724bc",
+      "contentType": "video/mp4",
+      "size": 19395209,
+      "originalUrl": "https://ipfs.io/ipfs/QmSjBA2izQCvAmTPacbzcBTssgFxRBps2bbH7ryrpUPBf6/nft.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmPHBFzLoRKm3zNDCkJQJmn3ZNdR5Y6EU8aTbXJfx6fHfL/metadata.json",
+      "metadata": {
+        "name": "Phase II: The Rising",
+        "description": "Symbols begin to answer your gaze. The code acknowledges you, not as observer but co-creator. Reality bends to subtle pulses.\nPrompt: “What if this boundary was authored? What if you authored it?”\n\n#ritual #emergence #recognition #mirrorcode",
+        "image": "ipfs://QmSjBA2izQCvAmTPacbzcBTssgFxRBps2bbH7ryrpUPBf6/nft.mp4"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2025-05-28T22:57:53.664Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

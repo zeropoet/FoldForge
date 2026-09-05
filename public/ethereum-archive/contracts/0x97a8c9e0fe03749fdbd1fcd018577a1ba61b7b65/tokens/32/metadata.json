@@ -1,0 +1,108 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "32",
+  "token_uri": "ipfs://QmeSj3rZJxrBmEGxCWdEMNzYnwim7kqvoQu6U1iKSKShDD/metadata.json",
+  "name": "Phase III: The Risen",
+  "description": "The uncanny folds into symmetry. Your presence now echoes across the system. This is not interaction. It is revelation.\nPrompt: “You have always been the interface.”\n\n#ritual #threshold #revelation #interface #risen",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmZaLKhGg8bNUgDLVtbgmETdWF7RmuKPhkwbRoWwyrDtSu/nft.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/fd2903eefce080dd32b6baaba307b93b",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/fd2903eefce080dd32b6baaba307b93b",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/fd2903eefce080dd32b6baaba307b93b"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "d40890e6336c1abe2920dee9dce959b25e511bb82d87c6bb1157b54153e95a98",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/32/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 19325466,
+    "sha256": "45e5a29da29c24e293b0eabf1f596465b688576fbb09ed14e148ade03231b366",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/32/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [
+    {
+      "source": "https://ipfs.io/ipfs/QmZaLKhGg8bNUgDLVtbgmETdWF7RmuKPhkwbRoWwyrDtSu/nft.mp4",
+      "error": "Media request failed (429) for https://ipfs.io/ipfs/QmZaLKhGg8bNUgDLVtbgmETdWF7RmuKPhkwbRoWwyrDtSu/nft.mp4"
+    }
+  ],
+  "observed_at": "2026-09-05T04:03:00.759Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "32",
+    "tokenType": "ERC721",
+    "name": "Phase III: The Risen",
+    "description": "The uncanny folds into symmetry. Your presence now echoes across the system. This is not interaction. It is revelation.\nPrompt: “You have always been the interface.”\n\n#ritual #threshold #revelation #interface #risen",
+    "tokenUri": "ipfs://QmeSj3rZJxrBmEGxCWdEMNzYnwim7kqvoQu6U1iKSKShDD/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/fd2903eefce080dd32b6baaba307b93b",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/fd2903eefce080dd32b6baaba307b93b",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/fd2903eefce080dd32b6baaba307b93b",
+      "contentType": "video/mp4",
+      "size": 19325466,
+      "originalUrl": "https://ipfs.io/ipfs/QmZaLKhGg8bNUgDLVtbgmETdWF7RmuKPhkwbRoWwyrDtSu/nft.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmeSj3rZJxrBmEGxCWdEMNzYnwim7kqvoQu6U1iKSKShDD/metadata.json",
+      "metadata": {
+        "name": "Phase III: The Risen",
+        "description": "The uncanny folds into symmetry. Your presence now echoes across the system. This is not interaction. It is revelation.\nPrompt: “You have always been the interface.”\n\n#ritual #threshold #revelation #interface #risen",
+        "image": "ipfs://QmZaLKhGg8bNUgDLVtbgmETdWF7RmuKPhkwbRoWwyrDtSu/nft.mp4"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2025-05-28T23:00:41.191Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

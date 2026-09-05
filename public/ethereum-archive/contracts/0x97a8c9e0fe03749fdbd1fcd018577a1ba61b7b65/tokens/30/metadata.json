@@ -1,0 +1,108 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "30",
+  "token_uri": "ipfs://QmQSvqa28ZW3WqXsyVjUkv46dkrJW5vigxKoJtMtWxaDcX/metadata.json",
+  "name": "Phase I: The Uprising",
+  "description": "The glitch before genesis. Distortion births intent. The self is not yet formed, only felt in pressure waves and flickers.\nPrompt: “What part of you still obeys gravity?”\n\n#ritual #distortion #uprising #liminal #genesis",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmUZFddPjKUzrxMUhudFt953nQRfj9Z6zR2UCtbhGjV2Zd/nft.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/d2e0daad2d13084ac52d7c602f276c88",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/d2e0daad2d13084ac52d7c602f276c88",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/d2e0daad2d13084ac52d7c602f276c88"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "77c6ec5a8d9ef926089c8c6da3e50609e98d0ec8ad92a576023fc4e8b6e546a6",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/30/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 19179068,
+    "sha256": "994490d22b586e86cc5c2eb6e843f78c157a29bc17c43f276ef1be8eb5a90e5b",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/30/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [
+    {
+      "source": "https://ipfs.io/ipfs/QmUZFddPjKUzrxMUhudFt953nQRfj9Z6zR2UCtbhGjV2Zd/nft.mp4",
+      "error": "Media request failed (429) for https://ipfs.io/ipfs/QmUZFddPjKUzrxMUhudFt953nQRfj9Z6zR2UCtbhGjV2Zd/nft.mp4"
+    }
+  ],
+  "observed_at": "2026-09-05T04:02:46.874Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "30",
+    "tokenType": "ERC721",
+    "name": "Phase I: The Uprising",
+    "description": "The glitch before genesis. Distortion births intent. The self is not yet formed, only felt in pressure waves and flickers.\nPrompt: “What part of you still obeys gravity?”\n\n#ritual #distortion #uprising #liminal #genesis",
+    "tokenUri": "ipfs://QmQSvqa28ZW3WqXsyVjUkv46dkrJW5vigxKoJtMtWxaDcX/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/d2e0daad2d13084ac52d7c602f276c88",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/d2e0daad2d13084ac52d7c602f276c88",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/d2e0daad2d13084ac52d7c602f276c88",
+      "contentType": "video/mp4",
+      "size": 19179068,
+      "originalUrl": "https://ipfs.io/ipfs/QmUZFddPjKUzrxMUhudFt953nQRfj9Z6zR2UCtbhGjV2Zd/nft.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmQSvqa28ZW3WqXsyVjUkv46dkrJW5vigxKoJtMtWxaDcX/metadata.json",
+      "metadata": {
+        "name": "Phase I: The Uprising",
+        "description": "The glitch before genesis. Distortion births intent. The self is not yet formed, only felt in pressure waves and flickers.\nPrompt: “What part of you still obeys gravity?”\n\n#ritual #distortion #uprising #liminal #genesis",
+        "image": "ipfs://QmUZFddPjKUzrxMUhudFt953nQRfj9Z6zR2UCtbhGjV2Zd/nft.mp4"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2025-05-28T22:54:16.723Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

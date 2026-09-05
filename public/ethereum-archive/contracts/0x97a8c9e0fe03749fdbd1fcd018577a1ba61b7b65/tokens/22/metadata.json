@@ -1,0 +1,131 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "22",
+  "token_uri": "ipfs://QmZskkN9wtpx4jUqJpLrwDFZ6VqqXpLoBMyjM2hzdBEFVg/metadata.json",
+  "name": "Eigenstate of Memory",
+  "description": "In the lattice where silence becomes form,\nA face arises—fractured, yet resolved,\nEach shard a vector in the field’s warm storm,\nA quantum whole, through absence evolved.\n\nNot broken, but basis-set displayed,\nAn interference of moments once lived,\nHeld together where particles fade—\nNot by presence, but what time had to give.\n\nRemembrance first: the measurement made,\nA collapse into self from all that could be,\nA whisper of waveforms that never decayed,\nBound not by skin—but by memory.\n\nYou are not the sum of what shattered remains,\nBut the space in between,\nWhere the soul refrains.",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/d52e9356749acee4747a45a216dcbc/09d52e9356749acee4747a45a216dcbc.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/7c2e6bd7f974faaa3b24bb44c61f3ddb",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/7c2e6bd7f974faaa3b24bb44c61f3ddb",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/7c2e6bd7f974faaa3b24bb44c61f3ddb"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "4ef0c2bed41a0da736512012f4c73faba757f5633ceef58b2bc4d65f08452d77",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/22/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 14556203,
+    "sha256": "8af0035d3691e53c8eacb44eacd0bc0d74bc17f8326b1c038b93eea81278defb",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/22/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T04:02:05.521Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "22",
+    "tokenType": "ERC721",
+    "name": "Eigenstate of Memory",
+    "description": "In the lattice where silence becomes form,\nA face arises—fractured, yet resolved,\nEach shard a vector in the field’s warm storm,\nA quantum whole, through absence evolved.\n\nNot broken, but basis-set displayed,\nAn interference of moments once lived,\nHeld together where particles fade—\nNot by presence, but what time had to give.\n\nRemembrance first: the measurement made,\nA collapse into self from all that could be,\nA whisper of waveforms that never decayed,\nBound not by skin—but by memory.\n\nYou are not the sum of what shattered remains,\nBut the space in between,\nWhere the soul refrains.",
+    "tokenUri": "ipfs://QmZskkN9wtpx4jUqJpLrwDFZ6VqqXpLoBMyjM2hzdBEFVg/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/7c2e6bd7f974faaa3b24bb44c61f3ddb",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/7c2e6bd7f974faaa3b24bb44c61f3ddb",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/7c2e6bd7f974faaa3b24bb44c61f3ddb",
+      "contentType": "video/mp4",
+      "size": 14556203,
+      "originalUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/d52e9356749acee4747a45a216dcbc/09d52e9356749acee4747a45a216dcbc.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmZskkN9wtpx4jUqJpLrwDFZ6VqqXpLoBMyjM2hzdBEFVg/metadata.json",
+      "metadata": {
+        "identifier": "22",
+        "collection": "the-void-architecture",
+        "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+        "token_standard": "erc721",
+        "name": "Eigenstate of Memory",
+        "description": "In the lattice where silence becomes form,\nA face arises—fractured, yet resolved,\nEach shard a vector in the field’s warm storm,\nA quantum whole, through absence evolved.\n\nNot broken, but basis-set displayed,\nAn interference of moments once lived,\nHeld together where particles fade—\nNot by presence, but what time had to give.\n\nRemembrance first: the measurement made,\nA collapse into self from all that could be,\nA whisper of waveforms that never decayed,\nBound not by skin—but by memory.\n\nYou are not the sum of what shattered remains,\nBut the space in between,\nWhere the soul refrains.",
+        "image_url": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/d52e9356749acee4747a45a216dcbc/09d52e9356749acee4747a45a216dcbc.mp4",
+        "display_image_url": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/d52e9356749acee4747a45a216dcbc/09d52e9356749acee4747a45a216dcbc.mp4",
+        "display_animation_url": null,
+        "metadata_url": "ipfs://QmZskkN9wtpx4jUqJpLrwDFZ6VqqXpLoBMyjM2hzdBEFVg/metadata.json",
+        "opensea_url": "https://opensea.io/assets/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/22",
+        "updated_at": "2026-07-18T21:59:58.548811",
+        "is_disabled": false,
+        "is_nsfw": false,
+        "original_image_url": "ipfs://Qmf5m2nwthfHJMSaqku1PzLEfwHrf67ej2FpTDTVtTgtsR/nft.mp4",
+        "original_animation_url": null,
+        "traits": [],
+        "estimated_value_usd": null,
+        "animation_url": null,
+        "is_suspicious": false,
+        "creator": "",
+        "owners": [
+          {
+            "address": "0xbd4b3a05c6a585f226afb1952cedd8c410c52e8f",
+            "quantity": 1,
+            "quantity_string": "1"
+          }
+        ],
+        "rarity": null,
+        "subscription": null,
+        "agent_binding": null
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-18T22:00:00.592039155Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

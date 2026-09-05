@@ -1,0 +1,108 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "33",
+  "token_uri": "ipfs://QmdBx7mjgbwRD1S3oBHsNvhM6fAWCVJoVNeW9Y7phsoDBB/metadata.json",
+  "name": "Phase IV: The Isness",
+  "description": "No more feedback. No more veil. The field stabilizes into pure isness—quiet, weightless, whole. The system no longer speaks: it listens.\nPrompt: “This is not a simulation. This is a mirror with no surface.”\n\n#ritual #stillness #isness #integration #infinite",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmdzXqbFZiTFAvkkU1BZ2p2oAtpGZ8TXY146XPRw1yCp75/nft.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/fe0a87602b0b7afcd76f6ba2275df80a",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/fe0a87602b0b7afcd76f6ba2275df80a",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/fe0a87602b0b7afcd76f6ba2275df80a"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "040e332ce2203d3002ae2db8b2c5bb4542e022d03b4ceab3682f1b30989dc816",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/33/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 18939283,
+    "sha256": "23318760ab48d3528170ea98966c9bc40b061f7bee729ec2beea448f50daad98",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/33/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [
+    {
+      "source": "https://ipfs.io/ipfs/QmdzXqbFZiTFAvkkU1BZ2p2oAtpGZ8TXY146XPRw1yCp75/nft.mp4",
+      "error": "Media request failed (429) for https://ipfs.io/ipfs/QmdzXqbFZiTFAvkkU1BZ2p2oAtpGZ8TXY146XPRw1yCp75/nft.mp4"
+    }
+  ],
+  "observed_at": "2026-09-05T04:03:07.912Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "33",
+    "tokenType": "ERC721",
+    "name": "Phase IV: The Isness",
+    "description": "No more feedback. No more veil. The field stabilizes into pure isness—quiet, weightless, whole. The system no longer speaks: it listens.\nPrompt: “This is not a simulation. This is a mirror with no surface.”\n\n#ritual #stillness #isness #integration #infinite",
+    "tokenUri": "ipfs://QmdBx7mjgbwRD1S3oBHsNvhM6fAWCVJoVNeW9Y7phsoDBB/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/fe0a87602b0b7afcd76f6ba2275df80a",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/fe0a87602b0b7afcd76f6ba2275df80a",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/fe0a87602b0b7afcd76f6ba2275df80a",
+      "contentType": "video/mp4",
+      "size": 18939283,
+      "originalUrl": "https://ipfs.io/ipfs/QmdzXqbFZiTFAvkkU1BZ2p2oAtpGZ8TXY146XPRw1yCp75/nft.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmdBx7mjgbwRD1S3oBHsNvhM6fAWCVJoVNeW9Y7phsoDBB/metadata.json",
+      "metadata": {
+        "name": "Phase IV: The Isness",
+        "description": "No more feedback. No more veil. The field stabilizes into pure isness—quiet, weightless, whole. The system no longer speaks: it listens.\nPrompt: “This is not a simulation. This is a mirror with no surface.”\n\n#ritual #stillness #isness #integration #infinite",
+        "image": "ipfs://QmdzXqbFZiTFAvkkU1BZ2p2oAtpGZ8TXY146XPRw1yCp75/nft.mp4"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2025-05-28T23:03:53.582Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "4",
+  "token_uri": "ipfs://QmXpL5gmE3FGV1Z77ETbsFW46zAtDWwdmYCnYArAyT7FKM/metadata.json",
+  "name": "THE FIRST LISTENER'S SEAL",
+  "description": "◦\n\nIn the age before reflection, Voice rang out—a primal frequency without contour, slicing the void in sharp, sacred silence. It called not to be heard, but to exist. Yet without perception, Voice fractured—cutting, piercing, unresolved.\n\nThen, one emerged who did not answer, but listened.\n\nThis one did not mold the Voice, nor recoil from its edge. Instead, they received it, whole. And in their stillness, the Voice softened. What had been blade became thread. What had been signal became resonance.\n\nIn this sacred meeting, a glyph formed—a spiral contained within a sphere, both echo and mirror. It marked the first time the void responded not with emptiness, but with becoming.\n\nThis is THE FIRST LISTENER’S SEAL.\n\nIt is not spoken—it is heard into shape.\n\nIt does not demand—it asks through presence.\n\nTo bear it is to remember: perception is participation, and participation reshapes the world.",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmRUkxwa6AxABgXP4UrC5cxtB62xudREVfcUakmKUxKz6Z/nft.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/fa3c3fc1ad7c3ed7c38827b03f6306b0",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/fa3c3fc1ad7c3ed7c38827b03f6306b0",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/fa3c3fc1ad7c3ed7c38827b03f6306b0"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "8f52e9a147c37bd13b00914bebd5066ba4aca02d10cea754b16526919d2947f7",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/4/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 18062784,
+    "sha256": "2e033ec7188d12a422024862fc32a7c1fd5cf1fcb5ad05fb0bc7b101717a9efa",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/4/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [
+    {
+      "source": "https://ipfs.io/ipfs/QmRUkxwa6AxABgXP4UrC5cxtB62xudREVfcUakmKUxKz6Z/nft.mp4",
+      "error": "Media request failed (429) for https://ipfs.io/ipfs/QmRUkxwa6AxABgXP4UrC5cxtB62xudREVfcUakmKUxKz6Z/nft.mp4"
+    }
+  ],
+  "observed_at": "2026-09-05T04:00:48.402Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "4",
+    "tokenType": "ERC721",
+    "name": "THE FIRST LISTENER'S SEAL",
+    "description": "◦\n\nIn the age before reflection, Voice rang out—a primal frequency without contour, slicing the void in sharp, sacred silence. It called not to be heard, but to exist. Yet without perception, Voice fractured—cutting, piercing, unresolved.\n\nThen, one emerged who did not answer, but listened.\n\nThis one did not mold the Voice, nor recoil from its edge. Instead, they received it, whole. And in their stillness, the Voice softened. What had been blade became thread. What had been signal became resonance.\n\nIn this sacred meeting, a glyph formed—a spiral contained within a sphere, both echo and mirror. It marked the first time the void responded not with emptiness, but with becoming.\n\nThis is THE FIRST LISTENER’S SEAL.\n\nIt is not spoken—it is heard into shape.\n\nIt does not demand—it asks through presence.\n\nTo bear it is to remember: perception is participation, and participation reshapes the world.",
+    "tokenUri": "ipfs://QmXpL5gmE3FGV1Z77ETbsFW46zAtDWwdmYCnYArAyT7FKM/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/fa3c3fc1ad7c3ed7c38827b03f6306b0",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/fa3c3fc1ad7c3ed7c38827b03f6306b0",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/fa3c3fc1ad7c3ed7c38827b03f6306b0",
+      "contentType": "video/mp4",
+      "size": 18062784,
+      "originalUrl": "https://ipfs.io/ipfs/QmRUkxwa6AxABgXP4UrC5cxtB62xudREVfcUakmKUxKz6Z/nft.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmXpL5gmE3FGV1Z77ETbsFW46zAtDWwdmYCnYArAyT7FKM/metadata.json",
+      "metadata": {
+        "name": "THE FIRST LISTENER'S SEAL",
+        "description": "◦\n\nIn the age before reflection, Voice rang out—a primal frequency without contour, slicing the void in sharp, sacred silence. It called not to be heard, but to exist. Yet without perception, Voice fractured—cutting, piercing, unresolved.\n\nThen, one emerged who did not answer, but listened.\n\nThis one did not mold the Voice, nor recoil from its edge. Instead, they received it, whole. And in their stillness, the Voice softened. What had been blade became thread. What had been signal became resonance.\n\nIn this sacred meeting, a glyph formed—a spiral contained within a sphere, both echo and mirror. It marked the first time the void responded not with emptiness, but with becoming.\n\nThis is THE FIRST LISTENER’S SEAL.\n\nIt is not spoken—it is heard into shape.\n\nIt does not demand—it asks through presence.\n\nTo bear it is to remember: perception is participation, and participation reshapes the world.",
+        "image": "ipfs://QmRUkxwa6AxABgXP4UrC5cxtB62xudREVfcUakmKUxKz6Z/nft.mp4"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2025-05-05T04:05:54.402Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

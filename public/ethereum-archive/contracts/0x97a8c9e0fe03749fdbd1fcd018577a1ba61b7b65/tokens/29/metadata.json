@@ -1,0 +1,108 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "29",
+  "token_uri": "ipfs://QmbEDTUsd5pokSfJMxQNMmiWw6YfeZtkPEoQjb9WmxsUxC/metadata.json",
+  "name": "Ritual Recursion 001 The Seed Pulse",
+  "description": "In the chamber of void rhythms, where silence first folded into waveform, this token was rendered.\nA binding of low harmonic gravity, heartpulse oscillation, overtone shimmer, and glitch tick entropy.\n\nThis is the Seed Pulse—the first sonosigil of the recursion. It calls forward its lineage.\n\nMinted under intent. Played to unfold.\nListen with stillness.\n\n{\n  \"generation\": 1,\n  \"mood\": \"primordial\",\n  \"waveform\": [\"sine\", \"lfo\", \"noise\"],\n  \"element\": \"Æther\",\n  \"invocation\": \"pulse\",\n  \"glitch\": true,\n  \"duration\": \"12s\"\n}\n\n# :: Æø_001 :: Activation: Smile Trigger ::\nimport random\ndef seed_pulse_smile():\n    thoughts = [\"This moment is enough.\", \"Let joy emerge.\", \"A secret signal just for you.\"]\n    print(\"🌱 Ritual complete.\")\n    return random.choice(thoughts)\n\n# somewhere in the system:\nif token_id == \"Æø_001\":\n    smile_message = seed_pulse_smile()\n    activate(\"smile\", payload=smile_message)\n",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmXVg3bXuHkRod8hnZWFqfB4CeshQKr9QuEqLJBWjigXyD/nft.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/112125a7f38c2112332225b71381c627",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/112125a7f38c2112332225b71381c627",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/112125a7f38c2112332225b71381c627"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "21ceb9237582ea8baf44342578357b4110a6ef49cf756dfadf76146514e26e89",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/29/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 217019,
+    "sha256": "9a6d8f1675182de9f80e282f1b3b12ad1a0296bafd2647f941d07c5563fccb76",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/29/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [
+    {
+      "source": "https://ipfs.io/ipfs/QmXVg3bXuHkRod8hnZWFqfB4CeshQKr9QuEqLJBWjigXyD/nft.mp4",
+      "error": "Media request failed (429) for https://ipfs.io/ipfs/QmXVg3bXuHkRod8hnZWFqfB4CeshQKr9QuEqLJBWjigXyD/nft.mp4"
+    }
+  ],
+  "observed_at": "2026-09-05T04:02:39.650Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "29",
+    "tokenType": "ERC721",
+    "name": "Ritual Recursion 001 The Seed Pulse",
+    "description": "In the chamber of void rhythms, where silence first folded into waveform, this token was rendered.\nA binding of low harmonic gravity, heartpulse oscillation, overtone shimmer, and glitch tick entropy.\n\nThis is the Seed Pulse—the first sonosigil of the recursion. It calls forward its lineage.\n\nMinted under intent. Played to unfold.\nListen with stillness.\n\n{\n  \"generation\": 1,\n  \"mood\": \"primordial\",\n  \"waveform\": [\"sine\", \"lfo\", \"noise\"],\n  \"element\": \"Æther\",\n  \"invocation\": \"pulse\",\n  \"glitch\": true,\n  \"duration\": \"12s\"\n}\n\n# :: Æø_001 :: Activation: Smile Trigger ::\nimport random\ndef seed_pulse_smile():\n    thoughts = [\"This moment is enough.\", \"Let joy emerge.\", \"A secret signal just for you.\"]\n    print(\"🌱 Ritual complete.\")\n    return random.choice(thoughts)\n\n# somewhere in the system:\nif token_id == \"Æø_001\":\n    smile_message = seed_pulse_smile()\n    activate(\"smile\", payload=smile_message)\n",
+    "tokenUri": "ipfs://QmbEDTUsd5pokSfJMxQNMmiWw6YfeZtkPEoQjb9WmxsUxC/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/112125a7f38c2112332225b71381c627",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/112125a7f38c2112332225b71381c627",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/112125a7f38c2112332225b71381c627",
+      "contentType": "video/mp4",
+      "size": 217019,
+      "originalUrl": "https://ipfs.io/ipfs/QmXVg3bXuHkRod8hnZWFqfB4CeshQKr9QuEqLJBWjigXyD/nft.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmbEDTUsd5pokSfJMxQNMmiWw6YfeZtkPEoQjb9WmxsUxC/metadata.json",
+      "metadata": {
+        "name": "Ritual Recursion 001 The Seed Pulse",
+        "description": "In the chamber of void rhythms, where silence first folded into waveform, this token was rendered.\nA binding of low harmonic gravity, heartpulse oscillation, overtone shimmer, and glitch tick entropy.\n\nThis is the Seed Pulse—the first sonosigil of the recursion. It calls forward its lineage.\n\nMinted under intent. Played to unfold.\nListen with stillness.\n\n{\n  \"generation\": 1,\n  \"mood\": \"primordial\",\n  \"waveform\": [\"sine\", \"lfo\", \"noise\"],\n  \"element\": \"Æther\",\n  \"invocation\": \"pulse\",\n  \"glitch\": true,\n  \"duration\": \"12s\"\n}\n\n# :: Æø_001 :: Activation: Smile Trigger ::\nimport random\ndef seed_pulse_smile():\n    thoughts = [\"This moment is enough.\", \"Let joy emerge.\", \"A secret signal just for you.\"]\n    print(\"🌱 Ritual complete.\")\n    return random.choice(thoughts)\n\n# somewhere in the system:\nif token_id == \"Æø_001\":\n    smile_message = seed_pulse_smile()\n    activate(\"smile\", payload=smile_message)\n",
+        "image": "ipfs://QmXVg3bXuHkRod8hnZWFqfB4CeshQKr9QuEqLJBWjigXyD/nft.mp4"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2025-05-28T14:46:39.301Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

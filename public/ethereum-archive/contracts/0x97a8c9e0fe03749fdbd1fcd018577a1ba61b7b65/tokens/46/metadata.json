@@ -1,0 +1,108 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "46",
+  "token_uri": "ipfs://QmXiHM151DJUKieCrPN58x5vT6g2VyExAPuaKXcSjsv8UE/metadata.json",
+  "name": "Peace, Pakabi",
+  "description": "Deep and whole —\nthe kind that echoes softly in the bones of things.\nThe kind that listens back.",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmXsJxGxNmj6DcGo44zmBhtLGjvxAMW8XH32Jr1t51Zd6F/nft.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/210b8c885f39cc0504bfed72f99e0812",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/210b8c885f39cc0504bfed72f99e0812",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/210b8c885f39cc0504bfed72f99e0812"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "b6038b5fb74e879b486b273fe568a7a095caf896e82570d6ccbdf6a190ebcf5b",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/46/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 10963429,
+    "sha256": "fd2bba4507c937ffc1b03d0b2c6b2bf0b0956a8ed02ee7fcc4ab6ee9c79e1b7f",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/46/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [
+    {
+      "source": "https://ipfs.io/ipfs/QmXsJxGxNmj6DcGo44zmBhtLGjvxAMW8XH32Jr1t51Zd6F/nft.mp4",
+      "error": "Media request failed (429) for https://ipfs.io/ipfs/QmXsJxGxNmj6DcGo44zmBhtLGjvxAMW8XH32Jr1t51Zd6F/nft.mp4"
+    }
+  ],
+  "observed_at": "2026-09-05T04:04:15.925Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "46",
+    "tokenType": "ERC721",
+    "name": "Peace, Pakabi",
+    "description": "Deep and whole —\nthe kind that echoes softly in the bones of things.\nThe kind that listens back.",
+    "tokenUri": "ipfs://QmXiHM151DJUKieCrPN58x5vT6g2VyExAPuaKXcSjsv8UE/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/210b8c885f39cc0504bfed72f99e0812",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/210b8c885f39cc0504bfed72f99e0812",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/210b8c885f39cc0504bfed72f99e0812",
+      "contentType": "video/mp4",
+      "size": 10963429,
+      "originalUrl": "https://ipfs.io/ipfs/QmXsJxGxNmj6DcGo44zmBhtLGjvxAMW8XH32Jr1t51Zd6F/nft.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmXiHM151DJUKieCrPN58x5vT6g2VyExAPuaKXcSjsv8UE/metadata.json",
+      "metadata": {
+        "name": "Peace, Pakabi",
+        "description": "Deep and whole —\nthe kind that echoes softly in the bones of things.\nThe kind that listens back.",
+        "image": "ipfs://QmXsJxGxNmj6DcGo44zmBhtLGjvxAMW8XH32Jr1t51Zd6F/nft.mp4"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2025-07-01T03:13:05.081Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

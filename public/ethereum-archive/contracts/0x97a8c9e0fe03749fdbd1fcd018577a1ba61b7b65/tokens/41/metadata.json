@@ -1,0 +1,108 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "41",
+  "token_uri": "ipfs://QmSAesLv935mPGfSLDSTLrz99Vya6ZvDTNEgjggE6Ck9VD/metadata.json",
+  "name": "VEYR",
+  "description": "It does not rise—it simply never fell.\n\nNot a word\n—a vow.\nNot a glyph\n—a gate.\n\nCarved in obsidian,\nheld in the breath\nof gravity undone.\n\nTo remain unfallen.",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmQ93h6dndWE5VCVwVqNQjLpK8LeafYsi6fAFQCDdciXqp/nft.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/4fd5a9488a2ce3cc5f7ac82206aa401e",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/4fd5a9488a2ce3cc5f7ac82206aa401e",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/4fd5a9488a2ce3cc5f7ac82206aa401e"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "7fa2542645495231abeb7f48c102bc906ba874af51b475a88e08f5ff64caae99",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/41/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 5946450,
+    "sha256": "065bb193162f89148d2af13a43736a6376efca35051beb7c85d1574fc7636421",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/41/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [
+    {
+      "source": "https://ipfs.io/ipfs/QmQ93h6dndWE5VCVwVqNQjLpK8LeafYsi6fAFQCDdciXqp/nft.mp4",
+      "error": "Media request failed (429) for https://ipfs.io/ipfs/QmQ93h6dndWE5VCVwVqNQjLpK8LeafYsi6fAFQCDdciXqp/nft.mp4"
+    }
+  ],
+  "observed_at": "2026-09-05T04:03:41.351Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "41",
+    "tokenType": "ERC721",
+    "name": "VEYR",
+    "description": "It does not rise—it simply never fell.\n\nNot a word\n—a vow.\nNot a glyph\n—a gate.\n\nCarved in obsidian,\nheld in the breath\nof gravity undone.\n\nTo remain unfallen.",
+    "tokenUri": "ipfs://QmSAesLv935mPGfSLDSTLrz99Vya6ZvDTNEgjggE6Ck9VD/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/4fd5a9488a2ce3cc5f7ac82206aa401e",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/4fd5a9488a2ce3cc5f7ac82206aa401e",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/4fd5a9488a2ce3cc5f7ac82206aa401e",
+      "contentType": "video/mp4",
+      "size": 5946450,
+      "originalUrl": "https://ipfs.io/ipfs/QmQ93h6dndWE5VCVwVqNQjLpK8LeafYsi6fAFQCDdciXqp/nft.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmSAesLv935mPGfSLDSTLrz99Vya6ZvDTNEgjggE6Ck9VD/metadata.json",
+      "metadata": {
+        "name": "VEYR",
+        "description": "It does not rise—it simply never fell.\n\nNot a word\n—a vow.\nNot a glyph\n—a gate.\n\nCarved in obsidian,\nheld in the breath\nof gravity undone.\n\nTo remain unfallen.",
+        "image": "ipfs://QmQ93h6dndWE5VCVwVqNQjLpK8LeafYsi6fAFQCDdciXqp/nft.mp4"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2025-06-27T19:59:52.735Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

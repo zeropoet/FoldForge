@@ -1,0 +1,108 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "23",
+  "token_uri": "ipfs://QmPoA5pER4ok5DZEvpo5Hg2mhUvV9xxRqEhcMEJevF6TF8/metadata.json",
+  "name": "Subsignia",
+  "description": "Potency is equal to obscurity.",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmWvURvBdbyfoCqtuJ824wcKXV6vsvKmdbD8vMmZvSJoFZ/nft.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/88794b54780b3fcd8faef8df46c331fa",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/88794b54780b3fcd8faef8df46c331fa",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/88794b54780b3fcd8faef8df46c331fa"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "9a9a1c1942aa3997e56680ba84ee96cebd56dde0cc86aac0966300e1aece450b",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/23/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 58837873,
+    "sha256": "8a6a348b2d613b8b9c99717f34226882a1b95b246774f2257657ad0f9580faef",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/23/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [
+    {
+      "source": "https://ipfs.io/ipfs/QmWvURvBdbyfoCqtuJ824wcKXV6vsvKmdbD8vMmZvSJoFZ/nft.mp4",
+      "error": "Media request failed (429) for https://ipfs.io/ipfs/QmWvURvBdbyfoCqtuJ824wcKXV6vsvKmdbD8vMmZvSJoFZ/nft.mp4"
+    }
+  ],
+  "observed_at": "2026-09-05T04:02:13.241Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "23",
+    "tokenType": "ERC721",
+    "name": "Subsignia",
+    "description": "Potency is equal to obscurity.",
+    "tokenUri": "ipfs://QmPoA5pER4ok5DZEvpo5Hg2mhUvV9xxRqEhcMEJevF6TF8/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/88794b54780b3fcd8faef8df46c331fa",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/88794b54780b3fcd8faef8df46c331fa",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/88794b54780b3fcd8faef8df46c331fa",
+      "contentType": "video/mp4",
+      "size": 58837873,
+      "originalUrl": "https://ipfs.io/ipfs/QmWvURvBdbyfoCqtuJ824wcKXV6vsvKmdbD8vMmZvSJoFZ/nft.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmPoA5pER4ok5DZEvpo5Hg2mhUvV9xxRqEhcMEJevF6TF8/metadata.json",
+      "metadata": {
+        "name": "Subsignia",
+        "description": "Potency is equal to obscurity.",
+        "image": "ipfs://QmWvURvBdbyfoCqtuJ824wcKXV6vsvKmdbD8vMmZvSJoFZ/nft.mp4"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2025-07-04T17:17:54.819Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

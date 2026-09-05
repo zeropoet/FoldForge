@@ -1,0 +1,131 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+  "token_id": "15",
+  "token_uri": "ipfs://QmPbi7HrQHNzXndkv26mwegFfXuvaVD5x2LLqtaAwCYfBV/metadata.json",
+  "name": "Before the Data",
+  "description": "I chose\nbefore the knowing—\nnot from truth,\nbut toward it.\n\nNo map,\njust the weight\nof a direction\npressed into silence.\n\nMeaning\narrived later,\nbowing to the path\nalready taken.",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/1e59880027d28b25d893bddbe96716/ae1e59880027d28b25d893bddbe96716.mp4",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/0ab2af2bdc6264dc6225e1f241f919b0",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/0ab2af2bdc6264dc6225e1f241f919b0",
+    "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/0ab2af2bdc6264dc6225e1f241f919b0"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "baef3c821c9f86502543ccbe6b5030bee9dd51263fcb5ad52a868741a499bed4",
+  "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/15/metadata.json",
+  "media": {
+    "file": "image.mp4",
+    "bytes": 14348186,
+    "sha256": "9876062f0df1094f66983703c7d172dd4279b8000e54b28e9ee60f1c183c67fc",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/15/image.mp4"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T04:01:43.906Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x97a8C9e0Fe03749FDBD1FCD018577a1ba61B7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "totalSupply": "42",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0,
+        "collectionName": "The Void Architecture",
+        "collectionSlug": "the-void-architecture",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/807421ce8257d90a861ad9d5254a1a/ce807421ce8257d90a861ad9d5254a1a.mp4",
+        "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:20:50.790814748Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "15",
+    "tokenType": "ERC721",
+    "name": "Before the Data",
+    "description": "I chose\nbefore the knowing—\nnot from truth,\nbut toward it.\n\nNo map,\njust the weight\nof a direction\npressed into silence.\n\nMeaning\narrived later,\nbowing to the path\nalready taken.",
+    "tokenUri": "ipfs://QmPbi7HrQHNzXndkv26mwegFfXuvaVD5x2LLqtaAwCYfBV/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/0ab2af2bdc6264dc6225e1f241f919b0",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0,c_fit,h_250,q_auto,w_250/https://nft2-cdn.alchemy.com/eth-mainnet/0ab2af2bdc6264dc6225e1f241f919b0",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/video/fetch/f_png,so_0/https://nft2-cdn.alchemy.com/eth-mainnet/0ab2af2bdc6264dc6225e1f241f919b0",
+      "contentType": "video/mp4",
+      "size": 14348186,
+      "originalUrl": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/1e59880027d28b25d893bddbe96716/ae1e59880027d28b25d893bddbe96716.mp4"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmPbi7HrQHNzXndkv26mwegFfXuvaVD5x2LLqtaAwCYfBV/metadata.json",
+      "metadata": {
+        "identifier": "15",
+        "collection": "the-void-architecture",
+        "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+        "token_standard": "erc721",
+        "name": "Before the Data",
+        "description": "I chose\nbefore the knowing—\nnot from truth,\nbut toward it.\n\nNo map,\njust the weight\nof a direction\npressed into silence.\n\nMeaning\narrived later,\nbowing to the path\nalready taken.",
+        "image_url": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/1e59880027d28b25d893bddbe96716/ae1e59880027d28b25d893bddbe96716.mp4",
+        "display_image_url": "https://raw2.seadn.io/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/1e59880027d28b25d893bddbe96716/ae1e59880027d28b25d893bddbe96716.mp4",
+        "display_animation_url": null,
+        "metadata_url": "ipfs://QmPbi7HrQHNzXndkv26mwegFfXuvaVD5x2LLqtaAwCYfBV/metadata.json",
+        "opensea_url": "https://opensea.io/assets/ethereum/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/15",
+        "updated_at": "2026-07-18T21:59:40.561958",
+        "is_disabled": false,
+        "is_nsfw": false,
+        "original_image_url": "ipfs://QmR1AGkCLNMNofZr8VGfwzF2tgLp95hHDpNdi4AdsjNVhM/nft.mp4",
+        "original_animation_url": null,
+        "traits": [],
+        "estimated_value_usd": null,
+        "animation_url": null,
+        "is_suspicious": false,
+        "creator": "",
+        "owners": [
+          {
+            "address": "0xbd4b3a05c6a585f226afb1952cedd8c410c52e8f",
+            "quantity": 1,
+            "quantity_string": "1"
+          }
+        ],
+        "rarity": null,
+        "subscription": null,
+        "agent_binding": null
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Void Architecture",
+      "slug": "the-void-architecture",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-18T21:59:42.574762948Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}
