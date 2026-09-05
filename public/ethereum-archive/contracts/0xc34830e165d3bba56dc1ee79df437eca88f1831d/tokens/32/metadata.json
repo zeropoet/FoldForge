@@ -1,0 +1,110 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
+  "token_id": "32",
+  "token_uri": "ipfs://QmZfaacK9E156YnEC2oUnAes4LnjqCjfqkfb94GF1w68hz/metadata.json",
+  "name": "0_000_032",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmUk1mVmn9uRW2gbiWrGXErxJGrX1qXkwvStB3vVP55aPm/nft.jpg",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/2c279e56cf6bd5dd182792afff6cf05f",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/2c279e56cf6bd5dd182792afff6cf05f",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/2c279e56cf6bd5dd182792afff6cf05f"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "245f5578cb8be99a34a867f9c425beb27220f7ec82dfc8cd2c92fb8f1da336b9",
+  "metadata_path": "/ethereum-archive/contracts/0xc34830e165d3bba56dc1ee79df437eca88f1831d/tokens/32/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 12772324,
+    "sha256": "7dd43fe39424cb664e9f3385184575ff64a200a281a29aaffbbed55ca265c6f5",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0xc34830e165d3bba56dc1ee79df437eca88f1831d/tokens/32/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [
+    {
+      "source": "https://ipfs.io/ipfs/QmUk1mVmn9uRW2gbiWrGXErxJGrX1qXkwvStB3vVP55aPm/nft.jpg",
+      "error": "Media request failed (429) for https://ipfs.io/ipfs/QmUk1mVmn9uRW2gbiWrGXErxJGrX1qXkwvStB3vVP55aPm/nft.jpg"
+    }
+  ],
+  "observed_at": "2026-09-05T04:09:09.171Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0xc34830e165d3bba56Dc1Ee79df437ECA88f1831d",
+      "name": "The Archive",
+      "symbol": "ARCHIVE",
+      "totalSupply": "50",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "The Archive",
+        "collectionSlug": "the-archive-5",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/0xc34830e165d3bba56dc1ee79df437eca88f1831d/4d20c03d8473ff4ca06aa2c1dc8bd9/1f4d20c03d8473ff4ca06aa2c1dc8bd9.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:30.407161167Z"
+      },
+      "isSpam": true,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "32",
+    "tokenType": "ERC721",
+    "name": "0_000_032",
+    "description": "",
+    "tokenUri": "ipfs://QmZfaacK9E156YnEC2oUnAes4LnjqCjfqkfb94GF1w68hz/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/2c279e56cf6bd5dd182792afff6cf05f",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/2c279e56cf6bd5dd182792afff6cf05f",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/2c279e56cf6bd5dd182792afff6cf05f",
+      "contentType": "image/jpeg",
+      "size": 12772324,
+      "originalUrl": "https://ipfs.io/ipfs/QmUk1mVmn9uRW2gbiWrGXErxJGrX1qXkwvStB3vVP55aPm/nft.jpg"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmZfaacK9E156YnEC2oUnAes4LnjqCjfqkfb94GF1w68hz/metadata.json",
+      "metadata": {
+        "name": "0_000_032",
+        "description": "",
+        "image": "ipfs://QmUk1mVmn9uRW2gbiWrGXErxJGrX1qXkwvStB3vVP55aPm/nft.jpg"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "The Archive",
+      "slug": "the-archive-5",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-22T23:58:54.643842793Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}
