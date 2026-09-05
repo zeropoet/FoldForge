@@ -3,29 +3,29 @@
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "45",
   "token_uri": "https://arweave.net/qp3dBDGOEK7RKg40vq4G6jbJZ_4qm-R4Kj6AyOcO4Js/1",
-  "name": "#45",
+  "name": "44-uber-formal-unentscheidbare-satze-der-principia-mathematica-und-verwandter-systeme-i",
   "description": "",
   "token_type": "ERC721",
   "attributes": [],
   "image_sources": [
-    "https://arweave.net/OcpCdgHPnp27OoHVS3Z5E8yaWkHVX53o4U2Kd54ioV0",
+    "https://arweave.net/qlNNF8WeBLvERMOK0504p0eFGM0K-6KhytwVa0bmki8",
     "https://nft2-cdn.alchemy.com/eth-mainnet/843eff35e450c57cfb489f7eb210f82f_ce4de2fd",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/843eff35e450c57cfb489f7eb210f82f_ce4de2fd",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/843eff35e450c57cfb489f7eb210f82f_ce4de2fd"
   ],
   "animation_sources": [],
-  "evidence_sha256": "faa090bd407786c2bdc07454c9eca8164f5d6524566a0d4cedc3d7015f80c761",
+  "evidence_sha256": "9418133d546df5689f6118256d9cfd0b064b0d722aa18ad400c4c7ebd7ba960c",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/45/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 739306,
-    "sha256": "b0fe7c7f41591f1101c8e6ab1920ab5386a357813ccb64346cfc8965878ad920",
+    "bytes": 481798,
+    "sha256": "c21c0b52c51a42441e0b83eeb152c114a1c0e476a646244ed1dfc14ed7954783",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/45/image.png"
   },
   "animation": null,
   "archive_errors": [],
-  "observed_at": "2026-09-05T03:48:22.523Z",
+  "observed_at": "2026-09-05T04:21:44.154Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -54,8 +54,8 @@
     },
     "tokenId": "45",
     "tokenType": "ERC721",
-    "name": "#45",
-    "description": null,
+    "name": "44-uber-formal-unentscheidbare-satze-der-principia-mathematica-und-verwandter-systeme-i",
+    "description": "",
     "tokenUri": "https://arweave.net/qp3dBDGOEK7RKg40vq4G6jbJZ_4qm-R4Kj6AyOcO4Js/1",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/843eff35e450c57cfb489f7eb210f82f_ce4de2fd",
@@ -63,7 +63,7 @@
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/843eff35e450c57cfb489f7eb210f82f_ce4de2fd",
       "contentType": "image/png",
       "size": 739306,
-      "originalUrl": "https://arweave.net/OcpCdgHPnp27OoHVS3Z5E8yaWkHVX53o4U2Kd54ioV0"
+      "originalUrl": "https://arweave.net/qlNNF8WeBLvERMOK0504p0eFGM0K-6KhytwVa0bmki8"
     },
     "animation": {
       "cachedUrl": null,
@@ -78,9 +78,9 @@
         "collection": "fold-forge",
         "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
         "token_standard": "erc721",
-        "name": "#45",
-        "description": null,
-        "image_url": null,
+        "name": "44-uber-formal-unentscheidbare-satze-der-principia-mathematica-und-verwandter-systeme-i",
+        "description": "",
+        "image_url": "https://arweave.net/qlNNF8WeBLvERMOK0504p0eFGM0K-6KhytwVa0bmki8",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": null,
@@ -105,7 +105,15 @@
         ],
         "rarity": null,
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "image_details": {
+          "bytes": 481798,
+          "format": "PNG",
+          "sha256": "c21c0b52c51a42441e0b83eeb152c114a1c0e476a646244ed1dfc14ed7954783",
+          "width": 2400,
+          "height": 2400
+        },
+        "image": "https://arweave.net/qlNNF8WeBLvERMOK0504p0eFGM0K-6KhytwVa0bmki8"
       },
       "error": null
     },

@@ -3,29 +3,29 @@
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "15",
   "token_uri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/1",
-  "name": "#15",
+  "name": "14-siddhartha-eine-indische-dichtung",
   "description": "",
   "token_type": "ERC721",
   "attributes": [],
   "image_sources": [
-    "https://arweave.net/24IdVdmNQhdFLl6q6otf10dVNqt9YyzaKCEDOa9ldzo",
+    "https://arweave.net/6ndiHIm08FN7BqcNEq_-vWIkCMleYZ0-ff7r15euoLI",
     "https://nft2-cdn.alchemy.com/eth-mainnet/ad44786fb405d5ccd324e3935e679239_4cbbbf8c",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/ad44786fb405d5ccd324e3935e679239_4cbbbf8c",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/ad44786fb405d5ccd324e3935e679239_4cbbbf8c"
   ],
   "animation_sources": [],
-  "evidence_sha256": "f3e331ba9a2163881e8ec3d6cca474f47daff967ccaa8a520e6a1475a8008349",
+  "evidence_sha256": "6a8b4a4389b7f44aed1f9bc8d269745bfb7a1f087f8b4eca4f8e18f701b50b85",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/15/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 347616,
-    "sha256": "8645c7925fd4fca4fd116510e843fe2bea0568ddd9581155a00a4ecf063b896b",
+    "bytes": 346181,
+    "sha256": "c2c8d7d3c7cab4e0c5532dd0d0924e0dd15a0ce6ac69169e465f2db03bae3338",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/15/image.png"
   },
   "animation": null,
   "archive_errors": [],
-  "observed_at": "2026-09-05T03:47:47.438Z",
+  "observed_at": "2026-09-05T04:21:44.154Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -54,8 +54,8 @@
     },
     "tokenId": "15",
     "tokenType": "ERC721",
-    "name": "#15",
-    "description": null,
+    "name": "14-siddhartha-eine-indische-dichtung",
+    "description": "",
     "tokenUri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/1",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/ad44786fb405d5ccd324e3935e679239_4cbbbf8c",
@@ -63,7 +63,7 @@
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/ad44786fb405d5ccd324e3935e679239_4cbbbf8c",
       "contentType": "image/png",
       "size": 347616,
-      "originalUrl": "https://arweave.net/24IdVdmNQhdFLl6q6otf10dVNqt9YyzaKCEDOa9ldzo"
+      "originalUrl": "https://arweave.net/6ndiHIm08FN7BqcNEq_-vWIkCMleYZ0-ff7r15euoLI"
     },
     "animation": {
       "cachedUrl": null,
@@ -78,9 +78,9 @@
         "collection": "fold-forge",
         "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
         "token_standard": "erc721",
-        "name": "#15",
-        "description": null,
-        "image_url": null,
+        "name": "14-siddhartha-eine-indische-dichtung",
+        "description": "",
+        "image_url": "https://arweave.net/6ndiHIm08FN7BqcNEq_-vWIkCMleYZ0-ff7r15euoLI",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": null,
@@ -105,7 +105,15 @@
         ],
         "rarity": null,
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "image_details": {
+          "bytes": 346181,
+          "format": "PNG",
+          "sha256": "c2c8d7d3c7cab4e0c5532dd0d0924e0dd15a0ce6ac69169e465f2db03bae3338",
+          "width": 2400,
+          "height": 2400
+        },
+        "image": "https://arweave.net/6ndiHIm08FN7BqcNEq_-vWIkCMleYZ0-ff7r15euoLI"
       },
       "error": null
     },

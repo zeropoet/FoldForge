@@ -3,18 +3,32 @@
   "contract": "0x0d7fad8479768a7fd0618077b34f4b3d3aac02b7",
   "token_id": "1",
   "token_uri": "https://arweave.net/R_iMcSGEtS_dNRSdc5dQ2tMr3vxBfXY8VX8hO9LAMl4",
-  "name": "#1",
-  "description": "",
+  "name": "Founding of the ØVEL Spectral Gravity Field",
+  "description": "A journey receipt witnessing the emergence of the ØVEL Spectral Gravity Field: the moment a particle system became legible as a liquid, gravitational, and spectral substrate.",
   "token_type": "ERC721",
-  "attributes": [],
-  "image_sources": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet",
+      "display_type": "text"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/P0F6XEUqf-W6zJtMhT0RRnpFYi5k3ML6ZdDYP0dYAVo"
+  ],
   "animation_sources": [],
-  "evidence_sha256": "3931101e041767d3c6db7095d79bc2773701d24df1c8d7618c1ce781119fb89a",
+  "evidence_sha256": "54c4a0ecde8f2e98b5f9eec86292331235c2e6e996e912339956cbd37da86d1e",
   "metadata_path": "/ethereum-archive/contracts/0x0d7fad8479768a7fd0618077b34f4b3d3aac02b7/tokens/1/metadata.json",
-  "media": null,
+  "media": {
+    "file": "image.gif",
+    "bytes": 1992184,
+    "sha256": "d5e3665c09dc06a12347360f73bba44cff7d59f383cf40ac87c0c8077892a2bc",
+    "media_type": "image/gif",
+    "path": "/ethereum-archive/contracts/0x0d7fad8479768a7fd0618077b34f4b3d3aac02b7/tokens/1/image.gif"
+  },
   "animation": null,
   "archive_errors": [],
-  "observed_at": "2026-09-05T03:47:40.938Z",
+  "observed_at": "2026-09-05T04:21:44.154Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -43,8 +57,8 @@
     },
     "tokenId": "1",
     "tokenType": "ERC721",
-    "name": "#1",
-    "description": null,
+    "name": "Founding of the ØVEL Spectral Gravity Field",
+    "description": "A journey receipt witnessing the emergence of the ØVEL Spectral Gravity Field: the moment a particle system became legible as a liquid, gravitational, and spectral substrate.",
     "tokenUri": "https://arweave.net/R_iMcSGEtS_dNRSdc5dQ2tMr3vxBfXY8VX8hO9LAMl4",
     "image": {
       "cachedUrl": null,
@@ -52,7 +66,7 @@
       "pngUrl": null,
       "contentType": null,
       "size": null,
-      "originalUrl": null
+      "originalUrl": "https://arweave.net/P0F6XEUqf-W6zJtMhT0RRnpFYi5k3ML6ZdDYP0dYAVo"
     },
     "animation": {
       "cachedUrl": null,
@@ -67,9 +81,9 @@
         "collection": "zero-temporal-receipts",
         "contract": "0x0d7fad8479768a7fd0618077b34f4b3d3aac02b7",
         "token_standard": "erc721",
-        "name": "#1",
-        "description": null,
-        "image_url": null,
+        "name": "Founding of the ØVEL Spectral Gravity Field",
+        "description": "A journey receipt witnessing the emergence of the ØVEL Spectral Gravity Field: the moment a particle system became legible as a liquid, gravitational, and spectral substrate.",
+        "image_url": "https://arweave.net/P0F6XEUqf-W6zJtMhT0RRnpFYi5k3ML6ZdDYP0dYAVo",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": null,
@@ -94,7 +108,22 @@
         ],
         "rarity": null,
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet",
+            "display_type": "text"
+          }
+        ],
+        "image_details": {
+          "bytes": 1992184,
+          "format": "GIF",
+          "sha256": "d5e3665c09dc06a12347360f73bba44cff7d59f383cf40ac87c0c8077892a2bc",
+          "width": 1440,
+          "height": 1440
+        },
+        "image": "https://arweave.net/P0F6XEUqf-W6zJtMhT0RRnpFYi5k3ML6ZdDYP0dYAVo"
       },
       "error": null
     },

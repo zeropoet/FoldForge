@@ -46,6 +46,34 @@ async function fetchHoldings() {
   return values;
 }
 
+async function hydrateCanonicalToken(token) {
+  const hasMedia = imageSources(token).length || animationSources(token).length;
+  const placeholder = !token.name || /^#?\s*\d+$/.test(token.name) || /^token\s+#?\d+$/i.test(token.name);
+  if (hasMedia && !placeholder) return token;
+  const metadataUrl = normalize(token.tokenUri || token.raw?.tokenUri || "");
+  if (!/^https?:\/\//i.test(metadataUrl)) return token;
+  let failure;
+  for (let attempt = 1; attempt <= 4; attempt += 1) {
+    try {
+      const response = await fetch(metadataUrl, { headers: { accept: "application/json" }, redirect: "follow", signal: AbortSignal.timeout(60_000) });
+      if (!response.ok) throw new Error(`Metadata request failed (${response.status}) for ${metadataUrl}`);
+      const metadata = await response.json();
+      return {
+        ...token,
+        name: metadata.name || token.name,
+        description: metadata.description || token.description || "",
+        image: metadata.image || metadata.image_url ? { ...token.image, originalUrl: normalize(metadata.image_url || metadata.image) } : token.image,
+        animation: metadata.animation_url ? { ...token.animation, originalUrl: normalize(metadata.animation_url) } : token.animation,
+        raw: { ...token.raw, metadata: { ...token.raw?.metadata, ...metadata } },
+      };
+    } catch (error) {
+      failure = error;
+      if (attempt < 4) await new Promise((resolveDelay) => setTimeout(resolveDelay, attempt * 1_000));
+    }
+  }
+  return { ...token, archiveMetadataError: failure instanceof Error ? failure.message : String(failure) };
+}
+
 const candidates = (...values) => [...new Set(values.map(normalize).filter(Boolean))];
 const imageSources = (token) => candidates(token.image?.originalUrl, token.raw?.metadata?.image_url, token.raw?.metadata?.image, token.image?.cachedUrl, token.image?.pngUrl, token.image?.thumbnailUrl);
 const animationSources = (token) => candidates(token.animation?.originalUrl, token.raw?.metadata?.animation_url, token.animation?.cachedUrl);
@@ -104,7 +132,8 @@ let updated = 0;
 let unchanged = 0;
 let holdingChanges = 0;
 
-for (const token of holdings) {
+for (const providerToken of holdings) {
+  const token = await hydrateCanonicalToken(providerToken);
   const contract = (token.contract?.address || token.contractAddress || "").toLowerCase();
   const tokenId = String(token.tokenId || "");
   if (!contract || !tokenId) continue;

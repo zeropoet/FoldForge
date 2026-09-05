@@ -6,15 +6,29 @@
   "name": "Tattoo Money",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
-  "image_sources": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet",
+      "display_type": "text"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/wIawOuRwY0EhQYKGFX2N6nypC3a5y7RHY0j7LDPeA2g"
+  ],
   "animation_sources": [],
-  "evidence_sha256": "9803738810472301db9a8ca7aec15c722a7b21f07ee71de66a9b9c5279c1a229",
+  "evidence_sha256": "110d6fb7201a39aecbbc5686fdcb520a07c76ef0d25b067cfda09a8915d411f4",
   "metadata_path": "/ethereum-archive/contracts/0x57506327113cee73806db63137166753db78d0f4/tokens/1/metadata.json",
-  "media": null,
+  "media": {
+    "file": "image.jpg",
+    "bytes": 4824135,
+    "sha256": "2c0a02eee0e705f1fdbc2ac084c429070f90c47a355a2b909c0e86b4aff39a3b",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x57506327113cee73806db63137166753db78d0f4/tokens/1/image.jpg"
+  },
   "animation": null,
   "archive_errors": [],
-  "observed_at": "2026-09-05T03:49:20.982Z",
+  "observed_at": "2026-09-05T04:21:44.154Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -55,7 +69,7 @@
       "pngUrl": null,
       "contentType": null,
       "size": null,
-      "originalUrl": null
+      "originalUrl": "https://arweave.net/wIawOuRwY0EhQYKGFX2N6nypC3a5y7RHY0j7LDPeA2g"
     },
     "animation": {
       "cachedUrl": null,
@@ -72,7 +86,7 @@
         "token_standard": "erc721",
         "name": "Tattoo Money",
         "description": "",
-        "image_url": null,
+        "image_url": "https://arweave.net/wIawOuRwY0EhQYKGFX2N6nypC3a5y7RHY0j7LDPeA2g",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": "https://arweave.net/k21JYAbopIHNjzUkqCO05eBVATPJ6S-Kw5X3BKRB6vQ",
@@ -104,7 +118,22 @@
         ],
         "rarity": null,
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet",
+            "display_type": "text"
+          }
+        ],
+        "image_details": {
+          "bytes": 4824135,
+          "format": "JPEG",
+          "sha256": "2c0a02eee0e705f1fdbc2ac084c429070f90c47a355a2b909c0e86b4aff39a3b",
+          "width": 3554,
+          "height": 4251
+        },
+        "image": "https://arweave.net/wIawOuRwY0EhQYKGFX2N6nypC3a5y7RHY0j7LDPeA2g"
       },
       "error": null
     },

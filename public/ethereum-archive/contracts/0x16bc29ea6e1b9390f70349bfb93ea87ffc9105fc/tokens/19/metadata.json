@@ -3,29 +3,29 @@
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "19",
   "token_uri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/5",
-  "name": "#19",
+  "name": "18-quantum-theory-the-church-turing-principle-and-the-universal-quantum-computer",
   "description": "",
   "token_type": "ERC721",
   "attributes": [],
   "image_sources": [
-    "https://arweave.net/Vr3g3D-sa2Li9L2kFNUDauOgGMl664b_-yCgOerHufY",
+    "https://arweave.net/zpty0eWKeqah6rNC_RM8f2t6EyoXZTC2Jseip1dDqEs",
     "https://nft2-cdn.alchemy.com/eth-mainnet/f2df6e9f0f8ef7f4369a57bb0dc90788_3799661a",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/f2df6e9f0f8ef7f4369a57bb0dc90788_3799661a",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/f2df6e9f0f8ef7f4369a57bb0dc90788_3799661a"
   ],
   "animation_sources": [],
-  "evidence_sha256": "dffe97dfaea34186495f11131a35bae1101838cd8e3b11a461f8d92835e49d65",
+  "evidence_sha256": "7f851ab69c16e0205dd581c22488245fbd25d8ffdc99ae835fb2fa227d1dd678",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/19/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 471771,
-    "sha256": "68c4a2d6619eb21a711799bf85d4f1f44088a0da427a5a06bb24a7da9266c6db",
+    "bytes": 486368,
+    "sha256": "b0ad1de378f1abeb2527fcf5d2282f7021f5ca2820e97ecae8c511acf609d343",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/19/image.png"
   },
   "animation": null,
   "archive_errors": [],
-  "observed_at": "2026-09-05T03:47:49.007Z",
+  "observed_at": "2026-09-05T04:21:44.154Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -54,8 +54,8 @@
     },
     "tokenId": "19",
     "tokenType": "ERC721",
-    "name": "#19",
-    "description": null,
+    "name": "18-quantum-theory-the-church-turing-principle-and-the-universal-quantum-computer",
+    "description": "",
     "tokenUri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/5",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/f2df6e9f0f8ef7f4369a57bb0dc90788_3799661a",
@@ -63,7 +63,7 @@
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/f2df6e9f0f8ef7f4369a57bb0dc90788_3799661a",
       "contentType": "image/png",
       "size": 471771,
-      "originalUrl": "https://arweave.net/Vr3g3D-sa2Li9L2kFNUDauOgGMl664b_-yCgOerHufY"
+      "originalUrl": "https://arweave.net/zpty0eWKeqah6rNC_RM8f2t6EyoXZTC2Jseip1dDqEs"
     },
     "animation": {
       "cachedUrl": null,
@@ -78,9 +78,9 @@
         "collection": "fold-forge",
         "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
         "token_standard": "erc721",
-        "name": "#19",
-        "description": null,
-        "image_url": null,
+        "name": "18-quantum-theory-the-church-turing-principle-and-the-universal-quantum-computer",
+        "description": "",
+        "image_url": "https://arweave.net/zpty0eWKeqah6rNC_RM8f2t6EyoXZTC2Jseip1dDqEs",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": null,
@@ -105,7 +105,15 @@
         ],
         "rarity": null,
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "image_details": {
+          "bytes": 486368,
+          "format": "PNG",
+          "sha256": "b0ad1de378f1abeb2527fcf5d2282f7021f5ca2820e97ecae8c511acf609d343",
+          "width": 2400,
+          "height": 2400
+        },
+        "image": "https://arweave.net/zpty0eWKeqah6rNC_RM8f2t6EyoXZTC2Jseip1dDqEs"
       },
       "error": null
     },

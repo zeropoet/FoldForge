@@ -3,18 +3,32 @@
   "contract": "0x6ab557c68872724f57c40a36a559ba61f17b0893",
   "token_id": "1",
   "token_uri": "https://arweave.net/iVfJ2CePa9pwCQkxbheY68d_ATL8wTeJ36NXVOqdVqk/1",
-  "name": "#1",
+  "name": "MTL-1",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
-  "image_sources": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet",
+      "display_type": "text"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/f0htFEEcOuFC9POtKNgL022DNHTfsER9v-QPcjvUUqk"
+  ],
   "animation_sources": [],
-  "evidence_sha256": "998b7a67f9f9d176fe338caad961b50ab897f7447bc3679978c17f50c671d415",
+  "evidence_sha256": "ff9befbca429a0b7b4c201ecd9f75fbe628cd5959caf07fb65d5f44f923f3470",
   "metadata_path": "/ethereum-archive/contracts/0x6ab557c68872724f57c40a36a559ba61f17b0893/tokens/1/metadata.json",
-  "media": null,
+  "media": {
+    "file": "image.jpg",
+    "bytes": 8329847,
+    "sha256": "bfc68ae882711c862e8a120da85566355f903fb932eb0802121f067885624648",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x6ab557c68872724f57c40a36a559ba61f17b0893/tokens/1/image.jpg"
+  },
   "animation": null,
   "archive_errors": [],
-  "observed_at": "2026-09-05T03:49:38.426Z",
+  "observed_at": "2026-09-05T04:21:44.154Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -45,8 +59,8 @@
     },
     "tokenId": "1",
     "tokenType": "ERC721",
-    "name": "#1",
-    "description": null,
+    "name": "MTL-1",
+    "description": "",
     "tokenUri": "https://arweave.net/iVfJ2CePa9pwCQkxbheY68d_ATL8wTeJ36NXVOqdVqk/1",
     "image": {
       "cachedUrl": null,
@@ -54,7 +68,7 @@
       "pngUrl": null,
       "contentType": null,
       "size": null,
-      "originalUrl": null
+      "originalUrl": "https://arweave.net/f0htFEEcOuFC9POtKNgL022DNHTfsER9v-QPcjvUUqk"
     },
     "animation": {
       "cachedUrl": null,
@@ -69,9 +83,9 @@
         "collection": "mtl-455612542",
         "contract": "0x6ab557c68872724f57c40a36a559ba61f17b0893",
         "token_standard": "erc721",
-        "name": "#1",
-        "description": null,
-        "image_url": null,
+        "name": "MTL-1",
+        "description": "",
+        "image_url": "https://arweave.net/f0htFEEcOuFC9POtKNgL022DNHTfsER9v-QPcjvUUqk",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": null,
@@ -96,7 +110,22 @@
         ],
         "rarity": null,
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet",
+            "display_type": "text"
+          }
+        ],
+        "image_details": {
+          "bytes": 8329847,
+          "format": "JPEG",
+          "sha256": "bfc68ae882711c862e8a120da85566355f903fb932eb0802121f067885624648",
+          "width": 3563,
+          "height": 4791
+        },
+        "image": "https://arweave.net/f0htFEEcOuFC9POtKNgL022DNHTfsER9v-QPcjvUUqk"
       },
       "error": null
     },

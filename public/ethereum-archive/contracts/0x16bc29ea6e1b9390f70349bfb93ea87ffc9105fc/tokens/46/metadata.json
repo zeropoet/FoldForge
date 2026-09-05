@@ -3,7 +3,7 @@
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "46",
   "token_uri": "https://arweave.net/qp3dBDGOEK7RKg40vq4G6jbJZ_4qm-R4Kj6AyOcO4Js/2",
-  "name": "#46",
+  "name": "45-the-epic-of-gilgamesh-an-old-babylonian-version",
   "description": "",
   "token_type": "ERC721",
   "attributes": [],
@@ -14,7 +14,7 @@
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/e8ff7eb7dcf25afc6cca190b20735e60_0fc70dec"
   ],
   "animation_sources": [],
-  "evidence_sha256": "05e9a3ff480b43952e385466353b44bd1a5869e88cd80d07d17aa5a8607e2b27",
+  "evidence_sha256": "0947a8458d93b0f0267ebf5d1d65f04190cf86d05a991083526ef2c5126853cb",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/46/metadata.json",
   "media": {
     "file": "image.png",
@@ -25,7 +25,7 @@
   },
   "animation": null,
   "archive_errors": [],
-  "observed_at": "2026-09-05T03:48:23.029Z",
+  "observed_at": "2026-09-05T04:21:44.154Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -54,8 +54,8 @@
     },
     "tokenId": "46",
     "tokenType": "ERC721",
-    "name": "#46",
-    "description": null,
+    "name": "45-the-epic-of-gilgamesh-an-old-babylonian-version",
+    "description": "",
     "tokenUri": "https://arweave.net/qp3dBDGOEK7RKg40vq4G6jbJZ_4qm-R4Kj6AyOcO4Js/2",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/e8ff7eb7dcf25afc6cca190b20735e60_0fc70dec",
@@ -78,9 +78,9 @@
         "collection": "fold-forge",
         "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
         "token_standard": "erc721",
-        "name": "#46",
-        "description": null,
-        "image_url": null,
+        "name": "45-the-epic-of-gilgamesh-an-old-babylonian-version",
+        "description": "",
+        "image_url": "https://arweave.net/Z9eqSn4m_i230ovYO_fyoQg7HbetbWKtGtWI9mAFkcM",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": null,
@@ -105,7 +105,15 @@
         ],
         "rarity": null,
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "image_details": {
+          "bytes": 463710,
+          "format": "PNG",
+          "sha256": "0f8ad37104043306fcb0092325a67a844a6a75dd758e25288afec887fb5d75e3",
+          "width": 2400,
+          "height": 2400
+        },
+        "image": "https://arweave.net/Z9eqSn4m_i230ovYO_fyoQg7HbetbWKtGtWI9mAFkcM"
       },
       "error": null
     },

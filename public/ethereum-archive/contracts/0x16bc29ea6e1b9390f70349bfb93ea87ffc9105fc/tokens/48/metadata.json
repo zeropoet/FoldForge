@@ -3,7 +3,7 @@
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "48",
   "token_uri": "https://arweave.net/qp3dBDGOEK7RKg40vq4G6jbJZ_4qm-R4Kj6AyOcO4Js/4",
-  "name": "#48",
+  "name": "47-the-quran-the-meaning-of-the-glorious-koran",
   "description": "",
   "token_type": "ERC721",
   "attributes": [],
@@ -14,7 +14,7 @@
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/f6d0581bf36f065e6b1cddc8315a4f4c_ceb31112"
   ],
   "animation_sources": [],
-  "evidence_sha256": "63b27653453a823df8d2ddd4d616187d6a3873b2d8e2bcebb4046fb96c5da934",
+  "evidence_sha256": "a435363965a818248130ad30a2a3d966dcbb63126e6c9a87fe32ee2f51b0aa7e",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/48/metadata.json",
   "media": {
     "file": "image.png",
@@ -25,7 +25,7 @@
   },
   "animation": null,
   "archive_errors": [],
-  "observed_at": "2026-09-05T03:48:23.978Z",
+  "observed_at": "2026-09-05T04:21:44.154Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -54,8 +54,8 @@
     },
     "tokenId": "48",
     "tokenType": "ERC721",
-    "name": "#48",
-    "description": null,
+    "name": "47-the-quran-the-meaning-of-the-glorious-koran",
+    "description": "",
     "tokenUri": "https://arweave.net/qp3dBDGOEK7RKg40vq4G6jbJZ_4qm-R4Kj6AyOcO4Js/4",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/f6d0581bf36f065e6b1cddc8315a4f4c_ceb31112",
@@ -78,9 +78,9 @@
         "collection": "fold-forge",
         "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
         "token_standard": "erc721",
-        "name": "#48",
-        "description": null,
-        "image_url": null,
+        "name": "47-the-quran-the-meaning-of-the-glorious-koran",
+        "description": "",
+        "image_url": "https://arweave.net/24awiEOkp7w-NxU104e5qBBxfVbogwe34Nl377mv8Ik",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": null,
@@ -105,7 +105,15 @@
         ],
         "rarity": null,
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "image_details": {
+          "bytes": 450960,
+          "format": "PNG",
+          "sha256": "0eb623c1bde306fb8085bd56d1eda925fe9b76aeb1b964ea8caa619c432ac895",
+          "width": 2400,
+          "height": 2400
+        },
+        "image": "https://arweave.net/24awiEOkp7w-NxU104e5qBBxfVbogwe34Nl377mv8Ik"
       },
       "error": null
     },

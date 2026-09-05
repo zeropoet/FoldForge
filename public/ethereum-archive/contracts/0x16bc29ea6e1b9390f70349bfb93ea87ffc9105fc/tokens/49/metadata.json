@@ -3,7 +3,7 @@
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "49",
   "token_uri": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/1",
-  "name": "#49",
+  "name": "48-on-the-origin-of-species-by-means-of-natural-selection",
   "description": "",
   "token_type": "ERC721",
   "attributes": [],
@@ -14,7 +14,7 @@
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/11f4ca0f2983341bcbb46e0994bc7d61_8a923ce8"
   ],
   "animation_sources": [],
-  "evidence_sha256": "5700d922cde23d23707f3e01663f8cef31b1d22b6f0708913dedc7fab830635d",
+  "evidence_sha256": "0f975b497347d8565e4cbc2b5e3445edbdef7e9ffa9f417c24ff7484a371278e",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/49/metadata.json",
   "media": {
     "file": "image.png",
@@ -25,7 +25,7 @@
   },
   "animation": null,
   "archive_errors": [],
-  "observed_at": "2026-09-05T03:48:24.448Z",
+  "observed_at": "2026-09-05T04:21:44.154Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -54,8 +54,8 @@
     },
     "tokenId": "49",
     "tokenType": "ERC721",
-    "name": "#49",
-    "description": null,
+    "name": "48-on-the-origin-of-species-by-means-of-natural-selection",
+    "description": "",
     "tokenUri": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/1",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/11f4ca0f2983341bcbb46e0994bc7d61_8a923ce8",
@@ -78,9 +78,9 @@
         "collection": "fold-forge",
         "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
         "token_standard": "erc721",
-        "name": "#49",
-        "description": null,
-        "image_url": null,
+        "name": "48-on-the-origin-of-species-by-means-of-natural-selection",
+        "description": "",
+        "image_url": "https://arweave.net/lf2yVZlG57ZL1garLxjzbqSk2MeS2A4WAMogdpFlVj0",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": null,
@@ -105,7 +105,15 @@
         ],
         "rarity": null,
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "image_details": {
+          "bytes": 432541,
+          "format": "PNG",
+          "sha256": "0ba089f6d762ac29b62fcd6e6a94fa3bea5952808ad743004c129887e18687dc",
+          "width": 2400,
+          "height": 2400
+        },
+        "image": "https://arweave.net/lf2yVZlG57ZL1garLxjzbqSk2MeS2A4WAMogdpFlVj0"
       },
       "error": null
     },

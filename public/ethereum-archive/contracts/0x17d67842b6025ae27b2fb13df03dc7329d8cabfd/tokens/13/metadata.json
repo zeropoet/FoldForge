@@ -3,18 +3,32 @@
   "contract": "0x17d67842b6025ae27b2fb13df03dc7329d8cabfd",
   "token_id": "13",
   "token_uri": "https://arweave.net/YgJDM5FBSLReYKiz2svGa01T5xMoNkqNmvKoe1xVPxQ/1",
-  "name": "#13",
+  "name": "RWL-48",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
-  "image_sources": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "RWL",
+      "display_type": "text"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/E83AVpT3NsD1-L66GfEkmAikH1fdFgpGEI_HEL06pdI"
+  ],
   "animation_sources": [],
-  "evidence_sha256": "29a651b831f51067fade7ec8d7bb473d101b131dbf13d37db501f9c69c2deac3",
+  "evidence_sha256": "d44774c2072a4f93d0971703bee1c1a6785c0b32b52ff3714722d6dcc856ecc6",
   "metadata_path": "/ethereum-archive/contracts/0x17d67842b6025ae27b2fb13df03dc7329d8cabfd/tokens/13/metadata.json",
-  "media": null,
+  "media": {
+    "file": "image.jpg",
+    "bytes": 10277830,
+    "sha256": "2d6339a4e34ebe5b80ad294db083b2583ab56a47e18e5cd8a44ba1f328bb79ff",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x17d67842b6025ae27b2fb13df03dc7329d8cabfd/tokens/13/image.jpg"
+  },
   "animation": null,
   "archive_errors": [],
-  "observed_at": "2026-09-05T03:48:37.797Z",
+  "observed_at": "2026-09-05T04:21:44.154Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -45,8 +59,8 @@
     },
     "tokenId": "13",
     "tokenType": "ERC721",
-    "name": "#13",
-    "description": null,
+    "name": "RWL-48",
+    "description": "",
     "tokenUri": "https://arweave.net/YgJDM5FBSLReYKiz2svGa01T5xMoNkqNmvKoe1xVPxQ/1",
     "image": {
       "cachedUrl": null,
@@ -54,7 +68,7 @@
       "pngUrl": null,
       "contentType": null,
       "size": null,
-      "originalUrl": null
+      "originalUrl": "https://arweave.net/E83AVpT3NsD1-L66GfEkmAikH1fdFgpGEI_HEL06pdI"
     },
     "animation": {
       "cachedUrl": null,
@@ -69,9 +83,9 @@
         "collection": "rwl-424080445",
         "contract": "0x17d67842b6025ae27b2fb13df03dc7329d8cabfd",
         "token_standard": "erc721",
-        "name": "#13",
-        "description": null,
-        "image_url": null,
+        "name": "RWL-48",
+        "description": "",
+        "image_url": "https://arweave.net/E83AVpT3NsD1-L66GfEkmAikH1fdFgpGEI_HEL06pdI",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": null,
@@ -96,7 +110,22 @@
         ],
         "rarity": null,
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "RWL",
+            "display_type": "text"
+          }
+        ],
+        "image_details": {
+          "bytes": 10277830,
+          "format": "JPEG",
+          "sha256": "2d6339a4e34ebe5b80ad294db083b2583ab56a47e18e5cd8a44ba1f328bb79ff",
+          "width": 3883,
+          "height": 3883
+        },
+        "image": "https://arweave.net/E83AVpT3NsD1-L66GfEkmAikH1fdFgpGEI_HEL06pdI"
       },
       "error": null
     },
