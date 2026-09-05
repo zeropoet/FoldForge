@@ -1,0 +1,136 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x2a687685e1db39cb207a1a42778124016f5b8749",
+  "token_id": "2",
+  "token_uri": "https://arweave.net/5Y9peahz2h2HuAb_KF60RMUUPWS4St1k1sC0VqqSCvQ",
+  "name": "chessboard",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://arweave.net/d3RI2vE7EvAjfTt3-NK3y4FabRsVs1pGfCh-AtW8yGQ",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/d5596e094f1c9f23254d551d6c15c97c",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/d5596e094f1c9f23254d551d6c15c97c",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/d5596e094f1c9f23254d551d6c15c97c"
+  ],
+  "animation_sources": [
+    "https://arweave.net/9B2yteXT9kaxDCtBZAednqO2OLn72lEyPGtqwU4UQTI",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/d5596e094f1c9f23254d551d6c15c97c_animation"
+  ],
+  "evidence_sha256": "e6200c0a6dec35c5a38c5fdc5ee42a114ec72dea5053f8c6f7a8065cf83b82ee",
+  "metadata_path": "/ethereum-archive/contracts/0x2a687685e1db39cb207a1a42778124016f5b8749/tokens/2/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 257973,
+    "sha256": "3390491423327f91ce6a2d56c3c469cb5e6739952dfbae611382831c3f0e9924",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x2a687685e1db39cb207a1a42778124016f5b8749/tokens/2/image.jpg"
+  },
+  "animation": {
+    "file": "animation.mp4",
+    "bytes": 12580370,
+    "sha256": "d255fa4a8673fff92f484f318ba296e76ebe07e227d043774f92c51b05d18c12",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x2a687685e1db39cb207a1a42778124016f5b8749/tokens/2/animation.mp4"
+  },
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:49:05.936Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x2A687685e1dB39Cb207a1A42778124016f5B8749",
+      "name": "salvlion googol",
+      "symbol": "slvln",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "salvlion googol",
+        "collectionSlug": "salvlion-googol",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/0x2a687685e1db39cb207a1a42778124016f5b8749/7fb1470fb1902c40d7ca0dc344cf3c17.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:22:28.735555192Z"
+      },
+      "isSpam": true,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "2",
+    "tokenType": "ERC721",
+    "name": "chessboard",
+    "description": null,
+    "tokenUri": "https://arweave.net/5Y9peahz2h2HuAb_KF60RMUUPWS4St1k1sC0VqqSCvQ",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/d5596e094f1c9f23254d551d6c15c97c",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/d5596e094f1c9f23254d551d6c15c97c",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/d5596e094f1c9f23254d551d6c15c97c",
+      "contentType": "image/jpeg",
+      "size": 257973,
+      "originalUrl": "https://arweave.net/d3RI2vE7EvAjfTt3-NK3y4FabRsVs1pGfCh-AtW8yGQ"
+    },
+    "animation": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/d5596e094f1c9f23254d551d6c15c97c_animation",
+      "contentType": "video/mp4",
+      "size": 12580370,
+      "originalUrl": "https://arweave.net/9B2yteXT9kaxDCtBZAednqO2OLn72lEyPGtqwU4UQTI"
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/5Y9peahz2h2HuAb_KF60RMUUPWS4St1k1sC0VqqSCvQ",
+      "metadata": {
+        "created_by": "Mancel",
+        "name": "chessboard",
+        "animation_details": {
+          "bytes": 12580370,
+          "format": "MP4",
+          "duration": 5,
+          "sha256": "d255fa4a8673fff92f484f318ba296e76ebe07e227d043774f92c51b05d18c12",
+          "width": 4000,
+          "height": 4000,
+          "codecs": [
+            "H.264",
+            "AAC"
+          ]
+        },
+        "animation": "https://arweave.net/9B2yteXT9kaxDCtBZAednqO2OLn72lEyPGtqwU4UQTI",
+        "animation_url": "https://arweave.net/9B2yteXT9kaxDCtBZAednqO2OLn72lEyPGtqwU4UQTI",
+        "image_details": {
+          "bytes": 257973,
+          "format": "JPEG",
+          "sha256": "3390491423327f91ce6a2d56c3c469cb5e6739952dfbae611382831c3f0e9924",
+          "width": 4000,
+          "height": 4000
+        },
+        "image": "https://arweave.net/d3RI2vE7EvAjfTt3-NK3y4FabRsVs1pGfCh-AtW8yGQ",
+        "image_url": "https://arweave.net/d3RI2vE7EvAjfTt3-NK3y4FabRsVs1pGfCh-AtW8yGQ"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "salvlion googol",
+      "slug": "salvlion-googol",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-07-17T23:22:28.764772400Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

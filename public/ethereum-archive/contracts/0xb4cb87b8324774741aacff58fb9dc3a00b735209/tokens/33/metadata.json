@@ -1,0 +1,127 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
+  "token_id": "33",
+  "token_uri": "https://arweave.net/R28P-fBTf_jaYA3eADNoWuX2XlSBIOCrR2fIT-xrjkk/32",
+  "name": "heart-33",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "display_type": "text",
+      "value": "Zeropoet",
+      "trait_type": "Artist"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/gW0MGPzBj-S6ZfpqKTsdtgtO_cxGf_dfaYoustGejB0",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/9d0ba5f542ffeb39287351fff9824d03_ab9f517d",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/9d0ba5f542ffeb39287351fff9824d03_ab9f517d",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/9d0ba5f542ffeb39287351fff9824d03_ab9f517d"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "d68e46aa02da38dbbff5cdb2e3bbd0cdeff804130790a1a5b41bf2944de3eea8",
+  "metadata_path": "/ethereum-archive/contracts/0xb4cb87b8324774741aacff58fb9dc3a00b735209/tokens/33/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 2689223,
+    "sha256": "238b1af93cda288c924ec949f32b46224c91c74df2a33b341059253ac9697c3e",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0xb4cb87b8324774741aacff58fb9dc3a00b735209/tokens/33/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T04:05:01.033Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0xb4cb87b8324774741aacfF58fb9dc3a00B735209",
+      "name": "Hært",
+      "symbol": "HEART",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "Hært",
+        "collectionSlug": "haert-544861504",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/0xb4cb87b8324774741aacff58fb9dc3a00b735209/92aeefcba432172328c88f6d49ca22/1592aeefcba432172328c88f6d49ca22.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T22:14:12.782134022Z"
+      },
+      "isSpam": true,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "33",
+    "tokenType": "ERC721",
+    "name": "heart-33",
+    "description": "",
+    "tokenUri": "https://arweave.net/R28P-fBTf_jaYA3eADNoWuX2XlSBIOCrR2fIT-xrjkk/32",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/9d0ba5f542ffeb39287351fff9824d03_ab9f517d",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/9d0ba5f542ffeb39287351fff9824d03_ab9f517d",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/9d0ba5f542ffeb39287351fff9824d03_ab9f517d",
+      "contentType": "image/jpeg",
+      "size": 2689223,
+      "originalUrl": "https://arweave.net/gW0MGPzBj-S6ZfpqKTsdtgtO_cxGf_dfaYoustGejB0"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/R28P-fBTf_jaYA3eADNoWuX2XlSBIOCrR2fIT-xrjkk/32",
+      "metadata": {
+        "image": "https://arweave.net/gW0MGPzBj-S6ZfpqKTsdtgtO_cxGf_dfaYoustGejB0",
+        "image_details": {
+          "format": "JPEG",
+          "width": "4032",
+          "sha256": "238b1af93cda288c924ec949f32b46224c91c74df2a33b341059253ac9697c3e",
+          "bytes": "2689223",
+          "height": "3024"
+        },
+        "image_url": "https://arweave.net/gW0MGPzBj-S6ZfpqKTsdtgtO_cxGf_dfaYoustGejB0",
+        "name": "heart-33",
+        "description": "",
+        "attributes": [
+          {
+            "display_type": "text",
+            "value": "Zeropoet",
+            "trait_type": "Artist"
+          }
+        ],
+        "created_by": "Zeropoet"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "Hært",
+      "slug": "haert-544861504",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-22T23:58:54.535210357Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

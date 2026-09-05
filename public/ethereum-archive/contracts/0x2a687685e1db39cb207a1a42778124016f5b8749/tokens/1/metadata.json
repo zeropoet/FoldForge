@@ -1,0 +1,144 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x2a687685e1db39cb207a1a42778124016f5b8749",
+  "token_id": "1",
+  "token_uri": "https://arweave.net/ebKoF7MAT8TyLB6g0KHurcMCWhTlbovH0livN3qqEzk",
+  "name": "encryption",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://arweave.net/PVfabAqKhvPt_N-OD1pUgt8RUeUzqcYAygDvtLBOi8A",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/ab8e5a6b4ac1a10545485d4750dbd7fe",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/ab8e5a6b4ac1a10545485d4750dbd7fe",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/ab8e5a6b4ac1a10545485d4750dbd7fe"
+  ],
+  "animation_sources": [
+    "https://arweave.net/bugDIqKPF4E6S-y8-YXgxxni5gOvpWpidLwrtyLUKMA",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/ab8e5a6b4ac1a10545485d4750dbd7fe_animation"
+  ],
+  "evidence_sha256": "22fc3ad54e2429985ac2375bce513276505a976da023d02d7ca48bcfdb8f9fb0",
+  "metadata_path": "/ethereum-archive/contracts/0x2a687685e1db39cb207a1a42778124016f5b8749/tokens/1/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 1697016,
+    "sha256": "afccccbc4b72311adfcefccb751c9ac6baaba429a41c96af021c5adece758dda",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x2a687685e1db39cb207a1a42778124016f5b8749/tokens/1/image.jpg"
+  },
+  "animation": {
+    "file": "animation.mp4",
+    "bytes": 37556920,
+    "sha256": "56ea0e7e975316a89bae2730b0ae7dd1ddbd5f765cb001bf88e29d608380182d",
+    "media_type": "video/mp4",
+    "path": "/ethereum-archive/contracts/0x2a687685e1db39cb207a1a42778124016f5b8749/tokens/1/animation.mp4"
+  },
+  "archive_errors": [
+    {
+      "source": "https://arweave.net/PVfabAqKhvPt_N-OD1pUgt8RUeUzqcYAygDvtLBOi8A",
+      "error": "Media request failed (404) for https://arweave.net/PVfabAqKhvPt_N-OD1pUgt8RUeUzqcYAygDvtLBOi8A"
+    },
+    {
+      "source": "https://arweave.net/bugDIqKPF4E6S-y8-YXgxxni5gOvpWpidLwrtyLUKMA",
+      "error": "Media request failed (404) for https://arweave.net/bugDIqKPF4E6S-y8-YXgxxni5gOvpWpidLwrtyLUKMA"
+    }
+  ],
+  "observed_at": "2026-09-05T03:49:04.437Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x2A687685e1dB39Cb207a1A42778124016f5B8749",
+      "name": "salvlion googol",
+      "symbol": "slvln",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "salvlion googol",
+        "collectionSlug": "salvlion-googol",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/0x2a687685e1db39cb207a1a42778124016f5b8749/7fb1470fb1902c40d7ca0dc344cf3c17.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-07-17T23:22:28.735555192Z"
+      },
+      "isSpam": true,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "1",
+    "tokenType": "ERC721",
+    "name": "encryption",
+    "description": null,
+    "tokenUri": "https://arweave.net/ebKoF7MAT8TyLB6g0KHurcMCWhTlbovH0livN3qqEzk",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/ab8e5a6b4ac1a10545485d4750dbd7fe",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/ab8e5a6b4ac1a10545485d4750dbd7fe",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/ab8e5a6b4ac1a10545485d4750dbd7fe",
+      "contentType": "image/jpeg",
+      "size": 1697016,
+      "originalUrl": "https://arweave.net/PVfabAqKhvPt_N-OD1pUgt8RUeUzqcYAygDvtLBOi8A"
+    },
+    "animation": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/ab8e5a6b4ac1a10545485d4750dbd7fe_animation",
+      "contentType": "video/mp4",
+      "size": 37556920,
+      "originalUrl": "https://arweave.net/bugDIqKPF4E6S-y8-YXgxxni5gOvpWpidLwrtyLUKMA"
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/ebKoF7MAT8TyLB6g0KHurcMCWhTlbovH0livN3qqEzk",
+      "metadata": {
+        "image": "https://arweave.net/PVfabAqKhvPt_N-OD1pUgt8RUeUzqcYAygDvtLBOi8A",
+        "animation_url": "https://arweave.net/bugDIqKPF4E6S-y8-YXgxxni5gOvpWpidLwrtyLUKMA",
+        "image_details": {
+          "format": "JPEG",
+          "width": "3282",
+          "sha256": "afccccbc4b72311adfcefccb751c9ac6baaba429a41c96af021c5adece758dda",
+          "bytes": "1697016",
+          "height": "4000"
+        },
+        "image_url": "https://arweave.net/PVfabAqKhvPt_N-OD1pUgt8RUeUzqcYAygDvtLBOi8A",
+        "animation_details": {
+          "duration": "19",
+          "sha256": "56ea0e7e975316a89bae2730b0ae7dd1ddbd5f765cb001bf88e29d608380182d",
+          "bytes": "37556920",
+          "codecs": [
+            "H.264"
+          ],
+          "format": "MP4",
+          "width": "3282",
+          "height": "4000"
+        },
+        "name": "encryption",
+        "created_by": "Mancel",
+        "animation": "https://arweave.net/bugDIqKPF4E6S-y8-YXgxxni5gOvpWpidLwrtyLUKMA"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "salvlion googol",
+      "slug": "salvlion-googol",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-22T00:27:11.508735643Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

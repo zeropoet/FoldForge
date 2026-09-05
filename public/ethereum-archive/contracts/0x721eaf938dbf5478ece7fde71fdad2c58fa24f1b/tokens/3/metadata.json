@@ -1,0 +1,105 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x721eaf938dbf5478ece7fde71fdad2c58fa24f1b",
+  "token_id": "3",
+  "token_uri": "ipfs://QmbScZuRDTT28XgY161ovziXpTu5McLb4XpZWbpRFsWr2Q/metadata.json",
+  "name": "Iskariel",
+  "description": "⟁",
+  "token_type": "UNKNOWN",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmTeCphqvLPD3mqv2w5yeWx13X8h833y9eYvZiWHKWx9im/nft.png",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/6a4e5acb22ecb3263ed465e7626493ed",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/6a4e5acb22ecb3263ed465e7626493ed",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/6a4e5acb22ecb3263ed465e7626493ed"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "b2308d8cee5ce57c127aecbb62ac9d7d647554f6f93fa051cc5142ab8d63ee5c",
+  "metadata_path": "/ethereum-archive/contracts/0x721eaf938dbf5478ece7fde71fdad2c58fa24f1b/tokens/3/metadata.json",
+  "media": {
+    "file": "image.png",
+    "bytes": 33549547,
+    "sha256": "67cfb0795911214d200a1f2c044b32580ade0e96688cb9faa4682808faeb616f",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x721eaf938dbf5478ece7fde71fdad2c58fa24f1b/tokens/3/image.png"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:51:02.961Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x721eaf938DBf5478ECE7FDE71FDaD2C58fA24F1B",
+      "name": "Æø",
+      "symbol": "ASH-O",
+      "totalSupply": "4",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "Æø",
+        "collectionSlug": "ash-o",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/0x721eaf938dbf5478ece7fde71fdad2c58fa24f1b/d612af1a241106c6523261f1998b36/fcd612af1a241106c6523261f1998b36.png",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:30.365986716Z"
+      },
+      "isSpam": true,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "3",
+    "tokenType": "UNKNOWN",
+    "name": "Iskariel",
+    "description": "⟁",
+    "tokenUri": "ipfs://QmbScZuRDTT28XgY161ovziXpTu5McLb4XpZWbpRFsWr2Q/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/6a4e5acb22ecb3263ed465e7626493ed",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/6a4e5acb22ecb3263ed465e7626493ed",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/6a4e5acb22ecb3263ed465e7626493ed",
+      "contentType": "image/png",
+      "size": 33549547,
+      "originalUrl": "https://ipfs.io/ipfs/QmTeCphqvLPD3mqv2w5yeWx13X8h833y9eYvZiWHKWx9im/nft.png"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmbScZuRDTT28XgY161ovziXpTu5McLb4XpZWbpRFsWr2Q/metadata.json",
+      "metadata": {
+        "name": "Iskariel",
+        "description": "⟁",
+        "image": "ipfs://QmTeCphqvLPD3mqv2w5yeWx13X8h833y9eYvZiWHKWx9im/nft.png"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "Æø",
+      "slug": "ash-o",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-22T23:58:54.307287339Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

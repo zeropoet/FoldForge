@@ -1,0 +1,110 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
+  "token_id": "32",
+  "token_uri": "ipfs://QmUJoW2oQCZCJ8Q7wwW2kdc24sqSQ7HZDDX843FZPWQyK2/metadata.json",
+  "name": "rwl-32",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/Qmd2MyxfUjNpiXdKyMmDpzFHwXmVpb9hhD6hN7LzKMMTXy/nft.jpg",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/133f1b5e1af228c5f46218c619408dcd",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/133f1b5e1af228c5f46218c619408dcd",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/133f1b5e1af228c5f46218c619408dcd"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "c785b23ce7e62eb8514775bb5d0df7e7564f47af0d7d7b9dae99dd4b5aeab54f",
+  "metadata_path": "/ethereum-archive/contracts/0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc/tokens/32/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 4164751,
+    "sha256": "d747b232795c794848bab9cfca6174381f171a95670aa70d2a198d058a100fd2",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc/tokens/32/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [
+    {
+      "source": "https://ipfs.io/ipfs/Qmd2MyxfUjNpiXdKyMmDpzFHwXmVpb9hhD6hN7LzKMMTXy/nft.jpg",
+      "error": "Media request failed (429) for https://ipfs.io/ipfs/Qmd2MyxfUjNpiXdKyMmDpzFHwXmVpb9hhD6hN7LzKMMTXy/nft.jpg"
+    }
+  ],
+  "observed_at": "2026-09-05T04:00:13.853Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x8E705e25AC32A49D0d1d7B1CB19F3685619457dC",
+      "name": "RWL",
+      "symbol": "RWL",
+      "totalSupply": "35",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "RWL",
+        "collectionSlug": "rwl-935925350",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc/100e4e6bfb2eb8749ae97d2498dd0a/3b100e4e6bfb2eb8749ae97d2498dd0a.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:30.402627742Z"
+      },
+      "isSpam": false,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "32",
+    "tokenType": "ERC721",
+    "name": "rwl-32",
+    "description": "",
+    "tokenUri": "ipfs://QmUJoW2oQCZCJ8Q7wwW2kdc24sqSQ7HZDDX843FZPWQyK2/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/133f1b5e1af228c5f46218c619408dcd",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/133f1b5e1af228c5f46218c619408dcd",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/133f1b5e1af228c5f46218c619408dcd",
+      "contentType": "image/jpeg",
+      "size": 4164751,
+      "originalUrl": "https://ipfs.io/ipfs/Qmd2MyxfUjNpiXdKyMmDpzFHwXmVpb9hhD6hN7LzKMMTXy/nft.jpg"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmUJoW2oQCZCJ8Q7wwW2kdc24sqSQ7HZDDX843FZPWQyK2/metadata.json",
+      "metadata": {
+        "name": "rwl-32",
+        "description": "",
+        "image": "ipfs://Qmd2MyxfUjNpiXdKyMmDpzFHwXmVpb9hhD6hN7LzKMMTXy/nft.jpg"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "RWL",
+      "slug": "rwl-935925350",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-22T23:58:54.425635267Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

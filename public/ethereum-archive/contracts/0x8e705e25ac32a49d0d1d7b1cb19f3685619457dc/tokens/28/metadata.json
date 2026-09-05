@@ -1,0 +1,105 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
+  "token_id": "28",
+  "token_uri": "ipfs://QmNgJ5U3q8F3tg4kZN6RHXwLS8NN3vG21LFWHXLGQ4qefG/metadata.json",
+  "name": "rwl-28",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://ipfs.io/ipfs/QmRQF9FnTwcbvkQCxEAnbhUB2TA9fxNpQCUvEg3LbdZ4SF/nft.jpg",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/131109a4683fa08140154f42a3d3eb51_5779f95c",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/131109a4683fa08140154f42a3d3eb51_5779f95c",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/131109a4683fa08140154f42a3d3eb51_5779f95c"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "06ca67ea4763ca3eebc6ac48b294c8e2ab17398509164c93ed7d553152715cd6",
+  "metadata_path": "/ethereum-archive/contracts/0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc/tokens/28/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 4761258,
+    "sha256": "9e4ed4d200248236cfdf37ffc55624c23f2d953ad9c8f31e0ac558d4a44ae7d6",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc/tokens/28/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "observed_at": "2026-09-05T03:59:29.718Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x8E705e25AC32A49D0d1d7B1CB19F3685619457dC",
+      "name": "RWL",
+      "symbol": "RWL",
+      "totalSupply": "35",
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "RWL",
+        "collectionSlug": "rwl-935925350",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc/100e4e6bfb2eb8749ae97d2498dd0a/3b100e4e6bfb2eb8749ae97d2498dd0a.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-08-21T22:43:30.402627742Z"
+      },
+      "isSpam": false,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "28",
+    "tokenType": "ERC721",
+    "name": "rwl-28",
+    "description": "",
+    "tokenUri": "ipfs://QmNgJ5U3q8F3tg4kZN6RHXwLS8NN3vG21LFWHXLGQ4qefG/metadata.json",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/131109a4683fa08140154f42a3d3eb51_5779f95c",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/131109a4683fa08140154f42a3d3eb51_5779f95c",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/131109a4683fa08140154f42a3d3eb51_5779f95c",
+      "contentType": "image/jpeg",
+      "size": 4761258,
+      "originalUrl": "https://ipfs.io/ipfs/QmRQF9FnTwcbvkQCxEAnbhUB2TA9fxNpQCUvEg3LbdZ4SF/nft.jpg"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "ipfs://QmNgJ5U3q8F3tg4kZN6RHXwLS8NN3vG21LFWHXLGQ4qefG/metadata.json",
+      "metadata": {
+        "name": "rwl-28",
+        "description": "",
+        "image": "ipfs://QmRQF9FnTwcbvkQCxEAnbhUB2TA9fxNpQCUvEg3LbdZ4SF/nft.jpg"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "RWL",
+      "slug": "rwl-935925350",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-08-22T23:58:54.407821596Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

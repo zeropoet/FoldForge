@@ -1,0 +1,16 @@
+{
+  "schema": "foldforge-ethereum-contract/v1",
+  "address": "0x721eaf938dbf5478ece7fde71fdad2c58fa24f1b",
+  "name": "Æø",
+  "symbol": "ASH-O",
+  "description": "",
+  "total_supply": "4",
+  "token_type": "ERC721",
+  "token_ids": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "image": "/ethereum-archive/contracts/0x721eaf938dbf5478ece7fde71fdad2c58fa24f1b/tokens/1/image.png"
+}

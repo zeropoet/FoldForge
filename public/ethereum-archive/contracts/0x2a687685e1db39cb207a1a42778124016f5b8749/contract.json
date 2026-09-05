@@ -1,0 +1,17 @@
+{
+  "schema": "foldforge-ethereum-contract/v1",
+  "address": "0x2a687685e1db39cb207a1a42778124016f5b8749",
+  "name": "salvlion googol",
+  "symbol": "slvln",
+  "description": "",
+  "total_supply": "",
+  "token_type": "ERC721",
+  "token_ids": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "7"
+  ],
+  "image": "/ethereum-archive/contracts/0x2a687685e1db39cb207a1a42778124016f5b8749/tokens/1/image.jpg"
+}
