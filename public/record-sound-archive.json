@@ -11,7 +11,20 @@
       "kind": "compositional grammar",
       "availability": "public structure",
       "source": { "repository": "zeropoet/FoldForge", "path": "grammar/composition-003-resonance.json", "url": "https://foldforge.zeropoet.xyz/" },
-      "sound": { "rootHz": 73.42, "ratios": [1, 1.5, 2.25], "waves": ["sine", "triangle", "sine"], "cutoffHz": 1480 }
+      "sound": {
+        "rootHz": 73.42,
+        "ratios": [1, 1.5, 2.25],
+        "waves": ["sine", "triangle", "sine"],
+        "cutoffHz": 1480,
+        "renderer": {
+          "engine": "continuous-voice/v1",
+          "masterGain": 0.24,
+          "fadeInSeconds": 2.2,
+          "fieldFilter": { "type": "lowpass", "frequency": 1480, "Q": 0.7 },
+          "partialGains": [1, 0.22, 0.08],
+          "stereo": "center"
+        }
+      }
     },
     {
       "id": "foldforge-sonic-forge",
@@ -20,7 +33,20 @@
       "kind": "deterministic instrument",
       "availability": "public instrument",
       "source": { "repository": "zeropoet/FoldForge", "path": "app/sonic-forge", "url": "https://foldforge.zeropoet.xyz/sonic-forge" },
-      "sound": { "rootHz": 58.27, "ratios": [1, 2.01, 3.99, 6.02], "waves": ["sine", "triangle", "triangle", "sine"], "cutoffHz": 2240 }
+      "sound": {
+        "rootHz": 58.27,
+        "ratios": [1, 2.01, 3.99, 6.02],
+        "waves": ["sine", "triangle", "triangle", "sine"],
+        "cutoffHz": 2240,
+        "renderer": {
+          "engine": "continuous-voice/v1",
+          "masterGain": 0.24,
+          "fadeInSeconds": 2.2,
+          "fieldFilter": { "type": "lowpass", "frequency": 2240, "Q": 0.7 },
+          "partialGains": [1, 0.22, 0.08, 0.03],
+          "stereo": "center"
+        }
+      }
     }
   ]
 }
