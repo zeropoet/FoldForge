@@ -1,5 +1,9 @@
 # FoldForge
 
+## Place in the studio architecture
+
+This repository is an independently governed module and project authority. [`zeropoet.xyz`](https://zeropoet.xyz/) is the studio index: it makes this work and its relations legible without absorbing them. [`rootlogos.com`](https://rootlogos.com/) is the public surface of synthesis: it builds from bounded outputs of the studio's repositories without replacing their sources, histories, or laws. This separation fulfills the system's working law—preserve authority at the source, reveal relation at studio scale, and permit synthesis without possession—as Root Logos enters its Weave era.
+
 FoldForge is a static Ethereum NFT archive and autonomous data composer for `zeropoet.eth`, presented through a monochrome, typography-led interface.
 
 Canonical public entry:
