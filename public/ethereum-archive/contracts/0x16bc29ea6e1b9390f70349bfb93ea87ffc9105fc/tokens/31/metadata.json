@@ -2,19 +2,24 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "31",
-  "token_uri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/6",
-  "name": "31-participatory-sovereignty",
+  "token_uri": "https://arweave.net/kayFueTWmPcxQEBAesReRA1_HL3e6F0RCESiMuz5kE8/6",
+  "name": "31-from-reference-to-participation",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/T90RWvrJ8IP9vLwcUA9CCsd6c9GNM-SNRgkA3mOXv04",
+    "https://arweave.net/uVPzElAZKFkOclBsRBdR40iyWXSFSKibLDu2mc3qU7k",
     "https://nft2-cdn.alchemy.com/eth-mainnet/0c4841afb01d10350e28c02920652be8_57daebed",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/0c4841afb01d10350e28c02920652be8_57daebed",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/0c4841afb01d10350e28c02920652be8_57daebed"
   ],
   "animation_sources": [],
-  "evidence_sha256": "3bb8ebc013496067e0897083b0d04f22b6ac07a68d9bac766d82de85aa7f2f7f",
+  "evidence_sha256": "455b5ff775ddfb3f84307a417ee091c5ec58a6886dd9328fc83adf234eaa64f6",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/31/metadata.json",
   "media": {
     "file": "image.png",
@@ -24,11 +29,16 @@
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/31/image.png"
   },
   "animation": null,
-  "archive_errors": [],
+  "archive_errors": [
+    {
+      "source": "https://arweave.net/uVPzElAZKFkOclBsRBdR40iyWXSFSKibLDu2mc3qU7k",
+      "error": "Media request failed (404) for https://arweave.net/uVPzElAZKFkOclBsRBdR40iyWXSFSKibLDu2mc3qU7k"
+    }
+  ],
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:48:08.573Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +67,16 @@
     },
     "tokenId": "31",
     "tokenType": "ERC721",
-    "name": "31-participatory-sovereignty",
+    "name": "31-from-reference-to-participation",
     "description": "",
-    "tokenUri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/6",
+    "tokenUri": "https://arweave.net/kayFueTWmPcxQEBAesReRA1_HL3e6F0RCESiMuz5kE8/6",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/0c4841afb01d10350e28c02920652be8_57daebed",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/0c4841afb01d10350e28c02920652be8_57daebed",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/0c4841afb01d10350e28c02920652be8_57daebed",
       "contentType": "image/png",
       "size": 494286,
-      "originalUrl": "https://arweave.net/T90RWvrJ8IP9vLwcUA9CCsd6c9GNM-SNRgkA3mOXv04"
+      "originalUrl": "https://arweave.net/uVPzElAZKFkOclBsRBdR40iyWXSFSKibLDu2mc3qU7k"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +87,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/6",
       "metadata": {
-        "name": "31-participatory-sovereignty",
+        "name": "31-from-reference-to-participation",
         "description": "",
         "image_details": {
-          "bytes": 494286,
+          "bytes": 442926,
           "format": "PNG",
-          "sha256": "2b54ede60b5bcab9e2dfeb25ddb6954d794f01a6ccf54cdeaa838c842d8d2576",
+          "sha256": "fb04bd630ff9d8771e1245539f8f2b41a08ac6d0405ef4d3f1403441612a4ac8",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/T90RWvrJ8IP9vLwcUA9CCsd6c9GNM-SNRgkA3mOXv04",
-        "image_url": "https://arweave.net/T90RWvrJ8IP9vLwcUA9CCsd6c9GNM-SNRgkA3mOXv04"
+        "image": "https://arweave.net/uVPzElAZKFkOclBsRBdR40iyWXSFSKibLDu2mc3qU7k",
+        "image_url": "https://arweave.net/uVPzElAZKFkOclBsRBdR40iyWXSFSKibLDu2mc3qU7k",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

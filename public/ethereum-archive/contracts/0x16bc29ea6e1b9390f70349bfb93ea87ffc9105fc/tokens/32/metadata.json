@@ -2,19 +2,24 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "32",
-  "token_uri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/7",
-  "name": "32-freedom-through-non-possession",
+  "token_uri": "https://arweave.net/kayFueTWmPcxQEBAesReRA1_HL3e6F0RCESiMuz5kE8/7",
+  "name": "32-the-art-of-war",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/1NaA0wZsZVFbmd4tLlEAxJHZnC3279V8GIDmeG9jtQI",
+    "https://arweave.net/mAjbV4VCm0jp575PKh1TisDzysglar5WGJhGpbtK1ys",
     "https://nft2-cdn.alchemy.com/eth-mainnet/510a2e98e327384f404e54502a7203cb_883ed356",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/510a2e98e327384f404e54502a7203cb_883ed356",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/510a2e98e327384f404e54502a7203cb_883ed356"
   ],
   "animation_sources": [],
-  "evidence_sha256": "c298c8f1155e78bc1b0c40c2e993fc043f2c6f493ead48e590731ddde9fdf5dd",
+  "evidence_sha256": "6fd16227ce3ffbb9a7806870fda29f365fb7cb470e566968c9fafe7418692f3a",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/32/metadata.json",
   "media": {
     "file": "image.png",
@@ -24,11 +29,16 @@
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/32/image.png"
   },
   "animation": null,
-  "archive_errors": [],
+  "archive_errors": [
+    {
+      "source": "https://arweave.net/mAjbV4VCm0jp575PKh1TisDzysglar5WGJhGpbtK1ys",
+      "error": "Media request failed (404) for https://arweave.net/mAjbV4VCm0jp575PKh1TisDzysglar5WGJhGpbtK1ys"
+    }
+  ],
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:48:09.073Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +67,16 @@
     },
     "tokenId": "32",
     "tokenType": "ERC721",
-    "name": "32-freedom-through-non-possession",
+    "name": "32-the-art-of-war",
     "description": "",
-    "tokenUri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/7",
+    "tokenUri": "https://arweave.net/kayFueTWmPcxQEBAesReRA1_HL3e6F0RCESiMuz5kE8/7",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/510a2e98e327384f404e54502a7203cb_883ed356",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/510a2e98e327384f404e54502a7203cb_883ed356",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/510a2e98e327384f404e54502a7203cb_883ed356",
       "contentType": "image/png",
       "size": 487764,
-      "originalUrl": "https://arweave.net/1NaA0wZsZVFbmd4tLlEAxJHZnC3279V8GIDmeG9jtQI"
+      "originalUrl": "https://arweave.net/mAjbV4VCm0jp575PKh1TisDzysglar5WGJhGpbtK1ys"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +87,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/7",
       "metadata": {
-        "name": "32-freedom-through-non-possession",
+        "name": "32-the-art-of-war",
         "description": "",
         "image_details": {
-          "bytes": 487764,
+          "bytes": 783945,
           "format": "PNG",
-          "sha256": "a6e9a7e3f0d02eccb51bed01fc9d6fb95002ca4ae2f000edcab3ab9b1c1d43e3",
+          "sha256": "1ee882fa7d4a673ca3379f02416c7d5333f8d089971bcac1ff5d60ee1fe28da5",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/1NaA0wZsZVFbmd4tLlEAxJHZnC3279V8GIDmeG9jtQI",
-        "image_url": "https://arweave.net/1NaA0wZsZVFbmd4tLlEAxJHZnC3279V8GIDmeG9jtQI"
+        "image": "https://arweave.net/mAjbV4VCm0jp575PKh1TisDzysglar5WGJhGpbtK1ys",
+        "image_url": "https://arweave.net/mAjbV4VCm0jp575PKh1TisDzysglar5WGJhGpbtK1ys",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "43",
-  "token_uri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/6",
-  "name": "42-a-mathematical-theory-of-communication",
+  "token_uri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/6",
+  "name": "43-mutual-aid-a-factor-of-evolution",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/Q_8pkeQG9US_fEc69cm5oM_E9HCkFJfTeTRd3xZWaTA",
+    "https://arweave.net/Nlj5YktoRuc4ebQxinfjFXBDhBfEbxyXKnc3k0Awwq4",
     "https://nft2-cdn.alchemy.com/eth-mainnet/735f9076bc911c367edc64d48ee98fa8_a6bafa57",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/735f9076bc911c367edc64d48ee98fa8_a6bafa57",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/735f9076bc911c367edc64d48ee98fa8_a6bafa57"
   ],
   "animation_sources": [],
-  "evidence_sha256": "9be646c82ddc25cde1b53b1fed7ea9fb823271d1ec071267eeb60be915e708bc",
+  "evidence_sha256": "d22a133731135c783e54b43ceaa0922249182b9b48fecff8c4c682ad75213ff6",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/43/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 376800,
-    "sha256": "1d025173c559049081005852ce6ea6e8a16c12bd5fec42c2a5c0176e8cbd5f77",
+    "bytes": 683681,
+    "sha256": "b17d36a7a654e88209979ba3518819b83c1c4439ef94b5cae611a23857ceadd1",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/43/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:48:21.506Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "43",
     "tokenType": "ERC721",
-    "name": "42-a-mathematical-theory-of-communication",
+    "name": "43-mutual-aid-a-factor-of-evolution",
     "description": "",
-    "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/6",
+    "tokenUri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/6",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/735f9076bc911c367edc64d48ee98fa8_a6bafa57",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/735f9076bc911c367edc64d48ee98fa8_a6bafa57",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/735f9076bc911c367edc64d48ee98fa8_a6bafa57",
       "contentType": "image/png",
       "size": 376800,
-      "originalUrl": "https://arweave.net/Q_8pkeQG9US_fEc69cm5oM_E9HCkFJfTeTRd3xZWaTA"
+      "originalUrl": "https://arweave.net/Nlj5YktoRuc4ebQxinfjFXBDhBfEbxyXKnc3k0Awwq4"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +82,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/6",
       "metadata": {
-        "name": "42-a-mathematical-theory-of-communication",
+        "name": "43-mutual-aid-a-factor-of-evolution",
         "description": "",
         "image_details": {
-          "bytes": 376800,
+          "bytes": 683681,
           "format": "PNG",
-          "sha256": "1d025173c559049081005852ce6ea6e8a16c12bd5fec42c2a5c0176e8cbd5f77",
+          "sha256": "b17d36a7a654e88209979ba3518819b83c1c4439ef94b5cae611a23857ceadd1",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/Q_8pkeQG9US_fEc69cm5oM_E9HCkFJfTeTRd3xZWaTA",
-        "image_url": "https://arweave.net/Q_8pkeQG9US_fEc69cm5oM_E9HCkFJfTeTRd3xZWaTA"
+        "image": "https://arweave.net/Nlj5YktoRuc4ebQxinfjFXBDhBfEbxyXKnc3k0Awwq4",
+        "image_url": "https://arweave.net/Nlj5YktoRuc4ebQxinfjFXBDhBfEbxyXKnc3k0Awwq4",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

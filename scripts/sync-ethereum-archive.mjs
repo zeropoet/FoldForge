@@ -12,6 +12,7 @@ const root = resolve("public/ethereum-archive");
 const indexPath = join(root, "index.json");
 const soundArchivePath = resolve("public/record-sound-archive.json");
 const maxBytes = 99_000_000;
+const alwaysHydrateContracts = new Set(["0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc"]);
 
 if (!apiKey) throw new Error("ALCHEMY_API_KEY or NEXT_PUBLIC_ALCHEMY_API_KEY is required.");
 
@@ -34,6 +35,23 @@ const stableNumber = (value) => {
 };
 const safeTokenId = (value) => encodeURIComponent(String(value)).replaceAll("%", "_");
 const endpoint = (method) => `https://${network}.g.alchemy.com/nft/v3/${apiKey}/${method}`;
+const rpcEndpoint = `https://${network}.g.alchemy.com/v2/${apiKey}`;
+
+async function canonicalTokenUri(contract, tokenId) {
+  const data = `0xc87b56dd${BigInt(tokenId).toString(16).padStart(64, "0")}`;
+  const response = await fetch(rpcEndpoint, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "eth_call", params: [{ to: contract, data }, "latest"] }),
+    signal: AbortSignal.timeout(30_000),
+  });
+  if (!response.ok) throw new Error(`tokenURI call failed (${response.status}) for ${contract}:${tokenId}`);
+  const payload = await response.json();
+  const encoded = String(payload.result || "").replace(/^0x/, "");
+  if (encoded.length < 128) throw new Error(`tokenURI call returned invalid data for ${contract}:${tokenId}`);
+  const length = Number.parseInt(encoded.slice(64, 128), 16);
+  return Buffer.from(encoded.slice(128, 128 + length * 2), "hex").toString("utf8");
+}
 
 async function readPrevious() {
   try { return JSON.parse(await readFile(indexPath, "utf8")); } catch { return { tokens: [] }; }
@@ -60,7 +78,8 @@ async function fetchHoldings(owner) {
 async function hydrateCanonicalToken(token) {
   const hasMedia = imageSources(token).length || animationSources(token).length;
   const placeholder = !token.name || /^#?\s*\d+$/.test(token.name) || /^token\s+#?\d+$/i.test(token.name);
-  if (hasMedia && !placeholder) return token;
+  const contract = (token.contract?.address || token.contractAddress || "").toLowerCase();
+  if (!alwaysHydrateContracts.has(contract) && hasMedia && !placeholder) return token;
   const metadataUrl = normalize(token.tokenUri || token.raw?.tokenUri || "");
   if (!/^https?:\/\//i.test(metadataUrl)) return token;
   let failure;
@@ -158,7 +177,12 @@ let unchanged = 0;
 let holdingChanges = 0;
 
 for (const [providerKey, providerToken] of providerTokens) {
-  const token = await hydrateCanonicalToken(providerToken);
+  const providerContract = (providerToken.contract?.address || providerToken.contractAddress || "").toLowerCase();
+  const providerTokenId = String(providerToken.tokenId || "");
+  const authoritativeToken = alwaysHydrateContracts.has(providerContract)
+    ? { ...providerToken, tokenUri: await canonicalTokenUri(providerContract, providerTokenId) }
+    : providerToken;
+  const token = await hydrateCanonicalToken(authoritativeToken);
   const contract = (token.contract?.address || token.contractAddress || "").toLowerCase();
   const tokenId = String(token.tokenId || "");
   if (!contract || !tokenId) continue;

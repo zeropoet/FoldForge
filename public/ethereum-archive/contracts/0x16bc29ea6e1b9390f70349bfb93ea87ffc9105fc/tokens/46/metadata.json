@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "46",
-  "token_uri": "https://arweave.net/qp3dBDGOEK7RKg40vq4G6jbJZ_4qm-R4Kj6AyOcO4Js/2",
-  "name": "45-the-epic-of-gilgamesh-an-old-babylonian-version",
+  "token_uri": "https://arweave.net/GrvMdcYR7HieRdGnz8CNKcnY3erI-DdebzMCFu86MwQ/2",
+  "name": "46-sketch-of-the-analytical-engine-invented-by-charles-babbage-esq",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/Z9eqSn4m_i230ovYO_fyoQg7HbetbWKtGtWI9mAFkcM",
+    "https://arweave.net/icubFBd8hhtoW1mvC_u149P3MxsIpwZ6Vd2q-J-xFa4",
     "https://nft2-cdn.alchemy.com/eth-mainnet/e8ff7eb7dcf25afc6cca190b20735e60_0fc70dec",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/e8ff7eb7dcf25afc6cca190b20735e60_0fc70dec",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/e8ff7eb7dcf25afc6cca190b20735e60_0fc70dec"
   ],
   "animation_sources": [],
-  "evidence_sha256": "0947a8458d93b0f0267ebf5d1d65f04190cf86d05a991083526ef2c5126853cb",
+  "evidence_sha256": "c52a7ee2fac82751cb55f07a659748c5de3020128b3e30a4f50bddbcd1e5b6b6",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/46/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 463710,
-    "sha256": "0f8ad37104043306fcb0092325a67a844a6a75dd758e25288afec887fb5d75e3",
+    "bytes": 618284,
+    "sha256": "cd44e45d7e87d97b6981a1f77e4f5a8f518a0cdca4afbc8993ff3455e4232b42",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/46/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T04:21:44.154Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "46",
     "tokenType": "ERC721",
-    "name": "45-the-epic-of-gilgamesh-an-old-babylonian-version",
+    "name": "46-sketch-of-the-analytical-engine-invented-by-charles-babbage-esq",
     "description": "",
-    "tokenUri": "https://arweave.net/qp3dBDGOEK7RKg40vq4G6jbJZ_4qm-R4Kj6AyOcO4Js/2",
+    "tokenUri": "https://arweave.net/GrvMdcYR7HieRdGnz8CNKcnY3erI-DdebzMCFu86MwQ/2",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/e8ff7eb7dcf25afc6cca190b20735e60_0fc70dec",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/e8ff7eb7dcf25afc6cca190b20735e60_0fc70dec",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/e8ff7eb7dcf25afc6cca190b20735e60_0fc70dec",
       "contentType": "image/png",
       "size": 463710,
-      "originalUrl": "https://arweave.net/Z9eqSn4m_i230ovYO_fyoQg7HbetbWKtGtWI9mAFkcM"
+      "originalUrl": "https://arweave.net/icubFBd8hhtoW1mvC_u149P3MxsIpwZ6Vd2q-J-xFa4"
     },
     "animation": {
       "cachedUrl": null,
@@ -81,9 +86,9 @@
         "collection": "fold-forge",
         "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
         "token_standard": "erc721",
-        "name": "45-the-epic-of-gilgamesh-an-old-babylonian-version",
+        "name": "46-sketch-of-the-analytical-engine-invented-by-charles-babbage-esq",
         "description": "",
-        "image_url": "https://arweave.net/Z9eqSn4m_i230ovYO_fyoQg7HbetbWKtGtWI9mAFkcM",
+        "image_url": "https://arweave.net/icubFBd8hhtoW1mvC_u149P3MxsIpwZ6Vd2q-J-xFa4",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": null,
@@ -109,14 +114,20 @@
         "rarity": null,
         "subscription": null,
         "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ],
         "image_details": {
-          "bytes": 463710,
+          "bytes": 618284,
           "format": "PNG",
-          "sha256": "0f8ad37104043306fcb0092325a67a844a6a75dd758e25288afec887fb5d75e3",
+          "sha256": "cd44e45d7e87d97b6981a1f77e4f5a8f518a0cdca4afbc8993ff3455e4232b42",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/Z9eqSn4m_i230ovYO_fyoQg7HbetbWKtGtWI9mAFkcM"
+        "image": "https://arweave.net/icubFBd8hhtoW1mvC_u149P3MxsIpwZ6Vd2q-J-xFa4"
       },
       "error": null
     },

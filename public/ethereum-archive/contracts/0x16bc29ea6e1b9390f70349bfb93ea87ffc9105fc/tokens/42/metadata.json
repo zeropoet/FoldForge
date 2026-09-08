@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "42",
-  "token_uri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/5",
-  "name": "41-the-bhagavad-gita",
+  "token_uri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/5",
+  "name": "42-manifesto-of-the-communist-party",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/nNUPwaJsU5pP5mzDMaxLk_ZzH5xO_Qp134YeYLC7-sg",
+    "https://arweave.net/KNQbx0Of1EYs3DXpEoG6_34Nu2kfHKvSzRhGljIa4Vs",
     "https://nft2-cdn.alchemy.com/eth-mainnet/7222243b337ccc9a8c237952c48c8d94_6de9b440",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/7222243b337ccc9a8c237952c48c8d94_6de9b440",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/7222243b337ccc9a8c237952c48c8d94_6de9b440"
   ],
   "animation_sources": [],
-  "evidence_sha256": "22159615d7b39cf2a325ea6e71fdd57c81a016697ed00c2ae3fc8f24967fbc4f",
+  "evidence_sha256": "0a2bf2bd34c9f02c6fca64d0e1fae6d6e134b06f009c0329ed8e9e9f7b79b2aa",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/42/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 311168,
-    "sha256": "84ba3568a052d4312359f99f6683957d1c9ea8f5babbd04a1c3da6e6f26fe37d",
+    "bytes": 861160,
+    "sha256": "2404142246937d7bedf2ebb265b72b4f82f5200e825eb240124c4483f125207e",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/42/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:48:21.002Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "42",
     "tokenType": "ERC721",
-    "name": "41-the-bhagavad-gita",
+    "name": "42-manifesto-of-the-communist-party",
     "description": "",
-    "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/5",
+    "tokenUri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/5",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/7222243b337ccc9a8c237952c48c8d94_6de9b440",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/7222243b337ccc9a8c237952c48c8d94_6de9b440",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/7222243b337ccc9a8c237952c48c8d94_6de9b440",
       "contentType": "image/png",
       "size": 311168,
-      "originalUrl": "https://arweave.net/nNUPwaJsU5pP5mzDMaxLk_ZzH5xO_Qp134YeYLC7-sg"
+      "originalUrl": "https://arweave.net/KNQbx0Of1EYs3DXpEoG6_34Nu2kfHKvSzRhGljIa4Vs"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +82,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/5",
       "metadata": {
-        "name": "41-the-bhagavad-gita",
+        "name": "42-manifesto-of-the-communist-party",
         "description": "",
         "image_details": {
-          "bytes": 311168,
+          "bytes": 861160,
           "format": "PNG",
-          "sha256": "84ba3568a052d4312359f99f6683957d1c9ea8f5babbd04a1c3da6e6f26fe37d",
+          "sha256": "2404142246937d7bedf2ebb265b72b4f82f5200e825eb240124c4483f125207e",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/nNUPwaJsU5pP5mzDMaxLk_ZzH5xO_Qp134YeYLC7-sg",
-        "image_url": "https://arweave.net/nNUPwaJsU5pP5mzDMaxLk_ZzH5xO_Qp134YeYLC7-sg"
+        "image": "https://arweave.net/KNQbx0Of1EYs3DXpEoG6_34Nu2kfHKvSzRhGljIa4Vs",
+        "image_url": "https://arweave.net/KNQbx0Of1EYs3DXpEoG6_34Nu2kfHKvSzRhGljIa4Vs",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

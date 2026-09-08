@@ -6,21 +6,26 @@
   "name": "01-root-logos-founding-constitution",
   "description": "0e20f4a9",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://i2c.seadn.io/ethereum/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/b14e1f84f8290407289fdb25378940/32b14e1f84f8290407289fdb25378940.png",
+    "https://arweave.net/ff0L-g6xncxOugCDLlaalqyY3aqb7P2l-cI3mtgjmdc",
     "https://nft2-cdn.alchemy.com/eth-mainnet/00d736a2450ffe4ca4c0777c703687b7_1af898ab",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/00d736a2450ffe4ca4c0777c703687b7_1af898ab",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/00d736a2450ffe4ca4c0777c703687b7_1af898ab"
   ],
   "animation_sources": [],
-  "evidence_sha256": "154644246cf4a47c696914c7f24f8d21dcdebaf40ce65898bfb29533cee70bcf",
+  "evidence_sha256": "e65a89da58a0914b78ce25277154a5443482cc5d77c72a3aee5e01aa39e32542",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/1/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 7336,
-    "sha256": "47ffe57731579f9a7697a899e85fc1453668c9ba41bda280eed1cbb15aba4517",
-    "media_type": "image/avif",
+    "bytes": 922609,
+    "sha256": "db99776415375fbe8a33b0d100b323df1aaba4af5844915450915c893ce60c66",
+    "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/1/image.png"
   },
   "animation": null,
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:47:41.266Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -66,7 +71,7 @@
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/00d736a2450ffe4ca4c0777c703687b7_1af898ab",
       "contentType": "image/png",
       "size": 118842,
-      "originalUrl": "https://i2c.seadn.io/ethereum/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/b14e1f84f8290407289fdb25378940/32b14e1f84f8290407289fdb25378940.png"
+      "originalUrl": "https://arweave.net/ff0L-g6xncxOugCDLlaalqyY3aqb7P2l-cI3mtgjmdc"
     },
     "animation": {
       "cachedUrl": null,
@@ -83,7 +88,7 @@
         "token_standard": "erc721",
         "name": "01-root-logos-founding-constitution",
         "description": "",
-        "image_url": "https://i2c.seadn.io/ethereum/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/b14e1f84f8290407289fdb25378940/32b14e1f84f8290407289fdb25378940.png",
+        "image_url": "https://arweave.net/ff0L-g6xncxOugCDLlaalqyY3aqb7P2l-cI3mtgjmdc",
         "display_image_url": "https://i2c.seadn.io/ethereum/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/b14e1f84f8290407289fdb25378940/32b14e1f84f8290407289fdb25378940.png",
         "display_animation_url": null,
         "metadata_url": "https://arweave.net/FO5en7-Cal5VQc2zSYrRayJBAdZHPgJGtXTn8LV4Ef8",
@@ -108,7 +113,21 @@
         ],
         "rarity": null,
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ],
+        "image_details": {
+          "bytes": 922609,
+          "format": "PNG",
+          "sha256": "db99776415375fbe8a33b0d100b323df1aaba4af5844915450915c893ce60c66",
+          "width": 2400,
+          "height": 2400
+        },
+        "image": "https://arweave.net/ff0L-g6xncxOugCDLlaalqyY3aqb7P2l-cI3mtgjmdc"
       },
       "error": null
     },

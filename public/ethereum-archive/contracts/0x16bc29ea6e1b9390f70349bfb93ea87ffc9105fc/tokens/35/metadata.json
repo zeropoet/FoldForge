@@ -6,21 +6,26 @@
   "name": "35-the-dhammapada",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://i2c.seadn.io/ethereum/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/91d6abed0f19e06011eb631062a4c1/8991d6abed0f19e06011eb631062a4c1.png",
+    "https://arweave.net/3gQ4kdA698I2B0mq6GNN0jQCwBG6H4W-WegguUmJh5E",
     "https://nft2-cdn.alchemy.com/eth-mainnet/d9c0536f3d623e22e1b927d25ff62952_0f464a38",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/d9c0536f3d623e22e1b927d25ff62952_0f464a38",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/d9c0536f3d623e22e1b927d25ff62952_0f464a38"
   ],
   "animation_sources": [],
-  "evidence_sha256": "90addcb5a5e35e6e60f1439b734dffc73d9f6f6a0628f6774f6e1197f4bdf5ad",
+  "evidence_sha256": "4707aba0918e2c94bbd45fd451d2338e7623f38a6a62b982915f9eceb2ef6f6d",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/35/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 6164,
-    "sha256": "90f45684da9f85e7a0e76b65c13d9419bb59f9c5e88b30bf0532e62af1e42b28",
-    "media_type": "image/avif",
+    "bytes": 695676,
+    "sha256": "b851b9da50b5dd4b7ad42cb774864214f9dd49b3b15ae482c4ba1f14329ce254",
+    "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/35/image.png"
   },
   "animation": null,
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:48:10.827Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -66,7 +71,7 @@
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/d9c0536f3d623e22e1b927d25ff62952_0f464a38",
       "contentType": "image/png",
       "size": 338904,
-      "originalUrl": "https://i2c.seadn.io/ethereum/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/91d6abed0f19e06011eb631062a4c1/8991d6abed0f19e06011eb631062a4c1.png"
+      "originalUrl": "https://arweave.net/3gQ4kdA698I2B0mq6GNN0jQCwBG6H4W-WegguUmJh5E"
     },
     "animation": {
       "cachedUrl": null,
@@ -83,7 +88,7 @@
         "token_standard": "erc721",
         "name": "35-the-dhammapada",
         "description": "",
-        "image_url": "https://i2c.seadn.io/ethereum/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/91d6abed0f19e06011eb631062a4c1/8991d6abed0f19e06011eb631062a4c1.png",
+        "image_url": "https://arweave.net/3gQ4kdA698I2B0mq6GNN0jQCwBG6H4W-WegguUmJh5E",
         "display_image_url": "https://i2c.seadn.io/ethereum/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/91d6abed0f19e06011eb631062a4c1/8991d6abed0f19e06011eb631062a4c1.png",
         "display_animation_url": null,
         "metadata_url": "https://arweave.net/aS3E0BNGkX3bcILLDetCO_YP64pjhVBukYnpBZuj5UA",
@@ -112,7 +117,21 @@
           "rank": 2
         },
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ],
+        "image_details": {
+          "bytes": 695676,
+          "format": "PNG",
+          "sha256": "b851b9da50b5dd4b7ad42cb774864214f9dd49b3b15ae482c4ba1f14329ce254",
+          "width": 2400,
+          "height": 2400
+        },
+        "image": "https://arweave.net/3gQ4kdA698I2B0mq6GNN0jQCwBG6H4W-WegguUmJh5E"
       },
       "error": null
     },

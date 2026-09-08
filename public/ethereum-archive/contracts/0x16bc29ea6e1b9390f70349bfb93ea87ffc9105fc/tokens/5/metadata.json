@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "5",
-  "token_uri": "https://arweave.net/sqvSi786SV5K4Hk_fkJ5OQkUhoqlToWfndYCbjw68Kk/1",
-  "name": "04-bitcoin-a-peer-to-peer-electronic-cash-system",
+  "token_uri": "https://arweave.net/IzoKRzQRqhn8mp-TT0c3PibmoEpmBurJh_-Y-dol0x8/1",
+  "name": "05-bitcoin-a-peer-to-peer-electronic-cash-system",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/p-FZQVWR-qiKX4wsq2C8CXFVwXEEeYWeRiVyaf0XKaU",
+    "https://arweave.net/tyIFweD1osKgHQRnBl3_S6IKpeVk86kLadYBArZ9GEs",
     "https://nft2-cdn.alchemy.com/eth-mainnet/ac053f5c94d1f040162ba6c71cbf7bba_1df8d6ba",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/ac053f5c94d1f040162ba6c71cbf7bba_1df8d6ba",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/ac053f5c94d1f040162ba6c71cbf7bba_1df8d6ba"
   ],
   "animation_sources": [],
-  "evidence_sha256": "b6404d4c9cbae8969621e82ea8b62944849f96c8b4125e2785a51a20571bd0c8",
+  "evidence_sha256": "2bde018dbbd0900377f8ba538e574406829715a25624cb4ebe8ad3c0ff487eeb",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/5/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 531985,
-    "sha256": "b7f20e309121b8a3a18a8d8cd5be888ea2d79c8caedea8c58cf6870a4a4e532d",
+    "bytes": 562315,
+    "sha256": "bc6c0639af03b73b7ac2bf8f47b3813f0a2e2fae8f35b11f40929a4226e7401e",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/5/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:47:43.232Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "5",
     "tokenType": "ERC721",
-    "name": "04-bitcoin-a-peer-to-peer-electronic-cash-system",
+    "name": "05-bitcoin-a-peer-to-peer-electronic-cash-system",
     "description": "",
-    "tokenUri": "https://arweave.net/sqvSi786SV5K4Hk_fkJ5OQkUhoqlToWfndYCbjw68Kk/1",
+    "tokenUri": "https://arweave.net/IzoKRzQRqhn8mp-TT0c3PibmoEpmBurJh_-Y-dol0x8/1",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/ac053f5c94d1f040162ba6c71cbf7bba_1df8d6ba",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/ac053f5c94d1f040162ba6c71cbf7bba_1df8d6ba",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/ac053f5c94d1f040162ba6c71cbf7bba_1df8d6ba",
       "contentType": "image/avif",
       "size": 14189,
-      "originalUrl": "https://arweave.net/p-FZQVWR-qiKX4wsq2C8CXFVwXEEeYWeRiVyaf0XKaU"
+      "originalUrl": "https://arweave.net/tyIFweD1osKgHQRnBl3_S6IKpeVk86kLadYBArZ9GEs"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +82,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/sqvSi786SV5K4Hk_fkJ5OQkUhoqlToWfndYCbjw68Kk/1",
       "metadata": {
-        "name": "04-bitcoin-a-peer-to-peer-electronic-cash-system",
+        "name": "05-bitcoin-a-peer-to-peer-electronic-cash-system",
         "description": "",
         "image_details": {
-          "bytes": 531985,
+          "bytes": 562315,
           "format": "PNG",
-          "sha256": "b7f20e309121b8a3a18a8d8cd5be888ea2d79c8caedea8c58cf6870a4a4e532d",
+          "sha256": "bc6c0639af03b73b7ac2bf8f47b3813f0a2e2fae8f35b11f40929a4226e7401e",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/p-FZQVWR-qiKX4wsq2C8CXFVwXEEeYWeRiVyaf0XKaU",
-        "image_url": "https://arweave.net/p-FZQVWR-qiKX4wsq2C8CXFVwXEEeYWeRiVyaf0XKaU"
+        "image": "https://arweave.net/tyIFweD1osKgHQRnBl3_S6IKpeVk86kLadYBArZ9GEs",
+        "image_url": "https://arweave.net/tyIFweD1osKgHQRnBl3_S6IKpeVk86kLadYBArZ9GEs",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

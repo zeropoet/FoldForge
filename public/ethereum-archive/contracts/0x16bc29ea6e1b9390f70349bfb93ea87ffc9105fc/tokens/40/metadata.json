@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "40",
-  "token_uri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/3",
-  "name": "39-the-dhammapada",
+  "token_uri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/3",
+  "name": "40-frankenstein-or-the-modern-prometheus",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/M7aoKRhClg3t6rZklXYNI0fCUAnr0X6PkUsP4tMNKbI",
+    "https://arweave.net/kBTAlYOXPPnsaBjoNWdHzFzzmAcnhdPl-WHJ9itVORc",
     "https://nft2-cdn.alchemy.com/eth-mainnet/864d0e59afc1158837b5a265396143b9_3cbd1b3f",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/864d0e59afc1158837b5a265396143b9_3cbd1b3f",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/864d0e59afc1158837b5a265396143b9_3cbd1b3f"
   ],
   "animation_sources": [],
-  "evidence_sha256": "7479fa8dbd4b16797fdb831ae504c34e7eafc8461b402da7016817525126eb07",
+  "evidence_sha256": "16f8006f804e37e93b6718f547e7dc3ecc64cc23bc5ec577c7b26e09ae4618ba",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/40/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 478458,
-    "sha256": "90d07588813d5cc9efa250b24fc6ad15c72efa94a38f0e27ddff9d23c7137d31",
+    "bytes": 1029728,
+    "sha256": "ec31d5dcabc959e1317afb2b96926ceb906f0ae1c7aa6833aee053ba4bb26cf7",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/40/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:48:20.060Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "40",
     "tokenType": "ERC721",
-    "name": "39-the-dhammapada",
+    "name": "40-frankenstein-or-the-modern-prometheus",
     "description": "",
-    "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/3",
+    "tokenUri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/3",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/864d0e59afc1158837b5a265396143b9_3cbd1b3f",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/864d0e59afc1158837b5a265396143b9_3cbd1b3f",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/864d0e59afc1158837b5a265396143b9_3cbd1b3f",
       "contentType": "image/png",
       "size": 478458,
-      "originalUrl": "https://arweave.net/M7aoKRhClg3t6rZklXYNI0fCUAnr0X6PkUsP4tMNKbI"
+      "originalUrl": "https://arweave.net/kBTAlYOXPPnsaBjoNWdHzFzzmAcnhdPl-WHJ9itVORc"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +82,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/3",
       "metadata": {
-        "name": "39-the-dhammapada",
+        "name": "40-frankenstein-or-the-modern-prometheus",
         "description": "",
         "image_details": {
-          "bytes": 478458,
+          "bytes": 1029728,
           "format": "PNG",
-          "sha256": "90d07588813d5cc9efa250b24fc6ad15c72efa94a38f0e27ddff9d23c7137d31",
+          "sha256": "ec31d5dcabc959e1317afb2b96926ceb906f0ae1c7aa6833aee053ba4bb26cf7",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/M7aoKRhClg3t6rZklXYNI0fCUAnr0X6PkUsP4tMNKbI",
-        "image_url": "https://arweave.net/M7aoKRhClg3t6rZklXYNI0fCUAnr0X6PkUsP4tMNKbI"
+        "image": "https://arweave.net/kBTAlYOXPPnsaBjoNWdHzFzzmAcnhdPl-WHJ9itVORc",
+        "image_url": "https://arweave.net/kBTAlYOXPPnsaBjoNWdHzFzzmAcnhdPl-WHJ9itVORc",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

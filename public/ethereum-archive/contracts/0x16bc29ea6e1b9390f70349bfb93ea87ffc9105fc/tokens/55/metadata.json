@@ -2,33 +2,38 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "55",
-  "token_uri": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/7",
-  "name": "54-manifesto-of-the-communist-party",
+  "token_uri": "https://arweave.net/A13puo7UVR79N7o1JJJWlwWUt2G2gPRrySkpfSFnP1A/7",
+  "name": "55",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/Y69jZ5efBoIkYL9o6Yw1utBgwrtGX_Rm4R8gUvQGbV4",
+    "https://arweave.net/zqTiP-oAUpcOQ2Mg-Fk87p4lj0Kesph9cbsmt0EoERo",
     "https://nft2-cdn.alchemy.com/eth-mainnet/b1b8d226dd1c491ca4b0cec2ad99e7c0_bed5cbdd",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/b1b8d226dd1c491ca4b0cec2ad99e7c0_bed5cbdd",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/b1b8d226dd1c491ca4b0cec2ad99e7c0_bed5cbdd"
   ],
   "animation_sources": [],
-  "evidence_sha256": "f03638eb4fbf1f886b9d79db25dc060ac25633752f1efcb5a6c58ba39cbc7aab",
+  "evidence_sha256": "08641637297687a21c1a1a76340f2a8c658278c2e637533be00073f23572f29a",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/55/metadata.json",
   "media": {
-    "file": "image.png",
-    "bytes": 391750,
-    "sha256": "d0b0684ffbf7bbd4cd6fbec71ab8982c8330b1092bb67d4e2803fdbc1087686d",
-    "media_type": "image/png",
-    "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/55/image.png"
+    "file": "image.svg",
+    "bytes": 896,
+    "sha256": "9b17f7ce23aa62a7743442945011e87f79aade9c3dbaaf3e89e8cee2c9fdbbc5",
+    "media_type": "image/svg+xml",
+    "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/55/image.svg"
   },
   "animation": null,
   "archive_errors": [],
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:48:26.356Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "55",
     "tokenType": "ERC721",
-    "name": "54-manifesto-of-the-communist-party",
+    "name": "55",
     "description": "",
-    "tokenUri": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/7",
+    "tokenUri": "https://arweave.net/A13puo7UVR79N7o1JJJWlwWUt2G2gPRrySkpfSFnP1A/7",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/b1b8d226dd1c491ca4b0cec2ad99e7c0_bed5cbdd",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/b1b8d226dd1c491ca4b0cec2ad99e7c0_bed5cbdd",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/b1b8d226dd1c491ca4b0cec2ad99e7c0_bed5cbdd",
       "contentType": "image/png",
       "size": 391750,
-      "originalUrl": "https://arweave.net/Y69jZ5efBoIkYL9o6Yw1utBgwrtGX_Rm4R8gUvQGbV4"
+      "originalUrl": "https://arweave.net/zqTiP-oAUpcOQ2Mg-Fk87p4lj0Kesph9cbsmt0EoERo"
     },
     "animation": {
       "cachedUrl": null,
@@ -81,9 +86,9 @@
         "collection": "fold-forge",
         "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
         "token_standard": "erc721",
-        "name": "54-manifesto-of-the-communist-party",
+        "name": "55",
         "description": "",
-        "image_url": null,
+        "image_url": "https://arweave.net/zqTiP-oAUpcOQ2Mg-Fk87p4lj0Kesph9cbsmt0EoERo",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/7",
@@ -108,7 +113,19 @@
         ],
         "rarity": null,
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ],
+        "image_details": {
+          "bytes": 896,
+          "format": "SVG",
+          "sha256": "9b17f7ce23aa62a7743442945011e87f79aade9c3dbaaf3e89e8cee2c9fdbbc5"
+        },
+        "image": "https://arweave.net/zqTiP-oAUpcOQ2Mg-Fk87p4lj0Kesph9cbsmt0EoERo"
       },
       "error": null
     },

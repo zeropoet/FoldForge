@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "48",
-  "token_uri": "https://arweave.net/qp3dBDGOEK7RKg40vq4G6jbJZ_4qm-R4Kj6AyOcO4Js/4",
-  "name": "47-the-quran-the-meaning-of-the-glorious-koran",
+  "token_uri": "https://arweave.net/GrvMdcYR7HieRdGnz8CNKcnY3erI-DdebzMCFu86MwQ/4",
+  "name": "48-the-notebooks-of-leonardo-da-vinci-complete",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/24awiEOkp7w-NxU104e5qBBxfVbogwe34Nl377mv8Ik",
+    "https://arweave.net/BHQ3tCPOlLemYYCT_dRigSaGr1EtZAzabVlkIbtyb0k",
     "https://nft2-cdn.alchemy.com/eth-mainnet/f6d0581bf36f065e6b1cddc8315a4f4c_ceb31112",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/f6d0581bf36f065e6b1cddc8315a4f4c_ceb31112",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/f6d0581bf36f065e6b1cddc8315a4f4c_ceb31112"
   ],
   "animation_sources": [],
-  "evidence_sha256": "a435363965a818248130ad30a2a3d966dcbb63126e6c9a87fe32ee2f51b0aa7e",
+  "evidence_sha256": "c06da4b3c581e0e8954ab402595ddd8156397127bb539296ece5ac21bc220aed",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/48/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 450960,
-    "sha256": "0eb623c1bde306fb8085bd56d1eda925fe9b76aeb1b964ea8caa619c432ac895",
+    "bytes": 961317,
+    "sha256": "8c4e0c28adf1101f67c97b68a38e9a2dd4fce2822f4e2b84a7864f8cc3e89ecd",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/48/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T04:21:44.154Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "48",
     "tokenType": "ERC721",
-    "name": "47-the-quran-the-meaning-of-the-glorious-koran",
+    "name": "48-the-notebooks-of-leonardo-da-vinci-complete",
     "description": "",
-    "tokenUri": "https://arweave.net/qp3dBDGOEK7RKg40vq4G6jbJZ_4qm-R4Kj6AyOcO4Js/4",
+    "tokenUri": "https://arweave.net/GrvMdcYR7HieRdGnz8CNKcnY3erI-DdebzMCFu86MwQ/4",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/f6d0581bf36f065e6b1cddc8315a4f4c_ceb31112",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/f6d0581bf36f065e6b1cddc8315a4f4c_ceb31112",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/f6d0581bf36f065e6b1cddc8315a4f4c_ceb31112",
       "contentType": "image/png",
       "size": 450960,
-      "originalUrl": "https://arweave.net/24awiEOkp7w-NxU104e5qBBxfVbogwe34Nl377mv8Ik"
+      "originalUrl": "https://arweave.net/BHQ3tCPOlLemYYCT_dRigSaGr1EtZAzabVlkIbtyb0k"
     },
     "animation": {
       "cachedUrl": null,
@@ -81,9 +86,9 @@
         "collection": "fold-forge",
         "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
         "token_standard": "erc721",
-        "name": "47-the-quran-the-meaning-of-the-glorious-koran",
+        "name": "48-the-notebooks-of-leonardo-da-vinci-complete",
         "description": "",
-        "image_url": "https://arweave.net/24awiEOkp7w-NxU104e5qBBxfVbogwe34Nl377mv8Ik",
+        "image_url": "https://arweave.net/BHQ3tCPOlLemYYCT_dRigSaGr1EtZAzabVlkIbtyb0k",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": null,
@@ -109,14 +114,20 @@
         "rarity": null,
         "subscription": null,
         "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ],
         "image_details": {
-          "bytes": 450960,
+          "bytes": 961317,
           "format": "PNG",
-          "sha256": "0eb623c1bde306fb8085bd56d1eda925fe9b76aeb1b964ea8caa619c432ac895",
+          "sha256": "8c4e0c28adf1101f67c97b68a38e9a2dd4fce2822f4e2b84a7864f8cc3e89ecd",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/24awiEOkp7w-NxU104e5qBBxfVbogwe34Nl377mv8Ik"
+        "image": "https://arweave.net/BHQ3tCPOlLemYYCT_dRigSaGr1EtZAzabVlkIbtyb0k"
       },
       "error": null
     },

@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "6",
-  "token_uri": "https://arweave.net/sqvSi786SV5K4Hk_fkJ5OQkUhoqlToWfndYCbjw68Kk/2",
-  "name": "05-the-constitution-of-the-united-states-of-america-1787",
+  "token_uri": "https://arweave.net/IzoKRzQRqhn8mp-TT0c3PibmoEpmBurJh_-Y-dol0x8/2",
+  "name": "06-the-constitution-of-the-united-states-of-america-1787",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/MWehOWct-4kphYi7eZmyTWSd1_TdHb8B-jfL6tbwKv8",
+    "https://arweave.net/QUX6JrhoKwn_8njsUMcV3n0WZ1nXz8DxY0hYoVycUug",
     "https://nft2-cdn.alchemy.com/eth-mainnet/d646a239e8583e6cf92f17dbbbcd30d4_9533e08a",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/d646a239e8583e6cf92f17dbbbcd30d4_9533e08a",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/d646a239e8583e6cf92f17dbbbcd30d4_9533e08a"
   ],
   "animation_sources": [],
-  "evidence_sha256": "4be6be68d6774b3b24095ce8545fbd4d603b2165399138ee86bbe0a2633bda10",
+  "evidence_sha256": "fa3eb04d1416be7ad89f8c56578917e7dd404b196c345f7c5eaf8f302e04720f",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/6/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 470848,
-    "sha256": "49c25b86306d7a949437418a1d20c88459f3ee34fbfec6f0a6b8209c79ffb13d",
+    "bytes": 633770,
+    "sha256": "8c47b02517c1ed7dc6fe33a7019233131a28e71e47478e2caee2c29a3a5d2179",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/6/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:47:43.605Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "6",
     "tokenType": "ERC721",
-    "name": "05-the-constitution-of-the-united-states-of-america-1787",
+    "name": "06-the-constitution-of-the-united-states-of-america-1787",
     "description": "",
-    "tokenUri": "https://arweave.net/sqvSi786SV5K4Hk_fkJ5OQkUhoqlToWfndYCbjw68Kk/2",
+    "tokenUri": "https://arweave.net/IzoKRzQRqhn8mp-TT0c3PibmoEpmBurJh_-Y-dol0x8/2",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/d646a239e8583e6cf92f17dbbbcd30d4_9533e08a",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/d646a239e8583e6cf92f17dbbbcd30d4_9533e08a",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/d646a239e8583e6cf92f17dbbbcd30d4_9533e08a",
       "contentType": "image/avif",
       "size": 11020,
-      "originalUrl": "https://arweave.net/MWehOWct-4kphYi7eZmyTWSd1_TdHb8B-jfL6tbwKv8"
+      "originalUrl": "https://arweave.net/QUX6JrhoKwn_8njsUMcV3n0WZ1nXz8DxY0hYoVycUug"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +82,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/sqvSi786SV5K4Hk_fkJ5OQkUhoqlToWfndYCbjw68Kk/2",
       "metadata": {
-        "name": "05-the-constitution-of-the-united-states-of-america-1787",
+        "name": "06-the-constitution-of-the-united-states-of-america-1787",
         "description": "",
         "image_details": {
-          "bytes": 470848,
+          "bytes": 633770,
           "format": "PNG",
-          "sha256": "49c25b86306d7a949437418a1d20c88459f3ee34fbfec6f0a6b8209c79ffb13d",
+          "sha256": "8c47b02517c1ed7dc6fe33a7019233131a28e71e47478e2caee2c29a3a5d2179",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/MWehOWct-4kphYi7eZmyTWSd1_TdHb8B-jfL6tbwKv8",
-        "image_url": "https://arweave.net/MWehOWct-4kphYi7eZmyTWSd1_TdHb8B-jfL6tbwKv8"
+        "image": "https://arweave.net/QUX6JrhoKwn_8njsUMcV3n0WZ1nXz8DxY0hYoVycUug",
+        "image_url": "https://arweave.net/QUX6JrhoKwn_8njsUMcV3n0WZ1nXz8DxY0hYoVycUug",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

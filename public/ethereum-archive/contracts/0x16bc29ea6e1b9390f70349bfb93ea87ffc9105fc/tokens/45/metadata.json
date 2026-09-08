@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "45",
-  "token_uri": "https://arweave.net/qp3dBDGOEK7RKg40vq4G6jbJZ_4qm-R4Kj6AyOcO4Js/1",
-  "name": "44-uber-formal-unentscheidbare-satze-der-principia-mathematica-und-verwandter-systeme-i",
+  "token_uri": "https://arweave.net/GrvMdcYR7HieRdGnz8CNKcnY3erI-DdebzMCFu86MwQ/1",
+  "name": "45-the-calculating-engine",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/qlNNF8WeBLvERMOK0504p0eFGM0K-6KhytwVa0bmki8",
+    "https://arweave.net/OcpCdgHPnp27OoHVS3Z5E8yaWkHVX53o4U2Kd54ioV0",
     "https://nft2-cdn.alchemy.com/eth-mainnet/843eff35e450c57cfb489f7eb210f82f_ce4de2fd",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/843eff35e450c57cfb489f7eb210f82f_ce4de2fd",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/843eff35e450c57cfb489f7eb210f82f_ce4de2fd"
   ],
   "animation_sources": [],
-  "evidence_sha256": "9418133d546df5689f6118256d9cfd0b064b0d722aa18ad400c4c7ebd7ba960c",
+  "evidence_sha256": "8bc3512b6e8582d350217d6b8a4da3776eaa409507f24857829ca13b56046cc1",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/45/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 481798,
-    "sha256": "c21c0b52c51a42441e0b83eeb152c114a1c0e476a646244ed1dfc14ed7954783",
+    "bytes": 739306,
+    "sha256": "b0fe7c7f41591f1101c8e6ab1920ab5386a357813ccb64346cfc8965878ad920",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/45/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T04:21:44.154Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "45",
     "tokenType": "ERC721",
-    "name": "44-uber-formal-unentscheidbare-satze-der-principia-mathematica-und-verwandter-systeme-i",
+    "name": "45-the-calculating-engine",
     "description": "",
-    "tokenUri": "https://arweave.net/qp3dBDGOEK7RKg40vq4G6jbJZ_4qm-R4Kj6AyOcO4Js/1",
+    "tokenUri": "https://arweave.net/GrvMdcYR7HieRdGnz8CNKcnY3erI-DdebzMCFu86MwQ/1",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/843eff35e450c57cfb489f7eb210f82f_ce4de2fd",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/843eff35e450c57cfb489f7eb210f82f_ce4de2fd",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/843eff35e450c57cfb489f7eb210f82f_ce4de2fd",
       "contentType": "image/png",
       "size": 739306,
-      "originalUrl": "https://arweave.net/qlNNF8WeBLvERMOK0504p0eFGM0K-6KhytwVa0bmki8"
+      "originalUrl": "https://arweave.net/OcpCdgHPnp27OoHVS3Z5E8yaWkHVX53o4U2Kd54ioV0"
     },
     "animation": {
       "cachedUrl": null,
@@ -81,9 +86,9 @@
         "collection": "fold-forge",
         "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
         "token_standard": "erc721",
-        "name": "44-uber-formal-unentscheidbare-satze-der-principia-mathematica-und-verwandter-systeme-i",
+        "name": "45-the-calculating-engine",
         "description": "",
-        "image_url": "https://arweave.net/qlNNF8WeBLvERMOK0504p0eFGM0K-6KhytwVa0bmki8",
+        "image_url": "https://arweave.net/OcpCdgHPnp27OoHVS3Z5E8yaWkHVX53o4U2Kd54ioV0",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": null,
@@ -109,14 +114,20 @@
         "rarity": null,
         "subscription": null,
         "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ],
         "image_details": {
-          "bytes": 481798,
+          "bytes": 739306,
           "format": "PNG",
-          "sha256": "c21c0b52c51a42441e0b83eeb152c114a1c0e476a646244ed1dfc14ed7954783",
+          "sha256": "b0fe7c7f41591f1101c8e6ab1920ab5386a357813ccb64346cfc8965878ad920",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/qlNNF8WeBLvERMOK0504p0eFGM0K-6KhytwVa0bmki8"
+        "image": "https://arweave.net/OcpCdgHPnp27OoHVS3Z5E8yaWkHVX53o4U2Kd54ioV0"
       },
       "error": null
     },

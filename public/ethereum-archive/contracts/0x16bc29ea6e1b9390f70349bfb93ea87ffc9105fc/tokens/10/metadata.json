@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "10",
-  "token_uri": "https://arweave.net/yIGSJLsSjyn7XzkRrLbWC1PerqU7Dwse65Ik6Y_6U-Y/2",
-  "name": "09-the-tempest",
+  "token_uri": "https://arweave.net/ibzOpk91TFVh2SsvIIHl729Fu0hWlC3OaSQUKpIOcUA/2",
+  "name": "10-the-tempest",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/rlAQGZ0tz6rgtpn8sxXQ9ljKS749UFRjMtQ4RJHSN3E",
+    "https://arweave.net/7ijb8izOpoypdUzN3sWsHAi5Bdl6mQ9CSu4FzAcsr3k",
     "https://nft2-cdn.alchemy.com/eth-mainnet/4453f31a6b252e7350b2b24ddec4b1dd_111a179f",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/4453f31a6b252e7350b2b24ddec4b1dd_111a179f",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/4453f31a6b252e7350b2b24ddec4b1dd_111a179f"
   ],
   "animation_sources": [],
-  "evidence_sha256": "64b783a6c893111d444610279e0d91949b0880eab822e74338409362cebcb0d5",
+  "evidence_sha256": "f880561214357fbca26185411eefba5fde44d37654fe8db0bc13b191395af32e",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/10/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 512229,
-    "sha256": "af30dd6c5933f4ccb3c89feeef2497d7d6dfcc4f0d85aa217c9b381416b8fe69",
+    "bytes": 778651,
+    "sha256": "fe7f339d0a046900b8dd1f5a4d806425e3e1cf6218eb862897b9337604b5900e",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/10/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:47:45.298Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "10",
     "tokenType": "ERC721",
-    "name": "09-the-tempest",
+    "name": "10-the-tempest",
     "description": "",
-    "tokenUri": "https://arweave.net/yIGSJLsSjyn7XzkRrLbWC1PerqU7Dwse65Ik6Y_6U-Y/2",
+    "tokenUri": "https://arweave.net/ibzOpk91TFVh2SsvIIHl729Fu0hWlC3OaSQUKpIOcUA/2",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/4453f31a6b252e7350b2b24ddec4b1dd_111a179f",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/4453f31a6b252e7350b2b24ddec4b1dd_111a179f",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/4453f31a6b252e7350b2b24ddec4b1dd_111a179f",
       "contentType": "image/png",
       "size": 512229,
-      "originalUrl": "https://arweave.net/rlAQGZ0tz6rgtpn8sxXQ9ljKS749UFRjMtQ4RJHSN3E"
+      "originalUrl": "https://arweave.net/7ijb8izOpoypdUzN3sWsHAi5Bdl6mQ9CSu4FzAcsr3k"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +82,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/yIGSJLsSjyn7XzkRrLbWC1PerqU7Dwse65Ik6Y_6U-Y/2",
       "metadata": {
-        "name": "09-the-tempest",
+        "name": "10-the-tempest",
         "description": "",
         "image_details": {
-          "bytes": 512229,
+          "bytes": 778651,
           "format": "PNG",
-          "sha256": "af30dd6c5933f4ccb3c89feeef2497d7d6dfcc4f0d85aa217c9b381416b8fe69",
+          "sha256": "fe7f339d0a046900b8dd1f5a4d806425e3e1cf6218eb862897b9337604b5900e",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/rlAQGZ0tz6rgtpn8sxXQ9ljKS749UFRjMtQ4RJHSN3E",
-        "image_url": "https://arweave.net/rlAQGZ0tz6rgtpn8sxXQ9ljKS749UFRjMtQ4RJHSN3E"
+        "image": "https://arweave.net/7ijb8izOpoypdUzN3sWsHAi5Bdl6mQ9CSu4FzAcsr3k",
+        "image_url": "https://arweave.net/7ijb8izOpoypdUzN3sWsHAi5Bdl6mQ9CSu4FzAcsr3k",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

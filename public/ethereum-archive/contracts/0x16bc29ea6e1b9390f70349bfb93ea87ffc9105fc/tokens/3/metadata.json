@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "3",
-  "token_uri": "https://arweave.net/npIhya-TMjMJz-cxsrxt7YSrA943LyHisb9tpR_qJiA/2",
-  "name": "02-the-odyssey",
+  "token_uri": "https://arweave.net/t-LaZPvVaF1IoHuWIcwQ8Zrg_L40yqYlxVde49GdY-E/2",
+  "name": "03-the-odyssey",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/hfEV-nvPkHL-7xYk-TZ-CUcDeiBHPy6R2dveXH3zKxQ",
+    "https://arweave.net/oe27CXdk5DtmT3mjsYpzfW3eU-6swLhE4li-btfCkdk",
     "https://nft2-cdn.alchemy.com/eth-mainnet/db299983917ccb01779909f007064637_f82ae579",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/db299983917ccb01779909f007064637_f82ae579",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/db299983917ccb01779909f007064637_f82ae579"
   ],
   "animation_sources": [],
-  "evidence_sha256": "1c18ea5af76ce24ccb15e118ece93688ef048d0b460fac2c57f892748aa5d079",
+  "evidence_sha256": "7cb5ca656738e085a1d9b155f513771cb9264a27cb4388d8a0a263fa041dc8e5",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/3/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 566618,
-    "sha256": "0f1da912654e807d2ef6662edd8ef573365e2f8dd6a04bfc02d9aad1f9013dab",
+    "bytes": 975222,
+    "sha256": "221bfce0dbee04eb9db4db28d2ac2e02607690fa2ec1f423307daaa6a0beb85b",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/3/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:47:42.430Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "3",
     "tokenType": "ERC721",
-    "name": "02-the-odyssey",
+    "name": "03-the-odyssey",
     "description": "",
-    "tokenUri": "https://arweave.net/npIhya-TMjMJz-cxsrxt7YSrA943LyHisb9tpR_qJiA/2",
+    "tokenUri": "https://arweave.net/t-LaZPvVaF1IoHuWIcwQ8Zrg_L40yqYlxVde49GdY-E/2",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/db299983917ccb01779909f007064637_f82ae579",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/db299983917ccb01779909f007064637_f82ae579",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/db299983917ccb01779909f007064637_f82ae579",
       "contentType": "image/avif",
       "size": 3446,
-      "originalUrl": "https://arweave.net/hfEV-nvPkHL-7xYk-TZ-CUcDeiBHPy6R2dveXH3zKxQ"
+      "originalUrl": "https://arweave.net/oe27CXdk5DtmT3mjsYpzfW3eU-6swLhE4li-btfCkdk"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +82,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/npIhya-TMjMJz-cxsrxt7YSrA943LyHisb9tpR_qJiA/2",
       "metadata": {
-        "name": "02-the-odyssey",
+        "name": "03-the-odyssey",
         "description": "",
         "image_details": {
-          "bytes": 566618,
+          "bytes": 975222,
           "format": "PNG",
-          "sha256": "0f1da912654e807d2ef6662edd8ef573365e2f8dd6a04bfc02d9aad1f9013dab",
+          "sha256": "221bfce0dbee04eb9db4db28d2ac2e02607690fa2ec1f423307daaa6a0beb85b",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/hfEV-nvPkHL-7xYk-TZ-CUcDeiBHPy6R2dveXH3zKxQ",
-        "image_url": "https://arweave.net/hfEV-nvPkHL-7xYk-TZ-CUcDeiBHPy6R2dveXH3zKxQ"
+        "image": "https://arweave.net/oe27CXdk5DtmT3mjsYpzfW3eU-6swLhE4li-btfCkdk",
+        "image_url": "https://arweave.net/oe27CXdk5DtmT3mjsYpzfW3eU-6swLhE4li-btfCkdk",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

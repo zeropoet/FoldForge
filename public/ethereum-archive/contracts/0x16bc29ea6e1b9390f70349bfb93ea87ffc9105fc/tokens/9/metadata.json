@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "9",
-  "token_uri": "https://arweave.net/yIGSJLsSjyn7XzkRrLbWC1PerqU7Dwse65Ik6Y_6U-Y/1",
-  "name": "08-the-federalist-papers",
+  "token_uri": "https://arweave.net/ibzOpk91TFVh2SsvIIHl729Fu0hWlC3OaSQUKpIOcUA/1",
+  "name": "09-the-federalist-papers",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/pELA7P9ZwI9r0RE7ldKU0CdmuuudUFA5ENhgsOrYrnw",
+    "https://arweave.net/ACUB2uEpArmFQbKb8BZHgivBKwDszZY0YcXL9XqPuNk",
     "https://nft2-cdn.alchemy.com/eth-mainnet/b1d320db15fb553a2db421b384d76c6e_6ef828e3",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/b1d320db15fb553a2db421b384d76c6e_6ef828e3",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/b1d320db15fb553a2db421b384d76c6e_6ef828e3"
   ],
   "animation_sources": [],
-  "evidence_sha256": "a1281fc449acaf570ea779686cddf4bb51ad66e293452192a2af1f365fe848ae",
+  "evidence_sha256": "64fa96ed3befb6238439154755abbf3f8c6cc4bddfe5a9a88d8f8513b02d508b",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/9/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 412439,
-    "sha256": "a97c4aa1d497eddb9142cfb62c6315fc44d5211dbdb308db38d48764a768061e",
+    "bytes": 1396391,
+    "sha256": "ce395080969c6089b5a10656a7355f8a1ef1981c35b4051a7bc70557a9057a37",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/9/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:47:44.869Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "9",
     "tokenType": "ERC721",
-    "name": "08-the-federalist-papers",
+    "name": "09-the-federalist-papers",
     "description": "",
-    "tokenUri": "https://arweave.net/yIGSJLsSjyn7XzkRrLbWC1PerqU7Dwse65Ik6Y_6U-Y/1",
+    "tokenUri": "https://arweave.net/ibzOpk91TFVh2SsvIIHl729Fu0hWlC3OaSQUKpIOcUA/1",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/b1d320db15fb553a2db421b384d76c6e_6ef828e3",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/b1d320db15fb553a2db421b384d76c6e_6ef828e3",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/b1d320db15fb553a2db421b384d76c6e_6ef828e3",
       "contentType": "image/png",
       "size": 412439,
-      "originalUrl": "https://arweave.net/pELA7P9ZwI9r0RE7ldKU0CdmuuudUFA5ENhgsOrYrnw"
+      "originalUrl": "https://arweave.net/ACUB2uEpArmFQbKb8BZHgivBKwDszZY0YcXL9XqPuNk"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +82,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/yIGSJLsSjyn7XzkRrLbWC1PerqU7Dwse65Ik6Y_6U-Y/1",
       "metadata": {
-        "name": "08-the-federalist-papers",
+        "name": "09-the-federalist-papers",
         "description": "",
         "image_details": {
-          "bytes": 412439,
+          "bytes": 1396391,
           "format": "PNG",
-          "sha256": "a97c4aa1d497eddb9142cfb62c6315fc44d5211dbdb308db38d48764a768061e",
+          "sha256": "ce395080969c6089b5a10656a7355f8a1ef1981c35b4051a7bc70557a9057a37",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/pELA7P9ZwI9r0RE7ldKU0CdmuuudUFA5ENhgsOrYrnw",
-        "image_url": "https://arweave.net/pELA7P9ZwI9r0RE7ldKU0CdmuuudUFA5ENhgsOrYrnw"
+        "image": "https://arweave.net/ACUB2uEpArmFQbKb8BZHgivBKwDszZY0YcXL9XqPuNk",
+        "image_url": "https://arweave.net/ACUB2uEpArmFQbKb8BZHgivBKwDszZY0YcXL9XqPuNk",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

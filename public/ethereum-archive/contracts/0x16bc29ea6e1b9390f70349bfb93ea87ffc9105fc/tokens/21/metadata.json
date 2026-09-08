@@ -2,19 +2,24 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "21",
-  "token_uri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/1",
-  "name": "20-the-book-of-five-rings",
+  "token_uri": "https://arweave.net/95766vEf0qyOdgU1tW_Tiauc2LjY_P5BBMVBvi25Itc/1",
+  "name": "21-tao-te-ching",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/m4JG6ttr1hTtdQvzMSnf3mkvSe9c32IVJJ-U-CwPP1Y",
+    "https://arweave.net/pIyYdtQaS6GBwNGVczHu9JSOD6jqZv0unbd4cdCspNw",
     "https://nft2-cdn.alchemy.com/eth-mainnet/43d1c7f343e433fcb2739c1d0ebe0302_cbcb52e7",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/43d1c7f343e433fcb2739c1d0ebe0302_cbcb52e7",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/43d1c7f343e433fcb2739c1d0ebe0302_cbcb52e7"
   ],
   "animation_sources": [],
-  "evidence_sha256": "179736f220358d838423b5f1227f70d40ce4d9f193282490271e0ec3473773ab",
+  "evidence_sha256": "7531a06c050f22b556b87ab24f036273efab3dd4ee318ee686660cef50418be2",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/21/metadata.json",
   "media": {
     "file": "image.png",
@@ -24,11 +29,16 @@
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/21/image.png"
   },
   "animation": null,
-  "archive_errors": [],
+  "archive_errors": [
+    {
+      "source": "https://arweave.net/pIyYdtQaS6GBwNGVczHu9JSOD6jqZv0unbd4cdCspNw",
+      "error": "Media request failed (404) for https://arweave.net/pIyYdtQaS6GBwNGVczHu9JSOD6jqZv0unbd4cdCspNw"
+    }
+  ],
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:47:50.964Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +67,16 @@
     },
     "tokenId": "21",
     "tokenType": "ERC721",
-    "name": "20-the-book-of-five-rings",
+    "name": "21-tao-te-ching",
     "description": "",
-    "tokenUri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/1",
+    "tokenUri": "https://arweave.net/95766vEf0qyOdgU1tW_Tiauc2LjY_P5BBMVBvi25Itc/1",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/43d1c7f343e433fcb2739c1d0ebe0302_cbcb52e7",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/43d1c7f343e433fcb2739c1d0ebe0302_cbcb52e7",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/43d1c7f343e433fcb2739c1d0ebe0302_cbcb52e7",
       "contentType": "image/png",
       "size": 422584,
-      "originalUrl": "https://arweave.net/m4JG6ttr1hTtdQvzMSnf3mkvSe9c32IVJJ-U-CwPP1Y"
+      "originalUrl": "https://arweave.net/pIyYdtQaS6GBwNGVczHu9JSOD6jqZv0unbd4cdCspNw"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +87,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/1",
       "metadata": {
-        "name": "20-the-book-of-five-rings",
+        "name": "21-tao-te-ching",
         "description": "",
         "image_details": {
-          "bytes": 422584,
+          "bytes": 1154697,
           "format": "PNG",
-          "sha256": "0e7c6f061deda90e77faa0b83cb4b21aac1252e7518c57c9846c8018c0d9ca52",
+          "sha256": "31f2edfea7793176606f7a45c100cd2d26a89eaefbc9d4ceb0ed6bb63515d1c4",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/m4JG6ttr1hTtdQvzMSnf3mkvSe9c32IVJJ-U-CwPP1Y",
-        "image_url": "https://arweave.net/m4JG6ttr1hTtdQvzMSnf3mkvSe9c32IVJJ-U-CwPP1Y"
+        "image": "https://arweave.net/pIyYdtQaS6GBwNGVczHu9JSOD6jqZv0unbd4cdCspNw",
+        "image_url": "https://arweave.net/pIyYdtQaS6GBwNGVczHu9JSOD6jqZv0unbd4cdCspNw",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

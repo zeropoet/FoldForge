@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "17",
-  "token_uri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/3",
-  "name": "16-on-the-sources-of-knowledge-and-of-ignorance",
+  "token_uri": "https://arweave.net/SPNfTXhkTTz9IEHGyXCneREKE-ZM6FiBmc_O-xSKnc0/3",
+  "name": "17-constructor-theory",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/koIwTVtfimknAxuQizkL5go1DtKI8roUtAv1PmfFObM",
+    "https://arweave.net/bwKWYnEE3z0Od-OQ0AbV6YbuONHwNMysYDW1tXlD8dg",
     "https://nft2-cdn.alchemy.com/eth-mainnet/b3d9c1dd50e917c94c961dd1de535d88_a9d2a163",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/b3d9c1dd50e917c94c961dd1de535d88_a9d2a163",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/b3d9c1dd50e917c94c961dd1de535d88_a9d2a163"
   ],
   "animation_sources": [],
-  "evidence_sha256": "5441495ee5f74464291ed8ade48c33ac53b42e83ddba7435dc3ffa56acafc94b",
+  "evidence_sha256": "c5ee286ad0214194ca79e42b133a08f285e7d3d024600ee6809d3f9f40524a44",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/17/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 376195,
-    "sha256": "2011de5b8c40f542fef89df9c7df049e5cea857db53aa6847b8f9fda37f4ae66",
+    "bytes": 546151,
+    "sha256": "3fa10b0305c58a37b0addd6f644989f51cd70aee7e151eea938fdd2ced19e63b",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/17/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T04:21:44.154Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "17",
     "tokenType": "ERC721",
-    "name": "16-on-the-sources-of-knowledge-and-of-ignorance",
+    "name": "17-constructor-theory",
     "description": "",
-    "tokenUri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/3",
+    "tokenUri": "https://arweave.net/SPNfTXhkTTz9IEHGyXCneREKE-ZM6FiBmc_O-xSKnc0/3",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/b3d9c1dd50e917c94c961dd1de535d88_a9d2a163",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/b3d9c1dd50e917c94c961dd1de535d88_a9d2a163",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/b3d9c1dd50e917c94c961dd1de535d88_a9d2a163",
       "contentType": "image/png",
       "size": 403977,
-      "originalUrl": "https://arweave.net/koIwTVtfimknAxuQizkL5go1DtKI8roUtAv1PmfFObM"
+      "originalUrl": "https://arweave.net/bwKWYnEE3z0Od-OQ0AbV6YbuONHwNMysYDW1tXlD8dg"
     },
     "animation": {
       "cachedUrl": null,
@@ -81,9 +86,9 @@
         "collection": "fold-forge",
         "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
         "token_standard": "erc721",
-        "name": "16-on-the-sources-of-knowledge-and-of-ignorance",
+        "name": "17-constructor-theory",
         "description": "",
-        "image_url": "https://arweave.net/koIwTVtfimknAxuQizkL5go1DtKI8roUtAv1PmfFObM",
+        "image_url": "https://arweave.net/bwKWYnEE3z0Od-OQ0AbV6YbuONHwNMysYDW1tXlD8dg",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": null,
@@ -109,14 +114,20 @@
         "rarity": null,
         "subscription": null,
         "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ],
         "image_details": {
-          "bytes": 376195,
+          "bytes": 546151,
           "format": "PNG",
-          "sha256": "2011de5b8c40f542fef89df9c7df049e5cea857db53aa6847b8f9fda37f4ae66",
+          "sha256": "3fa10b0305c58a37b0addd6f644989f51cd70aee7e151eea938fdd2ced19e63b",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/koIwTVtfimknAxuQizkL5go1DtKI8roUtAv1PmfFObM"
+        "image": "https://arweave.net/bwKWYnEE3z0Od-OQ0AbV6YbuONHwNMysYDW1tXlD8dg"
       },
       "error": null
     },

@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "18",
-  "token_uri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/4",
-  "name": "17-constructor-theory",
+  "token_uri": "https://arweave.net/SPNfTXhkTTz9IEHGyXCneREKE-ZM6FiBmc_O-xSKnc0/4",
+  "name": "18-quantum-theory-the-church-turing-principle-and-the-universal-quantum-computer",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/Qirjv7fHFblWk_oN6aZ6QF5yWs_UF1qD2_OidEwOsCE",
+    "https://arweave.net/Ip0V4OgyNMgYPneyf-YHCchsujQYwepuP0KSQq7ZQFs",
     "https://nft2-cdn.alchemy.com/eth-mainnet/74081ca8bf03c6eb3ab88f1f2f35c412_c4f46882",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/74081ca8bf03c6eb3ab88f1f2f35c412_c4f46882",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/74081ca8bf03c6eb3ab88f1f2f35c412_c4f46882"
   ],
   "animation_sources": [],
-  "evidence_sha256": "70cd1391bef906b4debc58d2b68a64724b9c3619c2e6e48613944b6ff7381b32",
+  "evidence_sha256": "3f363cc86ef05bfbe7128039d936c82cff81cc3075b33e2d3bc73a3a3e55ac9b",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/18/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 500390,
-    "sha256": "0563099700296c7f09556304127e61d2c21ef2e9843bd820911f7b6578eacf55",
+    "bytes": 683787,
+    "sha256": "2062e3a091d4bba8c8f9d1d00688e08180f8f27f0dfa2d109cd569868b6d079c",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/18/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T04:21:44.154Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "18",
     "tokenType": "ERC721",
-    "name": "17-constructor-theory",
+    "name": "18-quantum-theory-the-church-turing-principle-and-the-universal-quantum-computer",
     "description": "",
-    "tokenUri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/4",
+    "tokenUri": "https://arweave.net/SPNfTXhkTTz9IEHGyXCneREKE-ZM6FiBmc_O-xSKnc0/4",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/74081ca8bf03c6eb3ab88f1f2f35c412_c4f46882",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/74081ca8bf03c6eb3ab88f1f2f35c412_c4f46882",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/74081ca8bf03c6eb3ab88f1f2f35c412_c4f46882",
       "contentType": "image/png",
       "size": 482543,
-      "originalUrl": "https://arweave.net/Qirjv7fHFblWk_oN6aZ6QF5yWs_UF1qD2_OidEwOsCE"
+      "originalUrl": "https://arweave.net/Ip0V4OgyNMgYPneyf-YHCchsujQYwepuP0KSQq7ZQFs"
     },
     "animation": {
       "cachedUrl": null,
@@ -81,9 +86,9 @@
         "collection": "fold-forge",
         "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
         "token_standard": "erc721",
-        "name": "17-constructor-theory",
+        "name": "18-quantum-theory-the-church-turing-principle-and-the-universal-quantum-computer",
         "description": "",
-        "image_url": "https://arweave.net/Qirjv7fHFblWk_oN6aZ6QF5yWs_UF1qD2_OidEwOsCE",
+        "image_url": "https://arweave.net/Ip0V4OgyNMgYPneyf-YHCchsujQYwepuP0KSQq7ZQFs",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": null,
@@ -109,14 +114,20 @@
         "rarity": null,
         "subscription": null,
         "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ],
         "image_details": {
-          "bytes": 500390,
+          "bytes": 683787,
           "format": "PNG",
-          "sha256": "0563099700296c7f09556304127e61d2c21ef2e9843bd820911f7b6578eacf55",
+          "sha256": "2062e3a091d4bba8c8f9d1d00688e08180f8f27f0dfa2d109cd569868b6d079c",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/Qirjv7fHFblWk_oN6aZ6QF5yWs_UF1qD2_OidEwOsCE"
+        "image": "https://arweave.net/Ip0V4OgyNMgYPneyf-YHCchsujQYwepuP0KSQq7ZQFs"
       },
       "error": null
     },

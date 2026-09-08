@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "25",
-  "token_uri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/5",
-  "name": "25-the-journal-membrane",
+  "token_uri": "https://arweave.net/95766vEf0qyOdgU1tW_Tiauc2LjY_P5BBMVBvi25Itc/5",
+  "name": "25-the-invisible-substrate",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/BizkdJQ5S3KABH_wC-nDXWQ7LjT_6_rXT8jgZ_NXF2M",
+    "https://arweave.net/ToHW2S6AUyM-0vMpyRQcx_IF93VLJhHueoCdyJ8uV1k",
     "https://nft2-cdn.alchemy.com/eth-mainnet/afaa9a3d6311c3884d84756691f53e25_4aed4c6d",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/afaa9a3d6311c3884d84756691f53e25_4aed4c6d",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/afaa9a3d6311c3884d84756691f53e25_4aed4c6d"
   ],
   "animation_sources": [],
-  "evidence_sha256": "42d9d6b126163763c9458b19a12627d4aa5028a00d117c20acdad48ae7c477fa",
+  "evidence_sha256": "6f424a7e843dfd7e55001ece95eec1f85d043283625a0f25864f6c9ee6804027",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/25/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 468621,
-    "sha256": "a6b2bd3321f729d8780b9590c11c0fc42cc73bc42e0766ce63015352d4d75a07",
+    "bytes": 436632,
+    "sha256": "1319079f18c01ee89dd7d0afe071eb33b40b5c2cdfb70750cc6dff324bc475dc",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/25/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:47:52.461Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "25",
     "tokenType": "ERC721",
-    "name": "25-the-journal-membrane",
+    "name": "25-the-invisible-substrate",
     "description": "",
-    "tokenUri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/5",
+    "tokenUri": "https://arweave.net/95766vEf0qyOdgU1tW_Tiauc2LjY_P5BBMVBvi25Itc/5",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/afaa9a3d6311c3884d84756691f53e25_4aed4c6d",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/afaa9a3d6311c3884d84756691f53e25_4aed4c6d",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/afaa9a3d6311c3884d84756691f53e25_4aed4c6d",
       "contentType": "image/png",
       "size": 468621,
-      "originalUrl": "https://arweave.net/BizkdJQ5S3KABH_wC-nDXWQ7LjT_6_rXT8jgZ_NXF2M"
+      "originalUrl": "https://arweave.net/ToHW2S6AUyM-0vMpyRQcx_IF93VLJhHueoCdyJ8uV1k"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +82,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/5",
       "metadata": {
-        "name": "25-the-journal-membrane",
+        "name": "25-the-invisible-substrate",
         "description": "",
         "image_details": {
-          "bytes": 468621,
+          "bytes": 436632,
           "format": "PNG",
-          "sha256": "a6b2bd3321f729d8780b9590c11c0fc42cc73bc42e0766ce63015352d4d75a07",
+          "sha256": "1319079f18c01ee89dd7d0afe071eb33b40b5c2cdfb70750cc6dff324bc475dc",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/BizkdJQ5S3KABH_wC-nDXWQ7LjT_6_rXT8jgZ_NXF2M",
-        "image_url": "https://arweave.net/BizkdJQ5S3KABH_wC-nDXWQ7LjT_6_rXT8jgZ_NXF2M"
+        "image": "https://arweave.net/ToHW2S6AUyM-0vMpyRQcx_IF93VLJhHueoCdyJ8uV1k",
+        "image_url": "https://arweave.net/ToHW2S6AUyM-0vMpyRQcx_IF93VLJhHueoCdyJ8uV1k",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

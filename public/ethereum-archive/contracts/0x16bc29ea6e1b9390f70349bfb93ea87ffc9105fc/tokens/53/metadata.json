@@ -2,33 +2,38 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "53",
-  "token_uri": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/5",
-  "name": "52-laws-of-the-game",
+  "token_uri": "https://arweave.net/A13puo7UVR79N7o1JJJWlwWUt2G2gPRrySkpfSFnP1A/5",
+  "name": "53",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://i2c.seadn.io/ethereum/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/80c40d063a2aa89459a34404f7b35b/fb80c40d063a2aa89459a34404f7b35b.png",
+    "https://arweave.net/zqTiP-oAUpcOQ2Mg-Fk87p4lj0Kesph9cbsmt0EoERo",
     "https://nft2-cdn.alchemy.com/eth-mainnet/a5cf13d5d71633efdf61897c70016532_619f95b8",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/a5cf13d5d71633efdf61897c70016532_619f95b8",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/a5cf13d5d71633efdf61897c70016532_619f95b8"
   ],
   "animation_sources": [],
-  "evidence_sha256": "046de7950194eb0d91a33cba05738e3ed8503388486113f7db6831a55900e55a",
+  "evidence_sha256": "31c57b775df70982800aa9c8b49825325956e3380c839de4c062620a5535f76d",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/53/metadata.json",
   "media": {
-    "file": "image.png",
-    "bytes": 4004,
-    "sha256": "0cf85b9d74671caf5b42e7b8c9d6bf25f82555535ec2545acbbf9636c2d0643c",
-    "media_type": "image/avif",
-    "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/53/image.png"
+    "file": "image.svg",
+    "bytes": 896,
+    "sha256": "9b17f7ce23aa62a7743442945011e87f79aade9c3dbaaf3e89e8cee2c9fdbbc5",
+    "media_type": "image/svg+xml",
+    "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/53/image.svg"
   },
   "animation": null,
   "archive_errors": [],
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:48:25.658Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "53",
     "tokenType": "ERC721",
-    "name": "52-laws-of-the-game",
+    "name": "53",
     "description": "",
-    "tokenUri": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/5",
+    "tokenUri": "https://arweave.net/A13puo7UVR79N7o1JJJWlwWUt2G2gPRrySkpfSFnP1A/5",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/a5cf13d5d71633efdf61897c70016532_619f95b8",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/a5cf13d5d71633efdf61897c70016532_619f95b8",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/a5cf13d5d71633efdf61897c70016532_619f95b8",
       "contentType": "image/png",
       "size": 29966,
-      "originalUrl": "https://i2c.seadn.io/ethereum/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/80c40d063a2aa89459a34404f7b35b/fb80c40d063a2aa89459a34404f7b35b.png"
+      "originalUrl": "https://arweave.net/zqTiP-oAUpcOQ2Mg-Fk87p4lj0Kesph9cbsmt0EoERo"
     },
     "animation": {
       "cachedUrl": null,
@@ -81,9 +86,9 @@
         "collection": "fold-forge",
         "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
         "token_standard": "erc721",
-        "name": "52-laws-of-the-game",
+        "name": "53",
         "description": "",
-        "image_url": "https://i2c.seadn.io/ethereum/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/80c40d063a2aa89459a34404f7b35b/fb80c40d063a2aa89459a34404f7b35b.png",
+        "image_url": "https://arweave.net/zqTiP-oAUpcOQ2Mg-Fk87p4lj0Kesph9cbsmt0EoERo",
         "display_image_url": "https://i2c.seadn.io/ethereum/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/80c40d063a2aa89459a34404f7b35b/fb80c40d063a2aa89459a34404f7b35b.png",
         "display_animation_url": null,
         "metadata_url": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/5",
@@ -108,7 +113,19 @@
         ],
         "rarity": null,
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ],
+        "image_details": {
+          "bytes": 896,
+          "format": "SVG",
+          "sha256": "9b17f7ce23aa62a7743442945011e87f79aade9c3dbaaf3e89e8cee2c9fdbbc5"
+        },
+        "image": "https://arweave.net/zqTiP-oAUpcOQ2Mg-Fk87p4lj0Kesph9cbsmt0EoERo"
       },
       "error": null
     },

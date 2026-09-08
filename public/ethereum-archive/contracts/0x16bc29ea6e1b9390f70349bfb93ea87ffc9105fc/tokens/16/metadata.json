@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "16",
-  "token_uri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/2",
-  "name": "15-the-life-of-the-buddha-according-to-the-pali-canon",
+  "token_uri": "https://arweave.net/SPNfTXhkTTz9IEHGyXCneREKE-ZM6FiBmc_O-xSKnc0/2",
+  "name": "16-the-life-of-the-buddha-according-to-the-pali-canon",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/jVWyG0nbU94GJNJC66SEjvvZLYMx9RdLVDZEN1cd4ZM",
+    "https://arweave.net/6t1z3H7r58sok01QCnUUgdMj2J58UfFVtUqYLLrenuI",
     "https://nft2-cdn.alchemy.com/eth-mainnet/7ce981a2a17d4630dd4630e819ea6261_313c3f71",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/7ce981a2a17d4630dd4630e819ea6261_313c3f71",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/7ce981a2a17d4630dd4630e819ea6261_313c3f71"
   ],
   "animation_sources": [],
-  "evidence_sha256": "715e67f5445a9bc010b5086522990adfa8435613a298b1bf7060174e832399fb",
+  "evidence_sha256": "2f78e7ba29a202196288221501e68eece5cdc67381f35f400ec4362bca6d622a",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/16/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 462882,
-    "sha256": "7b0f7561939a110ccd6911b5ef5b59d29114a4f35dac0344aae4d9695b581b0f",
+    "bytes": 755208,
+    "sha256": "ebabf4ee04a8bc9b6713fe6b3ad84d5f22ac04a137d55ffc25c78d4c690e3ece",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/16/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T04:21:44.154Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "16",
     "tokenType": "ERC721",
-    "name": "15-the-life-of-the-buddha-according-to-the-pali-canon",
+    "name": "16-the-life-of-the-buddha-according-to-the-pali-canon",
     "description": "",
-    "tokenUri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/2",
+    "tokenUri": "https://arweave.net/SPNfTXhkTTz9IEHGyXCneREKE-ZM6FiBmc_O-xSKnc0/2",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/7ce981a2a17d4630dd4630e819ea6261_313c3f71",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/7ce981a2a17d4630dd4630e819ea6261_313c3f71",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/7ce981a2a17d4630dd4630e819ea6261_313c3f71",
       "contentType": "image/png",
       "size": 452282,
-      "originalUrl": "https://arweave.net/jVWyG0nbU94GJNJC66SEjvvZLYMx9RdLVDZEN1cd4ZM"
+      "originalUrl": "https://arweave.net/6t1z3H7r58sok01QCnUUgdMj2J58UfFVtUqYLLrenuI"
     },
     "animation": {
       "cachedUrl": null,
@@ -81,9 +86,9 @@
         "collection": "fold-forge",
         "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
         "token_standard": "erc721",
-        "name": "15-the-life-of-the-buddha-according-to-the-pali-canon",
+        "name": "16-the-life-of-the-buddha-according-to-the-pali-canon",
         "description": "",
-        "image_url": "https://arweave.net/jVWyG0nbU94GJNJC66SEjvvZLYMx9RdLVDZEN1cd4ZM",
+        "image_url": "https://arweave.net/6t1z3H7r58sok01QCnUUgdMj2J58UfFVtUqYLLrenuI",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": null,
@@ -109,14 +114,20 @@
         "rarity": null,
         "subscription": null,
         "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ],
         "image_details": {
-          "bytes": 462882,
+          "bytes": 755208,
           "format": "PNG",
-          "sha256": "7b0f7561939a110ccd6911b5ef5b59d29114a4f35dac0344aae4d9695b581b0f",
+          "sha256": "ebabf4ee04a8bc9b6713fe6b3ad84d5f22ac04a137d55ffc25c78d4c690e3ece",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/jVWyG0nbU94GJNJC66SEjvvZLYMx9RdLVDZEN1cd4ZM"
+        "image": "https://arweave.net/6t1z3H7r58sok01QCnUUgdMj2J58UfFVtUqYLLrenuI"
       },
       "error": null
     },

@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "41",
-  "token_uri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/4",
-  "name": "40-zhuangzi",
+  "token_uri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/4",
+  "name": "41-on-the-origin-of-species-by-means-of-natural-selection",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/2E5Xue1xRE_IDATMcmVFduUUtXdI1qLSqaTMYBWrU9w",
+    "https://arweave.net/F1XD0lWmrB6TgI2ohNk6cifGn0GsiA6fvLtaiQ5wfTs",
     "https://nft2-cdn.alchemy.com/eth-mainnet/6551ec6bd2a87dd41dc119988884119e_249ead05",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/6551ec6bd2a87dd41dc119988884119e_249ead05",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/6551ec6bd2a87dd41dc119988884119e_249ead05"
   ],
   "animation_sources": [],
-  "evidence_sha256": "f82a0f06004c57426ca81c54b668b7dc4b9c619c5c269e7ef305d839c3d919c3",
+  "evidence_sha256": "93d31b9a7a19988cdd025107c8423f6fe153fccc23bdc6b4edb221f9cba226aa",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/41/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 381959,
-    "sha256": "f26ab4e04039ea06c95ebbed53d15973aadb84cf426f355e2da8e54596eb5550",
+    "bytes": 916596,
+    "sha256": "ddfbd693a37701be8d47c9d14362546c57c6edd72bea8363928227a97e1d0a96",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/41/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:48:20.512Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "41",
     "tokenType": "ERC721",
-    "name": "40-zhuangzi",
+    "name": "41-on-the-origin-of-species-by-means-of-natural-selection",
     "description": "",
-    "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/4",
+    "tokenUri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/4",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/6551ec6bd2a87dd41dc119988884119e_249ead05",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/6551ec6bd2a87dd41dc119988884119e_249ead05",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/6551ec6bd2a87dd41dc119988884119e_249ead05",
       "contentType": "image/png",
       "size": 381959,
-      "originalUrl": "https://arweave.net/2E5Xue1xRE_IDATMcmVFduUUtXdI1qLSqaTMYBWrU9w"
+      "originalUrl": "https://arweave.net/F1XD0lWmrB6TgI2ohNk6cifGn0GsiA6fvLtaiQ5wfTs"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +82,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/4",
       "metadata": {
-        "name": "40-zhuangzi",
+        "name": "41-on-the-origin-of-species-by-means-of-natural-selection",
         "description": "",
         "image_details": {
-          "bytes": 381959,
+          "bytes": 916596,
           "format": "PNG",
-          "sha256": "f26ab4e04039ea06c95ebbed53d15973aadb84cf426f355e2da8e54596eb5550",
+          "sha256": "ddfbd693a37701be8d47c9d14362546c57c6edd72bea8363928227a97e1d0a96",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/2E5Xue1xRE_IDATMcmVFduUUtXdI1qLSqaTMYBWrU9w",
-        "image_url": "https://arweave.net/2E5Xue1xRE_IDATMcmVFduUUtXdI1qLSqaTMYBWrU9w"
+        "image": "https://arweave.net/F1XD0lWmrB6TgI2ohNk6cifGn0GsiA6fvLtaiQ5wfTs",
+        "image_url": "https://arweave.net/F1XD0lWmrB6TgI2ohNk6cifGn0GsiA6fvLtaiQ5wfTs",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

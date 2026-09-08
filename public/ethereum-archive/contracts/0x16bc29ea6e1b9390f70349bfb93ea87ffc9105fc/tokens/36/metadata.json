@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "36",
-  "token_uri": "https://arweave.net/0aNC2P5RrXpAA8dToLYAEFCUoaxWRdi9sr1FD_P6490/1",
-  "name": "35-the-art-of-war",
+  "token_uri": "https://arweave.net/iO3_6lHKJxo2sZTjGSNjSJGefdsXI_HCSmlZMNE_-Gg/1",
+  "name": "36-zhuangzi",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/XDT1PwPN7bg_1KnAsM5CqorhTsE5iKDpGZb5IqdVwBs",
+    "https://arweave.net/87yAfRlbkpakl__fuAyIKXlZvE_kJRt8w3NfH3dMMPI",
     "https://nft2-cdn.alchemy.com/eth-mainnet/0a79963d3f8e55829501b9bad9c15f5f_0f464a38",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/0a79963d3f8e55829501b9bad9c15f5f_0f464a38",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/0a79963d3f8e55829501b9bad9c15f5f_0f464a38"
   ],
   "animation_sources": [],
-  "evidence_sha256": "5c2501093e22a7f44e7088513beae21cc66fdc022d7f3a404f8120c36492f99b",
+  "evidence_sha256": "b9a5ac5305f95bca6a9461afeae8c494f421ee7b0acc6c5103f6e28e979f3390",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/36/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 338904,
-    "sha256": "1128ae7536cdb834b9630381b5733f502f0872c1d69e692a98551642392654bf",
+    "bytes": 892168,
+    "sha256": "215f09cfecddb7a9fd440fb794b9905ebad8f442b57dbdbd30ec804c2264fc19",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/36/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:48:18.024Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "36",
     "tokenType": "ERC721",
-    "name": "35-the-art-of-war",
+    "name": "36-zhuangzi",
     "description": "",
-    "tokenUri": "https://arweave.net/0aNC2P5RrXpAA8dToLYAEFCUoaxWRdi9sr1FD_P6490/1",
+    "tokenUri": "https://arweave.net/iO3_6lHKJxo2sZTjGSNjSJGefdsXI_HCSmlZMNE_-Gg/1",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/0a79963d3f8e55829501b9bad9c15f5f_0f464a38",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/0a79963d3f8e55829501b9bad9c15f5f_0f464a38",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/0a79963d3f8e55829501b9bad9c15f5f_0f464a38",
       "contentType": "image/png",
       "size": 338904,
-      "originalUrl": "https://arweave.net/XDT1PwPN7bg_1KnAsM5CqorhTsE5iKDpGZb5IqdVwBs"
+      "originalUrl": "https://arweave.net/87yAfRlbkpakl__fuAyIKXlZvE_kJRt8w3NfH3dMMPI"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +82,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/0aNC2P5RrXpAA8dToLYAEFCUoaxWRdi9sr1FD_P6490/1",
       "metadata": {
-        "name": "35-the-art-of-war",
+        "name": "36-zhuangzi",
         "description": "",
         "image_details": {
-          "bytes": 338904,
+          "bytes": 892168,
           "format": "PNG",
-          "sha256": "1128ae7536cdb834b9630381b5733f502f0872c1d69e692a98551642392654bf",
+          "sha256": "215f09cfecddb7a9fd440fb794b9905ebad8f442b57dbdbd30ec804c2264fc19",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/XDT1PwPN7bg_1KnAsM5CqorhTsE5iKDpGZb5IqdVwBs",
-        "image_url": "https://arweave.net/XDT1PwPN7bg_1KnAsM5CqorhTsE5iKDpGZb5IqdVwBs"
+        "image": "https://arweave.net/87yAfRlbkpakl__fuAyIKXlZvE_kJRt8w3NfH3dMMPI",
+        "image_url": "https://arweave.net/87yAfRlbkpakl__fuAyIKXlZvE_kJRt8w3NfH3dMMPI",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

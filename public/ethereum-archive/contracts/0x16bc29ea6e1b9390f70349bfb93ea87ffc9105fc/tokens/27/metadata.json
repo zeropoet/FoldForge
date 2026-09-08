@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "27",
-  "token_uri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/2",
-  "name": "27-toward-a-moral-constitution-for-human-machine-civilization",
+  "token_uri": "https://arweave.net/kayFueTWmPcxQEBAesReRA1_HL3e6F0RCESiMuz5kE8/2",
+  "name": "27-participation-without-possession",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/uGfNIUNP19gB6UlM-xxZn6Cil1Tr-OBZ5St2y4mn37Q",
+    "https://arweave.net/uTzR7_SVk--eM0bfRbJDQSndRqRGDIpL3Ayc7d7K2IA",
     "https://nft2-cdn.alchemy.com/eth-mainnet/10790513df11ca34249b0a14109cab1b_fa191ae1",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/10790513df11ca34249b0a14109cab1b_fa191ae1",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/10790513df11ca34249b0a14109cab1b_fa191ae1"
   ],
   "animation_sources": [],
-  "evidence_sha256": "36a4f967171d18a4b8afdf715b2978e7a656b845827bc5a935d731896ac6ef03",
+  "evidence_sha256": "5b144f3e1f3f5d6f6d74cb219f468764aa2ac8a9cf78323429980b27c3287346",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/27/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 401534,
-    "sha256": "874fcbefc51437540c1db6a6e2532e28a74a55a856ed1cba786156ec7268a062",
+    "bytes": 368476,
+    "sha256": "2647e62f03c0919556da09d146ce5d37eae92464c67243aa7c62f461c79437cc",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/27/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:47:59.909Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "27",
     "tokenType": "ERC721",
-    "name": "27-toward-a-moral-constitution-for-human-machine-civilization",
+    "name": "27-participation-without-possession",
     "description": "",
-    "tokenUri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/2",
+    "tokenUri": "https://arweave.net/kayFueTWmPcxQEBAesReRA1_HL3e6F0RCESiMuz5kE8/2",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/10790513df11ca34249b0a14109cab1b_fa191ae1",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/10790513df11ca34249b0a14109cab1b_fa191ae1",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/10790513df11ca34249b0a14109cab1b_fa191ae1",
       "contentType": "image/png",
       "size": 401534,
-      "originalUrl": "https://arweave.net/uGfNIUNP19gB6UlM-xxZn6Cil1Tr-OBZ5St2y4mn37Q"
+      "originalUrl": "https://arweave.net/uTzR7_SVk--eM0bfRbJDQSndRqRGDIpL3Ayc7d7K2IA"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +82,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/2",
       "metadata": {
-        "name": "27-toward-a-moral-constitution-for-human-machine-civilization",
+        "name": "27-participation-without-possession",
         "description": "",
         "image_details": {
-          "bytes": 401534,
+          "bytes": 368476,
           "format": "PNG",
-          "sha256": "874fcbefc51437540c1db6a6e2532e28a74a55a856ed1cba786156ec7268a062",
+          "sha256": "2647e62f03c0919556da09d146ce5d37eae92464c67243aa7c62f461c79437cc",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/uGfNIUNP19gB6UlM-xxZn6Cil1Tr-OBZ5St2y4mn37Q",
-        "image_url": "https://arweave.net/uGfNIUNP19gB6UlM-xxZn6Cil1Tr-OBZ5St2y4mn37Q"
+        "image": "https://arweave.net/uTzR7_SVk--eM0bfRbJDQSndRqRGDIpL3Ayc7d7K2IA",
+        "image_url": "https://arweave.net/uTzR7_SVk--eM0bfRbJDQSndRqRGDIpL3Ayc7d7K2IA",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

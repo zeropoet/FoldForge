@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "19",
-  "token_uri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/5",
-  "name": "18-quantum-theory-the-church-turing-principle-and-the-universal-quantum-computer",
+  "token_uri": "https://arweave.net/SPNfTXhkTTz9IEHGyXCneREKE-ZM6FiBmc_O-xSKnc0/5",
+  "name": "19-the-logical-writings-of-karl-popper",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/zpty0eWKeqah6rNC_RM8f2t6EyoXZTC2Jseip1dDqEs",
+    "https://arweave.net/G9gYfQPoFAnQwpLXnu944MFCkZJNJYqNDOQ5zL8j-yU",
     "https://nft2-cdn.alchemy.com/eth-mainnet/f2df6e9f0f8ef7f4369a57bb0dc90788_3799661a",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/f2df6e9f0f8ef7f4369a57bb0dc90788_3799661a",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/f2df6e9f0f8ef7f4369a57bb0dc90788_3799661a"
   ],
   "animation_sources": [],
-  "evidence_sha256": "7f851ab69c16e0205dd581c22488245fbd25d8ffdc99ae835fb2fa227d1dd678",
+  "evidence_sha256": "4a0bf19cb6bc098e47e4da8348658220eb80ba3707b699473f9c423b7cdddce0",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/19/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 486368,
-    "sha256": "b0ad1de378f1abeb2527fcf5d2282f7021f5ca2820e97ecae8c511acf609d343",
+    "bytes": 908587,
+    "sha256": "f090a6a6f334b126e9462afeef0eeeef23db9ae5a5d106981be27593b04e7d82",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/19/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T04:21:44.154Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "19",
     "tokenType": "ERC721",
-    "name": "18-quantum-theory-the-church-turing-principle-and-the-universal-quantum-computer",
+    "name": "19-the-logical-writings-of-karl-popper",
     "description": "",
-    "tokenUri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/5",
+    "tokenUri": "https://arweave.net/SPNfTXhkTTz9IEHGyXCneREKE-ZM6FiBmc_O-xSKnc0/5",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/f2df6e9f0f8ef7f4369a57bb0dc90788_3799661a",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/f2df6e9f0f8ef7f4369a57bb0dc90788_3799661a",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/f2df6e9f0f8ef7f4369a57bb0dc90788_3799661a",
       "contentType": "image/png",
       "size": 471771,
-      "originalUrl": "https://arweave.net/zpty0eWKeqah6rNC_RM8f2t6EyoXZTC2Jseip1dDqEs"
+      "originalUrl": "https://arweave.net/G9gYfQPoFAnQwpLXnu944MFCkZJNJYqNDOQ5zL8j-yU"
     },
     "animation": {
       "cachedUrl": null,
@@ -81,9 +86,9 @@
         "collection": "fold-forge",
         "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
         "token_standard": "erc721",
-        "name": "18-quantum-theory-the-church-turing-principle-and-the-universal-quantum-computer",
+        "name": "19-the-logical-writings-of-karl-popper",
         "description": "",
-        "image_url": "https://arweave.net/zpty0eWKeqah6rNC_RM8f2t6EyoXZTC2Jseip1dDqEs",
+        "image_url": "https://arweave.net/G9gYfQPoFAnQwpLXnu944MFCkZJNJYqNDOQ5zL8j-yU",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": null,
@@ -109,14 +114,20 @@
         "rarity": null,
         "subscription": null,
         "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ],
         "image_details": {
-          "bytes": 486368,
+          "bytes": 908587,
           "format": "PNG",
-          "sha256": "b0ad1de378f1abeb2527fcf5d2282f7021f5ca2820e97ecae8c511acf609d343",
+          "sha256": "f090a6a6f334b126e9462afeef0eeeef23db9ae5a5d106981be27593b04e7d82",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/zpty0eWKeqah6rNC_RM8f2t6EyoXZTC2Jseip1dDqEs"
+        "image": "https://arweave.net/G9gYfQPoFAnQwpLXnu944MFCkZJNJYqNDOQ5zL8j-yU"
       },
       "error": null
     },

@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "15",
-  "token_uri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/1",
-  "name": "14-siddhartha-eine-indische-dichtung",
+  "token_uri": "https://arweave.net/SPNfTXhkTTz9IEHGyXCneREKE-ZM6FiBmc_O-xSKnc0/1",
+  "name": "15-siddhartha-eine-indische-dichtung",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/6ndiHIm08FN7BqcNEq_-vWIkCMleYZ0-ff7r15euoLI",
+    "https://arweave.net/3YvFwWPwTuTKiLy_uIU9zAtuBuKS_ONYfABv3Vm_2QY",
     "https://nft2-cdn.alchemy.com/eth-mainnet/ad44786fb405d5ccd324e3935e679239_4cbbbf8c",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/ad44786fb405d5ccd324e3935e679239_4cbbbf8c",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/ad44786fb405d5ccd324e3935e679239_4cbbbf8c"
   ],
   "animation_sources": [],
-  "evidence_sha256": "6a8b4a4389b7f44aed1f9bc8d269745bfb7a1f087f8b4eca4f8e18f701b50b85",
+  "evidence_sha256": "1cb050e36d69130e83f3fbb195b6dbf84001cfe74de554ab1165cc622002383e",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/15/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 346181,
-    "sha256": "c2c8d7d3c7cab4e0c5532dd0d0924e0dd15a0ce6ac69169e465f2db03bae3338",
+    "bytes": 972691,
+    "sha256": "50b68380de43e008e2ae1b52509fd61bc3803d1219c2b7061981ebf41c9e618b",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/15/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T04:21:44.154Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "15",
     "tokenType": "ERC721",
-    "name": "14-siddhartha-eine-indische-dichtung",
+    "name": "15-siddhartha-eine-indische-dichtung",
     "description": "",
-    "tokenUri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/1",
+    "tokenUri": "https://arweave.net/SPNfTXhkTTz9IEHGyXCneREKE-ZM6FiBmc_O-xSKnc0/1",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/ad44786fb405d5ccd324e3935e679239_4cbbbf8c",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/ad44786fb405d5ccd324e3935e679239_4cbbbf8c",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/ad44786fb405d5ccd324e3935e679239_4cbbbf8c",
       "contentType": "image/png",
       "size": 347616,
-      "originalUrl": "https://arweave.net/6ndiHIm08FN7BqcNEq_-vWIkCMleYZ0-ff7r15euoLI"
+      "originalUrl": "https://arweave.net/3YvFwWPwTuTKiLy_uIU9zAtuBuKS_ONYfABv3Vm_2QY"
     },
     "animation": {
       "cachedUrl": null,
@@ -81,9 +86,9 @@
         "collection": "fold-forge",
         "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
         "token_standard": "erc721",
-        "name": "14-siddhartha-eine-indische-dichtung",
+        "name": "15-siddhartha-eine-indische-dichtung",
         "description": "",
-        "image_url": "https://arweave.net/6ndiHIm08FN7BqcNEq_-vWIkCMleYZ0-ff7r15euoLI",
+        "image_url": "https://arweave.net/3YvFwWPwTuTKiLy_uIU9zAtuBuKS_ONYfABv3Vm_2QY",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": null,
@@ -109,14 +114,20 @@
         "rarity": null,
         "subscription": null,
         "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ],
         "image_details": {
-          "bytes": 346181,
+          "bytes": 972691,
           "format": "PNG",
-          "sha256": "c2c8d7d3c7cab4e0c5532dd0d0924e0dd15a0ce6ac69169e465f2db03bae3338",
+          "sha256": "50b68380de43e008e2ae1b52509fd61bc3803d1219c2b7061981ebf41c9e618b",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/6ndiHIm08FN7BqcNEq_-vWIkCMleYZ0-ff7r15euoLI"
+        "image": "https://arweave.net/3YvFwWPwTuTKiLy_uIU9zAtuBuKS_ONYfABv3Vm_2QY"
       },
       "error": null
     },

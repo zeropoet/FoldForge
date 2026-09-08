@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "39",
-  "token_uri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/2",
-  "name": "38-the-poetic-edda",
+  "token_uri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/2",
+  "name": "39-the-epic-of-gilgamesh-an-old-babylonian-version",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/gmdMaDhLlcaYz8AQd1uEUHIz_4XvsKallh4RXbDzybE",
+    "https://arweave.net/gmusV37k0VF-R1GpZSqJ5P0r6OxhrBbHasHIJ2Y7puM",
     "https://nft2-cdn.alchemy.com/eth-mainnet/8f30a364a89b7df4085bc2a15d6e3a06_3acbef9c",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/8f30a364a89b7df4085bc2a15d6e3a06_3acbef9c",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/8f30a364a89b7df4085bc2a15d6e3a06_3acbef9c"
   ],
   "animation_sources": [],
-  "evidence_sha256": "14fa940df586b6ad20a4a25fd3846e502c3e37c96f7c49c6efc299748cc71974",
+  "evidence_sha256": "6beac338d8cc0952b9cfbf93c539e59e825a4cc84b776be3a8bef5a8da0cc044",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/39/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 486221,
-    "sha256": "278b7faa74d398d7ca84016495cfbcc3bfd4c6c78a608d0c47da8a8221d16202",
+    "bytes": 635473,
+    "sha256": "6496d41e55ff482ecaeb65ee3d2b94d83ef6d2eb44c7909ae3594864955bed80",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/39/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:48:19.584Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "39",
     "tokenType": "ERC721",
-    "name": "38-the-poetic-edda",
+    "name": "39-the-epic-of-gilgamesh-an-old-babylonian-version",
     "description": "",
-    "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/2",
+    "tokenUri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/2",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/8f30a364a89b7df4085bc2a15d6e3a06_3acbef9c",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/8f30a364a89b7df4085bc2a15d6e3a06_3acbef9c",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/8f30a364a89b7df4085bc2a15d6e3a06_3acbef9c",
       "contentType": "image/png",
       "size": 486221,
-      "originalUrl": "https://arweave.net/gmdMaDhLlcaYz8AQd1uEUHIz_4XvsKallh4RXbDzybE"
+      "originalUrl": "https://arweave.net/gmusV37k0VF-R1GpZSqJ5P0r6OxhrBbHasHIJ2Y7puM"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +82,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/2",
       "metadata": {
-        "name": "38-the-poetic-edda",
+        "name": "39-the-epic-of-gilgamesh-an-old-babylonian-version",
         "description": "",
         "image_details": {
-          "bytes": 486221,
+          "bytes": 635473,
           "format": "PNG",
-          "sha256": "278b7faa74d398d7ca84016495cfbcc3bfd4c6c78a608d0c47da8a8221d16202",
+          "sha256": "6496d41e55ff482ecaeb65ee3d2b94d83ef6d2eb44c7909ae3594864955bed80",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/gmdMaDhLlcaYz8AQd1uEUHIz_4XvsKallh4RXbDzybE",
-        "image_url": "https://arweave.net/gmdMaDhLlcaYz8AQd1uEUHIz_4XvsKallh4RXbDzybE"
+        "image": "https://arweave.net/gmusV37k0VF-R1GpZSqJ5P0r6OxhrBbHasHIJ2Y7puM",
+        "image_url": "https://arweave.net/gmusV37k0VF-R1GpZSqJ5P0r6OxhrBbHasHIJ2Y7puM",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

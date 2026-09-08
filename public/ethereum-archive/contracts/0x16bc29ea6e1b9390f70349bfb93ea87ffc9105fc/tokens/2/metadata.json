@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "2",
-  "token_uri": "https://arweave.net/npIhya-TMjMJz-cxsrxt7YSrA943LyHisb9tpR_qJiA/1",
-  "name": "01-original-douay-rheims",
+  "token_uri": "https://arweave.net/t-LaZPvVaF1IoHuWIcwQ8Zrg_L40yqYlxVde49GdY-E/1",
+  "name": "02-original-douay-rheims",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/Z0x4pd84qbPfMFAzVC3dWRp_gacBtLA5DHO16Enr2Iw",
+    "https://arweave.net/C4jrpPQSquHFxWU5eqn1MCm6p3kMptFqGnKkHSXkKIE",
     "https://nft2-cdn.alchemy.com/eth-mainnet/b710954c91c453a693040d733554c018_22dfc7a4",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/b710954c91c453a693040d733554c018_22dfc7a4",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/b710954c91c453a693040d733554c018_22dfc7a4"
   ],
   "animation_sources": [],
-  "evidence_sha256": "6adc88641fd6be0dbc235bad1a21b12af0e3c14c62466f2a43a04bdbd78eb136",
+  "evidence_sha256": "c00ef6d47b7f79ea1dc4334be949ac9656b366c3d81d86e00918147a4b9f628b",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/2/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 1212670,
-    "sha256": "10d4fa7af316f2b20c454768e4a83e839fb4a48635c1ff02728a046abeb07339",
+    "bytes": 806679,
+    "sha256": "63f4bf57ccd1335e31e05b8225799cc0916552439f7b806651ad00042edc87f0",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/2/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:47:42.067Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "2",
     "tokenType": "ERC721",
-    "name": "01-original-douay-rheims",
+    "name": "02-original-douay-rheims",
     "description": "",
-    "tokenUri": "https://arweave.net/npIhya-TMjMJz-cxsrxt7YSrA943LyHisb9tpR_qJiA/1",
+    "tokenUri": "https://arweave.net/t-LaZPvVaF1IoHuWIcwQ8Zrg_L40yqYlxVde49GdY-E/1",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/b710954c91c453a693040d733554c018_22dfc7a4",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/b710954c91c453a693040d733554c018_22dfc7a4",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/b710954c91c453a693040d733554c018_22dfc7a4",
       "contentType": "image/avif",
       "size": 4426,
-      "originalUrl": "https://arweave.net/Z0x4pd84qbPfMFAzVC3dWRp_gacBtLA5DHO16Enr2Iw"
+      "originalUrl": "https://arweave.net/C4jrpPQSquHFxWU5eqn1MCm6p3kMptFqGnKkHSXkKIE"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +82,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/npIhya-TMjMJz-cxsrxt7YSrA943LyHisb9tpR_qJiA/1",
       "metadata": {
-        "name": "01-original-douay-rheims",
+        "name": "02-original-douay-rheims",
         "description": "",
         "image_details": {
-          "bytes": 1212670,
+          "bytes": 806679,
           "format": "PNG",
-          "sha256": "10d4fa7af316f2b20c454768e4a83e839fb4a48635c1ff02728a046abeb07339",
+          "sha256": "63f4bf57ccd1335e31e05b8225799cc0916552439f7b806651ad00042edc87f0",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/Z0x4pd84qbPfMFAzVC3dWRp_gacBtLA5DHO16Enr2Iw",
-        "image_url": "https://arweave.net/Z0x4pd84qbPfMFAzVC3dWRp_gacBtLA5DHO16Enr2Iw"
+        "image": "https://arweave.net/C4jrpPQSquHFxWU5eqn1MCm6p3kMptFqGnKkHSXkKIE",
+        "image_url": "https://arweave.net/C4jrpPQSquHFxWU5eqn1MCm6p3kMptFqGnKkHSXkKIE",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

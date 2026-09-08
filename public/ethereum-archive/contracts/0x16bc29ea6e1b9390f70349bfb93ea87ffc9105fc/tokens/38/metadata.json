@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "38",
-  "token_uri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/1",
-  "name": "37-psychology-of-the-unconscious",
+  "token_uri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/1",
+  "name": "38-a-mathematical-theory-of-communication",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/Wh0sCk0EgAYpx9U45bUCB5Io8_6Zi_XLu_eHMyi7XqM",
+    "https://arweave.net/5JW3xXs8rpLclchk9vLBk5iQYfJ8EnBP9F0EubycO2M",
     "https://nft2-cdn.alchemy.com/eth-mainnet/1faec944f134a95910e2441155de6c68_3220c6ab",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/1faec944f134a95910e2441155de6c68_3220c6ab",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/1faec944f134a95910e2441155de6c68_3220c6ab"
   ],
   "animation_sources": [],
-  "evidence_sha256": "73caadb5347f9b8b42101d589934de97317115683093ebb02e0b7fad75f64c66",
+  "evidence_sha256": "704d79856fbae466e742b4428026a68290bc4654b995540facd51dc9c33ecf3d",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/38/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 431399,
-    "sha256": "eed8f98ae58110f038005a674745252b16803b0af02e49c8e60fb6b1b2de4e61",
+    "bytes": 815465,
+    "sha256": "2cca25a66622f2d6049cdf07bf2d9d4dd8eebb359e8f4c79a04d53646ebcae51",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/38/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:48:19.044Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "38",
     "tokenType": "ERC721",
-    "name": "37-psychology-of-the-unconscious",
+    "name": "38-a-mathematical-theory-of-communication",
     "description": "",
-    "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/1",
+    "tokenUri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/1",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/1faec944f134a95910e2441155de6c68_3220c6ab",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/1faec944f134a95910e2441155de6c68_3220c6ab",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/1faec944f134a95910e2441155de6c68_3220c6ab",
       "contentType": "image/png",
       "size": 431399,
-      "originalUrl": "https://arweave.net/Wh0sCk0EgAYpx9U45bUCB5Io8_6Zi_XLu_eHMyi7XqM"
+      "originalUrl": "https://arweave.net/5JW3xXs8rpLclchk9vLBk5iQYfJ8EnBP9F0EubycO2M"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +82,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/1",
       "metadata": {
-        "name": "37-psychology-of-the-unconscious",
+        "name": "38-a-mathematical-theory-of-communication",
         "description": "",
         "image_details": {
-          "bytes": 431399,
+          "bytes": 815465,
           "format": "PNG",
-          "sha256": "eed8f98ae58110f038005a674745252b16803b0af02e49c8e60fb6b1b2de4e61",
+          "sha256": "2cca25a66622f2d6049cdf07bf2d9d4dd8eebb359e8f4c79a04d53646ebcae51",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/Wh0sCk0EgAYpx9U45bUCB5Io8_6Zi_XLu_eHMyi7XqM",
-        "image_url": "https://arweave.net/Wh0sCk0EgAYpx9U45bUCB5Io8_6Zi_XLu_eHMyi7XqM"
+        "image": "https://arweave.net/5JW3xXs8rpLclchk9vLBk5iQYfJ8EnBP9F0EubycO2M",
+        "image_url": "https://arweave.net/5JW3xXs8rpLclchk9vLBk5iQYfJ8EnBP9F0EubycO2M",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

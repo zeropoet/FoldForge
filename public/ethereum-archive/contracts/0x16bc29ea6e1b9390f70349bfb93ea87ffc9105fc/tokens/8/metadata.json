@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "8",
-  "token_uri": "https://arweave.net/sqvSi786SV5K4Hk_fkJ5OQkUhoqlToWfndYCbjw68Kk/4",
-  "name": "07-the-republic",
+  "token_uri": "https://arweave.net/IzoKRzQRqhn8mp-TT0c3PibmoEpmBurJh_-Y-dol0x8/4",
+  "name": "08-the-republic",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/vUKkLXzeQh7039IjDQsR33mQiFEDv8rgk5Y2-DlMcDE",
+    "https://arweave.net/McZ1nLwuRWNPMUL1q7LkkdTM6y3wcsKb2nEXlQIdyL0",
     "https://nft2-cdn.alchemy.com/eth-mainnet/8ca2b3c22634c42f45a5b9cf1acf31ee_b63fa51d",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/8ca2b3c22634c42f45a5b9cf1acf31ee_b63fa51d",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/8ca2b3c22634c42f45a5b9cf1acf31ee_b63fa51d"
   ],
   "animation_sources": [],
-  "evidence_sha256": "75a98c1036dd8b26f9d43dabca2928f498c3d3fc811fdb49a281ab431b0aa606",
+  "evidence_sha256": "0df66fa7cb4075e5a25848ab76a5f2d8bb8cb6670e57786f856a8957aded2c91",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/8/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 570039,
-    "sha256": "e356883ef62bd5caa032961f15ca2c365eebd19c5515eceb71761e65be8855f2",
+    "bytes": 744856,
+    "sha256": "473b2724d8c9a13d77b3d788ced3665aaed7037176db2e1192ac6fe8ea8ab54e",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/8/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:47:44.467Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "8",
     "tokenType": "ERC721",
-    "name": "07-the-republic",
+    "name": "08-the-republic",
     "description": "",
-    "tokenUri": "https://arweave.net/sqvSi786SV5K4Hk_fkJ5OQkUhoqlToWfndYCbjw68Kk/4",
+    "tokenUri": "https://arweave.net/IzoKRzQRqhn8mp-TT0c3PibmoEpmBurJh_-Y-dol0x8/4",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/8ca2b3c22634c42f45a5b9cf1acf31ee_b63fa51d",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/8ca2b3c22634c42f45a5b9cf1acf31ee_b63fa51d",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/8ca2b3c22634c42f45a5b9cf1acf31ee_b63fa51d",
       "contentType": "image/avif",
       "size": 15815,
-      "originalUrl": "https://arweave.net/vUKkLXzeQh7039IjDQsR33mQiFEDv8rgk5Y2-DlMcDE"
+      "originalUrl": "https://arweave.net/McZ1nLwuRWNPMUL1q7LkkdTM6y3wcsKb2nEXlQIdyL0"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +82,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/sqvSi786SV5K4Hk_fkJ5OQkUhoqlToWfndYCbjw68Kk/4",
       "metadata": {
-        "name": "07-the-republic",
+        "name": "08-the-republic",
         "description": "",
         "image_details": {
-          "bytes": 570039,
+          "bytes": 744856,
           "format": "PNG",
-          "sha256": "e356883ef62bd5caa032961f15ca2c365eebd19c5515eceb71761e65be8855f2",
+          "sha256": "473b2724d8c9a13d77b3d788ced3665aaed7037176db2e1192ac6fe8ea8ab54e",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/vUKkLXzeQh7039IjDQsR33mQiFEDv8rgk5Y2-DlMcDE",
-        "image_url": "https://arweave.net/vUKkLXzeQh7039IjDQsR33mQiFEDv8rgk5Y2-DlMcDE"
+        "image": "https://arweave.net/McZ1nLwuRWNPMUL1q7LkkdTM6y3wcsKb2nEXlQIdyL0",
+        "image_url": "https://arweave.net/McZ1nLwuRWNPMUL1q7LkkdTM6y3wcsKb2nEXlQIdyL0",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

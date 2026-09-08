@@ -2,19 +2,24 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "23",
-  "token_uri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/3",
-  "name": "22-great-founder-theory",
+  "token_uri": "https://arweave.net/95766vEf0qyOdgU1tW_Tiauc2LjY_P5BBMVBvi25Itc/3",
+  "name": "23-the-resonant-chamber",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/oCbk5AznBvqQQ02KvRuGjFTcJVzkNy4bzCdHTv4h4yI",
+    "https://arweave.net/S_iiYUKE_BzewM6BjaC-ly8NTehWDA9Q5_6jbfMWohQ",
     "https://nft2-cdn.alchemy.com/eth-mainnet/ad0496303b5333bebc697c5021063f52_49730b78",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/ad0496303b5333bebc697c5021063f52_49730b78",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/ad0496303b5333bebc697c5021063f52_49730b78"
   ],
   "animation_sources": [],
-  "evidence_sha256": "22ab8ff0e775556bb567d2e75706f33475418e813196f969c4ce3824c949948a",
+  "evidence_sha256": "29058706d049b942971ee900f7c94efa833b73fce90ad3d47062bb8df1747867",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/23/metadata.json",
   "media": {
     "file": "image.png",
@@ -24,11 +29,16 @@
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/23/image.png"
   },
   "animation": null,
-  "archive_errors": [],
+  "archive_errors": [
+    {
+      "source": "https://arweave.net/S_iiYUKE_BzewM6BjaC-ly8NTehWDA9Q5_6jbfMWohQ",
+      "error": "Media request failed (404) for https://arweave.net/S_iiYUKE_BzewM6BjaC-ly8NTehWDA9Q5_6jbfMWohQ"
+    }
+  ],
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:47:51.755Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +67,16 @@
     },
     "tokenId": "23",
     "tokenType": "ERC721",
-    "name": "22-great-founder-theory",
+    "name": "23-the-resonant-chamber",
     "description": "",
-    "tokenUri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/3",
+    "tokenUri": "https://arweave.net/95766vEf0qyOdgU1tW_Tiauc2LjY_P5BBMVBvi25Itc/3",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/ad0496303b5333bebc697c5021063f52_49730b78",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/ad0496303b5333bebc697c5021063f52_49730b78",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/ad0496303b5333bebc697c5021063f52_49730b78",
       "contentType": "image/png",
       "size": 365986,
-      "originalUrl": "https://arweave.net/oCbk5AznBvqQQ02KvRuGjFTcJVzkNy4bzCdHTv4h4yI"
+      "originalUrl": "https://arweave.net/S_iiYUKE_BzewM6BjaC-ly8NTehWDA9Q5_6jbfMWohQ"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +87,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/3",
       "metadata": {
-        "name": "22-great-founder-theory",
+        "name": "23-the-resonant-chamber",
         "description": "",
         "image_details": {
-          "bytes": 365986,
+          "bytes": 705152,
           "format": "PNG",
-          "sha256": "a53d4077cf0a76d9e7f559b6f0805730aad9d3f65c58fef64c7ae367bfe1eb75",
+          "sha256": "9b322b66e8f9cd810c7b567599d08dde0dad5486211e0653ac9f1a5696d8f0b7",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/oCbk5AznBvqQQ02KvRuGjFTcJVzkNy4bzCdHTv4h4yI",
-        "image_url": "https://arweave.net/oCbk5AznBvqQQ02KvRuGjFTcJVzkNy4bzCdHTv4h4yI"
+        "image": "https://arweave.net/S_iiYUKE_BzewM6BjaC-ly8NTehWDA9Q5_6jbfMWohQ",
+        "image_url": "https://arweave.net/S_iiYUKE_BzewM6BjaC-ly8NTehWDA9Q5_6jbfMWohQ",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

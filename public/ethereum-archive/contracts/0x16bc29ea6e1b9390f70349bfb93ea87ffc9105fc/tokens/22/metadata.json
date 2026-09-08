@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "22",
-  "token_uri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/2",
-  "name": "21-the-principal-upanishads",
+  "token_uri": "https://arweave.net/95766vEf0qyOdgU1tW_Tiauc2LjY_P5BBMVBvi25Itc/2",
+  "name": "22-the-journal-membrane",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/YVn3Hxfhrson401TKf4fMazIIkHFdbAkdGJBjhIW0IA",
+    "https://arweave.net/qW-rIksin8fNbRWQZ9QvyaOtYenA6kUZkOrWmeOqwaY",
     "https://nft2-cdn.alchemy.com/eth-mainnet/32adece7f23979a10d89919758c17df6_4cafe37b",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/32adece7f23979a10d89919758c17df6_4cafe37b",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/32adece7f23979a10d89919758c17df6_4cafe37b"
   ],
   "animation_sources": [],
-  "evidence_sha256": "298f3076edc0de635d177d6fd34faa5662b1596b744726069edce0712f73a7c6",
+  "evidence_sha256": "7067d68039261dcb7f5f65cf2c2cb51f51d01dc1ae189a2469f6e6df51d63649",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/22/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 405756,
-    "sha256": "99eec6e5b7ef01b5ae534c5a9493d34119162e6b1bffc6b97e64a743158d4938",
+    "bytes": 738681,
+    "sha256": "13c6b9bf09941e03ea362524ed73f53e4cc337549c7796bad89b48a767ea5ec0",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/22/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:47:51.365Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "22",
     "tokenType": "ERC721",
-    "name": "21-the-principal-upanishads",
+    "name": "22-the-journal-membrane",
     "description": "",
-    "tokenUri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/2",
+    "tokenUri": "https://arweave.net/95766vEf0qyOdgU1tW_Tiauc2LjY_P5BBMVBvi25Itc/2",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/32adece7f23979a10d89919758c17df6_4cafe37b",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/32adece7f23979a10d89919758c17df6_4cafe37b",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/32adece7f23979a10d89919758c17df6_4cafe37b",
       "contentType": "image/png",
       "size": 405756,
-      "originalUrl": "https://arweave.net/YVn3Hxfhrson401TKf4fMazIIkHFdbAkdGJBjhIW0IA"
+      "originalUrl": "https://arweave.net/qW-rIksin8fNbRWQZ9QvyaOtYenA6kUZkOrWmeOqwaY"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +82,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/2",
       "metadata": {
-        "name": "21-the-principal-upanishads",
+        "name": "22-the-journal-membrane",
         "description": "",
         "image_details": {
-          "bytes": 405756,
+          "bytes": 738681,
           "format": "PNG",
-          "sha256": "99eec6e5b7ef01b5ae534c5a9493d34119162e6b1bffc6b97e64a743158d4938",
+          "sha256": "13c6b9bf09941e03ea362524ed73f53e4cc337549c7796bad89b48a767ea5ec0",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/YVn3Hxfhrson401TKf4fMazIIkHFdbAkdGJBjhIW0IA",
-        "image_url": "https://arweave.net/YVn3Hxfhrson401TKf4fMazIIkHFdbAkdGJBjhIW0IA"
+        "image": "https://arweave.net/qW-rIksin8fNbRWQZ9QvyaOtYenA6kUZkOrWmeOqwaY",
+        "image_url": "https://arweave.net/qW-rIksin8fNbRWQZ9QvyaOtYenA6kUZkOrWmeOqwaY",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

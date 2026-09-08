@@ -2,19 +2,24 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "33",
-  "token_uri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/8",
-  "name": "33-conscious-participation",
+  "token_uri": "https://arweave.net/kayFueTWmPcxQEBAesReRA1_HL3e6F0RCESiMuz5kE8/8",
+  "name": "33-psychology-of-the-unconscious",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/XcIUhOlp3CooWk7tV_WHBCyCKnCwyCOkVw-iJJktrdM",
+    "https://arweave.net/IKoJNX2jXxgywzf8Yt6qfzb7m1NcOlay-Ot4Wtor69A",
     "https://nft2-cdn.alchemy.com/eth-mainnet/78d6bb157ceee9da0ae81b7b6602cda5_2d442d55",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/78d6bb157ceee9da0ae81b7b6602cda5_2d442d55",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/78d6bb157ceee9da0ae81b7b6602cda5_2d442d55"
   ],
   "animation_sources": [],
-  "evidence_sha256": "10e5e24023e9b0567a65ab66f0e0715ce0e7b9493d2ab621a8dea23f9d69b957",
+  "evidence_sha256": "b8dde6dbe7989de260384730816fbaef89e1b3d2df4770fd7d42f64f35de3728",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/33/metadata.json",
   "media": {
     "file": "image.png",
@@ -24,11 +29,16 @@
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/33/image.png"
   },
   "animation": null,
-  "archive_errors": [],
+  "archive_errors": [
+    {
+      "source": "https://arweave.net/IKoJNX2jXxgywzf8Yt6qfzb7m1NcOlay-Ot4Wtor69A",
+      "error": "Media request failed (404) for https://arweave.net/IKoJNX2jXxgywzf8Yt6qfzb7m1NcOlay-Ot4Wtor69A"
+    }
+  ],
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:48:09.566Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +67,16 @@
     },
     "tokenId": "33",
     "tokenType": "ERC721",
-    "name": "33-conscious-participation",
+    "name": "33-psychology-of-the-unconscious",
     "description": "",
-    "tokenUri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/8",
+    "tokenUri": "https://arweave.net/kayFueTWmPcxQEBAesReRA1_HL3e6F0RCESiMuz5kE8/8",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/78d6bb157ceee9da0ae81b7b6602cda5_2d442d55",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/78d6bb157ceee9da0ae81b7b6602cda5_2d442d55",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/78d6bb157ceee9da0ae81b7b6602cda5_2d442d55",
       "contentType": "image/png",
       "size": 340544,
-      "originalUrl": "https://arweave.net/XcIUhOlp3CooWk7tV_WHBCyCKnCwyCOkVw-iJJktrdM"
+      "originalUrl": "https://arweave.net/IKoJNX2jXxgywzf8Yt6qfzb7m1NcOlay-Ot4Wtor69A"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +87,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/8",
       "metadata": {
-        "name": "33-conscious-participation",
+        "name": "33-psychology-of-the-unconscious",
         "description": "",
         "image_details": {
-          "bytes": 340544,
+          "bytes": 465426,
           "format": "PNG",
-          "sha256": "d233c95a3f9c54ffb382a1d7da4222f597b94e80cc8e4a92e80ab6e791e3b38d",
+          "sha256": "4e6bb0a46edd0c05ef5825edd3a88cd46fb1c5ff911754b7a2c004431296d64c",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/XcIUhOlp3CooWk7tV_WHBCyCKnCwyCOkVw-iJJktrdM",
-        "image_url": "https://arweave.net/XcIUhOlp3CooWk7tV_WHBCyCKnCwyCOkVw-iJJktrdM"
+        "image": "https://arweave.net/IKoJNX2jXxgywzf8Yt6qfzb7m1NcOlay-Ot4Wtor69A",
+        "image_url": "https://arweave.net/IKoJNX2jXxgywzf8Yt6qfzb7m1NcOlay-Ot4Wtor69A",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

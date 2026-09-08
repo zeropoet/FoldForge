@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "44",
-  "token_uri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/7",
-  "name": "43-on-computable-numbers-with-an-application-to-the-entscheidungsproblem",
+  "token_uri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/7",
+  "name": "44-the-machine-stops",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/lu5SXdMmy9vKm7zs2CzB4gOYng460_0V4HEpL7VyrFU",
+    "https://arweave.net/dhJEYQJuPA07lEm-WB6O06h_cjW_E3NKT3ouEg3Id0g",
     "https://nft2-cdn.alchemy.com/eth-mainnet/8ba29f1919a1bf72553428fe14e8c6f1_464acef1",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/8ba29f1919a1bf72553428fe14e8c6f1_464acef1",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/8ba29f1919a1bf72553428fe14e8c6f1_464acef1"
   ],
   "animation_sources": [],
-  "evidence_sha256": "5f18f35fbb3d975299677c858aa276096561be7d42e576ac7037216dd542b937",
+  "evidence_sha256": "fafcdfd1c166639ac0a1af201152c4efb20fddca092cd7e18b418d7f65476689",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/44/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 342502,
-    "sha256": "2316b628aad28e8ecd7c4fc137e2f75f8d348ee97364ca6a6a47b927d3cf76f8",
+    "bytes": 709839,
+    "sha256": "38edbc6e69fbd1e487aef3636ad0cf9c656b8fa05842240bddb9b94489be7fd8",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/44/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:48:21.999Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "44",
     "tokenType": "ERC721",
-    "name": "43-on-computable-numbers-with-an-application-to-the-entscheidungsproblem",
+    "name": "44-the-machine-stops",
     "description": "",
-    "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/7",
+    "tokenUri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/7",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/8ba29f1919a1bf72553428fe14e8c6f1_464acef1",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/8ba29f1919a1bf72553428fe14e8c6f1_464acef1",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/8ba29f1919a1bf72553428fe14e8c6f1_464acef1",
       "contentType": "image/png",
       "size": 342502,
-      "originalUrl": "https://arweave.net/lu5SXdMmy9vKm7zs2CzB4gOYng460_0V4HEpL7VyrFU"
+      "originalUrl": "https://arweave.net/dhJEYQJuPA07lEm-WB6O06h_cjW_E3NKT3ouEg3Id0g"
     },
     "animation": {
       "cachedUrl": null,
@@ -77,17 +82,23 @@
     "raw": {
       "tokenUri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/7",
       "metadata": {
-        "name": "43-on-computable-numbers-with-an-application-to-the-entscheidungsproblem",
+        "name": "44-the-machine-stops",
         "description": "",
         "image_details": {
-          "bytes": 342502,
+          "bytes": 709839,
           "format": "PNG",
-          "sha256": "2316b628aad28e8ecd7c4fc137e2f75f8d348ee97364ca6a6a47b927d3cf76f8",
+          "sha256": "38edbc6e69fbd1e487aef3636ad0cf9c656b8fa05842240bddb9b94489be7fd8",
           "width": 2400,
           "height": 2400
         },
-        "image": "https://arweave.net/lu5SXdMmy9vKm7zs2CzB4gOYng460_0V4HEpL7VyrFU",
-        "image_url": "https://arweave.net/lu5SXdMmy9vKm7zs2CzB4gOYng460_0V4HEpL7VyrFU"
+        "image": "https://arweave.net/dhJEYQJuPA07lEm-WB6O06h_cjW_E3NKT3ouEg3Id0g",
+        "image_url": "https://arweave.net/dhJEYQJuPA07lEm-WB6O06h_cjW_E3NKT3ouEg3Id0g",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

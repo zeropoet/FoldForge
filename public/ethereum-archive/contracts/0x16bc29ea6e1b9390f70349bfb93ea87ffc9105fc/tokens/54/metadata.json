@@ -2,33 +2,38 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
   "token_id": "54",
-  "token_uri": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/6",
-  "name": "53-on-the-sensations-of-tone-as-a-physiological-basis-for-the-theory-of-music",
+  "token_uri": "https://arweave.net/A13puo7UVR79N7o1JJJWlwWUt2G2gPRrySkpfSFnP1A/6",
+  "name": "54",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/CPhZRVlZfFtA_lWMLMns-LIN2rwfe0TB7s1E9tCARSc",
+    "https://arweave.net/zqTiP-oAUpcOQ2Mg-Fk87p4lj0Kesph9cbsmt0EoERo",
     "https://nft2-cdn.alchemy.com/eth-mainnet/e7a236dc315b4d7d2e5c332a216b8b90_a1d9bed0",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/e7a236dc315b4d7d2e5c332a216b8b90_a1d9bed0",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/e7a236dc315b4d7d2e5c332a216b8b90_a1d9bed0"
   ],
   "animation_sources": [],
-  "evidence_sha256": "244aea4328b2e2f91278c4b3b8be5960a11d49a28084fbe00cd818cbfea66c53",
+  "evidence_sha256": "6ea7b9649d3973e06a4f6342cf0d816ca9d433b01583661c0619f9933419fe3d",
   "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/54/metadata.json",
   "media": {
-    "file": "image.png",
-    "bytes": 9690,
-    "sha256": "1ad3e887bdefb60ccef9c0d2edfca013a23799e00c8418364d1cbeb6a08395ef",
-    "media_type": "image/png",
-    "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/54/image.png"
+    "file": "image.svg",
+    "bytes": 896,
+    "sha256": "9b17f7ce23aa62a7743442945011e87f79aade9c3dbaaf3e89e8cee2c9fdbbc5",
+    "media_type": "image/svg+xml",
+    "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/54/image.svg"
   },
   "animation": null,
   "archive_errors": [],
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:48:25.812Z",
+  "observed_at": "2026-09-08T23:30:04.448Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -57,16 +62,16 @@
     },
     "tokenId": "54",
     "tokenType": "ERC721",
-    "name": "53-on-the-sensations-of-tone-as-a-physiological-basis-for-the-theory-of-music",
+    "name": "54",
     "description": "",
-    "tokenUri": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/6",
+    "tokenUri": "https://arweave.net/A13puo7UVR79N7o1JJJWlwWUt2G2gPRrySkpfSFnP1A/6",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/e7a236dc315b4d7d2e5c332a216b8b90_a1d9bed0",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/e7a236dc315b4d7d2e5c332a216b8b90_a1d9bed0",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/e7a236dc315b4d7d2e5c332a216b8b90_a1d9bed0",
       "contentType": "image/png",
       "size": 9690,
-      "originalUrl": "https://arweave.net/CPhZRVlZfFtA_lWMLMns-LIN2rwfe0TB7s1E9tCARSc"
+      "originalUrl": "https://arweave.net/zqTiP-oAUpcOQ2Mg-Fk87p4lj0Kesph9cbsmt0EoERo"
     },
     "animation": {
       "cachedUrl": null,
@@ -81,9 +86,9 @@
         "collection": "fold-forge",
         "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
         "token_standard": "erc721",
-        "name": "53-on-the-sensations-of-tone-as-a-physiological-basis-for-the-theory-of-music",
+        "name": "54",
         "description": "",
-        "image_url": null,
+        "image_url": "https://arweave.net/zqTiP-oAUpcOQ2Mg-Fk87p4lj0Kesph9cbsmt0EoERo",
         "display_image_url": null,
         "display_animation_url": null,
         "metadata_url": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/6",
@@ -108,7 +113,19 @@
         ],
         "rarity": null,
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ],
+        "image_details": {
+          "bytes": 896,
+          "format": "SVG",
+          "sha256": "9b17f7ce23aa62a7743442945011e87f79aade9c3dbaaf3e89e8cee2c9fdbbc5"
+        },
+        "image": "https://arweave.net/zqTiP-oAUpcOQ2Mg-Fk87p4lj0Kesph9cbsmt0EoERo"
       },
       "error": null
     },
