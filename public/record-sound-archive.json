@@ -10,18 +10,38 @@
       "branch": "FoldForge",
       "kind": "compositional grammar",
       "availability": "public structure",
-      "source": { "repository": "zeropoet/FoldForge", "path": "grammar/composition-003-resonance.json", "url": "https://foldforge.zeropoet.xyz/" },
+      "source": {
+        "repository": "zeropoet/FoldForge",
+        "path": "grammar/composition-003-resonance.json",
+        "url": "https://foldforge.zeropoet.xyz/"
+      },
       "sound": {
         "rootHz": 73.42,
-        "ratios": [1, 1.5, 2.25],
-        "waves": ["sine", "triangle", "sine"],
+        "ratios": [
+          1,
+          1.5,
+          2.25
+        ],
+        "waves": [
+          "sine",
+          "triangle",
+          "sine"
+        ],
         "cutoffHz": 1480,
         "renderer": {
           "engine": "continuous-voice/v1",
           "masterGain": 0.24,
           "fadeInSeconds": 2.2,
-          "fieldFilter": { "type": "lowpass", "frequency": 1480, "Q": 0.7 },
-          "partialGains": [1, 0.22, 0.08],
+          "fieldFilter": {
+            "type": "lowpass",
+            "frequency": 1480,
+            "Q": 0.7
+          },
+          "partialGains": [
+            1,
+            0.22,
+            0.08
+          ],
           "stereo": "center"
         }
       }
@@ -32,18 +52,107 @@
       "branch": "FoldForge",
       "kind": "deterministic instrument",
       "availability": "public instrument",
-      "source": { "repository": "zeropoet/FoldForge", "path": "app/sonic-forge", "url": "https://foldforge.zeropoet.xyz/sonic-forge" },
+      "source": {
+        "repository": "zeropoet/FoldForge",
+        "path": "app/sonic-forge",
+        "url": "https://foldforge.zeropoet.xyz/sonic-forge"
+      },
       "sound": {
         "rootHz": 58.27,
-        "ratios": [1, 2.01, 3.99, 6.02],
-        "waves": ["sine", "triangle", "triangle", "sine"],
+        "ratios": [
+          1,
+          2.01,
+          3.99,
+          6.02
+        ],
+        "waves": [
+          "sine",
+          "triangle",
+          "triangle",
+          "sine"
+        ],
         "cutoffHz": 2240,
         "renderer": {
           "engine": "continuous-voice/v1",
           "masterGain": 0.24,
           "fadeInSeconds": 2.2,
-          "fieldFilter": { "type": "lowpass", "frequency": 2240, "Q": 0.7 },
-          "partialGains": [1, 0.22, 0.08, 0.03],
+          "fieldFilter": {
+            "type": "lowpass",
+            "frequency": 2240,
+            "Q": 0.7
+          },
+          "partialGains": [
+            1,
+            0.22,
+            0.08,
+            0.03
+          ],
+          "stereo": "center"
+        }
+      }
+    },
+    {
+      "id": "foldforge-dual-source-field",
+      "title": "Dual Source Field",
+      "branch": "FoldForge",
+      "kind": "shared Ethereum holdings state",
+      "availability": "public instrument",
+      "source": {
+        "repository": "zeropoet/FoldForge",
+        "path": "app/composer-chamber",
+        "url": "https://foldforge.zeropoet.xyz/composer-chamber"
+      },
+      "witness": "sha256:0fd0e788ec055ed08651a6fa90bf64b8611a2255135c33892e49516446238f72",
+      "sources": [
+        {
+          "owner": "zeropoet.eth",
+          "workCount": 260,
+          "observedWorkCount": 98,
+          "contractCount": 22,
+          "witness": "sha256:96043412afa04722a0e9d458f342f0c8bf22eef257b7767d85f1b01b638441e3"
+        },
+        {
+          "owner": "rootlogos.eth",
+          "workCount": 62,
+          "observedWorkCount": 62,
+          "contractCount": 5,
+          "witness": "sha256:f3a9beab77bbf0ab3ae98d8c4eb6b107d1ae850dc7399eea4e0868dbb51f5b5f"
+        }
+      ],
+      "sound": {
+        "frequenciesHz": [
+          123.471,
+          207.652,
+          160.122,
+          380.289
+        ],
+        "waves": [
+          "sine",
+          "triangle",
+          "sawtooth",
+          "triangle"
+        ],
+        "cutoffHz": 3068,
+        "renderer": {
+          "engine": "continuous-voice/v1",
+          "masterGain": 0.2,
+          "fadeInSeconds": 1.8,
+          "fieldFilter": {
+            "type": "bandpass",
+            "frequency": 3068,
+            "Q": 2.4
+          },
+          "partialGains": [
+            0.42,
+            0.42,
+            0.68,
+            0.24
+          ],
+          "gainLfo": {
+            "base": 0.72,
+            "depth": 0.2,
+            "angularRate": 0.42
+          },
           "stereo": "center"
         }
       }

@@ -25,7 +25,10 @@
   },
   "animation": null,
   "archive_errors": [],
-  "observed_at": "2026-09-05T03:51:46.965Z",
+  "owners": [
+    "zeropoet.eth"
+  ],
+  "observed_at": "2026-09-08T18:19:55.785Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -37,17 +40,17 @@
       "contractDeployer": null,
       "deployedBlockNumber": null,
       "openSeaMetadata": {
-        "floorPrice": null,
-        "collectionName": null,
-        "collectionSlug": null,
-        "safelistRequestStatus": null,
-        "imageUrl": null,
-        "description": null,
-        "externalUrl": null,
-        "twitterUsername": null,
-        "discordUrl": null,
-        "bannerImageUrl": null,
-        "lastIngestedAt": null
+        "floorPrice": 0,
+        "collectionName": "The Library",
+        "collectionSlug": "the-library-5",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "https://i2c.seadn.io/ethereum/0x8b27a07b7425b75d6f61d76cbf13eaf799ed1aea/428040113baf1542771acbb5ada03e/be428040113baf1542771acbb5ada03e.jpeg",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-09-08T17:47:49.720781794Z"
       },
       "isSpam": true,
       "spamClassifications": [
@@ -111,7 +114,12 @@
       },
       "error": null
     },
-    "collection": null,
+    "collection": {
+      "name": "The Library",
+      "slug": "the-library-5",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
     "mint": {
       "mintAddress": null,
       "blockNumber": null,

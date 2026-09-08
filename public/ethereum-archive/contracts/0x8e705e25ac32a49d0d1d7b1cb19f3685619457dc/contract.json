@@ -43,5 +43,8 @@
     "34",
     "35"
   ],
-  "image": "/ethereum-archive/contracts/0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc/tokens/1/image.jpg"
+  "image": "/ethereum-archive/contracts/0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc/tokens/1/image.jpg",
+  "owners": [
+    "zeropoet.eth"
+  ]
 }

@@ -25,7 +25,10 @@
   },
   "animation": null,
   "archive_errors": [],
-  "observed_at": "2026-09-05T03:55:08.731Z",
+  "owners": [
+    "zeropoet.eth"
+  ],
+  "observed_at": "2026-09-08T18:19:55.785Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {

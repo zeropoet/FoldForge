@@ -24,11 +24,9 @@
     "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/30/image.png"
   },
   "animation": null,
-  "archive_errors": [
-    {
-      "source": "https://arweave.net/Ldb9xunpFw2KJ05-wLjLOX-cH4Q0rGTOJ_uvxkW_KA4",
-      "error": "Media request failed (404) for https://arweave.net/Ldb9xunpFw2KJ05-wLjLOX-cH4Q0rGTOJ_uvxkW_KA4"
-    }
+  "archive_errors": [],
+  "owners": [
+    "rootlogos.eth"
   ],
   "observed_at": "2026-09-05T03:48:08.101Z",
   "holding_state": "current",

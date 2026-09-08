@@ -4,13 +4,19 @@
 
 This repository is an independently governed module and project authority. [`zeropoet.xyz`](https://zeropoet.xyz/) is the studio index: it makes this work and its relations legible without absorbing them. [`rootlogos.com`](https://rootlogos.com/) is the public surface of synthesis: it builds from bounded outputs of the studio's repositories without replacing their sources, histories, or laws. This separation fulfills the system's working law—preserve authority at the source, reveal relation at studio scale, and permit synthesis without possession—as Root Logos enters its Weave era.
 
-FoldForge is a static Ethereum NFT archive and autonomous data composer for `zeropoet.eth`, presented through a monochrome, typography-led interface.
+FoldForge is a static Ethereum NFT archive and autonomous data composer for `zeropoet.eth` and `rootlogos.eth`, presented through a monochrome, typography-led interface.
 
 Canonical public entry:
 [foldforge.zeropoet.xyz](https://foldforge.zeropoet.xyz/). FoldForge is a studio
 instrument beneath the Mancel Lindsey / Zeropoet artist and developer identity.
 Its outputs may enter Sovereign Standard and Root Logos through their existing
 bounded relations without transferring FoldForge authority.
+
+The [Composer Chamber](https://foldforge.zeropoet.xyz/composer-chamber) witnesses
+`zeropoet.eth` and `rootlogos.eth` as two exclusive holdings sources. Their
+shared state is not shared ownership: it is the third sound produced when both
+source voices are layered. FoldForge publishes that centered-stereo sound
+contract to The Record as `foldforge-dual-source-field` after every archive sync.
 
 ## Telos relation
 
@@ -46,7 +52,7 @@ requires a distinct externally evidenced settlement boundary.
 ## Features
 
 - ENS/address archive lookup
-- Autonomous Ethereum NFT sound composition for `zeropoet.eth`
+- Dual-source Ethereum NFT sound composition for `zeropoet.eth` and `rootlogos.eth`
 - Hidden luminosity analysis across every visible holding
 - Perceptual-color signatures that compose an archive-derived chromatic continuum, continuity, and counterpoint
 - Six evidence-derived phases with deterministic arrangement layering
@@ -121,7 +127,7 @@ token's or collection's image.
 
 ### Repository Ethereum archive
 
-`npm run sync:eth-archive` maintains a durable, public read copy beneath
+`npm run sync:eth-archive` observes both configured ENS sources and maintains a durable, public read copy beneath
 `public/ethereum-archive/contracts/<contract>/tokens/<token-id>/`. Each work
 folder contains normalized metadata and the retrieved media bytes; each contract
 also has a contract manifest, and `public/ethereum-archive/index.json` provides

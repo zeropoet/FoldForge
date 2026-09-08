@@ -1,0 +1,103 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+  "token_id": "42130910072418516211486701128900085806628086738848146876726137643713572753350",
+  "token_uri": "",
+  "name": "Token 42130910072418516211486701128900085806628086738848146876726137643713572753350",
+  "description": "",
+  "token_type": "ERC721",
+  "attributes": [],
+  "image_sources": [
+    "https://nft2-cdn.alchemy.com/eth-mainnet/0680b5692b6278953eae938e0f52bcc1_6d93c5ab",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/0680b5692b6278953eae938e0f52bcc1_6d93c5ab",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/0680b5692b6278953eae938e0f52bcc1_6d93c5ab"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "a70caf292d0c08c8cbf7824cda03d77822f04340db662b1239bab4448a83d301",
+  "metadata_path": "/ethereum-archive/contracts/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/tokens/42130910072418516211486701128900085806628086738848146876726137643713572753350/metadata.json",
+  "media": {
+    "file": "image.svg",
+    "bytes": 101094,
+    "sha256": "1c236920abac820a935206091443a896b1927d7daf5433b51881bfd2e0419425",
+    "media_type": "image/svg+xml",
+    "path": "/ethereum-archive/contracts/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/tokens/42130910072418516211486701128900085806628086738848146876726137643713572753350/image.svg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "owners": [
+    "rootlogos.eth"
+  ],
+  "observed_at": "2026-09-08T18:12:34.825Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85",
+      "name": null,
+      "symbol": null,
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": 0.0000247,
+        "collectionName": "ENS: Ethereum Name Service",
+        "collectionSlug": "ens",
+        "safelistRequestStatus": "verified",
+        "imageUrl": "https://i2c.seadn.io/collection/ens/image/2389b989ec47442bc2c714bcdf3e19/b02389b989ec47442bc2c714bcdf3e19.png",
+        "description": "Ethereum Name Service (ENS) domains are secure domain names for the decentralized world. ENS domains provide a way for users to map human readable names to blockchain and non-blockchain resources, like Ethereum addresses, IPFS hashes, or website URLs. ENS domains can be bought and sold on secondary markets.",
+        "externalUrl": "https://ens.domains",
+        "twitterUsername": "ensdomains",
+        "discordUrl": "",
+        "bannerImageUrl": "https://i2c.seadn.io/collection/ens/desktopHeroMedia/dd03416d9fdbfa8469940079031f9e/dcdd03416d9fdbfa8469940079031f9e.png?fit=inside",
+        "lastIngestedAt": "2026-07-14T02:52:24.240026568Z"
+      },
+      "isSpam": false,
+      "spamClassifications": [
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "42130910072418516211486701128900085806628086738848146876726137643713572753350",
+    "tokenType": "ERC721",
+    "name": null,
+    "description": null,
+    "tokenUri": null,
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/0680b5692b6278953eae938e0f52bcc1_6d93c5ab",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/0680b5692b6278953eae938e0f52bcc1_6d93c5ab",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/0680b5692b6278953eae938e0f52bcc1_6d93c5ab",
+      "contentType": "image/svg+xml",
+      "size": 101094,
+      "originalUrl": null
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": null,
+      "metadata": {},
+      "error": null
+    },
+    "collection": {
+      "name": "ENS: Ethereum Name Service",
+      "slug": "ens",
+      "externalUrl": "https://ens.domains",
+      "bannerImageUrl": "https://i2c.seadn.io/collection/ens/desktopHeroMedia/dd03416d9fdbfa8469940079031f9e/dcdd03416d9fdbfa8469940079031f9e.png?fit=inside"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-09-08T17:21:22.395864115Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

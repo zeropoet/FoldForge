@@ -3,11 +3,14 @@ import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import { extname, join, resolve } from "node:path";
 
 const apiKey = process.env.ALCHEMY_API_KEY || process.env.NEXT_PUBLIC_ALCHEMY_API_KEY;
-const owner = process.env.FOLDFORGE_ARCHIVE_OWNER || "zeropoet.eth";
+const owners = (process.env.FOLDFORGE_ARCHIVE_OWNERS || process.env.FOLDFORGE_ARCHIVE_OWNER || "zeropoet.eth,rootlogos.eth")
+  .split(",")
+  .map((value) => value.trim().toLowerCase())
+  .filter(Boolean);
 const network = process.env.FOLDFORGE_NETWORK || "eth-mainnet";
 const root = resolve("public/ethereum-archive");
 const indexPath = join(root, "index.json");
-const schema = "foldforge-ethereum-archive/v1";
+const soundArchivePath = resolve("public/record-sound-archive.json");
 const maxBytes = 99_000_000;
 
 if (!apiKey) throw new Error("ALCHEMY_API_KEY or NEXT_PUBLIC_ALCHEMY_API_KEY is required.");
@@ -21,6 +24,14 @@ const normalize = (value = "") => {
   return url;
 };
 const sha256 = (value) => createHash("sha256").update(value).digest("hex");
+const stableNumber = (value) => {
+  let hash = 2166136261;
+  for (let index = 0; index < value.length; index += 1) {
+    hash ^= value.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+};
 const safeTokenId = (value) => encodeURIComponent(String(value)).replaceAll("%", "_");
 const endpoint = (method) => `https://${network}.g.alchemy.com/nft/v3/${apiKey}/${method}`;
 
@@ -28,7 +39,7 @@ async function readPrevious() {
   try { return JSON.parse(await readFile(indexPath, "utf8")); } catch { return { tokens: [] }; }
 }
 
-async function fetchHoldings() {
+async function fetchHoldings(owner) {
   const values = [];
   let pageKey;
   do {
@@ -122,7 +133,21 @@ async function archiveFirst(urls, tokenDirectory, stem) {
 
 const previous = await readPrevious();
 const priorByKey = new Map((previous.tokens || []).map((token) => [`${token.contract}:${token.token_id}`, token]));
-const holdings = await fetchHoldings();
+const holdingsByOwner = await Promise.all(owners.map(async (owner) => ({ owner, holdings: await fetchHoldings(owner) })));
+const holdingOwners = new Map();
+const providerTokens = new Map();
+for (const { owner, holdings } of holdingsByOwner) {
+  for (const token of holdings) {
+    const contract = (token.contract?.address || token.contractAddress || "").toLowerCase();
+    const tokenId = String(token.tokenId || "");
+    if (!contract || !tokenId) continue;
+    const key = `${contract}:${tokenId}`;
+    const tokenOwners = holdingOwners.get(key) || new Set();
+    tokenOwners.add(owner);
+    holdingOwners.set(key, tokenOwners);
+    if (!providerTokens.has(key)) providerTokens.set(key, token);
+  }
+}
 const tokens = [];
 const contracts = new Map();
 const observedKeys = new Set();
@@ -132,7 +157,7 @@ let updated = 0;
 let unchanged = 0;
 let holdingChanges = 0;
 
-for (const providerToken of holdings) {
+for (const [providerKey, providerToken] of providerTokens) {
   const token = await hydrateCanonicalToken(providerToken);
   const contract = (token.contract?.address || token.contractAddress || "").toLowerCase();
   const tokenId = String(token.tokenId || "");
@@ -160,7 +185,9 @@ for (const providerToken of holdings) {
   let animation = prior?.animation || null;
   let archiveErrors = prior?.archive_errors || [];
   const unchangedEvidence = prior?.evidence_sha256 === evidenceSha256;
-  let recordChanged = !prior || !unchangedEvidence;
+  const nextOwners = [...(holdingOwners.get(providerKey) || [])].sort();
+  const ownersChanged = JSON.stringify(prior?.owners || (previous.owner ? [previous.owner] : [])) !== JSON.stringify(nextOwners);
+  let recordChanged = !prior || !unchangedEvidence || ownersChanged;
   if (!unchangedEvidence || !media) {
     const archivedImage = await archiveFirst(canonicalImages, tokenDirectory, "image");
     if (archivedImage.asset?.sha256 && archivedImage.asset.sha256 !== prior?.media?.sha256) recordChanged = true;
@@ -183,6 +210,7 @@ for (const providerToken of holdings) {
     media: media ? { ...media, path: `${publicDirectory}/${media.file}` } : null,
     animation: animation ? { ...animation, path: `${publicDirectory}/${animation.file}` } : null,
     archive_errors: archiveErrors,
+    owners: nextOwners,
     observed_at: unchangedEvidence && prior?.holding_state !== "unobserved" ? prior.observed_at : syncObservedAt,
     holding_state: "current",
   };
@@ -200,8 +228,10 @@ for (const providerToken of holdings) {
     token_type: token.contract?.tokenType || token.tokenType || "NFT",
     token_ids: [],
     image: "",
+    owners: [],
   };
   collection.token_ids.push(tokenId);
+  collection.owners = [...new Set([...collection.owners, ...record.owners])].sort();
   if (!collection.image && record.media?.path && record.media.media_type.startsWith("image/")) collection.image = record.media.path;
   contracts.set(contract, collection);
 }
@@ -209,7 +239,7 @@ for (const providerToken of holdings) {
 for (const prior of previous.tokens || []) {
   if (observedKeys.has(`${prior.contract}:${prior.token_id}`)) continue;
   if (prior.holding_state !== "unobserved") holdingChanges += 1;
-  tokens.push({ ...prior, holding_state: "unobserved" });
+  tokens.push({ ...prior, owners: prior.owners || (previous.owner ? [previous.owner] : []), holding_state: "unobserved" });
 }
 
 for (const prior of previous.contracts || []) {
@@ -219,6 +249,7 @@ for (const prior of previous.contracts || []) {
     continue;
   }
   current.token_ids = [...new Set([...current.token_ids, ...prior.token_ids])];
+  current.owners = [...new Set([...(current.owners || []), ...(prior.owners || [])])].sort();
 }
 
 for (const contract of contracts.values()) {
@@ -229,8 +260,20 @@ for (const contract of contracts.values()) {
 
 tokens.sort((a, b) => a.contract.localeCompare(b.contract) || a.token_id.localeCompare(b.token_id, undefined, { numeric: true }));
 const index = {
-  schema,
-  owner,
+  schema: "foldforge-ethereum-archive/v2",
+  owner: owners.join(" + "),
+  owners: owners.map((name) => {
+    const ownerTokens = tokens.filter((token) => token.owners?.includes(name));
+    const observedTokens = ownerTokens.filter((token) => token.holding_state === "current");
+    const ownerContracts = new Set(ownerTokens.map((token) => token.contract));
+    return {
+      name,
+      contract_count: ownerContracts.size,
+      work_count: ownerTokens.length,
+      observed_work_count: observedTokens.length,
+      witness: `sha256:${sha256(JSON.stringify(ownerTokens.map(({ contract, token_id, evidence_sha256 }) => ({ contract, token_id, evidence_sha256 }))))}`,
+    };
+  }),
   network,
   observed_at: added || updated || holdingChanges || !previous.observed_at ? syncObservedAt : previous.observed_at,
   policy: {
@@ -248,4 +291,43 @@ await mkdir(root, { recursive: true });
 const temporary = `${indexPath}.tmp`;
 await writeFile(temporary, `${JSON.stringify(index, null, 2)}\n`);
 await rename(temporary, indexPath);
-console.log(`Ethereum archive sync: ${tokens.length} works / ${contracts.size} contracts / ${added} added / ${updated} updated / ${holdingChanges} holding changes / ${unchanged} unchanged.`);
+const sourceValue = (source) => {
+  const seed = stableNumber(source.witness);
+  const density = source.work_count / Math.max(source.contract_count, 1);
+  return {
+    frequency: 55 * 2 ** (((seed % 18) + Math.min(12, Math.round(density / 2))) / 12),
+    cutoff: 720 + (seed % 2200) + source.contract_count * 86,
+    harmonic: 1.25 + ((seed >>> 7) % 7) / 4,
+  };
+};
+const sourceStates = index.owners.map((source) => ({ ...source, ...sourceValue(source) }));
+const [firstSource, secondSource] = sourceStates;
+const relationRoot = Math.sqrt(firstSource.frequency * secondSource.frequency);
+const soundArchive = JSON.parse(await readFile(soundArchivePath, "utf8"));
+const sharedEntry = {
+  id: "foldforge-dual-source-field",
+  title: "Dual Source Field",
+  branch: "FoldForge",
+  kind: "shared Ethereum holdings state",
+  availability: "public instrument",
+  source: { repository: "zeropoet/FoldForge", path: "app/composer-chamber", url: "https://foldforge.zeropoet.xyz/composer-chamber" },
+  witness: `sha256:${sha256(sourceStates.map((source) => source.witness).join(":"))}`,
+  sources: sourceStates.map((source) => ({ owner: source.name, workCount: source.work_count, observedWorkCount: source.observed_work_count, contractCount: source.contract_count, witness: source.witness })),
+  sound: {
+    frequenciesHz: [firstSource.frequency, secondSource.frequency, relationRoot, relationRoot * ((firstSource.harmonic + secondSource.harmonic) / 2)].map((value) => Number(value.toFixed(3))),
+    waves: ["sine", "triangle", "sawtooth", "triangle"],
+    cutoffHz: Math.round(Math.sqrt(firstSource.cutoff * secondSource.cutoff)),
+    renderer: {
+      engine: "continuous-voice/v1",
+      masterGain: 0.2,
+      fadeInSeconds: 1.8,
+      fieldFilter: { type: "bandpass", frequency: Math.round(Math.sqrt(firstSource.cutoff * secondSource.cutoff)), Q: 2.4 },
+      partialGains: [0.42, 0.42, 0.68, 0.24],
+      gainLfo: { base: 0.72, depth: 0.2, angularRate: 0.42 },
+      stereo: "center",
+    },
+  },
+};
+soundArchive.entries = [...soundArchive.entries.filter((entry) => entry.id !== sharedEntry.id), sharedEntry];
+await writeFile(soundArchivePath, `${JSON.stringify(soundArchive, null, 2)}\n`);
+console.log(`Ethereum archive sync: ${owners.length} sources / ${tokens.length} works / ${contracts.size} contracts / ${added} added / ${updated} updated / ${holdingChanges} holding changes / ${unchanged} unchanged.`);

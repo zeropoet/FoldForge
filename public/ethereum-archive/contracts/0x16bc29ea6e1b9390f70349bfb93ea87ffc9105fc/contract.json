@@ -63,5 +63,8 @@
     "54",
     "55"
   ],
-  "image": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/1/image.png"
+  "image": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/1/image.png",
+  "owners": [
+    "rootlogos.eth"
+  ]
 }

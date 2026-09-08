@@ -11,6 +11,7 @@ interface LocalToken {
   media: { path: string; media_type: string } | null;
   animation: { path: string; media_type: string } | null;
   holding_state?: "current" | "unobserved";
+  owners?: string[];
 }
 
 interface LocalContract {
@@ -21,10 +22,21 @@ interface LocalContract {
   total_supply: string;
   image: string;
   token_ids: string[];
+  owners?: string[];
 }
 
-interface LocalArchive {
-  schema: "foldforge-ethereum-archive/v1";
+export interface LocalArchiveOwner {
+  name: string;
+  contract_count: number;
+  work_count: number;
+  observed_work_count?: number;
+  witness: string;
+}
+
+export interface LocalArchive {
+  schema: "foldforge-ethereum-archive/v1" | "foldforge-ethereum-archive/v2";
+  owner?: string;
+  owners?: LocalArchiveOwner[];
   contracts: LocalContract[];
   tokens: LocalToken[];
 }
@@ -51,9 +63,9 @@ export function localCollections(archive: LocalArchive | null): CollectionSummar
   }));
 }
 
-export function localTokens(archive: LocalArchive | null, contractAddress?: string): AlchemyNft[] {
+export function localTokens(archive: LocalArchive | null, contractAddress?: string, owner?: string): AlchemyNft[] {
   return (archive?.tokens || [])
-    .filter((token) => !contractAddress || token.contract === contractAddress.toLowerCase())
+    .filter((token) => (!contractAddress || token.contract === contractAddress.toLowerCase()) && (!owner || token.owners?.includes(owner.toLowerCase())))
     .map((token) => ({
       tokenId: token.token_id,
       tokenUri: token.token_uri,

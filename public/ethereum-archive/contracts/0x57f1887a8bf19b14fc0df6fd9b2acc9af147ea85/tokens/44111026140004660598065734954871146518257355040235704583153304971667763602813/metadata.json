@@ -2,7 +2,7 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
   "token_id": "44111026140004660598065734954871146518257355040235704583153304971667763602813",
-  "token_uri": "https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0x6185f4beb76546cf8a51468cf329e6d379bb1f4abc49a72d5207380674bfa57d",
+  "token_uri": "",
   "name": "sovereignstandard.eth",
   "description": "sovereignstandard.eth, an ENS name.",
   "token_type": "ERC721",
@@ -45,7 +45,7 @@
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/95df791bb801fc4be32bd0d5916efbe7_c5d663e7"
   ],
   "animation_sources": [],
-  "evidence_sha256": "31e82c33609f28fb0fc76b967b726159bccf08f162fcb8980d99ce12614061ee",
+  "evidence_sha256": "3600f9b36a9d20ba741bc71fbcf6d5adbd9b129d79199eb0ea59e542ba5ef6a6",
   "metadata_path": "/ethereum-archive/contracts/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/tokens/44111026140004660598065734954871146518257355040235704583153304971667763602813/metadata.json",
   "media": {
     "file": "image.svg",
@@ -56,7 +56,10 @@
   },
   "animation": null,
   "archive_errors": [],
-  "observed_at": "2026-09-05T03:49:24.808Z",
+  "owners": [
+    "rootlogos.eth"
+  ],
+  "observed_at": "2026-09-08T18:12:34.825Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -89,7 +92,7 @@
     "tokenType": "ERC721",
     "name": "sovereignstandard.eth",
     "description": "sovereignstandard.eth, an ENS name.",
-    "tokenUri": "https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0x6185f4beb76546cf8a51468cf329e6d379bb1f4abc49a72d5207380674bfa57d",
+    "tokenUri": null,
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/95df791bb801fc4be32bd0d5916efbe7_c5d663e7",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/95df791bb801fc4be32bd0d5916efbe7_c5d663e7",
@@ -105,7 +108,7 @@
       "originalUrl": null
     },
     "raw": {
-      "tokenUri": "https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0x6185f4beb76546cf8a51468cf329e6d379bb1f4abc49a72d5207380674bfa57d",
+      "tokenUri": null,
       "metadata": {
         "description": "sovereignstandard.eth, an ENS name.",
         "image": "https://metadata.ens.domains/mainnet/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/0x6185f4beb76546cf8a51468cf329e6d379bb1f4abc49a72d5207380674bfa57d/image",
@@ -164,7 +167,7 @@
       "transactionHash": null
     },
     "owners": null,
-    "timeLastUpdated": "2026-08-11T21:10:11.574Z",
+    "timeLastUpdated": "2026-09-08T18:05:03.491359584Z",
     "balance": "1",
     "acquiredAt": {
       "blockTimestamp": null,

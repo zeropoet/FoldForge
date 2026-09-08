@@ -7,8 +7,12 @@
   "total_supply": "2",
   "token_type": "ERC721",
   "token_ids": [
-    "4",
-    "7"
+    "7",
+    "4"
   ],
-  "image": "/ethereum-archive/contracts/0x00a65cff273beb75c657e5673c0b453e33b077bd/tokens/4/image.png"
+  "image": "/ethereum-archive/contracts/0x00a65cff273beb75c657e5673c0b453e33b077bd/tokens/7/image.jpg",
+  "owners": [
+    "rootlogos.eth",
+    "zeropoet.eth"
+  ]
 }

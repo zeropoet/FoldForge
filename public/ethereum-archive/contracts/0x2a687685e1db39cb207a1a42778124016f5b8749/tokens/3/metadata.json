@@ -25,7 +25,10 @@
   },
   "animation": null,
   "archive_errors": [],
-  "observed_at": "2026-09-05T03:49:07.735Z",
+  "owners": [
+    "zeropoet.eth"
+  ],
+  "observed_at": "2026-09-08T18:19:55.785Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -37,7 +40,7 @@
       "contractDeployer": null,
       "deployedBlockNumber": null,
       "openSeaMetadata": {
-        "floorPrice": null,
+        "floorPrice": 0,
         "collectionName": "salvlion googol",
         "collectionSlug": "salvlion-googol",
         "safelistRequestStatus": "not_requested",

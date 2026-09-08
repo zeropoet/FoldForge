@@ -11,5 +11,8 @@
     "20",
     "42"
   ],
-  "image": "/ethereum-archive/contracts/0x1066d77f2b0ffe7a667e95ebc442866088ab1248/tokens/0/image.png"
+  "image": "/ethereum-archive/contracts/0x1066d77f2b0ffe7a667e95ebc442866088ab1248/tokens/0/image.png",
+  "owners": [
+    "zeropoet.eth"
+  ]
 }

@@ -25,6 +25,9 @@
   },
   "animation": null,
   "archive_errors": [],
+  "owners": [
+    "rootlogos.eth"
+  ],
   "observed_at": "2026-09-05T03:47:47.087Z",
   "holding_state": "current",
   "provider_metadata": {

@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { adjacentTokenId, isTextEntryTarget, mintedWorkHref } from "./archive-navigation";
 import { isCollectionAllowed } from "./collection-policy";
-import ComposerChamber, { type ComposerEvidence } from "./composer-chamber";
+import type { ComposerEvidence } from "./composer-chamber";
 import { createCompositionWitness, type CompositionWitness } from "./composition-witness";
 import { resolveOwner } from "./ens";
 import { AlchemyNft, enrichCollectionsWithTokenMedia, fallbackGradient, fetchNftMetadata, fetchOwnedContracts, fetchOwnedNfts, isVideoUrl, normalizeMediaUrl, optimizedImageSrcSet, optimizedImageUrl, summarizeContracts, tokenImageFor, tokenThumbnailCandidates, tokenThumbnailFor } from "./nft-data";
@@ -768,26 +768,15 @@ export default function FoldForge() {
             </div>
           </div>
 
-          {compositionWitness && composerEvidence.length ? (
-            <ComposerChamber
-              evidence={composerEvidence}
-              onExportWitness={exportCompositionWitness}
-              previousEvidence={previousCompositionWitness?.evidence.tokens}
-              previousStateHash={previousCompositionWitness?.stateHash}
-              stateHash={compositionWitness.stateHash}
-            />
-          ) : (
-            <section className="grid min-h-72 place-items-center border-b border-black/20 text-center">
+          <section className="border-b border-black/20 py-8 md:py-10">
+            <a className="group grid gap-5 border border-black/20 p-5 transition hover:border-black md:grid-cols-[1fr_auto] md:items-center md:p-7" href="/composer-chamber">
               <div>
-                <p className="text-[9px] uppercase tracking-[0.24em] text-black/40">
-                  {compositionLoading ? "Resolving compositional evidence" : compositionAnalyzing ? "Reading color and spatial form" : audioAnalyzing ? "Reading spectrum, rhythm, and dynamics" : "Awaiting attributable evidence"}
-                </p>
-                <p className="mt-3 font-mono text-[7px] uppercase tracking-[0.14em] text-black/20">
-                  The luminosity field remains active as the hidden score
-                </p>
+                <p className="text-[9px] uppercase tracking-[0.24em] text-black/45">Composer chamber / two Ethereum sources</p>
+                <p className="mt-3 max-w-2xl text-xs leading-6 text-black/45">zeropoet.eth and rootlogos.eth remain distinct holdings while their values are conducted through one canonical FoldForge sound instrument.</p>
               </div>
-            </section>
-          )}
+              <span className="text-[9px] uppercase tracking-[0.2em] text-black/40 transition group-hover:text-black">Enter chamber →</span>
+            </a>
+          </section>
 
           {message ? (
             <div className="border-b border-black/25 px-0 py-5 text-xs uppercase tracking-[0.12em] text-black/60">
