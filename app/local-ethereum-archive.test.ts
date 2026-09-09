@@ -54,6 +54,15 @@ describe("local Ethereum archive precedence", () => {
     }
   });
 
+  it("keeps MORANTHUL visible locally while retaining its canonical video", () => {
+    const archive = JSON.parse(readFileSync(resolve("public/ethereum-archive/index.json"), "utf8"));
+    const moranthul = localTokens(archive, "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65")
+      .find((entry) => entry.tokenId === "8");
+    expect(moranthul?.name).toBe("MORANTHUL ◦");
+    expect(moranthul?.image?.originalUrl).toContain("/tokens/8/poster.png");
+    expect(moranthul?.animation?.originalUrl).toContain("/nft.mp4");
+  });
+
   it("uses the local record on individual work pages", () => {
     const archived = token("21", "/ethereum-archive/tokens/21/image.png", "Tao Te Ching");
     expect(preferLocalToken(token("21", "https://provider.invalid/21.png"), archived)).toBe(archived);

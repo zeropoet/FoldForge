@@ -8,6 +8,7 @@ interface LocalToken {
   description: string;
   token_type: string;
   attributes: Array<{ trait_type?: string; value?: string | number }>;
+  image_sources?: string[];
   media: { path: string; media_type: string } | null;
   animation: { path: string; media_type: string } | null;
   holding_state?: "current" | "unobserved";
@@ -81,7 +82,13 @@ export function localTokens(archive: LocalArchive | null, contractAddress?: stri
       tokenType: token.token_type,
       contract: { address: token.contract, tokenType: token.token_type },
       image: token.media?.media_type.startsWith("image/") ? { originalUrl: token.media.path } : undefined,
-      animation: token.animation ? { originalUrl: token.animation.path } : token.media && !token.media.media_type.startsWith("image/") ? { originalUrl: token.media.path } : undefined,
+      animation: token.animation
+        ? { originalUrl: token.animation.path }
+        : token.media && !token.media.media_type.startsWith("image/")
+          ? { originalUrl: token.media.path }
+          : token.image_sources?.find((source) => /\.(mp4|webm|mov)(?:$|\?)/i.test(source))
+            ? { originalUrl: token.image_sources.find((source) => /\.(mp4|webm|mov)(?:$|\?)/i.test(source)) }
+            : undefined,
       raw: { metadata: { attributes: token.attributes } },
     }));
 }

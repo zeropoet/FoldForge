@@ -16,7 +16,13 @@
   "animation_sources": [],
   "evidence_sha256": "f2e6f16a0b2feff6a30eda14118a0742d4fa9667f4339f7607603eee05982423",
   "metadata_path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/8/metadata.json",
-  "media": null,
+  "media": {
+    "file": "poster.png",
+    "bytes": 1884792,
+    "sha256": "cedfdd2b17d8bbf6285b36e19014a7e45d2c9adabec04ab7d8db722bd1411418",
+    "media_type": "image/png",
+    "path": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/8/poster.png"
+  },
   "animation": null,
   "archive_errors": [
     {
