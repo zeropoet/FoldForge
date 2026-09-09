@@ -38,6 +38,7 @@ interface CachedVisualAnalysis {
 
 const defaultOwner = "zeropoet.eth";
 const network = "eth-mainnet";
+const foldForgeArchiveContract = "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc";
 
 function shortAddress(address: string): string {
   return `${address.slice(0, 6)}...${address.slice(-4)}`;
@@ -649,7 +650,7 @@ export default function FoldForge() {
               {selectedTokenId ? (
                 selectedToken ? (
                   <article className="grid border-b border-black/25 lg:grid-cols-[minmax(0,1.2fr)_minmax(360px,0.8fr)]">
-                    <div className="grid min-h-[50vh] place-items-center border-b border-black/25 bg-white lg:border-b-0 lg:border-r lg:border-black/25">
+                    <div className={`grid min-h-[50vh] place-items-center border-b border-black/25 lg:border-b-0 lg:border-r lg:border-black/25 ${selectedContract === foldForgeArchiveContract ? "bg-black" : "bg-white"}`}>
                       {mintedMediaFor(selectedToken) ? (
                         isAudioUrl(mintedMediaFor(selectedToken)) ? (
                           <div className="grid w-full gap-5 p-8 text-center"><p className="text-[9px] uppercase tracking-[0.2em] text-black/40">Canonical audio work</p><audio className="w-full" controls preload="metadata" src={mintedMediaFor(selectedToken)} /></div>
@@ -717,7 +718,7 @@ export default function FoldForge() {
                     <div className="token-grid border-x border-b border-black/25 bg-black/25">
                       {tokens.map((token) => (
                         <a className="group min-w-0 bg-white" href={mintedWorkHref(navigableOwner, selectedContract, token.tokenId || "")} key={token.tokenId}>
-                          <div className="aspect-square overflow-hidden bg-white">
+                          <div className="aspect-square overflow-hidden bg-black">
                             <MediaTile token={token} />
                           </div>
                           <div className="min-w-0 border-t border-black/25 p-4"><h3 className="truncate text-sm font-light">{token.name || `Token ${token.tokenId}`}</h3><p className="mt-2 break-all font-mono text-[9px] leading-4 text-black/35">#{token.tokenId}</p></div>
