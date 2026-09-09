@@ -49,6 +49,10 @@ function isResolvedWork(token: LocalToken): boolean {
   return token.contract !== fldfrgContract || !/^#?\s*\d+$/.test(token.name.trim());
 }
 
+function playbackUrl(source: string): string {
+  return source.replace("https://ipfs.io/ipfs/", "https://gateway.pinata.cloud/ipfs/");
+}
+
 export function fetchLocalEthereumArchive(): Promise<LocalArchive | null> {
   archivePromise ??= fetch("/ethereum-archive/index.json", { headers: { accept: "application/json" } })
     .then(async (response) => response.ok ? await response.json() as LocalArchive : null)
@@ -87,7 +91,7 @@ export function localTokens(archive: LocalArchive | null, contractAddress?: stri
         : token.media && !token.media.media_type.startsWith("image/")
           ? { originalUrl: token.media.path }
           : token.image_sources?.find((source) => /\.(mp4|webm|mov)(?:$|\?)/i.test(source))
-            ? { originalUrl: token.image_sources.find((source) => /\.(mp4|webm|mov)(?:$|\?)/i.test(source)) }
+            ? { originalUrl: playbackUrl(token.image_sources.find((source) => /\.(mp4|webm|mov)(?:$|\?)/i.test(source))!) }
             : undefined,
       raw: { metadata: { attributes: token.attributes } },
     }));

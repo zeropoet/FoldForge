@@ -60,7 +60,7 @@ describe("local Ethereum archive precedence", () => {
       .find((entry) => entry.tokenId === "8");
     expect(moranthul?.name).toBe("MORANTHUL ◦");
     expect(moranthul?.image?.originalUrl).toContain("/tokens/8/poster.png");
-    expect(moranthul?.animation?.originalUrl).toContain("/nft.mp4");
+    expect(moranthul?.animation?.originalUrl).toBe("https://gateway.pinata.cloud/ipfs/Qmcdq2HNJiiNMhvro8jTYBSJYhRLB917xCWDppb5kWsUSA/nft.mp4");
   });
 
   it("uses the local record on individual work pages", () => {
