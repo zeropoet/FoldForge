@@ -493,5 +493,11 @@ language export applies the same rule. Provider cache invalidation is useful
 but never authoritative; a base-URI change in either directly read contract is
 reflected in contract order.
 
+The public archive uses the committed contract/token media copy for collection
+tiles, minted-work galleries, individual work pages, and composition analysis.
+Live wallet responses establish current ownership and counts, but cannot replace
+an archived work with stale provider metadata or imagery. Each subsequent
+Ethereum archive sync updates that local copy when the canonical tokenURI changes.
+
 `npm run refresh:eth-media` asks Alchemy to refresh every currently held
 Ethereum token without rewriting any canonical media or repository data.

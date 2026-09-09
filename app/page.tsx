@@ -10,7 +10,7 @@ import { AlchemyNft, enrichCollectionsWithTokenMedia, fallbackGradient, fetchNft
 import { analyzePixels, type VisualSignature } from "./visual-analysis";
 import { analyzeAudio, isAudioUrl, type AudioSignature } from "./audio-analysis";
 import PublicHeader from "./public-header";
-import { fetchLocalEthereumArchive, localCollections, localTokens } from "./local-ethereum-archive";
+import { fetchLocalEthereumArchive, localCollections, localTokens, preferLocalCollections, preferLocalToken, preferLocalTokens } from "./local-ethereum-archive";
 
 type LoadState = "idle" | "loading" | "ready" | "error";
 
@@ -259,7 +259,7 @@ export default function FoldForge() {
         return;
       }
 
-      setCollections(curate(contracts));
+      setCollections(preferLocalCollections(curate(contracts), repositoryCollections));
       setOwnerIdentity(resolvedOwner);
       setState("ready");
       setMessage("");
@@ -341,7 +341,7 @@ export default function FoldForge() {
           network,
           contractAddress: selectedContract,
           signal: controller.signal,
-          onPage: setTokens,
+          onPage: (live) => setTokens(preferLocalTokens(live, archived)),
         });
       } catch (error) {
         if (error instanceof DOMException && error.name === "AbortError") return;
@@ -536,7 +536,7 @@ export default function FoldForge() {
                 const bKey = `${b.tokenId || ""}:${b.contract?.address || ""}`;
                 return aKey.localeCompare(bKey);
               });
-            setCompositionTokens(visible);
+            setCompositionTokens(preferLocalTokens(visible, archived));
           },
         });
       } catch (error) {
@@ -562,7 +562,7 @@ export default function FoldForge() {
       if (!ownerIdentity?.address) return;
       try {
         const nft = await fetchNftMetadata({ contractAddress: selectedContract, network, tokenId: selectedTokenId, signal: controller.signal });
-        setTokenDetail({ key: detailKey, nft });
+        setTokenDetail({ key: detailKey, nft: preferLocalToken(nft, archived) });
       } catch (error) {
         if (!(error instanceof DOMException && error.name === "AbortError") && !archived) {
           setMessage(error instanceof Error ? error.message : "Minted record failed.");

@@ -78,3 +78,33 @@ export function localTokens(archive: LocalArchive | null, contractAddress?: stri
       raw: { metadata: { attributes: token.attributes } },
     }));
 }
+
+function tokenKey(token: AlchemyNft): string {
+  return `${token.contract?.address?.toLowerCase() || ""}:${token.tokenId || ""}`;
+}
+
+/**
+ * Ethereum establishes which works are currently held. The repository archive is
+ * authoritative for media and metadata already resolved from each tokenURI.
+ */
+export function preferLocalTokens(live: AlchemyNft[], archived: AlchemyNft[]): AlchemyNft[] {
+  const localByKey = new Map(archived.map((token) => [tokenKey(token), token]));
+  const merged = live.map((token) => localByKey.get(tokenKey(token)) || token);
+  const seen = new Set(merged.map(tokenKey));
+  return [...merged, ...archived.filter((token) => !seen.has(tokenKey(token)))];
+}
+
+export function preferLocalToken(live: AlchemyNft, archived?: AlchemyNft): AlchemyNft {
+  return archived || live;
+}
+
+export function preferLocalCollections(
+  live: CollectionSummary[],
+  archived: CollectionSummary[],
+): CollectionSummary[] {
+  const localByAddress = new Map(archived.map((collection) => [collection.address.toLowerCase(), collection]));
+  return live.map((collection) => {
+    const local = localByAddress.get(collection.address.toLowerCase());
+    return local ? { ...collection, ...local, count: collection.count } : collection;
+  });
+}
