@@ -9,8 +9,8 @@ interface LocalToken {
   token_type: string;
   attributes: Array<{ trait_type?: string; value?: string | number }>;
   image_sources?: string[];
-  media: { path: string; media_type: string } | null;
-  animation: { path: string; media_type: string } | null;
+  media: { path: string; media_type: string; sha256?: string } | null;
+  animation: { path: string; media_type: string; sha256?: string } | null;
   holding_state?: "current" | "unobserved";
   owners?: string[];
 }
@@ -53,6 +53,11 @@ function playbackUrl(source: string): string {
   return source.replace("https://ipfs.io/ipfs/", "https://gateway.pinata.cloud/ipfs/");
 }
 
+function archivedMediaUrl(media: LocalToken["media"] | LocalToken["animation"]): string {
+  if (!media) return "";
+  return media.sha256 ? `${media.path}?v=${media.sha256.slice(0, 16)}` : media.path;
+}
+
 export function fetchLocalEthereumArchive(): Promise<LocalArchive | null> {
   archivePromise ??= fetch("/ethereum-archive/index.json", { headers: { accept: "application/json" } })
     .then(async (response) => response.ok ? await response.json() as LocalArchive : null)
@@ -85,11 +90,11 @@ export function localTokens(archive: LocalArchive | null, contractAddress?: stri
       description: token.description,
       tokenType: token.token_type,
       contract: { address: token.contract, tokenType: token.token_type },
-      image: token.media?.media_type.startsWith("image/") ? { originalUrl: token.media.path } : undefined,
+      image: token.media?.media_type.startsWith("image/") ? { originalUrl: archivedMediaUrl(token.media) } : undefined,
       animation: token.animation
-        ? { originalUrl: token.animation.path }
+        ? { originalUrl: archivedMediaUrl(token.animation) }
         : token.media && !token.media.media_type.startsWith("image/")
-          ? { originalUrl: token.media.path }
+          ? { originalUrl: archivedMediaUrl(token.media) }
           : token.image_sources?.find((source) => /\.(mp4|webm|mov)(?:$|\?)/i.test(source))
             ? { originalUrl: playbackUrl(token.image_sources.find((source) => /\.(mp4|webm|mov)(?:$|\?)/i.test(source))!) }
             : undefined,

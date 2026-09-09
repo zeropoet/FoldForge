@@ -54,6 +54,25 @@ describe("local Ethereum archive precedence", () => {
     }
   });
 
+  it("versions archived media URLs from their content witness", () => {
+    const archive = {
+      schema: "foldforge-ethereum-archive/v2" as const,
+      contracts: [],
+      tokens: [{
+        contract: address,
+        token_id: "2",
+        token_uri: "",
+        name: "Original Douay-Rheims Catholic Canon",
+        description: "",
+        token_type: "ERC721",
+        attributes: [],
+        media: { path: "/ethereum-archive/tokens/2/image.png", media_type: "image/png", sha256: "63f4bf57ccd1335e31e05b8225799cc0" },
+        animation: null,
+      }],
+    };
+    expect(localTokens(archive)[0].image?.originalUrl).toBe("/ethereum-archive/tokens/2/image.png?v=63f4bf57ccd1335e");
+  });
+
   it("keeps MORANTHUL visible locally while retaining its canonical video", () => {
     const archive = JSON.parse(readFileSync(resolve("public/ethereum-archive/index.json"), "utf8"));
     const moranthul = localTokens(archive, "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65")
