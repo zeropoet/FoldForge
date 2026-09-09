@@ -16,5 +16,8 @@
     "7",
     "8"
   ],
-  "image": "/ethereum-archive/contracts/0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa/tokens/1/image.png"
+  "image": "/ethereum-archive/contracts/0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa/tokens/1/image.png",
+  "owners": [
+    "zeropoet.eth"
+  ]
 }

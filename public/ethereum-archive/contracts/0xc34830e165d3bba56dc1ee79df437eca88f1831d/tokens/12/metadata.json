@@ -24,13 +24,11 @@
     "path": "/ethereum-archive/contracts/0xc34830e165d3bba56dc1ee79df437eca88f1831d/tokens/12/image.jpg"
   },
   "animation": null,
-  "archive_errors": [
-    {
-      "source": "https://ipfs.io/ipfs/Qmct99U7VjDiSWY66LqB8y9PN7feEaqdgaeXdctGtWuN12/nft.jpg",
-      "error": "Media request failed (429) for https://ipfs.io/ipfs/Qmct99U7VjDiSWY66LqB8y9PN7feEaqdgaeXdctGtWuN12/nft.jpg"
-    }
+  "archive_errors": [],
+  "owners": [
+    "zeropoet.eth"
   ],
-  "observed_at": "2026-09-05T04:06:45.765Z",
+  "observed_at": "2026-09-09T12:30:14.307Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {

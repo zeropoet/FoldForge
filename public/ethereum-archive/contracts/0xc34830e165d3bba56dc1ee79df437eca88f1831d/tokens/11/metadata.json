@@ -16,27 +16,19 @@
   "animation_sources": [],
   "evidence_sha256": "d6b2a7e885e0ac0fc5004f0ef90a901f697f117045e2647ce8f5a91beb2ce783",
   "metadata_path": "/ethereum-archive/contracts/0xc34830e165d3bba56dc1ee79df437eca88f1831d/tokens/11/metadata.json",
-  "media": null,
+  "media": {
+    "file": "image.jpg",
+    "bytes": 8109204,
+    "sha256": "02d9535762c956ac7f9c3cd7093c4b568dda92754503fa66e74537940eee800a",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0xc34830e165d3bba56dc1ee79df437eca88f1831d/tokens/11/image.jpg"
+  },
   "animation": null,
-  "archive_errors": [
-    {
-      "source": "https://ipfs.io/ipfs/QmaesFqP2tNGsyNNtQRDujfghokJcmB9Gdgt2MvjCMdBtH/nft.jpg",
-      "error": "Media request failed (429) for https://ipfs.io/ipfs/QmaesFqP2tNGsyNNtQRDujfghokJcmB9Gdgt2MvjCMdBtH/nft.jpg"
-    },
-    {
-      "source": "https://nft2-cdn.alchemy.com/eth-mainnet/905ab3f6e443df1f859ec94c7a63a863",
-      "error": "Media request failed (404) for https://nft2-cdn.alchemy.com/eth-mainnet/905ab3f6e443df1f859ec94c7a63a863"
-    },
-    {
-      "source": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/905ab3f6e443df1f859ec94c7a63a863",
-      "error": "Media request failed (404) for https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/905ab3f6e443df1f859ec94c7a63a863"
-    },
-    {
-      "source": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/905ab3f6e443df1f859ec94c7a63a863",
-      "error": "Media request failed (404) for https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/905ab3f6e443df1f859ec94c7a63a863"
-    }
+  "archive_errors": [],
+  "owners": [
+    "zeropoet.eth"
   ],
-  "observed_at": "2026-09-05T04:06:38.897Z",
+  "observed_at": "2026-09-09T12:30:14.307Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {

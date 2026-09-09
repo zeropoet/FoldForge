@@ -6,7 +6,7 @@
       "name": "zeropoet.eth",
       "contract_count": 22,
       "work_count": 260,
-      "observed_work_count": 98,
+      "observed_work_count": 260,
       "witness": "sha256:96043412afa04722a0e9d458f342f0c8bf22eef257b7767d85f1b01b638441e3"
     },
     {
@@ -14,11 +14,11 @@
       "contract_count": 5,
       "work_count": 62,
       "observed_work_count": 62,
-      "witness": "sha256:f3a9beab77bbf0ab3ae98d8c4eb6b107d1ae850dc7399eea4e0868dbb51f5b5f"
+      "witness": "sha256:c972c41f60251d5ecd467023ddf0a99b57d0d4e815e654dceaaf021dd1348888"
     }
   ],
   "network": "eth-mainnet",
-  "observed_at": "2026-09-08T18:19:55.785Z",
+  "observed_at": "2026-09-09T12:30:14.307Z",
   "policy": {
     "authority": "Ethereum remains provenance authority; this repository snapshot is a durable read fallback.",
     "admission": "Each sync ingests newly held works and refreshes metadata/media only when its evidence fingerprint changes.",
@@ -395,6 +395,218 @@
       ]
     },
     {
+      "address": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
+      "name": "The Void Architecture",
+      "symbol": "VOID",
+      "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
+      "total_supply": "42",
+      "token_type": "ERC721",
+      "token_ids": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "19",
+        "22",
+        "23",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "50"
+      ],
+      "image": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/9/image.png",
+      "owners": [
+        "zeropoet.eth"
+      ]
+    },
+    {
+      "address": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
+      "name": "Hært",
+      "symbol": "HEART",
+      "description": "",
+      "total_supply": "",
+      "token_type": "ERC721",
+      "token_ids": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41"
+      ],
+      "image": "/ethereum-archive/contracts/0xb4cb87b8324774741aacff58fb9dc3a00b735209/tokens/1/image.jpg",
+      "owners": [
+        "zeropoet.eth"
+      ]
+    },
+    {
+      "address": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
+      "name": "The Archive",
+      "symbol": "ARCHIVE",
+      "description": "",
+      "total_supply": "50",
+      "token_type": "ERC721",
+      "token_ids": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "40",
+        "41",
+        "42",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50"
+      ],
+      "image": "/ethereum-archive/contracts/0xc34830e165d3bba56dc1ee79df437eca88f1831d/tokens/1/image.jpg",
+      "owners": [
+        "zeropoet.eth"
+      ]
+    },
+    {
+      "address": "0xddb652a008eba424958eaf07d86384d1af1d21c5",
+      "name": "ALL",
+      "symbol": "ALL",
+      "description": "",
+      "total_supply": "",
+      "token_type": "ERC721",
+      "token_ids": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "image": "/ethereum-archive/contracts/0xddb652a008eba424958eaf07d86384d1af1d21c5/tokens/1/image.jpg",
+      "owners": [
+        "zeropoet.eth"
+      ]
+    },
+    {
+      "address": "0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa",
+      "name": "The Ovel Node",
+      "symbol": "OVEL",
+      "description": "",
+      "total_supply": "8",
+      "token_type": "ERC721",
+      "token_ids": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "image": "/ethereum-archive/contracts/0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa/tokens/1/image.png",
+      "owners": [
+        "zeropoet.eth"
+      ]
+    },
+    {
       "address": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "name": "FOLD FORGE",
       "symbol": "FLDFRG",
@@ -462,203 +674,6 @@
       "owners": [
         "rootlogos.eth"
       ]
-    },
-    {
-      "address": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
-      "name": "The Void Architecture",
-      "symbol": "VOID",
-      "description": "The blockchain reveals itself as The Void Architecture (VOID): an ERC-721 collection of presence, absence, and encoded becoming.",
-      "total_supply": "42",
-      "token_type": "ERC721",
-      "token_ids": [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
-        "11",
-        "12",
-        "13",
-        "14",
-        "15",
-        "16",
-        "17",
-        "19",
-        "22",
-        "23",
-        "26",
-        "27",
-        "28",
-        "29",
-        "30",
-        "31",
-        "32",
-        "33",
-        "34",
-        "35",
-        "36",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44",
-        "45",
-        "46",
-        "47",
-        "48",
-        "50"
-      ],
-      "image": "/ethereum-archive/contracts/0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65/tokens/9/image.png"
-    },
-    {
-      "address": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
-      "name": "Hært",
-      "symbol": "HEART",
-      "description": "",
-      "total_supply": "",
-      "token_type": "ERC721",
-      "token_ids": [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
-        "11",
-        "12",
-        "13",
-        "14",
-        "15",
-        "16",
-        "17",
-        "18",
-        "19",
-        "20",
-        "21",
-        "22",
-        "23",
-        "24",
-        "25",
-        "26",
-        "27",
-        "28",
-        "29",
-        "30",
-        "31",
-        "32",
-        "33",
-        "34",
-        "35",
-        "36",
-        "37",
-        "38",
-        "39",
-        "40",
-        "41"
-      ],
-      "image": "/ethereum-archive/contracts/0xb4cb87b8324774741aacff58fb9dc3a00b735209/tokens/1/image.jpg"
-    },
-    {
-      "address": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
-      "name": "The Archive",
-      "symbol": "ARCHIVE",
-      "description": "",
-      "total_supply": "50",
-      "token_type": "ERC721",
-      "token_ids": [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
-        "11",
-        "12",
-        "13",
-        "14",
-        "15",
-        "16",
-        "17",
-        "18",
-        "19",
-        "20",
-        "21",
-        "22",
-        "23",
-        "24",
-        "25",
-        "26",
-        "27",
-        "28",
-        "29",
-        "30",
-        "31",
-        "32",
-        "33",
-        "34",
-        "35",
-        "36",
-        "37",
-        "38",
-        "40",
-        "41",
-        "42",
-        "44",
-        "45",
-        "46",
-        "47",
-        "48",
-        "49",
-        "50"
-      ],
-      "image": "/ethereum-archive/contracts/0xc34830e165d3bba56dc1ee79df437eca88f1831d/tokens/1/image.jpg"
-    },
-    {
-      "address": "0xddb652a008eba424958eaf07d86384d1af1d21c5",
-      "name": "ALL",
-      "symbol": "ALL",
-      "description": "",
-      "total_supply": "",
-      "token_type": "ERC721",
-      "token_ids": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "image": "/ethereum-archive/contracts/0xddb652a008eba424958eaf07d86384d1af1d21c5/tokens/1/image.jpg"
-    },
-    {
-      "address": "0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa",
-      "name": "The Ovel Node",
-      "symbol": "OVEL",
-      "description": "",
-      "total_supply": "8",
-      "token_type": "ERC721",
-      "token_ids": [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8"
-      ],
-      "image": "/ethereum-archive/contracts/0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa/tokens/1/image.png"
     }
   ],
   "tokens": [
@@ -1266,21 +1281,26 @@
       "name": "01-root-logos-founding-constitution",
       "description": "0e20f4a9",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://i2c.seadn.io/ethereum/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/b14e1f84f8290407289fdb25378940/32b14e1f84f8290407289fdb25378940.png",
+        "https://arweave.net/ff0L-g6xncxOugCDLlaalqyY3aqb7P2l-cI3mtgjmdc",
         "https://nft2-cdn.alchemy.com/eth-mainnet/00d736a2450ffe4ca4c0777c703687b7_1af898ab",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/00d736a2450ffe4ca4c0777c703687b7_1af898ab",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/00d736a2450ffe4ca4c0777c703687b7_1af898ab"
       ],
       "animation_sources": [],
-      "evidence_sha256": "154644246cf4a47c696914c7f24f8d21dcdebaf40ce65898bfb29533cee70bcf",
+      "evidence_sha256": "e65a89da58a0914b78ce25277154a5443482cc5d77c72a3aee5e01aa39e32542",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/1/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 7336,
-        "sha256": "47ffe57731579f9a7697a899e85fc1453668c9ba41bda280eed1cbb15aba4517",
-        "media_type": "image/avif",
+        "bytes": 922609,
+        "sha256": "db99776415375fbe8a33b0d100b323df1aaba4af5844915450915c893ce60c66",
+        "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/1/image.png"
       },
       "animation": null,
@@ -1288,30 +1308,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:41.266Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "2",
-      "token_uri": "https://arweave.net/npIhya-TMjMJz-cxsrxt7YSrA943LyHisb9tpR_qJiA/1",
-      "name": "01-original-douay-rheims",
+      "token_uri": "https://arweave.net/t-LaZPvVaF1IoHuWIcwQ8Zrg_L40yqYlxVde49GdY-E/1",
+      "name": "02-original-douay-rheims",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/Z0x4pd84qbPfMFAzVC3dWRp_gacBtLA5DHO16Enr2Iw",
+        "https://arweave.net/C4jrpPQSquHFxWU5eqn1MCm6p3kMptFqGnKkHSXkKIE",
         "https://nft2-cdn.alchemy.com/eth-mainnet/b710954c91c453a693040d733554c018_22dfc7a4",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/b710954c91c453a693040d733554c018_22dfc7a4",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/b710954c91c453a693040d733554c018_22dfc7a4"
       ],
       "animation_sources": [],
-      "evidence_sha256": "6adc88641fd6be0dbc235bad1a21b12af0e3c14c62466f2a43a04bdbd78eb136",
+      "evidence_sha256": "c00ef6d47b7f79ea1dc4334be949ac9656b366c3d81d86e00918147a4b9f628b",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/2/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 1212670,
-        "sha256": "10d4fa7af316f2b20c454768e4a83e839fb4a48635c1ff02728a046abeb07339",
+        "bytes": 806679,
+        "sha256": "63f4bf57ccd1335e31e05b8225799cc0916552439f7b806651ad00042edc87f0",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/2/image.png"
       },
@@ -1320,30 +1345,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:42.067Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "3",
-      "token_uri": "https://arweave.net/npIhya-TMjMJz-cxsrxt7YSrA943LyHisb9tpR_qJiA/2",
-      "name": "02-the-odyssey",
+      "token_uri": "https://arweave.net/t-LaZPvVaF1IoHuWIcwQ8Zrg_L40yqYlxVde49GdY-E/2",
+      "name": "03-the-odyssey",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/hfEV-nvPkHL-7xYk-TZ-CUcDeiBHPy6R2dveXH3zKxQ",
+        "https://arweave.net/oe27CXdk5DtmT3mjsYpzfW3eU-6swLhE4li-btfCkdk",
         "https://nft2-cdn.alchemy.com/eth-mainnet/db299983917ccb01779909f007064637_f82ae579",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/db299983917ccb01779909f007064637_f82ae579",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/db299983917ccb01779909f007064637_f82ae579"
       ],
       "animation_sources": [],
-      "evidence_sha256": "1c18ea5af76ce24ccb15e118ece93688ef048d0b460fac2c57f892748aa5d079",
+      "evidence_sha256": "7cb5ca656738e085a1d9b155f513771cb9264a27cb4388d8a0a263fa041dc8e5",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/3/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 566618,
-        "sha256": "0f1da912654e807d2ef6662edd8ef573365e2f8dd6a04bfc02d9aad1f9013dab",
+        "bytes": 975222,
+        "sha256": "221bfce0dbee04eb9db4db28d2ac2e02607690fa2ec1f423307daaa6a0beb85b",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/3/image.png"
       },
@@ -1352,30 +1382,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:42.430Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "4",
-      "token_uri": "https://arweave.net/npIhya-TMjMJz-cxsrxt7YSrA943LyHisb9tpR_qJiA/3",
-      "name": "03-ornament-of-abhidharma",
+      "token_uri": "https://arweave.net/t-LaZPvVaF1IoHuWIcwQ8Zrg_L40yqYlxVde49GdY-E/3",
+      "name": "04-ornament-of-abhidharma",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/xdM-KHYbkHvo9q7oxEMBJVwSIjcmQqOP5fCo5LtfQ_4",
+        "https://arweave.net/aR_Hf2i3D9-AKkqNfCUhosJRNCvVZjIs0pX5s-9dNKs",
         "https://nft2-cdn.alchemy.com/eth-mainnet/f618fc80206258792d4dc8aba6df3a04_d8e704b5",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/f618fc80206258792d4dc8aba6df3a04_d8e704b5",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/f618fc80206258792d4dc8aba6df3a04_d8e704b5"
       ],
       "animation_sources": [],
-      "evidence_sha256": "6ebce88c7ad84de47271849c6572ea1f1b422bbf93f99d312c1c9cedb87b5e72",
+      "evidence_sha256": "f31163c279f21bfd7ae281bc236fb9403f90df7af876a71f0974f1b706be83da",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/4/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 507719,
-        "sha256": "84a1eadf79c35f4da45860b8fc8b7934ebf1d3273e10fa9c035110f9eb8117d8",
+        "bytes": 868590,
+        "sha256": "6f32fc77dfdc060f03c0eda70f2343ac5e0ef3b15710810ec17d5d657d8e0f47",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/4/image.png"
       },
@@ -1384,30 +1419,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:42.861Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "5",
-      "token_uri": "https://arweave.net/sqvSi786SV5K4Hk_fkJ5OQkUhoqlToWfndYCbjw68Kk/1",
-      "name": "04-bitcoin-a-peer-to-peer-electronic-cash-system",
+      "token_uri": "https://arweave.net/IzoKRzQRqhn8mp-TT0c3PibmoEpmBurJh_-Y-dol0x8/1",
+      "name": "05-bitcoin-a-peer-to-peer-electronic-cash-system",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/p-FZQVWR-qiKX4wsq2C8CXFVwXEEeYWeRiVyaf0XKaU",
+        "https://arweave.net/tyIFweD1osKgHQRnBl3_S6IKpeVk86kLadYBArZ9GEs",
         "https://nft2-cdn.alchemy.com/eth-mainnet/ac053f5c94d1f040162ba6c71cbf7bba_1df8d6ba",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/ac053f5c94d1f040162ba6c71cbf7bba_1df8d6ba",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/ac053f5c94d1f040162ba6c71cbf7bba_1df8d6ba"
       ],
       "animation_sources": [],
-      "evidence_sha256": "b6404d4c9cbae8969621e82ea8b62944849f96c8b4125e2785a51a20571bd0c8",
+      "evidence_sha256": "2bde018dbbd0900377f8ba538e574406829715a25624cb4ebe8ad3c0ff487eeb",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/5/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 531985,
-        "sha256": "b7f20e309121b8a3a18a8d8cd5be888ea2d79c8caedea8c58cf6870a4a4e532d",
+        "bytes": 562315,
+        "sha256": "bc6c0639af03b73b7ac2bf8f47b3813f0a2e2fae8f35b11f40929a4226e7401e",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/5/image.png"
       },
@@ -1416,30 +1456,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:43.232Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "6",
-      "token_uri": "https://arweave.net/sqvSi786SV5K4Hk_fkJ5OQkUhoqlToWfndYCbjw68Kk/2",
-      "name": "05-the-constitution-of-the-united-states-of-america-1787",
+      "token_uri": "https://arweave.net/IzoKRzQRqhn8mp-TT0c3PibmoEpmBurJh_-Y-dol0x8/2",
+      "name": "06-the-constitution-of-the-united-states-of-america-1787",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/MWehOWct-4kphYi7eZmyTWSd1_TdHb8B-jfL6tbwKv8",
+        "https://arweave.net/QUX6JrhoKwn_8njsUMcV3n0WZ1nXz8DxY0hYoVycUug",
         "https://nft2-cdn.alchemy.com/eth-mainnet/d646a239e8583e6cf92f17dbbbcd30d4_9533e08a",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/d646a239e8583e6cf92f17dbbbcd30d4_9533e08a",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/d646a239e8583e6cf92f17dbbbcd30d4_9533e08a"
       ],
       "animation_sources": [],
-      "evidence_sha256": "4be6be68d6774b3b24095ce8545fbd4d603b2165399138ee86bbe0a2633bda10",
+      "evidence_sha256": "fa3eb04d1416be7ad89f8c56578917e7dd404b196c345f7c5eaf8f302e04720f",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/6/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 470848,
-        "sha256": "49c25b86306d7a949437418a1d20c88459f3ee34fbfec6f0a6b8209c79ffb13d",
+        "bytes": 633770,
+        "sha256": "8c47b02517c1ed7dc6fe33a7019233131a28e71e47478e2caee2c29a3a5d2179",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/6/image.png"
       },
@@ -1448,30 +1493,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:43.605Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "7",
-      "token_uri": "https://arweave.net/sqvSi786SV5K4Hk_fkJ5OQkUhoqlToWfndYCbjw68Kk/3",
-      "name": "06-the-twenty-seven-amendments-to-the-constitution-of-the-united-states",
+      "token_uri": "https://arweave.net/IzoKRzQRqhn8mp-TT0c3PibmoEpmBurJh_-Y-dol0x8/3",
+      "name": "07-the-twenty-seven-amendments-to-the-constitution-of-the-united-states",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/KdEL9v4rr4fJtW7Desv5uZ0E3q_YIEMOiIMWGS0iDjs",
+        "https://arweave.net/WIhSe0mz-M_dl2OIMoXyyOsxwgAfUrATw6U7w0cxRsg",
         "https://nft2-cdn.alchemy.com/eth-mainnet/dd518a671c19b080ff1962a1597dccd6_04fac434",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/dd518a671c19b080ff1962a1597dccd6_04fac434",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/dd518a671c19b080ff1962a1597dccd6_04fac434"
       ],
       "animation_sources": [],
-      "evidence_sha256": "268a8b50983bcc5f2fab1fedfe06de5f3aae20c68e0ae81817754f5ad10c25df",
+      "evidence_sha256": "698b9a0a8681547cac12f067ad0250eb2520a5b32696ea7d49a81823b7fdd805",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/7/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 519098,
-        "sha256": "ffea9c0baff4589664986682a222ee7218e643400dfb49634bcf814ed8848a07",
+        "bytes": 759795,
+        "sha256": "31e14610fe99fd24a0a30df3a0e4db5a2331afc4c609ad14a3ac3043d210baaa",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/7/image.png"
       },
@@ -1480,30 +1530,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:44.052Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "8",
-      "token_uri": "https://arweave.net/sqvSi786SV5K4Hk_fkJ5OQkUhoqlToWfndYCbjw68Kk/4",
-      "name": "07-the-republic",
+      "token_uri": "https://arweave.net/IzoKRzQRqhn8mp-TT0c3PibmoEpmBurJh_-Y-dol0x8/4",
+      "name": "08-the-republic",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/vUKkLXzeQh7039IjDQsR33mQiFEDv8rgk5Y2-DlMcDE",
+        "https://arweave.net/McZ1nLwuRWNPMUL1q7LkkdTM6y3wcsKb2nEXlQIdyL0",
         "https://nft2-cdn.alchemy.com/eth-mainnet/8ca2b3c22634c42f45a5b9cf1acf31ee_b63fa51d",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/8ca2b3c22634c42f45a5b9cf1acf31ee_b63fa51d",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/8ca2b3c22634c42f45a5b9cf1acf31ee_b63fa51d"
       ],
       "animation_sources": [],
-      "evidence_sha256": "75a98c1036dd8b26f9d43dabca2928f498c3d3fc811fdb49a281ab431b0aa606",
+      "evidence_sha256": "0df66fa7cb4075e5a25848ab76a5f2d8bb8cb6670e57786f856a8957aded2c91",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/8/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 570039,
-        "sha256": "e356883ef62bd5caa032961f15ca2c365eebd19c5515eceb71761e65be8855f2",
+        "bytes": 744856,
+        "sha256": "473b2724d8c9a13d77b3d788ced3665aaed7037176db2e1192ac6fe8ea8ab54e",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/8/image.png"
       },
@@ -1512,30 +1567,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:44.467Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "9",
-      "token_uri": "https://arweave.net/yIGSJLsSjyn7XzkRrLbWC1PerqU7Dwse65Ik6Y_6U-Y/1",
-      "name": "08-the-federalist-papers",
+      "token_uri": "https://arweave.net/ibzOpk91TFVh2SsvIIHl729Fu0hWlC3OaSQUKpIOcUA/1",
+      "name": "09-the-federalist-papers",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/pELA7P9ZwI9r0RE7ldKU0CdmuuudUFA5ENhgsOrYrnw",
+        "https://arweave.net/ACUB2uEpArmFQbKb8BZHgivBKwDszZY0YcXL9XqPuNk",
         "https://nft2-cdn.alchemy.com/eth-mainnet/b1d320db15fb553a2db421b384d76c6e_6ef828e3",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/b1d320db15fb553a2db421b384d76c6e_6ef828e3",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/b1d320db15fb553a2db421b384d76c6e_6ef828e3"
       ],
       "animation_sources": [],
-      "evidence_sha256": "a1281fc449acaf570ea779686cddf4bb51ad66e293452192a2af1f365fe848ae",
+      "evidence_sha256": "64fa96ed3befb6238439154755abbf3f8c6cc4bddfe5a9a88d8f8513b02d508b",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/9/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 412439,
-        "sha256": "a97c4aa1d497eddb9142cfb62c6315fc44d5211dbdb308db38d48764a768061e",
+        "bytes": 1396391,
+        "sha256": "ce395080969c6089b5a10656a7355f8a1ef1981c35b4051a7bc70557a9057a37",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/9/image.png"
       },
@@ -1544,30 +1604,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:44.869Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "10",
-      "token_uri": "https://arweave.net/yIGSJLsSjyn7XzkRrLbWC1PerqU7Dwse65Ik6Y_6U-Y/2",
-      "name": "09-the-tempest",
+      "token_uri": "https://arweave.net/ibzOpk91TFVh2SsvIIHl729Fu0hWlC3OaSQUKpIOcUA/2",
+      "name": "10-the-tempest",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/rlAQGZ0tz6rgtpn8sxXQ9ljKS749UFRjMtQ4RJHSN3E",
+        "https://arweave.net/7ijb8izOpoypdUzN3sWsHAi5Bdl6mQ9CSu4FzAcsr3k",
         "https://nft2-cdn.alchemy.com/eth-mainnet/4453f31a6b252e7350b2b24ddec4b1dd_111a179f",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/4453f31a6b252e7350b2b24ddec4b1dd_111a179f",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/4453f31a6b252e7350b2b24ddec4b1dd_111a179f"
       ],
       "animation_sources": [],
-      "evidence_sha256": "64b783a6c893111d444610279e0d91949b0880eab822e74338409362cebcb0d5",
+      "evidence_sha256": "f880561214357fbca26185411eefba5fde44d37654fe8db0bc13b191395af32e",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/10/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 512229,
-        "sha256": "af30dd6c5933f4ccb3c89feeef2497d7d6dfcc4f0d85aa217c9b381416b8fe69",
+        "bytes": 778651,
+        "sha256": "fe7f339d0a046900b8dd1f5a4d806425e3e1cf6218eb862897b9337604b5900e",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/10/image.png"
       },
@@ -1576,30 +1641,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:45.298Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "11",
-      "token_uri": "https://arweave.net/yIGSJLsSjyn7XzkRrLbWC1PerqU7Dwse65Ik6Y_6U-Y/3",
-      "name": "10-hamlet",
+      "token_uri": "https://arweave.net/ibzOpk91TFVh2SsvIIHl729Fu0hWlC3OaSQUKpIOcUA/3",
+      "name": "11-hamlet",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/MvqqFpg9TVMGbRMHf-bcJ98-lSqRG_YATeOK5bzae4U",
+        "https://arweave.net/PmKmt4F9YtZKKng1ZqqUcHHcQHg8iYYnP17nplMmMeE",
         "https://nft2-cdn.alchemy.com/eth-mainnet/3b4fe0c458c6bcd071f04a62e881d562_f6804128",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/3b4fe0c458c6bcd071f04a62e881d562_f6804128",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/3b4fe0c458c6bcd071f04a62e881d562_f6804128"
       ],
       "animation_sources": [],
-      "evidence_sha256": "2c098fc41cf41ea150827254679db65a4aa1ab4e4de661bfaac98720673d030f",
+      "evidence_sha256": "f5622e3008bd84aaf763cd806275475d1e9ffb3921c2c216c7152cae6df1853b",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/11/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 530029,
-        "sha256": "2e5d7d35e34bb69ece7c52f9f3a7704036dc34085877626bbf6cc9c9851c41fb",
+        "bytes": 642928,
+        "sha256": "597e67e2ce9a48f976735f9c84fa45f956bb440644c7acf70d98e84940971c4d",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/11/image.png"
       },
@@ -1608,30 +1678,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:45.685Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "12",
-      "token_uri": "https://arweave.net/HoueUOUcI9RooAsJZCxVg1ApZNsdfio_9EYctHRXOFk/1",
-      "name": "11-the-thirteen-books-of-euclids-elements",
+      "token_uri": "https://arweave.net/grpAo-nFCaRWuYTikoE_Z_ZwY1WAgVIRLC9FDomfQLQ/1",
+      "name": "12-the-thirteen-books-of-euclids-elements",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/kek05uDjJ9KG_itdeed52OYVqvtf1pRTssfGgPYE1UI",
+        "https://arweave.net/OxvaYs_p6aoEG3yvXO7zFYcbMx3lHakIqw1skxz86Nk",
         "https://nft2-cdn.alchemy.com/eth-mainnet/d109bb235a58d3310027f699992dd921_ad3f031e",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/d109bb235a58d3310027f699992dd921_ad3f031e",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/d109bb235a58d3310027f699992dd921_ad3f031e"
       ],
       "animation_sources": [],
-      "evidence_sha256": "b1ff858297afc020a6828eee198aca9f16815612a0795a8e091ff7f46840cb7e",
+      "evidence_sha256": "be43ed1f1dd37332421a6de00e3699aaea52d09fce9605595d1a39cbbeadf4a6",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/12/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 413618,
-        "sha256": "b6ca72f679fcff75f8e81d3b7a80ddb7a19678fe08e70029414058ef94ad2db0",
+        "bytes": 688439,
+        "sha256": "c649fb94aabff5085f45a0910bbb7cb0897b1c00ea28c58e385fa213d7e3f840",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/12/image.png"
       },
@@ -1640,30 +1715,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:46.111Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "13",
-      "token_uri": "https://arweave.net/HoueUOUcI9RooAsJZCxVg1ApZNsdfio_9EYctHRXOFk/2",
-      "name": "12-the-iliad",
+      "token_uri": "https://arweave.net/grpAo-nFCaRWuYTikoE_Z_ZwY1WAgVIRLC9FDomfQLQ/2",
+      "name": "13-the-iliad",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/Bgk7mt_Szn0mFb57gJh5vNE1_XTECVv_kMMR08z-GaQ",
+        "https://arweave.net/FzDc7xg-iz1XRYXvjqPPvgrLNU85gp-0bL2WfSdQFv8",
         "https://nft2-cdn.alchemy.com/eth-mainnet/11738ac66b1403ad8245ffc624c4f43c_fc787a3b",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/11738ac66b1403ad8245ffc624c4f43c_fc787a3b",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/11738ac66b1403ad8245ffc624c4f43c_fc787a3b"
       ],
       "animation_sources": [],
-      "evidence_sha256": "ab051787abd1f3c8a29235c036faa093c5fc023743422833cdd5056e0467d2a0",
+      "evidence_sha256": "cd700f4dc7a13e9172272efbbb64ecf4f25ea8b0462ee3c21e333a189700b865",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/13/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 512941,
-        "sha256": "3bac6a9c89b592d87e418bc7d3ec2b01f39e1651ad1663a937d842d8e0fdad65",
+        "bytes": 1323802,
+        "sha256": "b190c6bb40f1c93961ff02a2a0863a672fcba1089a2285c480566c0b1e26c341",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/13/image.png"
       },
@@ -1672,30 +1752,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:46.623Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "14",
-      "token_uri": "https://arweave.net/HoueUOUcI9RooAsJZCxVg1ApZNsdfio_9EYctHRXOFk/3",
-      "name": "13-king-james-bible-1769",
+      "token_uri": "https://arweave.net/grpAo-nFCaRWuYTikoE_Z_ZwY1WAgVIRLC9FDomfQLQ/3",
+      "name": "14-king-james-bible-1769",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/ZYrxelFPtDPYs5qEgL5flg10SLOpMNXObG3coG95bKE",
+        "https://arweave.net/0sJhiyY5bfCUVcQEDNNcOwnRQb0RaMdEyM2X7-E82kc",
         "https://nft2-cdn.alchemy.com/eth-mainnet/e1452b56784687d8e680e729b2fa80a8_674c5e9d",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/e1452b56784687d8e680e729b2fa80a8_674c5e9d",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/e1452b56784687d8e680e729b2fa80a8_674c5e9d"
       ],
       "animation_sources": [],
-      "evidence_sha256": "285849d138d3c69e0eb25d07c5f486b169eba588e6bc485a3689413598c9db3c",
+      "evidence_sha256": "8dc488bb5c24733934318007c86845e4557b11ff32155755d863e0c0c1f1ab72",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/14/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 795360,
-        "sha256": "0fcf9cd6493401fa865fb26e1207ea656ad0e546264e1c074e96ffabe77c8419",
+        "bytes": 799846,
+        "sha256": "4aa1b5f9fe51421170f5a027dabfdcbb4a4018a0c6bc8b29f98e6956adcb1a04",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/14/image.png"
       },
@@ -1704,30 +1789,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:47.087Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "15",
-      "token_uri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/1",
-      "name": "14-siddhartha-eine-indische-dichtung",
+      "token_uri": "https://arweave.net/SPNfTXhkTTz9IEHGyXCneREKE-ZM6FiBmc_O-xSKnc0/1",
+      "name": "15-siddhartha-eine-indische-dichtung",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/6ndiHIm08FN7BqcNEq_-vWIkCMleYZ0-ff7r15euoLI",
+        "https://arweave.net/3YvFwWPwTuTKiLy_uIU9zAtuBuKS_ONYfABv3Vm_2QY",
         "https://nft2-cdn.alchemy.com/eth-mainnet/ad44786fb405d5ccd324e3935e679239_4cbbbf8c",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/ad44786fb405d5ccd324e3935e679239_4cbbbf8c",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/ad44786fb405d5ccd324e3935e679239_4cbbbf8c"
       ],
       "animation_sources": [],
-      "evidence_sha256": "6a8b4a4389b7f44aed1f9bc8d269745bfb7a1f087f8b4eca4f8e18f701b50b85",
+      "evidence_sha256": "1cb050e36d69130e83f3fbb195b6dbf84001cfe74de554ab1165cc622002383e",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/15/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 346181,
-        "sha256": "c2c8d7d3c7cab4e0c5532dd0d0924e0dd15a0ce6ac69169e465f2db03bae3338",
+        "bytes": 972691,
+        "sha256": "50b68380de43e008e2ae1b52509fd61bc3803d1219c2b7061981ebf41c9e618b",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/15/image.png"
       },
@@ -1736,30 +1826,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T04:21:44.154Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "16",
-      "token_uri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/2",
-      "name": "15-the-life-of-the-buddha-according-to-the-pali-canon",
+      "token_uri": "https://arweave.net/SPNfTXhkTTz9IEHGyXCneREKE-ZM6FiBmc_O-xSKnc0/2",
+      "name": "16-the-life-of-the-buddha-according-to-the-pali-canon",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/jVWyG0nbU94GJNJC66SEjvvZLYMx9RdLVDZEN1cd4ZM",
+        "https://arweave.net/6t1z3H7r58sok01QCnUUgdMj2J58UfFVtUqYLLrenuI",
         "https://nft2-cdn.alchemy.com/eth-mainnet/7ce981a2a17d4630dd4630e819ea6261_313c3f71",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/7ce981a2a17d4630dd4630e819ea6261_313c3f71",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/7ce981a2a17d4630dd4630e819ea6261_313c3f71"
       ],
       "animation_sources": [],
-      "evidence_sha256": "715e67f5445a9bc010b5086522990adfa8435613a298b1bf7060174e832399fb",
+      "evidence_sha256": "2f78e7ba29a202196288221501e68eece5cdc67381f35f400ec4362bca6d622a",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/16/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 462882,
-        "sha256": "7b0f7561939a110ccd6911b5ef5b59d29114a4f35dac0344aae4d9695b581b0f",
+        "bytes": 755208,
+        "sha256": "ebabf4ee04a8bc9b6713fe6b3ad84d5f22ac04a137d55ffc25c78d4c690e3ece",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/16/image.png"
       },
@@ -1768,30 +1863,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T04:21:44.154Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "17",
-      "token_uri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/3",
-      "name": "16-on-the-sources-of-knowledge-and-of-ignorance",
+      "token_uri": "https://arweave.net/SPNfTXhkTTz9IEHGyXCneREKE-ZM6FiBmc_O-xSKnc0/3",
+      "name": "17-constructor-theory",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/koIwTVtfimknAxuQizkL5go1DtKI8roUtAv1PmfFObM",
+        "https://arweave.net/bwKWYnEE3z0Od-OQ0AbV6YbuONHwNMysYDW1tXlD8dg",
         "https://nft2-cdn.alchemy.com/eth-mainnet/b3d9c1dd50e917c94c961dd1de535d88_a9d2a163",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/b3d9c1dd50e917c94c961dd1de535d88_a9d2a163",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/b3d9c1dd50e917c94c961dd1de535d88_a9d2a163"
       ],
       "animation_sources": [],
-      "evidence_sha256": "5441495ee5f74464291ed8ade48c33ac53b42e83ddba7435dc3ffa56acafc94b",
+      "evidence_sha256": "c5ee286ad0214194ca79e42b133a08f285e7d3d024600ee6809d3f9f40524a44",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/17/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 376195,
-        "sha256": "2011de5b8c40f542fef89df9c7df049e5cea857db53aa6847b8f9fda37f4ae66",
+        "bytes": 546151,
+        "sha256": "3fa10b0305c58a37b0addd6f644989f51cd70aee7e151eea938fdd2ced19e63b",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/17/image.png"
       },
@@ -1800,30 +1900,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T04:21:44.154Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "18",
-      "token_uri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/4",
-      "name": "17-constructor-theory",
+      "token_uri": "https://arweave.net/SPNfTXhkTTz9IEHGyXCneREKE-ZM6FiBmc_O-xSKnc0/4",
+      "name": "18-quantum-theory-the-church-turing-principle-and-the-universal-quantum-computer",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/Qirjv7fHFblWk_oN6aZ6QF5yWs_UF1qD2_OidEwOsCE",
+        "https://arweave.net/Ip0V4OgyNMgYPneyf-YHCchsujQYwepuP0KSQq7ZQFs",
         "https://nft2-cdn.alchemy.com/eth-mainnet/74081ca8bf03c6eb3ab88f1f2f35c412_c4f46882",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/74081ca8bf03c6eb3ab88f1f2f35c412_c4f46882",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/74081ca8bf03c6eb3ab88f1f2f35c412_c4f46882"
       ],
       "animation_sources": [],
-      "evidence_sha256": "70cd1391bef906b4debc58d2b68a64724b9c3619c2e6e48613944b6ff7381b32",
+      "evidence_sha256": "3f363cc86ef05bfbe7128039d936c82cff81cc3075b33e2d3bc73a3a3e55ac9b",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/18/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 500390,
-        "sha256": "0563099700296c7f09556304127e61d2c21ef2e9843bd820911f7b6578eacf55",
+        "bytes": 683787,
+        "sha256": "2062e3a091d4bba8c8f9d1d00688e08180f8f27f0dfa2d109cd569868b6d079c",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/18/image.png"
       },
@@ -1832,30 +1937,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T04:21:44.154Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "19",
-      "token_uri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/5",
-      "name": "18-quantum-theory-the-church-turing-principle-and-the-universal-quantum-computer",
+      "token_uri": "https://arweave.net/SPNfTXhkTTz9IEHGyXCneREKE-ZM6FiBmc_O-xSKnc0/5",
+      "name": "19-the-logical-writings-of-karl-popper",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/zpty0eWKeqah6rNC_RM8f2t6EyoXZTC2Jseip1dDqEs",
+        "https://arweave.net/G9gYfQPoFAnQwpLXnu944MFCkZJNJYqNDOQ5zL8j-yU",
         "https://nft2-cdn.alchemy.com/eth-mainnet/f2df6e9f0f8ef7f4369a57bb0dc90788_3799661a",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/f2df6e9f0f8ef7f4369a57bb0dc90788_3799661a",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/f2df6e9f0f8ef7f4369a57bb0dc90788_3799661a"
       ],
       "animation_sources": [],
-      "evidence_sha256": "7f851ab69c16e0205dd581c22488245fbd25d8ffdc99ae835fb2fa227d1dd678",
+      "evidence_sha256": "4a0bf19cb6bc098e47e4da8348658220eb80ba3707b699473f9c423b7cdddce0",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/19/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 486368,
-        "sha256": "b0ad1de378f1abeb2527fcf5d2282f7021f5ca2820e97ecae8c511acf609d343",
+        "bytes": 908587,
+        "sha256": "f090a6a6f334b126e9462afeef0eeeef23db9ae5a5d106981be27593b04e7d82",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/19/image.png"
       },
@@ -1864,30 +1974,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T04:21:44.154Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "20",
-      "token_uri": "https://arweave.net/LsvMEvB9BU3I1fU9WZhrK_UYmjZm4c8IJF9k317xxFE/6",
-      "name": "19-the-logical-writings-of-karl-popper",
+      "token_uri": "https://arweave.net/SPNfTXhkTTz9IEHGyXCneREKE-ZM6FiBmc_O-xSKnc0/6",
+      "name": "20-great-founder-theory",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/lq4TSlaRI9IZy2yJ8x5X5y9HQQOWry9mhQVU5tJKZ38",
+        "https://arweave.net/UeRz-p1-iv8IH3-zCXEVpWx9aYtIucOpjvsoMGK9Beo",
         "https://nft2-cdn.alchemy.com/eth-mainnet/ad2c73b8449a9b9f900ed8facd3250ef_2ccaaef0",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/ad2c73b8449a9b9f900ed8facd3250ef_2ccaaef0",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/ad2c73b8449a9b9f900ed8facd3250ef_2ccaaef0"
       ],
       "animation_sources": [],
-      "evidence_sha256": "5fa26b02df310b7c73ca0a064a4fde226ce1c62565c3a6aa8ea20b1c4a85bbfb",
+      "evidence_sha256": "7f6852f821616198ebd697fefc79b22005514bd4a76e69dbd532416690c96b27",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/20/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 514133,
-        "sha256": "3027ea4e3d11fb98987e854714b59a09ee7ae255e26a5fd45d094ebdb794b1b9",
+        "bytes": 702149,
+        "sha256": "f3c7765f08cf9df3c92cbca6406e18cbbc4125722fd254230108c546e7aece9e",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/20/image.png"
       },
@@ -1896,25 +2011,30 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:50.534Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "21",
-      "token_uri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/1",
-      "name": "20-the-book-of-five-rings",
+      "token_uri": "https://arweave.net/95766vEf0qyOdgU1tW_Tiauc2LjY_P5BBMVBvi25Itc/1",
+      "name": "21-tao-te-ching",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/m4JG6ttr1hTtdQvzMSnf3mkvSe9c32IVJJ-U-CwPP1Y",
+        "https://arweave.net/pIyYdtQaS6GBwNGVczHu9JSOD6jqZv0unbd4cdCspNw",
         "https://nft2-cdn.alchemy.com/eth-mainnet/43d1c7f343e433fcb2739c1d0ebe0302_cbcb52e7",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/43d1c7f343e433fcb2739c1d0ebe0302_cbcb52e7",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/43d1c7f343e433fcb2739c1d0ebe0302_cbcb52e7"
       ],
       "animation_sources": [],
-      "evidence_sha256": "179736f220358d838423b5f1227f70d40ce4d9f193282490271e0ec3473773ab",
+      "evidence_sha256": "7531a06c050f22b556b87ab24f036273efab3dd4ee318ee686660cef50418be2",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/21/metadata.json",
       "media": {
         "file": "image.png",
@@ -1924,34 +2044,44 @@
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/21/image.png"
       },
       "animation": null,
-      "archive_errors": [],
+      "archive_errors": [
+        {
+          "source": "https://arweave.net/pIyYdtQaS6GBwNGVczHu9JSOD6jqZv0unbd4cdCspNw",
+          "error": "Media request failed (404) for https://arweave.net/pIyYdtQaS6GBwNGVczHu9JSOD6jqZv0unbd4cdCspNw"
+        }
+      ],
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:50.964Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "22",
-      "token_uri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/2",
-      "name": "21-the-principal-upanishads",
+      "token_uri": "https://arweave.net/95766vEf0qyOdgU1tW_Tiauc2LjY_P5BBMVBvi25Itc/2",
+      "name": "22-the-journal-membrane",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/YVn3Hxfhrson401TKf4fMazIIkHFdbAkdGJBjhIW0IA",
+        "https://arweave.net/qW-rIksin8fNbRWQZ9QvyaOtYenA6kUZkOrWmeOqwaY",
         "https://nft2-cdn.alchemy.com/eth-mainnet/32adece7f23979a10d89919758c17df6_4cafe37b",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/32adece7f23979a10d89919758c17df6_4cafe37b",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/32adece7f23979a10d89919758c17df6_4cafe37b"
       ],
       "animation_sources": [],
-      "evidence_sha256": "298f3076edc0de635d177d6fd34faa5662b1596b744726069edce0712f73a7c6",
+      "evidence_sha256": "7067d68039261dcb7f5f65cf2c2cb51f51d01dc1ae189a2469f6e6df51d63649",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/22/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 405756,
-        "sha256": "99eec6e5b7ef01b5ae534c5a9493d34119162e6b1bffc6b97e64a743158d4938",
+        "bytes": 738681,
+        "sha256": "13c6b9bf09941e03ea362524ed73f53e4cc337549c7796bad89b48a767ea5ec0",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/22/image.png"
       },
@@ -1960,25 +2090,30 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:51.365Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "23",
-      "token_uri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/3",
-      "name": "22-great-founder-theory",
+      "token_uri": "https://arweave.net/95766vEf0qyOdgU1tW_Tiauc2LjY_P5BBMVBvi25Itc/3",
+      "name": "23-the-resonant-chamber",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/oCbk5AznBvqQQ02KvRuGjFTcJVzkNy4bzCdHTv4h4yI",
+        "https://arweave.net/S_iiYUKE_BzewM6BjaC-ly8NTehWDA9Q5_6jbfMWohQ",
         "https://nft2-cdn.alchemy.com/eth-mainnet/ad0496303b5333bebc697c5021063f52_49730b78",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/ad0496303b5333bebc697c5021063f52_49730b78",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/ad0496303b5333bebc697c5021063f52_49730b78"
       ],
       "animation_sources": [],
-      "evidence_sha256": "22ab8ff0e775556bb567d2e75706f33475418e813196f969c4ce3824c949948a",
+      "evidence_sha256": "29058706d049b942971ee900f7c94efa833b73fce90ad3d47062bb8df1747867",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/23/metadata.json",
       "media": {
         "file": "image.png",
@@ -1988,29 +2123,39 @@
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/23/image.png"
       },
       "animation": null,
-      "archive_errors": [],
+      "archive_errors": [
+        {
+          "source": "https://arweave.net/S_iiYUKE_BzewM6BjaC-ly8NTehWDA9Q5_6jbfMWohQ",
+          "error": "Media request failed (404) for https://arweave.net/S_iiYUKE_BzewM6BjaC-ly8NTehWDA9Q5_6jbfMWohQ"
+        }
+      ],
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:51.755Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "24",
-      "token_uri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/4",
-      "name": "23-tao-te-ching",
+      "token_uri": "https://arweave.net/95766vEf0qyOdgU1tW_Tiauc2LjY_P5BBMVBvi25Itc/4",
+      "name": "24-toward-a-moral-constitution-for-human-machine-civilization",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/BWCECBY34WmO86F4N5ZoZs7VMUFsvHscJlH-HSjD1Yk",
+        "https://arweave.net/5i2JGHXayDW1veD4sllTIau50hIFOsCYRCnOlRIxw0U",
         "https://nft2-cdn.alchemy.com/eth-mainnet/a8cae4e20c25d2d4671eba362e3f1fe8_62417e33",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/a8cae4e20c25d2d4671eba362e3f1fe8_62417e33",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/a8cae4e20c25d2d4671eba362e3f1fe8_62417e33"
       ],
       "animation_sources": [],
-      "evidence_sha256": "61e9cfcaf502c3559c7bc8075b572b90e556d31a8a86c7e69b76027c102bfd48",
+      "evidence_sha256": "1b6e4c198eb76c3d721f2c28d244481618f2b2644ad16f49dee39f5f1cc5b1cf",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/24/metadata.json",
       "media": {
         "file": "image.png",
@@ -2020,34 +2165,44 @@
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/24/image.png"
       },
       "animation": null,
-      "archive_errors": [],
+      "archive_errors": [
+        {
+          "source": "https://arweave.net/5i2JGHXayDW1veD4sllTIau50hIFOsCYRCnOlRIxw0U",
+          "error": "Media request failed (404) for https://arweave.net/5i2JGHXayDW1veD4sllTIau50hIFOsCYRCnOlRIxw0U"
+        }
+      ],
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:52.104Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "25",
-      "token_uri": "https://arweave.net/QzcR8ToU650KNP49SmqnacRql3d4KdmAc04us-tL1wE/5",
-      "name": "25-the-journal-membrane",
+      "token_uri": "https://arweave.net/95766vEf0qyOdgU1tW_Tiauc2LjY_P5BBMVBvi25Itc/5",
+      "name": "25-the-invisible-substrate",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/BizkdJQ5S3KABH_wC-nDXWQ7LjT_6_rXT8jgZ_NXF2M",
+        "https://arweave.net/ToHW2S6AUyM-0vMpyRQcx_IF93VLJhHueoCdyJ8uV1k",
         "https://nft2-cdn.alchemy.com/eth-mainnet/afaa9a3d6311c3884d84756691f53e25_4aed4c6d",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/afaa9a3d6311c3884d84756691f53e25_4aed4c6d",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/afaa9a3d6311c3884d84756691f53e25_4aed4c6d"
       ],
       "animation_sources": [],
-      "evidence_sha256": "42d9d6b126163763c9458b19a12627d4aa5028a00d117c20acdad48ae7c477fa",
+      "evidence_sha256": "6f424a7e843dfd7e55001ece95eec1f85d043283625a0f25864f6c9ee6804027",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/25/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 468621,
-        "sha256": "a6b2bd3321f729d8780b9590c11c0fc42cc73bc42e0766ce63015352d4d75a07",
+        "bytes": 436632,
+        "sha256": "1319079f18c01ee89dd7d0afe071eb33b40b5c2cdfb70750cc6dff324bc475dc",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/25/image.png"
       },
@@ -2056,30 +2211,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:52.461Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "26",
-      "token_uri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/1",
-      "name": "26-the-resonant-chamber",
+      "token_uri": "https://arweave.net/kayFueTWmPcxQEBAesReRA1_HL3e6F0RCESiMuz5kE8/1",
+      "name": "26-constitutional-naturalization",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/Voh4irGZbuolqwc_D9XXGE5zvVuXze26_PIWsgvku34",
+        "https://arweave.net/bIuVtitGH2P_3C0kq8Y9m2Ihorp_RWxOxBJqUntZmiU",
         "https://nft2-cdn.alchemy.com/eth-mainnet/0ed4843f79f2cf5073a592fb4cba2498_86dc9fb7",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/0ed4843f79f2cf5073a592fb4cba2498_86dc9fb7",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/0ed4843f79f2cf5073a592fb4cba2498_86dc9fb7"
       ],
       "animation_sources": [],
-      "evidence_sha256": "b535f166fa810bf57afe749d1b82f4fdba9d91ad97baee5258e2589ea2d6c57a",
+      "evidence_sha256": "28d5b2524b25220579a632328d0b95820e2e9803e50d074f7128ee67c8e22abd",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/26/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 369220,
-        "sha256": "f109679cb7fcd4978e56aff7d041074d657eb8d4713561bc6e9f9287de601580",
+        "bytes": 460816,
+        "sha256": "d07bb52b5c72ecb1c6857a93cdead3e1d9b6879e62b234d687b020bd397efc5e",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/26/image.png"
       },
@@ -2088,30 +2248,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:59.438Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "27",
-      "token_uri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/2",
-      "name": "27-toward-a-moral-constitution-for-human-machine-civilization",
+      "token_uri": "https://arweave.net/kayFueTWmPcxQEBAesReRA1_HL3e6F0RCESiMuz5kE8/2",
+      "name": "27-participation-without-possession",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/uGfNIUNP19gB6UlM-xxZn6Cil1Tr-OBZ5St2y4mn37Q",
+        "https://arweave.net/uTzR7_SVk--eM0bfRbJDQSndRqRGDIpL3Ayc7d7K2IA",
         "https://nft2-cdn.alchemy.com/eth-mainnet/10790513df11ca34249b0a14109cab1b_fa191ae1",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/10790513df11ca34249b0a14109cab1b_fa191ae1",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/10790513df11ca34249b0a14109cab1b_fa191ae1"
       ],
       "animation_sources": [],
-      "evidence_sha256": "36a4f967171d18a4b8afdf715b2978e7a656b845827bc5a935d731896ac6ef03",
+      "evidence_sha256": "5b144f3e1f3f5d6f6d74cb219f468764aa2ac8a9cf78323429980b27c3287346",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/27/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 401534,
-        "sha256": "874fcbefc51437540c1db6a6e2532e28a74a55a856ed1cba786156ec7268a062",
+        "bytes": 368476,
+        "sha256": "2647e62f03c0919556da09d146ce5d37eae92464c67243aa7c62f461c79437cc",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/27/image.png"
       },
@@ -2120,30 +2285,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:47:59.909Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "28",
-      "token_uri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/3",
-      "name": "28-the-invisible-substrate",
+      "token_uri": "https://arweave.net/kayFueTWmPcxQEBAesReRA1_HL3e6F0RCESiMuz5kE8/3",
+      "name": "28-participatory-sovereignty",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/w-l1fGyTK6IQVgvnccjqprH6UJX32Xwf6Y3G8r1BuPM",
+        "https://arweave.net/HOi7ZpZrj3wXr0ne6sIL-6qmBg7HS_keU2gedU2xkR8",
         "https://nft2-cdn.alchemy.com/eth-mainnet/36bbe59f3328e5a4e43a9eea80bb8a1d_1dcdb13a",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/36bbe59f3328e5a4e43a9eea80bb8a1d_1dcdb13a",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/36bbe59f3328e5a4e43a9eea80bb8a1d_1dcdb13a"
       ],
       "animation_sources": [],
-      "evidence_sha256": "c2424595570908fe3388e5035af531e1bea2c858ff2242ea96a301acb5513c3e",
+      "evidence_sha256": "f8e0f66d92404126ce1705dc9d37a75d49df3702820d4161530b64b1108e6354",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/28/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 445016,
-        "sha256": "6f81a28f264e530271e3391642275806f42607d300f82eaf154f5cfec55fc1da",
+        "bytes": 259137,
+        "sha256": "0b4d419a195529c95764f630aaad6b52e26b7c033865f7c3c9e85cd0b0dda98d",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/28/image.png"
       },
@@ -2152,25 +2322,30 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:00.445Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "29",
-      "token_uri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/4",
-      "name": "29-constitutional-naturalization",
+      "token_uri": "https://arweave.net/kayFueTWmPcxQEBAesReRA1_HL3e6F0RCESiMuz5kE8/4",
+      "name": "29-freedom-through-non-possession",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/EwcpK6R2fLxHBZam9gXt_vAIaj7xvs6jGr4u5hpzQHI",
+        "https://arweave.net/9W7S8nFDs9OFuDiZLjS1XzWY1GKx0rlTwsl4PDfObDw",
         "https://nft2-cdn.alchemy.com/eth-mainnet/f80b67cd3f251fe466deeef75f9ab956_a4d04c9b",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/f80b67cd3f251fe466deeef75f9ab956_a4d04c9b",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/f80b67cd3f251fe466deeef75f9ab956_a4d04c9b"
       ],
       "animation_sources": [],
-      "evidence_sha256": "15cf0903ec2a3dd4ee13cbab8c63de022c3c514410a0389525a63671ef7dcd75",
+      "evidence_sha256": "1e751d37ec1829c22111f428561df2196a25127307a06ab11bb1c5aa4cbffde8",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/29/metadata.json",
       "media": {
         "file": "image.png",
@@ -2180,34 +2355,44 @@
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/29/image.png"
       },
       "animation": null,
-      "archive_errors": [],
+      "archive_errors": [
+        {
+          "source": "https://arweave.net/9W7S8nFDs9OFuDiZLjS1XzWY1GKx0rlTwsl4PDfObDw",
+          "error": "Media request failed (404) for https://arweave.net/9W7S8nFDs9OFuDiZLjS1XzWY1GKx0rlTwsl4PDfObDw"
+        }
+      ],
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:00.946Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "30",
-      "token_uri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/5",
-      "name": "30-participation-without-possession",
+      "token_uri": "https://arweave.net/kayFueTWmPcxQEBAesReRA1_HL3e6F0RCESiMuz5kE8/5",
+      "name": "30-conscious-participation",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/Ldb9xunpFw2KJ05-wLjLOX-cH4Q0rGTOJ_uvxkW_KA4",
+        "https://arweave.net/X7E7yR-v_F8f0Nh5Nx7NIMHBvFnQeHWj_D9fwxZVyyI",
         "https://nft2-cdn.alchemy.com/eth-mainnet/3c8e2d804c71a84394547e5cb326d186_7cb5bb83",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/3c8e2d804c71a84394547e5cb326d186_7cb5bb83",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/3c8e2d804c71a84394547e5cb326d186_7cb5bb83"
       ],
       "animation_sources": [],
-      "evidence_sha256": "e4914370088e4310af491594320fae06a4ef23d1c57dbd5c6890446354a84156",
+      "evidence_sha256": "ca3028d418df0d62e69dbbf2044db4b0b848e0515177334531ea6a51846efda3",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/30/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 484894,
-        "sha256": "84a850eaf9c77eb25da72e7742335bdd7303e033ff029557dad0733d0a3c3a1d",
+        "bytes": 387745,
+        "sha256": "6c48b17393fbc7ee784b67207c8dabcd497cb7a4234468764c47e919e0ccc548",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/30/image.png"
       },
@@ -2216,25 +2401,30 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:08.101Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "31",
-      "token_uri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/6",
-      "name": "31-participatory-sovereignty",
+      "token_uri": "https://arweave.net/kayFueTWmPcxQEBAesReRA1_HL3e6F0RCESiMuz5kE8/6",
+      "name": "31-from-reference-to-participation",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/T90RWvrJ8IP9vLwcUA9CCsd6c9GNM-SNRgkA3mOXv04",
+        "https://arweave.net/uVPzElAZKFkOclBsRBdR40iyWXSFSKibLDu2mc3qU7k",
         "https://nft2-cdn.alchemy.com/eth-mainnet/0c4841afb01d10350e28c02920652be8_57daebed",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/0c4841afb01d10350e28c02920652be8_57daebed",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/0c4841afb01d10350e28c02920652be8_57daebed"
       ],
       "animation_sources": [],
-      "evidence_sha256": "3bb8ebc013496067e0897083b0d04f22b6ac07a68d9bac766d82de85aa7f2f7f",
+      "evidence_sha256": "455b5ff775ddfb3f84307a417ee091c5ec58a6886dd9328fc83adf234eaa64f6",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/31/metadata.json",
       "media": {
         "file": "image.png",
@@ -2244,29 +2434,39 @@
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/31/image.png"
       },
       "animation": null,
-      "archive_errors": [],
+      "archive_errors": [
+        {
+          "source": "https://arweave.net/uVPzElAZKFkOclBsRBdR40iyWXSFSKibLDu2mc3qU7k",
+          "error": "Media request failed (404) for https://arweave.net/uVPzElAZKFkOclBsRBdR40iyWXSFSKibLDu2mc3qU7k"
+        }
+      ],
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:08.573Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "32",
-      "token_uri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/7",
-      "name": "32-freedom-through-non-possession",
+      "token_uri": "https://arweave.net/kayFueTWmPcxQEBAesReRA1_HL3e6F0RCESiMuz5kE8/7",
+      "name": "32-the-art-of-war",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/1NaA0wZsZVFbmd4tLlEAxJHZnC3279V8GIDmeG9jtQI",
+        "https://arweave.net/mAjbV4VCm0jp575PKh1TisDzysglar5WGJhGpbtK1ys",
         "https://nft2-cdn.alchemy.com/eth-mainnet/510a2e98e327384f404e54502a7203cb_883ed356",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/510a2e98e327384f404e54502a7203cb_883ed356",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/510a2e98e327384f404e54502a7203cb_883ed356"
       ],
       "animation_sources": [],
-      "evidence_sha256": "c298c8f1155e78bc1b0c40c2e993fc043f2c6f493ead48e590731ddde9fdf5dd",
+      "evidence_sha256": "6fd16227ce3ffbb9a7806870fda29f365fb7cb470e566968c9fafe7418692f3a",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/32/metadata.json",
       "media": {
         "file": "image.png",
@@ -2276,29 +2476,39 @@
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/32/image.png"
       },
       "animation": null,
-      "archive_errors": [],
+      "archive_errors": [
+        {
+          "source": "https://arweave.net/mAjbV4VCm0jp575PKh1TisDzysglar5WGJhGpbtK1ys",
+          "error": "Media request failed (404) for https://arweave.net/mAjbV4VCm0jp575PKh1TisDzysglar5WGJhGpbtK1ys"
+        }
+      ],
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:09.073Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "33",
-      "token_uri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/8",
-      "name": "33-conscious-participation",
+      "token_uri": "https://arweave.net/kayFueTWmPcxQEBAesReRA1_HL3e6F0RCESiMuz5kE8/8",
+      "name": "33-psychology-of-the-unconscious",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/XcIUhOlp3CooWk7tV_WHBCyCKnCwyCOkVw-iJJktrdM",
+        "https://arweave.net/IKoJNX2jXxgywzf8Yt6qfzb7m1NcOlay-Ot4Wtor69A",
         "https://nft2-cdn.alchemy.com/eth-mainnet/78d6bb157ceee9da0ae81b7b6602cda5_2d442d55",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/78d6bb157ceee9da0ae81b7b6602cda5_2d442d55",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/78d6bb157ceee9da0ae81b7b6602cda5_2d442d55"
       ],
       "animation_sources": [],
-      "evidence_sha256": "10e5e24023e9b0567a65ab66f0e0715ce0e7b9493d2ab621a8dea23f9d69b957",
+      "evidence_sha256": "b8dde6dbe7989de260384730816fbaef89e1b3d2df4770fd7d42f64f35de3728",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/33/metadata.json",
       "media": {
         "file": "image.png",
@@ -2308,34 +2518,44 @@
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/33/image.png"
       },
       "animation": null,
-      "archive_errors": [],
+      "archive_errors": [
+        {
+          "source": "https://arweave.net/IKoJNX2jXxgywzf8Yt6qfzb7m1NcOlay-Ot4Wtor69A",
+          "error": "Media request failed (404) for https://arweave.net/IKoJNX2jXxgywzf8Yt6qfzb7m1NcOlay-Ot4Wtor69A"
+        }
+      ],
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:09.566Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "34",
-      "token_uri": "https://arweave.net/KpA1uYAGrk1G-oK7CoaeATRPnaFFQ_2ttWzq-OAjwEg/9",
-      "name": "34-from-reference-to-participation",
+      "token_uri": "https://arweave.net/kayFueTWmPcxQEBAesReRA1_HL3e6F0RCESiMuz5kE8/9",
+      "name": "34-the-poetic-edda",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/VogXx1Hg0IG8MH8lnReXGS7wQZfTB9DSMt0jvNrLVx0",
+        "https://arweave.net/c_b4W2CVSvid0eR89mFDu518yW9XF3ULB5O2eOAcBhI",
         "https://nft2-cdn.alchemy.com/eth-mainnet/ab583721bae3d4f5435c10440d1a0370_6b27f9c8",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/ab583721bae3d4f5435c10440d1a0370_6b27f9c8",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/ab583721bae3d4f5435c10440d1a0370_6b27f9c8"
       ],
       "animation_sources": [],
-      "evidence_sha256": "885a75c9f2d5225bf7e1bc764d592864e6a59849cb99791c11dc8942dde797a0",
+      "evidence_sha256": "d0df2db97c8c7362270ce1d5aa8900ffabeb24c081c0d7e019311b73c38f66df",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/34/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 377106,
-        "sha256": "439cc6e292a6234e05a0b9077c7030a200c2c551f11685ff0ade061cb8cd8381",
+        "bytes": 609012,
+        "sha256": "99ffdb9e2e6b15400a7b712856abc975b7ea0015dc3413764193a4d7bb9fb4d5",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/34/image.png"
       },
@@ -2344,7 +2564,7 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:10.016Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
@@ -2354,21 +2574,26 @@
       "name": "35-the-dhammapada",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://i2c.seadn.io/ethereum/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/91d6abed0f19e06011eb631062a4c1/8991d6abed0f19e06011eb631062a4c1.png",
+        "https://arweave.net/3gQ4kdA698I2B0mq6GNN0jQCwBG6H4W-WegguUmJh5E",
         "https://nft2-cdn.alchemy.com/eth-mainnet/d9c0536f3d623e22e1b927d25ff62952_0f464a38",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/d9c0536f3d623e22e1b927d25ff62952_0f464a38",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/d9c0536f3d623e22e1b927d25ff62952_0f464a38"
       ],
       "animation_sources": [],
-      "evidence_sha256": "90addcb5a5e35e6e60f1439b734dffc73d9f6f6a0628f6774f6e1197f4bdf5ad",
+      "evidence_sha256": "4707aba0918e2c94bbd45fd451d2338e7623f38a6a62b982915f9eceb2ef6f6d",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/35/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 6164,
-        "sha256": "90f45684da9f85e7a0e76b65c13d9419bb59f9c5e88b30bf0532e62af1e42b28",
-        "media_type": "image/avif",
+        "bytes": 695676,
+        "sha256": "b851b9da50b5dd4b7ad42cb774864214f9dd49b3b15ae482c4ba1f14329ce254",
+        "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/35/image.png"
       },
       "animation": null,
@@ -2376,30 +2601,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:10.827Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "36",
-      "token_uri": "https://arweave.net/0aNC2P5RrXpAA8dToLYAEFCUoaxWRdi9sr1FD_P6490/1",
-      "name": "35-the-art-of-war",
+      "token_uri": "https://arweave.net/iO3_6lHKJxo2sZTjGSNjSJGefdsXI_HCSmlZMNE_-Gg/1",
+      "name": "36-zhuangzi",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/XDT1PwPN7bg_1KnAsM5CqorhTsE5iKDpGZb5IqdVwBs",
+        "https://arweave.net/87yAfRlbkpakl__fuAyIKXlZvE_kJRt8w3NfH3dMMPI",
         "https://nft2-cdn.alchemy.com/eth-mainnet/0a79963d3f8e55829501b9bad9c15f5f_0f464a38",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/0a79963d3f8e55829501b9bad9c15f5f_0f464a38",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/0a79963d3f8e55829501b9bad9c15f5f_0f464a38"
       ],
       "animation_sources": [],
-      "evidence_sha256": "5c2501093e22a7f44e7088513beae21cc66fdc022d7f3a404f8120c36492f99b",
+      "evidence_sha256": "b9a5ac5305f95bca6a9461afeae8c494f421ee7b0acc6c5103f6e28e979f3390",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/36/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 338904,
-        "sha256": "1128ae7536cdb834b9630381b5733f502f0872c1d69e692a98551642392654bf",
+        "bytes": 892168,
+        "sha256": "215f09cfecddb7a9fd440fb794b9905ebad8f442b57dbdbd30ec804c2264fc19",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/36/image.png"
       },
@@ -2408,30 +2638,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:18.024Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "37",
-      "token_uri": "https://arweave.net/0aNC2P5RrXpAA8dToLYAEFCUoaxWRdi9sr1FD_P6490/2",
-      "name": "36-everything-and-nothing",
+      "token_uri": "https://arweave.net/iO3_6lHKJxo2sZTjGSNjSJGefdsXI_HCSmlZMNE_-Gg/2",
+      "name": "37-the-bhagavad-gita",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/_NQc57CHwW5DpxJIsA_ThZFfv2tRolzkw25iB24hdDU",
+        "https://arweave.net/4CdMRtWPPv0WbTI42XfbWRWfKm3pFE5z0i5JNiU1kpw",
         "https://nft2-cdn.alchemy.com/eth-mainnet/97d998b202bccf8eacf5050bcc64b812_5130683a",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/97d998b202bccf8eacf5050bcc64b812_5130683a",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/97d998b202bccf8eacf5050bcc64b812_5130683a"
       ],
       "animation_sources": [],
-      "evidence_sha256": "9eec2cf4a154a48df547d1498583662379c4ac97502df46ff24e8a08a5f315cd",
+      "evidence_sha256": "2a26a5432460621b8d34d0bac3e189f7c7ac98149ed7c0abf8755bdc95726691",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/37/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 491838,
-        "sha256": "bf24e05cbba06577453e379a98940e86a60069e14bba479a5da5f61bd5490f98",
+        "bytes": 758939,
+        "sha256": "760463aeab35ba01ca6a50d3725440bef3691f1b45daae78c112cd159bad8d51",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/37/image.png"
       },
@@ -2440,30 +2675,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:18.565Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "38",
-      "token_uri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/1",
-      "name": "37-psychology-of-the-unconscious",
+      "token_uri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/1",
+      "name": "38-a-mathematical-theory-of-communication",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/Wh0sCk0EgAYpx9U45bUCB5Io8_6Zi_XLu_eHMyi7XqM",
+        "https://arweave.net/5JW3xXs8rpLclchk9vLBk5iQYfJ8EnBP9F0EubycO2M",
         "https://nft2-cdn.alchemy.com/eth-mainnet/1faec944f134a95910e2441155de6c68_3220c6ab",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/1faec944f134a95910e2441155de6c68_3220c6ab",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/1faec944f134a95910e2441155de6c68_3220c6ab"
       ],
       "animation_sources": [],
-      "evidence_sha256": "73caadb5347f9b8b42101d589934de97317115683093ebb02e0b7fad75f64c66",
+      "evidence_sha256": "704d79856fbae466e742b4428026a68290bc4654b995540facd51dc9c33ecf3d",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/38/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 431399,
-        "sha256": "eed8f98ae58110f038005a674745252b16803b0af02e49c8e60fb6b1b2de4e61",
+        "bytes": 815465,
+        "sha256": "2cca25a66622f2d6049cdf07bf2d9d4dd8eebb359e8f4c79a04d53646ebcae51",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/38/image.png"
       },
@@ -2472,30 +2712,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:19.044Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "39",
-      "token_uri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/2",
-      "name": "38-the-poetic-edda",
+      "token_uri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/2",
+      "name": "39-the-epic-of-gilgamesh-an-old-babylonian-version",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/gmdMaDhLlcaYz8AQd1uEUHIz_4XvsKallh4RXbDzybE",
+        "https://arweave.net/gmusV37k0VF-R1GpZSqJ5P0r6OxhrBbHasHIJ2Y7puM",
         "https://nft2-cdn.alchemy.com/eth-mainnet/8f30a364a89b7df4085bc2a15d6e3a06_3acbef9c",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/8f30a364a89b7df4085bc2a15d6e3a06_3acbef9c",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/8f30a364a89b7df4085bc2a15d6e3a06_3acbef9c"
       ],
       "animation_sources": [],
-      "evidence_sha256": "14fa940df586b6ad20a4a25fd3846e502c3e37c96f7c49c6efc299748cc71974",
+      "evidence_sha256": "6beac338d8cc0952b9cfbf93c539e59e825a4cc84b776be3a8bef5a8da0cc044",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/39/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 486221,
-        "sha256": "278b7faa74d398d7ca84016495cfbcc3bfd4c6c78a608d0c47da8a8221d16202",
+        "bytes": 635473,
+        "sha256": "6496d41e55ff482ecaeb65ee3d2b94d83ef6d2eb44c7909ae3594864955bed80",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/39/image.png"
       },
@@ -2504,30 +2749,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:19.584Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "40",
-      "token_uri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/3",
-      "name": "39-the-dhammapada",
+      "token_uri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/3",
+      "name": "40-frankenstein-or-the-modern-prometheus",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/M7aoKRhClg3t6rZklXYNI0fCUAnr0X6PkUsP4tMNKbI",
+        "https://arweave.net/kBTAlYOXPPnsaBjoNWdHzFzzmAcnhdPl-WHJ9itVORc",
         "https://nft2-cdn.alchemy.com/eth-mainnet/864d0e59afc1158837b5a265396143b9_3cbd1b3f",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/864d0e59afc1158837b5a265396143b9_3cbd1b3f",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/864d0e59afc1158837b5a265396143b9_3cbd1b3f"
       ],
       "animation_sources": [],
-      "evidence_sha256": "7479fa8dbd4b16797fdb831ae504c34e7eafc8461b402da7016817525126eb07",
+      "evidence_sha256": "16f8006f804e37e93b6718f547e7dc3ecc64cc23bc5ec577c7b26e09ae4618ba",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/40/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 478458,
-        "sha256": "90d07588813d5cc9efa250b24fc6ad15c72efa94a38f0e27ddff9d23c7137d31",
+        "bytes": 1029728,
+        "sha256": "ec31d5dcabc959e1317afb2b96926ceb906f0ae1c7aa6833aee053ba4bb26cf7",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/40/image.png"
       },
@@ -2536,30 +2786,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:20.060Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "41",
-      "token_uri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/4",
-      "name": "40-zhuangzi",
+      "token_uri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/4",
+      "name": "41-on-the-origin-of-species-by-means-of-natural-selection",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/2E5Xue1xRE_IDATMcmVFduUUtXdI1qLSqaTMYBWrU9w",
+        "https://arweave.net/F1XD0lWmrB6TgI2ohNk6cifGn0GsiA6fvLtaiQ5wfTs",
         "https://nft2-cdn.alchemy.com/eth-mainnet/6551ec6bd2a87dd41dc119988884119e_249ead05",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/6551ec6bd2a87dd41dc119988884119e_249ead05",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/6551ec6bd2a87dd41dc119988884119e_249ead05"
       ],
       "animation_sources": [],
-      "evidence_sha256": "f82a0f06004c57426ca81c54b668b7dc4b9c619c5c269e7ef305d839c3d919c3",
+      "evidence_sha256": "93d31b9a7a19988cdd025107c8423f6fe153fccc23bdc6b4edb221f9cba226aa",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/41/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 381959,
-        "sha256": "f26ab4e04039ea06c95ebbed53d15973aadb84cf426f355e2da8e54596eb5550",
+        "bytes": 916596,
+        "sha256": "ddfbd693a37701be8d47c9d14362546c57c6edd72bea8363928227a97e1d0a96",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/41/image.png"
       },
@@ -2568,30 +2823,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:20.512Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "42",
-      "token_uri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/5",
-      "name": "41-the-bhagavad-gita",
+      "token_uri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/5",
+      "name": "42-manifesto-of-the-communist-party",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/nNUPwaJsU5pP5mzDMaxLk_ZzH5xO_Qp134YeYLC7-sg",
+        "https://arweave.net/KNQbx0Of1EYs3DXpEoG6_34Nu2kfHKvSzRhGljIa4Vs",
         "https://nft2-cdn.alchemy.com/eth-mainnet/7222243b337ccc9a8c237952c48c8d94_6de9b440",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/7222243b337ccc9a8c237952c48c8d94_6de9b440",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/7222243b337ccc9a8c237952c48c8d94_6de9b440"
       ],
       "animation_sources": [],
-      "evidence_sha256": "22159615d7b39cf2a325ea6e71fdd57c81a016697ed00c2ae3fc8f24967fbc4f",
+      "evidence_sha256": "0a2bf2bd34c9f02c6fca64d0e1fae6d6e134b06f009c0329ed8e9e9f7b79b2aa",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/42/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 311168,
-        "sha256": "84ba3568a052d4312359f99f6683957d1c9ea8f5babbd04a1c3da6e6f26fe37d",
+        "bytes": 861160,
+        "sha256": "2404142246937d7bedf2ebb265b72b4f82f5200e825eb240124c4483f125207e",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/42/image.png"
       },
@@ -2600,30 +2860,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:21.002Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "43",
-      "token_uri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/6",
-      "name": "42-a-mathematical-theory-of-communication",
+      "token_uri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/6",
+      "name": "43-mutual-aid-a-factor-of-evolution",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/Q_8pkeQG9US_fEc69cm5oM_E9HCkFJfTeTRd3xZWaTA",
+        "https://arweave.net/Nlj5YktoRuc4ebQxinfjFXBDhBfEbxyXKnc3k0Awwq4",
         "https://nft2-cdn.alchemy.com/eth-mainnet/735f9076bc911c367edc64d48ee98fa8_a6bafa57",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/735f9076bc911c367edc64d48ee98fa8_a6bafa57",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/735f9076bc911c367edc64d48ee98fa8_a6bafa57"
       ],
       "animation_sources": [],
-      "evidence_sha256": "9be646c82ddc25cde1b53b1fed7ea9fb823271d1ec071267eeb60be915e708bc",
+      "evidence_sha256": "d22a133731135c783e54b43ceaa0922249182b9b48fecff8c4c682ad75213ff6",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/43/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 376800,
-        "sha256": "1d025173c559049081005852ce6ea6e8a16c12bd5fec42c2a5c0176e8cbd5f77",
+        "bytes": 683681,
+        "sha256": "b17d36a7a654e88209979ba3518819b83c1c4439ef94b5cae611a23857ceadd1",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/43/image.png"
       },
@@ -2632,30 +2897,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:21.506Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "44",
-      "token_uri": "https://arweave.net/OwNascUR41zgfyBIlfmOcGvX0p24RiB34UK5EBm7wKE/7",
-      "name": "43-on-computable-numbers-with-an-application-to-the-entscheidungsproblem",
+      "token_uri": "https://arweave.net/ViUuwzTNlybOAaNC5qiC3xd44Lc4yvgg-DamYhDdngU/7",
+      "name": "44-the-machine-stops",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/lu5SXdMmy9vKm7zs2CzB4gOYng460_0V4HEpL7VyrFU",
+        "https://arweave.net/dhJEYQJuPA07lEm-WB6O06h_cjW_E3NKT3ouEg3Id0g",
         "https://nft2-cdn.alchemy.com/eth-mainnet/8ba29f1919a1bf72553428fe14e8c6f1_464acef1",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/8ba29f1919a1bf72553428fe14e8c6f1_464acef1",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/8ba29f1919a1bf72553428fe14e8c6f1_464acef1"
       ],
       "animation_sources": [],
-      "evidence_sha256": "5f18f35fbb3d975299677c858aa276096561be7d42e576ac7037216dd542b937",
+      "evidence_sha256": "fafcdfd1c166639ac0a1af201152c4efb20fddca092cd7e18b418d7f65476689",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/44/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 342502,
-        "sha256": "2316b628aad28e8ecd7c4fc137e2f75f8d348ee97364ca6a6a47b927d3cf76f8",
+        "bytes": 709839,
+        "sha256": "38edbc6e69fbd1e487aef3636ad0cf9c656b8fa05842240bddb9b94489be7fd8",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/44/image.png"
       },
@@ -2664,30 +2934,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:21.999Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "45",
-      "token_uri": "https://arweave.net/qp3dBDGOEK7RKg40vq4G6jbJZ_4qm-R4Kj6AyOcO4Js/1",
-      "name": "44-uber-formal-unentscheidbare-satze-der-principia-mathematica-und-verwandter-systeme-i",
+      "token_uri": "https://arweave.net/GrvMdcYR7HieRdGnz8CNKcnY3erI-DdebzMCFu86MwQ/1",
+      "name": "45-the-calculating-engine",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/qlNNF8WeBLvERMOK0504p0eFGM0K-6KhytwVa0bmki8",
+        "https://arweave.net/OcpCdgHPnp27OoHVS3Z5E8yaWkHVX53o4U2Kd54ioV0",
         "https://nft2-cdn.alchemy.com/eth-mainnet/843eff35e450c57cfb489f7eb210f82f_ce4de2fd",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/843eff35e450c57cfb489f7eb210f82f_ce4de2fd",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/843eff35e450c57cfb489f7eb210f82f_ce4de2fd"
       ],
       "animation_sources": [],
-      "evidence_sha256": "9418133d546df5689f6118256d9cfd0b064b0d722aa18ad400c4c7ebd7ba960c",
+      "evidence_sha256": "8bc3512b6e8582d350217d6b8a4da3776eaa409507f24857829ca13b56046cc1",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/45/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 481798,
-        "sha256": "c21c0b52c51a42441e0b83eeb152c114a1c0e476a646244ed1dfc14ed7954783",
+        "bytes": 739306,
+        "sha256": "b0fe7c7f41591f1101c8e6ab1920ab5386a357813ccb64346cfc8965878ad920",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/45/image.png"
       },
@@ -2696,30 +2971,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T04:21:44.154Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "46",
-      "token_uri": "https://arweave.net/qp3dBDGOEK7RKg40vq4G6jbJZ_4qm-R4Kj6AyOcO4Js/2",
-      "name": "45-the-epic-of-gilgamesh-an-old-babylonian-version",
+      "token_uri": "https://arweave.net/GrvMdcYR7HieRdGnz8CNKcnY3erI-DdebzMCFu86MwQ/2",
+      "name": "46-sketch-of-the-analytical-engine-invented-by-charles-babbage-esq",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/Z9eqSn4m_i230ovYO_fyoQg7HbetbWKtGtWI9mAFkcM",
+        "https://arweave.net/icubFBd8hhtoW1mvC_u149P3MxsIpwZ6Vd2q-J-xFa4",
         "https://nft2-cdn.alchemy.com/eth-mainnet/e8ff7eb7dcf25afc6cca190b20735e60_0fc70dec",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/e8ff7eb7dcf25afc6cca190b20735e60_0fc70dec",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/e8ff7eb7dcf25afc6cca190b20735e60_0fc70dec"
       ],
       "animation_sources": [],
-      "evidence_sha256": "0947a8458d93b0f0267ebf5d1d65f04190cf86d05a991083526ef2c5126853cb",
+      "evidence_sha256": "c52a7ee2fac82751cb55f07a659748c5de3020128b3e30a4f50bddbcd1e5b6b6",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/46/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 463710,
-        "sha256": "0f8ad37104043306fcb0092325a67a844a6a75dd758e25288afec887fb5d75e3",
+        "bytes": 618284,
+        "sha256": "cd44e45d7e87d97b6981a1f77e4f5a8f518a0cdca4afbc8993ff3455e4232b42",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/46/image.png"
       },
@@ -2728,30 +3008,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T04:21:44.154Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "47",
-      "token_uri": "https://arweave.net/qp3dBDGOEK7RKg40vq4G6jbJZ_4qm-R4Kj6AyOcO4Js/3",
-      "name": "46-frankenstein-or-the-modern-prometheus",
+      "token_uri": "https://arweave.net/GrvMdcYR7HieRdGnz8CNKcnY3erI-DdebzMCFu86MwQ/3",
+      "name": "47-an-investigation-of-the-laws-of-thought",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/XuEQ-j4b6ihifZVmDdCDcgRTGyN49rH99Uxz8MjdbVA",
+        "https://arweave.net/C5gTdSRfgvk7OpXxnynHSTK86ohY267m9m_dbMxrS7c",
         "https://nft2-cdn.alchemy.com/eth-mainnet/3a07e8d3c00fccb8014088c1449603e0_139d3a9d",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/3a07e8d3c00fccb8014088c1449603e0_139d3a9d",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/3a07e8d3c00fccb8014088c1449603e0_139d3a9d"
       ],
       "animation_sources": [],
-      "evidence_sha256": "1188c89ddc2dbda41ad121f24811d50fb2296b28a27445734fae5236757b66c7",
+      "evidence_sha256": "18d8efb6339cc129798dfb2e183f4e622d36e4fc2edf41ec577dc3288a8ce7a3",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/47/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 315096,
-        "sha256": "08890afd99b016c281e76dffa051cc7b270be9b30cb7e67f2a7b722b05e6b75e",
+        "bytes": 906295,
+        "sha256": "f84ac339af6aed4b6526f6010fe218c2029ffea83886d0063dc8f403a7b758aa",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/47/image.png"
       },
@@ -2760,30 +3045,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:23.478Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "48",
-      "token_uri": "https://arweave.net/qp3dBDGOEK7RKg40vq4G6jbJZ_4qm-R4Kj6AyOcO4Js/4",
-      "name": "47-the-quran-the-meaning-of-the-glorious-koran",
+      "token_uri": "https://arweave.net/GrvMdcYR7HieRdGnz8CNKcnY3erI-DdebzMCFu86MwQ/4",
+      "name": "48-the-notebooks-of-leonardo-da-vinci-complete",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/24awiEOkp7w-NxU104e5qBBxfVbogwe34Nl377mv8Ik",
+        "https://arweave.net/BHQ3tCPOlLemYYCT_dRigSaGr1EtZAzabVlkIbtyb0k",
         "https://nft2-cdn.alchemy.com/eth-mainnet/f6d0581bf36f065e6b1cddc8315a4f4c_ceb31112",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/f6d0581bf36f065e6b1cddc8315a4f4c_ceb31112",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/f6d0581bf36f065e6b1cddc8315a4f4c_ceb31112"
       ],
       "animation_sources": [],
-      "evidence_sha256": "a435363965a818248130ad30a2a3d966dcbb63126e6c9a87fe32ee2f51b0aa7e",
+      "evidence_sha256": "c06da4b3c581e0e8954ab402595ddd8156397127bb539296ece5ac21bc220aed",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/48/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 450960,
-        "sha256": "0eb623c1bde306fb8085bd56d1eda925fe9b76aeb1b964ea8caa619c432ac895",
+        "bytes": 961317,
+        "sha256": "8c4e0c28adf1101f67c97b68a38e9a2dd4fce2822f4e2b84a7864f8cc3e89ecd",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/48/image.png"
       },
@@ -2792,30 +3082,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T04:21:44.154Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "49",
-      "token_uri": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/1",
-      "name": "48-on-the-origin-of-species-by-means-of-natural-selection",
+      "token_uri": "https://arweave.net/A13puo7UVR79N7o1JJJWlwWUt2G2gPRrySkpfSFnP1A/1",
+      "name": "49-sonnets-and-madrigals-of-michelangelo-buonarroti",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/lf2yVZlG57ZL1garLxjzbqSk2MeS2A4WAMogdpFlVj0",
+        "https://arweave.net/RWVww3eu64St4pYOncDSYV8A47hC6bvPrXX2kORvkCo",
         "https://nft2-cdn.alchemy.com/eth-mainnet/11f4ca0f2983341bcbb46e0994bc7d61_8a923ce8",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/11f4ca0f2983341bcbb46e0994bc7d61_8a923ce8",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/11f4ca0f2983341bcbb46e0994bc7d61_8a923ce8"
       ],
       "animation_sources": [],
-      "evidence_sha256": "0f975b497347d8565e4cbc2b5e3445edbdef7e9ffa9f417c24ff7484a371278e",
+      "evidence_sha256": "369978c0fb39fcd2ecbeecceae3869761f15181c486e4615677bec49c5a44055",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/49/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 432541,
-        "sha256": "0ba089f6d762ac29b62fcd6e6a94fa3bea5952808ad743004c129887e18687dc",
+        "bytes": 591732,
+        "sha256": "2cbaf842e3af7001dd7f99353ecccf77e3143eb8e104f6e6ce55a761b2347300",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/49/image.png"
       },
@@ -2824,30 +3119,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T04:21:44.154Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "50",
-      "token_uri": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/2",
-      "name": "49-repeticion-de-amores-y-arte-de-ajedrez",
+      "token_uri": "https://arweave.net/A13puo7UVR79N7o1JJJWlwWUt2G2gPRrySkpfSFnP1A/2",
+      "name": "50-the-ripple-protocol-consensus-algorithm",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/on9o-kDK49yzozuhuZfk61nziMDcWF1lEk1hr1Zm3dU",
+        "https://arweave.net/vzf2OgwlxjLVJgZ3hKek8oYeop77kGnfEGKKKHDx7z8",
         "https://nft2-cdn.alchemy.com/eth-mainnet/b8453e3f763a142a7158a2790eb0b52c_d927a951",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/b8453e3f763a142a7158a2790eb0b52c_d927a951",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/b8453e3f763a142a7158a2790eb0b52c_d927a951"
       ],
       "animation_sources": [],
-      "evidence_sha256": "fbea55fb42ba4c5390c8d15e3facacdf6b9a1640625230d6652718e85e7635e1",
+      "evidence_sha256": "eb0b7cceddcf9c367950ed64da821855b26d592dc434d61057536af79e75b3d2",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/50/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 465464,
-        "sha256": "f820ebb0b36b02b63e9103740d2857e791b37ce50cc2ed880f1f135e256b5c0d",
+        "bytes": 811055,
+        "sha256": "ae734bbe990ec10b44f71e2b0d8d7b338c2c09fbcdf0d058b30be834ef1c2e4c",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/50/image.png"
       },
@@ -2856,30 +3156,35 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T04:21:44.154Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "51",
-      "token_uri": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/3",
-      "name": "50-libro-de-la-invencion-liberal-y-arte-del-juego-del-axedrez",
+      "token_uri": "https://arweave.net/A13puo7UVR79N7o1JJJWlwWUt2G2gPRrySkpfSFnP1A/3",
+      "name": "51-ethereum-a-next-generation-smart-contract-and-decentralized-application-platform",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/HqKbxIK9JXOg9h_eLXR-ZwkoD9CEks8alqzLtHoejWE",
+        "https://arweave.net/eTmO19HuWXaLS0jiWwJdi4ECg_c0iPJqziV-ubdmJ1E",
         "https://nft2-cdn.alchemy.com/eth-mainnet/93594f6057d132992e35c2514d71bc0a_a1d9bed0",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/93594f6057d132992e35c2514d71bc0a_a1d9bed0",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/93594f6057d132992e35c2514d71bc0a_a1d9bed0"
       ],
       "animation_sources": [],
-      "evidence_sha256": "2b654364c9dbc80cbaa71c9898ccbc4556fc3781889d3a2057ef5673878c607a",
+      "evidence_sha256": "1a9b77fa04d1dcf5fa5664a6717db654309fa64bbe32d04693833431c17a93d8",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/51/metadata.json",
       "media": {
         "file": "image.png",
-        "bytes": 486739,
-        "sha256": "d3a969bedc3a35e89cee8b303b571c5c0b6c483e03161732e9cfec770f46ae74",
+        "bytes": 713677,
+        "sha256": "2a22ec4b43540c1e6c724c5e3164c85210c896da4eeda34969864f57f95a8035",
         "media_type": "image/png",
         "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/51/image.png"
       },
@@ -2888,135 +3193,155 @@
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T04:21:44.154Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "52",
-      "token_uri": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/4",
-      "name": "51-analyse-du-jeu-des-echecs",
+      "token_uri": "https://arweave.net/A13puo7UVR79N7o1JJJWlwWUt2G2gPRrySkpfSFnP1A/4",
+      "name": "52",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/CPhZRVlZfFtA_lWMLMns-LIN2rwfe0TB7s1E9tCARSc",
+        "https://arweave.net/zqTiP-oAUpcOQ2Mg-Fk87p4lj0Kesph9cbsmt0EoERo",
         "https://nft2-cdn.alchemy.com/eth-mainnet/96b7ff99dd7f0641832f6cb80d18bd40_a1d9bed0",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/96b7ff99dd7f0641832f6cb80d18bd40_a1d9bed0",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/96b7ff99dd7f0641832f6cb80d18bd40_a1d9bed0"
       ],
       "animation_sources": [],
-      "evidence_sha256": "faa412a2d78e86abc004767544c84056ccf2253f3eada356921df49e728c57f0",
+      "evidence_sha256": "6acda0f8aaf3b98a1b402a29570d50719818f229b5fa8402cf6c884bda26ad3d",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/52/metadata.json",
       "media": {
-        "file": "image.png",
-        "bytes": 9690,
-        "sha256": "1ad3e887bdefb60ccef9c0d2edfca013a23799e00c8418364d1cbeb6a08395ef",
-        "media_type": "image/png",
-        "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/52/image.png"
+        "file": "image.svg",
+        "bytes": 896,
+        "sha256": "9b17f7ce23aa62a7743442945011e87f79aade9c3dbaaf3e89e8cee2c9fdbbc5",
+        "media_type": "image/svg+xml",
+        "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/52/image.svg"
       },
       "animation": null,
       "archive_errors": [],
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:25.411Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "53",
-      "token_uri": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/5",
-      "name": "52-laws-of-the-game",
+      "token_uri": "https://arweave.net/A13puo7UVR79N7o1JJJWlwWUt2G2gPRrySkpfSFnP1A/5",
+      "name": "53",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://i2c.seadn.io/ethereum/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/80c40d063a2aa89459a34404f7b35b/fb80c40d063a2aa89459a34404f7b35b.png",
+        "https://arweave.net/zqTiP-oAUpcOQ2Mg-Fk87p4lj0Kesph9cbsmt0EoERo",
         "https://nft2-cdn.alchemy.com/eth-mainnet/a5cf13d5d71633efdf61897c70016532_619f95b8",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/a5cf13d5d71633efdf61897c70016532_619f95b8",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/a5cf13d5d71633efdf61897c70016532_619f95b8"
       ],
       "animation_sources": [],
-      "evidence_sha256": "046de7950194eb0d91a33cba05738e3ed8503388486113f7db6831a55900e55a",
+      "evidence_sha256": "31c57b775df70982800aa9c8b49825325956e3380c839de4c062620a5535f76d",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/53/metadata.json",
       "media": {
-        "file": "image.png",
-        "bytes": 4004,
-        "sha256": "0cf85b9d74671caf5b42e7b8c9d6bf25f82555535ec2545acbbf9636c2d0643c",
-        "media_type": "image/avif",
-        "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/53/image.png"
+        "file": "image.svg",
+        "bytes": 896,
+        "sha256": "9b17f7ce23aa62a7743442945011e87f79aade9c3dbaaf3e89e8cee2c9fdbbc5",
+        "media_type": "image/svg+xml",
+        "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/53/image.svg"
       },
       "animation": null,
       "archive_errors": [],
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:25.658Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "54",
-      "token_uri": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/6",
-      "name": "53-on-the-sensations-of-tone-as-a-physiological-basis-for-the-theory-of-music",
+      "token_uri": "https://arweave.net/A13puo7UVR79N7o1JJJWlwWUt2G2gPRrySkpfSFnP1A/6",
+      "name": "54",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/CPhZRVlZfFtA_lWMLMns-LIN2rwfe0TB7s1E9tCARSc",
+        "https://arweave.net/zqTiP-oAUpcOQ2Mg-Fk87p4lj0Kesph9cbsmt0EoERo",
         "https://nft2-cdn.alchemy.com/eth-mainnet/e7a236dc315b4d7d2e5c332a216b8b90_a1d9bed0",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/e7a236dc315b4d7d2e5c332a216b8b90_a1d9bed0",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/e7a236dc315b4d7d2e5c332a216b8b90_a1d9bed0"
       ],
       "animation_sources": [],
-      "evidence_sha256": "244aea4328b2e2f91278c4b3b8be5960a11d49a28084fbe00cd818cbfea66c53",
+      "evidence_sha256": "6ea7b9649d3973e06a4f6342cf0d816ca9d433b01583661c0619f9933419fe3d",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/54/metadata.json",
       "media": {
-        "file": "image.png",
-        "bytes": 9690,
-        "sha256": "1ad3e887bdefb60ccef9c0d2edfca013a23799e00c8418364d1cbeb6a08395ef",
-        "media_type": "image/png",
-        "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/54/image.png"
+        "file": "image.svg",
+        "bytes": 896,
+        "sha256": "9b17f7ce23aa62a7743442945011e87f79aade9c3dbaaf3e89e8cee2c9fdbbc5",
+        "media_type": "image/svg+xml",
+        "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/54/image.svg"
       },
       "animation": null,
       "archive_errors": [],
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:25.812Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
       "token_id": "55",
-      "token_uri": "https://arweave.net/u8Hik96nmrvbSDJxzSKJSjqpfdV74f4I0dPk8551Reo/7",
-      "name": "54-manifesto-of-the-communist-party",
+      "token_uri": "https://arweave.net/A13puo7UVR79N7o1JJJWlwWUt2G2gPRrySkpfSFnP1A/7",
+      "name": "55",
       "description": "",
       "token_type": "ERC721",
-      "attributes": [],
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet"
+        }
+      ],
       "image_sources": [
-        "https://arweave.net/Y69jZ5efBoIkYL9o6Yw1utBgwrtGX_Rm4R8gUvQGbV4",
+        "https://arweave.net/zqTiP-oAUpcOQ2Mg-Fk87p4lj0Kesph9cbsmt0EoERo",
         "https://nft2-cdn.alchemy.com/eth-mainnet/b1b8d226dd1c491ca4b0cec2ad99e7c0_bed5cbdd",
         "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/b1b8d226dd1c491ca4b0cec2ad99e7c0_bed5cbdd",
         "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/b1b8d226dd1c491ca4b0cec2ad99e7c0_bed5cbdd"
       ],
       "animation_sources": [],
-      "evidence_sha256": "f03638eb4fbf1f886b9d79db25dc060ac25633752f1efcb5a6c58ba39cbc7aab",
+      "evidence_sha256": "08641637297687a21c1a1a76340f2a8c658278c2e637533be00073f23572f29a",
       "metadata_path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/55/metadata.json",
       "media": {
-        "file": "image.png",
-        "bytes": 391750,
-        "sha256": "d0b0684ffbf7bbd4cd6fbec71ab8982c8330b1092bb67d4e2803fdbc1087686d",
-        "media_type": "image/png",
-        "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/55/image.png"
+        "file": "image.svg",
+        "bytes": 896,
+        "sha256": "9b17f7ce23aa62a7743442945011e87f79aade9c3dbaaf3e89e8cee2c9fdbbc5",
+        "media_type": "image/svg+xml",
+        "path": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/55/image.svg"
       },
       "animation": null,
       "archive_errors": [],
       "owners": [
         "rootlogos.eth"
       ],
-      "observed_at": "2026-09-05T03:48:26.356Z",
+      "observed_at": "2026-09-09T12:30:14.307Z",
       "holding_state": "current"
     },
     {
@@ -6171,11 +6496,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T03:56:16.556Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
@@ -6203,11 +6528,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T03:56:17.846Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
@@ -6235,11 +6560,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T03:56:48.251Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
@@ -6267,11 +6592,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T03:56:49.466Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
@@ -6299,11 +6624,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T03:56:51.212Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
@@ -6331,11 +6656,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T03:57:23.301Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
@@ -6363,11 +6688,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T03:57:53.664Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
@@ -6395,11 +6720,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T03:58:24.847Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
@@ -6427,11 +6752,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T03:58:55.511Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
@@ -6459,11 +6784,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T03:58:56.842Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
@@ -6491,11 +6816,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T03:59:27.381Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
@@ -6523,11 +6848,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T03:59:28.509Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
@@ -6555,11 +6880,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T03:59:29.718Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
@@ -6587,11 +6912,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T03:59:31.066Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
@@ -6619,11 +6944,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T03:59:32.411Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
@@ -6651,11 +6976,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:00:07.234Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
@@ -6683,11 +7008,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:00:13.853Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
@@ -6715,11 +7040,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:00:20.546Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
@@ -6747,11 +7072,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:00:27.156Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc",
@@ -6779,11 +7104,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:00:33.753Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -6811,11 +7136,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:00:34.226Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -6843,11 +7168,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:00:40.980Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -6875,11 +7200,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:00:41.494Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -6907,11 +7232,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:00:48.402Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -6939,11 +7264,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:00:55.325Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -6971,11 +7296,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:00:55.786Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7003,11 +7328,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:01:04.300Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7046,11 +7371,11 @@
           "error": "Media request failed (400) for https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/4c887a4bc28842671b0aa12c73349901"
         }
       ],
-      "observed_at": "2026-09-05T04:01:35.932Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7078,11 +7403,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:01:36.471Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7110,11 +7435,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:01:41.846Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7142,11 +7467,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:01:41.940Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7174,11 +7499,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:01:42.634Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7206,11 +7531,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:01:43.164Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7238,11 +7563,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:01:43.727Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7270,11 +7595,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:01:43.906Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7302,11 +7627,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:01:51.042Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7334,11 +7659,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:01:57.696Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7366,11 +7691,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:02:04.992Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7398,11 +7723,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:02:05.521Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7430,11 +7755,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:02:13.241Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7462,11 +7787,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:02:19.853Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7494,11 +7819,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:02:26.523Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7526,11 +7851,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:02:33.098Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7558,11 +7883,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:02:39.650Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7590,11 +7915,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:02:46.874Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7622,11 +7947,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:02:53.770Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7654,11 +7979,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:03:00.759Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7686,11 +8011,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:03:07.912Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7718,11 +8043,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:03:14.684Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7750,11 +8075,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:03:21.275Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7782,11 +8107,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:03:27.890Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7814,11 +8139,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:03:34.492Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7846,11 +8171,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:03:41.351Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7878,11 +8203,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:03:48.399Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7910,11 +8235,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:03:55.250Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7942,11 +8267,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:02.403Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -7974,11 +8299,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:09.119Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -8006,11 +8331,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:15.925Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -8038,11 +8363,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:22.872Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -8070,11 +8395,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:32.743Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0x97a8c9e0fe03749fdbd1fcd018577a1ba61b7b65",
@@ -8102,11 +8427,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:39.679Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8140,11 +8465,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:40.506Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8178,11 +8503,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:41.239Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8216,11 +8541,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:41.853Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8254,11 +8579,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:42.505Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8292,11 +8617,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:43.196Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8330,11 +8655,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:43.878Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8368,11 +8693,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:44.507Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8406,11 +8731,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:45.177Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8444,11 +8769,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:45.805Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8482,11 +8807,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:46.418Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8520,11 +8845,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:47.043Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8558,11 +8883,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:47.664Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8596,11 +8921,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:48.315Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8634,11 +8959,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:48.955Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8672,11 +8997,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:49.621Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8710,11 +9035,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:50.328Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8748,11 +9073,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:50.949Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8786,11 +9111,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:51.548Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8824,11 +9149,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:52.227Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8862,11 +9187,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:52.896Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8900,11 +9225,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:53.539Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8938,11 +9263,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:54.195Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -8976,11 +9301,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:54.842Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -9014,11 +9339,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:55.511Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -9052,11 +9377,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:56.119Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -9090,11 +9415,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:56.717Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -9128,11 +9453,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:57.311Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -9166,11 +9491,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:58.014Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -9204,11 +9529,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:58.658Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -9242,11 +9567,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:59.269Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -9280,11 +9605,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:04:59.838Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -9318,11 +9643,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:05:00.392Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -9356,11 +9681,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:05:01.033Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -9394,11 +9719,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:05:01.738Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -9432,11 +9757,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:05:02.423Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -9470,11 +9795,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:05:03.061Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -9508,11 +9833,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:05:03.712Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -9546,11 +9871,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:05:04.322Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -9584,11 +9909,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:05:05.015Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -9622,11 +9947,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:05:05.561Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xb4cb87b8324774741aacff58fb9dc3a00b735209",
@@ -9660,11 +9985,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:05:06.183Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -9692,11 +10017,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:05:13.138Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -9724,11 +10049,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:05:19.812Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -9756,11 +10081,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:05:26.387Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -9788,11 +10113,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:05:32.959Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -9820,11 +10145,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:05:39.519Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -9852,11 +10177,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:05:46.460Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -9884,11 +10209,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:05:53.104Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -9916,11 +10241,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:05:59.764Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -9948,11 +10273,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:06:06.413Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -9980,11 +10305,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:06:13.081Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10012,11 +10337,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:06:38.897Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10044,11 +10369,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:06:45.765Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10076,11 +10401,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:06:52.535Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10108,11 +10433,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:06:59.341Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10140,11 +10465,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:07:06.026Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10172,11 +10497,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:07:12.996Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10204,11 +10529,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:07:20.099Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10236,11 +10561,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:07:27.830Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10268,11 +10593,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:07:34.833Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10300,11 +10625,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:07:41.720Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10332,11 +10657,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:07:48.527Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10364,11 +10689,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:07:55.591Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10396,11 +10721,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:08:02.296Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10428,11 +10753,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:08:09.751Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10460,11 +10785,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:08:16.731Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10492,11 +10817,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:08:23.852Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10524,11 +10849,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:08:30.874Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10556,11 +10881,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:08:37.669Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10588,11 +10913,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:08:44.356Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10620,11 +10945,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:08:51.083Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10652,11 +10977,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:08:57.913Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10684,11 +11009,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:09:09.171Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10716,11 +11041,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:09:15.879Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10748,11 +11073,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:09:22.547Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10780,11 +11105,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:09:29.250Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10812,11 +11137,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:09:35.912Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10844,11 +11169,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:09:42.634Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10876,11 +11201,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:09:49.306Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10908,11 +11233,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:09:55.942Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10940,11 +11265,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:10:02.608Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -10972,11 +11297,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:10:09.283Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -11004,11 +11329,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:10:15.936Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -11036,11 +11361,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:10:22.603Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -11068,11 +11393,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:10:29.293Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -11100,11 +11425,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:10:35.960Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -11132,11 +11457,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:10:42.620Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -11164,11 +11489,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:10:49.285Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xc34830e165d3bba56dc1ee79df437eca88f1831d",
@@ -11196,11 +11521,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:10:55.960Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xddb652a008eba424958eaf07d86384d1af1d21c5",
@@ -11234,11 +11559,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:10:56.922Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xddb652a008eba424958eaf07d86384d1af1d21c5",
@@ -11272,11 +11597,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:10:57.665Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xddb652a008eba424958eaf07d86384d1af1d21c5",
@@ -11310,11 +11635,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:10:58.337Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xddb652a008eba424958eaf07d86384d1af1d21c5",
@@ -11342,11 +11667,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:10:59.114Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa",
@@ -11374,11 +11699,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:11:05.675Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa",
@@ -11406,11 +11731,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:11:12.256Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa",
@@ -11438,11 +11763,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:11:18.834Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa",
@@ -11470,11 +11795,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:11:25.212Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa",
@@ -11502,11 +11827,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:11:31.589Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa",
@@ -11534,11 +11859,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:11:38.110Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa",
@@ -11566,11 +11891,11 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:11:44.630Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     },
     {
       "contract": "0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa",
@@ -11598,12 +11923,12 @@
       },
       "animation": null,
       "archive_errors": [],
-      "observed_at": "2026-09-05T04:11:51.068Z",
-      "holding_state": "unobserved",
       "owners": [
         "zeropoet.eth"
-      ]
+      ],
+      "observed_at": "2026-09-09T12:30:14.307Z",
+      "holding_state": "current"
     }
   ],
-  "witness": "sha256:69235807f93b86256cc94f033e3319d1e014e133fce7490b07541720d5469f83"
+  "witness": "sha256:e4f910f0b5c108b6731b0567ef42ed9fb9365c2e1d629e1d26f50b15bca374cf"
 }

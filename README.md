@@ -498,6 +498,9 @@ tiles, minted-work galleries, individual work pages, and composition analysis.
 Live wallet responses establish current ownership and counts, but cannot replace
 an archived work with stale provider metadata or imagery. Each subsequent
 Ethereum archive sync updates that local copy when the canonical tokenURI changes.
+Numeric placeholder mints remain preserved as contract records, but the FLDFRG
+public collection presents only resolved, named works; the archive and each
+token-level metadata record are tested as one synchronized mapping.
 
 `npm run refresh:eth-media` asks Alchemy to refresh every currently held
 Ethereum token without rewriting any canonical media or repository data.

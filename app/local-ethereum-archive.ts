@@ -42,6 +42,11 @@ export interface LocalArchive {
 }
 
 let archivePromise: Promise<LocalArchive | null> | null = null;
+const fldfrgContract = "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc";
+
+function isResolvedWork(token: LocalToken): boolean {
+  return token.contract !== fldfrgContract || !/^#?\s*\d+$/.test(token.name.trim());
+}
 
 export function fetchLocalEthereumArchive(): Promise<LocalArchive | null> {
   archivePromise ??= fetch("/ethereum-archive/index.json", { headers: { accept: "application/json" } })
@@ -55,7 +60,9 @@ export function localCollections(archive: LocalArchive | null): CollectionSummar
     address: contract.address,
     name: contract.name,
     symbol: contract.symbol,
-    count: contract.token_ids.length,
+    count: contract.address === fldfrgContract
+      ? (archive?.tokens || []).filter((token) => token.contract === contract.address && isResolvedWork(token)).length
+      : contract.token_ids.length,
     image: contract.image,
     description: contract.description,
     totalSupply: contract.total_supply,
@@ -65,7 +72,7 @@ export function localCollections(archive: LocalArchive | null): CollectionSummar
 
 export function localTokens(archive: LocalArchive | null, contractAddress?: string, owner?: string): AlchemyNft[] {
   return (archive?.tokens || [])
-    .filter((token) => (!contractAddress || token.contract === contractAddress.toLowerCase()) && (!owner || token.owners?.includes(owner.toLowerCase())))
+    .filter((token) => isResolvedWork(token) && (!contractAddress || token.contract === contractAddress.toLowerCase()) && (!owner || token.owners?.includes(owner.toLowerCase())))
     .map((token) => ({
       tokenId: token.token_id,
       tokenUri: token.token_uri,
@@ -89,7 +96,10 @@ function tokenKey(token: AlchemyNft): string {
  */
 export function preferLocalTokens(live: AlchemyNft[], archived: AlchemyNft[]): AlchemyNft[] {
   const localByKey = new Map(archived.map((token) => [tokenKey(token), token]));
-  const merged = live.map((token) => localByKey.get(tokenKey(token)) || token);
+  const locallyIndexedContracts = new Set(archived.map((token) => token.contract?.address?.toLowerCase()).filter(Boolean));
+  const merged = live
+    .filter((token) => !locallyIndexedContracts.has(token.contract?.address?.toLowerCase()) || localByKey.has(tokenKey(token)))
+    .map((token) => localByKey.get(tokenKey(token)) || token);
   const seen = new Set(merged.map(tokenKey));
   return [...merged, ...archived.filter((token) => !seen.has(tokenKey(token)))];
 }

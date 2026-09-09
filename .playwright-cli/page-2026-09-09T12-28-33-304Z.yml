@@ -1,0 +1,31 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e5]:
+        - link "FoldForge" [ref=e6] [cursor=pointer]:
+          - /url: /
+        - navigation "FoldForge instruments" [ref=e9]:
+          - generic [ref=e10]: Archive
+          - link "Sonic" [ref=e11] [cursor=pointer]:
+            - /url: /sonic-forge/
+          - link "Temporal" [ref=e12] [cursor=pointer]:
+            - /url: /temporal-forge/
+          - link "Relation" [ref=e13] [cursor=pointer]:
+            - /url: /relation-forge/
+          - link "Ledger" [ref=e14] [cursor=pointer]:
+            - /url: /ledger-witness/
+          - link "Dispatch" [ref=e15] [cursor=pointer]:
+            - /url: /dispatch/
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - link "← All collections" [ref=e19] [cursor=pointer]:
+            - /url: "?owner=zeropoet.eth"
+          - link "Contract ↗" [ref=e20] [cursor=pointer]:
+            - /url: https://etherscan.io/address/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - paragraph [ref=e23]: Collection archive
+            - heading "0x16bc...05fc" [level=2] [ref=e24]
+            - paragraph
+          - paragraph [ref=e25]: "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc"
+  - alert [ref=e27]

@@ -56,5 +56,8 @@
     "49",
     "50"
   ],
-  "image": "/ethereum-archive/contracts/0xc34830e165d3bba56dc1ee79df437eca88f1831d/tokens/1/image.jpg"
+  "image": "/ethereum-archive/contracts/0xc34830e165d3bba56dc1ee79df437eca88f1831d/tokens/1/image.jpg",
+  "owners": [
+    "zeropoet.eth"
+  ]
 }
