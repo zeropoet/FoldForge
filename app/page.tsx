@@ -123,6 +123,7 @@ function MediaTile({ token }: { token: AlchemyNft }) {
         onMouseEnter={(event) => void event.currentTarget.play()}
         onMouseLeave={(event) => event.currentTarget.pause()}
         playsInline
+        poster={tokenThumbnailFor(token) || undefined}
         preload="none"
         src={media}
       />
@@ -653,7 +654,7 @@ export default function FoldForge() {
                         isAudioUrl(mintedMediaFor(selectedToken)) ? (
                           <div className="grid w-full gap-5 p-8 text-center"><p className="text-[9px] uppercase tracking-[0.2em] text-black/40">Canonical audio work</p><audio className="w-full" controls preload="metadata" src={mintedMediaFor(selectedToken)} /></div>
                         ) : hasVideoMedia(selectedToken) ? (
-                          <video autoPlay className="max-h-[80vh] w-full object-contain" controls loop muted playsInline preload="metadata" src={mintedMediaFor(selectedToken)} />
+                          <video autoPlay className="max-h-[80vh] w-full object-contain" controls loop muted playsInline poster={tokenThumbnailFor(selectedToken) || undefined} preload="metadata" src={mintedMediaFor(selectedToken)} />
                         ) : (
                           // eslint-disable-next-line @next/next/no-img-element
                           <img alt={selectedToken.name || `Token ${selectedTokenId}`} className="max-h-[80vh] w-full object-contain" decoding="async" fetchPriority="high" src={mintedMediaFor(selectedToken)} />
