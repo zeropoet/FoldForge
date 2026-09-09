@@ -6,21 +6,26 @@
   "name": "Telos",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/52700d187f1f1c2f79ea6c533c491a/fa52700d187f1f1c2f79ea6c533c491a.png",
+    "https://arweave.net/FhFmTqszHQ8sMqlqOvyyZjBjLZf_V-Rwzdc2MOM2eCc",
     "https://nft2-cdn.alchemy.com/eth-mainnet/475f40fea849d6cdca0acba1ff549192_fa52700d",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/475f40fea849d6cdca0acba1ff549192_fa52700d",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/475f40fea849d6cdca0acba1ff549192_fa52700d"
   ],
   "animation_sources": [],
-  "evidence_sha256": "af424a111afaa4e4b4d59dd615559f88c794f9451d643ad610a83b39416eeebf",
+  "evidence_sha256": "4df8fcbfb5b148cf7892a17100366e6294711de54cf8ee8051a86927eb733981",
   "metadata_path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/5/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 2524,
-    "sha256": "7c532db342f5e5c8cded5998e19d30826f03b2c265618642f33fa3cf9940095e",
-    "media_type": "image/avif",
+    "bytes": 67026,
+    "sha256": "1eb4b96dd4703794786d48659b0311ffa946a33f8ff726aa282024dbe57a514e",
+    "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/5/image.png"
   },
   "animation": null,
@@ -28,7 +33,7 @@
   "owners": [
     "zeropoet.eth"
   ],
-  "observed_at": "2026-09-08T18:19:55.785Z",
+  "observed_at": "2026-09-09T14:35:13.151Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -68,7 +73,7 @@
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/475f40fea849d6cdca0acba1ff549192_fa52700d",
       "contentType": "image/png",
       "size": 67026,
-      "originalUrl": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/52700d187f1f1c2f79ea6c533c491a/fa52700d187f1f1c2f79ea6c533c491a.png"
+      "originalUrl": "https://arweave.net/FhFmTqszHQ8sMqlqOvyyZjBjLZf_V-Rwzdc2MOM2eCc"
     },
     "animation": {
       "cachedUrl": null,
@@ -85,7 +90,7 @@
         "token_standard": "erc721",
         "name": "Telos",
         "description": "",
-        "image_url": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/52700d187f1f1c2f79ea6c533c491a/fa52700d187f1f1c2f79ea6c533c491a.png",
+        "image_url": "https://arweave.net/FhFmTqszHQ8sMqlqOvyyZjBjLZf_V-Rwzdc2MOM2eCc",
         "display_image_url": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/52700d187f1f1c2f79ea6c533c491a/fa52700d187f1f1c2f79ea6c533c491a.png",
         "display_animation_url": null,
         "metadata_url": "https://arweave.net/o9a4RlUfxxK_g9VbO2hDPr5oPHoyPhoFkR-VEnOIfB0",
@@ -110,7 +115,21 @@
         ],
         "rarity": null,
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ],
+        "image_details": {
+          "bytes": 67026,
+          "format": "PNG",
+          "sha256": "1eb4b96dd4703794786d48659b0311ffa946a33f8ff726aa282024dbe57a514e",
+          "width": 1200,
+          "height": 1200
+        },
+        "image": "https://arweave.net/FhFmTqszHQ8sMqlqOvyyZjBjLZf_V-Rwzdc2MOM2eCc"
       },
       "error": null
     },

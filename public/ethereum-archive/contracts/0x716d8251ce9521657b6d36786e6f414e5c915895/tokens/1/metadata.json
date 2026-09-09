@@ -6,29 +6,34 @@
   "name": "Black Tin Vessel 000-135",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/d4db1cc40f4f079afa54c944ddba72/bcd4db1cc40f4f079afa54c944ddba72.gif",
+    "https://arweave.net/Ac9Lwbob4R5b5-Cqc-nsdi-PKtyZZHodlQY6cxI0ZR0",
     "https://nft2-cdn.alchemy.com/eth-mainnet/a2d71929c3575ad221a9af9e0cfd7db0_bcd4db1c",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/a2d71929c3575ad221a9af9e0cfd7db0_bcd4db1c",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/a2d71929c3575ad221a9af9e0cfd7db0_bcd4db1c"
   ],
   "animation_sources": [],
-  "evidence_sha256": "6ee45be85237c163b43c7b8e01211b74ad40fcaae6b31a1479170334d25f2c94",
+  "evidence_sha256": "67b2942b5cee9b23b30e6b2d724656bfc40aaabfd8136208ffabf05d3c753ae6",
   "metadata_path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/1/metadata.json",
   "media": {
-    "file": "image.webp",
-    "bytes": 412346,
-    "sha256": "f3b41f599b5d0fd840ea39ef9a4117b5bf5703c0d1ab652393d5c6d86de19587",
-    "media_type": "image/webp",
-    "path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/1/image.webp"
+    "file": "image.gif",
+    "bytes": 1279589,
+    "sha256": "8af70ab3db3e6dd207b0b190ecc75020efe44d43b520a3d8ba93f64757b1b60a",
+    "media_type": "image/gif",
+    "path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/1/image.gif"
   },
   "animation": null,
   "archive_errors": [],
   "owners": [
     "zeropoet.eth"
   ],
-  "observed_at": "2026-09-08T18:19:55.785Z",
+  "observed_at": "2026-09-09T14:35:13.151Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -68,7 +73,7 @@
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/a2d71929c3575ad221a9af9e0cfd7db0_bcd4db1c",
       "contentType": "image/gif",
       "size": 1279589,
-      "originalUrl": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/d4db1cc40f4f079afa54c944ddba72/bcd4db1cc40f4f079afa54c944ddba72.gif"
+      "originalUrl": "https://arweave.net/Ac9Lwbob4R5b5-Cqc-nsdi-PKtyZZHodlQY6cxI0ZR0"
     },
     "animation": {
       "cachedUrl": null,
@@ -85,7 +90,7 @@
         "token_standard": "erc721",
         "name": "Black Tin Vessel 000-135",
         "description": "",
-        "image_url": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/d4db1cc40f4f079afa54c944ddba72/bcd4db1cc40f4f079afa54c944ddba72.gif",
+        "image_url": "https://arweave.net/Ac9Lwbob4R5b5-Cqc-nsdi-PKtyZZHodlQY6cxI0ZR0",
         "display_image_url": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/d4db1cc40f4f079afa54c944ddba72/bcd4db1cc40f4f079afa54c944ddba72.gif",
         "display_animation_url": null,
         "metadata_url": "https://arweave.net/TAKNSKLPkyZDGLf4r_I2h0_kHkGpKV16e6Djh1Da22A",
@@ -110,7 +115,22 @@
         ],
         "rarity": null,
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "external_url": "https://sovereignstandard.co",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ],
+        "image_details": {
+          "bytes": 1279589,
+          "format": "GIF",
+          "sha256": "8af70ab3db3e6dd207b0b190ecc75020efe44d43b520a3d8ba93f64757b1b60a",
+          "width": 1440,
+          "height": 1440
+        },
+        "image": "https://arweave.net/Ac9Lwbob4R5b5-Cqc-nsdi-PKtyZZHodlQY6cxI0ZR0"
       },
       "error": null
     },

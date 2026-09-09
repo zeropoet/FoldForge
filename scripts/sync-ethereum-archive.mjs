@@ -12,7 +12,10 @@ const root = resolve("public/ethereum-archive");
 const indexPath = join(root, "index.json");
 const soundArchivePath = resolve("public/record-sound-archive.json");
 const maxBytes = 99_000_000;
-const alwaysHydrateContracts = new Set(["0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc"]);
+const alwaysHydrateContracts = new Set([
+  "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc", // FLDFRG
+  "0x716d8251ce9521657b6d36786e6f414e5c915895", // SOVE
+]);
 
 if (!apiKey) throw new Error("ALCHEMY_API_KEY or NEXT_PUBLIC_ALCHEMY_API_KEY is required.");
 
@@ -325,6 +328,9 @@ const sourceValue = (source) => {
   };
 };
 const sourceStates = index.owners.map((source) => ({ ...source, ...sourceValue(source) }));
+if (sourceStates.length > 1 && Math.abs(sourceStates[0].frequency - sourceStates[1].frequency) < 0.001) {
+  sourceStates[1] = { ...sourceStates[1], frequency: sourceStates[1].frequency * 2 ** (1 / 12) };
+}
 const [firstSource, secondSource] = sourceStates;
 const relationRoot = Math.sqrt(firstSource.frequency * secondSource.frequency);
 const soundArchive = JSON.parse(await readFile(soundArchivePath, "utf8"));

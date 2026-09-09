@@ -2,11 +2,16 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x716d8251ce9521657b6d36786e6f414e5c915895",
   "token_id": "7",
-  "token_uri": "https://arweave.net/0-mODHUFvSDJeaVaNrqar3OJvQAUkwnLVpA_Ml5d0g8/1",
+  "token_uri": "https://arweave.net/Vhw9_eMSmg1ohQNjMG1iJ4MU02dmJHVgVZo4CQeo-8g/1",
   "name": "FoldPortrait",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
     "https://arweave.net/DjjlSb1R9Z_o8ojT8hOKMpbTOK1g3QkRxT9lEAQzets",
     "https://nft2-cdn.alchemy.com/eth-mainnet/b48c8758092ea87799f4fd83e8c88749_0c2cbd94",
@@ -14,7 +19,7 @@
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/b48c8758092ea87799f4fd83e8c88749_0c2cbd94"
   ],
   "animation_sources": [],
-  "evidence_sha256": "79b989f2d6d6dd862278d30d8b3cf5fbff2831266574989208d9ad6b6e67ee44",
+  "evidence_sha256": "0eea2822825a3c1fb8b31525aeb755d08c8325382dbc4d318f06b35038bcb34e",
   "metadata_path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/7/metadata.json",
   "media": {
     "file": "image.png",
@@ -28,7 +33,7 @@
   "owners": [
     "zeropoet.eth"
   ],
-  "observed_at": "2026-09-08T18:19:55.785Z",
+  "observed_at": "2026-09-09T14:35:13.151Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -61,7 +66,7 @@
     "tokenType": "ERC721",
     "name": "FoldPortrait",
     "description": "",
-    "tokenUri": "https://arweave.net/0-mODHUFvSDJeaVaNrqar3OJvQAUkwnLVpA_Ml5d0g8/1",
+    "tokenUri": "https://arweave.net/Vhw9_eMSmg1ohQNjMG1iJ4MU02dmJHVgVZo4CQeo-8g/1",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/b48c8758092ea87799f4fd83e8c88749_0c2cbd94",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/b48c8758092ea87799f4fd83e8c88749_0c2cbd94",
@@ -89,7 +94,13 @@
           "height": 2048
         },
         "image": "https://arweave.net/DjjlSb1R9Z_o8ojT8hOKMpbTOK1g3QkRxT9lEAQzets",
-        "image_url": "https://arweave.net/DjjlSb1R9Z_o8ojT8hOKMpbTOK1g3QkRxT9lEAQzets"
+        "image_url": "https://arweave.net/DjjlSb1R9Z_o8ojT8hOKMpbTOK1g3QkRxT9lEAQzets",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

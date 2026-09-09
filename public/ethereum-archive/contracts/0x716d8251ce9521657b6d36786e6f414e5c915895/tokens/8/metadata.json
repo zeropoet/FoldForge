@@ -2,24 +2,29 @@
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x716d8251ce9521657b6d36786e6f414e5c915895",
   "token_id": "8",
-  "token_uri": "https://arweave.net/0-mODHUFvSDJeaVaNrqar3OJvQAUkwnLVpA_Ml5d0g8/2",
+  "token_uri": "https://arweave.net/Vhw9_eMSmg1ohQNjMG1iJ4MU02dmJHVgVZo4CQeo-8g/2",
   "name": "Zeropoet",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://arweave.net/Lnca5Y1a034yx4pfWCAl5L2Yjyabre_ayDyKwATzjIY",
+    "https://arweave.net/8xMhhKRI8RGJnYVjKFuuylXn-wx13P9ul0QAqdi0VY0",
     "https://nft2-cdn.alchemy.com/eth-mainnet/08a236a2729bbf8902c2bfaaa63b9bc3_d6308a20",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/08a236a2729bbf8902c2bfaaa63b9bc3_d6308a20",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/08a236a2729bbf8902c2bfaaa63b9bc3_d6308a20"
   ],
   "animation_sources": [],
-  "evidence_sha256": "6b2d053541c8cdfc270c40bf4215432c2b39cd3f355cadcdbb1983bd6404a23e",
+  "evidence_sha256": "1a4b19a3708992d5bd694e7f8c014c58c3f8beae8277209bb30a21b1d7105617",
   "metadata_path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/8/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 53097,
-    "sha256": "1d501f6370d772a5908bd447c1ecd8dd0208388a1e443061148aaca64c704e3b",
+    "bytes": 84735,
+    "sha256": "68e4d3489e79899263bd44e5da04d3ad9828b62eae99c0e4e72b50f9c9864491",
     "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/8/image.png"
   },
@@ -28,7 +33,7 @@
   "owners": [
     "zeropoet.eth"
   ],
-  "observed_at": "2026-09-08T18:19:55.785Z",
+  "observed_at": "2026-09-09T14:35:13.151Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -61,14 +66,14 @@
     "tokenType": "ERC721",
     "name": "Zeropoet",
     "description": "",
-    "tokenUri": "https://arweave.net/0-mODHUFvSDJeaVaNrqar3OJvQAUkwnLVpA_Ml5d0g8/2",
+    "tokenUri": "https://arweave.net/Vhw9_eMSmg1ohQNjMG1iJ4MU02dmJHVgVZo4CQeo-8g/2",
     "image": {
       "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/08a236a2729bbf8902c2bfaaa63b9bc3_d6308a20",
       "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/08a236a2729bbf8902c2bfaaa63b9bc3_d6308a20",
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/08a236a2729bbf8902c2bfaaa63b9bc3_d6308a20",
       "contentType": "image/png",
       "size": 53097,
-      "originalUrl": "https://arweave.net/Lnca5Y1a034yx4pfWCAl5L2Yjyabre_ayDyKwATzjIY"
+      "originalUrl": "https://arweave.net/8xMhhKRI8RGJnYVjKFuuylXn-wx13P9ul0QAqdi0VY0"
     },
     "animation": {
       "cachedUrl": null,
@@ -82,14 +87,20 @@
         "name": "Zeropoet",
         "description": "",
         "image_details": {
-          "bytes": 53097,
+          "bytes": 84735,
           "format": "PNG",
-          "sha256": "1d501f6370d772a5908bd447c1ecd8dd0208388a1e443061148aaca64c704e3b",
-          "width": 1024,
-          "height": 1024
+          "sha256": "68e4d3489e79899263bd44e5da04d3ad9828b62eae99c0e4e72b50f9c9864491",
+          "width": 1440,
+          "height": 1440
         },
-        "image": "https://arweave.net/Lnca5Y1a034yx4pfWCAl5L2Yjyabre_ayDyKwATzjIY",
-        "image_url": "https://arweave.net/Lnca5Y1a034yx4pfWCAl5L2Yjyabre_ayDyKwATzjIY"
+        "image": "https://arweave.net/8xMhhKRI8RGJnYVjKFuuylXn-wx13P9ul0QAqdi0VY0",
+        "image_url": "https://arweave.net/8xMhhKRI8RGJnYVjKFuuylXn-wx13P9ul0QAqdi0VY0",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ]
       },
       "error": null
     },

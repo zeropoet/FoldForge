@@ -6,21 +6,26 @@
   "name": "FoldKernel",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/ebaecfaaf3a9408f276d2b0e813374/1debaecfaaf3a9408f276d2b0e813374.png",
+    "https://arweave.net/WzXMRVVbNupM5wCTHKeCFqsVHJX2R7izpreWj1UPI6s",
     "https://nft2-cdn.alchemy.com/eth-mainnet/d17ea37c32a23ad8b0e86bfc61a435f3_1debaecf",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/d17ea37c32a23ad8b0e86bfc61a435f3_1debaecf",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/d17ea37c32a23ad8b0e86bfc61a435f3_1debaecf"
   ],
   "animation_sources": [],
-  "evidence_sha256": "8ec55ad32080b6580f15179a0ebc8e73f72e013ca98efe08f124a75c64b167ff",
+  "evidence_sha256": "accbb0328c7a23affb207d06046ed56c254a1547710570f5728e4b133afda502",
   "metadata_path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/3/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 1229,
-    "sha256": "0e795c202c0c62b3f4b14ebf67935681e8a351e65856834ebc1dd29510215aa3",
-    "media_type": "image/avif",
+    "bytes": 13574,
+    "sha256": "d9f3ff8d78edde9403c61c2491c5abfe4c8352a151e8a4a817db884750a3c777",
+    "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/3/image.png"
   },
   "animation": null,
@@ -28,7 +33,7 @@
   "owners": [
     "zeropoet.eth"
   ],
-  "observed_at": "2026-09-08T18:19:55.785Z",
+  "observed_at": "2026-09-09T14:35:13.151Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -68,7 +73,7 @@
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/d17ea37c32a23ad8b0e86bfc61a435f3_1debaecf",
       "contentType": "image/png",
       "size": 13574,
-      "originalUrl": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/ebaecfaaf3a9408f276d2b0e813374/1debaecfaaf3a9408f276d2b0e813374.png"
+      "originalUrl": "https://arweave.net/WzXMRVVbNupM5wCTHKeCFqsVHJX2R7izpreWj1UPI6s"
     },
     "animation": {
       "cachedUrl": null,
@@ -85,7 +90,7 @@
         "token_standard": "erc721",
         "name": "FoldKernel",
         "description": "",
-        "image_url": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/ebaecfaaf3a9408f276d2b0e813374/1debaecfaaf3a9408f276d2b0e813374.png",
+        "image_url": "https://arweave.net/WzXMRVVbNupM5wCTHKeCFqsVHJX2R7izpreWj1UPI6s",
         "display_image_url": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/ebaecfaaf3a9408f276d2b0e813374/1debaecfaaf3a9408f276d2b0e813374.png",
         "display_animation_url": null,
         "metadata_url": "https://arweave.net/t9PtDXN6IDEwpibPOyUQ_4xHUNPhSKUMGFglaSYDJMs",
@@ -110,7 +115,21 @@
         ],
         "rarity": null,
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ],
+        "image_details": {
+          "bytes": 13574,
+          "format": "PNG",
+          "sha256": "d9f3ff8d78edde9403c61c2491c5abfe4c8352a151e8a4a817db884750a3c777",
+          "width": 1024,
+          "height": 1024
+        },
+        "image": "https://arweave.net/WzXMRVVbNupM5wCTHKeCFqsVHJX2R7izpreWj1UPI6s"
       },
       "error": null
     },

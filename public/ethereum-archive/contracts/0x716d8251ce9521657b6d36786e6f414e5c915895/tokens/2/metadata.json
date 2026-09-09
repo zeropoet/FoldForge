@@ -6,21 +6,26 @@
   "name": "Sovereign Standard",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet"
+    }
+  ],
   "image_sources": [
-    "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/ee98774ff5fa258c97763fdae7679f/55ee98774ff5fa258c97763fdae7679f.png",
+    "https://arweave.net/LeFUIuA3q054U4pR9CgpHVkbD-djsUGgAjQbXBIfN-c",
     "https://nft2-cdn.alchemy.com/eth-mainnet/bd7079bbc838246326c0a8fd7d3c4342_55ee9877",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/bd7079bbc838246326c0a8fd7d3c4342_55ee9877",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/bd7079bbc838246326c0a8fd7d3c4342_55ee9877"
   ],
   "animation_sources": [],
-  "evidence_sha256": "2259d9e3ee5165900bae72d0667b7d3ed55aa4fbb589851f803a73cf55541675",
+  "evidence_sha256": "bb674aea1c433d58f96a399644c4f1838df126f84a1c02b1d7a37ed77c079296",
   "metadata_path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/2/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 2873,
-    "sha256": "53b11ec14ad589e6e5b4473e6e3b974b692f14dd22eaa0e11fd6882bab97b94d",
-    "media_type": "image/avif",
+    "bytes": 53816,
+    "sha256": "d62410a8695af68bb163afa600957c692af50f530a9efad136b64b58a4739a69",
+    "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/2/image.png"
   },
   "animation": null,
@@ -28,7 +33,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-05T03:49:40.601Z",
+  "observed_at": "2026-09-09T14:35:13.151Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -68,7 +73,7 @@
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/bd7079bbc838246326c0a8fd7d3c4342_55ee9877",
       "contentType": "image/png",
       "size": 53816,
-      "originalUrl": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/ee98774ff5fa258c97763fdae7679f/55ee98774ff5fa258c97763fdae7679f.png"
+      "originalUrl": "https://arweave.net/LeFUIuA3q054U4pR9CgpHVkbD-djsUGgAjQbXBIfN-c"
     },
     "animation": {
       "cachedUrl": null,
@@ -85,7 +90,7 @@
         "token_standard": "erc721",
         "name": "Sovereign Standard",
         "description": "",
-        "image_url": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/ee98774ff5fa258c97763fdae7679f/55ee98774ff5fa258c97763fdae7679f.png",
+        "image_url": "https://arweave.net/LeFUIuA3q054U4pR9CgpHVkbD-djsUGgAjQbXBIfN-c",
         "display_image_url": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/ee98774ff5fa258c97763fdae7679f/55ee98774ff5fa258c97763fdae7679f.png",
         "display_animation_url": null,
         "metadata_url": "https://arweave.net/_7kZrLIu4T1szFZ_mbdlnqWJoxN1VRnta7CUK824IGI",
@@ -110,7 +115,21 @@
         ],
         "rarity": null,
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet"
+          }
+        ],
+        "image_details": {
+          "bytes": 53816,
+          "format": "PNG",
+          "sha256": "d62410a8695af68bb163afa600957c692af50f530a9efad136b64b58a4739a69",
+          "width": 1024,
+          "height": 1024
+        },
+        "image": "https://arweave.net/LeFUIuA3q054U4pR9CgpHVkbD-djsUGgAjQbXBIfN-c"
       },
       "error": null
     },
