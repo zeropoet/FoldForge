@@ -102,29 +102,29 @@
         "path": "app/composer-chamber",
         "url": "https://foldforge.zeropoet.xyz/composer-chamber"
       },
-      "witness": "sha256:693597e1a1755d5a6dc4100c7ca4846acd107a1f1b04ac343449456e243ab02e",
+      "witness": "sha256:10f54488d9418808c0308147b674adb36474b9bc0b8d8bd64578a53709c91600",
       "sources": [
         {
           "owner": "zeropoet.eth",
-          "workCount": 261,
-          "observedWorkCount": 261,
+          "workCount": 258,
+          "observedWorkCount": 258,
           "contractCount": 22,
-          "witness": "sha256:509a42b44cfccee2045ff6ac29a55394b9bd05ea93ca06319a6398a6040b1da2"
+          "witness": "sha256:0ce93e107d19ea3309b1ea124f7b0ad7e6855b7fd321456916547528da5eeec8"
         },
         {
           "owner": "rootlogos.eth",
-          "workCount": 62,
-          "observedWorkCount": 62,
-          "contractCount": 5,
-          "witness": "sha256:2b845194d2bd0a7edf8907787876872645db3db568896e134028fbe1a599e848"
+          "workCount": 65,
+          "observedWorkCount": 65,
+          "contractCount": 6,
+          "witness": "sha256:35fa1ed63f8bb362b3d29db72a67c3e8177f935ee927269f06f5e4d536b0a89e"
         }
       ],
       "sound": {
         "frequenciesHz": [
-          138.591,
-          146.832,
-          142.652,
-          231.81
+          82.407,
+          155.563,
+          113.223,
+          169.835
         ],
         "waves": [
           "sine",
@@ -132,14 +132,14 @@
           "sawtooth",
           "triangle"
         ],
-        "cutoffHz": 2780,
+        "cutoffHz": 3312,
         "renderer": {
           "engine": "continuous-voice/v1",
           "masterGain": 0.2,
           "fadeInSeconds": 1.8,
           "fieldFilter": {
             "type": "bandpass",
-            "frequency": 2780,
+            "frequency": 3312,
             "Q": 2.4
           },
           "partialGains": [

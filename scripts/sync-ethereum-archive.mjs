@@ -156,6 +156,10 @@ async function archiveFirst(urls, tokenDirectory, stem) {
 const previous = await readPrevious();
 const priorByKey = new Map((previous.tokens || []).map((token) => [`${token.contract}:${token.token_id}`, token]));
 const holdingsByOwner = await Promise.all(owners.map(async (owner) => ({ owner, holdings: await fetchHoldings(owner) })));
+const incompleteOwners = new Set(holdingsByOwner.flatMap(({ owner, holdings }) => {
+  const priorCount = (previous.tokens || []).filter((token) => token.holding_state === "current" && token.owners?.includes(owner)).length;
+  return priorCount >= 50 && holdings.length < priorCount * 0.5 ? [owner] : [];
+}));
 const holdingOwners = new Map();
 const providerTokens = new Map();
 for (const { owner, holdings } of holdingsByOwner) {
@@ -265,6 +269,11 @@ for (const [providerKey, providerToken] of providerTokens) {
 
 for (const prior of previous.tokens || []) {
   if (observedKeys.has(`${prior.contract}:${prior.token_id}`)) continue;
+  const observationIncomplete = prior.owners?.some((owner) => incompleteOwners.has(owner));
+  if (observationIncomplete) {
+    tokens.push(prior);
+    continue;
+  }
   if (prior.holding_state !== "unobserved") holdingChanges += 1;
   tokens.push({ ...prior, owners: prior.owners || (previous.owner ? [previous.owner] : []), holding_state: "unobserved" });
 }

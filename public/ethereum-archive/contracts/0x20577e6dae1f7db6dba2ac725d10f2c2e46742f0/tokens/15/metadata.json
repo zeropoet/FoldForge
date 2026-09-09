@@ -8,9 +8,9 @@
   "token_type": "ERC721",
   "attributes": [
     {
-      "display_type": "text",
+      "trait_type": "Artist",
       "value": "Zeropoet",
-      "trait_type": "Artist"
+      "display_type": "text"
     }
   ],
   "image_sources": [
@@ -20,7 +20,7 @@
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/e72feb4856ae1f937ec4c8eb425b53a2"
   ],
   "animation_sources": [],
-  "evidence_sha256": "1509d6ec01ffb5fc24d625afd836d3235dde07eee67cf0b67a9943d6123b3e37",
+  "evidence_sha256": "02a7174869d41ee9422511feefa447aa0e1544aa91ab38625dbf8198d61343b7",
   "metadata_path": "/ethereum-archive/contracts/0x20577e6dae1f7db6dba2ac725d10f2c2e46742f0/tokens/15/metadata.json",
   "media": {
     "file": "image.jpg",
@@ -32,9 +32,9 @@
   "animation": null,
   "archive_errors": [],
   "owners": [
-    "zeropoet.eth"
+    "rootlogos.eth"
   ],
-  "observed_at": "2026-09-08T18:19:55.785Z",
+  "observed_at": "2026-09-09T15:06:41.439Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -84,21 +84,21 @@
       "tokenUri": "https://arweave.net/kvw1Y92yxk89sFARGQBh4iVSVly1byytzPwPFcIIfYE",
       "metadata": {
         "name": "#000213 — ØVEL",
-        "image": "https://arweave.net/AOYyYnS_so41-Z5YWBtwE-QUf_rY-VnmbkPQmBUMMGc",
         "attributes": [
           {
-            "display_type": "text",
+            "trait_type": "Artist",
             "value": "Zeropoet",
-            "trait_type": "Artist"
+            "display_type": "text"
           }
         ],
         "image_details": {
+          "bytes": 39195,
           "format": "JPEG",
-          "width": "1200",
           "sha256": "29d55cb99e2af3bf306fd5856dfc771a4475a13e4863da2a7654138ae741beb5",
-          "bytes": "39195",
-          "height": "1200"
+          "width": 1200,
+          "height": 1200
         },
+        "image": "https://arweave.net/AOYyYnS_so41-Z5YWBtwE-QUf_rY-VnmbkPQmBUMMGc",
         "image_url": "https://arweave.net/AOYyYnS_so41-Z5YWBtwE-QUf_rY-VnmbkPQmBUMMGc"
       },
       "error": null
@@ -116,7 +116,7 @@
       "transactionHash": null
     },
     "owners": null,
-    "timeLastUpdated": "2026-02-24T16:33:03.787Z",
+    "timeLastUpdated": "2026-09-09T14:46:38.053839397Z",
     "balance": "1",
     "acquiredAt": {
       "blockTimestamp": null,

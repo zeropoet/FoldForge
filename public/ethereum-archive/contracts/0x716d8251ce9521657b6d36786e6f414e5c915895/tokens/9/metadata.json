@@ -6,21 +6,27 @@
   "name": "The Record",
   "description": "",
   "token_type": "ERC721",
-  "attributes": [],
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Zeropoet",
+      "display_type": "text"
+    }
+  ],
   "image_sources": [
-    "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/294a1aa01617da7bb54ccec5fbd57a/63294a1aa01617da7bb54ccec5fbd57a.png",
+    "https://arweave.net/CSo6MsAB9elt5sXHYnA2mxLlj5v7hH5zLyghCFvmhHM",
     "https://nft2-cdn.alchemy.com/eth-mainnet/118d0c0bac53563b74c9f7290c418cf2_63294a1a",
     "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/118d0c0bac53563b74c9f7290c418cf2_63294a1a",
     "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/118d0c0bac53563b74c9f7290c418cf2_63294a1a"
   ],
   "animation_sources": [],
-  "evidence_sha256": "0cf139896822819d3b9b0f1364a2374929c9cf57b0864a5c355a9e22ca9deab3",
+  "evidence_sha256": "4622c761e21bfb9d1170b13b87aac66ba7715200776a7d93d09038caab372ca2",
   "metadata_path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/9/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 3911,
-    "sha256": "7731b83b9add68050a1c9e120d16ef466ce7f6ea20cd0ef5de366fd50ffd7d15",
-    "media_type": "image/avif",
+    "bytes": 41522,
+    "sha256": "21e489e08b4148c594b005ca696989e5ec5b12c007c4ec96d605da1ffc26ece6",
+    "media_type": "image/png",
     "path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/9/image.png"
   },
   "animation": null,
@@ -28,7 +34,7 @@
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-09T14:35:13.151Z",
+  "observed_at": "2026-09-09T15:06:41.439Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -68,7 +74,7 @@
       "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/118d0c0bac53563b74c9f7290c418cf2_63294a1a",
       "contentType": "image/png",
       "size": 63461,
-      "originalUrl": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/294a1aa01617da7bb54ccec5fbd57a/63294a1aa01617da7bb54ccec5fbd57a.png"
+      "originalUrl": "https://arweave.net/CSo6MsAB9elt5sXHYnA2mxLlj5v7hH5zLyghCFvmhHM"
     },
     "animation": {
       "cachedUrl": null,
@@ -85,7 +91,7 @@
         "token_standard": "erc721",
         "name": "The Record",
         "description": "",
-        "image_url": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/294a1aa01617da7bb54ccec5fbd57a/63294a1aa01617da7bb54ccec5fbd57a.png",
+        "image_url": "https://arweave.net/CSo6MsAB9elt5sXHYnA2mxLlj5v7hH5zLyghCFvmhHM",
         "display_image_url": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/294a1aa01617da7bb54ccec5fbd57a/63294a1aa01617da7bb54ccec5fbd57a.png",
         "display_animation_url": null,
         "metadata_url": "https://arweave.net/cR0eH1PWvZYI6G8dW4GV0Efu5sxD22WoFJGWjrc6F4w",
@@ -117,7 +123,22 @@
         ],
         "rarity": null,
         "subscription": null,
-        "agent_binding": null
+        "agent_binding": null,
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Zeropoet",
+            "display_type": "text"
+          }
+        ],
+        "image_details": {
+          "bytes": 41522,
+          "format": "PNG",
+          "sha256": "21e489e08b4148c594b005ca696989e5ec5b12c007c4ec96d605da1ffc26ece6",
+          "width": 1440,
+          "height": 1440
+        },
+        "image": "https://arweave.net/CSo6MsAB9elt5sXHYnA2mxLlj5v7hH5zLyghCFvmhHM"
       },
       "error": null
     },
@@ -139,7 +160,6 @@
     "acquiredAt": {
       "blockTimestamp": null,
       "blockNumber": null
-    },
-    "archiveMetadataError": "Metadata request failed (404) for https://arweave.net/yb-JuvbiO6AnYsEWp0tc9xS-KTfNLmgu4PLG6Eag9co"
+    }
   }
 }
