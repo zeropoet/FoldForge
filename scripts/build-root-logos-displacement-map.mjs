@@ -102,9 +102,16 @@ for (const field of [geometry.lines, geometry.facets]) {
     });
   }
 }
-const minimumY = Math.min(...vertices.map(({ y }) => y));
-const maximumY = Math.max(...vertices.map(({ y }) => y));
-const maximumRadius = Math.max(...vertices.map(({ x, z }) => Math.hypot(x, z))) || 1;
+let minimumY = Infinity;
+let maximumY = -Infinity;
+let maximumRadius = 0;
+for (const { x, y, z } of vertices) {
+  minimumY = Math.min(minimumY, y);
+  maximumY = Math.max(maximumY, y);
+  maximumRadius = Math.max(maximumRadius, Math.hypot(x, z));
+}
+if (!vertices.length) throw new Error("Root Logos geometry produced no displacement vertices.");
+maximumRadius ||= 1;
 const sampleCount = 64;
 const bandwidth = 0.055;
 const rawSamples = Array.from({ length: sampleCount }, (_, index) => {
