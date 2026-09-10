@@ -93,9 +93,9 @@
     },
     {
       "id": "foldforge-dual-source-field",
-      "title": "Dual Source Field",
+      "title": "zeropoet.eth × rootlogos.eth Composite",
       "branch": "FoldForge",
-      "kind": "shared Ethereum holdings state",
+      "kind": "canonical composite of two Ethereum holdings states",
       "availability": "public instrument",
       "source": {
         "repository": "zeropoet/FoldForge",
@@ -143,15 +143,21 @@
             "Q": 2.4
           },
           "partialGains": [
-            0.42,
-            0.42,
-            0.68,
-            0.24
+            0.5,
+            0.5,
+            0.56,
+            0.2
           ],
           "gainLfo": {
-            "base": 0.72,
-            "depth": 0.2,
-            "angularRate": 0.42
+            "base": 0.86,
+            "depth": 0.08,
+            "angularRate": 0.21
+          },
+          "composite": {
+            "mode": "simultaneous-sum",
+            "sources": 2,
+            "phase": "shared",
+            "cadence": "shared"
           },
           "stereo": "center"
         }

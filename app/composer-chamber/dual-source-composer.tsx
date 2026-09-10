@@ -112,7 +112,6 @@ export default function DualSourceComposer({ sources }: { sources: ComposerSourc
   const values = useMemo(() => sources.map(sourceValue), [sources]);
   const [playing, setPlaying] = useState(false);
   const [step, setStep] = useState(0);
-  const [activeSource, setActiveSource] = useState(0);
   const contextRef = useRef<AudioContext | null>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -140,18 +139,15 @@ export default function DualSourceComposer({ sources }: { sources: ComposerSourc
     let cursor = 0;
 
     const emit = () => {
-      const sourceIndex = cursor % sources.length;
-      const counterIndex = (sourceIndex + 1) % sources.length;
-      const source = sources[sourceIndex];
-      const counter = sources[counterIndex];
-      const token = source.tokens[Math.floor(cursor / sources.length) % source.tokens.length];
-      const counterToken = counter.tokens[Math.floor(cursor / sources.length) % counter.tokens.length];
+      const source = sources[0];
+      const counter = sources[1];
+      const token = source.tokens[cursor % source.tokens.length];
+      const counterToken = counter.tokens[cursor % counter.tokens.length];
       const now = context.currentTime;
       voice(context, compressor, source, token, now, .78);
       voice(context, compressor, counter, counterToken, now, .78);
       sharedVoice(context, compressor, sources, now);
       setStep(cursor);
-      setActiveSource(sourceIndex);
       cursor += 1;
       const interval = Math.round((values[0].pulse + values[1].pulse) / 2);
       timerRef.current = setTimeout(emit, interval);
@@ -169,7 +165,7 @@ export default function DualSourceComposer({ sources }: { sources: ComposerSourc
       <div className="grid md:grid-cols-[1fr_auto_1fr]">
         {sources.map((source, index) => (
           <article className={`relative min-w-0 p-6 md:p-9 ${index === 1 ? "md:order-3" : ""}`} key={source.name}>
-            <span className={`absolute inset-x-0 top-0 h-px bg-black transition-opacity ${playing && activeSource === index ? "opacity-100" : "opacity-0"}`} />
+            <span className={`absolute inset-x-0 top-0 h-px bg-black transition-opacity ${playing ? "opacity-100" : "opacity-0"}`} />
             <p className="text-[8px] uppercase tracking-[0.24em] text-black/35">Source {String(index + 1).padStart(2, "0")}</p>
             <h2 className="mt-5 text-3xl font-light tracking-[-0.045em] md:text-5xl">{source.name}</h2>
             <dl className="mt-10 grid grid-cols-2 gap-px bg-black/15 font-mono text-[8px] uppercase tracking-[0.12em]">

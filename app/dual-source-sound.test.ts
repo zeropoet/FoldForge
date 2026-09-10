@@ -12,6 +12,7 @@ describe("dual-source Ethereum sound", () => {
     if (!shared?.sound.frequenciesHz) throw new Error("Dual Source Field is missing its relational frequencies");
     expect(shared?.sources).toHaveLength(2);
     expect(shared?.sound.renderer.stereo).toBe("center");
+    expect(shared?.sound.renderer.composite?.mode).toBe("simultaneous-sum");
     expect(shared.sound.frequenciesHz).toHaveLength(4);
     expect(shared.sound.frequenciesHz[2]).not.toBe(shared.sound.frequenciesHz[0]);
     expect(shared.sound.frequenciesHz[2]).not.toBe(shared.sound.frequenciesHz[1]);

@@ -345,9 +345,9 @@ const relationRoot = Math.sqrt(firstSource.frequency * secondSource.frequency);
 const soundArchive = JSON.parse(await readFile(soundArchivePath, "utf8"));
 const sharedEntry = {
   id: "foldforge-dual-source-field",
-  title: "Dual Source Field",
+  title: "zeropoet.eth × rootlogos.eth Composite",
   branch: "FoldForge",
-  kind: "shared Ethereum holdings state",
+  kind: "canonical composite of two Ethereum holdings states",
   availability: "public instrument",
   source: { repository: "zeropoet/FoldForge", path: "app/composer-chamber", url: "https://foldforge.zeropoet.xyz/composer-chamber" },
   witness: `sha256:${sha256(sourceStates.map((source) => source.witness).join(":"))}`,
@@ -361,8 +361,9 @@ const sharedEntry = {
       masterGain: 0.2,
       fadeInSeconds: 1.8,
       fieldFilter: { type: "bandpass", frequency: Math.round(Math.sqrt(firstSource.cutoff * secondSource.cutoff)), Q: 2.4 },
-      partialGains: [0.42, 0.42, 0.68, 0.24],
-      gainLfo: { base: 0.72, depth: 0.2, angularRate: 0.42 },
+      partialGains: [0.5, 0.5, 0.56, 0.2],
+      gainLfo: { base: 0.86, depth: 0.08, angularRate: 0.21 },
+      composite: { mode: "simultaneous-sum", sources: 2, phase: "shared", cadence: "shared" },
       stereo: "center",
     },
   },
