@@ -32,14 +32,14 @@ export default function ComposerChamberPage() {
           <div>
             <p className="text-[9px] uppercase tracking-[0.26em] text-black/40">Composer chamber / Ethereum mainnet</p>
             <h1 className="mt-5 max-w-4xl text-5xl font-light tracking-[-0.06em] md:text-8xl">Two holdings.<br />One audible relation.</h1>
-            <p className="mt-7 max-w-2xl text-sm leading-7 text-black/55">A companion reflection of zeropoet.eth and rootlogos.eth. Their independently held structures remain visible as two sources while FoldForge conducts the relation between them.</p>
+            <p className="mt-7 max-w-2xl text-sm leading-7 text-black/55">Two independently held Ethereum states enter together. FoldForge sums their evidence-derived voices into one centered composite without merging ownership, provenance, or archive authority.</p>
             <p className="mt-5 font-mono text-[8px] uppercase tracking-[0.16em] text-black/30">{archive.work_count} archived works / {archive.owners.reduce((total, owner) => total + owner.observed_work_count, 0)} currently observed</p>
           </div>
           <a className="text-[9px] uppercase tracking-[0.2em] text-black/45 hover:text-black" href="/">Return to collections →</a>
         </header>
         <DualSourceComposer sources={sources} />
         <footer className="flex flex-wrap items-center justify-between gap-4 py-7 font-mono text-[7px] uppercase tracking-[0.14em] text-black/25">
-          <span>Canonical sound instrument / FoldForge</span><span>Sources remain independently witnessed</span>
+          <span>Canonical composite / archived by The Record</span><span>Sources remain independently witnessed</span>
         </footer>
       </div>
     </main>

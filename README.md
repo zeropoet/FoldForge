@@ -4,7 +4,7 @@
 
 This repository is an independently governed module and project authority. [`zeropoet.xyz`](https://zeropoet.xyz/) is the studio index: it makes this work and its relations legible without absorbing them. [`rootlogos.com`](https://rootlogos.com/) is the public surface of synthesis: it builds from bounded outputs of the studio's repositories without replacing their sources, histories, or laws. This separation fulfills the system's working law—preserve authority at the source, reveal relation at studio scale, and permit synthesis without possession—as Root Logos enters its Weave era.
 
-FoldForge is a static Ethereum NFT archive and autonomous data composer for `zeropoet.eth` and `rootlogos.eth`, presented through a monochrome, typography-led interface.
+FoldForge is a local-first Web3 studio instrument. It observes the independently held Ethereum NFT assets of `zeropoet.eth` and `rootlogos.eth`, preserves contract-keyed metadata and media locally, and derives reproducible visual, sonic, language, relation, and witness states from their collective archive without merging wallet authority.
 
 Canonical public entry:
 [foldforge.zeropoet.xyz](https://foldforge.zeropoet.xyz/). FoldForge is a studio
@@ -15,8 +15,14 @@ bounded relations without transferring FoldForge authority.
 The [Composer Chamber](https://foldforge.zeropoet.xyz/composer-chamber) witnesses
 `zeropoet.eth` and `rootlogos.eth` as two exclusive holdings sources. Their
 shared state is not shared ownership: it is the third sound produced when both
-source voices are layered. FoldForge publishes that centered-stereo sound
+source voices advance simultaneously through one summed composition. FoldForge publishes that centered-stereo sound
 contract to The Record as `foldforge-dual-source-field` after every archive sync.
+
+The archive, composer, temporal, relation, sonic, dispatch, and ledger surfaces are
+modules of this one instrument. They remain together because they operate on the same
+contract-keyed evidence, local media projection, and witnessed state. A module should
+become a separate repository only if it acquires an independent authority, lifecycle,
+or source of truth—not merely because it has a distinct interface.
 
 ## Telos relation
 
@@ -56,10 +62,10 @@ requires a distinct externally evidenced settlement boundary.
 - Hidden luminosity analysis across every visible holding
 - Perceptual-color signatures that compose an archive-derived chromatic continuum, continuity, and counterpoint
 - Six evidence-derived phases with deterministic arrangement layering
-- A single witnessed FoldForge voice spanning three octaves
+- A canonical two-wallet composite alongside FoldForge's witnessed archive voice
 - Consent-first audio with only Witness and Silence controls
 - Reproducible SHA-256 evidence witnesses and local observation history
-- Typography-only collection index with no cover thumbnails or descriptions
+- Contract-indexed collection and work galleries backed by locally retained media
 - Repository-owned collection exclusions for the Zeropoet archive
 - Shareable collection and minted-work URLs
 - Sequential minted-work navigation with visible previous/next controls and left/right keyboard keys
@@ -201,8 +207,11 @@ Resonant Holdings can traverse those fixed work-to-note relationships through te
 
 The listener can only begin (`Witness`) or end (`Silence`) the performance. Within the cycle, FoldForge selects one to three arrangement layers, assigns a state-derived event budget, advances every layer independently, normalizes their combined gain, enters a state-derived rest, and reforms. A holdings change produces a new witness hash and therefore a newly proportioned evolution without changing any individual work's evidence-derived sonic identity.
 
-The Composer Chamber belongs exclusively to `zeropoet.eth`. Incoming archive routes
-resolve to this identity; FoldForge no longer presents an alternate lineage archive.
+The public collection route opens on `zeropoet.eth`, while the Composer Chamber is
+formed from both configured working wallets. Each wallet remains an exclusive source
+of its own holdings; only their evidence-derived sound state is composited. FoldForge
+does not imply shared ownership, transfer authority between wallets, or treat the
+local projection as a replacement for Ethereum provenance.
 
 When the evidence resolves, FoldForge calculates a deterministic SHA-256 state hash from its grammar versions, archive identity, included contracts, token identities, canonical media URLs, full visual signatures, and the witnessed Root Logos displacement map. Every expression shares that state hash. The interface exposes it with a JSON witness export, and up to 24 distinct states per owner are retained locally as reversible observation history.
 

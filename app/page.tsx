@@ -731,8 +731,8 @@ export default function FoldForge() {
             </section>
           ) : (<>
           <section className="grid gap-10 border-b border-black/20 pb-12 lg:grid-cols-[1fr_0.75fr] lg:items-end">
-            <div><p className="text-[9px] uppercase tracking-[0.25em] text-black/40">Held collections / attributable works</p><h1 className="mt-5 max-w-3xl text-5xl font-light tracking-[-0.055em] md:text-7xl">Ethereum Archive</h1><p className="mt-7 max-w-2xl text-sm leading-7 text-black/55">The Ethereum Archive presents held collections, canonical minted works, and the evidence FoldForge derives from their visual, sonic, and language fields.</p></div>
-            <div className="border border-black/20 p-5 font-mono text-[8px] uppercase leading-5 tracking-[0.14em] text-black/35">Established 2026<br />Ethereum mainnet holdings<br />Contract-indexed records<br />Attributable archive evidence</div>
+            <div><p className="text-[9px] uppercase tracking-[0.25em] text-black/40">Two working wallets / one local instrument</p><h1 className="mt-5 max-w-3xl text-5xl font-light tracking-[-0.055em] md:text-7xl">Ethereum Archive</h1><p className="mt-7 max-w-2xl text-sm leading-7 text-black/55">FoldForge observes the distinct holdings of zeropoet.eth and rootlogos.eth, preserves a contract-keyed local projection, and derives visual, sonic, and language instruments from their collective state.</p></div>
+            <div className="border border-black/20 p-5 font-mono text-[8px] uppercase leading-5 tracking-[0.14em] text-black/35">Ethereum remains provenance<br />Wallets remain distinct<br />Local media remains available<br />Derived states remain reproducible</div>
           </section>
 
           <div className="archive-metrics grid border-b border-black/20 sm:grid-cols-4">
@@ -773,8 +773,8 @@ export default function FoldForge() {
           <section className="border-b border-black/20 py-8 md:py-10">
             <a className="group grid gap-5 border border-black/20 p-5 transition hover:border-black md:grid-cols-[1fr_auto] md:items-center md:p-7" href="/composer-chamber">
               <div>
-                <p className="text-[9px] uppercase tracking-[0.24em] text-black/45">Composer chamber / two Ethereum sources</p>
-                <p className="mt-3 max-w-2xl text-xs leading-6 text-black/45">zeropoet.eth and rootlogos.eth remain distinct holdings while their values are conducted through one canonical FoldForge sound instrument.</p>
+                <p className="text-[9px] uppercase tracking-[0.24em] text-black/45">Canonical composite / two Ethereum sources</p>
+                <p className="mt-3 max-w-2xl text-xs leading-6 text-black/45">zeropoet.eth and rootlogos.eth remain distinct authorities. Their current states advance together as one centered FoldForge composition, archived by The Record.</p>
               </div>
               <span className="text-[9px] uppercase tracking-[0.2em] text-black/40 transition group-hover:text-black">Enter chamber →</span>
             </a>
