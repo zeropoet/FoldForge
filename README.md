@@ -28,7 +28,11 @@ Placement follows **media type + intent**. Media type determines where a work ca
 natively stored, rendered, heard, or operated; intent determines which project has
 authority over its meaning and lifecycle. A FoldForge-derived sound may therefore be
 archived and played by The Record while remaining attributable to FoldForge's wallet
-state. A relation may be carried into Telos without transferring its source authority.
+state. This is one route into The Record, not the dominant route: most of The Record's
+sounds first become sound through Root Logos's reading and writing process, then enter
+The Record as their canonical playable archive. The Record preserves that path as
+provenance rather than presenting every sound as if it originated there. A relation may
+be carried into Telos without transferring its source authority.
 New repositories and identities should emerge only when that combined placement rule
 reveals a genuinely independent body of work.
 
