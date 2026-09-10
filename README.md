@@ -24,6 +24,14 @@ contract-keyed evidence, local media projection, and witnessed state. A module s
 become a separate repository only if it acquires an independent authority, lifecycle,
 or source of truth—not merely because it has a distinct interface.
 
+Placement follows **media type + intent**. Media type determines where a work can be
+natively stored, rendered, heard, or operated; intent determines which project has
+authority over its meaning and lifecycle. A FoldForge-derived sound may therefore be
+archived and played by The Record while remaining attributable to FoldForge's wallet
+state. A relation may be carried into Telos without transferring its source authority.
+New repositories and identities should emerge only when that combined placement rule
+reveals a genuinely independent body of work.
+
 ## Telos relation
 
 Telos is the connected system's final caretaker and keeper, not an owner of
