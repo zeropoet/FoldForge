@@ -17,7 +17,7 @@ export default function PublicHeader({ active }: { active: Surface }) {
   return (
     <header className="site-header sticky top-0 z-20 border-b border-black/20 px-5 py-3 md:px-8">
       <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-3 sm:flex-nowrap sm:gap-5">
-        <a className="flex items-center gap-3" href="https://zeropoet.xyz/" aria-label="Return to Zeropoet Studio" onClick={(event) => {
+        <a className="flex items-center" href="https://zeropoet.xyz/" aria-label="Return to Zeropoet Studio" onClick={(event) => {
           event.preventDefault();
           window.location.assign("https://zeropoet.xyz/");
         }}>
@@ -25,7 +25,6 @@ export default function PublicHeader({ active }: { active: Surface }) {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img alt="" src="/brand/foldforge-mark.svg" />
           </span>
-          <span className="block text-[10px] uppercase tracking-[0.26em]">FoldForge</span>
         </a>
         <nav aria-label="FoldForge instruments" className="flex w-full items-center justify-between gap-3 overflow-x-auto border-t border-black/10 pt-3 text-[8px] uppercase tracking-[0.16em] sm:w-auto sm:gap-5 sm:border-0 sm:pt-0 sm:text-[9px] sm:tracking-[0.2em]">
           {surfaces.map((surface) => surface.id === active
