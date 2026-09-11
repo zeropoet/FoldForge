@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: foldforge-ethereum-archive-sync
@@ -37,12 +38,20 @@ jobs:
           npm run lint
           npm run build
       - name: Commit changed archive evidence
+        id: archive-commit
         run: |
           git config user.name "foldforge-ethereum-archive[bot]"
           git config user.email "foldforge-ethereum-archive[bot]@users.noreply.github.com"
           git add public/ethereum-archive public/record-sound-archive.json
           if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git commit -m "Synchronize Ethereum archive"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Deploy changed public archive
+        if: steps.archive-commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy-pages.yml --ref main
