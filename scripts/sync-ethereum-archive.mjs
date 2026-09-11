@@ -12,6 +12,7 @@ const root = resolve("public/ethereum-archive");
 const indexPath = join(root, "index.json");
 const soundArchivePath = resolve("public/record-sound-archive.json");
 const maxBytes = 99_000_000;
+const withdrawnFldfrgTokenIds = new Set(["52", "53", "54", "55"]);
 const alwaysHydrateContracts = new Set([
   "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc", // FLDFRG
   "0x716d8251ce9521657b6d36786e6f414e5c915895", // SOVE
@@ -269,6 +270,7 @@ for (const [providerKey, providerToken] of providerTokens) {
 
 for (const prior of previous.tokens || []) {
   if (observedKeys.has(`${prior.contract}:${prior.token_id}`)) continue;
+  if (prior.contract === "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc" && withdrawnFldfrgTokenIds.has(String(prior.token_id))) continue;
   const observationIncomplete = prior.owners?.some((owner) => incompleteOwners.has(owner));
   if (observationIncomplete) {
     tokens.push(prior);
@@ -284,7 +286,10 @@ for (const prior of previous.contracts || []) {
     contracts.set(prior.address, prior);
     continue;
   }
-  current.token_ids = [...new Set([...current.token_ids, ...prior.token_ids])];
+  const retainedPriorIds = prior.address === "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc"
+    ? prior.token_ids.filter((tokenId) => !withdrawnFldfrgTokenIds.has(String(tokenId)))
+    : prior.token_ids;
+  current.token_ids = [...new Set([...current.token_ids, ...retainedPriorIds])];
   current.owners = [...new Set([...(current.owners || []), ...(prior.owners || [])])].sort();
 }
 
@@ -315,7 +320,7 @@ const index = {
   policy: {
     authority: "Ethereum remains provenance authority; this repository snapshot is a durable read fallback.",
     admission: "Each sync ingests newly held works and refreshes metadata/media only when its evidence fingerprint changes.",
-    deletion: "A missing network observation never deletes an archived work automatically.",
+    deletion: "A missing network observation never deletes an archived work automatically; withdrawn FLDFRG token IDs 52–55 are excluded explicitly.",
   },
   contract_count: contracts.size,
   work_count: tokens.length,

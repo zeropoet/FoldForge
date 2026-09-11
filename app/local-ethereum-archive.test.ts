@@ -45,7 +45,8 @@ describe("local Ethereum archive precedence", () => {
   it("keeps the FLDFRG gallery index synchronized with every canonical token record", () => {
     const archive = JSON.parse(readFileSync(resolve("public/ethereum-archive/index.json"), "utf8"));
     const indexed = archive.tokens.filter((entry: { contract: string }) => entry.contract === address);
-    expect(indexed).toHaveLength(55);
+    expect(indexed).toHaveLength(51);
+    expect(indexed.some((entry: { token_id: string }) => ["52", "53", "54", "55"].includes(String(entry.token_id)))).toBe(false);
     for (const entry of indexed) {
       const record = JSON.parse(readFileSync(resolve(`public/ethereum-archive/contracts/${address}/tokens/${entry.token_id}/metadata.json`), "utf8"));
       expect(entry.name, `token ${entry.token_id}`).toBe(record.name);
