@@ -5,27 +5,27 @@
     {
       "name": "zeropoet.eth",
       "contract_count": 22,
-      "work_count": 258,
-      "observed_work_count": 258,
-      "witness": "sha256:0ce93e107d19ea3309b1ea124f7b0ad7e6855b7fd321456916547528da5eeec8"
+      "work_count": 256,
+      "observed_work_count": 256,
+      "witness": "sha256:c75018b329bed1def8787c2077e22153947ef09f4d3ba4b7410f4e41d2036b7b"
     },
     {
       "name": "rootlogos.eth",
-      "contract_count": 6,
-      "work_count": 65,
-      "observed_work_count": 65,
-      "witness": "sha256:35fa1ed63f8bb362b3d29db72a67c3e8177f935ee927269f06f5e4d536b0a89e"
+      "contract_count": 7,
+      "work_count": 68,
+      "observed_work_count": 68,
+      "witness": "sha256:996636dc8c8f546218f11b7afc3718e5437c777b536ead38075421f7ebee9fb1"
     }
   ],
   "network": "eth-mainnet",
-  "observed_at": "2026-09-09T15:06:41.439Z",
+  "observed_at": "2026-09-11T14:36:01.091Z",
   "policy": {
     "authority": "Ethereum remains provenance authority; this repository snapshot is a durable read fallback.",
     "admission": "Each sync ingests newly held works and refreshes metadata/media only when its evidence fingerprint changes.",
     "deletion": "A missing network observation never deletes an archived work automatically."
   },
-  "contract_count": 23,
-  "work_count": 323,
+  "contract_count": 24,
+  "work_count": 324,
   "contracts": [
     {
       "address": "0x00a65cff273beb75c657e5673c0b453e33b077bd",
@@ -273,18 +273,18 @@
       "total_supply": "",
       "token_type": "ERC721",
       "token_ids": [
-        "3",
         "5",
         "6",
-        "7",
         "8",
         "1",
         "2",
+        "3",
         "4",
+        "7",
         "9",
         "10"
       ],
-      "image": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/3/image.png",
+      "image": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/5/image.png",
       "owners": [
         "rootlogos.eth",
         "zeropoet.eth"
@@ -336,12 +336,12 @@
       "total_supply": "4",
       "token_type": "ERC721",
       "token_ids": [
+        "1",
         "2",
         "3",
-        "4",
-        "1"
+        "4"
       ],
-      "image": "/ethereum-archive/contracts/0x8b27a07b7425b75d6f61d76cbf13eaf799ed1aea/tokens/2/image.jpg",
+      "image": "/ethereum-archive/contracts/0x8b27a07b7425b75d6f61d76cbf13eaf799ed1aea/tokens/1/image.jpg",
       "owners": [
         "rootlogos.eth",
         "zeropoet.eth"
@@ -394,75 +394,6 @@
       "image": "/ethereum-archive/contracts/0x8e705e25ac32a49d0d1d7b1cb19f3685619457dc/tokens/1/image.jpg",
       "owners": [
         "zeropoet.eth"
-      ]
-    },
-    {
-      "address": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
-      "name": "FOLD FORGE",
-      "symbol": "FLDFRG",
-      "description": "",
-      "total_supply": "",
-      "token_type": "ERC721",
-      "token_ids": [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
-        "11",
-        "12",
-        "13",
-        "14",
-        "15",
-        "16",
-        "17",
-        "18",
-        "19",
-        "20",
-        "21",
-        "22",
-        "23",
-        "24",
-        "25",
-        "26",
-        "27",
-        "28",
-        "29",
-        "30",
-        "31",
-        "32",
-        "33",
-        "34",
-        "35",
-        "36",
-        "37",
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44",
-        "45",
-        "46",
-        "47",
-        "48",
-        "49",
-        "50",
-        "51",
-        "52",
-        "53",
-        "54",
-        "55"
-      ],
-      "image": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/1/image.png",
-      "owners": [
-        "rootlogos.eth"
       ]
     },
     {
@@ -675,6 +606,90 @@
       "image": "/ethereum-archive/contracts/0xe9c6fcdbd16d524d2d439838f4dc13c9c82ea7fa/tokens/1/image.png",
       "owners": [
         "zeropoet.eth"
+      ]
+    },
+    {
+      "address": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
+      "name": "FOLD FORGE",
+      "symbol": "FLDFRG",
+      "description": "",
+      "total_supply": "",
+      "token_type": "ERC721",
+      "token_ids": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55"
+      ],
+      "image": "/ethereum-archive/contracts/0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc/tokens/1/image.png",
+      "owners": [
+        "rootlogos.eth"
+      ]
+    },
+    {
+      "address": "0xdc1573090788837ca959a1da884080d0193eb44d",
+      "name": "Root Logos — Writings",
+      "symbol": "RLW",
+      "description": "",
+      "total_supply": "",
+      "token_type": "ERC721",
+      "token_ids": [
+        "1"
+      ],
+      "image": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/1/image.jpg",
+      "owners": [
+        "rootlogos.eth"
       ]
     }
   ],
@@ -5356,7 +5371,7 @@
       "animation": null,
       "archive_errors": [],
       "owners": [
-        "zeropoet.eth"
+        "rootlogos.eth"
       ],
       "observed_at": "2026-09-09T14:35:13.151Z",
       "holding_state": "current"
@@ -5504,7 +5519,7 @@
       "animation": null,
       "archive_errors": [],
       "owners": [
-        "zeropoet.eth"
+        "rootlogos.eth"
       ],
       "observed_at": "2026-09-09T14:35:13.151Z",
       "holding_state": "current"
@@ -5966,7 +5981,7 @@
       "animation": null,
       "archive_errors": [],
       "owners": [
-        "rootlogos.eth"
+        "zeropoet.eth"
       ],
       "observed_at": "2026-09-05T03:51:45.899Z",
       "holding_state": "current"
@@ -6062,7 +6077,7 @@
       "animation": null,
       "archive_errors": [],
       "owners": [
-        "zeropoet.eth"
+        "rootlogos.eth"
       ],
       "observed_at": "2026-09-08T18:19:55.785Z",
       "holding_state": "current"
@@ -11611,6 +11626,44 @@
       "holding_state": "current"
     },
     {
+      "contract": "0xdc1573090788837ca959a1da884080d0193eb44d",
+      "token_id": "1",
+      "token_uri": "https://arweave.net/Dzya1RIG_EFGCLbREAMRxt4Rhqjp8OW3FjhBf7XWNUY",
+      "name": "52 — The Boundary of the Executable",
+      "description": "What can be entrusted to execution without mistaking the executable for the whole of reality?  \nWriting 52 by Root Logos. This token preserves its first observable frame and provides a durable receipt for the writing’s emergence. Its text, geometry, sound, and future relations remain independently addressable within Folio.",
+      "token_type": "ERC721",
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Root Logos",
+          "display_type": "text"
+        }
+      ],
+      "image_sources": [
+        "https://arweave.net/oOHDOoejmHrWwDJuCNnqSE_WuydqA-e11kfMhZq-Xys",
+        "https://nft2-cdn.alchemy.com/eth-mainnet/eeed29421f3bd579b347242a1a884dd0_02e43d23",
+        "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/eeed29421f3bd579b347242a1a884dd0_02e43d23",
+        "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/eeed29421f3bd579b347242a1a884dd0_02e43d23"
+      ],
+      "animation_sources": [],
+      "evidence_sha256": "441626540b23284cf9167ecd2246adfd16e2ee2f6d019e9f8ec44b0392c62809",
+      "metadata_path": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/1/metadata.json",
+      "media": {
+        "file": "image.jpg",
+        "bytes": 133020,
+        "sha256": "b19c21f06e50c2d42dbc97d5bc9c2fe91f1efc20a21787534647afdd981389dc",
+        "media_type": "image/jpeg",
+        "path": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/1/image.jpg"
+      },
+      "animation": null,
+      "archive_errors": [],
+      "owners": [
+        "rootlogos.eth"
+      ],
+      "observed_at": "2026-09-11T14:36:01.091Z",
+      "holding_state": "current"
+    },
+    {
       "contract": "0xddb652a008eba424958eaf07d86384d1af1d21c5",
       "token_id": "1",
       "token_uri": "https://arweave.net/aHTR_yJ0ytsarOH0ziSmrP27lbXhovZy3JfDoIOQuTY",
@@ -12013,5 +12066,5 @@
       "holding_state": "current"
     }
   ],
-  "witness": "sha256:e28a8542eaea80f44bce3d9fd19ee29901750cabadf3fe99e1af5fab9998713a"
+  "witness": "sha256:88f05e4aeab139d37d5c61a9419c19d29069eda50a9ed2e5c3ced199742925ec"
 }

@@ -1,0 +1,16 @@
+{
+  "schema": "foldforge-ethereum-contract/v1",
+  "address": "0xdc1573090788837ca959a1da884080d0193eb44d",
+  "name": "Root Logos — Writings",
+  "symbol": "RLW",
+  "description": "",
+  "total_supply": "",
+  "token_type": "ERC721",
+  "token_ids": [
+    "1"
+  ],
+  "image": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/1/image.jpg",
+  "owners": [
+    "rootlogos.eth"
+  ]
+}

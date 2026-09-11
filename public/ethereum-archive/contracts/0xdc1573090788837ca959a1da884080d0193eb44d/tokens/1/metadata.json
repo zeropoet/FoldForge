@@ -1,0 +1,127 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0xdc1573090788837ca959a1da884080d0193eb44d",
+  "token_id": "1",
+  "token_uri": "https://arweave.net/Dzya1RIG_EFGCLbREAMRxt4Rhqjp8OW3FjhBf7XWNUY",
+  "name": "52 — The Boundary of the Executable",
+  "description": "What can be entrusted to execution without mistaking the executable for the whole of reality?  \nWriting 52 by Root Logos. This token preserves its first observable frame and provides a durable receipt for the writing’s emergence. Its text, geometry, sound, and future relations remain independently addressable within Folio.",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Root Logos",
+      "display_type": "text"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/oOHDOoejmHrWwDJuCNnqSE_WuydqA-e11kfMhZq-Xys",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/eeed29421f3bd579b347242a1a884dd0_02e43d23",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/eeed29421f3bd579b347242a1a884dd0_02e43d23",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/eeed29421f3bd579b347242a1a884dd0_02e43d23"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "441626540b23284cf9167ecd2246adfd16e2ee2f6d019e9f8ec44b0392c62809",
+  "metadata_path": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/1/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 133020,
+    "sha256": "b19c21f06e50c2d42dbc97d5bc9c2fe91f1efc20a21787534647afdd981389dc",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/1/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "owners": [
+    "rootlogos.eth"
+  ],
+  "observed_at": "2026-09-11T14:36:01.091Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0xDC1573090788837Ca959A1DA884080D0193Eb44D",
+      "name": "Root Logos — Writings",
+      "symbol": "RLW",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "Root Logos — Writings",
+        "collectionSlug": "root-logos-writings",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-09-11T14:23:03.368365009Z"
+      },
+      "isSpam": false,
+      "spamClassifications": []
+    },
+    "tokenId": "1",
+    "tokenType": "ERC721",
+    "name": "52 — The Boundary of the Executable",
+    "description": "What can be entrusted to execution without mistaking the executable for the whole of reality?  \nWriting 52 by Root Logos. This token preserves its first observable frame and provides a durable receipt for the writing’s emergence. Its text, geometry, sound, and future relations remain independently addressable within Folio.",
+    "tokenUri": "https://arweave.net/Dzya1RIG_EFGCLbREAMRxt4Rhqjp8OW3FjhBf7XWNUY",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/eeed29421f3bd579b347242a1a884dd0_02e43d23",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/eeed29421f3bd579b347242a1a884dd0_02e43d23",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/eeed29421f3bd579b347242a1a884dd0_02e43d23",
+      "contentType": "image/jpeg",
+      "size": 133020,
+      "originalUrl": "https://arweave.net/oOHDOoejmHrWwDJuCNnqSE_WuydqA-e11kfMhZq-Xys"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/Dzya1RIG_EFGCLbREAMRxt4Rhqjp8OW3FjhBf7XWNUY",
+      "metadata": {
+        "description": "What can be entrusted to execution without mistaking the executable for the whole of reality?  \nWriting 52 by Root Logos. This token preserves its first observable frame and provides a durable receipt for the writing’s emergence. Its text, geometry, sound, and future relations remain independently addressable within Folio.",
+        "name": "52 — The Boundary of the Executable",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Root Logos",
+            "display_type": "text"
+          }
+        ],
+        "image_details": {
+          "bytes": 133020,
+          "format": "JPEG",
+          "sha256": "b19c21f06e50c2d42dbc97d5bc9c2fe91f1efc20a21787534647afdd981389dc",
+          "width": 1200,
+          "height": 1200
+        },
+        "image": "https://arweave.net/oOHDOoejmHrWwDJuCNnqSE_WuydqA-e11kfMhZq-Xys",
+        "image_url": "https://arweave.net/oOHDOoejmHrWwDJuCNnqSE_WuydqA-e11kfMhZq-Xys"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "Root Logos — Writings",
+      "slug": "root-logos-writings",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-09-11T14:30:41.107357759Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}
