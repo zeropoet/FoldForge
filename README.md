@@ -110,6 +110,12 @@ Open [http://localhost:4173](http://localhost:4173). The build command creates a
 
 The public archive uses contract-address exclusions committed in `app/collection-policy.ts`. Visibility is stable across browsers and devices, with no public curation controls or browser-storage dependency. Newly acquired collections appear automatically unless they are later added to the exclusion policy.
 
+The keeper checks `zeropoet.eth` and `rootlogos.eth` twice each hour. Every newly
+observed token is stored under its contract and token ID with normalized metadata
+and a repository-local copy of each retrievable media file. A successful changed
+snapshot commits itself and triggers the public deployment; temporary provider
+indexing lag is resolved by a later scheduled pass.
+
 This is an exclusion policy rather than a fixed allowlist: collection and work totals continue to reflect current provider data after excluded contracts are removed.
 
 ## Holdings composition

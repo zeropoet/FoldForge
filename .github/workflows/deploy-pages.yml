@@ -1,6 +1,11 @@
 name: Deploy GitHub Pages
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "public/ethereum-archive/**"
+      - "public/record-sound-archive.json"
 permissions:
   contents: read
   pages: write

@@ -1,4 +1,5 @@
 import archive from "../../public/ethereum-archive/index.json";
+import Link from "next/link";
 import PublicHeader from "../public-header";
 import DualSourceComposer, { type ComposerSource } from "./dual-source-composer";
 
@@ -35,7 +36,7 @@ export default function ComposerChamberPage() {
             <p className="mt-7 max-w-2xl text-sm leading-7 text-black/55">Two independently held Ethereum states enter together. FoldForge sums their evidence-derived voices into one centered composite without merging ownership, provenance, or archive authority.</p>
             <p className="mt-5 font-mono text-[8px] uppercase tracking-[0.16em] text-black/30">{archive.work_count} archived works / {archive.owners.reduce((total, owner) => total + owner.observed_work_count, 0)} currently observed</p>
           </div>
-          <a className="text-[9px] uppercase tracking-[0.2em] text-black/45 hover:text-black" href="/">Return to collections →</a>
+          <Link className="text-[9px] uppercase tracking-[0.2em] text-black/45 hover:text-black" href="/">Return to collections →</Link>
         </header>
         <DualSourceComposer sources={sources} />
         <footer className="flex flex-wrap items-center justify-between gap-4 py-7 font-mono text-[7px] uppercase tracking-[0.14em] text-black/25">

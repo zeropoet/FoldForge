@@ -2,6 +2,8 @@ name: Synchronize Ethereum Archive
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "17,47 * * * *"
 
 permissions:
   contents: write
@@ -38,7 +40,7 @@ jobs:
         run: |
           git config user.name "foldforge-ethereum-archive[bot]"
           git config user.email "foldforge-ethereum-archive[bot]@users.noreply.github.com"
-          git add public/ethereum-archive
+          git add public/ethereum-archive public/record-sound-archive.json
           if git diff --cached --quiet; then
             exit 0
           fi
