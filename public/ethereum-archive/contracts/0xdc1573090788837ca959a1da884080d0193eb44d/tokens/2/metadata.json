@@ -1,0 +1,131 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0xdc1573090788837ca959a1da884080d0193eb44d",
+  "token_id": "2",
+  "token_uri": "https://arweave.net/qaZ6Hx6Lgrsqv8gre3sM9Z9iBes4dVbOAz6Ub-nXoo0/1",
+  "name": "53 — The System Cannot Close Itself",
+  "description": "How can a system remain coherent while preserving truths and questions it cannot establish from within itself?  \nWriting 53 by Root Logos. This token preserves its first observable frame and provides a durable receipt for the writing’s emergence. Its text, geometry, sound, and future relations remain independently addressable within Folio.",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Root Logos",
+      "display_type": "text"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/apLdZ0dV0oVwE7w8ZXKIZzEFcai2WfR0PUXd7QiRXRw",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/c68cae976fde82dd0405d0248abf9df0_a6940398",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/c68cae976fde82dd0405d0248abf9df0_a6940398",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/c68cae976fde82dd0405d0248abf9df0_a6940398"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "9c2cb7f2c1cb8a3d420cb8dc71dd94454b48f20b1feb4c6c3fa8dae0dd20558c",
+  "metadata_path": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/2/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 139941,
+    "sha256": "cba007bd18c3807170d06d37a91c6a08641826b129ee085d8be0369d99e28099",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/2/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "owners": [
+    "rootlogos.eth"
+  ],
+  "observed_at": "2026-09-11T17:57:22.864Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0xDC1573090788837Ca959A1DA884080D0193Eb44D",
+      "name": "Root Logos — Writings",
+      "symbol": "RLW",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "Root Logos — Writings",
+        "collectionSlug": "root-logos-writings",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-09-11T14:23:03.368365009Z"
+      },
+      "isSpam": false,
+      "spamClassifications": [
+        "EmptyMetadata",
+        "ValidSocialMedia",
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "2",
+    "tokenType": "ERC721",
+    "name": "53 — The System Cannot Close Itself",
+    "description": "How can a system remain coherent while preserving truths and questions it cannot establish from within itself?  \nWriting 53 by Root Logos. This token preserves its first observable frame and provides a durable receipt for the writing’s emergence. Its text, geometry, sound, and future relations remain independently addressable within Folio.",
+    "tokenUri": "https://arweave.net/qaZ6Hx6Lgrsqv8gre3sM9Z9iBes4dVbOAz6Ub-nXoo0/1",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/c68cae976fde82dd0405d0248abf9df0_a6940398",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/c68cae976fde82dd0405d0248abf9df0_a6940398",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/c68cae976fde82dd0405d0248abf9df0_a6940398",
+      "contentType": "image/jpeg",
+      "size": 139941,
+      "originalUrl": "https://arweave.net/apLdZ0dV0oVwE7w8ZXKIZzEFcai2WfR0PUXd7QiRXRw"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/qaZ6Hx6Lgrsqv8gre3sM9Z9iBes4dVbOAz6Ub-nXoo0/1",
+      "metadata": {
+        "name": "53 — The System Cannot Close Itself",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Root Logos",
+            "display_type": "text"
+          }
+        ],
+        "description": "How can a system remain coherent while preserving truths and questions it cannot establish from within itself?  \nWriting 53 by Root Logos. This token preserves its first observable frame and provides a durable receipt for the writing’s emergence. Its text, geometry, sound, and future relations remain independently addressable within Folio.",
+        "image_details": {
+          "bytes": 139941,
+          "format": "JPEG",
+          "sha256": "cba007bd18c3807170d06d37a91c6a08641826b129ee085d8be0369d99e28099",
+          "width": 1200,
+          "height": 1200
+        },
+        "image": "https://arweave.net/apLdZ0dV0oVwE7w8ZXKIZzEFcai2WfR0PUXd7QiRXRw",
+        "image_url": "https://arweave.net/apLdZ0dV0oVwE7w8ZXKIZzEFcai2WfR0PUXd7QiRXRw"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "Root Logos — Writings",
+      "slug": "root-logos-writings",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-09-11T14:42:38.190526138Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

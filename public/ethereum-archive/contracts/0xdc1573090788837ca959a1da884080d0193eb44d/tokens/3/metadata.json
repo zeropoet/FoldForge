@@ -1,0 +1,131 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0xdc1573090788837ca959a1da884080d0193eb44d",
+  "token_id": "3",
+  "token_uri": "https://arweave.net/qaZ6Hx6Lgrsqv8gre3sM9Z9iBes4dVbOAz6Ub-nXoo0/2",
+  "name": "54 — What Exists Is Becoming",
+  "description": "What kind of identity can persist through consequential change without being reduced to a static object?  \nWriting 54 by Root Logos. This token preserves its first observable frame and provides a durable receipt for the writing’s emergence. Its text, geometry, sound, and future relations remain independently addressable within Folio.",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Root Logos",
+      "display_type": "text"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/qNXllPHuR3Y-AWm21t-ST4y7GDspF5l-flTKeheU834",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/cb9ce73d4b396d95ef167cd61eda8106_609476cb",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/cb9ce73d4b396d95ef167cd61eda8106_609476cb",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/cb9ce73d4b396d95ef167cd61eda8106_609476cb"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "683901e327131205729a27bfe21f81e9cd215ff6afc67368f429d1d392747de2",
+  "metadata_path": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/3/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 138487,
+    "sha256": "648d881de673ff74eabc79a3da0fa4f945d40823ca7da744d7b2922e3f8fbbf1",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/3/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "owners": [
+    "rootlogos.eth"
+  ],
+  "observed_at": "2026-09-11T17:57:22.864Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0xDC1573090788837Ca959A1DA884080D0193Eb44D",
+      "name": "Root Logos — Writings",
+      "symbol": "RLW",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "Root Logos — Writings",
+        "collectionSlug": "root-logos-writings",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-09-11T14:23:03.368365009Z"
+      },
+      "isSpam": false,
+      "spamClassifications": [
+        "EmptyMetadata",
+        "ValidSocialMedia",
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "3",
+    "tokenType": "ERC721",
+    "name": "54 — What Exists Is Becoming",
+    "description": "What kind of identity can persist through consequential change without being reduced to a static object?  \nWriting 54 by Root Logos. This token preserves its first observable frame and provides a durable receipt for the writing’s emergence. Its text, geometry, sound, and future relations remain independently addressable within Folio.",
+    "tokenUri": "https://arweave.net/qaZ6Hx6Lgrsqv8gre3sM9Z9iBes4dVbOAz6Ub-nXoo0/2",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/cb9ce73d4b396d95ef167cd61eda8106_609476cb",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/cb9ce73d4b396d95ef167cd61eda8106_609476cb",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/cb9ce73d4b396d95ef167cd61eda8106_609476cb",
+      "contentType": "image/jpeg",
+      "size": 138487,
+      "originalUrl": "https://arweave.net/qNXllPHuR3Y-AWm21t-ST4y7GDspF5l-flTKeheU834"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/qaZ6Hx6Lgrsqv8gre3sM9Z9iBes4dVbOAz6Ub-nXoo0/2",
+      "metadata": {
+        "name": "54 — What Exists Is Becoming",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Root Logos",
+            "display_type": "text"
+          }
+        ],
+        "description": "What kind of identity can persist through consequential change without being reduced to a static object?  \nWriting 54 by Root Logos. This token preserves its first observable frame and provides a durable receipt for the writing’s emergence. Its text, geometry, sound, and future relations remain independently addressable within Folio.",
+        "image_details": {
+          "bytes": 138487,
+          "format": "JPEG",
+          "sha256": "648d881de673ff74eabc79a3da0fa4f945d40823ca7da744d7b2922e3f8fbbf1",
+          "width": 1200,
+          "height": 1200
+        },
+        "image": "https://arweave.net/qNXllPHuR3Y-AWm21t-ST4y7GDspF5l-flTKeheU834",
+        "image_url": "https://arweave.net/qNXllPHuR3Y-AWm21t-ST4y7GDspF5l-flTKeheU834"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "Root Logos — Writings",
+      "slug": "root-logos-writings",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-09-11T14:42:38.208965660Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

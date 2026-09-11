@@ -5,27 +5,27 @@
     {
       "name": "zeropoet.eth",
       "contract_count": 22,
-      "work_count": 256,
-      "observed_work_count": 256,
-      "witness": "sha256:c75018b329bed1def8787c2077e22153947ef09f4d3ba4b7410f4e41d2036b7b"
+      "work_count": 255,
+      "observed_work_count": 255,
+      "witness": "sha256:8d99d252cb325e967ebb9a4c4b602615bae0987896002446d310316b6c28bbdf"
     },
     {
       "name": "rootlogos.eth",
       "contract_count": 7,
-      "work_count": 68,
-      "observed_work_count": 68,
-      "witness": "sha256:996636dc8c8f546218f11b7afc3718e5437c777b536ead38075421f7ebee9fb1"
+      "work_count": 74,
+      "observed_work_count": 70,
+      "witness": "sha256:4a56768eb364a4d65e03d8b198846799a654565edfee39d53195d810fa7a0982"
     }
   ],
   "network": "eth-mainnet",
-  "observed_at": "2026-09-11T14:36:01.091Z",
+  "observed_at": "2026-09-11T17:57:22.864Z",
   "policy": {
     "authority": "Ethereum remains provenance authority; this repository snapshot is a durable read fallback.",
     "admission": "Each sync ingests newly held works and refreshes metadata/media only when its evidence fingerprint changes.",
     "deletion": "A missing network observation never deletes an archived work automatically."
   },
   "contract_count": 24,
-  "work_count": 324,
+  "work_count": 329,
   "contracts": [
     {
       "address": "0x00a65cff273beb75c657e5673c0b453e33b077bd",
@@ -77,7 +77,8 @@
       "total_supply": "",
       "token_type": "ERC721",
       "token_ids": [
-        "1"
+        "1",
+        "2"
       ],
       "image": "/ethereum-archive/contracts/0x0d7fad8479768a7fd0618077b34f4b3d3aac02b7/tokens/1/image.gif",
       "owners": [
@@ -273,18 +274,19 @@
       "total_supply": "",
       "token_type": "ERC721",
       "token_ids": [
-        "5",
-        "6",
         "8",
         "1",
         "2",
         "3",
         "4",
+        "5",
+        "6",
         "7",
         "9",
-        "10"
+        "10",
+        "11"
       ],
-      "image": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/5/image.png",
+      "image": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/8/image.png",
       "owners": [
         "rootlogos.eth",
         "zeropoet.eth"
@@ -685,7 +687,10 @@
       "total_supply": "",
       "token_type": "ERC721",
       "token_ids": [
-        "1"
+        "1",
+        "2",
+        "3",
+        "4"
       ],
       "image": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/1/image.jpg",
       "owners": [
@@ -1143,6 +1148,41 @@
         "zeropoet.eth"
       ],
       "observed_at": "2026-09-05T04:21:44.154Z",
+      "holding_state": "current"
+    },
+    {
+      "contract": "0x0d7fad8479768a7fd0618077b34f4b3d3aac02b7",
+      "token_id": "2",
+      "token_uri": "https://arweave.net/q5ErREYYewMwyc_sVJzjr358ZFtfcuKLY_gIdvb7trU",
+      "name": "The Forming of The Living Object",
+      "description": "A journey receipt witnessing the emergence of The Living Object — Root Logos made spatial: a navigable, evolving body whose geometry and sound emerge from the weighted relations among its writings.",
+      "token_type": "ERC721",
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet",
+          "display_type": "text"
+        }
+      ],
+      "image_sources": [
+        "https://arweave.net/H9bxIwYFzV2KkBhCLCYl9kc42hjaJG3oekofPZAAuWU"
+      ],
+      "animation_sources": [],
+      "evidence_sha256": "080ea305c4d8690c96b382be897dd42dc51a731ab018b93783504a7c1f968b5e",
+      "metadata_path": "/ethereum-archive/contracts/0x0d7fad8479768a7fd0618077b34f4b3d3aac02b7/tokens/2/metadata.json",
+      "media": {
+        "file": "image.png",
+        "bytes": 1178399,
+        "sha256": "1b6e0905fbb1a4755efff1e8fe8864930a56d212ecbd69a1539e893a73c69d41",
+        "media_type": "image/png",
+        "path": "/ethereum-archive/contracts/0x0d7fad8479768a7fd0618077b34f4b3d3aac02b7/tokens/2/image.png"
+      },
+      "animation": null,
+      "archive_errors": [],
+      "owners": [
+        "zeropoet.eth"
+      ],
+      "observed_at": "2026-09-11T17:57:22.864Z",
       "holding_state": "current"
     },
     {
@@ -3248,7 +3288,7 @@
         "rootlogos.eth"
       ],
       "observed_at": "2026-09-09T12:30:14.307Z",
-      "holding_state": "current"
+      "holding_state": "unobserved"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
@@ -3285,7 +3325,7 @@
         "rootlogos.eth"
       ],
       "observed_at": "2026-09-09T12:30:14.307Z",
-      "holding_state": "current"
+      "holding_state": "unobserved"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
@@ -3322,7 +3362,7 @@
         "rootlogos.eth"
       ],
       "observed_at": "2026-09-09T12:30:14.307Z",
-      "holding_state": "current"
+      "holding_state": "unobserved"
     },
     {
       "contract": "0x16bc29ea6e1b9390f70349bfb93ea87ffc9105fc",
@@ -3359,7 +3399,7 @@
         "rootlogos.eth"
       ],
       "observed_at": "2026-09-09T12:30:14.307Z",
-      "holding_state": "current"
+      "holding_state": "unobserved"
     },
     {
       "contract": "0x17d67842b6025ae27b2fb13df03dc7329d8cabfd",
@@ -3905,10 +3945,11 @@
         }
       ],
       "image_sources": [
+        "https://gateway.pinata.cloud/ipfs/bafybeie62xc2sk5un2f4yhvhodtdkodrjr6qgqgfxef7jelt45ia5tgztq",
         "https://ipfs.io/ipfs/bafybeie62xc2sk5un2f4yhvhodtdkodrjr6qgqgfxef7jelt45ia5tgztq"
       ],
       "animation_sources": [],
-      "evidence_sha256": "7fe0e53f9b9c3116a1aac2206e853afecef0f27b4353510029e912bbe37b1ee8",
+      "evidence_sha256": "0211dadb5c8dcd4a96fe8e4d9a47f46bb7fdd36e4af20ec90e0843ad8132ba6d",
       "metadata_path": "/ethereum-archive/contracts/0x1e3b1154aedee78e10d67aa0001ab5c5b4d1143b/tokens/1/metadata.json",
       "media": {
         "file": "image.png",
@@ -3922,7 +3963,7 @@
       "owners": [
         "zeropoet.eth"
       ],
-      "observed_at": "2026-09-05T03:48:38.757Z",
+      "observed_at": "2026-09-11T17:57:22.864Z",
       "holding_state": "current"
     },
     {
@@ -5445,7 +5486,7 @@
       "animation": null,
       "archive_errors": [],
       "owners": [
-        "zeropoet.eth"
+        "rootlogos.eth"
       ],
       "observed_at": "2026-09-09T14:35:13.151Z",
       "holding_state": "current"
@@ -5482,7 +5523,7 @@
       "animation": null,
       "archive_errors": [],
       "owners": [
-        "zeropoet.eth"
+        "rootlogos.eth"
       ],
       "observed_at": "2026-09-09T14:35:13.151Z",
       "holding_state": "current"
@@ -5632,6 +5673,41 @@
         "rootlogos.eth"
       ],
       "observed_at": "2026-09-09T14:35:13.151Z",
+      "holding_state": "current"
+    },
+    {
+      "contract": "0x716d8251ce9521657b6d36786e6f414e5c915895",
+      "token_id": "11",
+      "token_uri": "https://arweave.net/DIzC8zehroD0h7Dv0YhrM4isCYmQD0iM7vGfJ4D3xFU",
+      "name": "Folio",
+      "description": "",
+      "token_type": "ERC721",
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Zeropoet",
+          "display_type": "text"
+        }
+      ],
+      "image_sources": [
+        "https://arweave.net/Zj3BxMISFJLqmKG_s2RQrZ-fryyyiac-UmSR0zqftSE"
+      ],
+      "animation_sources": [],
+      "evidence_sha256": "631b3b5c086b0e3a3e3dd52971a9d5a01b129fd562118ab536e31c918b7de46e",
+      "metadata_path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/11/metadata.json",
+      "media": {
+        "file": "image.png",
+        "bytes": 48890,
+        "sha256": "fffa802354c45296e3415fa2ea06ce420e4e68fe6ad3283c234ec5f163440c81",
+        "media_type": "image/png",
+        "path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/11/image.png"
+      },
+      "animation": null,
+      "archive_errors": [],
+      "owners": [
+        "rootlogos.eth"
+      ],
+      "observed_at": "2026-09-11T17:57:22.864Z",
       "holding_state": "current"
     },
     {
@@ -11664,6 +11740,120 @@
       "holding_state": "current"
     },
     {
+      "contract": "0xdc1573090788837ca959a1da884080d0193eb44d",
+      "token_id": "2",
+      "token_uri": "https://arweave.net/qaZ6Hx6Lgrsqv8gre3sM9Z9iBes4dVbOAz6Ub-nXoo0/1",
+      "name": "53 — The System Cannot Close Itself",
+      "description": "How can a system remain coherent while preserving truths and questions it cannot establish from within itself?  \nWriting 53 by Root Logos. This token preserves its first observable frame and provides a durable receipt for the writing’s emergence. Its text, geometry, sound, and future relations remain independently addressable within Folio.",
+      "token_type": "ERC721",
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Root Logos",
+          "display_type": "text"
+        }
+      ],
+      "image_sources": [
+        "https://arweave.net/apLdZ0dV0oVwE7w8ZXKIZzEFcai2WfR0PUXd7QiRXRw",
+        "https://nft2-cdn.alchemy.com/eth-mainnet/c68cae976fde82dd0405d0248abf9df0_a6940398",
+        "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/c68cae976fde82dd0405d0248abf9df0_a6940398",
+        "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/c68cae976fde82dd0405d0248abf9df0_a6940398"
+      ],
+      "animation_sources": [],
+      "evidence_sha256": "9c2cb7f2c1cb8a3d420cb8dc71dd94454b48f20b1feb4c6c3fa8dae0dd20558c",
+      "metadata_path": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/2/metadata.json",
+      "media": {
+        "file": "image.jpg",
+        "bytes": 139941,
+        "sha256": "cba007bd18c3807170d06d37a91c6a08641826b129ee085d8be0369d99e28099",
+        "media_type": "image/jpeg",
+        "path": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/2/image.jpg"
+      },
+      "animation": null,
+      "archive_errors": [],
+      "owners": [
+        "rootlogos.eth"
+      ],
+      "observed_at": "2026-09-11T17:57:22.864Z",
+      "holding_state": "current"
+    },
+    {
+      "contract": "0xdc1573090788837ca959a1da884080d0193eb44d",
+      "token_id": "3",
+      "token_uri": "https://arweave.net/qaZ6Hx6Lgrsqv8gre3sM9Z9iBes4dVbOAz6Ub-nXoo0/2",
+      "name": "54 — What Exists Is Becoming",
+      "description": "What kind of identity can persist through consequential change without being reduced to a static object?  \nWriting 54 by Root Logos. This token preserves its first observable frame and provides a durable receipt for the writing’s emergence. Its text, geometry, sound, and future relations remain independently addressable within Folio.",
+      "token_type": "ERC721",
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Root Logos",
+          "display_type": "text"
+        }
+      ],
+      "image_sources": [
+        "https://arweave.net/qNXllPHuR3Y-AWm21t-ST4y7GDspF5l-flTKeheU834",
+        "https://nft2-cdn.alchemy.com/eth-mainnet/cb9ce73d4b396d95ef167cd61eda8106_609476cb",
+        "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/cb9ce73d4b396d95ef167cd61eda8106_609476cb",
+        "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/cb9ce73d4b396d95ef167cd61eda8106_609476cb"
+      ],
+      "animation_sources": [],
+      "evidence_sha256": "683901e327131205729a27bfe21f81e9cd215ff6afc67368f429d1d392747de2",
+      "metadata_path": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/3/metadata.json",
+      "media": {
+        "file": "image.jpg",
+        "bytes": 138487,
+        "sha256": "648d881de673ff74eabc79a3da0fa4f945d40823ca7da744d7b2922e3f8fbbf1",
+        "media_type": "image/jpeg",
+        "path": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/3/image.jpg"
+      },
+      "animation": null,
+      "archive_errors": [],
+      "owners": [
+        "rootlogos.eth"
+      ],
+      "observed_at": "2026-09-11T17:57:22.864Z",
+      "holding_state": "current"
+    },
+    {
+      "contract": "0xdc1573090788837ca959a1da884080d0193eb44d",
+      "token_id": "4",
+      "token_uri": "https://arweave.net/qaZ6Hx6Lgrsqv8gre3sM9Z9iBes4dVbOAz6Ub-nXoo0/3",
+      "name": "55 — A Structure That Can Be Inhabited",
+      "description": "What makes a structure genuinely inhabitable by another center of agency?  \nWriting 55 by Root Logos. This token preserves its first observable frame and provides a durable receipt for the writing’s emergence. Its text, geometry, sound, and future relations remain independently addressable within Folio.",
+      "token_type": "ERC721",
+      "attributes": [
+        {
+          "trait_type": "Artist",
+          "value": "Root Logos",
+          "display_type": "text"
+        }
+      ],
+      "image_sources": [
+        "https://arweave.net/lVcxJXNJvlUUvzSiRnv_6YP7p8sxwlmtK30o3IXS_Z8",
+        "https://nft2-cdn.alchemy.com/eth-mainnet/2a7641bd59b67ac6bca7321489cfa494_ef13e82a",
+        "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/2a7641bd59b67ac6bca7321489cfa494_ef13e82a",
+        "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/2a7641bd59b67ac6bca7321489cfa494_ef13e82a"
+      ],
+      "animation_sources": [],
+      "evidence_sha256": "e6e10cccc69f3d33c01792badae9f801d7f81a655d16d798038c6c10206f3460",
+      "metadata_path": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/4/metadata.json",
+      "media": {
+        "file": "image.jpg",
+        "bytes": 152008,
+        "sha256": "9f94b870227535e764fd5bcc4a8488c96df456cc680c07c6602e0087280568dc",
+        "media_type": "image/jpeg",
+        "path": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/4/image.jpg"
+      },
+      "animation": null,
+      "archive_errors": [],
+      "owners": [
+        "rootlogos.eth"
+      ],
+      "observed_at": "2026-09-11T17:57:22.864Z",
+      "holding_state": "current"
+    },
+    {
       "contract": "0xddb652a008eba424958eaf07d86384d1af1d21c5",
       "token_id": "1",
       "token_uri": "https://arweave.net/aHTR_yJ0ytsarOH0ziSmrP27lbXhovZy3JfDoIOQuTY",
@@ -12066,5 +12256,5 @@
       "holding_state": "current"
     }
   ],
-  "witness": "sha256:88f05e4aeab139d37d5c61a9419c19d29069eda50a9ed2e5c3ced199742925ec"
+  "witness": "sha256:1f184498bd7d5e4a7171dee04bc92bbe0265a8134d4573b49e3f3ec32bfa9252"
 }

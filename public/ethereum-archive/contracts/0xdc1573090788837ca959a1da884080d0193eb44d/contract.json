@@ -7,7 +7,10 @@
   "total_supply": "",
   "token_type": "ERC721",
   "token_ids": [
-    "1"
+    "1",
+    "2",
+    "3",
+    "4"
   ],
   "image": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/1/image.jpg",
   "owners": [

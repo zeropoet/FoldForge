@@ -1,0 +1,131 @@
+{
+  "schema": "foldforge-ethereum-work/v1",
+  "contract": "0xdc1573090788837ca959a1da884080d0193eb44d",
+  "token_id": "4",
+  "token_uri": "https://arweave.net/qaZ6Hx6Lgrsqv8gre3sM9Z9iBes4dVbOAz6Ub-nXoo0/3",
+  "name": "55 — A Structure That Can Be Inhabited",
+  "description": "What makes a structure genuinely inhabitable by another center of agency?  \nWriting 55 by Root Logos. This token preserves its first observable frame and provides a durable receipt for the writing’s emergence. Its text, geometry, sound, and future relations remain independently addressable within Folio.",
+  "token_type": "ERC721",
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Root Logos",
+      "display_type": "text"
+    }
+  ],
+  "image_sources": [
+    "https://arweave.net/lVcxJXNJvlUUvzSiRnv_6YP7p8sxwlmtK30o3IXS_Z8",
+    "https://nft2-cdn.alchemy.com/eth-mainnet/2a7641bd59b67ac6bca7321489cfa494_ef13e82a",
+    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/2a7641bd59b67ac6bca7321489cfa494_ef13e82a",
+    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/2a7641bd59b67ac6bca7321489cfa494_ef13e82a"
+  ],
+  "animation_sources": [],
+  "evidence_sha256": "e6e10cccc69f3d33c01792badae9f801d7f81a655d16d798038c6c10206f3460",
+  "metadata_path": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/4/metadata.json",
+  "media": {
+    "file": "image.jpg",
+    "bytes": 152008,
+    "sha256": "9f94b870227535e764fd5bcc4a8488c96df456cc680c07c6602e0087280568dc",
+    "media_type": "image/jpeg",
+    "path": "/ethereum-archive/contracts/0xdc1573090788837ca959a1da884080d0193eb44d/tokens/4/image.jpg"
+  },
+  "animation": null,
+  "archive_errors": [],
+  "owners": [
+    "rootlogos.eth"
+  ],
+  "observed_at": "2026-09-11T17:57:22.864Z",
+  "holding_state": "current",
+  "provider_metadata": {
+    "contract": {
+      "address": "0xDC1573090788837Ca959A1DA884080D0193Eb44D",
+      "name": "Root Logos — Writings",
+      "symbol": "RLW",
+      "totalSupply": null,
+      "tokenType": "ERC721",
+      "contractDeployer": null,
+      "deployedBlockNumber": null,
+      "openSeaMetadata": {
+        "floorPrice": null,
+        "collectionName": "Root Logos — Writings",
+        "collectionSlug": "root-logos-writings",
+        "safelistRequestStatus": "not_requested",
+        "imageUrl": "null",
+        "description": "",
+        "externalUrl": "",
+        "twitterUsername": "null",
+        "discordUrl": "",
+        "bannerImageUrl": "null",
+        "lastIngestedAt": "2026-09-11T14:23:03.368365009Z"
+      },
+      "isSpam": false,
+      "spamClassifications": [
+        "EmptyMetadata",
+        "ValidSocialMedia",
+        "SpammyMetadata"
+      ]
+    },
+    "tokenId": "4",
+    "tokenType": "ERC721",
+    "name": "55 — A Structure That Can Be Inhabited",
+    "description": "What makes a structure genuinely inhabitable by another center of agency?  \nWriting 55 by Root Logos. This token preserves its first observable frame and provides a durable receipt for the writing’s emergence. Its text, geometry, sound, and future relations remain independently addressable within Folio.",
+    "tokenUri": "https://arweave.net/qaZ6Hx6Lgrsqv8gre3sM9Z9iBes4dVbOAz6Ub-nXoo0/3",
+    "image": {
+      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/2a7641bd59b67ac6bca7321489cfa494_ef13e82a",
+      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/2a7641bd59b67ac6bca7321489cfa494_ef13e82a",
+      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/2a7641bd59b67ac6bca7321489cfa494_ef13e82a",
+      "contentType": "image/jpeg",
+      "size": 152008,
+      "originalUrl": "https://arweave.net/lVcxJXNJvlUUvzSiRnv_6YP7p8sxwlmtK30o3IXS_Z8"
+    },
+    "animation": {
+      "cachedUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": null
+    },
+    "raw": {
+      "tokenUri": "https://arweave.net/qaZ6Hx6Lgrsqv8gre3sM9Z9iBes4dVbOAz6Ub-nXoo0/3",
+      "metadata": {
+        "name": "55 — A Structure That Can Be Inhabited",
+        "attributes": [
+          {
+            "trait_type": "Artist",
+            "value": "Root Logos",
+            "display_type": "text"
+          }
+        ],
+        "description": "What makes a structure genuinely inhabitable by another center of agency?  \nWriting 55 by Root Logos. This token preserves its first observable frame and provides a durable receipt for the writing’s emergence. Its text, geometry, sound, and future relations remain independently addressable within Folio.",
+        "image_details": {
+          "bytes": 152008,
+          "format": "JPEG",
+          "sha256": "9f94b870227535e764fd5bcc4a8488c96df456cc680c07c6602e0087280568dc",
+          "width": 1200,
+          "height": 1200
+        },
+        "image": "https://arweave.net/lVcxJXNJvlUUvzSiRnv_6YP7p8sxwlmtK30o3IXS_Z8",
+        "image_url": "https://arweave.net/lVcxJXNJvlUUvzSiRnv_6YP7p8sxwlmtK30o3IXS_Z8"
+      },
+      "error": null
+    },
+    "collection": {
+      "name": "Root Logos — Writings",
+      "slug": "root-logos-writings",
+      "externalUrl": null,
+      "bannerImageUrl": "null"
+    },
+    "mint": {
+      "mintAddress": null,
+      "blockNumber": null,
+      "timestamp": null,
+      "transactionHash": null
+    },
+    "owners": null,
+    "timeLastUpdated": "2026-09-11T14:42:38.261854418Z",
+    "balance": "1",
+    "acquiredAt": {
+      "blockTimestamp": null,
+      "blockNumber": null
+    }
+  }
+}

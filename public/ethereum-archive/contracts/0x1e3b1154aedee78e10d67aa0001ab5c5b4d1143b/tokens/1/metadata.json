@@ -17,10 +17,11 @@
     }
   ],
   "image_sources": [
+    "https://gateway.pinata.cloud/ipfs/bafybeie62xc2sk5un2f4yhvhodtdkodrjr6qgqgfxef7jelt45ia5tgztq",
     "https://ipfs.io/ipfs/bafybeie62xc2sk5un2f4yhvhodtdkodrjr6qgqgfxef7jelt45ia5tgztq"
   ],
   "animation_sources": [],
-  "evidence_sha256": "7fe0e53f9b9c3116a1aac2206e853afecef0f27b4353510029e912bbe37b1ee8",
+  "evidence_sha256": "0211dadb5c8dcd4a96fe8e4d9a47f46bb7fdd36e4af20ec90e0843ad8132ba6d",
   "metadata_path": "/ethereum-archive/contracts/0x1e3b1154aedee78e10d67aa0001ab5c5b4d1143b/tokens/1/metadata.json",
   "media": {
     "file": "image.png",
@@ -31,7 +32,10 @@
   },
   "animation": null,
   "archive_errors": [],
-  "observed_at": "2026-09-05T03:48:38.757Z",
+  "owners": [
+    "zeropoet.eth"
+  ],
+  "observed_at": "2026-09-11T17:57:22.864Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -67,12 +71,12 @@
     "description": "You have been credited with Incentive on Ratexclaim.com",
     "tokenUri": "ipfs://bafkreif7bhfawu2fmk2fh7u6geapnretwp4ccyrvib2oktdursofnp5qoi",
     "image": {
-      "cachedUrl": "https://ipfs.io/ipfs/bafybeie62xc2sk5un2f4yhvhodtdkodrjr6qgqgfxef7jelt45ia5tgztq",
+      "cachedUrl": "https://gateway.pinata.cloud/ipfs/bafybeie62xc2sk5un2f4yhvhodtdkodrjr6qgqgfxef7jelt45ia5tgztq",
       "thumbnailUrl": null,
       "pngUrl": null,
       "contentType": null,
       "size": null,
-      "originalUrl": "https://ipfs.io/ipfs/bafybeie62xc2sk5un2f4yhvhodtdkodrjr6qgqgfxef7jelt45ia5tgztq"
+      "originalUrl": "https://gateway.pinata.cloud/ipfs/bafybeie62xc2sk5un2f4yhvhodtdkodrjr6qgqgfxef7jelt45ia5tgztq"
     },
     "animation": {
       "cachedUrl": null,

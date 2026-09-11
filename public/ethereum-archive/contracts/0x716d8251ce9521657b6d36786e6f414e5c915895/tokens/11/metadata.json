@@ -1,39 +1,37 @@
 {
   "schema": "foldforge-ethereum-work/v1",
   "contract": "0x716d8251ce9521657b6d36786e6f414e5c915895",
-  "token_id": "6",
-  "token_uri": "https://arweave.net/KS0FtvRWmZiNgk7w1TnZoP6Xu6SV1C4LYM2Z7NHNsZc",
-  "name": "FoldForge",
+  "token_id": "11",
+  "token_uri": "https://arweave.net/DIzC8zehroD0h7Dv0YhrM4isCYmQD0iM7vGfJ4D3xFU",
+  "name": "Folio",
   "description": "",
   "token_type": "ERC721",
   "attributes": [
     {
       "trait_type": "Artist",
-      "value": "Zeropoet"
+      "value": "Zeropoet",
+      "display_type": "text"
     }
   ],
   "image_sources": [
-    "https://arweave.net/B_FF50_dKyIRX768DlLTA-XI7AN2k45HaGkabwx-9OU",
-    "https://nft2-cdn.alchemy.com/eth-mainnet/27d338cb989c844196652daa1b8f20ba_1e7957d3",
-    "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/27d338cb989c844196652daa1b8f20ba_1e7957d3",
-    "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/27d338cb989c844196652daa1b8f20ba_1e7957d3"
+    "https://arweave.net/Zj3BxMISFJLqmKG_s2RQrZ-fryyyiac-UmSR0zqftSE"
   ],
   "animation_sources": [],
-  "evidence_sha256": "8187bdc79869f6c9e64a836a1abdc543a49275f7d5107193d6f4f99c41efa4f9",
-  "metadata_path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/6/metadata.json",
+  "evidence_sha256": "631b3b5c086b0e3a3e3dd52971a9d5a01b129fd562118ab536e31c918b7de46e",
+  "metadata_path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/11/metadata.json",
   "media": {
     "file": "image.png",
-    "bytes": 32149,
-    "sha256": "5c80af91ef45f0000a7f71f73489789ff603b65677117c3355a4e758e43bf781",
+    "bytes": 48890,
+    "sha256": "fffa802354c45296e3415fa2ea06ce420e4e68fe6ad3283c234ec5f163440c81",
     "media_type": "image/png",
-    "path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/6/image.png"
+    "path": "/ethereum-archive/contracts/0x716d8251ce9521657b6d36786e6f414e5c915895/tokens/11/image.png"
   },
   "animation": null,
   "archive_errors": [],
   "owners": [
     "rootlogos.eth"
   ],
-  "observed_at": "2026-09-09T14:35:13.151Z",
+  "observed_at": "2026-09-11T17:57:22.864Z",
   "holding_state": "current",
   "provider_metadata": {
     "contract": {
@@ -62,18 +60,18 @@
         "SpammyMetadata"
       ]
     },
-    "tokenId": "6",
+    "tokenId": "11",
     "tokenType": "ERC721",
-    "name": "FoldForge",
+    "name": "Folio",
     "description": "",
-    "tokenUri": "https://arweave.net/KS0FtvRWmZiNgk7w1TnZoP6Xu6SV1C4LYM2Z7NHNsZc",
+    "tokenUri": "https://arweave.net/DIzC8zehroD0h7Dv0YhrM4isCYmQD0iM7vGfJ4D3xFU",
     "image": {
-      "cachedUrl": "https://nft2-cdn.alchemy.com/eth-mainnet/27d338cb989c844196652daa1b8f20ba_1e7957d3",
-      "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/27d338cb989c844196652daa1b8f20ba_1e7957d3",
-      "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-mainnet/27d338cb989c844196652daa1b8f20ba_1e7957d3",
-      "contentType": "image/png",
-      "size": 656042,
-      "originalUrl": "https://arweave.net/B_FF50_dKyIRX768DlLTA-XI7AN2k45HaGkabwx-9OU"
+      "cachedUrl": null,
+      "thumbnailUrl": null,
+      "pngUrl": null,
+      "contentType": null,
+      "size": null,
+      "originalUrl": "https://arweave.net/Zj3BxMISFJLqmKG_s2RQrZ-fryyyiac-UmSR0zqftSE"
     },
     "animation": {
       "cachedUrl": null,
@@ -82,25 +80,32 @@
       "originalUrl": null
     },
     "raw": {
-      "tokenUri": "https://arweave.net/KS0FtvRWmZiNgk7w1TnZoP6Xu6SV1C4LYM2Z7NHNsZc",
+      "tokenUri": "https://arweave.net/DIzC8zehroD0h7Dv0YhrM4isCYmQD0iM7vGfJ4D3xFU",
       "metadata": {
-        "identifier": "6",
+        "identifier": "11",
         "collection": "sovereign-standard",
         "contract": "0x716d8251ce9521657b6d36786e6f414e5c915895",
         "token_standard": "erc721",
-        "name": "FoldForge",
+        "name": "Folio",
         "description": "",
-        "image_url": "https://arweave.net/B_FF50_dKyIRX768DlLTA-XI7AN2k45HaGkabwx-9OU",
-        "display_image_url": "https://i2c.seadn.io/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/7957d3ecd8d05733f63f1e6c20bca3/1e7957d3ecd8d05733f63f1e6c20bca3.png",
+        "image_url": "https://arweave.net/Zj3BxMISFJLqmKG_s2RQrZ-fryyyiac-UmSR0zqftSE",
+        "display_image_url": null,
         "display_animation_url": null,
-        "metadata_url": "https://arweave.net/zEo2Ocvy_mrVmFYj7Z8SwLuxCQOIJRN9BuygSH5YhkQ",
-        "opensea_url": "https://opensea.io/assets/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/6",
-        "updated_at": "2026-09-02T20:44:04.927782",
+        "metadata_url": "https://arweave.net/DIzC8zehroD0h7Dv0YhrM4isCYmQD0iM7vGfJ4D3xFU",
+        "opensea_url": "https://opensea.io/assets/ethereum/0x716d8251ce9521657b6d36786e6f414e5c915895/11",
+        "updated_at": "2026-09-11T15:17:39.680499",
         "is_disabled": false,
         "is_nsfw": false,
-        "original_image_url": "https://arweave.net/Cdt8g8OYsweLsOtJGGzltTrYxPrYtsvBAMGkQpAb62M",
+        "original_image_url": "https://arweave.net/Zj3BxMISFJLqmKG_s2RQrZ-fryyyiac-UmSR0zqftSE",
         "original_animation_url": null,
-        "traits": [],
+        "traits": [
+          {
+            "trait_type": "Artist",
+            "display_type": null,
+            "max_value": null,
+            "value": "Zeropoet"
+          }
+        ],
         "estimated_value_usd": null,
         "decimals": null,
         "animation_url": null,
@@ -108,7 +113,7 @@
         "creator": "",
         "owners": [
           {
-            "address": "0xbd4b3a05c6a585f226afb1952cedd8c410c52e8f",
+            "address": "0x13c474081bec0459f06f750e687ffeb4a35a4f39",
             "quantity": 1,
             "quantity_string": "1"
           }
@@ -119,17 +124,18 @@
         "attributes": [
           {
             "trait_type": "Artist",
-            "value": "Zeropoet"
+            "value": "Zeropoet",
+            "display_type": "text"
           }
         ],
         "image_details": {
-          "bytes": 32149,
+          "bytes": 48890,
           "format": "PNG",
-          "sha256": "5c80af91ef45f0000a7f71f73489789ff603b65677117c3355a4e758e43bf781",
+          "sha256": "fffa802354c45296e3415fa2ea06ce420e4e68fe6ad3283c234ec5f163440c81",
           "width": 1440,
           "height": 1440
         },
-        "image": "https://arweave.net/B_FF50_dKyIRX768DlLTA-XI7AN2k45HaGkabwx-9OU"
+        "image": "https://arweave.net/Zj3BxMISFJLqmKG_s2RQrZ-fryyyiac-UmSR0zqftSE"
       },
       "error": null
     },
@@ -146,7 +152,7 @@
       "transactionHash": null
     },
     "owners": null,
-    "timeLastUpdated": "2026-09-02T20:44:04.984013132Z",
+    "timeLastUpdated": "2026-09-11T15:17:43.638229860Z",
     "balance": "1",
     "acquiredAt": {
       "blockTimestamp": null,
