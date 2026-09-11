@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { localCollections, localTokens, preferLocalCollections, preferLocalToken, preferLocalTokens } from "./local-ethereum-archive";
 import type { AlchemyNft, CollectionSummary } from "./nft-data";
@@ -51,6 +51,28 @@ describe("local Ethereum archive precedence", () => {
       expect(entry.name, `token ${entry.token_id}`).toBe(record.name);
       expect(entry.token_uri, `token ${entry.token_id}`).toBe(record.token_uri);
       expect(entry.media?.sha256, `token ${entry.token_id}`).toBe(record.media?.sha256);
+    }
+  });
+
+  it("keeps every observed contract and mint complete in the local archive", () => {
+    const archive = JSON.parse(readFileSync(resolve("public/ethereum-archive/index.json"), "utf8"));
+    expect(archive.tokens).toHaveLength(archive.work_count);
+    expect(archive.contracts).toHaveLength(archive.contract_count);
+    for (const contract of archive.contracts) {
+      const manifestPath = resolve(`public/ethereum-archive/contracts/${contract.address}/contract.json`);
+      expect(existsSync(manifestPath), `${contract.address} contract manifest`).toBe(true);
+      const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
+      const indexedIds = archive.tokens
+        .filter((entry: { contract: string }) => entry.contract === contract.address)
+        .map((entry: { token_id: string }) => String(entry.token_id))
+        .sort((left: string, right: string) => left.localeCompare(right, undefined, { numeric: true }));
+      expect([...manifest.token_ids].map(String).sort((left, right) => left.localeCompare(right, undefined, { numeric: true }))).toEqual(indexedIds);
+    }
+    for (const entry of archive.tokens) {
+      const tokenRoot = resolve(`public/ethereum-archive/contracts/${entry.contract}/tokens/${entry.token_id}`);
+      expect(existsSync(resolve(tokenRoot, "metadata.json")), `${entry.contract}:${entry.token_id} metadata`).toBe(true);
+      if (entry.media?.file) expect(existsSync(resolve(tokenRoot, entry.media.file)), `${entry.contract}:${entry.token_id} media`).toBe(true);
+      if (entry.animation?.file) expect(existsSync(resolve(tokenRoot, entry.animation.file)), `${entry.contract}:${entry.token_id} animation`).toBe(true);
     }
   });
 
